@@ -125,10 +125,30 @@
     });
   }
 
+  function initHeroVideo() {
+    const v = document.querySelector(".bm-hero-reel");
+    if (!v) return;
+    v.muted = true;
+    v.playsInline = true;
+    const play = () => {
+      const p = v.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+    play();
+    document.addEventListener(
+      "touchstart",
+      () => {
+        play();
+      },
+      { once: true, passive: true }
+    );
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initLang();
     initHeader();
     initReveal();
     initForm();
+    initHeroVideo();
   });
 })();
