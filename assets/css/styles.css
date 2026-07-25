@@ -513,6 +513,27 @@ a {
   transform: scale(1.05);
 }
 
+/* YouTube Short in 4:3 frame — cover crop (top/bottom), autoplay via embed URL */
+.bm-video-crop--yt-short {
+  background: #0a0a0a;
+}
+
+.bm-video-crop--yt-short iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Short 9:16 inside 4:3 — fill width, crop top/bottom; scale X hides player letterbox */
+  width: 225%;
+  height: 240%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
+}
+
+.bm-video-crop--yt-short:hover iframe {
+  transform: translate(-50%, -50%);
+}
+
 @media (max-width: 900px) {
   .bm-hero-split {
     grid-template-columns: 1fr;
