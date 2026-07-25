@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Official marketing site for **Bees Motion** — the digital marketing arm of [Graphics House](https://3dgraphicshouse.com/).",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler pages deploy . --project-name=beesmotion",
+    "dns:setup": "bash scripts/setup-cloudflare-dns.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meklads/beesmotion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meklads/beesmotion/issues"
+  },
+  "homepage": "https://github.com/meklads/beesmotion#readme",
+  "devDependencies": {
+    "wrangler": "^4.114.0"
+  }
+}

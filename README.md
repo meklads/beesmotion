@@ -15,29 +15,43 @@ python3 -m http.server 8080
 
 Open http://localhost:8080
 
-## GitHub Pages
+## Hosting (Cloudflare Pages)
 
-1. Push this repository to GitHub.
-2. **Settings → Pages → Build and deployment**: deploy from branch `main`, folder `/` (root) or move `website/` contents to repo root.
-3. Custom domain: `beesmotion.com` (CNAME file included).
+The live site is deployed to **Cloudflare Pages** (same Cloudflare account as Graphics House):
 
-## Domain DNS (Cloudflare)
+- Preview: [beesmotion.pages.dev](https://beesmotion.pages.dev/)
+- Production: [beesmotion.com](https://beesmotion.com/) (after DNS below)
 
-The domain must resolve to GitHub Pages. As of the last check, `beesmotion.com` was on Cloudflare nameservers but had **no `A` / `AAAA` / `CNAME` records**, so the site could not load. GitHub still redirects `https://meklads.github.io/beesmotion/` → `http://beesmotion.com/`, which fails until DNS is fixed.
+Pushes to `main` deploy via `.github/workflows/deploy-cloudflare-pages.yml` once these GitHub repo secrets exist:
 
-In **Cloudflare → DNS → Records** add:
+- `CLOUDFLARE_API_TOKEN` — API token with **Account → Cloudflare Pages → Edit**
+- `CLOUDFLARE_ACCOUNT_ID` — `a617b0adb762f271f09e8e2e5b97f529`
 
-| Type  | Name | Content            | Proxy |
-| ----- | ---- | ------------------ | ----- |
-| `A`   | `@`  | `185.199.108.153`  | DNS only (grey cloud) recommended until HTTPS cert is issued |
-| `A`   | `@`  | `185.199.109.153`  | same  |
-| `A`   | `@`  | `185.199.110.153`  | same  |
-| `A`   | `@`  | `185.199.111.153`  | same  |
-| `CNAME` | `www` | `meklads.github.io` | optional |
+Manual deploy from this folder:
 
-Then in **GitHub → repo → Settings → Pages → Custom domain**, enter `beesmotion.com`, wait for DNS check, and enable **Enforce HTTPS** when the certificate appears.
+```bash
+npm install
+npx wrangler pages deploy . --project-name=beesmotion
+```
 
-Note: `https://beesmotion.com/` and `https://beesmotion.com/#hero` are the **same page**; `#hero` only scrolls to a section and is not sent to the server. If `/` fails but `#hero` seems to work, it is usually cached content or an in-page link without a full reload—not a separate URL fix.
+## Domain DNS (required once)
+
+The zone `beesmotion.com` is on Cloudflare but had **no DNS records**. Custom domain on Pages is attached; you must add:
+
+| Type   | Name | Content               | Proxy   |
+| ------ | ---- | --------------------- | ------- |
+| CNAME  | `@`  | `beesmotion.pages.dev` | Proxied |
+| CNAME  | `www` | `beesmotion.pages.dev` | Proxied |
+
+In the dashboard: **Cloudflare → beesmotion.com → DNS → Add record**.
+
+Or run locally (after `npx wrangler login` with DNS permission, or use an API token with **Zone → DNS → Edit**):
+
+```bash
+./scripts/setup-cloudflare-dns.sh
+```
+
+GitHub Pages is no longer used for this domain (removed `CNAME` file to avoid deploy timeouts). Use Cloudflare Pages only.
 
 ## Contact
 
