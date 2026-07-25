@@ -126,22 +126,20 @@
   }
 
   function initHeroVideo() {
-    const v = document.querySelector(".bm-hero-reel");
-    if (!v) return;
-    v.muted = true;
-    v.playsInline = true;
-    const play = () => {
-      const p = v.play();
-      if (p && typeof p.catch === "function") p.catch(() => {});
+    const videos = document.querySelectorAll(".bm-hero-reel");
+    if (!videos.length) return;
+
+    const tryPlayAll = () => {
+      videos.forEach((v) => {
+        v.muted = true;
+        v.playsInline = true;
+        const p = v.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      });
     };
-    play();
-    document.addEventListener(
-      "touchstart",
-      () => {
-        play();
-      },
-      { once: true, passive: true }
-    );
+
+    tryPlayAll();
+    document.addEventListener("touchstart", tryPlayAll, { once: true, passive: true });
   }
 
   document.addEventListener("DOMContentLoaded", () => {

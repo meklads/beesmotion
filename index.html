@@ -20,6 +20,7 @@
     <link rel="icon" href="assets/img/bees-motion-logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://3dgraphicshouse.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
@@ -106,9 +107,12 @@
                   playsinline
                   webkit-playsinline
                   preload="auto"
-                  title="Bees Motion — motion & media reel"
+                  title="Graphics House — Marketing & Media Production"
                 >
-                  <source src="assets/video/gh-cartoon-motion-reel.mp4" type="video/mp4" />
+                  <source
+                    src="https://3dgraphicshouse.com/assets/videos/GH-Marketing-Media-Production.mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
@@ -216,9 +220,23 @@
             <p class="font-body-md" style="opacity: 0.82; margin-top: 12px" data-i18n="creativeSub">...</p>
             <a class="btn btn-pill btn-on-light" href="#contact" style="margin-top: 24px" data-i18n="heroCta1">...</a>
           </div>
-          <div class="video-frame reveal">
-            <video controls playsinline preload="metadata">
-              <source src="assets/video/gh-cartoon-motion-reel.mp4" type="video/mp4" />
+          <div class="bm-video-crop reveal">
+            <div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div>
+            <div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div>
+            <video
+              class="bm-hero-reel gh-autoplay"
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              preload="auto"
+              title="Graphics House — Marketing & Media Production"
+            >
+              <source
+                src="https://3dgraphicshouse.com/assets/videos/GH-Marketing-Media-Production.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>

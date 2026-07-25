@@ -837,24 +837,9 @@ section {
 /* Creative */
 .creative-wrap {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 60px);
   align-items: center;
-}
-
-.video-frame {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 3px solid rgba(229, 168, 35, 0.35);
-  box-shadow: var(--shadow);
-  background: #000;
-}
-
-.video-frame video {
-  width: 100%;
-  display: block;
-  aspect-ratio: 16/9;
-  object-fit: cover;
 }
 
 .service-icon {
