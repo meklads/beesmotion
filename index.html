@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -61,7 +61,7 @@
             <button type="button" data-lang="ar" class="active">AR</button>
             <button type="button" data-lang="en">EN</button>
           </div>
-          <a class="btn btn-gold" href="#contact" data-i18n="ctaNav">احجز استشارة</a>
+          <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaNav">احجز استشارة</a>
           <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">
             ☰
           </button>
@@ -75,55 +75,52 @@
       <a href="#packages" data-i18n="navPackages">الباقات</a>
       <a href="#clients" data-i18n="navWork">أعمالنا</a>
       <a href="#contact" data-i18n="navContact">تواصل معنا</a>
-      <a class="btn btn-gold" href="#contact" data-i18n="ctaNav">احجز استشارة</a>
+      <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaNav">احجز استشارة</a>
     </nav>
 
     <main id="main">
-      <section class="hero honey-bg" id="hero">
-        <div class="trail trail-1" aria-hidden="true"></div>
-        <div class="trail trail-2" aria-hidden="true"></div>
-        <div class="container hero-grid">
-          <div class="reveal">
-            <p class="hero-tag" data-i18n="heroTag">DIGITAL MARKETING SOLUTION</p>
-            <h1>
-              <span data-i18n="heroTitle">نحوّل حضورك الرقمي إلى</span><br />
-              <em data-i18n="heroTitleEm">نمو قابل للقياس</em>
+      <section class="bm-hero" id="hero">
+        <div class="bm-hero-bg" aria-hidden="true"></div>
+        <div class="bm-hero-panel">
+          <div class="container bm-hero-inner reveal">
+            <span class="bm-eyebrow" data-i18n="heroTag">DIGITAL MARKETING SOLUTION</span>
+            <h1 class="font-headline-xl">
+              <span data-i18n="heroTitle">نحوّل حضورك الرقمي إلى</span>
+              <strong class="bm-hero-em" data-i18n="heroTitleEm">نمو قابل للقياس</strong>
             </h1>
-            <p class="hero-lead" data-i18n="heroSub">...</p>
+            <p class="bm-hero-sub" data-i18n="heroSub">...</p>
             <div class="hero-ctas">
-              <a class="btn btn-gold" href="#contact" data-i18n="heroCta1">احجز تحليلاً مجانياً</a>
-              <a class="btn btn-outline" href="#packages" data-i18n="heroCta2">استكشف الباقات</a>
-            </div>
-            <div class="stats-row">
-              <div class="stat"><strong>15+</strong><span data-i18n="stat1">سنوات</span></div>
-              <div class="stat"><strong>100+</strong><span data-i18n="stat2">أفلام</span></div>
-              <div class="stat"><strong>10+</strong><span data-i18n="stat3">دول</span></div>
+              <a class="btn btn-pill btn-pill-white" href="#contact" data-i18n="heroCta1">احجز تحليلاً مجانياً</a>
+              <a class="btn btn-pill btn-pill-ghost" href="#packages" data-i18n="heroCta2">استكشف الباقات</a>
             </div>
           </div>
-          <div class="hero-visual reveal">
-            <div class="hero-card">
-              <div class="motion-ring" aria-hidden="true">
-                <div class="motion-ring-inner">
-                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M32 8c8 4 14 12 14 22s-6 18-14 22c-8-4-14-12-14-22S24 12 32 8z"
-                      fill="#E5A823"
-                    />
-                    <ellipse cx="32" cy="28" rx="10" ry="6" fill="#1a1a1a" opacity="0.85" />
-                    <path d="M18 26l-8-4M46 26l8-4M22 34l-6 6M42 34l6 6" stroke="#f5c84d" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+          <div class="hero-caps-bar container reveal" aria-label="Capabilities">
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="cap1">...</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="cap2">...</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="cap3">SEO</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="cap4">...</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="cap5">...</span></div>
           </div>
+        </div>
+      </section>
+
+      <section class="bm-metrics" aria-label="Metrics">
+        <div class="bm-metrics-grid container">
+          <div class="bm-metric reveal"><strong>15+</strong><span data-i18n="stat1">...</span></div>
+          <div class="bm-metric reveal"><strong>100+</strong><span data-i18n="stat2">...</span></div>
+          <div class="bm-metric reveal"><strong>10+</strong><span data-i18n="stat3">...</span></div>
         </div>
       </section>
 
       <section id="about" class="honey-bg">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="aboutTag">من نحن</span>
-            <h2 data-i18n="aboutTitle">الذراع التسويقي لـ Graphics House</h2>
+            <span class="svc-tag" data-i18n="aboutTag">من نحن</span>
+            <h2 class="font-headline-xl" data-i18n="aboutTitle">الذراع التسويقي لـ Graphics House</h2>
           </div>
           <div class="about-grid">
             <div class="about-card reveal">
@@ -148,12 +145,12 @@
         </div>
       </section>
 
-      <section id="services">
+      <section id="services" class="band-cream">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="servicesTag">خدماتنا</span>
-            <h2 data-i18n="servicesTitle">نظام تسويقي متكامل</h2>
-            <p data-i18n="servicesSub">...</p>
+            <span class="svc-tag" data-i18n="servicesTag">خدماتنا</span>
+            <h2 class="font-headline-xl" data-i18n="servicesTitle">نظام تسويقي متكامل</h2>
+            <p class="font-body-md" data-i18n="servicesSub">...</p>
           </div>
           <div class="services-grid">
             <article class="service-card reveal">
@@ -203,10 +200,10 @@
       <section id="creative" class="section-navy">
         <div class="container creative-wrap">
           <div class="reveal">
-            <span class="section-tag" data-i18n="creativeTag">الإنتاج المرئي</span>
-            <h2 data-i18n="creativeTitle">...</h2>
-            <p style="opacity: 0.82; margin-top: 12px" data-i18n="creativeSub">...</p>
-            <a class="btn btn-gold" href="#contact" style="margin-top: 24px" data-i18n="heroCta1">...</a>
+            <span class="svc-tag" data-i18n="creativeTag">الإنتاج المرئي</span>
+            <h2 class="font-headline-xl" data-i18n="creativeTitle">...</h2>
+            <p class="font-body-md" style="opacity: 0.82; margin-top: 12px" data-i18n="creativeSub">...</p>
+            <a class="btn btn-pill btn-on-light" href="#contact" style="margin-top: 24px" data-i18n="heroCta1">...</a>
           </div>
           <div class="video-frame reveal">
             <video controls playsinline preload="metadata" poster="assets/img/clients/imc-150x150.png">
@@ -216,31 +213,31 @@
         </div>
       </section>
 
-      <section id="process" class="section-navy">
+      <section id="process" class="band-cream">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="processTag">منهجية العمل</span>
-            <h2 data-i18n="processTitle">9 خطوات</h2>
+            <span class="svc-tag" data-i18n="processTag">منهجية العمل</span>
+            <h2 class="font-headline-xl" data-i18n="processTitle">9 خطوات</h2>
           </div>
-          <div class="process-grid">
-            <div class="process-step reveal"><span>01</span><p data-i18n="p1">...</p></div>
-            <div class="process-step reveal"><span>02</span><p data-i18n="p2">...</p></div>
-            <div class="process-step reveal"><span>03</span><p data-i18n="p3">...</p></div>
-            <div class="process-step reveal"><span>04</span><p data-i18n="p4">...</p></div>
-            <div class="process-step reveal"><span>05</span><p data-i18n="p5">...</p></div>
-            <div class="process-step reveal"><span>06</span><p data-i18n="p6">...</p></div>
-            <div class="process-step reveal"><span>07</span><p data-i18n="p7">...</p></div>
-            <div class="process-step reveal"><span>08</span><p data-i18n="p8">...</p></div>
-            <div class="process-step reveal"><span>09</span><p data-i18n="p9">...</p></div>
+          <div class="bm-steps">
+            <div class="bm-step reveal"><div class="bm-step-num">01</div><p data-i18n="p1">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">02</div><p data-i18n="p2">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">03</div><p data-i18n="p3">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">04</div><p data-i18n="p4">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">05</div><p data-i18n="p5">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">06</div><p data-i18n="p6">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">07</div><p data-i18n="p7">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">08</div><p data-i18n="p8">...</p></div>
+            <div class="bm-step reveal"><div class="bm-step-num">09</div><p data-i18n="p9">...</p></div>
           </div>
         </div>
       </section>
 
-      <section id="goals">
+      <section id="goals" class="band-outcomes">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="goalsTag">المستهدفات</span>
-            <h2 data-i18n="goalsTitle">...</h2>
+            <span class="svc-tag" data-i18n="goalsTag">المستهدفات</span>
+            <h2 class="font-headline-xl" data-i18n="goalsTitle">...</h2>
           </div>
           <div class="goals-grid">
             <article class="goal-card reveal">
@@ -265,8 +262,8 @@
       <section id="packages" class="honey-bg">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="packagesTag">الباقات</span>
-            <h2 data-i18n="packagesTitle">خطة الاستثمار</h2>
+            <span class="svc-tag" data-i18n="packagesTag">الباقات</span>
+            <h2 class="font-headline-xl" data-i18n="packagesTitle">خطة الاستثمار</h2>
           </div>
           <div class="pricing-table-wrap reveal">
             <table class="pricing-table">
@@ -337,8 +334,8 @@
       <section id="clients">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="clientsTag">عملاؤنا</span>
-            <h2 data-i18n="clientsTitle">...</h2>
+            <span class="svc-tag" data-i18n="clientsTag">عملاؤنا</span>
+            <h2 class="font-headline-xl" data-i18n="clientsTitle">...</h2>
           </div>
           <div class="clients-marquee reveal" aria-label="Client logos">
             <div class="clients-track">
@@ -370,9 +367,9 @@
       <section id="contact">
         <div class="container">
           <div class="section-head reveal">
-            <span class="section-tag" data-i18n="contactTag">ابدأ الآن</span>
-            <h2 data-i18n="contactTitle">...</h2>
-            <p data-i18n="contactSub">...</p>
+            <span class="svc-tag" data-i18n="contactTag">ابدأ الآن</span>
+            <h2 class="font-headline-xl" data-i18n="contactTitle">...</h2>
+            <p class="font-body-md" data-i18n="contactSub">...</p>
           </div>
           <div class="contact-grid">
             <form class="contact-form reveal" id="contactForm" name="contact">
@@ -384,7 +381,7 @@
               <input id="company" name="company" type="text" autocomplete="organization" data-i18n="company" />
               <label for="message" data-i18n="message">الرسالة</label>
               <textarea id="message" name="message" data-i18n="message"></textarea>
-              <button type="submit" class="btn btn-gold" style="width: 100%" data-i18n="send">إرسال</button>
+              <button type="submit" class="btn btn-pill btn-on-light" style="width: 100%" data-i18n="send">إرسال</button>
             </form>
             <div class="contact-methods reveal">
               <a class="method-card" href="https://wa.me/966502786513" target="_blank" rel="noopener">
