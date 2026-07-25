@@ -75,22 +75,37 @@
 
   function initReveal() {
     const els = document.querySelectorAll(".reveal");
+    const show = (el) => el.classList.add("visible");
+
+    const inViewport = (el) => {
+      const r = el.getBoundingClientRect();
+      return r.top < window.innerHeight * 0.92 && r.bottom > 0;
+    };
+
     if (!("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("visible"));
+      els.forEach(show);
       return;
     }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add("visible");
+            show(e.target);
             io.unobserve(e.target);
           }
         });
       },
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    els.forEach((el) => io.observe(el));
+    els.forEach((el) => {
+      io.observe(el);
+      if (inViewport(el)) show(el);
+    });
+    requestAnimationFrame(() => {
+      els.forEach((el) => {
+        if (inViewport(el)) show(el);
+      });
+    });
   }
 
   function initForm() {

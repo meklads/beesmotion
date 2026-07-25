@@ -28,7 +28,7 @@ window.BM_I18N = {
     aboutTag: "من نحن",
     aboutTitle: "الذراع التسويقي لـ Graphics House",
     aboutP1:
-      "تُعد بيز موشن Bees Motion الذراع التسويقي الرقمي لشركة جرافيكس هاوس للإنتاج الفني، ويشكّل هذا التكامل قوة تقدّم من خلالها خدمات متكاملة للعملاء في السعودية، مصر، الخليج، أوروبا، وتركيا.",
+      "تُعد بيز موشن Bees Motion الذراع التسويقي الرقمي لشركة جرافيكس هاوس للإنتاج الفني، ويشكّل هذا التكامل قوة تقدّم من خلالها خدمات متكاملة للعملاء في السعودية، الخليج، أوروبا.",
     aboutP2:
       "نبدأ بتحليل وضعك الحالي وننتهي بنتائج متوقعة وقابلة للقياس — من الإعلانات والسوشيال إلى SEO والإنتاج المرئي.",
     aboutGh: "زيارة جرافيكس هاوس",
@@ -142,7 +142,7 @@ window.BM_I18N = {
     aboutTag: "About",
     aboutTitle: "The marketing arm of Graphics House",
     aboutP1:
-      "Bees Motion is the digital marketing arm of Graphics House. Together we deliver integrated services for clients in Saudi Arabia, Egypt, the GCC, Europe, and Turkey.",
+      "Bees Motion is the digital marketing arm of Graphics House. Together we deliver integrated services for clients in Saudi Arabia, the GCC, and Europe.",
     aboutP2:
       "We start with your current situation and end with forecasted, measurable results — from paid media and social to SEO and motion.",
     aboutGh: "Visit Graphics House",
