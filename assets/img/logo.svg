@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 88" role="img" aria-label="Bees Motion">
+  <title>Bees Motion</title>
+  <path
+    d="M118 18 C168 2, 248 8, 298 42"
+    fill="none"
+    stroke="#E5A823"
+    stroke-width="10"
+    stroke-linecap="round"
+  />
+  <text
+    x="8"
+    y="58"
+    font-family="'Tajawal', 'Arial Black', 'Helvetica Neue', sans-serif"
+    font-size="52"
+    font-weight="800"
+    font-style="italic"
+    fill="#121212"
+  >
+    Bees
+  </text>
+  <text
+    x="168"
+    y="58"
+    font-family="'Tajawal', 'Arial Black', 'Helvetica Neue', sans-serif"
+    font-size="52"
+    font-weight="800"
+    font-style="italic"
+    fill="#121212"
+  >
+    motion
+  </text>
+</svg>

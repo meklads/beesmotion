@@ -119,6 +119,12 @@ img {
   display: block;
 }
 
+.brand-logo {
+  max-width: none !important;
+  width: auto !important;
+  height: clamp(44px, 6vw, 58px) !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -193,9 +199,9 @@ a {
 .brand-logo,
 .brand img {
   display: block;
-  height: clamp(44px, 5.5vw, 56px);
+  height: clamp(44px, 6vw, 58px);
   width: auto;
-  max-width: min(320px, 72vw);
+  max-width: none;
   object-fit: contain;
   object-position: center;
 }
@@ -426,13 +432,14 @@ a {
   box-shadow: 0 16px 48px rgba(15, 35, 71, 0.08);
 }
 
-.bm-video-crop video {
+.bm-video-crop video,
+.bm-video-crop iframe {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  width: 315%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  transform: translate(-50%, -50%);
   border: 0;
 }
 
@@ -1078,13 +1085,17 @@ body.lang-ar .clients-track {
 
 .footer-logo {
   display: block;
-  height: clamp(40px, 5vw, 52px);
+  height: clamp(36px, 4.5vw, 48px);
   width: auto;
-  max-width: 240px;
+  max-width: 220px;
   margin-bottom: 16px;
   object-fit: contain;
   background: transparent;
   opacity: 0.95;
+}
+
+.footer-logo--invert {
+  filter: brightness(0) invert(1);
 }
 
 .footer-grid a:hover {
