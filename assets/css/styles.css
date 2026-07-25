@@ -16,7 +16,7 @@
   --shadow: 0 16px 48px rgba(15, 35, 71, 0.08);
   --radius: 24px;
   --radius-sm: 14px;
-  --header-h: 108px;
+  --header-h: 88px;
   --font-ar: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
   --font-en: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
@@ -31,12 +31,12 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--cream);
+  background: #ffffff;
 }
 
 body {
   font-family: var(--font-ar);
-  background: var(--cream);
+  background: #ffffff;
   color: var(--on-bg);
   line-height: 1.65;
   overflow-x: hidden;
@@ -105,13 +105,12 @@ body.lang-en .svc-tag {
 }
 
 .band-cream {
-  background: var(--cream-2) !important;
+  background: #ffffff !important;
 }
 
 .band-outcomes {
-  background: var(--cream);
-  background-image: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(229, 168, 35, 0.07), transparent 55%),
-    linear-gradient(180deg, #fafaf8 0%, #f3f0ea 100%);
+  background: #ffffff;
+  background-image: none;
 }
 
 img {
@@ -152,12 +151,7 @@ a {
 }
 
 .honey-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath fill='%23e5a823' fill-opacity='0.04' d='M28 66L0 50V16L28 0l28 16v34L28 66zm0-12l22-12.7V22.7L28 10 6 22.7v18.6L28 54z'/%3E%3C/svg%3E");
-  pointer-events: none;
-  opacity: 0.9;
+  display: none;
 }
 
 /* Header */
@@ -172,6 +166,7 @@ a {
   background: #ffffff;
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.25s;
+  overflow: visible;
 }
 
 .site-header.scrolled {
@@ -198,9 +193,9 @@ a {
 .brand-logo,
 .brand img {
   display: block;
-  height: clamp(64px, 9vw, 84px);
+  height: clamp(44px, 5.5vw, 56px);
   width: auto;
-  max-width: min(360px, 58vw);
+  max-width: min(320px, 72vw);
   object-fit: contain;
   object-position: center;
 }
@@ -393,15 +388,6 @@ a {
   border-bottom: 1px solid var(--border);
 }
 
-.bm-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath fill='%23e5a823' fill-opacity='0.035' d='M28 66L0 50V16L28 0l28 16v34L28 66zm0-12l22-12.7V22.7L28 10 6 22.7v18.6L28 54z'/%3E%3C/svg%3E");
-  pointer-events: none;
-  opacity: 0.9;
-}
-
 .bm-hero-wrap {
   position: relative;
   z-index: 1;
@@ -435,18 +421,18 @@ a {
   aspect-ratio: 16 / 9;
   border-radius: 20px;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #000;
   border: 1px solid rgba(26, 26, 26, 0.08);
-  box-shadow: 0 16px 48px rgba(15, 35, 71, 0.1);
+  box-shadow: 0 16px 48px rgba(15, 35, 71, 0.08);
 }
 
-.bm-video-crop iframe {
+.bm-video-crop video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
   width: 100%;
-  height: 178%;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border: 0;
 }
 

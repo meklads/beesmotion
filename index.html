@@ -47,7 +47,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#hero" aria-label="Bees Motion">
-          <img src="assets/img/logo-header.png" alt="Bees Motion" class="brand-logo" width="360" height="127" />
+          <img src="assets/img/logo-header.png" alt="Bees Motion" class="brand-logo" width="480" height="115" />
         </a>
         <nav class="nav-desktop" aria-label="Primary">
           <a href="#services" data-i18n="navServices">الخدمات</a>
@@ -96,13 +96,16 @@
             </div>
             <div class="bm-hero-video">
               <div class="bm-video-crop">
-                <iframe
-                  src="https://www.youtube.com/embed/x4Ya98nRnog?autoplay=1&mute=1&loop=1&playlist=x4Ya98nRnog&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&disablekb=1"
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  webkit-playsinline
+                  preload="auto"
+                  src="https://beesmotion.com/wp-content/uploads/2025/05/GH-Cartoon-Motion-reel.mp4"
                   title="GH Cartoon Motion reel"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
+                ></video>
               </div>
             </div>
           </div>
@@ -120,15 +123,7 @@
         </div>
       </section>
 
-      <section class="bm-metrics" aria-label="Metrics">
-        <div class="bm-metrics-grid container">
-          <div class="bm-metric reveal"><strong>15+</strong><span data-i18n="stat1">...</span></div>
-          <div class="bm-metric reveal"><strong>100+</strong><span data-i18n="stat2">...</span></div>
-          <div class="bm-metric reveal"><strong>10+</strong><span data-i18n="stat3">...</span></div>
-        </div>
-      </section>
-
-      <section id="about" class="honey-bg">
+      <section id="about">
         <div class="container">
           <div class="section-head reveal">
             <span class="svc-tag" data-i18n="aboutTag">من نحن</span>
