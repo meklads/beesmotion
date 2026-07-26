@@ -1,0 +1,6 @@
+# Coolify / Nixpacks: static marketing site (serve index.html + assets)
+[variables]
+NIXPACKS_NODE_VERSION = "22"
+
+[start]
+cmd = "npm start"

@@ -2,8 +2,8 @@
   "name": "website",
   "version": "1.0.0",
   "description": "Official marketing site for **Bees Motion** — the digital marketing arm of [Graphics House](https://3dgraphicshouse.com/).",
-  "main": "index.js",
   "scripts": {
+    "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000}",
     "deploy": "wrangler pages deploy . --project-name=beesmotion",
     "dns:setup": "bash scripts/setup-cloudflare-dns.sh"
   },
@@ -18,6 +18,9 @@
     "url": "https://github.com/meklads/beesmotion/issues"
   },
   "homepage": "https://github.com/meklads/beesmotion#readme",
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
   "devDependencies": {
     "wrangler": "^4.114.0"
   }
