@@ -1,17 +1,22 @@
 #!/usr/bin/env bash
-# Adds DNS for beesmotion.com → Cloudflare Pages (run once after `npx wrangler login`).
+# Adds DNS for beesmotion.com → Cloudflare Pages.
+# Prefer: export CLOUDFLARE_API_TOKEN=... (Zone DNS Edit on beesmotion.com)
+# Fallback: OAuth from `npx wrangler login` (may lack DNS write — use API token if it fails).
 set -euo pipefail
 ZONE_ID="98030f56341db5805fbac3a63caa8a99"
 PAGES_TARGET="beesmotion.pages.dev"
-CONFIG="${HOME}/Library/Preferences/.wrangler/config/default.toml"
-if [[ ! -f "$CONFIG" ]]; then
-  echo "Run: npx wrangler login"
+
+if [[ -n "${CLOUDFLARE_API_TOKEN:-}" ]]; then
+  TOKEN="$CLOUDFLARE_API_TOKEN"
+elif [[ -f "${HOME}/Library/Preferences/.wrangler/config/default.toml" ]]; then
+  TOKEN=$(python3 -c "import tomllib,pathlib; print(tomllib.loads(pathlib.Path('${HOME}/Library/Preferences/.wrangler/config/default.toml').read_text())['oauth_token'])")
+else
+  echo "Set CLOUDFLARE_API_TOKEN or run: npx wrangler login"
   exit 1
 fi
-TOKEN=$(python3 -c "import tomllib,pathlib; print(tomllib.loads(pathlib.Path('$CONFIG').read_text())['oauth_token'])")
 
 api() {
-  curl -fsS "$@" -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json"
+  curl -fsS --max-time 60 "$@" -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json"
 }
 
 add_record() {
@@ -20,8 +25,8 @@ add_record() {
     --data "{\"type\":\"${type}\",\"name\":\"${name}\",\"content\":\"${content}\",\"proxied\":${proxied},\"ttl\":1}"
 }
 
-echo "Creating CNAME @ → ${PAGES_TARGET} (proxied)…"
-add_record CNAME "beesmotion.com" "$PAGES_TARGET" true | python3 -c "import sys,json; d=json.load(sys.stdin); print('apex', d.get('success'), d.get('errors'))"
+echo "Creating CNAME apex → ${PAGES_TARGET} (proxied)…"
+add_record CNAME "@" "$PAGES_TARGET" true | python3 -c "import sys,json; d=json.load(sys.stdin); print('apex', d.get('success'), d.get('errors'))"
 
 echo "Creating CNAME www → ${PAGES_TARGET} (proxied)…"
 add_record CNAME "www" "$PAGES_TARGET" true | python3 -c "import sys,json; d=json.load(sys.stdin); print('www', d.get('success'), d.get('errors'))"
