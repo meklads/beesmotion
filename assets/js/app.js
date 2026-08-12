@@ -63,12 +63,16 @@
     const menuBtn = document.getElementById("menuBtn");
     const mobileNav = document.getElementById("mobileNav");
     if (menuBtn && mobileNav) {
-      menuBtn.addEventListener("click", () => {
-        const open = mobileNav.classList.toggle("open");
+      const setOpen = (open) => {
+        mobileNav.classList.toggle("open", open);
         menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.classList.toggle("nav-open", open);
+      };
+      menuBtn.addEventListener("click", () => {
+        setOpen(!mobileNav.classList.contains("open"));
       });
       mobileNav.querySelectorAll("a").forEach((a) => {
-        a.addEventListener("click", () => mobileNav.classList.remove("open"));
+        a.addEventListener("click", () => setOpen(false));
       });
     }
   }
@@ -95,7 +99,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
     );
     els.forEach((el) => {
       io.observe(el);
@@ -140,21 +144,83 @@
     });
   }
 
+  function prepVideo(v) {
+    if (!v || v.nodeName !== "VIDEO") return;
+    v.muted = true;
+    v.defaultMuted = true;
+    v.playsInline = true;
+    v.setAttribute("muted", "");
+    v.setAttribute("playsinline", "");
+    v.setAttribute("webkit-playsinline", "");
+    v.loop = true;
+  }
+
+  function tryPlay(v) {
+    prepVideo(v);
+    const p = v.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  }
+
   function initHeroVideo() {
     const videos = document.querySelectorAll(".bm-hero-reel");
     if (!videos.length) return;
 
-    const tryPlayAll = () => {
+    const tryPlayAll = () => videos.forEach(tryPlay);
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            const v = e.target;
+            if (e.isIntersecting) tryPlay(v);
+            else if (!v.paused) v.pause();
+          });
+        },
+        { threshold: 0.25 }
+      );
       videos.forEach((v) => {
-        v.muted = true;
-        v.playsInline = true;
-        const p = v.play();
-        if (p && typeof p.catch === "function") p.catch(() => {});
+        prepVideo(v);
+        io.observe(v);
       });
+    } else {
+      tryPlayAll();
+    }
+
+    document.addEventListener("touchstart", tryPlayAll, { once: true, passive: true });
+    document.addEventListener("click", tryPlayAll, { once: true });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) tryPlayAll();
+    });
+  }
+
+  function initYoutubeEmbeds() {
+    const frames = document.querySelectorAll("[data-yt-src]");
+    if (!frames.length) return;
+
+    const load = (wrap) => {
+      const src = wrap.getAttribute("data-yt-src");
+      const iframe = wrap.querySelector("iframe");
+      if (!src || !iframe || iframe.getAttribute("src")) return;
+      iframe.setAttribute("src", src);
+      wrap.removeAttribute("data-yt-src");
     };
 
-    tryPlayAll();
-    document.addEventListener("touchstart", tryPlayAll, { once: true, passive: true });
+    if (!("IntersectionObserver" in window)) {
+      frames.forEach(load);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          load(e.target);
+          io.unobserve(e.target);
+        });
+      },
+      { rootMargin: "200px 0px", threshold: 0.05 }
+    );
+    frames.forEach((el) => io.observe(el));
   }
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -163,5 +229,6 @@
     initReveal();
     initForm();
     initHeroVideo();
+    initYoutubeEmbeds();
   });
 })();
