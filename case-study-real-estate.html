@@ -61,43 +61,46 @@
     </nav>
 
     <main id="main">
-      <div class="container sol-crumb">
-        <a href="case-study.html" data-i18n="csBack">← كل التجارب الناجحة</a>
-      </div>
-
-      <section class="sol-hero" id="hero">
-        <div class="container sol-hero-grid">
-          <div class="sol-hero-copy reveal">
-            <p class="sol-eyebrow" data-i18n="csReTag">التجربة الرائدة</p>
-            <h1 class="sol-product">
-              <span class="sol-product-name">PropMotion™</span>
-              <span class="sol-product-sub" data-i18n="csReTitle">منظومة المحتوى العقاري المرئي</span>
+      <!-- 1. Cinematic hero (ProjectLaunch pattern) -->
+      <section class="plh" id="hero">
+        <div class="plh-media" aria-hidden="true">
+          <img src="https://img.youtube.com/vi/WoYMS7Xs7cY/maxresdefault.jpg" alt="" width="1920" height="1080" />
+        </div>
+        <div class="plh-vignette" aria-hidden="true"></div>
+        <div class="plh-glow" aria-hidden="true"></div>
+        <div class="plh-panel">
+          <div class="plh-crumb">
+            <a href="case-study.html" data-i18n="csBack">← كل التجارب الناجحة</a>
+          </div>
+          <div class="plh-copy">
+            <p class="plh-eyebrow" data-i18n="csReTag">التجربة الرائدة</p>
+            <h1>
+              <span class="plh-mark">PropMotion™</span>
             </h1>
-            <p class="sol-tagline" data-i18n="csReTitleEm">تقنع قبل أن يبدأ البناء</p>
-            <p class="sol-lead" data-i18n="csReHeroSub">
+            <p class="plh-tagline" data-i18n="csReTitleEm">تقنع قبل أن يبدأ البناء</p>
+            <p class="plh-sub" data-i18n="csReHeroSub">
               عملنا مع جرافيكس هاوس كعميل خارجي على محتوى مرئي عقاري يجمع بين CGI السينمائي والموشن، ليترجم المخططات إلى تجربة يشعر بها المستثمر والمشتري من أول مشاهدة.
             </p>
-            <div class="sol-hero-ctas">
-              <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="csReBrowse">احجز جلسة إطلاق بصري</a>
-              <a class="btn btn-pill btn-outline-dark" href="#series" data-i18n="csWatchWork">شاهد الأعمال</a>
+            <div class="plh-ctas">
+              <a class="plh-btn plh-btn-white" href="index.html#contact" data-i18n="csReBrowse">احجز جلسة إطلاق بصري</a>
+              <a class="plh-btn plh-btn-ghost" href="#series" data-i18n="csWatchWork">شاهد الأعمال</a>
             </div>
-            <ul class="sol-pills">
-              <li data-i18n="csRePill1">CGI سينمائي</li>
-              <li data-i18n="csRePill2">موشن عقاري</li>
-              <li data-i18n="csRePill3">إظهار معماري</li>
-              <li data-i18n="csRePill4">معارض ومشاريع</li>
-              <li data-i18n="csRePill5">ما قبل البيع</li>
-            </ul>
-          </div>
-          <div class="sol-hero-media reveal">
-            <div class="sol-media-frame">
-              <img src="https://img.youtube.com/vi/WoYMS7Xs7cY/maxresdefault.jpg" alt="" width="960" height="540" />
-              <div class="sol-media-badge">
-                <img src="assets/img/graphics-house-logo.png" alt="Graphics House" width="96" height="40" />
-                <div>
-                  <span data-i18n="csClientLabel">الشريك</span>
-                  <strong data-i18n="csReClient">جرافيكس هاوس</strong>
-                </div>
+            <div class="plh-caps" role="list">
+              <span class="plh-cap" data-i18n="csRePill1">CGI سينمائي</span>
+              <span class="plh-cap-dot" aria-hidden="true"></span>
+              <span class="plh-cap" data-i18n="csRePill2">موشن عقاري</span>
+              <span class="plh-cap-dot" aria-hidden="true"></span>
+              <span class="plh-cap" data-i18n="csRePill3">إظهار معماري</span>
+              <span class="plh-cap-dot" aria-hidden="true"></span>
+              <span class="plh-cap" data-i18n="csRePill4">معارض ومشاريع</span>
+              <span class="plh-cap-dot" aria-hidden="true"></span>
+              <span class="plh-cap" data-i18n="csRePill5">ما قبل البيع</span>
+            </div>
+            <div class="plh-partner">
+              <img src="assets/img/graphics-house-logo.png" alt="Graphics House" width="110" height="40" />
+              <div>
+                <span data-i18n="csClientLabel">الشريك</span>
+                <strong data-i18n="csReClient">جرافيكس هاوس</strong>
               </div>
             </div>
           </div>
