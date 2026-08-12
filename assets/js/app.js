@@ -34,12 +34,9 @@
       if (val != null) el.innerHTML = val;
     });
 
-    const title = document.body.classList.contains("page-case-study")
-      ? dict.csMetaTitle || dict.metaTitle
-      : dict.metaTitle;
-    const desc = document.body.classList.contains("page-case-study")
-      ? dict.csMetaDesc || dict.metaDesc
-      : dict.metaDesc;
+    const metaKey = document.body.getAttribute("data-i18n-meta");
+    const title = metaKey && dict[`${metaKey}MetaTitle`] ? dict[`${metaKey}MetaTitle`] : dict.metaTitle;
+    const desc = metaKey && dict[`${metaKey}MetaDesc`] ? dict[`${metaKey}MetaDesc`] : dict.metaDesc;
     if (title) document.title = title;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && desc) metaDesc.setAttribute("content", desc);
