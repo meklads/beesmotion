@@ -1,0 +1,14 @@
+---
+description: Always commit and push Bees Motion site changes to GitHub
+alwaysApply: true
+---
+
+# Bees Motion deploy workflow
+
+After completing requested website changes in this repo (`meklads/beesmotion`):
+
+1. **Commit** with a clear message (HEREDOC) when there are relevant changes.
+2. **Push to GitHub** on `main` with `git push origin main` — do this by default, without waiting for a separate “push” ask.
+3. Prefer also running `npm run deploy` (Cloudflare Pages) so production stays in sync.
+
+Do not leave finished work only local. If push fails, fix and retry or tell the user why.
