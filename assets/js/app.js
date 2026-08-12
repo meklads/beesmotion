@@ -193,42 +193,11 @@
     });
   }
 
-  function initYoutubeEmbeds() {
-    const frames = document.querySelectorAll("[data-yt-src]");
-    if (!frames.length) return;
-
-    const load = (wrap) => {
-      const src = wrap.getAttribute("data-yt-src");
-      const iframe = wrap.querySelector("iframe");
-      if (!src || !iframe || iframe.getAttribute("src")) return;
-      iframe.setAttribute("src", src);
-      wrap.removeAttribute("data-yt-src");
-    };
-
-    if (!("IntersectionObserver" in window)) {
-      frames.forEach(load);
-      return;
-    }
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (!e.isIntersecting) return;
-          load(e.target);
-          io.unobserve(e.target);
-        });
-      },
-      { rootMargin: "200px 0px", threshold: 0.05 }
-    );
-    frames.forEach((el) => io.observe(el));
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
     initLang();
     initHeader();
     initReveal();
     initForm();
     initHeroVideo();
-    initYoutubeEmbeds();
   });
 })();
