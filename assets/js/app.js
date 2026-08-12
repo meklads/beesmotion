@@ -34,8 +34,12 @@
       if (val != null) el.innerHTML = val;
     });
 
-    const title = dict.metaTitle;
-    const desc = dict.metaDesc;
+    const title = document.body.classList.contains("page-case-study")
+      ? dict.csMetaTitle || dict.metaTitle
+      : dict.metaTitle;
+    const desc = document.body.classList.contains("page-case-study")
+      ? dict.csMetaDesc || dict.metaDesc
+      : dict.metaDesc;
     if (title) document.title = title;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && desc) metaDesc.setAttribute("content", desc);
