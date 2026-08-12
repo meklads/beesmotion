@@ -197,11 +197,30 @@
     });
   }
 
+  function initCaseFilters() {
+    const filters = document.querySelectorAll(".cs-filter");
+    const tiles = document.querySelectorAll(".cs-tile");
+    if (!filters.length || !tiles.length) return;
+
+    filters.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-filter") || "all";
+        filters.forEach((b) => b.classList.toggle("is-active", b === btn));
+        tiles.forEach((tile) => {
+          const series = tile.getAttribute("data-series");
+          const show = key === "all" || series === key;
+          tile.classList.toggle("is-hidden", !show);
+        });
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initLang();
     initHeader();
     initReveal();
     initForm();
     initHeroVideo();
+    initCaseFilters();
   });
 })();
