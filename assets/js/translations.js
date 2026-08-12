@@ -208,6 +208,9 @@ window.BM_I18N = {
     csReS1d: "عرض موشن لخدمات جرافيكس هاوس في القطاع العقاري.",
     csReS2: "إظهار معماري",
     csReS2d: "تصور معماري ثلاثي الأبعاد يحاكي تجربة المشروع بالكامل.",
+    csReS3: "مشاريع ومعارض",
+    csReS3d: "مشاريع رابطة العالم الإسلامي، المعرض الرمضاني.",
+    csReS3d2: "فيلم مشروع من إنتاج جرافيكس هاوس.",
     csRePitchTag: "للمطورين والاستوديوهات العقارية",
     csRePitchTitle: "اجعلوا مشروعكم يُرى قبل أن يُبنى",
     csRePitchBody:
@@ -425,6 +428,9 @@ window.BM_I18N = {
     csReS1d: "Motion film presenting Graphics House services in real estate.",
     csReS2: "Architectural visualization",
     csReS2d: "3D architectural visualization that simulates the full project experience.",
+    csReS3: "Projects & exhibitions",
+    csReS3d: "Muslim World League projects, Ramadan exhibition.",
+    csReS3d2: "A project film produced by Graphics House.",
     csRePitchTag: "For developers and visualization studios",
     csRePitchTitle: "Let your project be seen before it is built",
     csRePitchBody:
