@@ -103,12 +103,12 @@
         </div>
       </section>
 
-      <section class="cs-impact" id="impact">
+      <section class="cs-impact cs-impact--light" id="impact">
         <div class="container">
           <div class="cs-impact-layout reveal">
             <div>
-              <p class="cs-kicker cs-kicker-light" data-i18n="csReImpactTag">الأثر</p>
-              <h2 class="cs-section-title cs-section-title-light" data-i18n="csReImpactTitle">رؤية أوضح للمشروع، وتفاعل أعلى مع العرض</h2>
+              <p class="cs-kicker" data-i18n="csReImpactTag">الأثر</p>
+              <h2 class="cs-section-title" data-i18n="csReImpactTitle">رؤية أوضح للمشروع، وتفاعل أعلى مع العرض</h2>
             </div>
             <p class="cs-impact-copy" data-i18n="csReImpactBody">
               ساعد المحتوى المرئي على إيصال قيمة المشروع العقاري بسرعة أكبر عبر المنصات الرقمية، مع تفاعل ملحوظ من الجمهور المهتم، ومشاهدات أقوى للمواد التعريفية، ورسالة بصرية موحّدة تعكس قوة الاستوديو في التسويق العقاري قبل التنفيذ على أرض الواقع.
@@ -131,91 +131,92 @@
         </div>
       </section>
 
-      <section class="cs-gallery" id="series">
+      <section class="cs-gallery pf-gallery" id="series">
         <div class="container">
-          <div class="cs-gallery-head reveal">
-            <p class="cs-kicker" data-i18n="csReSeriesTag">المعرض</p>
-            <h2 class="cs-section-title" data-i18n="csReSeriesTitle">إنتاج المحتوى المؤثر للعقارات</h2>
-            <p class="cs-gallery-sub" data-i18n="csReSeriesSub">
-              نماذج من المحتوى الذي يقدّم خدمات جرافيكس هاوس العقارية والإظهار المعماري بأسلوب سينمائي مختصر وقابل للمشاركة.
-            </p>
+          <div class="pf-head reveal">
+            <span class="pf-num" aria-hidden="true">04</span>
+            <div class="pf-head-copy">
+              <p class="cs-kicker" data-i18n="csReSeriesTag">المعرض</p>
+              <h2 class="cs-section-title" data-i18n="csReSeriesTitle">أفلام عقارية سينمائية</h2>
+              <p class="cs-gallery-sub" data-i18n="csReSeriesSub">
+                محتوى مرئي يقدّم الخدمات العقارية والإظهار المعماري والمشاريع بأسلوب سينمائي مختصر وقابل للمشاركة.
+              </p>
+            </div>
           </div>
 
-          <div class="cs-filters reveal" role="tablist" aria-label="Series filters">
-            <button type="button" class="cs-filter is-active" data-filter="all" data-i18n="csFilterAll">الكل</button>
-            <button type="button" class="cs-filter" data-filter="services" data-i18n="csReS1">خدمات عقارية</button>
-            <button type="button" class="cs-filter" data-filter="viz" data-i18n="csReS2">إظهار معماري</button>
-            <button type="button" class="cs-filter" data-filter="projects" data-i18n="csReS3">مشاريع ومعارض</button>
+          <div class="pf-grid" role="list">
+            <button type="button" class="pf-card reveal" data-filter="services" aria-pressed="false">
+              <img src="https://img.youtube.com/vi/WoYMS7Xs7cY/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" />
+              <span class="pf-card-shade" aria-hidden="true"></span>
+              <span class="pf-card-body">
+                <span class="pf-card-cat" data-i18n="csReSeriesCat">محتوى عقاري</span>
+                <span class="pf-card-title" data-i18n="csReS1">خدمات عقارية</span>
+                <span class="pf-card-sub" data-i18n="csReS1d">عرض موشن لخدمات جرافيكس هاوس في القطاع العقاري.</span>
+                <span class="pf-card-cta" data-i18n="csWatchFilm">← مشاهدة الفيلم</span>
+              </span>
+            </button>
+
+            <button type="button" class="pf-card reveal" data-filter="viz" aria-pressed="false">
+              <img src="https://img.youtube.com/vi/e4ZuwoSHs_8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" />
+              <span class="pf-card-shade" aria-hidden="true"></span>
+              <span class="pf-card-body">
+                <span class="pf-card-cat" data-i18n="csReSeriesCat">محتوى عقاري</span>
+                <span class="pf-card-title" data-i18n="csReS2">إظهار معماري</span>
+                <span class="pf-card-sub" data-i18n="csReS2d">تصور معماري ثلاثي الأبعاد يحاكي تجربة المشروع بالكامل.</span>
+                <span class="pf-card-cta" data-i18n="csWatchFilm">← مشاهدة الفيلم</span>
+              </span>
+            </button>
+
+            <button type="button" class="pf-card reveal" data-filter="mwl" aria-pressed="false">
+              <img src="https://img.youtube.com/vi/H66KNP1sQCk/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" />
+              <span class="pf-card-shade" aria-hidden="true"></span>
+              <span class="pf-card-body">
+                <span class="pf-card-cat" data-i18n="csReSeriesCat">محتوى عقاري</span>
+                <span class="pf-card-title" data-i18n="csReS3">مشاريع ومعارض</span>
+                <span class="pf-card-sub" data-i18n="csReS3d">مشاريع رابطة العالم الإسلامي، المعرض الرمضاني.</span>
+                <span class="pf-card-cta" data-i18n="csWatchFilm">← مشاهدة الفيلم</span>
+              </span>
+            </button>
+
+            <button type="button" class="pf-card reveal" data-filter="project" aria-pressed="false">
+              <img src="https://img.youtube.com/vi/qCYcoSsy3fs/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" />
+              <span class="pf-card-shade" aria-hidden="true"></span>
+              <span class="pf-card-body">
+                <span class="pf-card-cat" data-i18n="csReSeriesCat">محتوى عقاري</span>
+                <span class="pf-card-title" data-i18n="csReS4">فيلم مشروع</span>
+                <span class="pf-card-sub" data-i18n="csReS3d2">فيلم مشروع من إنتاج جرافيكس هاوس.</span>
+                <span class="pf-card-cta" data-i18n="csWatchFilm">← مشاهدة الفيلم</span>
+              </span>
+            </button>
           </div>
 
-          <div class="cs-tiles" id="csTiles">
-            <article class="cs-tile reveal" data-series="services">
-              <div class="cs-tile-media">
-                <iframe
-                  src="https://www.youtube.com/embed/WoYMS7Xs7cY"
-                  title="GH Real estate services"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                ></iframe>
-              </div>
-              <div class="cs-tile-meta">
-                <span data-i18n="csReS1">خدمات عقارية</span>
-                <p data-i18n="csReS1d">عرض موشن لخدمات جرافيكس هاوس في القطاع العقاري.</p>
-              </div>
-            </article>
-
-            <article class="cs-tile reveal" data-series="viz">
-              <div class="cs-tile-media">
-                <iframe
-                  src="https://www.youtube.com/embed/e4ZuwoSHs_8"
-                  title="3D Architectural visualisation"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                ></iframe>
-              </div>
-              <div class="cs-tile-meta">
-                <span data-i18n="csReS2">إظهار معماري</span>
-                <p data-i18n="csReS2d">تصور معماري ثلاثي الأبعاد يحاكي تجربة المشروع بالكامل.</p>
-              </div>
-            </article>
-
-            <article class="cs-tile reveal" data-series="projects">
-              <div class="cs-tile-media">
-                <iframe
-                  src="https://www.youtube.com/embed/H66KNP1sQCk"
-                  title="مشاريع رابطة العالم الاسلامي، المعرض الرمضاني"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                ></iframe>
-              </div>
-              <div class="cs-tile-meta">
-                <span data-i18n="csReS3">مشاريع ومعارض</span>
-                <p data-i18n="csReS3d">مشاريع رابطة العالم الإسلامي، المعرض الرمضاني.</p>
-              </div>
-            </article>
-
-            <article class="cs-tile reveal" data-series="projects">
-              <div class="cs-tile-media">
-                <iframe
-                  src="https://www.youtube.com/embed/qCYcoSsy3fs"
-                  title="Graphics House project film"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                ></iframe>
-              </div>
-              <div class="cs-tile-meta">
-                <span data-i18n="csReS3">مشاريع ومعارض</span>
-                <p data-i18n="csReS3d2">فيلم مشروع من إنتاج جرافيكس هاوس.</p>
-              </div>
-            </article>
+          <div class="pf-videos" id="pfVideos" hidden>
+            <div class="pf-videos-bar">
+              <h3 class="pf-videos-title" id="pfVideosTitle"></h3>
+              <button type="button" class="cs-filter" data-filter="all" data-i18n="csFilterAll">الكل</button>
+            </div>
+            <div class="cs-tiles" id="csTiles">
+              <article class="cs-tile" data-series="services">
+                <div class="cs-tile-media">
+                  <iframe src="https://www.youtube.com/embed/WoYMS7Xs7cY" title="GH Real estate services" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </article>
+              <article class="cs-tile" data-series="viz">
+                <div class="cs-tile-media">
+                  <iframe src="https://www.youtube.com/embed/e4ZuwoSHs_8" title="3D Architectural visualisation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </article>
+              <article class="cs-tile" data-series="mwl">
+                <div class="cs-tile-media">
+                  <iframe src="https://www.youtube.com/embed/H66KNP1sQCk" title="مشاريع رابطة العالم الاسلامي، المعرض الرمضاني" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </article>
+              <article class="cs-tile" data-series="project">
+                <div class="cs-tile-media">
+                  <iframe src="https://www.youtube.com/embed/qCYcoSsy3fs" title="Graphics House project film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -230,7 +231,7 @@
         </div>
       </section>
 
-      <section class="cs-close">
+      <section class="cs-close cs-close--light">
         <div class="container cs-close-inner reveal">
           <h2 class="cs-close-title" data-i18n="csReCtaTitle">حوّلوا المخطط العقاري إلى محرك مبيعات بصري</h2>
           <p class="cs-close-sub" data-i18n="csReCtaSub">
@@ -238,7 +239,7 @@
           </p>
           <div class="cs-close-actions">
             <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="heroCta1">احجز تحليلاً مجانياً</a>
-            <a class="btn btn-pill btn-outline-light" href="index.html#packages" data-i18n="heroCta2">استكشف الباقات</a>
+            <a class="btn btn-pill btn-outline-dark" href="index.html#packages" data-i18n="heroCta2">استكشف الباقات</a>
           </div>
         </div>
       </section>

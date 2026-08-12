@@ -195,19 +195,52 @@
   }
 
   function initCaseFilters() {
-    const filters = document.querySelectorAll(".cs-filter");
+    const cards = document.querySelectorAll(".pf-card[data-filter]");
+    const chips = document.querySelectorAll(".cs-filter");
     const tiles = document.querySelectorAll(".cs-tile");
-    if (!filters.length || !tiles.length) return;
+    const videos = document.getElementById("pfVideos");
+    const titleEl = document.getElementById("pfVideosTitle");
+    if (!tiles.length) return;
 
-    filters.forEach((btn) => {
+    function applyFilter(key, title) {
+      const showAll = !key || key === "all";
+      tiles.forEach((tile) => {
+        const series = tile.getAttribute("data-series");
+        const show = showAll || series === key;
+        tile.classList.toggle("is-hidden", !show);
+      });
+      cards.forEach((card) => {
+        const active = !showAll && card.getAttribute("data-filter") === key;
+        card.classList.toggle("is-active", active);
+        card.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      chips.forEach((chip) => {
+        const chipKey = chip.getAttribute("data-filter") || "all";
+        chip.classList.toggle("is-active", showAll ? chipKey === "all" : chipKey === key);
+      });
+      if (videos) {
+        if (showAll) {
+          videos.hidden = true;
+        } else {
+          videos.hidden = false;
+          if (titleEl && title) titleEl.textContent = title;
+          videos.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const key = card.getAttribute("data-filter") || "all";
+        const titleNode = card.querySelector(".pf-card-title");
+        applyFilter(key, titleNode ? titleNode.textContent.trim() : "");
+      });
+    });
+
+    chips.forEach((btn) => {
       btn.addEventListener("click", () => {
         const key = btn.getAttribute("data-filter") || "all";
-        filters.forEach((b) => b.classList.toggle("is-active", b === btn));
-        tiles.forEach((tile) => {
-          const series = tile.getAttribute("data-series");
-          const show = key === "all" || series === key;
-          tile.classList.toggle("is-hidden", !show);
-        });
+        applyFilter(key, "");
       });
     });
   }
