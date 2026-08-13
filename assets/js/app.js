@@ -206,7 +206,7 @@
     const iframe = document.createElement("iframe");
     iframe.src =
       `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}` +
-      "&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3";
+      "&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&vq=hd1080&hd=1";
     iframe.title = title || "Showreel";
     iframe.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
@@ -245,7 +245,7 @@
           btn.setAttribute("data-yt-title", title);
           btn.setAttribute(
             "data-yt-params",
-            `autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&modestbranding=1&playsinline=1&rel=0`
+            `autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1`
           );
           btn.setAttribute("aria-label", "Play showreel");
           btn.innerHTML =
@@ -255,7 +255,7 @@
           btn.addEventListener("click", () => {
             const play = buildHeroIframe(id, title);
             play.style.pointerEvents = "auto";
-            play.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+            play.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1`;
             btn.replaceWith(play);
           });
         }
@@ -479,7 +479,8 @@
         const id = btn.getAttribute("data-yt-id");
         if (!id) return;
         const title = btn.getAttribute("data-yt-title") || "Video";
-        const params = btn.getAttribute("data-yt-params") || "autoplay=1&rel=0&modestbranding=1&playsinline=1";
+        let params = btn.getAttribute("data-yt-params") || "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1";
+        if (!/[?&]vq=/.test(params)) params += "&vq=hd1080&hd=1";
         const iframe = document.createElement("iframe");
         iframe.src = `https://www.youtube.com/embed/${id}?${params}`;
         iframe.title = title;
