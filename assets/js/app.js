@@ -410,6 +410,7 @@
       }
 
       function selectSeries(key, { autoplayFirst }) {
+        const showAll = key === "all";
         tabs.forEach((tab) => {
           const on = tab.getAttribute("data-series-tab") === key;
           tab.classList.toggle("is-active", on);
@@ -430,11 +431,16 @@
 
         const visible = [];
         thumbs.forEach((thumb) => {
-          const match = thumb.getAttribute("data-series") === key;
+          const match = showAll || thumb.getAttribute("data-series") === key;
           thumb.classList.toggle("is-hidden", !match);
           thumb.hidden = !match;
           if (match) visible.push(thumb);
         });
+
+        album.classList.toggle("is-showing-all", showAll);
+
+        const strip = album.querySelector("[data-album-strip]");
+        if (strip) strip.scrollTo({ left: 0, behavior: "smooth" });
 
         if (visible[0]) selectThumb(visible[0], { autoplay: !!autoplayFirst });
       }
