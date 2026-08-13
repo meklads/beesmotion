@@ -25,6 +25,8 @@
       if (val == null) return;
       if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
         el.placeholder = val;
+      } else if (el.tagName === "OPTION") {
+        el.textContent = val;
       } else {
         el.textContent = val;
       }
@@ -115,6 +117,29 @@
     });
   }
 
+  function track(event, props) {
+    try {
+      const payload = Object.assign({ event: event }, props || {});
+      if (window.dataLayer && Array.isArray(window.dataLayer)) {
+        window.dataLayer.push(payload);
+      }
+      if (typeof window.gtag === "function") {
+        window.gtag("event", event, props || {});
+      }
+    } catch (_) {}
+  }
+
+  function initTracking() {
+    document.addEventListener("click", (e) => {
+      const el = e.target.closest("[data-track]");
+      if (!el) return;
+      track(el.getAttribute("data-track"), {
+        href: el.getAttribute("href") || "",
+        lang: getLang(),
+      });
+    });
+  }
+
   function initForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
@@ -125,14 +150,27 @@
       const name = form.name.value.trim();
       const phone = form.phone.value.trim();
       const company = form.company.value.trim();
+      const industryEl = form.industry;
+      const needEl = form.need;
+      const industry = industryEl ? industryEl.value : "";
+      const need = needEl ? needEl.value : "";
+      const industryLabel = industryEl && industryEl.selectedOptions[0]
+        ? industryEl.selectedOptions[0].textContent.trim()
+        : industry;
+      const needLabel = needEl && needEl.selectedOptions[0]
+        ? needEl.selectedOptions[0].textContent.trim()
+        : need;
       const message = form.message.value.trim();
+      track("cta_form_whatsapp", { industry: industry, need: need, lang: lang });
       const lines =
         lang === "ar"
           ? [
               "مرحباً بيز موشن،",
               `الاسم: ${name}`,
               `الجوال: ${phone}`,
-              `النشاط: ${company}`,
+              `الشركة: ${company}`,
+              `القطاع: ${industryLabel}`,
+              `الاحتياج: ${needLabel}`,
               `الطلب: ${message}`,
             ]
           : [
@@ -140,6 +178,8 @@
               `Name: ${name}`,
               `Phone: ${phone}`,
               `Company: ${company}`,
+              `Industry: ${industryLabel}`,
+              `Need: ${needLabel}`,
               `Request: ${message}`,
             ];
       const text = encodeURIComponent(lines.join("\n"));
@@ -354,6 +394,7 @@
     initLang();
     initHeader();
     initReveal();
+    initTracking();
     initForm();
     initHeroVideo();
     initYtFacades();

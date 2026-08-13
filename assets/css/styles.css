@@ -544,11 +544,29 @@ a {
   width: 100%;
   margin-inline: auto;
   background: #0a0a0a;
+  overflow: hidden;
 }
 
 .bm-hero-video .bm-video-crop--yt-short {
-  max-width: min(100%, 380px);
+  max-width: min(100%, 340px);
   margin-inline: auto;
+}
+
+/* Hero: crop top & bottom of Short — keep the middle frame */
+.bm-hero-video .bm-video-crop--hero-mid {
+  aspect-ratio: 4 / 5;
+  max-width: min(100%, 300px);
+}
+
+.bm-hero-video .bm-video-crop--hero-mid iframe {
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: 118%;
+  height: 148%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .bm-video-crop--yt-short iframe,
@@ -590,6 +608,10 @@ a {
   }
   .bm-video-crop--yt-short {
     aspect-ratio: 9 / 16;
+  }
+  .bm-hero-video .bm-video-crop--hero-mid {
+    aspect-ratio: 4 / 5;
+    max-width: min(100%, 280px);
   }
   .bm-video-crop:hover,
   .bm-video-crop:hover video {
@@ -872,10 +894,14 @@ section {
 }
 
 .eco-band {
-  padding: clamp(48px, 7vw, 80px) 0;
-  background: #fff;
+  padding: clamp(36px, 5vw, 56px) 0;
+  background: #f7f5f0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+.eco-band .font-headline-xl {
+  font-size: clamp(22px, 3vw, 30px) !important;
 }
 
 .eco-grid {
@@ -1364,12 +1390,14 @@ a.eco-card:hover {
   background: #fff;
   border: 1px solid rgba(15, 35, 71, 0.08);
   position: relative;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 12px 32px rgba(15, 35, 71, 0.04);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .pkg-card:hover {
-  border-color: rgba(15, 35, 71, 0.18);
-  transform: translateY(-3px);
+  border-color: rgba(229, 168, 35, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 35, 71, 0.08);
 }
 
 .pkg-card--featured {
@@ -1760,7 +1788,8 @@ body.lang-ar .clients-track {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 12px 0;
   border: none;
@@ -1770,10 +1799,29 @@ body.lang-ar .clients-track {
   font-size: 15px;
   margin-bottom: 16px;
   background: transparent;
+  color: var(--ink);
+  appearance: none;
+}
+
+.contact-form select {
+  cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold-dark) 50%),
+    linear-gradient(135deg, var(--gold-dark) 50%, transparent 50%);
+  background-position: calc(100% - 14px) calc(1em + 2px), calc(100% - 9px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-inline-end: 28px;
+}
+
+html[dir="rtl"] .contact-form select {
+  background-position: 14px calc(1em + 2px), 9px calc(1em + 2px);
+  padding-inline-end: 0;
+  padding-inline-start: 28px;
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-bottom-color: var(--gold);
 }
@@ -1781,6 +1829,27 @@ body.lang-ar .clients-track {
 .contact-form textarea {
   min-height: 100px;
   resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
+  margin-bottom: 4px;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-field label {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-methods {
