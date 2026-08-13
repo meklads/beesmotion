@@ -5,7 +5,7 @@
   function getLang() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "en" || saved === "ar") return saved;
-    return document.documentElement.lang === "en" ? "en" : "ar";
+    return "en";
   }
 
   function applyLang(lang) {
