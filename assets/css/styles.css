@@ -242,11 +242,11 @@ a {
 .nav-desktop {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 .nav-desktop a {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--navy);
   opacity: 0.88;
@@ -5622,8 +5622,16 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 .nav-desktop a {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.02em;
+}
+
+html[dir="rtl"] .nav-desktop a,
+body.lang-ar .nav-desktop a {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /* Video frame on hero */
