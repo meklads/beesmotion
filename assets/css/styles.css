@@ -4665,6 +4665,43 @@ body.lang-ar .sol-trust-track {
   margin-bottom: 0.35em;
 }
 
+/* Industry title chips */
+.systems-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 12px;
+  max-width: none;
+}
+
+.sector-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ink);
+  padding: 0.42em 0.78em;
+  border-radius: 14px;
+  border: 1.5px solid rgba(229, 168, 35, 0.5);
+  background: linear-gradient(180deg, #fffef9 0%, #fff 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 28px rgba(15, 35, 71, 0.05);
+  white-space: nowrap;
+}
+
+html[dir="rtl"] .sector-mark,
+body.lang-ar .sector-mark {
+  font-family: var(--font-ar);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
 .signature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
