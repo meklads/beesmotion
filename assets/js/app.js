@@ -264,9 +264,19 @@
     const items = [...quiz.querySelectorAll(".sol-quiz-item")];
     const result = document.getElementById("readyResult");
     const scoreEl = document.getElementById("readyScore");
+    const progressBar = document.getElementById("readyProgress");
+    const progressLabel = document.getElementById("readyProgressLabel");
     const answers = new Map();
 
+    function updateProgress() {
+      const done = answers.size;
+      const total = items.length;
+      if (progressBar) progressBar.style.width = `${(done / total) * 100}%`;
+      if (progressLabel) progressLabel.textContent = `${done}/${total}`;
+    }
+
     function render() {
+      updateProgress();
       if (answers.size < items.length) return;
       let noCount = 0;
       answers.forEach((v) => {
@@ -283,11 +293,11 @@
     }
 
     items.forEach((item, idx) => {
-      item.querySelectorAll(".sol-quiz-ans button").forEach((btn) => {
+      item.querySelectorAll(".quiz-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           const ans = btn.getAttribute("data-ans");
           answers.set(idx, ans);
-          item.querySelectorAll(".sol-quiz-ans button").forEach((b) => {
+          item.querySelectorAll(".quiz-btn").forEach((b) => {
             b.classList.toggle("is-active", b === btn);
             b.classList.toggle("is-no", b === btn && ans === "no");
             b.classList.toggle("is-yes", b === btn && ans === "yes");
@@ -297,6 +307,8 @@
         });
       });
     });
+
+    updateProgress();
   }
 
   document.addEventListener("DOMContentLoaded", () => {

@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260813b" />
   </head>
   <body class="lang-en page-case-study page-case-imc page-sol" data-i18n-meta="cs">
     <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
@@ -459,46 +459,59 @@
           <p class="sol-eyebrow" data-i18n="csReadyTag">Quick assessment</p>
           <h2 class="sol-h2" data-i18n="csReadyTitle">Is your center ready for persuasive medical content?</h2>
           <p class="sol-body" data-i18n="csReadySub">Answer honestly. These five questions reveal the digital presence gap before any production.</p>
-          <div class="sol-quiz" id="readyQuiz" data-quiz="imc">
-            <div class="sol-quiz-item">
-              <p data-i18n="csReady1">Do you have a cohesive visual content system for medical services?</p>
-              <div class="sol-quiz-ans" role="group">
-                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
-                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+          <div class="sol-ready-panel">
+            <div class="sol-quiz-progress" aria-hidden="true">
+              <div class="sol-quiz-progress-track">
+                <div class="sol-quiz-progress-bar" id="readyProgress"></div>
               </div>
+              <span class="sol-quiz-progress-label" id="readyProgressLabel">0/5</span>
             </div>
-            <div class="sol-quiz-item">
-              <p data-i18n="csReady2">Can a patient understand your service in the first minute of viewing?</p>
-              <div class="sol-quiz-ans" role="group">
-                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
-                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+            <div class="sol-quiz" id="readyQuiz" data-quiz="imc">
+              <div class="sol-quiz-item">
+                <span class="sol-quiz-num">01</span>
+                <p data-i18n="csReady1">Do you have a cohesive visual content system for medical services?</p>
+                <div class="sol-quiz-ans" role="group">
+                  <button type="button" class="quiz-btn" data-ans="yes" data-i18n="csYes">Yes</button>
+                  <button type="button" class="quiz-btn" data-ans="no" data-i18n="csNo">No</button>
+                </div>
               </div>
-            </div>
-            <div class="sol-quiz-item">
-              <p data-i18n="csReady3">Do you own series ready for steady publishing?</p>
-              <div class="sol-quiz-ans" role="group">
-                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
-                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              <div class="sol-quiz-item">
+                <span class="sol-quiz-num">02</span>
+                <p data-i18n="csReady2">Can a patient understand your service in the first minute of viewing?</p>
+                <div class="sol-quiz-ans" role="group">
+                  <button type="button" class="quiz-btn" data-ans="yes" data-i18n="csYes">Yes</button>
+                  <button type="button" class="quiz-btn" data-ans="no" data-i18n="csNo">No</button>
+                </div>
               </div>
-            </div>
-            <div class="sol-quiz-item">
-              <p data-i18n="csReady4">Does your audience actually engage with your health messages?</p>
-              <div class="sol-quiz-ans" role="group">
-                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
-                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              <div class="sol-quiz-item">
+                <span class="sol-quiz-num">03</span>
+                <p data-i18n="csReady3">Do you own series ready for steady publishing?</p>
+                <div class="sol-quiz-ans" role="group">
+                  <button type="button" class="quiz-btn" data-ans="yes" data-i18n="csYes">Yes</button>
+                  <button type="button" class="quiz-btn" data-ans="no" data-i18n="csNo">No</button>
+                </div>
               </div>
-            </div>
-            <div class="sol-quiz-item">
-              <p data-i18n="csReady5">Are all assets in one visual language under the center identity?</p>
-              <div class="sol-quiz-ans" role="group">
-                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
-                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              <div class="sol-quiz-item">
+                <span class="sol-quiz-num">04</span>
+                <p data-i18n="csReady4">Does your audience actually engage with your health messages?</p>
+                <div class="sol-quiz-ans" role="group">
+                  <button type="button" class="quiz-btn" data-ans="yes" data-i18n="csYes">Yes</button>
+                  <button type="button" class="quiz-btn" data-ans="no" data-i18n="csNo">No</button>
+                </div>
               </div>
-            </div>
-            <div class="sol-quiz-result" id="readyResult" hidden>
-              <p class="sol-quiz-score" id="readyScore"></p>
-              <p class="sol-quiz-msg" id="readyMsg" data-i18n="csReadyNote"></p>
-              <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="csBrowse">Book a medical content session</a>
+              <div class="sol-quiz-item">
+                <span class="sol-quiz-num">05</span>
+                <p data-i18n="csReady5">Are all assets in one visual language under the center identity?</p>
+                <div class="sol-quiz-ans" role="group">
+                  <button type="button" class="quiz-btn" data-ans="yes" data-i18n="csYes">Yes</button>
+                  <button type="button" class="quiz-btn" data-ans="no" data-i18n="csNo">No</button>
+                </div>
+              </div>
+              <div class="sol-quiz-result" id="readyResult" hidden>
+                <p class="sol-quiz-score" id="readyScore"></p>
+                <p class="sol-quiz-msg" id="readyMsg" data-i18n="csReadyNote"></p>
+                <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="csBrowse">Book a medical content session</a>
+              </div>
             </div>
           </div>
         </div>
@@ -593,7 +606,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/translations.js?v=20260813b"></script>
+    <script src="assets/js/app.js?v=20260813b"></script>
   </body>
 </html>
