@@ -245,6 +245,60 @@
     });
   }
 
+  function initSolSticky() {
+    const bar = document.getElementById("solSticky");
+    const hero = document.getElementById("hero");
+    if (!bar || !hero) return;
+    const sync = () => {
+      const past = window.scrollY > hero.offsetHeight * 0.65;
+      bar.hidden = !past;
+      document.body.classList.toggle("has-sol-sticky", past);
+    };
+    window.addEventListener("scroll", sync, { passive: true });
+    sync();
+  }
+
+  function initReadyQuiz() {
+    const quiz = document.getElementById("readyQuiz");
+    if (!quiz) return;
+    const items = [...quiz.querySelectorAll(".sol-quiz-item")];
+    const result = document.getElementById("readyResult");
+    const scoreEl = document.getElementById("readyScore");
+    const answers = new Map();
+
+    function render() {
+      if (answers.size < items.length) return;
+      let noCount = 0;
+      answers.forEach((v) => {
+        if (v === "no") noCount += 1;
+      });
+      const yesCount = items.length - noCount;
+      if (result) result.hidden = false;
+      if (scoreEl) {
+        const dict = window.BM_I18N[getLang()] || {};
+        const label = dict.csQuizScore || "Readiness score";
+        scoreEl.textContent = `${label}: ${yesCount}/${items.length}`;
+      }
+      result?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    items.forEach((item, idx) => {
+      item.querySelectorAll(".sol-quiz-ans button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const ans = btn.getAttribute("data-ans");
+          answers.set(idx, ans);
+          item.querySelectorAll(".sol-quiz-ans button").forEach((b) => {
+            b.classList.toggle("is-active", b === btn);
+            b.classList.toggle("is-no", b === btn && ans === "no");
+            b.classList.toggle("is-yes", b === btn && ans === "yes");
+          });
+          item.classList.add("is-answered");
+          render();
+        });
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initLang();
     initHeader();
@@ -252,5 +306,7 @@
     initForm();
     initHeroVideo();
     initCaseFilters();
+    initSolSticky();
+    initReadyQuiz();
   });
 })();

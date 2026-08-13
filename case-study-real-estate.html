@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -103,6 +103,56 @@
                 <strong data-i18n="csReClient">جرافيكس هاوس</strong>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sol-strip" aria-label="Proof">
+        <div class="container sol-strip-grid">
+          <div class="sol-strip-item reveal">
+            <strong data-i18n="csReStrip1n">4</strong>
+            <span data-i18n="csReStrip1d">cinematic launch films</span>
+          </div>
+          <div class="sol-strip-item reveal">
+            <strong data-i18n="csReStrip2n">CGI</strong>
+            <span data-i18n="csReStrip2d">motion + architectural visualization</span>
+          </div>
+          <div class="sol-strip-item reveal">
+            <strong data-i18n="csReStrip3n">Pre</strong>
+            <span data-i18n="csReStrip3d">sales persuasion before concrete</span>
+          </div>
+          <div class="sol-strip-item reveal">
+            <strong data-i18n="csReStrip4n">GH</strong>
+            <span data-i18n="csReStrip4d">proven with Graphics House</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="sol-ideas" id="ideas">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="csReIdeaTag">Pioneering idea</p>
+            <h2 class="sol-h2" data-i18n="csReIdeaTitle">Not renders. A visual sales operating system.</h2>
+            <p class="sol-body" data-i18n="csReIdeaBody">
+              PropMotion™ turns scattered visuals into a launch language investors understand in minutes — services, visualization, and project films under one cinematic identity.
+            </p>
+          </div>
+          <div class="sol-idea-grid">
+            <article class="sol-idea-card reveal">
+              <span class="sol-idea-num">01</span>
+              <h3 data-i18n="csReIdea1t">Feel the project first</h3>
+              <p data-i18n="csReIdea1d">Investors buy emotion before specs. Every film is built to create that first conviction.</p>
+            </article>
+            <article class="sol-idea-card reveal">
+              <span class="sol-idea-num">02</span>
+              <h3 data-i18n="csReIdea2t">One launch language</h3>
+              <p data-i18n="csReIdea2d">CGI, motion, and exhibition content share one voice — so the brand never fragments.</p>
+            </article>
+            <article class="sol-idea-card reveal">
+              <span class="sol-idea-num">03</span>
+              <h3 data-i18n="csReIdea3t">Ready before opening day</h3>
+              <p data-i18n="csReIdea3d">Assets arrive campaign-ready: investor days, social, and sales rooms speak the same story.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -324,18 +374,51 @@
 
       <section class="sol-ready" id="ready">
         <div class="container sol-ready-inner reveal">
-          <p class="sol-eyebrow" data-i18n="csReReadyTag">تقييم سريع</p>
-          <h2 class="sol-h2" data-i18n="csReReadyTitle">هل مشروعكم جاهز للإطلاق البصري؟</h2>
-          <p class="sol-body" data-i18n="csReReadySub">أجب بصراحة، هذه الأسئلة تكشف فجوة الجاهزية قبل يوم الإطلاق.</p>
-          <ol class="sol-ready-list">
-            <li data-i18n="csReReady1">هل لديكم هوية بصرية متكاملة للمشروع؟</li>
-            <li data-i18n="csReReady2">هل يمتلك فريق المبيعات أدوات عرض احترافية؟</li>
-            <li data-i18n="csReReady3">هل لديكم فيلم وإظهار جاهزان للبيع؟</li>
-            <li data-i18n="csReReady4">هل يستطيع المستثمر فهم المشروع خلال أول خمس دقائق؟</li>
-            <li data-i18n="csReReady5">هل جميع مواد الإطلاق جاهزة قبل الموعد؟</li>
-          </ol>
-          <p class="sol-ready-note" data-i18n="csReReadyNote">إذا كانت إجابتك «لا» على أكثر من سؤال… فقد تكون PropMotion™ ما يحتاجه مشروعكم.</p>
-          <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="csReBrowse">احجز جلسة إطلاق بصري</a>
+          <p class="sol-eyebrow" data-i18n="csReReadyTag">Quick assessment</p>
+          <h2 class="sol-h2" data-i18n="csReReadyTitle">Is your project ready for visual launch?</h2>
+          <p class="sol-body" data-i18n="csReReadySub">Answer honestly. These questions reveal the readiness gap before launch day.</p>
+          <div class="sol-quiz" id="readyQuiz" data-quiz="re">
+            <div class="sol-quiz-item">
+              <p data-i18n="csReReady1">Do you have a complete visual identity for the project?</p>
+              <div class="sol-quiz-ans" role="group">
+                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
+                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              </div>
+            </div>
+            <div class="sol-quiz-item">
+              <p data-i18n="csReReady2">Does the sales team have professional presentation tools?</p>
+              <div class="sol-quiz-ans" role="group">
+                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
+                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              </div>
+            </div>
+            <div class="sol-quiz-item">
+              <p data-i18n="csReReady3">Do you have a film and visualization ready to sell?</p>
+              <div class="sol-quiz-ans" role="group">
+                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
+                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              </div>
+            </div>
+            <div class="sol-quiz-item">
+              <p data-i18n="csReReady4">Can an investor understand the project in the first five minutes?</p>
+              <div class="sol-quiz-ans" role="group">
+                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
+                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              </div>
+            </div>
+            <div class="sol-quiz-item">
+              <p data-i18n="csReReady5">Are all launch materials ready before the date?</p>
+              <div class="sol-quiz-ans" role="group">
+                <button type="button" data-ans="yes" data-i18n="csYes">Yes</button>
+                <button type="button" data-ans="no" data-i18n="csNo">No</button>
+              </div>
+            </div>
+            <div class="sol-quiz-result" id="readyResult" hidden>
+              <p class="sol-quiz-score" id="readyScore"></p>
+              <p class="sol-quiz-msg" id="readyMsg" data-i18n="csReReadyNote"></p>
+              <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="csReBrowse">Book a visual launch session</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -384,6 +467,16 @@
         </div>
       </section>
     </main>
+
+    <aside class="sol-sticky" id="solSticky" hidden>
+      <div class="container sol-sticky-inner">
+        <div class="sol-sticky-copy">
+          <strong>PropMotion™</strong>
+          <span data-i18n="csReStickyText">Turn the masterplan into a visual sales engine investors feel.</span>
+        </div>
+        <a class="plh-btn plh-btn-white" href="index.html#contact" data-i18n="csReBrowse">Book a visual launch session</a>
+      </div>
+    </aside>
 
     <footer class="site-footer">
       <div class="container">
