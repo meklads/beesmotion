@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v2";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيز موشن | حلول التسويق الرقمي والإنتاج الإعلامي</title>
+    <title>Bees Motion | Digital Marketing & Media Production</title>
     <meta
       name="description"
-      content="بيز موشن الذراع التسويقي لجرافيكس هاوس — إعلانات أداء، سوشيال ميديا، SEO، ورسوم متحركة 2D/3D."
+      content="Bees Motion is the marketing arm of Graphics House — performance ads, social, SEO, and 2D/3D motion for brands across KSA, GCC, and globally."
     />
     <meta property="og:title" content="Bees Motion | Digital Marketing Solution" />
     <meta property="og:description" content="Integrated digital marketing & motion production — Graphics House." />
@@ -25,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260813b" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260813c" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -43,7 +57,7 @@
     </script>
   </head>
   <body class="lang-en">
-    <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
     <header class="site-header">
       <div class="header-inner">
@@ -51,19 +65,19 @@
           <img src="assets/img/bees-motion-logo.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
         </a>
         <nav class="nav-desktop" aria-label="Primary">
-          <a href="#services" data-i18n="navServices">الخدمات</a>
-          <a href="case-study.html" data-i18n="navCase">تجارب ناجحة</a>
-          <a href="#process" data-i18n="navProcess">منهجيتنا</a>
-          <a href="#packages" data-i18n="navPackages">الباقات</a>
-          <a href="#clients" data-i18n="navWork">أعمالنا</a>
-          <a href="#contact" data-i18n="navContact">تواصل معنا</a>
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="case-study.html" data-i18n="navCase">Case Study</a>
+          <a href="#process" data-i18n="navProcess">Process</a>
+          <a href="#packages" data-i18n="navPackages">Packages</a>
+          <a href="#clients" data-i18n="navWork">Work</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language">
-            <button type="button" data-lang="ar">AR</button>
             <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
           </div>
-          <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaNav">احجز استشارة</a>
+          <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaNav">Book a call</a>
           <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">
             ☰
           </button>
@@ -72,13 +86,13 @@
     </header>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-      <a href="#services" data-i18n="navServices">الخدمات</a>
-      <a href="case-study.html" data-i18n="navCase">تجارب ناجحة</a>
-      <a href="#process" data-i18n="navProcess">منهجيتنا</a>
-      <a href="#packages" data-i18n="navPackages">الباقات</a>
-      <a href="#clients" data-i18n="navWork">أعمالنا</a>
-      <a href="#contact" data-i18n="navContact">تواصل معنا</a>
-      <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaNav">احجز استشارة</a>
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="case-study.html" data-i18n="navCase">Case Study</a>
+      <a href="#process" data-i18n="navProcess">Process</a>
+      <a href="#packages" data-i18n="navPackages">Packages</a>
+      <a href="#clients" data-i18n="navWork">Work</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+      <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaNav">Book a call</a>
     </nav>
 
     <main id="main">
@@ -88,13 +102,13 @@
             <div class="bm-hero-copy">
               <span class="bm-eyebrow" data-i18n="heroTag">DIGITAL MARKETING SOLUTION</span>
               <h1 class="font-headline-xl">
-                <span data-i18n="heroTitle">نحوّل حضورك الرقمي إلى</span>
-                <strong class="bm-hero-em" data-i18n="heroTitleEm">نمو قابل للقياس</strong>
+                <span data-i18n="heroTitle">Turn your digital presence into</span>
+                <strong class="bm-hero-em" data-i18n="heroTitleEm">measurable growth</strong>
               </h1>
-              <p class="bm-hero-sub" data-i18n="heroSub">...</p>
+              <p class="bm-hero-sub" data-i18n="heroSub">Campaigns, content, SEO, and visual production under one roof with Graphics House — from audit to outcomes.</p>
               <div class="hero-ctas">
-                <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="heroCta1">احجز تحليلاً مجانياً</a>
-                <a class="btn btn-pill btn-outline-dark" href="#packages" data-i18n="heroCta2">استكشف الباقات</a>
+                <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="heroCta1">Free strategy review</a>
+                <a class="btn btn-pill btn-outline-dark" href="#packages" data-i18n="heroCta2">View packages</a>
               </div>
             </div>
             <div class="bm-hero-video">
@@ -462,7 +476,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260813b"></script>
-    <script src="assets/js/app.js?v=20260813b"></script>
+    <script src="assets/js/translations.js?v=20260813c"></script>
+    <script src="assets/js/app.js?v=20260813c"></script>
   </body>
 </html>

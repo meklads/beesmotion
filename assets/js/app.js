@@ -1,11 +1,13 @@
 (function () {
   const WA = "966502786513";
-  const STORAGE_KEY = "bm-lang";
+  // v2: English is the site default; old "bm-lang" prefs are ignored once.
+  const STORAGE_KEY = "bm-lang-v2";
+  const DEFAULT_LANG = "en";
 
   function getLang() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "en" || saved === "ar") return saved;
-    return "en";
+    return DEFAULT_LANG;
   }
 
   function applyLang(lang) {

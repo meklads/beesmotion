@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v2";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>تجارب ناجحة، جرافيكس هاوس عقارات | بيز موشن</title>
+    <title>Case Study, Graphics House Real Estate | Bees Motion</title>
     <meta
       name="description"
-      content="منظومة المحتوى العقاري المرئي مع جرافيكس هاوس وبيز موشن: أفلام CGI وموشن تبيع رؤية المشروع قبل البناء."
+      content="Graphics House with Bees Motion in real estate content, CGI and motion films that sell the project vision before construction."
     />
     <meta property="og:title" content="Case Study, Graphics House Real Estate | Bees Motion" />
     <meta property="og:description" content="Real estate visual content system with Graphics House and Bees Motion." />
@@ -21,10 +35,10 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260813b" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260813c" />
   </head>
   <body class="lang-en page-case-study page-case-re page-sol" data-i18n-meta="csRe">
-    <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
     <header class="site-header">
       <div class="header-inner">
@@ -32,32 +46,32 @@
           <img src="assets/img/bees-motion-logo.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
         </a>
         <nav class="nav-desktop" aria-label="Primary">
-          <a href="index.html#services" data-i18n="navServices">الخدمات</a>
-          <a href="case-study.html" class="is-active" data-i18n="navCase">تجارب ناجحة</a>
-          <a href="index.html#process" data-i18n="navProcess">منهجيتنا</a>
-          <a href="index.html#packages" data-i18n="navPackages">الباقات</a>
-          <a href="index.html#clients" data-i18n="navWork">أعمالنا</a>
-          <a href="index.html#contact" data-i18n="navContact">تواصل معنا</a>
+          <a href="index.html#services" data-i18n="navServices">Services</a>
+          <a href="case-study.html" class="is-active" data-i18n="navCase">Case Study</a>
+          <a href="index.html#process" data-i18n="navProcess">Process</a>
+          <a href="index.html#packages" data-i18n="navPackages">Packages</a>
+          <a href="index.html#clients" data-i18n="navWork">Work</a>
+          <a href="index.html#contact" data-i18n="navContact">Contact</a>
         </nav>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language">
-            <button type="button" data-lang="ar">AR</button>
             <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
           </div>
-          <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="ctaNav">احجز استشارة</a>
+          <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="ctaNav">Book a call</a>
           <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
         </div>
       </div>
     </header>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-      <a href="index.html#services" data-i18n="navServices">الخدمات</a>
-      <a href="case-study.html" data-i18n="navCase">تجارب ناجحة</a>
-      <a href="index.html#process" data-i18n="navProcess">منهجيتنا</a>
-      <a href="index.html#packages" data-i18n="navPackages">الباقات</a>
-      <a href="index.html#clients" data-i18n="navWork">أعمالنا</a>
-      <a href="index.html#contact" data-i18n="navContact">تواصل معنا</a>
-      <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="ctaNav">احجز استشارة</a>
+      <a href="index.html#services" data-i18n="navServices">Services</a>
+      <a href="case-study.html" data-i18n="navCase">Case Study</a>
+      <a href="index.html#process" data-i18n="navProcess">Process</a>
+      <a href="index.html#packages" data-i18n="navPackages">Packages</a>
+      <a href="index.html#clients" data-i18n="navWork">Work</a>
+      <a href="index.html#contact" data-i18n="navContact">Contact</a>
+      <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="ctaNav">Book a call</a>
     </nav>
 
     <main id="main">
@@ -567,7 +581,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260813b"></script>
-    <script src="assets/js/app.js?v=20260813b"></script>
+    <script src="assets/js/translations.js?v=20260813c"></script>
+    <script src="assets/js/app.js?v=20260813c"></script>
   </body>
 </html>
