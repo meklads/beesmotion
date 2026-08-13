@@ -1402,6 +1402,48 @@ body.lang-ar .clients-track {
 }
 
 /* Contact */
+.contact-trust {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.contact-trust-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+  margin: 0 0 12px;
+}
+
+.contact-trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px 22px;
+  margin-bottom: 10px;
+}
+
+.contact-trust-logos img {
+  height: 28px;
+  width: auto;
+  max-width: 88px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.7);
+}
+
+.contact-sla {
+  display: inline-flex;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  background: rgba(229, 168, 35, 0.14);
+  border: 1px solid rgba(229, 168, 35, 0.35);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1472,6 +1514,57 @@ body.lang-ar .clients-track {
 .method-card span {
   font-size: 14px;
   color: var(--muted);
+}
+
+.method-icon {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  background: rgba(229, 168, 35, 0.16);
+  border: 1px solid rgba(229, 168, 35, 0.35);
+}
+
+.wa-float {
+  position: fixed;
+  inset-inline-end: 18px;
+  bottom: calc(18px + env(safe-area-inset-bottom));
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 56px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #128c7e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(18, 140, 126, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.wa-float:hover {
+  background: #0f7a6e;
+  transform: translateY(-2px);
+}
+
+body.has-sol-sticky .wa-float {
+  bottom: calc(84px + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 901px) {
+  .wa-float {
+    display: none;
+  }
 }
 
 /* Footer */
