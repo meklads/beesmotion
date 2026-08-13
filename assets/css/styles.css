@@ -27,7 +27,7 @@
   --container-media: 92rem; /* ~1472px — albums / reels */
   --container-prose: 72rem; /* ~1152px — long case copy */
   --gutter: clamp(1.25rem, 3vw, 2.5rem);
-  --font-ar: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+  --font-ar: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
   --font-en: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
 }
@@ -7078,7 +7078,12 @@ body.lang-en .font-headline-md {
   letter-spacing: -0.02em;
 }
 
-/* Arabic headings: IBM Plex, matching weight language */
+/* Arabic typography — same stack as Graphics House AR (Tajawal → IBM Plex) */
+html[dir="rtl"] body,
+body.lang-ar {
+  font-family: var(--font-ar);
+}
+
 html[dir="rtl"] h1,
 html[dir="rtl"] h2,
 html[dir="rtl"] h3,
@@ -7096,6 +7101,8 @@ body.lang-ar .hero-display,
 body.lang-ar .sol-h2,
 body.lang-ar .creative-studio-title {
   font-family: var(--font-ar) !important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 html[dir="rtl"] .font-headline-xl,
@@ -7106,7 +7113,7 @@ body.lang-ar .font-headline-xl,
 body.lang-ar .sol-h2,
 body.lang-ar .creative-studio-title,
 body.lang-ar .hero-display {
-  font-weight: 500 !important;
+  font-weight: 300 !important;
   letter-spacing: 0;
 }
 
