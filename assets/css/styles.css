@@ -7237,6 +7237,114 @@ html[dir="rtl"] .creative-album-player .bento-label {
   }
 }
 
+/* =========================================================
+   SERIES ALBUM — IMC / case-study film series
+   ========================================================= */
+
+.series-album {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.8vw, 20px);
+  margin-top: clamp(8px, 1.5vw, 16px);
+}
+
+.series-album-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.series-album-tab {
+  appearance: none;
+  border: 1px solid rgba(12, 13, 16, 0.12);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.series-album-tab:hover {
+  border-color: rgba(229, 168, 35, 0.55);
+}
+
+.series-album-tab.is-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(15, 35, 71, 0.18);
+}
+
+html[dir="rtl"] .series-album-tab {
+  font-family: var(--font-ar);
+}
+
+.series-album-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+}
+
+.series-album-meta strong {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+html[dir="rtl"] .series-album-meta strong {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
+}
+
+.series-album-meta span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.series-album-strip {
+  display: flex;
+  gap: clamp(10px, 1.4vw, 14px);
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.series-album-strip .creative-album-thumb {
+  flex: 0 0 clamp(140px, 18vw, 200px);
+  scroll-snap-align: start;
+}
+
+.series-album-strip .creative-album-thumb.is-hidden,
+.series-album-strip .creative-album-thumb[hidden] {
+  display: none !important;
+}
+
+.page-sol .series-album .creative-album-player {
+  border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+  .series-album-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .series-album-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
 /* legacy gallery rules kept inert if markup removed */
 .creative-gallery {
   display: grid;

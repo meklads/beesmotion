@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260815f" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260815h" />
   </head>
   <body class="lang-en page-case-study page-case-imc page-sol" data-i18n-meta="cs">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -356,7 +356,7 @@
         </div>
       </section>
 
-      <!-- 5. Selected series (proof) -->
+      <!-- 5. Selected series (proof) — series album -->
       <section class="sol-proof pf-gallery" id="series">
         <div class="container">
           <div class="pf-head reveal">
@@ -364,80 +364,112 @@
             <div class="pf-head-copy">
               <p class="sol-eyebrow" data-i18n="csSeriesTag">What proves the system</p>
               <h2 class="sol-h2" data-i18n="csSeriesTitle">Motion graphic films</h2>
-              <p class="sol-body" data-i18n="csSeriesSub">Motion graphic series produced for International Medical Center. Pick a series and watch the episodes here.</p>
+              <p class="sol-body" data-i18n="csSeriesSub">Pick a series, then play any episode in the main screen at high quality.</p>
             </div>
           </div>
 
-          <div class="pf-grid" role="list">
-            <button type="button" class="pf-card reveal" data-filter="family" aria-pressed="false">
-              <img src="assets/img/thumbs/CtjHnqYOX3I.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csSeriesCat">Motion graphics</span>
-                <span class="pf-card-title" data-i18n="csS2">Family doctor series</span>
-                <span class="pf-card-sub" data-i18n="csS2meta">5 episodes · Medical awareness · IMC</span>
-                <span class="pf-card-cta" data-i18n="csWatchSeries">Watch the series →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="wellness" aria-pressed="false">
-              <img src="assets/img/thumbs/qhmdOad_0Dw.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csSeriesCat">Motion graphics</span>
-                <span class="pf-card-title" data-i18n="csS3">Wellness management series</span>
-                <span class="pf-card-sub" data-i18n="csS3meta">2 episodes · Health education · IMC</span>
-                <span class="pf-card-cta" data-i18n="csWatchSeries">Watch the series →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="pregnancy" aria-pressed="false">
-              <img src="assets/img/thumbs/jNYuQoRHNfg.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csSeriesCat">Motion graphics</span>
-                <span class="pf-card-title" data-i18n="csS1">Pregnancy & childbirth series</span>
-                <span class="pf-card-sub" data-i18n="csS1meta">Daily series · Maternal care · IMC</span>
-                <span class="pf-card-cta" data-i18n="csWatchSeries">Watch the series →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="cartoon3d" aria-pressed="false">
-              <img src="assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csSeriesCat">Motion graphics</span>
-                <span class="pf-card-title" data-i18n="csS5">Cartoon films series</span>
-                <span class="pf-card-sub" data-i18n="csS5meta">Medical animation · International Medical Center</span>
-                <span class="pf-card-cta" data-i18n="csWatchSeries">Watch the series →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="hospital" aria-pressed="false">
-              <img src="assets/img/thumbs/heeNhPdB25E.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csSeriesCat">Motion graphics</span>
-                <span class="pf-card-title" data-i18n="csS4">Hospital introduction series</span>
-                <span class="pf-card-sub" data-i18n="csS4meta">Intro film · International Medical Center</span>
-                <span class="pf-card-cta" data-i18n="csWatchSeries">Watch the series →</span>
-              </span>
-            </button>
-          </div>
-
-          <div class="pf-videos" id="pfVideos" hidden>
-            <div class="pf-videos-bar">
-              <h3 class="pf-videos-title" id="pfVideosTitle"></h3>
-              <button type="button" class="cs-filter" data-filter="all" data-i18n="csFilterAll">All</button>
+          <div class="series-album reveal" data-series-album data-series-default="family">
+            <div class="series-album-tabs" role="tablist" aria-label="IMC series">
+              <button type="button" class="series-album-tab is-active" role="tab" aria-selected="true" data-series-tab="family" data-series-title-key="csS2" data-series-meta-key="csS2meta">
+                <span data-i18n="csS2">Family doctor series</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="wellness" data-series-title-key="csS3" data-series-meta-key="csS3meta">
+                <span data-i18n="csS3">Wellness management series</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="pregnancy" data-series-title-key="csS1" data-series-meta-key="csS1meta">
+                <span data-i18n="csS1">Pregnancy & childbirth series</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="cartoon3d" data-series-title-key="csS5" data-series-meta-key="csS5meta">
+                <span data-i18n="csS5">Cartoon films series</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="hospital" data-series-title-key="csS4" data-series-meta-key="csS4meta">
+                <span data-i18n="csS4">Hospital introduction series</span>
+              </button>
             </div>
-            <div class="cs-tiles" id="csTiles">
-              <article class="cs-tile" data-series="pregnancy"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="jNYuQoRHNfg" data-yt-title="أسابيع الحمل" aria-label="Play video"><img src="assets/img/thumbs/jNYuQoRHNfg.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="family"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="CtjHnqYOX3I" data-yt-title="طبيب الأسرة 1" aria-label="Play video"><img src="assets/img/thumbs/CtjHnqYOX3I.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="family"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="5xDNWFXKMrQ" data-yt-title="طبيب الأسرة 2" aria-label="Play video"><img src="assets/img/thumbs/5xDNWFXKMrQ.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="family"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="f-Y4J1Z_G9M" data-yt-title="طبيب الأسرة 3" aria-label="Play video"><img src="assets/img/thumbs/f-Y4J1Z_G9M.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="family"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="VG2ns_U2ICk" data-yt-title="طبيب الأسرة 4" aria-label="Play video"><img src="assets/img/thumbs/VG2ns_U2ICk.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="family"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="glKO_84lwZo" data-yt-title="طبيب الأسرة 5" aria-label="Play video"><img src="assets/img/thumbs/glKO_84lwZo.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="wellness"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="qhmdOad_0Dw" data-yt-title="العافية 1" aria-label="Play video"><img src="assets/img/thumbs/qhmdOad_0Dw.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="wellness"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="hz3TtUd5-eo" data-yt-title="العافية 2" aria-label="Play video"><img src="assets/img/thumbs/hz3TtUd5-eo.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="hospital"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="heeNhPdB25E" data-yt-title="التعريف بالمستشفى 1" aria-label="Play video"><img src="assets/img/thumbs/heeNhPdB25E.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="hospital"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="R4QYhIguc84" data-yt-title="التعريف بالمستشفى 2" aria-label="Play video"><img src="assets/img/thumbs/R4QYhIguc84.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="cartoon3d"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="wzUNAKqOE8Q" data-yt-title="كارتون ثري دي" aria-label="Play video"><img src="assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
+
+            <div class="series-album-meta">
+              <strong data-series-title data-i18n="csS2">Family doctor series</strong>
+              <span data-series-meta data-i18n="csS2meta">5 episodes · Medical awareness · IMC</span>
+            </div>
+
+            <div class="creative-album-stage">
+              <div class="creative-album-player bm-video-crop" data-album-stage>
+                <div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div>
+                <div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div>
+                <button
+                  type="button"
+                  class="yt-facade yt-facade--cover"
+                  data-yt-id="CtjHnqYOX3I"
+                  data-yt-title="Family doctor · Episode 1"
+                  data-yt-params="autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1"
+                  aria-label="Play episode"
+                >
+                  <img src="assets/img/thumbs/CtjHnqYOX3I.jpg" alt="" loading="eager" width="1280" height="720" />
+                  <span class="yt-facade-play" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="creative-album-strip series-album-strip" role="list" data-album-strip aria-label="Episodes">
+              <button type="button" class="creative-album-thumb is-active" role="listitem" data-series="family" data-album-id="CtjHnqYOX3I" data-album-title="Family doctor · Episode 1" aria-pressed="true" aria-label="Episode 1">
+                <img src="assets/img/thumbs/CtjHnqYOX3I.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 01</span>
+              </button>
+              <button type="button" class="creative-album-thumb" role="listitem" data-series="family" data-album-id="5xDNWFXKMrQ" data-album-title="Family doctor · Episode 2" aria-pressed="false" aria-label="Episode 2">
+                <img src="assets/img/thumbs/5xDNWFXKMrQ.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 02</span>
+              </button>
+              <button type="button" class="creative-album-thumb" role="listitem" data-series="family" data-album-id="f-Y4J1Z_G9M" data-album-title="Family doctor · Episode 3" aria-pressed="false" aria-label="Episode 3">
+                <img src="assets/img/thumbs/f-Y4J1Z_G9M.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 03</span>
+              </button>
+              <button type="button" class="creative-album-thumb" role="listitem" data-series="family" data-album-id="VG2ns_U2ICk" data-album-title="Family doctor · Episode 4" aria-pressed="false" aria-label="Episode 4">
+                <img src="assets/img/thumbs/VG2ns_U2ICk.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 04</span>
+              </button>
+              <button type="button" class="creative-album-thumb" role="listitem" data-series="family" data-album-id="glKO_84lwZo" data-album-title="Family doctor · Episode 5" aria-pressed="false" aria-label="Episode 5">
+                <img src="assets/img/thumbs/glKO_84lwZo.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 05</span>
+              </button>
+
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="wellness" data-album-id="qhmdOad_0Dw" data-album-title="Wellness · Episode 1" aria-pressed="false" aria-label="Episode 1" hidden>
+                <img src="assets/img/thumbs/qhmdOad_0Dw.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 01</span>
+              </button>
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="wellness" data-album-id="hz3TtUd5-eo" data-album-title="Wellness · Episode 2" aria-pressed="false" aria-label="Episode 2" hidden>
+                <img src="assets/img/thumbs/hz3TtUd5-eo.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 02</span>
+              </button>
+
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="pregnancy" data-album-id="jNYuQoRHNfg" data-album-title="Pregnancy series" aria-pressed="false" aria-label="Pregnancy episode" hidden>
+                <img src="assets/img/thumbs/jNYuQoRHNfg.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 01</span>
+              </button>
+
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="cartoon3d" data-album-id="wzUNAKqOE8Q" data-album-title="Cartoon film" aria-pressed="false" aria-label="Cartoon episode" hidden>
+                <img src="assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 01</span>
+              </button>
+
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="hospital" data-album-id="heeNhPdB25E" data-album-title="Hospital intro · Episode 1" aria-pressed="false" aria-label="Episode 1" hidden>
+                <img src="assets/img/thumbs/heeNhPdB25E.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 01</span>
+              </button>
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="hospital" data-album-id="R4QYhIguc84" data-album-title="Hospital intro · Episode 2" aria-pressed="false" aria-label="Episode 2" hidden>
+                <img src="assets/img/thumbs/R4QYhIguc84.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label"><span data-i18n="csEp">Ep.</span> 02</span>
+              </button>
             </div>
           </div>
         </div>
@@ -648,7 +680,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260815f"></script>
-    <script src="assets/js/app.js?v=20260815f"></script>
+    <script src="assets/js/translations.js?v=20260815h"></script>
+    <script src="assets/js/app.js?v=20260815h"></script>
   </body>
 </html>

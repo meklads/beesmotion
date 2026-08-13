@@ -316,6 +316,138 @@
     });
   }
 
+  function initSeriesAlbum() {
+    const HD =
+      "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1";
+
+    document.querySelectorAll("[data-series-album]").forEach((album) => {
+      const stage = album.querySelector("[data-album-stage]");
+      const tabs = album.querySelectorAll("[data-series-tab]");
+      const thumbs = album.querySelectorAll("[data-album-id][data-series]");
+      const titleEl = album.querySelector("[data-series-title]");
+      const metaEl = album.querySelector("[data-series-meta]");
+      if (!stage || !tabs.length || !thumbs.length) return;
+
+      function dictVal(key, fallback) {
+        const dict = window.BM_I18N && window.BM_I18N[getLang()];
+        return (dict && key && dict[key]) || fallback || "";
+      }
+
+      function bindFacade(btn) {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-yt-id");
+          if (!id) return;
+          playInStage(id, btn.getAttribute("data-yt-title") || "Video");
+        });
+      }
+
+      function playInStage(id, title) {
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${id}?${HD}`;
+        iframe.title = title || "Video";
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.loading = "eager";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("playsinline", "1");
+        iframe.style.cssText =
+          "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
+
+        stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
+        const corners = stage.querySelectorAll(".bm-video-corner");
+        if (corners.length) corners[corners.length - 1].after(iframe);
+        else stage.prepend(iframe);
+      }
+
+      function setStageFacade(id, title) {
+        stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "yt-facade yt-facade--cover";
+        btn.setAttribute("data-yt-id", id);
+        btn.setAttribute("data-yt-title", title || "Video");
+        btn.setAttribute("data-yt-params", HD);
+        btn.setAttribute("aria-label", title || "Play episode");
+        btn.innerHTML =
+          `<img src="assets/img/thumbs/${id}.jpg" alt="" loading="eager" width="1280" height="720" />` +
+          '<span class="yt-facade-play" aria-hidden="true"></span>';
+        const corners = stage.querySelectorAll(".bm-video-corner");
+        if (corners.length) corners[corners.length - 1].after(btn);
+        else stage.prepend(btn);
+        bindFacade(btn);
+      }
+
+      function selectThumb(thumb, { autoplay }) {
+        thumbs.forEach((tEl) => {
+          const on = tEl === thumb;
+          tEl.classList.toggle("is-active", on);
+          tEl.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        const id = thumb.getAttribute("data-album-id");
+        const title = thumb.getAttribute("data-album-title") || "Video";
+        if (!id) return;
+        if (autoplay) playInStage(id, title);
+        else setStageFacade(id, title);
+      }
+
+      function selectSeries(key, { autoplayFirst }) {
+        tabs.forEach((tab) => {
+          const on = tab.getAttribute("data-series-tab") === key;
+          tab.classList.toggle("is-active", on);
+          tab.setAttribute("aria-selected", on ? "true" : "false");
+          if (on) {
+            const titleKey = tab.getAttribute("data-series-title-key");
+            const metaKey = tab.getAttribute("data-series-meta-key");
+            if (titleEl) {
+              if (titleKey) titleEl.setAttribute("data-i18n", titleKey);
+              titleEl.textContent = dictVal(titleKey, tab.textContent.trim());
+            }
+            if (metaEl) {
+              if (metaKey) metaEl.setAttribute("data-i18n", metaKey);
+              metaEl.textContent = dictVal(metaKey, "");
+            }
+          }
+        });
+
+        const visible = [];
+        thumbs.forEach((thumb) => {
+          const match = thumb.getAttribute("data-series") === key;
+          thumb.classList.toggle("is-hidden", !match);
+          thumb.hidden = !match;
+          if (match) visible.push(thumb);
+        });
+
+        if (visible[0]) selectThumb(visible[0], { autoplay: !!autoplayFirst });
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const key = tab.getAttribute("data-series-tab");
+          if (!key) return;
+          selectSeries(key, { autoplayFirst: false });
+        });
+      });
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          if (thumb.hidden) return;
+          selectThumb(thumb, { autoplay: true });
+        });
+      });
+
+      const initial =
+        album.getAttribute("data-series-default") ||
+        (tabs[0] && tabs[0].getAttribute("data-series-tab")) ||
+        "family";
+      selectSeries(initial, { autoplayFirst: false });
+
+      const existingFacade = stage.querySelector(".yt-facade");
+      if (existingFacade) bindFacade(existingFacade);
+    });
+  }
+
   function initCaseFilters() {
     const cards = document.querySelectorAll(".pf-card[data-filter]");
     const chips = document.querySelectorAll(".cs-filter");
@@ -571,6 +703,7 @@
     initHeroParallax();
     initYtFacades();
     initCreativeAlbum();
+    initSeriesAlbum();
     initCaseFilters();
     initSolSticky();
     initReadyQuiz();
