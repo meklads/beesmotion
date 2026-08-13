@@ -23,9 +23,9 @@
   --section-y: clamp(88px, 11vw, 140px);
   --section-gap: clamp(40px, 5vw, 64px);
   --container: 1240px;
-  --font-ar: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
-  --font-en: "Sora", "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Sora", "Helvetica Neue", Arial, sans-serif;
+  --font-ar: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+  --font-en: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 *,
@@ -6965,4 +6965,130 @@ html[dir="rtl"] .creative-stat span {
 .bm-video-crop--hero-reel .yt-facade img {
   object-fit: cover;
   object-position: center;
+}
+
+/* =========================================================
+   HEADING SYSTEM — unified Plus Jakarta Sans (EN)
+   Match PropMotion™ light geometric agency look
+   ========================================================= */
+
+html[dir="ltr"] body,
+body.lang-en {
+  font-family: var(--font-en);
+}
+
+html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3,
+html[dir="ltr"] .font-headline-xl,
+html[dir="ltr"] .font-headline-md,
+html[dir="ltr"] .hero-display,
+html[dir="ltr"] .sol-h2,
+html[dir="ltr"] .model-name,
+html[dir="ltr"] .model-line,
+html[dir="ltr"] .creative-studio-title,
+html[dir="ltr"] .pillar-card h3,
+html[dir="ltr"] .flow-step h3,
+html[dir="ltr"] .about-pillar h3,
+html[dir="ltr"] .why-item h3,
+html[dir="ltr"] .signature-body h3,
+html[dir="ltr"] .systems-body h3,
+html[dir="ltr"] .work-case-body h3,
+html[dir="ltr"] .eco-card h3,
+body.lang-en h1,
+body.lang-en h2,
+body.lang-en h3,
+body.lang-en .font-headline-xl,
+body.lang-en .font-headline-md,
+body.lang-en .hero-display,
+body.lang-en .sol-h2,
+body.lang-en .model-name,
+body.lang-en .creative-studio-title {
+  font-family: var(--font-display) !important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* PropMotion-like weight: light–regular for product/section titles */
+html[dir="ltr"] .font-headline-xl,
+body.lang-en .font-headline-xl,
+html[dir="ltr"] .sol-h2,
+body.lang-en .sol-h2,
+html[dir="ltr"] .creative-studio-title,
+body.lang-en .creative-studio-title {
+  font-weight: 300 !important;
+  letter-spacing: -0.035em;
+}
+
+html[dir="ltr"] .bm-hero h1.font-headline-xl,
+body.lang-en .bm-hero h1.font-headline-xl,
+html[dir="ltr"] .bm-hero--case h1.font-headline-xl,
+body.lang-en .bm-hero--case h1.font-headline-xl {
+  font-weight: 300 !important;
+  letter-spacing: -0.04em;
+}
+
+/* Homepage cinema hero: slightly firmer, still not heavy */
+html[dir="ltr"] .hero-display,
+body.lang-en .hero-display {
+  font-weight: 500 !important;
+  letter-spacing: -0.045em;
+}
+
+html[dir="ltr"] .bm-hero-em,
+body.lang-en .bm-hero-em {
+  font-family: var(--font-display) !important;
+  font-weight: 500 !important;
+}
+
+html[dir="ltr"] .model-name,
+body.lang-en .model-name {
+  font-weight: 500 !important;
+  letter-spacing: -0.03em;
+}
+
+html[dir="ltr"] h3,
+body.lang-en h3,
+html[dir="ltr"] .font-headline-md,
+body.lang-en .font-headline-md {
+  font-weight: 500 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Arabic headings: IBM Plex, matching weight language */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .font-headline-xl,
+html[dir="rtl"] .font-headline-md,
+html[dir="rtl"] .hero-display,
+html[dir="rtl"] .sol-h2,
+html[dir="rtl"] .model-name,
+html[dir="rtl"] .creative-studio-title,
+body.lang-ar h1,
+body.lang-ar h2,
+body.lang-ar h3,
+body.lang-ar .font-headline-xl,
+body.lang-ar .hero-display,
+body.lang-ar .sol-h2,
+body.lang-ar .creative-studio-title {
+  font-family: var(--font-ar) !important;
+}
+
+html[dir="rtl"] .font-headline-xl,
+html[dir="rtl"] .sol-h2,
+html[dir="rtl"] .creative-studio-title,
+html[dir="rtl"] .hero-display,
+body.lang-ar .font-headline-xl,
+body.lang-ar .sol-h2,
+body.lang-ar .creative-studio-title,
+body.lang-ar .hero-display {
+  font-weight: 500 !important;
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .bm-hero-em,
+body.lang-ar .bm-hero-em {
+  font-family: var(--font-ar) !important;
+  font-weight: 700 !important;
 }
