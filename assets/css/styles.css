@@ -4775,3 +4775,91 @@ body.lang-ar .sol-trust-track {
     grid-template-columns: 1fr;
   }
 }
+
+/* Five capability pillars */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 18px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(15, 35, 71, 0.08);
+  box-shadow: 0 10px 28px rgba(15, 35, 71, 0.04);
+  min-height: 100%;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(229, 168, 35, 0.4);
+  box-shadow: 0 16px 36px rgba(15, 35, 71, 0.08);
+}
+
+.pillar-card--accent {
+  border-color: rgba(229, 168, 35, 0.45);
+  background: linear-gradient(180deg, #fffdf6 0%, #ffffff 70%);
+}
+
+.pillar-card h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.pillar-card > p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+  flex: 1;
+}
+
+.pillar-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.pillar-card li {
+  position: relative;
+  padding-inline-start: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.45;
+}
+
+.pillar-card li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+@media (max-width: 1100px) {
+  .pillar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+}

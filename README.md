@@ -1,6 +1,6 @@
 # Bees Motion Website
 
-Official marketing site for **Bees Motion** — the digital marketing arm of [Graphics House](https://3dgraphicshouse.com/).
+Official marketing site for **Bees Motion** — a digital marketing agency specialized in creative content, video, and animation.
 
 ## Stack
 

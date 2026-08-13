@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "Official marketing site for **Bees Motion** — the digital marketing arm of [Graphics House](https://3dgraphicshouse.com/).",
+  "description": "Official marketing site for Bees Motion — a digital marketing agency specialized in creative content, video, and animation.",
   "scripts": {
     "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000}",
     "deploy": "wrangler pages deploy . --project-name=beesmotion",
