@@ -1080,12 +1080,16 @@ section {
 }
 
 .clients-track img {
-  height: 52px;
+  height: 44px;
   width: auto;
   max-width: 120px;
   object-fit: contain;
-  filter: grayscale(0.2);
-  opacity: 0.85;
+  filter: grayscale(1) opacity(0.5);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.clients-track img:hover {
+  filter: grayscale(0) opacity(1);
 }
 
 @keyframes marquee {
@@ -3488,5 +3492,196 @@ body.has-sol-sticky {
 
   .sol-sticky .plh-btn {
     width: 100%;
+  }
+}
+
+/* ===== Pocket-spirit film hero refinements ===== */
+.plh--film .plh-media iframe,
+.plh--film .plh-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.plh--film .plh-media iframe {
+  /* scale to hide YouTube chrome / letterbox */
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100%;
+  min-width: 177.77%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plh-copy--minimal {
+  max-width: 40rem;
+}
+
+.plh-sub--short {
+  max-width: 32rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.plh--film .plh-mark {
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.plh--film .plh-tagline {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.plh--film .plh-crumb {
+  margin-bottom: clamp(64px, 16vh, 160px);
+}
+
+/* Trust logos */
+.sol-trust {
+  padding: clamp(28px, 4vw, 40px) 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.sol-trust-label {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.sol-trust-track {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.sol-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+}
+
+.sol-trust-row img {
+  height: 36px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.55);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.sol-trust-row img:hover {
+  filter: grayscale(0) opacity(1);
+}
+
+/* Journey path */
+.sol-journey {
+  padding: clamp(64px, 9vw, 110px) 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.sol-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  position: relative;
+}
+
+.sol-journey-card {
+  position: relative;
+  padding: 28px 22px 30px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f5f9 100%);
+  border: 1px solid rgba(15, 35, 71, 0.07);
+  min-height: 100%;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.sol-journey-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(15, 35, 71, 0.08);
+}
+
+.sol-journey-step {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+}
+
+.sol-journey-card h3 {
+  font-size: clamp(16px, 1.6vw, 19px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.sol-journey-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--secondary);
+  font-weight: 300;
+}
+
+/* Soften strip after trust */
+.page-sol .sol-strip {
+  background: #111;
+}
+
+.page-sol .sol-ideas {
+  background: #fafaf8;
+}
+
+.page-sol .pf-gallery {
+  background: #fff;
+}
+
+.page-sol .pf-card {
+  border-radius: 28px;
+}
+
+.page-sol .sol-section-head {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.page-sol .sol-section-head .sol-body {
+  margin-inline: auto;
+}
+
+.page-sol .sol-section-head .sol-eyebrow::after {
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1024px) {
+  .sol-journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sol-journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plh--film .plh-crumb {
+    margin-bottom: 40px;
   }
 }

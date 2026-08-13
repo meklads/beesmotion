@@ -61,47 +61,48 @@
     </nav>
 
     <main id="main">
-      <!-- 1. Cinematic hero (ProjectLaunch pattern) -->
-      <section class="plh" id="hero">
+      <!-- 1. Film hero -->
+      <section class="plh plh--film" id="hero">
         <div class="plh-media" aria-hidden="true">
-          <img src="https://img.youtube.com/vi/WoYMS7Xs7cY/maxresdefault.jpg" alt="" width="1920" height="1080" />
+          <video class="plh-video gh-autoplay" autoplay muted loop playsinline webkit-playsinline preload="metadata">
+            <source src="assets/video/gh-marketing-media.mp4" type="video/mp4" />
+            <source src="https://3dgraphicshouse.com/assets/videos/GH-Marketing-Media-Production.mp4" type="video/mp4" />
+          </video>
         </div>
         <div class="plh-vignette" aria-hidden="true"></div>
         <div class="plh-glow" aria-hidden="true"></div>
         <div class="plh-panel">
           <div class="plh-crumb">
-            <a href="case-study.html" data-i18n="csBack">← كل التجارب الناجحة</a>
+            <a href="case-study.html" data-i18n="csBack">← All case studies</a>
           </div>
-          <div class="plh-copy">
-            <p class="plh-eyebrow" data-i18n="csReTag">التجربة الرائدة</p>
-            <h1>
-              <span class="plh-mark">PropMotion™</span>
-            </h1>
-            <p class="plh-tagline" data-i18n="csReTitleEm">تقنع قبل أن يبدأ البناء</p>
-            <p class="plh-sub" data-i18n="csReHeroSub">
-              عملنا مع جرافيكس هاوس كعميل خارجي على محتوى مرئي عقاري يجمع بين CGI السينمائي والموشن، ليترجم المخططات إلى تجربة يشعر بها المستثمر والمشتري من أول مشاهدة.
+          <div class="plh-copy plh-copy--minimal">
+            <p class="plh-eyebrow" data-i18n="csReTag">Flagship case</p>
+            <h1><span class="plh-mark">PropMotion™</span></h1>
+            <p class="plh-tagline" data-i18n="csReTitleEm">Sell the vision before the build</p>
+            <p class="plh-sub plh-sub--short" data-i18n="csReHeroShort">
+              Writing, branding, cinematic production, and growth — one system that makes investors feel the project.
             </p>
             <div class="plh-ctas">
-              <a class="plh-btn plh-btn-white" href="index.html#contact" data-i18n="csReBrowse">احجز جلسة إطلاق بصري</a>
-              <a class="plh-btn plh-btn-ghost" href="#series" data-i18n="csWatchWork">شاهد الأعمال</a>
+              <a class="plh-btn plh-btn-white" href="index.html#contact" data-i18n="csReBrowse">Book a visual launch session</a>
+              <a class="plh-btn plh-btn-ghost" href="#series" data-i18n="csWatchWork">Watch the work</a>
             </div>
-            <div class="plh-caps" role="list">
-              <span class="plh-cap" data-i18n="csRePill1">CGI سينمائي</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csRePill2">موشن عقاري</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csRePill3">إظهار معماري</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csRePill4">معارض ومشاريع</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csRePill5">ما قبل البيع</span>
-            </div>
-            <div class="plh-partner">
-              <img src="assets/img/graphics-house-logo.png" alt="Graphics House" width="110" height="40" />
-              <div>
-                <span data-i18n="csClientLabel">الشريك</span>
-                <strong data-i18n="csReClient">جرافيكس هاوس</strong>
-              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sol-trust" aria-label="Trusted by">
+        <div class="container">
+          <p class="sol-trust-label" data-i18n="csTrustLabel">Trusted by brands that take content seriously</p>
+          <div class="sol-trust-track">
+            <div class="sol-trust-row">
+              <img src="assets/img/graphics-house-logo.png" alt="Graphics House" loading="lazy" />
+              <img src="assets/img/clients/rafal.png" alt="Rafal" loading="lazy" />
+              <img src="assets/img/clients/anan-eskan.png" alt="Anan Iskan" loading="lazy" />
+              <img src="assets/img/clients/makyon.png" alt="Makkiyoon" loading="lazy" />
+              <img src="assets/img/clients/aqarat.png" alt="Aqarat" loading="lazy" />
+              <img src="assets/img/clients/toyota.png" alt="Toyota" loading="lazy" />
+              <img src="assets/img/clients/imc-150x150.png" alt="IMC" loading="lazy" />
+              <img src="assets/img/clients/al-owla.png" alt="Al Oula" loading="lazy" />
             </div>
           </div>
         </div>
@@ -124,6 +125,40 @@
           <div class="sol-strip-item reveal">
             <strong data-i18n="csReStrip4n">GH</strong>
             <span data-i18n="csReStrip4d">proven with Graphics House</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="sol-journey" id="journey">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="csReJourneyTag">The full path</p>
+            <h2 class="sol-h2" data-i18n="csReJourneyTitle">From the brief to investors who decide</h2>
+            <p class="sol-body" data-i18n="csReJourneyBody">
+              PropMotion™ connects content writing, branding, specialized cinematic production, and lead generation into one launch language.
+            </p>
+          </div>
+          <div class="sol-journey-grid">
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">01</span>
+              <h3 data-i18n="csReJ1t">Content writing</h3>
+              <p data-i18n="csReJ1d">Scripts that translate masterplans into stories investors understand in minutes.</p>
+            </article>
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">02</span>
+              <h3 data-i18n="csReJ2t">Brand system</h3>
+              <p data-i18n="csReJ2d">A cohesive visual identity across films, exhibitions, and campaign assets.</p>
+            </article>
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">03</span>
+              <h3 data-i18n="csReJ3t">Specialized production</h3>
+              <p data-i18n="csReJ3d">CGI, motion, and architectural visualization crafted for pre-sales persuasion.</p>
+            </article>
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">04</span>
+              <h3 data-i18n="csReJ4t">Lead generation</h3>
+              <p data-i18n="csReJ4d">Campaign-ready assets that drive inquiries, investor meetings, and sales momentum.</p>
+            </article>
           </div>
         </div>
       </section>

@@ -63,47 +63,51 @@
     </nav>
 
     <main id="main">
-      <!-- 1. Cinematic hero (ProjectLaunch pattern) -->
-      <section class="plh" id="hero">
+      <!-- 1. Film hero — Pocket spirit, Bees Motion identity -->
+      <section class="plh plh--film" id="hero">
         <div class="plh-media" aria-hidden="true">
-          <img src="https://img.youtube.com/vi/CtjHnqYOX3I/maxresdefault.jpg" alt="" width="1920" height="1080" />
+          <iframe
+            src="https://www.youtube.com/embed/CtjHnqYOX3I?autoplay=1&mute=1&controls=0&loop=1&playlist=CtjHnqYOX3I&modestbranding=1&playsinline=1&rel=0"
+            title=""
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="eager"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </div>
         <div class="plh-vignette" aria-hidden="true"></div>
         <div class="plh-glow" aria-hidden="true"></div>
         <div class="plh-panel">
           <div class="plh-crumb">
-            <a href="case-study.html" data-i18n="csBack">← كل التجارب الناجحة</a>
+            <a href="case-study.html" data-i18n="csBack">← All case studies</a>
           </div>
-          <div class="plh-copy">
-            <p class="plh-eyebrow" data-i18n="csTag">التجربة الرائدة</p>
-            <h1>
-              <span class="plh-mark">MedMotion™</span>
-            </h1>
+          <div class="plh-copy plh-copy--minimal">
+            <p class="plh-eyebrow" data-i18n="csTag">Flagship case</p>
+            <h1><span class="plh-mark">MedMotion™</span></h1>
             <p class="plh-tagline" data-i18n="csTitleEm">The medical content system that turns awareness into trust</p>
-            <p class="plh-sub" data-i18n="csHeroSub">
-              أنتجنا للمركز الطبي الدولي سلاسل موشن جرافيك وكارتون توعوي بلغة بصرية واحدة، تبسّط الرسالة الصحية، ترفع التفاعل، وتمنح المنصات حضوراً مستمراً بدل المنشورات المتقطعة.
+            <p class="plh-sub plh-sub--short" data-i18n="csHeroShort">
+              Strategy, writing, branded motion, and distribution — built so patients understand, engage, and convert.
             </p>
             <div class="plh-ctas">
-              <a class="plh-btn plh-btn-white" href="index.html#contact" data-i18n="csBrowse">احجز جلسة محتوى طبي</a>
-              <a class="plh-btn plh-btn-ghost" href="#series" data-i18n="csWatchWork">شاهد الأعمال</a>
+              <a class="plh-btn plh-btn-white" href="index.html#contact" data-i18n="csBrowse">Book a medical content session</a>
+              <a class="plh-btn plh-btn-ghost" href="#series" data-i18n="csWatchWork">Watch the work</a>
             </div>
-            <div class="plh-caps" role="list">
-              <span class="plh-cap" data-i18n="csPill1">موشن طبي</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csPill2">كارتون 2D / 3D</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csPill3">توعية يومية</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csPill4">سلاسل طويلة الأمد</span>
-              <span class="plh-cap-dot" aria-hidden="true"></span>
-              <span class="plh-cap" data-i18n="csPill5">حضور رقمي</span>
-            </div>
-            <div class="plh-partner">
-              <img src="assets/img/clients/imc-150x150.png" alt="IMC" width="44" height="44" />
-              <div>
-                <span data-i18n="csClientLabel">الشريك</span>
-                <strong data-i18n="csClient">المركز الطبي الدولي</strong>
-              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sol-trust" aria-label="Trusted by">
+        <div class="container">
+          <p class="sol-trust-label" data-i18n="csTrustLabel">Trusted by brands that take content seriously</p>
+          <div class="sol-trust-track">
+            <div class="sol-trust-row">
+              <img src="assets/img/clients/imc-150x150.png" alt="IMC" loading="lazy" />
+              <img src="assets/img/graphics-house-logo.png" alt="Graphics House" loading="lazy" />
+              <img src="assets/img/clients/toyota.png" alt="Toyota" loading="lazy" />
+              <img src="assets/img/clients/rafal.png" alt="Rafal" loading="lazy" />
+              <img src="assets/img/clients/makyon.png" alt="Makkiyoon" loading="lazy" />
+              <img src="assets/img/clients/anan-eskan.png" alt="Anan Iskan" loading="lazy" />
+              <img src="assets/img/clients/aqarat.png" alt="Aqarat" loading="lazy" />
+              <img src="assets/img/clients/al-owla.png" alt="Al Oula" loading="lazy" />
             </div>
           </div>
         </div>
@@ -127,6 +131,41 @@
           <div class="sol-strip-item reveal">
             <strong data-i18n="csStrip4n">IMC</strong>
             <span data-i18n="csStrip4d">proven with a leading medical brand</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Journey: writing → branding → production → leads -->
+      <section class="sol-journey" id="journey">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="csJourneyTag">The full path</p>
+            <h2 class="sol-h2" data-i18n="csJourneyTitle">From the brief to patients who take action</h2>
+            <p class="sol-body" data-i18n="csJourneyBody">
+              MedMotion™ is not only motion. It is a complete growth path — writing, branding, specialized production, and lead generation — under one visual system.
+            </p>
+          </div>
+          <div class="sol-journey-grid">
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">01</span>
+              <h3 data-i18n="csJ1t">Content writing</h3>
+              <p data-i18n="csJ1d">Medical scripts that simplify complex services into clear stories patients can follow and share.</p>
+            </article>
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">02</span>
+              <h3 data-i18n="csJ2t">Brand system</h3>
+              <p data-i18n="csJ2d">Visual rules, tone, and identity so every episode feels unmistakably like your hospital brand.</p>
+            </article>
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">03</span>
+              <h3 data-i18n="csJ3t">Specialized production</h3>
+              <p data-i18n="csJ3d">Motion, 2D/3D cartoon, and cinematic craft produced for healthcare — precise, human, and premium.</p>
+            </article>
+            <article class="sol-journey-card reveal">
+              <span class="sol-journey-step">04</span>
+              <h3 data-i18n="csJ4t">Lead generation</h3>
+              <p data-i18n="csJ4d">Distribution and performance layers that turn attention into visits, inquiries, and booked services.</p>
+            </article>
           </div>
         </div>
       </section>
