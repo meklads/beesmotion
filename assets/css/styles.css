@@ -7129,3 +7129,22 @@ html[dir="rtl"] .creative-stat span {
     border-radius: 18px;
   }
 }
+
+/* Vertical short fill — any hero-reel crop (case study featured too) */
+.bm-video-crop--hero-reel iframe {
+  position: absolute;
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: 178%;
+  height: 178%;
+  max-width: none !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none;
+  border: 0;
+}
+
+.bm-video-crop--hero-reel .yt-facade img {
+  object-fit: cover;
+  object-position: center;
+}
