@@ -39,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260813e" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260813f" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -300,71 +300,98 @@
       <section id="packages">
         <div class="container">
           <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="packagesTag">الباقات</span>
-            <h2 class="font-headline-xl" data-i18n="packagesTitle">خطة الاستثمار</h2>
+            <span class="svc-tag" data-i18n="packagesTag">Packages</span>
+            <h2 class="font-headline-xl" data-i18n="packagesTitle">Investment plans</h2>
+            <p class="font-body-md" data-i18n="packagesSub">Pick the coverage that matches your growth stage — clear deliverables, transparent monthly fees.</p>
           </div>
-          <div class="pricing-table-wrap reveal">
-            <table class="pricing-table">
-              <thead>
-                <tr>
-                  <th data-i18n="pkgFeatures">البنود</th>
-                  <th><span data-i18n="pkg1">...</span><br /><small data-i18n="pkg1sub">...</small></th>
-                  <th><span data-i18n="pkg2">...</span><br /><small data-i18n="pkg2sub">...</small></th>
-                  <th class="popular">
-                    ★ <span data-i18n="pkg3">...</span><br /><small data-i18n="pkg3sub">...</small>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="rowChannels">...</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                </tr>
-                <tr>
-                  <td data-i18n="rowPosts">...</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                </tr>
-                <tr>
-                  <td data-i18n="rowSetup">...</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                </tr>
-                <tr>
-                  <td data-i18n="rowPerf">...</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                </tr>
-                <tr>
-                  <td data-i18n="rowDaily">...</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                </tr>
-                <tr>
-                  <td data-i18n="rowOrganic">...</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                  <td>✓</td>
-                </tr>
-                <tr>
-                  <td data-i18n="rowMonthly">...</td>
-                  <td class="price">7,500 <small data-i18n="sar">ر.س</small></td>
-                  <td class="price">9,000 <small data-i18n="sar">ر.س</small></td>
-                  <td class="price">10,500 <small data-i18n="sar">ر.س</small></td>
-                </tr>
-              </tbody>
-            </table>
+
+          <div class="pkg-grid reveal">
+            <article class="pkg-card">
+              <p class="pkg-badge" data-i18n="pkg1badge">Entry</p>
+              <h3 class="pkg-name" data-i18n="pkg1">Launch</h3>
+              <p class="pkg-for" data-i18n="pkg1for">Best for brands starting a focused presence on 2 channels.</p>
+              <p class="pkg-price">
+                <span class="pkg-amount">7,500</span>
+                <span class="pkg-currency" data-i18n="sar">SAR</span>
+                <span class="pkg-period" data-i18n="pkgPerMonth">/ month</span>
+              </p>
+              <ul class="pkg-features">
+                <li data-i18n="pkg1f1">2 social channels</li>
+                <li data-i18n="pkg1f2">16 posts (ads + organic)</li>
+                <li data-i18n="pkg1f3">Professional account setup</li>
+                <li data-i18n="pkg1f4">Daily management 10am–6pm</li>
+                <li data-i18n="pkg1f5">Organic publishing + monthly report</li>
+              </ul>
+              <a class="btn btn-pill btn-outline-dark pkg-cta" href="#contact" data-i18n="pkgCta">Book a call</a>
+            </article>
+
+            <article class="pkg-card pkg-card--featured">
+              <p class="pkg-badge pkg-badge--hot" data-i18n="pkgPopular">Most chosen</p>
+              <h3 class="pkg-name" data-i18n="pkg2">Growth</h3>
+              <p class="pkg-for" data-i18n="pkg2for">Best for SMEs scaling reach across 3 channels with ads + organic.</p>
+              <p class="pkg-price">
+                <span class="pkg-amount">9,000</span>
+                <span class="pkg-currency" data-i18n="sar">SAR</span>
+                <span class="pkg-period" data-i18n="pkgPerMonth">/ month</span>
+              </p>
+              <ul class="pkg-features">
+                <li data-i18n="pkg2f1">3 social channels</li>
+                <li data-i18n="pkg2f2">Everything in Launch</li>
+                <li data-i18n="pkg2f3">Performance marketing + optimization</li>
+                <li data-i18n="pkg2f4">Stronger publishing rhythm</li>
+                <li data-i18n="pkg2f5">Clear monthly KPIs & reporting</li>
+              </ul>
+              <a class="btn btn-pill btn-on-light pkg-cta" href="#contact" data-i18n="pkgCta">Book a call</a>
+            </article>
+
+            <article class="pkg-card">
+              <p class="pkg-badge" data-i18n="pkg3badge">Full cover</p>
+              <h3 class="pkg-name" data-i18n="pkg3">Scale</h3>
+              <p class="pkg-for" data-i18n="pkg3for">Best for brands that want all suggested channels under one system.</p>
+              <p class="pkg-price">
+                <span class="pkg-amount">10,500</span>
+                <span class="pkg-currency" data-i18n="sar">SAR</span>
+                <span class="pkg-period" data-i18n="pkgPerMonth">/ month</span>
+              </p>
+              <ul class="pkg-features">
+                <li data-i18n="pkg3f1">All suggested channels</li>
+                <li data-i18n="pkg3f2">Everything in Growth</li>
+                <li data-i18n="pkg3f3">Priority coordination</li>
+                <li data-i18n="pkg3f4">Ready to add SEO & Motion</li>
+                <li data-i18n="pkg3f5">Full multi-channel presence</li>
+              </ul>
+              <a class="btn btn-pill btn-outline-dark pkg-cta" href="#contact" data-i18n="pkgCta">Book a call</a>
+            </article>
           </div>
-          <p class="pricing-note reveal" data-i18n="packagesNote">...</p>
-          <div class="seo-bar reveal">
-            <span data-i18n="seoAddon">SEO</span>
-            <span class="price" style="font-size: 1.1rem"><span data-i18n="seoPrice">9,000</span> <span data-i18n="sar">ر.س</span> / <span data-i18n="rowMonthly">شهري</span></span>
+
+          <p class="pricing-note reveal" data-i18n="packagesNote">Prices exclude VAT. Ad spend is separate and scales with your goals.</p>
+
+          <div class="pkg-addons reveal">
+            <p class="pkg-addons-label" data-i18n="addonsTag">Add-ons</p>
+            <div class="pkg-addons-grid">
+              <div class="pkg-addon">
+                <div class="pkg-addon-copy">
+                  <strong data-i18n="seoAddon">SEO (monthly)</strong>
+                  <span data-i18n="seoAddonDesc">Technical + content SEO for page-one keyword targets.</span>
+                </div>
+                <p class="pkg-addon-price">
+                  <span data-i18n="seoPrice">9,000</span>
+                  <span data-i18n="sar">SAR</span>
+                  <small data-i18n="pkgPerMonth">/ month</small>
+                </p>
+              </div>
+              <div class="pkg-addon">
+                <div class="pkg-addon-copy">
+                  <strong data-i18n="motionAddon">Motion & CGI</strong>
+                  <span data-i18n="motionAddonDesc">Production with Graphics House — films, motion, 3D visualization.</span>
+                </div>
+                <a class="pkg-addon-link" href="case-study.html" data-i18n="motionAddonCta">View case studies</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pkg-foot-cta reveal">
+            <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="heroCta1">Free strategy review</a>
           </div>
         </div>
       </section>
@@ -476,7 +503,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260813e"></script>
-    <script src="assets/js/app.js?v=20260813e"></script>
+    <script src="assets/js/translations.js?v=20260813f"></script>
+    <script src="assets/js/app.js?v=20260813f"></script>
   </body>
 </html>
