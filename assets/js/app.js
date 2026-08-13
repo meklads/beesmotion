@@ -473,6 +473,57 @@
     onScroll();
   }
 
+  function initCreativeAlbum() {
+    const HD =
+      "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1";
+
+    document.querySelectorAll("[data-creative-album]").forEach((album) => {
+      const stage = album.querySelector("[data-album-stage]");
+      if (!stage) return;
+      const thumbs = album.querySelectorAll("[data-album-id]");
+
+      function playInStage(id, title) {
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${id}?${HD}`;
+        iframe.title = title || "Video";
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.loading = "eager";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("playsinline", "1");
+        iframe.style.cssText =
+          "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
+
+        stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
+        const corners = stage.querySelectorAll(".bm-video-corner");
+        if (corners.length) {
+          corners[corners.length - 1].after(iframe);
+        } else {
+          stage.prepend(iframe);
+        }
+      }
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          const id = thumb.getAttribute("data-album-id");
+          if (!id) return;
+          const title = thumb.getAttribute("data-album-title") || "Video";
+
+          thumbs.forEach((tEl) => {
+            tEl.classList.remove("is-active");
+            tEl.setAttribute("aria-pressed", "false");
+          });
+          thumb.classList.add("is-active");
+          thumb.setAttribute("aria-pressed", "true");
+
+          playInStage(id, title);
+        });
+      });
+    });
+  }
+
   function initYtFacades() {
     document.querySelectorAll(".yt-facade").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -519,6 +570,7 @@
     initHeroReelAutoplay();
     initHeroParallax();
     initYtFacades();
+    initCreativeAlbum();
     initCaseFilters();
     initSolSticky();
     initReadyQuiz();

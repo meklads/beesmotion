@@ -7099,9 +7099,141 @@ body.lang-ar .bm-hero-em {
 }
 
 /* =========================================================
-   CREATIVE GALLERY — lead film + equal strip
+   CREATIVE ALBUM — large stage + thumbnail strip
    ========================================================= */
 
+.creative-album {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.8vw, 20px);
+}
+
+.creative-album-stage {
+  width: 100%;
+}
+
+.creative-album-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  min-height: clamp(240px, 42vw, 520px);
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0c0d10;
+  box-shadow: 0 28px 70px rgba(12, 13, 16, 0.16);
+}
+
+.creative-album-player .yt-facade--cover .yt-facade-play {
+  width: 68px;
+  height: 68px;
+}
+
+.creative-album-player .bento-label,
+.creative-album-player [data-album-label] {
+  position: absolute;
+  z-index: 2;
+  inset-inline-start: 16px;
+  bottom: 16px;
+  pointer-events: none;
+}
+
+.creative-album-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(10px, 1.4vw, 14px);
+}
+
+.creative-album-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0c0d10;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(12, 13, 16, 0.1);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creative-album-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.creative-album-thumb .yt-facade-play {
+  width: 36px;
+  height: 36px;
+  opacity: 0.92;
+}
+
+.creative-album-thumb .bento-label {
+  font-size: 10px;
+  padding: 6px 10px;
+  inset-inline-start: 10px;
+  bottom: 10px;
+}
+
+.creative-album-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(12, 13, 16, 0.14);
+}
+
+.creative-album-thumb:hover img {
+  transform: scale(1.04);
+}
+
+.creative-album-thumb.is-active {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(229, 168, 35, 0.35), 0 16px 36px rgba(12, 13, 16, 0.16);
+}
+
+.creative-album-thumb.is-active .yt-facade-play {
+  opacity: 0.35;
+}
+
+html[dir="rtl"] .creative-album-thumb .bento-label,
+html[dir="rtl"] .creative-album-player .bento-label {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-family: var(--font-ar);
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .creative-album-strip {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .creative-album-thumb {
+    flex: 0 0 min(42vw, 200px);
+    scroll-snap-align: start;
+  }
+  .creative-album-player {
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 560px) {
+  .creative-album-thumb {
+    flex-basis: min(58vw, 220px);
+  }
+  .creative-album-thumb .bento-label {
+    font-size: 9px;
+    padding: 5px 8px;
+  }
+}
+
+/* legacy gallery rules kept inert if markup removed */
 .creative-gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -7121,54 +7253,6 @@ body.lang-ar .bm-hero-em {
   min-height: clamp(260px, 34vw, 440px);
   border-radius: 24px;
   box-shadow: 0 28px 70px rgba(12, 13, 16, 0.16);
-}
-
-.creative-shot--lead .yt-facade--cover .yt-facade-play {
-  width: 68px;
-  height: 68px;
-}
-
-.creative-shot--lead .bento-label {
-  font-size: 12px;
-  padding: 8px 14px;
-}
-
-.creative-shot--feature,
-.creative-shot--wide {
-  grid-column: span 1;
-  aspect-ratio: 16 / 10;
-}
-
-@media (max-width: 980px) {
-  .creative-gallery {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .creative-shot {
-    grid-column: span 2;
-  }
-  .creative-shot--lead {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
-    min-height: 220px;
-  }
-  /* last two of five: span 3 each for even bottom row */
-  .creative-shot:nth-child(5),
-  .creative-shot:nth-child(6) {
-    grid-column: span 3;
-  }
-}
-
-@media (max-width: 560px) {
-  .creative-gallery {
-    grid-template-columns: 1fr;
-  }
-  .creative-shot,
-  .creative-shot--lead,
-  .creative-shot:nth-child(5),
-  .creative-shot:nth-child(6) {
-    grid-column: 1;
-    aspect-ratio: 16 / 10;
-  }
 }
 
 /* =========================================================
