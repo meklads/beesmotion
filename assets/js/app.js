@@ -328,6 +328,27 @@
     }
   }
 
+  function initYtFacades() {
+    document.querySelectorAll(".yt-facade").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-yt-id");
+        if (!id) return;
+        const title = btn.getAttribute("data-yt-title") || "Video";
+        const params = btn.getAttribute("data-yt-params") || "autoplay=1&rel=0&modestbranding=1&playsinline=1";
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${id}?${params}`;
+        iframe.title = title;
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.loading = "eager";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.setAttribute("frameborder", "0");
+        btn.replaceWith(iframe);
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     cleanLegacyHashes();
     initLang();
@@ -335,6 +356,7 @@
     initReveal();
     initForm();
     initHeroVideo();
+    initYtFacades();
     initCaseFilters();
     initSolSticky();
     initReadyQuiz();
