@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260815k" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260815m" />
   </head>
   <body class="lang-en page-case-study page-case-re page-sol" data-i18n-meta="csRe">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -355,61 +355,70 @@
             <div class="pf-head-copy">
               <p class="sol-eyebrow" data-i18n="csReSeriesTag">Gallery</p>
               <h2 class="sol-h2" data-i18n="csReSeriesTitle">Cinematic real estate films</h2>
-              <p class="sol-body" data-i18n="csReSeriesSub">Visual content presenting real estate services, architectural visualization, and projects in a concise cinematic style.</p>
+              <p class="sol-body" data-i18n="csReSeriesSub">Pick a film category, then play it in the main screen at high quality.</p>
             </div>
           </div>
-          <div class="pf-grid" role="list">
-            <button type="button" class="pf-card reveal" data-filter="services" aria-pressed="false">
-              <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csReSeriesCat">Real estate</span>
-                <span class="pf-card-title" data-i18n="csReS1">Real estate services</span>
-                <span class="pf-card-sub" data-i18n="csReS1d">Motion film presenting Graphics House services in real estate.</span>
-                <span class="pf-card-cta" data-i18n="csWatchFilm">Watch the film →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="viz" aria-pressed="false">
-              <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csReSeriesCat">Real estate</span>
-                <span class="pf-card-title" data-i18n="csReS2">Architectural visualization</span>
-                <span class="pf-card-sub" data-i18n="csReS2d">3D architectural visualization that simulates the full project experience.</span>
-                <span class="pf-card-cta" data-i18n="csWatchFilm">Watch the film →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="mwl" aria-pressed="false">
-              <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csReSeriesCat">Real estate</span>
-                <span class="pf-card-title" data-i18n="csReS3">Projects & exhibitions</span>
-                <span class="pf-card-sub" data-i18n="csReS3d">Muslim World League projects, Ramadan exhibition.</span>
-                <span class="pf-card-cta" data-i18n="csWatchFilm">Watch the film →</span>
-              </span>
-            </button>
-            <button type="button" class="pf-card reveal" data-filter="project" aria-pressed="false">
-              <img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="lazy" width="1280" height="720" />
-              <span class="pf-card-shade" aria-hidden="true"></span>
-              <span class="pf-card-body">
-                <span class="pf-card-cat" data-i18n="csReSeriesCat">Real estate</span>
-                <span class="pf-card-title" data-i18n="csReS4">Project film</span>
-                <span class="pf-card-sub" data-i18n="csReS3d2">A project film produced by Graphics House.</span>
-                <span class="pf-card-cta" data-i18n="csWatchFilm">Watch the film →</span>
-              </span>
-            </button>
-          </div>
-          <div class="pf-videos" id="pfVideos" hidden>
-            <div class="pf-videos-bar">
-              <h3 class="pf-videos-title" id="pfVideosTitle"></h3>
-              <button type="button" class="cs-filter" data-filter="all" data-i18n="csFilterAll">All</button>
+
+          <div class="series-album reveal" data-series-album data-series-default="services">
+            <div class="series-album-tabs" role="tablist" aria-label="Real estate films">
+              <button type="button" class="series-album-tab is-active" role="tab" aria-selected="true" data-series-tab="services" data-series-title-key="csReS1" data-series-meta-key="csReS1d">
+                <span data-i18n="csReS1">Real estate services</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="viz" data-series-title-key="csReS2" data-series-meta-key="csReS2d">
+                <span data-i18n="csReS2">Architectural visualization</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="mwl" data-series-title-key="csReS3" data-series-meta-key="csReS3d">
+                <span data-i18n="csReS3">Projects & exhibitions</span>
+              </button>
+              <button type="button" class="series-album-tab" role="tab" aria-selected="false" data-series-tab="project" data-series-title-key="csReS4" data-series-meta-key="csReS3d2">
+                <span data-i18n="csReS4">Project film</span>
+              </button>
             </div>
-            <div class="cs-tiles" id="csTiles">
-              <article class="cs-tile" data-series="services"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="WoYMS7Xs7cY" data-yt-title="services" aria-label="Play video"><img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="viz"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="e4ZuwoSHs_8" data-yt-title="viz" aria-label="Play video"><img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="mwl"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="e4ZuwoSHs_8" data-yt-title="mwl" aria-label="Play video"><img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
-              <article class="cs-tile" data-series="project"><div class="cs-tile-media bm-video-crop"><div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div><div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div><button type="button" class="yt-facade yt-facade--tile" data-yt-id="qCYcoSsy3fs" data-yt-title="project" aria-label="Play video"><img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="lazy" width="1280" height="720" /><span class="yt-facade-play" aria-hidden="true"></span></button></div></article>
+
+            <div class="series-album-meta">
+              <strong data-series-title data-i18n="csReS1">Real estate services</strong>
+              <span data-series-meta data-i18n="csReS1d">Motion film presenting Graphics House services in real estate.</span>
+            </div>
+
+            <div class="creative-album-stage">
+              <div class="creative-album-player bm-video-crop" data-album-stage>
+                <div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div>
+                <div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div>
+                <button
+                  type="button"
+                  class="yt-facade yt-facade--cover"
+                  data-yt-id="WoYMS7Xs7cY"
+                  data-yt-title="Real estate services"
+                  data-yt-params="autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1"
+                  aria-label="Play film"
+                >
+                  <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="eager" width="1280" height="720" />
+                  <span class="yt-facade-play" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="creative-album-strip series-album-strip" role="list" data-album-strip aria-label="Films">
+              <button type="button" class="creative-album-thumb is-active" role="listitem" data-series="services" data-album-id="WoYMS7Xs7cY" data-album-title="Real estate services" aria-pressed="true" aria-label="Real estate services">
+                <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label" data-i18n="csReS1">Real estate services</span>
+              </button>
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="viz" data-album-id="e4ZuwoSHs_8" data-album-title="Architectural visualization" aria-pressed="false" aria-label="Architectural visualization" hidden>
+                <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label" data-i18n="csReS2">Architectural visualization</span>
+              </button>
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="mwl" data-album-id="e4ZuwoSHs_8" data-album-title="Projects and exhibitions" aria-pressed="false" aria-label="Projects and exhibitions" hidden>
+                <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label" data-i18n="csReS3">Projects & exhibitions</span>
+              </button>
+              <button type="button" class="creative-album-thumb is-hidden" role="listitem" data-series="project" data-album-id="qCYcoSsy3fs" data-album-title="Project film" aria-pressed="false" aria-label="Project film" hidden>
+                <img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="lazy" width="640" height="360" />
+                <span class="yt-facade-play" aria-hidden="true"></span>
+                <span class="bento-label" data-i18n="csReS4">Project film</span>
+              </button>
             </div>
           </div>
         </div>
@@ -612,7 +621,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260815k"></script>
-    <script src="assets/js/app.js?v=20260815k"></script>
+    <script src="assets/js/translations.js?v=20260815m"></script>
+    <script src="assets/js/app.js?v=20260815m"></script>
   </body>
 </html>

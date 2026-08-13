@@ -7480,6 +7480,48 @@ html[dir="rtl"] .series-album-meta strong {
   max-width: var(--container-prose);
 }
 
+/* Thank-you page */
+.thanks-band {
+  min-height: calc(100svh - var(--header-h) - 120px);
+  display: flex;
+  align-items: center;
+  padding: clamp(64px, 10vw, 120px) 0;
+  background: var(--cream);
+}
+
+.thanks-inner {
+  text-align: center;
+}
+
+.thanks-inner .svc-tag {
+  margin-bottom: 14px;
+}
+
+.thanks-inner .font-headline-xl {
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.thanks-inner .font-body-md {
+  max-width: 36rem;
+  margin: 16px auto 0;
+}
+
+.thanks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.thanks-note {
+  margin-top: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 @media (max-width: 640px) {
   :root {
     --gutter: clamp(1rem, 4.5vw, 1.25rem);

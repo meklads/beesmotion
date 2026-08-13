@@ -195,11 +195,28 @@
       } catch (_) {}
       const text = encodeURIComponent(plain);
       const waUrl = `https://wa.me/${WA}?text=${text}`;
+      try {
+        sessionStorage.setItem("bm-wa-pending", waUrl);
+      } catch (_) {}
       const popup = window.open(waUrl, "_blank", "noopener");
       if (!popup) {
-        window.location.href = waUrl;
+        /* popup blocked — thank-you page will offer WhatsApp again */
       }
+      window.location.href = "thank-you.html";
     });
+  }
+
+  function initThanksPage() {
+    if (!document.body.classList.contains("page-thanks")) return;
+    const waBtn = document.getElementById("thanksWa");
+    let pending = "";
+    try {
+      pending = sessionStorage.getItem("bm-wa-pending") || "";
+      if (pending) sessionStorage.removeItem("bm-wa-pending");
+    } catch (_) {}
+    if (waBtn && pending) {
+      waBtn.setAttribute("href", pending);
+    }
   }
 
   function buildHeroIframe(id, title) {
@@ -698,6 +715,7 @@
     initReveal();
     initTracking();
     initForm();
+    initThanksPage();
     initHeroVideo();
     initHeroReelAutoplay();
     initHeroParallax();
