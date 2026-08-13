@@ -7098,3 +7098,34 @@ html[dir="rtl"] .creative-stat span {
     min-height: 0;
   }
 }
+
+/* Case study heroes — same reel crop fill as homepage */
+.bm-hero-video .bm-video-crop--hero-reel {
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(229, 168, 35, 0.28);
+  box-shadow:
+    0 40px 90px rgba(12, 13, 16, 0.18),
+    0 0 0 1px rgba(229, 168, 35, 0.18);
+  background: #0a0a0a;
+}
+
+.bm-hero-video .bm-video-crop--hero-reel iframe {
+  position: absolute;
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: 178%;
+  height: 178%;
+  max-width: none !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .bm-hero-video .bm-video-crop--hero-reel {
+    border-radius: 18px;
+  }
+}
