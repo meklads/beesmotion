@@ -6287,9 +6287,9 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 .hero-display {
   margin: 10px 0 18px;
   font-family: var(--font-display);
-  font-size: clamp(44px, 7vw, 84px);
+  font-size: clamp(34px, 5.2vw, 64px);
   font-weight: 750;
-  line-height: 0.96;
+  line-height: 1.08;
   letter-spacing: -0.045em;
   color: var(--ink);
 }
@@ -6299,10 +6299,9 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 }
 
 .hero-display-line--em {
-  color: transparent;
-  background: linear-gradient(120deg, var(--gold-dark), var(--gold), #f0c14d);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--gold-dark);
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 
 .bm-hero--cinema .bm-hero-sub {
@@ -6477,7 +6476,7 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
     gap: 28px;
   }
   .hero-display {
-    font-size: clamp(40px, 11vw, 64px);
+    font-size: clamp(32px, 8.5vw, 52px);
   }
   .hero-cinema-stage {
     min-height: 340px;
@@ -7181,8 +7180,20 @@ body.lang-ar .font-headline-xl,
 body.lang-ar .sol-h2,
 body.lang-ar .creative-studio-title,
 body.lang-ar .hero-display {
-  font-weight: 300 !important;
+  font-weight: 500 !important;
   letter-spacing: 0;
+}
+
+html[dir="rtl"] .hero-display,
+body.lang-ar .hero-display {
+  line-height: 1.22;
+}
+
+html[dir="rtl"] .hero-display-line--em,
+body.lang-ar .hero-display-line--em {
+  color: #8a6410;
+  font-weight: 700 !important;
+  -webkit-text-fill-color: #8a6410;
 }
 
 html[dir="rtl"] .bm-hero-em,
