@@ -1121,14 +1121,14 @@ section {
 }
 
 /* Clients — horizontal logo strip (never stack) */
-#clients {
+#work {
   padding: clamp(56px, 8vw, 96px) 0;
   background: #f7f8fb;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-#clients .section-head {
+#work .section-head {
   margin-bottom: 28px;
   text-align: center;
 }

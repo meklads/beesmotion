@@ -249,7 +249,7 @@
 
   function initSolSticky() {
     const bar = document.getElementById("solSticky");
-    const hero = document.getElementById("hero");
+    const hero = document.querySelector(".bm-hero--case, .bm-hero");
     if (!bar || !hero) return;
     const sync = () => {
       const past = window.scrollY > hero.offsetHeight * 0.65;
@@ -313,7 +313,23 @@
     updateProgress();
   }
 
+  function cleanLegacyHashes() {
+    const hash = (location.hash || "").replace(/^#/, "");
+    if (!hash) return;
+    // Old bookmarks: #hero is unnecessary; #clients → #work
+    if (hash === "hero") {
+      history.replaceState(null, "", location.pathname + location.search);
+      return;
+    }
+    if (hash === "clients") {
+      history.replaceState(null, "", location.pathname + location.search + "#work");
+      const el = document.getElementById("work");
+      if (el) requestAnimationFrame(() => el.scrollIntoView());
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    cleanLegacyHashes();
     initLang();
     initHeader();
     initReveal();
