@@ -6442,16 +6442,21 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 }
 
 .hero-frame--main {
-  inset: 8% 8% 18% 0;
+  inset: auto 6% 14% 0;
+  width: min(100%, 560px);
   z-index: 2;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  border-radius: 0;
 }
 
 .hero-frame--main .bm-video-crop {
-  aspect-ratio: auto;
-  height: 100%;
-  border: 0;
-  box-shadow: none;
-  border-radius: 18px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+  border-radius: 22px;
 }
 
 .hero-frame--a {
@@ -6575,7 +6580,8 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
     margin-top: 8px;
   }
   .hero-frame--main {
-    inset: 10% 12% 22% 4%;
+    width: min(100%, 520px);
+    inset: auto 8% 16% 2%;
   }
   .hero-system {
     grid-template-columns: 1fr 1fr;
@@ -6869,23 +6875,7 @@ html[dir="rtl"] .creative-stat span {
    MOBILE / MEDIA HARDENING — responsive + video fill
    ========================================================= */
 
-.hero-frame--main .bm-video-crop {
-  max-width: none !important;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  aspect-ratio: auto;
-}
-
-.hero-frame--main .bm-video-crop iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  transform: none;
-  pointer-events: auto;
-}
+/* hero main reel sizing handled in HERO REEL block below */
 
 .work-reel-item iframe,
 .creative-shot iframe,
@@ -6959,8 +6949,9 @@ html[dir="rtl"] .creative-stat span {
 
   .hero-frame--main {
     grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
-    min-height: 210px;
+    aspect-ratio: auto;
+    min-height: 0;
+    width: 100% !important;
   }
 
   .hero-frame-meta {
@@ -7007,5 +6998,101 @@ html[dir="rtl"] .creative-stat span {
 @media (max-width: 380px) {
   .work-reel {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   HERO REEL — same frame language as case-study PropMotion
+   (16:9 crop, gold L-brackets, soft radius) + corner cards
+   ========================================================= */
+
+.hero-frame--main {
+  inset: auto 6% 14% 0;
+  width: min(100%, 560px);
+  height: auto;
+  aspect-ratio: auto;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  border-radius: 0;
+}
+
+.hero-frame--main .bm-video-crop--hero-reel,
+.hero-frame--main .bm-video-crop {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  max-width: none !important;
+  margin: 0;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 22px;
+  border: 1px solid rgba(229, 168, 35, 0.28);
+  box-shadow:
+    0 40px 90px rgba(12, 13, 16, 0.18),
+    0 0 0 1px rgba(229, 168, 35, 0.18);
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.hero-frame--main .bm-video-crop iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  transform: none !important;
+  pointer-events: auto;
+  border: 0;
+  object-fit: cover;
+}
+
+.hero-frame--main .hero-frame-meta {
+  inset-inline-start: 14px;
+  bottom: 14px;
+}
+
+.hero-cinema-stage {
+  min-height: clamp(340px, 42vw, 480px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Keep Healthcare / Real estate as floating corner cards */
+.hero-frame--a {
+  width: min(44%, 220px);
+  inset-inline-end: 0;
+  top: 0;
+}
+
+.hero-frame--b {
+  width: min(40%, 200px);
+  inset-inline-start: -4%;
+  bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .hero-frame--main {
+    width: min(100%, 520px);
+    inset: auto 8% 16% 2%;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-frame--main {
+    width: 100% !important;
+    inset: auto !important;
+  }
+
+  .hero-frame--main .bm-video-crop--hero-reel,
+  .hero-frame--main .bm-video-crop {
+    border-radius: 18px;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .hero-frame--main {
+    aspect-ratio: auto !important;
+    min-height: 0;
   }
 }
