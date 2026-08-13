@@ -5302,6 +5302,10 @@ html[dir="rtl"] .hero-ticker-track {
   transform: rotate(1.2deg);
 }
 .creative-band .bm-video-crop:hover { transform: rotate(0deg) translateY(-4px); }
+.creative-band .creative-album-player.bm-video-crop,
+.creative-band .creative-album-player.bm-video-crop:hover {
+  transform: none;
+}
 
 /* Pillars */
 .pillar-card {
