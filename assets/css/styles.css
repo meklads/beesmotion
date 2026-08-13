@@ -22,8 +22,11 @@
   --header-h: 88px;
   --section-y: clamp(88px, 11vw, 140px);
   --section-gap: clamp(40px, 5vw, 64px);
-  --container: 96rem; /* match ruwaq.co content (~1536px) */
-  --gutter: clamp(1rem, 2.5vw, 2.75rem);
+  /* Dual width: prose focus vs media breadth (not Ruwaq 96rem, not old 1240 only) */
+  --container: 84rem; /* ~1344px — default */
+  --container-media: 92rem; /* ~1472px — albums / reels */
+  --container-prose: 72rem; /* ~1152px — long case copy */
+  --gutter: clamp(1.25rem, 3vw, 2.5rem);
   --font-ar: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
   --font-en: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
@@ -168,6 +171,15 @@ a {
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: var(--gutter);
+  box-sizing: border-box;
+}
+
+.container--media {
+  max-width: var(--container-media);
+}
+
+.container--prose {
+  max-width: var(--container-prose);
 }
 
 /* Honeycomb bg */
@@ -204,9 +216,10 @@ a {
   justify-content: space-between;
   gap: 12px;
   width: 100%;
-  max-width: 1180px;
+  max-width: var(--container);
   margin-inline: auto;
-  padding-inline: clamp(16px, 4vw, 48px);
+  padding-inline: var(--gutter);
+  box-sizing: border-box;
 }
 
 .brand {
@@ -6444,9 +6457,10 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 }
 
 .creative-studio {
-  width: min(100%, var(--container));
+  width: min(100%, var(--container-media));
   padding-inline: var(--gutter);
   margin-inline: auto;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: clamp(28px, 4vw, 44px);
@@ -6751,7 +6765,7 @@ html[dir="rtl"] .creative-stat span {
   }
 
   .creative-studio {
-    width: min(100%, var(--container));
+    width: min(100%, var(--container-media));
     padding-inline: var(--gutter);
   }
 }
@@ -7368,19 +7382,10 @@ html[dir="rtl"] .series-album-meta strong {
 }
 
 /* =========================================================
-   CONTENT WIDTH — match ruwaq.co (96rem + fluid gutter)
+   CONTENT WIDTH — dual measure (default + media + prose)
    ========================================================= */
 
-:root {
-  --container: 96rem;
-  --gutter: clamp(1rem, 2.5vw, 2.75rem);
-}
-
-.container,
-.header-inner,
-.footer-inner,
-.bm-hero-wrap,
-.creative-studio {
+.footer-inner {
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
@@ -7388,9 +7393,16 @@ html[dir="rtl"] .series-album-meta strong {
   box-sizing: border-box;
 }
 
-.creative-studio {
-  /* already padded; avoid double horizontal shrink */
-  width: min(100%, var(--container));
+.page-sol .pf-gallery > .container,
+.page-sol .sol-system-grid,
+#work > .container {
+  max-width: var(--container-media);
+}
+
+.page-sol .sol-story > .container,
+.page-sol #story > .container,
+.page-sol #faq > .container {
+  max-width: var(--container-prose);
 }
 
 @media (max-width: 640px) {
