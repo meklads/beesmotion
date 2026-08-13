@@ -4597,6 +4597,74 @@ body.lang-ar .sol-trust-track {
   border-bottom: 1px solid var(--border);
 }
 
+.signature-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 12px;
+}
+
+.signature-title-join {
+  font-weight: 400;
+  color: var(--muted);
+  padding-inline: 2px;
+}
+
+/* LTR isolate keeps ™ after the Latin brand name in RTL pages */
+.brand-mark {
+  display: inline-flex;
+  align-items: baseline;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--ink);
+  padding: 0.28em 0.62em 0.32em;
+  border-radius: 12px;
+  border: 1.5px solid rgba(229, 168, 35, 0.55);
+  background: linear-gradient(180deg, #fffef9 0%, #fff 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 28px rgba(15, 35, 71, 0.06);
+  white-space: nowrap;
+}
+
+.brand-mark sup {
+  font-size: 0.42em;
+  font-weight: 700;
+  line-height: 0;
+  position: relative;
+  top: -0.95em;
+  margin-left: 0.12em;
+  color: var(--gold-dark);
+}
+
+.signature-title .brand-mark {
+  font-size: 0.78em;
+  font-weight: 500;
+  border-radius: 14px;
+  padding: 0.22em 0.55em 0.26em;
+}
+
+.signature-card h3 .brand-mark {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.brand-mark--compact {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.18em 0.48em 0.2em;
+  border-radius: 9px;
+}
+
+.font-headline-xl > .brand-mark {
+  margin-bottom: 0.35em;
+}
+
 .signature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
