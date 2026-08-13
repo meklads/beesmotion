@@ -6350,28 +6350,7 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 }
 
 /* Creative section title — cleaner editorial scale */
-.creative-head {
-  text-align: start;
-  max-width: 18ch;
-  margin: 0 0 clamp(28px, 4vw, 44px);
-}
-.creative-head .font-headline-xl {
-  font-size: clamp(34px, 5vw, 58px) !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.035em !important;
-  font-weight: 700 !important;
-  max-width: 14ch;
-}
-.creative-head .font-body-md {
-  max-width: 36rem;
-  margin-top: 14px;
-  font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 1.65;
-}
-html[dir="rtl"] .creative-head .font-headline-xl {
-  max-width: 16ch;
-  letter-spacing: 0 !important;
-}
+
 
 /* =========================================================
    CINEMATIC HERO + editorial motion language
@@ -6624,4 +6603,264 @@ html[dir="rtl"] .creative-head .font-headline-xl {
   .hero-frame--b {
     transform: none !important;
   }
+}
+
+/* =========================================================
+   CREATIVE STUDIO — unified full-width gallery (EN = AR)
+   ========================================================= */
+
+.creative-band {
+  padding: var(--section-y) 0;
+  overflow: hidden;
+}
+
+.creative-studio {
+  width: min(100% - 2 * clamp(16px, 4vw, 48px), 1440px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+.creative-studio-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(180px, 0.6fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: end;
+}
+
+.creative-studio-copy {
+  min-width: 0;
+}
+
+.creative-studio-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.6vw, 52px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  max-width: 18ch;
+}
+
+html[dir="rtl"] .creative-studio-title {
+  letter-spacing: 0;
+  max-width: 20ch;
+  font-family: var(--font-ar);
+  font-weight: 800;
+}
+
+.creative-studio-sub {
+  margin: 14px 0 0;
+  max-width: 38rem;
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+html[dir="rtl"] .creative-studio-sub {
+  font-family: var(--font-ar);
+}
+
+.creative-studio-aside {
+  justify-self: end;
+  text-align: end;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(12,13,16,0.08);
+  box-shadow: 0 14px 36px rgba(12,13,16,0.05);
+  min-width: 180px;
+}
+
+html[dir="rtl"] .creative-studio-aside {
+  justify-self: start;
+  text-align: start;
+}
+
+.creative-stat {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.creative-stat strong {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+html[dir="rtl"] .creative-stat strong {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
+}
+
+.creative-stat span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.creative-stat-note {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+html[dir="rtl"] .creative-stat-note {
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.creative-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(10px, 1.4vw, 16px);
+}
+
+.creative-shot {
+  position: relative;
+  grid-column: span 2;
+  aspect-ratio: 16 / 10;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0c0d10;
+  box-shadow: 0 16px 40px rgba(12,13,16,0.1);
+  min-height: 0;
+}
+
+.creative-shot--feature {
+  grid-column: 1 / -1;
+  aspect-ratio: 2.35 / 1;
+  min-height: 260px;
+  border-radius: 22px;
+}
+
+.creative-shot--wide {
+  grid-column: span 4;
+}
+
+.creative-shot iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.creative-shot .yt-facade--cover .yt-facade-play {
+  width: 54px;
+  height: 54px;
+}
+
+.creative-shot--feature .yt-facade--cover .yt-facade-play {
+  width: 64px;
+  height: 64px;
+}
+
+.creative-studio-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .creative-studio-ctas {
+  justify-content: flex-start; /* flex-start follows direction */
+}
+
+@media (max-width: 900px) {
+  .creative-studio-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .creative-studio-aside {
+    justify-self: stretch;
+    text-align: start;
+  }
+  html[dir="rtl"] .creative-studio-aside {
+    text-align: start;
+  }
+  .creative-studio-title {
+    max-width: none;
+  }
+  .creative-shot--feature {
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+  }
+  .creative-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .creative-shot {
+    grid-column: span 1;
+  }
+  .creative-shot--wide {
+    grid-column: span 2;
+  }
+  .creative-shot--feature {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .creative-gallery {
+    grid-template-columns: 1fr;
+  }
+  .creative-shot,
+  .creative-shot--wide,
+  .creative-shot--feature {
+    grid-column: 1;
+    aspect-ratio: 16 / 10;
+  }
+  .creative-studio-ctas {
+    flex-direction: column;
+  }
+  .creative-studio-ctas .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Creative studio — facade + AR parity polish */
+.creative-shot .yt-facade--cover img {
+  max-width: none;
+  height: 100%;
+}
+.creative-shot .bento-label {
+  inset-inline-start: 14px;
+  inset-inline-end: auto;
+  bottom: 14px;
+}
+html[dir="rtl"] .creative-shot .bento-label {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-family: var(--font-ar);
+  font-weight: 700;
+}
+.creative-shot:hover {
+  box-shadow: 0 22px 48px rgba(12,13,16,0.16);
+}
+.creative-studio .svc-tag {
+  margin-bottom: 12px;
+}
+html[dir="rtl"] .creative-studio .svc-tag {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-family: var(--font-ar);
+}
+html[dir="rtl"] .creative-studio-sub,
+html[dir="rtl"] .creative-stat span {
+  font-family: var(--font-ar);
+}
+.creative-studio-ctas .btn {
+  min-height: 48px;
+  padding-inline: 22px;
 }
