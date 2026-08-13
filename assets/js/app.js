@@ -368,6 +368,31 @@
     }
   }
 
+
+  function initHeroParallax() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    const frames = document.querySelectorAll("[data-parallax]");
+    if (!frames.length) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        frames.forEach((el) => {
+          const speed = parseFloat(el.getAttribute("data-parallax") || "0.05");
+          const offset = Math.max(-18, Math.min(18, y * speed));
+          const base = el.classList.contains("hero-frame--a") ? "rotate(3deg)" : el.classList.contains("hero-frame--b") ? "rotate(-4deg)" : "";
+          el.style.transform = base ? base + " translate3d(0," + offset + "px,0)" : "translate3d(0," + offset + "px,0)";
+        });
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   function initYtFacades() {
     document.querySelectorAll(".yt-facade").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -397,6 +422,7 @@
     initTracking();
     initForm();
     initHeroVideo();
+    initHeroParallax();
     initYtFacades();
     initCaseFilters();
     initSolSticky();
