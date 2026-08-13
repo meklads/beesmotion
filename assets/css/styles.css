@@ -693,6 +693,60 @@ a {
   }
 }
 
+/* Case study heroes — same split language as homepage */
+.bm-hero--case {
+  background: #fafaf8;
+}
+
+.bm-hero-crumb {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bm-hero-crumb a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bm-hero-crumb a:hover {
+  color: var(--navy);
+}
+
+.bm-hero--case h1.font-headline-xl {
+  max-width: 16em;
+}
+
+.bm-hero--case .bm-hero-em {
+  font-size: clamp(16px, 2.4vw, 28px);
+  line-height: 1.35;
+  font-weight: 800 !important;
+}
+
+.bm-video-crop--embed {
+  background: #0f2347;
+}
+
+.bm-video-crop--embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .bm-hero--case .bm-hero-crumb {
+    text-align: center;
+  }
+
+  .bm-hero--case h1.font-headline-xl {
+    max-width: none;
+  }
+}
+
 /* Metrics strip */
 .bm-metrics {
   background: var(--ink);
