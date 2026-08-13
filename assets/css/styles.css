@@ -848,6 +848,20 @@ section {
   gap: clamp(14px, 2.5vw, 22px);
 }
 
+.systems-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.systems-card--flagship {
+  border-color: rgba(229, 168, 35, 0.45);
+  background: linear-gradient(165deg, #fffef9 0%, #ffffff 55%);
+  box-shadow: 0 12px 40px rgba(229, 168, 35, 0.08);
+}
+
+.systems-card--flagship .systems-sector {
+  color: var(--navy);
+}
+
 .systems-card {
   display: flex;
   flex-direction: column;
@@ -973,7 +987,8 @@ section {
 }
 
 @media (max-width: 900px) {
-  .systems-grid {
+  .systems-grid,
+  .systems-grid--3 {
     grid-template-columns: 1fr;
   }
 }
@@ -1030,8 +1045,9 @@ section {
   font-size: 11px;
   font-weight: 700;
   color: var(--gold);
-  letter-spacing: 0.06em;
-  min-width: 2rem;
+  letter-spacing: 0.04em;
+  min-width: 4.5rem;
+  text-transform: uppercase;
 }
 
 .hex-item p {
@@ -1040,6 +1056,75 @@ section {
   font-weight: 300;
   line-height: 1.8;
   margin: 0;
+}
+
+.creative-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.creative-chips li {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(229, 168, 35, 0.35);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.svc-layer-label {
+  margin: 28px 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.services-grid--pair {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 8px;
+}
+
+.agency-band {
+  background: var(--navy);
+  color: #fff;
+  padding: clamp(48px, 7vw, 80px) 0;
+}
+
+.agency-inner {
+  max-width: 760px;
+}
+
+.agency-band .svc-tag {
+  color: var(--gold-light);
+  border-color: rgba(229, 168, 35, 0.35);
+  background: rgba(229, 168, 35, 0.1);
+}
+
+.agency-band .font-headline-xl {
+  color: #fff !important;
+  margin: 12px 0 14px;
+}
+
+.agency-band .font-body-md {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 24px;
+}
+
+.pkg-group-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin: 0 0 16px;
 }
 
 /* Services */
@@ -1779,6 +1864,9 @@ body.has-sol-sticky .wa-float {
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .services-grid--pair {
+    grid-template-columns: 1fr;
   }
   .about-grid,
   .creative-wrap,
