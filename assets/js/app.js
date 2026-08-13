@@ -409,6 +409,13 @@
         iframe.loading = "eager";
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
         iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("playsinline", "1");
+        iframe.style.cssText =
+          "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
+        const parent = btn.parentElement;
+        if (parent && getComputedStyle(parent).position === "static") {
+          parent.style.position = "relative";
+        }
         btn.replaceWith(iframe);
       });
     });
