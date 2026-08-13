@@ -22,7 +22,8 @@
   --header-h: 88px;
   --section-y: clamp(88px, 11vw, 140px);
   --section-gap: clamp(40px, 5vw, 64px);
-  --container: 1240px;
+  --container: 96rem; /* match ruwaq.co content (~1536px) */
+  --gutter: clamp(1rem, 2.5vw, 2.75rem);
   --font-ar: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
   --font-en: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
@@ -166,7 +167,7 @@ a {
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
-  padding-inline: clamp(20px, 4vw, 48px);
+  padding-inline: var(--gutter);
 }
 
 /* Honeycomb bg */
@@ -6439,7 +6440,8 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 }
 
 .creative-studio {
-  width: min(100% - 2 * clamp(16px, 4vw, 48px), 1440px);
+  width: min(100%, var(--container));
+  padding-inline: var(--gutter);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -6713,7 +6715,9 @@ html[dir="rtl"] .creative-stat span {
 
 @media (max-width: 900px) {
   .container {
-    width: min(100% - 28px, var(--container));
+    width: 100%;
+    max-width: var(--container);
+    padding-inline: var(--gutter);
   }
 
   .bm-hero--cinema {
@@ -6743,7 +6747,8 @@ html[dir="rtl"] .creative-stat span {
   }
 
   .creative-studio {
-    width: min(100% - 28px, 1440px);
+    width: min(100%, var(--container));
+    padding-inline: var(--gutter);
   }
 }
 
@@ -7163,5 +7168,37 @@ body.lang-ar .bm-hero-em {
   .creative-shot:nth-child(6) {
     grid-column: 1;
     aspect-ratio: 16 / 10;
+  }
+}
+
+/* =========================================================
+   CONTENT WIDTH — match ruwaq.co (96rem + fluid gutter)
+   ========================================================= */
+
+:root {
+  --container: 96rem;
+  --gutter: clamp(1rem, 2.5vw, 2.75rem);
+}
+
+.container,
+.header-inner,
+.footer-inner,
+.bm-hero-wrap,
+.creative-studio {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  box-sizing: border-box;
+}
+
+.creative-studio {
+  /* already padded; avoid double horizontal shrink */
+  width: min(100%, var(--container));
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: clamp(1rem, 4.5vw, 1.25rem);
   }
 }
