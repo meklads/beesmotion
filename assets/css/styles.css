@@ -7092,3 +7092,76 @@ body.lang-ar .bm-hero-em {
   font-family: var(--font-ar) !important;
   font-weight: 700 !important;
 }
+
+/* =========================================================
+   CREATIVE GALLERY — lead film + equal strip
+   ========================================================= */
+
+.creative-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(12px, 1.6vw, 18px);
+  align-items: stretch;
+}
+
+.creative-shot {
+  grid-column: span 1;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+}
+
+.creative-shot--lead {
+  grid-column: 1 / -1;
+  aspect-ratio: 2.2 / 1;
+  min-height: clamp(260px, 34vw, 440px);
+  border-radius: 24px;
+  box-shadow: 0 28px 70px rgba(12, 13, 16, 0.16);
+}
+
+.creative-shot--lead .yt-facade--cover .yt-facade-play {
+  width: 68px;
+  height: 68px;
+}
+
+.creative-shot--lead .bento-label {
+  font-size: 12px;
+  padding: 8px 14px;
+}
+
+.creative-shot--feature,
+.creative-shot--wide {
+  grid-column: span 1;
+  aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 980px) {
+  .creative-gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .creative-shot {
+    grid-column: span 2;
+  }
+  .creative-shot--lead {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    min-height: 220px;
+  }
+  /* last two of five: span 3 each for even bottom row */
+  .creative-shot:nth-child(5),
+  .creative-shot:nth-child(6) {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 560px) {
+  .creative-gallery {
+    grid-template-columns: 1fr;
+  }
+  .creative-shot,
+  .creative-shot--lead,
+  .creative-shot:nth-child(5),
+  .creative-shot:nth-child(6) {
+    grid-column: 1;
+    aspect-ratio: 16 / 10;
+  }
+}
