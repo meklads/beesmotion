@@ -3710,7 +3710,7 @@ body.lang-en .sol-ready-list li {
 }
 
 .sol-faq-item[open] summary::after {
-  content: "–";
+  content: "·";
 }
 
 .sol-faq-item p {

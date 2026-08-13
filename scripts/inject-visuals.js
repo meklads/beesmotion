@@ -27,7 +27,7 @@ const creativeNew = `<section id="creative" class="creative-band band-paper has-
           <div class="section-head section-head--editorial reveal">
             <span class="svc-tag" data-i18n="creativeTag">Creative production</span>
             <h2 class="font-headline-xl" data-i18n="creativeTitle">The content that gives marketing something to work with</h2>
-            <p class="font-body-md" data-i18n="creativeSub">Studio-grade video, animation, and motion — built for campaigns, not for the shelf. 100+ animated films across healthcare and real estate.</p>
+            <p class="font-body-md" data-i18n="creativeSub">Studio-grade video, animation, and motion, built for campaigns, not for the shelf. 100+ animated films across healthcare and real estate.</p>
           </div>
           <div class="creative-bento reveal">
             <article class="bento-item bento-item--lg">
@@ -155,13 +155,13 @@ html = html.replace(
             <a class="signature-card reveal" href="case-study-imc.html">
               <span class="signature-kicker" data-i18n="sysMedSector">Healthcare</span>
               <h3 data-i18n="sigMedName">MedMotion™</h3>
-              <p data-i18n="sigMedBody">Healthcare creative content & digital marketing — patient education, medical motion, campaigns, and steady channel presence.</p>
+              <p data-i18n="sigMedBody">Healthcare creative content & digital marketing, patient education, medical motion, campaigns, and steady channel presence.</p>
               <span class="signature-cta" data-i18n="sigMedCta">IMC case study</span>
             </a>
             <a class="signature-card reveal" href="case-study-real-estate.html">
               <span class="signature-kicker" data-i18n="sysPropSector">Real estate</span>
               <h3 data-i18n="sigPropName">PropMotion™</h3>
-              <p data-i18n="sigPropBody">Real estate creative content & campaigns — launch storytelling, social video, and lead-focused digital marketing.</p>
+              <p data-i18n="sigPropBody">Real estate creative content & campaigns, launch storytelling, social video, and lead-focused digital marketing.</p>
               <span class="signature-cta" data-i18n="sigPropCta">Real estate case</span>
             </a>
           </div>`,
@@ -173,7 +173,7 @@ html = html.replace(
               <div class="signature-body">
                 <span class="signature-kicker" data-i18n="sysMedSector">Healthcare</span>
                 <h3 data-i18n="sigMedName">MedMotion™</h3>
-                <p data-i18n="sigMedBody">Healthcare creative content & digital marketing — patient education, medical motion, campaigns, and steady channel presence.</p>
+                <p data-i18n="sigMedBody">Healthcare creative content & digital marketing, patient education, medical motion, campaigns, and steady channel presence.</p>
                 <span class="signature-cta" data-i18n="sigMedCta">IMC case study</span>
               </div>
             </a>
@@ -184,7 +184,7 @@ html = html.replace(
               <div class="signature-body">
                 <span class="signature-kicker" data-i18n="sysPropSector">Real estate</span>
                 <h3 data-i18n="sigPropName">PropMotion™</h3>
-                <p data-i18n="sigPropBody">Real estate creative content & campaigns — launch storytelling, social video, and lead-focused digital marketing.</p>
+                <p data-i18n="sigPropBody">Real estate creative content & campaigns, launch storytelling, social video, and lead-focused digital marketing.</p>
                 <span class="signature-cta" data-i18n="sigPropCta">Real estate case</span>
               </div>
             </a>
@@ -203,7 +203,7 @@ if (!html.includes("work-reel")) {
             <a class="work-case" href="case-study-real-estate.html">
               <span class="work-case-sector" data-i18n="sysPropSector">Real estate</span>
               <h3 data-i18n="sigPropName">PropMotion™</h3>
-              <p data-i18n="csHubGhBlurb">Real estate creative content and marketing assets that help sell the project story — in collaboration with Graphics House where visualization is needed.</p>
+              <p data-i18n="csHubGhBlurb">Real estate creative content and marketing assets that help sell the project story, in collaboration with Graphics House where visualization is needed.</p>
               <span class="work-case-cta" data-i18n="csHubRead">Read the case</span>
             </a>
           </div>`,
@@ -226,7 +226,7 @@ if (!html.includes("work-reel")) {
               <div class="work-case-body">
                 <span class="work-case-sector" data-i18n="sysPropSector">Real estate</span>
                 <h3 data-i18n="sigPropName">PropMotion™</h3>
-                <p data-i18n="csHubGhBlurb">Real estate creative content and marketing assets that help sell the project story — in collaboration with Graphics House where visualization is needed.</p>
+                <p data-i18n="csHubGhBlurb">Real estate creative content and marketing assets that help sell the project story, in collaboration with Graphics House where visualization is needed.</p>
                 <span class="work-case-cta" data-i18n="csHubRead">Read the case</span>
               </div>
             </a>
@@ -270,7 +270,7 @@ html = html.replace(
         <div class="container agency-inner reveal">
           <span class="svc-tag" data-i18n="agencyTag">Agency partners</span>
           <h2 class="font-headline-xl" data-i18n="agencyTitle">Your client. Your strategy. Our production depth.</h2>
-          <p class="font-body-md" data-i18n="agencyBody">You own the relationship and the brief. We extend your team with motion, video, animation, and campaign execution — never competing for the account.</p>
+          <p class="font-body-md" data-i18n="agencyBody">You own the relationship and the brief. We extend your team with motion, video, animation, and campaign execution, never competing for the account.</p>
           <a class="btn btn-pill btn-on-light" href="#contact" data-track="cta_agency" data-i18n="ctaAgency">Become a production partner</a>
         </div>
       </section>`,
@@ -279,7 +279,7 @@ html = html.replace(
           <div class="agency-copy">
             <span class="svc-tag" data-i18n="agencyTag">Agency partners</span>
             <h2 class="font-headline-xl" data-i18n="agencyTitle">Your client. Your strategy. Our production depth.</h2>
-            <p class="font-body-md" data-i18n="agencyBody">You own the relationship and the brief. We extend your team with motion, video, animation, and campaign execution — never competing for the account.</p>
+            <p class="font-body-md" data-i18n="agencyBody">You own the relationship and the brief. We extend your team with motion, video, animation, and campaign execution, never competing for the account.</p>
             <a class="btn btn-pill btn-on-light" href="#contact" data-track="cta_agency" data-i18n="ctaAgency">Become a production partner</a>
           </div>
           <div class="agency-photo">
