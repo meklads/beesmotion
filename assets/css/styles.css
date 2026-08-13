@@ -442,70 +442,68 @@ a {
 .bm-video-crop {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   min-height: 0;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
-  background: #e8e8e8;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.5s cubic-bezier(0.25, 0.1, 0.1, 1), transform 0.5s cubic-bezier(0.25, 0.1, 0.1, 1);
+  background: #0a0a0a;
+  border: 1px solid rgba(229, 168, 35, 0.22);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.18);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
 }
 
 .bm-video-crop:hover {
-  box-shadow: 0 12px 50px rgba(229, 168, 35, 0.12);
-  transform: scale(1.01);
+  border-color: rgba(229, 168, 35, 0.45);
+  box-shadow: 0 14px 44px rgba(229, 168, 35, 0.14);
+  transform: translateY(-2px);
 }
 
-.bm-video-crop::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  pointer-events: none;
-  top: 8px;
-  left: 8px;
-  width: 18px;
-  height: 18px;
-  border-top: 1.5px solid var(--gold);
-  border-left: 1.5px solid var(--gold);
-  opacity: 0.5;
-  transition: all 0.4s ease;
-}
-
+.bm-video-crop::before,
 .bm-video-crop::after {
   content: "";
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   pointer-events: none;
-  bottom: 8px;
-  right: 8px;
   width: 18px;
   height: 18px;
+  opacity: 0.72;
+  transition: opacity 0.35s ease, width 0.35s ease, height 0.35s ease;
+}
+
+.bm-video-crop::before {
+  top: 10px;
+  left: 10px;
+  border-top: 1.5px solid var(--gold);
+  border-left: 1.5px solid var(--gold);
+}
+
+.bm-video-crop::after {
+  bottom: 10px;
+  right: 10px;
   border-bottom: 1.5px solid var(--gold);
   border-right: 1.5px solid var(--gold);
-  opacity: 0.5;
-  transition: all 0.4s ease;
 }
 
 .bm-video-corner {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   pointer-events: none;
   width: 18px;
   height: 18px;
-  opacity: 0.5;
-  transition: all 0.4s ease;
+  opacity: 0.72;
+  transition: opacity 0.35s ease, width 0.35s ease, height 0.35s ease;
 }
 
 .bm-video-corner--tr {
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  right: 10px;
   border-top: 1.5px solid var(--gold);
   border-right: 1.5px solid var(--gold);
 }
 
 .bm-video-corner--bl {
-  bottom: 8px;
-  left: 8px;
+  bottom: 10px;
+  left: 10px;
   border-bottom: 1.5px solid var(--gold);
   border-left: 1.5px solid var(--gold);
 }
@@ -513,41 +511,47 @@ a {
 .bm-video-crop:hover::before,
 .bm-video-crop:hover::after,
 .bm-video-crop:hover .bm-video-corner {
-  opacity: 0.9;
+  opacity: 1;
   width: 22px;
   height: 22px;
 }
 
-.bm-video-crop video {
+.bm-video-crop video,
+.bm-video-crop iframe,
+.bm-video-crop .yt-facade {
   position: absolute;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
+  border: 0;
   object-fit: cover;
   object-position: center;
+}
+
+.bm-video-crop video {
   transition: transform 1.2s cubic-bezier(0.25, 0.1, 0.1, 1);
 }
 
 .bm-video-crop:hover video {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* YouTube Short — fill frame, crop letterboxing */
+/* YouTube Short — taller stage, same gold frame */
 .bm-video-crop--yt-short {
-  background: #111;
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+  margin-inline: auto;
+  background: #0a0a0a;
 }
 
-.bm-video-crop--yt-short iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.bm-video-crop--yt-short iframe,
+.bm-video-crop--embed iframe {
+  object-fit: cover;
 }
 
-.bm-video-crop--yt-short:hover iframe {
-  transform: none;
+.bm-video-crop--embed {
+  background: #0a0a0a;
 }
 
 @media (max-width: 900px) {
@@ -576,7 +580,10 @@ a {
     margin-inline: auto;
   }
   .bm-video-crop {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
+  }
+  .bm-video-crop--yt-short {
+    aspect-ratio: 9 / 16;
   }
   .bm-video-crop:hover,
   .bm-video-crop:hover video {
@@ -722,18 +729,6 @@ a {
   font-size: clamp(16px, 2.4vw, 28px);
   line-height: 1.35;
   font-weight: 800 !important;
-}
-
-.bm-video-crop--embed {
-  background: #0f2347;
-}
-
-.bm-video-crop--embed iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 @media (max-width: 900px) {
@@ -2314,21 +2309,8 @@ body.lang-en .pf-card.is-active .pf-card-cta {
   display: none;
 }
 
-.cs-tile-media {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #0a0a0a;
-  border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(15, 35, 71, 0.1);
-}
-
-.cs-tile-media iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.cs-tile-media.bm-video-crop {
+  border-radius: 6px;
 }
 
 .cs-tile-meta {
