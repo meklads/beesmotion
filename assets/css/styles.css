@@ -5943,3 +5943,218 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   .bento-item--wide { grid-column: span 1; }
   .work-reel { grid-template-columns: 1fr 1fr; gap: 8px; }
 }
+
+/* =========================================================
+   ABOUT + CREATIVE — layout rewrite (aligned & cinematic)
+   ========================================================= */
+
+.about-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 4.5vw, 56px);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: stretch;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: clamp(8px, 1.5vw, 16px) 0;
+}
+
+.about-copy .font-headline-xl {
+  max-width: 16ch;
+  margin: 0;
+}
+
+.about-copy > p {
+  margin: 0;
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 38rem;
+}
+
+.about-copy .about-links {
+  margin-top: 8px;
+}
+
+.about-media {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 560px;
+  box-shadow: 0 28px 70px rgba(12, 13, 16, 0.12);
+  background: #0c0d10;
+}
+
+.about-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-media-cap {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 18px 20px;
+  background: linear-gradient(transparent, rgba(12, 13, 16, 0.78));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.about-pillar {
+  padding: 22px 22px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(12, 13, 16, 0.07);
+  box-shadow: 0 12px 32px rgba(12, 13, 16, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+
+.about-pillar-num {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--gold-dark);
+}
+
+.about-pillar h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-family: var(--font-display);
+}
+
+.about-pillar p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* Creative — full-width cinematic rows */
+.creative-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.creative-feature,
+.creative-cell {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0c0d10;
+  box-shadow: 0 18px 48px rgba(12, 13, 16, 0.1);
+}
+
+.creative-feature {
+  aspect-ratio: 21 / 9;
+  min-height: 280px;
+}
+
+.creative-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.creative-cell {
+  aspect-ratio: 16 / 9;
+  min-height: 180px;
+}
+
+.creative-cell--span2 {
+  grid-column: span 2;
+}
+
+.creative-feature iframe,
+.creative-cell iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.creative-feature .yt-facade-play,
+.creative-cell .yt-facade-play {
+  width: 56px;
+  height: 56px;
+}
+
+@media (max-width: 980px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-copy .font-headline-xl {
+    max-width: none;
+  }
+  .about-media {
+    aspect-ratio: 16 / 10;
+    max-height: 360px;
+  }
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+  .creative-feature {
+    aspect-ratio: 16 / 9;
+    min-height: 220px;
+  }
+  .creative-row {
+    grid-template-columns: 1fr;
+  }
+  .creative-cell--span2 {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .about-pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .creative-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .creative-cell--span2 {
+    grid-column: span 2;
+  }
+}
+
+.creative-showcase--wide {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3.5vw, 40px);
+}
+
+.creative-feature {
+  aspect-ratio: 2.2 / 1;
+  min-height: 320px;
+  border-radius: 22px;
+}
