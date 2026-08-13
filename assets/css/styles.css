@@ -537,37 +537,21 @@ a {
   transform: scale(1.03);
 }
 
-/* YouTube Short — 9:16 gold frame; zoom iframe to hide 16:9 letterbox + chrome */
+/* YouTube Short — taller stage, same gold frame */
 .bm-video-crop--yt-short {
   aspect-ratio: 9 / 16;
   max-width: 420px;
   width: 100%;
   margin-inline: auto;
   background: #0a0a0a;
-  overflow: hidden;
 }
 
 .bm-hero-video .bm-video-crop--yt-short {
-  max-width: min(100%, 340px);
+  max-width: min(100%, 380px);
   margin-inline: auto;
 }
 
-/*
-  YouTube embeds Shorts inside a 16:9 player with side bars / UI.
-  Scale the iframe so only the vertical 9:16 picture fills the crop
-  (character + “3D Cartoon” label — not the side card / chrome).
-*/
-.bm-video-crop--yt-short iframe {
-  inset: auto;
-  top: 0;
-  left: 50%;
-  width: 316%;
-  height: 100%;
-  max-width: none;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
+.bm-video-crop--yt-short iframe,
 .bm-video-crop--embed iframe {
   object-fit: cover;
 }
