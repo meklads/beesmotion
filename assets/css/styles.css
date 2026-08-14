@@ -4185,156 +4185,261 @@ body.lang-en .sol-ready-list li {
   font-weight: 400;
 }
 
-/* IMC partnership seal strip — clinical blue / white */
+/* IMC partnership seal — premium certificate */
+.page-sol .sol-strip--seal,
 .sol-strip--seal {
   position: relative;
   overflow: hidden;
-  padding: clamp(48px, 7vw, 88px) 0;
+  padding: clamp(56px, 8vw, 100px) 0;
   background:
-    radial-gradient(ellipse 60% 55% at 50% -10%, rgba(26, 86, 168, 0.14), transparent 58%),
-    linear-gradient(180deg, #f4f8fc 0%, #e8f0f8 48%, #f7fbff 100%);
-  border-bottom: 1px solid rgba(26, 86, 168, 0.12);
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(26, 86, 168, 0.1), transparent 55%),
+    linear-gradient(180deg, #f7fbff 0%, #eef4fb 45%, #ffffff 100%);
+  border-bottom: 1px solid rgba(26, 86, 168, 0.1);
   color: #0f2347;
 }
 
-.sol-strip--seal::before {
+.sol-strip--seal::before,
+.sol-strip--seal::after {
+  content: none;
+}
+
+.sol-seal-card {
+  position: relative;
+  z-index: 1;
+  max-width: 58rem;
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 44px) clamp(22px, 4vw, 48px) clamp(32px, 4.5vw, 48px);
+  border-radius: 28px;
+  background:
+    linear-gradient(165deg, #ffffff 0%, #f4f8fd 100%);
+  border: 1px solid rgba(26, 86, 168, 0.14);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 24px 60px rgba(15, 35, 71, 0.08);
+}
+
+.sol-seal-card::before {
   content: "";
   position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(26, 86, 168, 0.16);
-  border-radius: 28px;
+  inset: 10px;
+  border-radius: 22px;
+  border: 1px solid rgba(229, 168, 35, 0.28);
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.2));
 }
 
 .sol-seal-head {
   position: relative;
   z-index: 1;
-  max-width: 42rem;
-  margin: 0 auto clamp(28px, 4vw, 40px);
+  max-width: 40rem;
+  margin: 0 auto clamp(22px, 3vw, 28px);
   text-align: center;
 }
 
 .sol-seal-crest {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 168px;
-  min-height: 108px;
-  margin-bottom: 18px;
-  padding: 16px 22px;
-  border-radius: 22px;
-  background: #fff;
-  border: 1px solid rgba(26, 86, 168, 0.14);
+  display: inline-grid;
+  place-items: center;
+  width: clamp(132px, 22vw, 168px);
+  height: clamp(132px, 22vw, 168px);
+  margin: 0 auto 20px;
+}
+
+.sol-seal-crest-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.sol-seal-crest-ring--outer {
+  border: 2px solid rgba(26, 86, 168, 0.35);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 18px 40px rgba(15, 35, 71, 0.08);
+    0 0 0 8px rgba(26, 86, 168, 0.05),
+    0 18px 40px rgba(15, 35, 71, 0.1);
+  background:
+    radial-gradient(circle at 35% 30%, #ffffff 0%, #f0f6fc 58%, #e2eef8 100%);
+}
+
+.sol-seal-crest-ring--inner {
+  inset: 10px;
+  border: 1.5px solid rgba(229, 168, 35, 0.55);
 }
 
 .sol-seal-logo {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: min(168px, 52vw);
+  width: 68%;
   height: auto;
 }
 
 .sol-seal-kicker {
-  margin: 0 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #1a56a8;
+  background: rgba(26, 86, 168, 0.08);
+  border: 1px solid rgba(26, 86, 168, 0.14);
+}
+
+.sol-seal-kicker::before,
+.sol-seal-kicker::after {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: rgba(229, 168, 35, 0.8);
 }
 
 .sol-seal-title {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   font-family: var(--font-display);
-  font-size: clamp(22px, 3.2vw, 34px);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
   color: #0f2347;
 }
 
 .sol-seal-lead {
   margin: 0 auto;
-  max-width: 38rem;
-  font-size: clamp(14px, 1.2vw, 16px);
-  line-height: 1.7;
-  color: rgba(15, 35, 71, 0.72);
+  max-width: 36rem;
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.75;
+  color: rgba(15, 35, 71, 0.78);
+}
+
+.sol-seal-divider {
+  position: relative;
+  z-index: 1;
+  height: 1px;
+  margin: 0 auto clamp(24px, 3.5vw, 32px);
+  max-width: 28rem;
+  background: linear-gradient(90deg, transparent, rgba(26, 86, 168, 0.28), rgba(229, 168, 35, 0.55), rgba(26, 86, 168, 0.28), transparent);
 }
 
 .sol-seal-grid {
   position: relative;
   z-index: 1;
-  gap: clamp(14px, 2vw, 22px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 20px);
   align-items: start;
 }
 
-.sol-strip--seal .sol-strip-item {
-  border: 0 !important;
-  padding: 8px 10px;
+.sol-seal-stat {
+  text-align: center;
+  padding: 4px 6px;
 }
 
 .sol-seal-medal {
   display: grid;
   place-items: center;
-  width: clamp(96px, 14vw, 118px);
-  height: clamp(96px, 14vw, 118px);
-  margin: 0 auto 14px;
+  width: clamp(88px, 12vw, 108px);
+  height: clamp(88px, 12vw, 108px);
+  margin: 0 auto 12px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 28%, #ffffff 0%, #f3f8fd 55%, #e4eef8 100%);
-  border: 2px solid rgba(26, 86, 168, 0.28);
+    radial-gradient(circle at 32% 28%, #ffffff 0%, #f4f8fd 52%, #e6eef8 100%);
+  border: 2px solid rgba(26, 86, 168, 0.3);
   box-shadow:
-    0 0 0 7px rgba(26, 86, 168, 0.06),
-    0 14px 30px rgba(15, 35, 71, 0.08),
+    0 0 0 6px rgba(26, 86, 168, 0.05),
+    0 12px 28px rgba(15, 35, 71, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.sol-seal-medal--hero {
+  width: clamp(100px, 14vw, 124px);
+  height: clamp(100px, 14vw, 124px);
+  border-color: rgba(229, 168, 35, 0.65);
+  box-shadow:
+    0 0 0 7px rgba(229, 168, 35, 0.1),
+    0 16px 34px rgba(15, 35, 71, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 .sol-seal-medal strong {
   margin: 0;
-  font-size: clamp(26px, 3.4vw, 34px);
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 800;
+  line-height: 1;
   color: #1a56a8;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
-.sol-seal-medal--brand {
-  width: clamp(118px, 18vw, 148px);
-  height: clamp(118px, 18vw, 148px);
-  padding: 16px;
-  background: #fff;
-}
-
-.sol-seal-medal--brand img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+.sol-seal-medal--hero strong {
+  font-size: clamp(28px, 3.8vw, 38px);
+  color: #0f2347;
 }
 
 .sol-seal-medal--rise strong {
-  font-size: clamp(32px, 4vw, 42px);
-  font-weight: 700;
+  font-size: clamp(30px, 4vw, 40px);
+  color: #1a56a8;
 }
 
-.sol-strip--seal .sol-strip-item span {
-  max-width: 14rem;
+.sol-seal-medal--year {
+  position: relative;
+}
+
+.sol-seal-medal--year em {
+  position: absolute;
+  bottom: 18%;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(26, 86, 168, 0.7);
+}
+
+.sol-seal-stat span {
+  display: block;
+  max-width: 12.5rem;
   margin-inline: auto;
-  font-size: 12.5px;
+  font-size: 13px;
   line-height: 1.55;
-  color: rgba(15, 35, 71, 0.68);
+  font-weight: 500;
+  color: rgba(15, 35, 71, 0.72);
 }
 
 html[dir="rtl"] .sol-seal-title,
 html[dir="rtl"] .sol-seal-lead,
-html[dir="rtl"] .sol-strip--seal .sol-strip-item span {
+html[dir="rtl"] .sol-seal-kicker,
+html[dir="rtl"] .sol-seal-stat span {
   font-family: var(--font-ar);
 }
 
 html[dir="rtl"] .sol-seal-title {
   letter-spacing: 0;
-  font-weight: 700;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .sol-seal-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 12px;
+  }
+
+  .sol-seal-card::before {
+    inset: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sol-seal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sol-seal-stat span {
+    max-width: 18rem;
+  }
 }
 
 .sol-ideas {
@@ -4762,7 +4867,7 @@ body.lang-ar .sol-trust-track {
 }
 
 /* Soften strip after trust */
-.page-sol .sol-strip {
+.page-sol .sol-strip:not(.sol-strip--seal) {
   background: #111;
 }
 
