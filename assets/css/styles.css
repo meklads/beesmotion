@@ -3780,6 +3780,24 @@ body.lang-en .sol-ready-list li {
   color: var(--muted);
 }
 
+.sol-quote--proof {
+  max-width: 40rem;
+}
+
+.sol-quote--proof p {
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.sol-quote--proof cite {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .sol-urgency {
   margin-top: 18px;
   font-size: 13px;
