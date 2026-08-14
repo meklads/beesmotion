@@ -4613,16 +4613,6 @@ body.has-sol-sticky {
   .sol-strip-item:nth-child(2) {
     border-bottom: 1px solid rgba(229, 168, 35, 0.14);
   }
-
-  .sol-strip--seal .sol-strip-item:nth-child(1),
-  .sol-strip--seal .sol-strip-item:nth-child(2) {
-    border-bottom: 0;
-  }
-
-  .sol-strip--seal::before {
-    inset: 12px;
-    border-radius: 22px;
-  }
 }
 
 @media (max-width: 640px) {
