@@ -4185,25 +4185,26 @@ body.lang-en .sol-ready-list li {
   font-weight: 400;
 }
 
-/* IMC partnership seal strip */
+/* IMC partnership seal strip — clinical blue / white */
 .sol-strip--seal {
   position: relative;
   overflow: hidden;
   padding: clamp(48px, 7vw, 88px) 0;
   background:
-    radial-gradient(ellipse 55% 50% at 50% 0%, rgba(229, 168, 35, 0.16), transparent 58%),
-    radial-gradient(circle at 12% 80%, rgba(229, 168, 35, 0.06), transparent 42%),
-    #0b0b0b;
-  border-bottom: 1px solid rgba(229, 168, 35, 0.22);
+    radial-gradient(ellipse 60% 55% at 50% -10%, rgba(26, 86, 168, 0.14), transparent 58%),
+    linear-gradient(180deg, #f4f8fc 0%, #e8f0f8 48%, #f7fbff 100%);
+  border-bottom: 1px solid rgba(26, 86, 168, 0.12);
+  color: #0f2347;
 }
 
 .sol-strip--seal::before {
   content: "";
   position: absolute;
   inset: 18px;
-  border: 1px solid rgba(229, 168, 35, 0.18);
+  border: 1px solid rgba(26, 86, 168, 0.16);
   border-radius: 28px;
   pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.2));
 }
 
 .sol-seal-head {
@@ -4216,30 +4217,25 @@ body.lang-en .sol-ready-list li {
 
 .sol-seal-crest {
   position: relative;
-  display: inline-grid;
-  place-items: center;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 16px;
-}
-
-.sol-seal-crest-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid rgba(229, 168, 35, 0.55);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 168px;
+  min-height: 108px;
+  margin-bottom: 18px;
+  padding: 16px 22px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(26, 86, 168, 0.14);
   box-shadow:
-    0 0 0 6px rgba(229, 168, 35, 0.08),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 18px 40px rgba(15, 35, 71, 0.08);
 }
 
-.sol-seal-crest-core {
-  position: relative;
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--gold-light);
+.sol-seal-logo {
+  display: block;
+  width: min(168px, 52vw);
+  height: auto;
 }
 
 .sol-seal-kicker {
@@ -4248,7 +4244,7 @@ body.lang-en .sol-ready-list li {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(245, 200, 77, 0.9);
+  color: #1a56a8;
 }
 
 .sol-seal-title {
@@ -4258,7 +4254,7 @@ body.lang-en .sol-ready-list li {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.03em;
-  color: #fff;
+  color: #0f2347;
 }
 
 .sol-seal-lead {
@@ -4266,7 +4262,7 @@ body.lang-en .sol-ready-list li {
   max-width: 38rem;
   font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(15, 35, 71, 0.72);
 }
 
 .sol-seal-grid {
@@ -4289,25 +4285,32 @@ body.lang-en .sol-ready-list li {
   margin: 0 auto 14px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1), transparent 45%),
-    linear-gradient(160deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 2px solid rgba(229, 168, 35, 0.55);
+    radial-gradient(circle at 35% 28%, #ffffff 0%, #f3f8fd 55%, #e4eef8 100%);
+  border: 2px solid rgba(26, 86, 168, 0.28);
   box-shadow:
-    0 0 0 7px rgba(229, 168, 35, 0.08),
-    0 16px 36px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 0 0 7px rgba(26, 86, 168, 0.06),
+    0 14px 30px rgba(15, 35, 71, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 .sol-seal-medal strong {
   margin: 0;
   font-size: clamp(26px, 3.4vw, 34px);
-  color: var(--gold-light);
+  color: #1a56a8;
   letter-spacing: -0.03em;
 }
 
-.sol-seal-medal--brand strong {
-  font-size: clamp(20px, 2.6vw, 26px);
-  letter-spacing: 0.06em;
+.sol-seal-medal--brand {
+  width: clamp(118px, 18vw, 148px);
+  height: clamp(118px, 18vw, 148px);
+  padding: 16px;
+  background: #fff;
+}
+
+.sol-seal-medal--brand img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .sol-seal-medal--rise strong {
@@ -4320,7 +4323,7 @@ body.lang-en .sol-ready-list li {
   margin-inline: auto;
   font-size: 12.5px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(15, 35, 71, 0.68);
 }
 
 html[dir="rtl"] .sol-seal-title,
