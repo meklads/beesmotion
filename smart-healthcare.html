@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v2";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Hospital Experience | Bees Motion × Tasami</title>
+    <meta name="description" content="Interactive patient journey systems, smart check-in, digital navigation, and AI-assisted hospital information — through the Bees Motion ecosystem with Tasami." />
+    <link rel="canonical" href="https://beesmotion.com/" />
+    <link rel="icon" href="assets/img/bees-motion-favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260817a" />
+  </head>
+  <body class="lang-en page-sol page-smart">
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion">
+          <img src="assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html#creative" data-i18n="navProduction">Creative</a>
+          <a href="index.html#services" data-i18n="navServices">Services</a>
+          <a href="index.html#smart" data-i18n="navSmart">Smart systems</a>
+          <a href="case-study.html" data-i18n="navCase">Case Study</a>
+          <a href="index.html#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
+          </div>
+          <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="ctaNav">Start a project</a>
+          <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="index.html#creative" data-i18n="navProduction">Creative</a>
+      <a href="index.html#services" data-i18n="navServices">Services</a>
+      <a href="index.html#smart" data-i18n="navSmart">Smart systems</a>
+      <a href="case-study.html" data-i18n="navCase">Case Study</a>
+      <a href="index.html#contact" data-i18n="navContact">Contact</a>
+      <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="ctaNav">Start a project</a>
+    </nav>
+
+    <main id="main">
+      <section class="bm-hero bm-hero--case">
+        <div class="container bm-hero-wrap">
+          <div class="bm-hero-split reveal">
+            <div class="bm-hero-copy">
+              <p class="bm-hero-crumb"><a href="index.html#smart" data-i18n="smartBack">← Smart systems</a></p>
+              <span class="bm-eyebrow" data-i18n="hcTag">Healthcare · Smart experience</span>
+              <h1 class="font-headline-xl">
+                <span class="brand-mark brand-mark--compact" dir="ltr">Bees Motion</span>
+                <strong class="bm-hero-em" data-i18n="hcTitle">Smart hospital experience that improves the patient journey</strong>
+              </h1>
+              <p class="bm-hero-sub" data-i18n="hcSub">Intelligent hospital environments that reduce stress, clarify every step, and generate actionable journey data — delivered with Tasami inside the Bees Motion ecosystem.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="hcCta">Request a consultation</a>
+                <a class="btn btn-pill btn-outline-dark" href="https://www.tasamify.com/healthcare" target="_blank" rel="noopener" data-i18n="hcTasami">View on Tasami</a>
+              </div>
+              <p class="hero-proof" data-i18n="hcProof">Interactive systems · Patient journey · Digital navigation · AI information</p>
+            </div>
+            <div class="bm-hero-video">
+              <div class="smart-hero-panel">
+                <p class="smart-hero-kicker" data-i18n="hcHeroKicker">Smart Hospital</p>
+                <h2 data-i18n="hcHeroPanel">Digital screens + patient interface</h2>
+                <p data-i18n="hcHeroPanelBody">From entry to departure: guidance, check-in, and answers in one coherent experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="smart-band">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="hcChalTag">The challenge</p>
+            <h2 class="sol-h2" data-i18n="hcChalTitle">The reality of patient experience today</h2>
+          </div>
+          <div class="smart-grid smart-grid--4">
+            <article class="smart-card reveal"><h3 data-i18n="hcC1t">Patient confusion</h3><p data-i18n="hcC1d">Unclear wayfinding creates stress and wastes time for patients and families.</p></article>
+            <article class="smart-card reveal"><h3 data-i18n="hcC2t">No structured journey</h3><p data-i18n="hcC2d">Patients do not know what to expect at each step, which raises anxiety.</p></article>
+            <article class="smart-card reveal"><h3 data-i18n="hcC3t">No journey data</h3><p data-i18n="hcC3d">Hospitals lack visibility into movement paths and friction points.</p></article>
+            <article class="smart-card reveal"><h3 data-i18n="hcC4t">Operational drag</h3><p data-i18n="hcC4d">Staff spend too much time guiding and answering questions that can be automated.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="smart-band smart-band--soft">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="hcSolTag">What we build</p>
+            <h2 class="sol-h2" data-i18n="hcSolTitle">Systems inside your hospital</h2>
+            <p class="sol-body" data-i18n="hcSolSub">Interactive digital systems designed for clarity, calm, and measurable experience improvement.</p>
+          </div>
+          <div class="smart-grid smart-grid--2">
+            <article class="smart-feature reveal"><span class="smart-feature-num">01</span><h3 data-i18n="hcF1t">Interactive patient journey</h3><p data-i18n="hcF1d">Interactive maps and intelligent guidance from entry to departure.</p></article>
+            <article class="smart-feature reveal"><span class="smart-feature-num">02</span><h3 data-i18n="hcF2t">Smart check-in</h3><p data-i18n="hcF2d">Self-service kiosks with Arabic/English interface that reduce waiting and improve first impressions.</p></article>
+            <article class="smart-feature reveal"><span class="smart-feature-num">03</span><h3 data-i18n="hcF3t">Digital navigation</h3><p data-i18n="hcF3d">Smart directional screens at key points so patients reach destinations with confidence.</p></article>
+            <article class="smart-feature reveal"><span class="smart-feature-num">04</span><h3 data-i18n="hcF4t">AI-assisted information</h3><p data-i18n="hcF4d">An AI assistant for services, appointments, and procedure questions.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="smart-band">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="hcDataTag">Data value</p>
+            <h2 class="sol-h2" data-i18n="hcDataTitle">Actionable intelligence from the journey</h2>
+          </div>
+          <div class="smart-grid smart-grid--4">
+            <article class="smart-card reveal"><h3 data-i18n="hcD1t">Behavior insights</h3><p data-i18n="hcD1d">Where patients stop, what they read, and where confusion appears.</p></article>
+            <article class="smart-card reveal"><h3 data-i18n="hcD2t">Journey tracking</h3><p data-i18n="hcD2d">Paths from entry to exit with timings and critical points.</p></article>
+            <article class="smart-card reveal"><h3 data-i18n="hcD3t">Service optimization</h3><p data-i18n="hcD3d">Bottlenecks and workflow opportunities become visible.</p></article>
+            <article class="smart-card reveal"><h3 data-i18n="hcD4t">Experience metrics</h3><p data-i18n="hcD4d">Satisfaction and experience quality tracked for evidence-based decisions.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="smart-band smart-band--ink">
+        <div class="container">
+          <div class="sol-section-head reveal">
+            <p class="sol-eyebrow" data-i18n="hcImpTag">Impact</p>
+            <h2 class="sol-h2" data-i18n="hcImpTitle">What changes in your hospital</h2>
+          </div>
+          <div class="smart-impact">
+            <div class="reveal"><strong data-i18n="hcI1t">Less stress</strong><span data-i18n="hcI1d">Clear information reduces waiting anxiety.</span></div>
+            <div class="reveal"><strong data-i18n="hcI2t">Higher satisfaction</strong><span data-i18n="hcI2d">A smoother, more measured healthcare experience.</span></div>
+            <div class="reveal"><strong data-i18n="hcI3t">Greater efficiency</strong><span data-i18n="hcI3d">Less time lost in manual guidance.</span></div>
+            <div class="reveal"><strong data-i18n="hcI4t">Data-driven decisions</strong><span data-i18n="hcI4d">Leadership improves services from real journey data.</span></div>
+          </div>
+          <p class="smart-note reveal" data-i18n="hcRef">Execution reference available through Tasami, including hospital smart-experience deployments such as International Medical Center in Jeddah.</p>
+        </div>
+      </section>
+
+      <section class="sol-close">
+        <div class="container sol-close-inner reveal">
+          <h2 class="sol-h2" data-i18n="hcCloseTitle">Transform your hospital’s patient experience</h2>
+          <p class="sol-body" data-i18n="hcCloseBody">Bees Motion connects marketing and creative content with Tasami smart systems — from concept to operation, under one ecosystem conversation.</p>
+          <div class="sol-hero-ctas">
+            <a class="btn btn-pill btn-on-light" href="index.html#contact" data-i18n="hcCta">Request a consultation</a>
+            <a class="btn btn-pill btn-outline-dark" href="ai-systems.html" data-i18n="hcNextAi">Explore AI systems</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="assets/img/bees-motion-logo-header.png" alt="Bees Motion" width="160" height="78" />
+            <p data-i18n="footerAbout">Bees Motion: digital marketing and creative content. Part of an ecosystem with Graphics House and Tasami.</p>
+          </div>
+          <div>
+            <strong data-i18n="footerLinks">Links</strong>
+            <a href="index.html#services" data-i18n="navServices">Services</a>
+            <a href="index.html#smart" data-i18n="navSmart">Smart systems</a>
+            <a href="case-study.html" data-i18n="navCase">Case Study</a>
+            <a href="https://www.tasamify.com/" target="_blank" rel="noopener">Tasami</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Bees Motion · <span data-i18n="footerRights">All rights reserved</span></span>
+          <a href="https://beesmotion.com">beesmotion.com</a>
+        </div>
+      </div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    <script src="assets/js/translations.js?v=20260817a"></script>
+    <script src="assets/js/app.js?v=20260817a"></script>
+  </body>
+</html>

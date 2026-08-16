@@ -8271,3 +8271,362 @@ html[dir="rtl"] .series-album-meta strong {
     --gutter: clamp(1rem, 4.5vw, 1.25rem);
   }
 }
+
+
+/* =========================================================
+   SMART SYSTEMS — Bees Motion × Tasami
+   ========================================================= */
+
+.smart-home-band {
+  padding: clamp(64px, 9vw, 110px) 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(229, 168, 35, 0.08), transparent 55%),
+    linear-gradient(180deg, #f7f8fb 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.smart-home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 28px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+.smart-home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(24px, 3.5vw, 36px);
+  border-radius: 28px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid rgba(15, 35, 71, 0.08);
+  box-shadow: 0 18px 48px rgba(15, 35, 71, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.smart-home-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(229, 168, 35, 0.45);
+  box-shadow: 0 24px 56px rgba(15, 35, 71, 0.1);
+}
+
+.smart-home-card--accent {
+  background: linear-gradient(165deg, #0f2347 0%, #1a3560 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.smart-home-card--accent p,
+.smart-home-card--accent li {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.smart-home-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.smart-home-card--accent .smart-home-kicker {
+  color: var(--gold-light);
+}
+
+.smart-home-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.smart-home-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--secondary);
+}
+
+.smart-home-card ul {
+  margin: 4px 0 8px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.smart-home-card li {
+  position: relative;
+  padding-inline-start: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(15, 35, 71, 0.72);
+}
+
+.smart-home-card li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.smart-home-card--accent li::before {
+  background: var(--gold-light);
+}
+
+.smart-home-cta {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.smart-home-card--accent .smart-home-cta {
+  color: var(--gold-light);
+}
+
+.smart-home-note {
+  margin: 28px auto 0;
+  max-width: 46rem;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.page-smart .bm-hero--case {
+  background: #f7f8fb;
+}
+
+.smart-hero-panel {
+  min-height: clamp(280px, 40vw, 420px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(229, 168, 35, 0.22), transparent 42%),
+    linear-gradient(160deg, #0f2347 0%, #1a3560 55%, #0c1a33 100%);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(15, 35, 71, 0.2);
+}
+
+.smart-hero-panel--ai {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(229, 168, 35, 0.2), transparent 40%),
+    linear-gradient(160deg, #12141a 0%, #1c2433 50%, #0f2347 100%);
+}
+
+.smart-hero-kicker {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.smart-hero-panel h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.smart-hero-panel p {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.smart-band {
+  padding: clamp(56px, 8vw, 96px) 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.smart-band--soft {
+  background: #f7f8fb;
+}
+
+.smart-band--ink {
+  background: #0f2347;
+  color: #fff;
+}
+
+.smart-band--ink .sol-eyebrow {
+  color: var(--gold-light);
+}
+
+.smart-band--ink .sol-h2,
+.smart-band--ink .sol-body {
+  color: #fff;
+}
+
+.smart-grid {
+  display: grid;
+  gap: clamp(14px, 2vw, 20px);
+  margin-top: clamp(24px, 4vw, 36px);
+}
+
+.smart-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.smart-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.smart-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.smart-card,
+.smart-feature,
+.smart-usecase {
+  padding: clamp(18px, 2.5vw, 26px);
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(15, 35, 71, 0.08);
+  box-shadow: 0 12px 32px rgba(15, 35, 71, 0.04);
+}
+
+.smart-band--soft .smart-feature,
+.smart-band--soft .smart-usecase {
+  background: #fff;
+}
+
+.smart-card h3,
+.smart-feature h3,
+.smart-usecase h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.smart-card p,
+.smart-feature p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--secondary);
+}
+
+.smart-feature-num {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--gold-dark);
+}
+
+.smart-usecase-sector {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.smart-usecase ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.smart-usecase li {
+  position: relative;
+  padding-inline-start: 14px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--secondary);
+}
+
+.smart-usecase li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.smart-impact {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.smart-impact > div {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.smart-impact strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 17px;
+  color: var(--gold-light);
+}
+
+.smart-impact span {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.smart-note {
+  margin: 28px 0 0;
+  max-width: 46rem;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+html[dir="rtl"] .smart-home-card h3,
+html[dir="rtl"] .smart-card h3,
+html[dir="rtl"] .smart-feature h3,
+html[dir="rtl"] .smart-usecase h3,
+html[dir="rtl"] .smart-hero-panel h2 {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
+}
+
+@media (max-width: 900px) {
+  .smart-home-grid,
+  .smart-grid--2,
+  .smart-grid--3,
+  .smart-grid--4,
+  .smart-impact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .smart-grid--4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .smart-impact {
+    grid-template-columns: 1fr 1fr;
+  }
+}
