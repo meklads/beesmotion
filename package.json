@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "Official site for Bees Motion — a specialized marketing, content and AI solutions company within Tasami Group.",
+  "description": "Official site for Bees Motion — a digital marketing agency built around creative production within Tasami Group.",
   "scripts": {
     "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000}",
     "deploy": "wrangler pages deploy . --project-name=beesmotion",
