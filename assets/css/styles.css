@@ -8630,3 +8630,14 @@ html[dir="rtl"] .smart-hero-panel h2 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+.footer-grid [data-i18n-html="footerAbout"] a,
+.site-footer [data-i18n-html="footerAbout"] a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.site-footer [data-i18n-html="footerAbout"] a:hover {
+  color: #fff;
+}
