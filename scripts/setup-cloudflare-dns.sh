@@ -31,4 +31,7 @@ add_record CNAME "@" "$PAGES_TARGET" true | python3 -c "import sys,json; d=json.
 echo "Creating CNAME www → ${PAGES_TARGET} (proxied)…"
 add_record CNAME "www" "$PAGES_TARGET" true | python3 -c "import sys,json; d=json.load(sys.stdin); print('www', d.get('success'), d.get('errors'))"
 
-echo "Done. Wait 2–5 minutes, then open https://beesmotion.com/"
+echo "Creating CNAME ai → ${PAGES_TARGET} (proxied)…"
+add_record CNAME "ai" "$PAGES_TARGET" true | python3 -c "import sys,json; d=json.load(sys.stdin); print('ai', d.get('success'), d.get('errors'))"
+
+echo "Done. Wait 2–5 minutes, then open https://beesmotion.com/ and https://ai.beesmotion.com/"

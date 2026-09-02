@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-ai-lang";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "ar";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "ar";
+          document.documentElement.dir = "rtl";
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>محرك المحتوى بالذكاء الاصطناعي | بيزموشن</title>
+    <meta
+      name="description"
+      content="محرك محتوى Done-For-You من بيزموشن: نحوّل أصولك إلى Reels وصفحات هبوط وعملاء — عقاري الآن، وطبي وصناعي وتجاري قريبًا. ليست أداة DIY."
+    />
+    <meta property="og:title" content="AI Content Engine | Bees Motion" />
+    <meta property="og:description" content="Done-For-You AI content engines: assets → Reels → landing pages → leads. Real estate live; healthcare, industrial, commercial next." />
+    <meta property="og:url" content="https://beesmotion.com/ai/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://beesmotion.com/assets/img/bees-motion-logo.png" />
+    <link rel="canonical" href="https://beesmotion.com/ai/" />
+    <link rel="icon" href="../assets/img/bees-motion-favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260903b" />
+    <link rel="stylesheet" href="../assets/css/rce.css?v=20260903b" />
+  </head>
+  <body class="lang-ar page-rce page-ai">
+    <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion" style="display: flex; align-items: center; gap: 0">
+          <img src="../assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
+          <span class="rce-brand-sub" data-i18n="brandSub">محرك المحتوى بالذكاء الاصطناعي</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#engines" data-i18n="navEngines">المحركات</a>
+          <a href="#how" data-i18n="navHow">كيف يعمل</a>
+          <a href="#start" data-i18n="navStart">ابدأ</a>
+          <a href="../real-estate-content-engine.html" data-i18n="navRe">العقار الآن</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="ar" class="active">AR</button>
+          </div>
+          <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">ابدأ الآن</a>
+          <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#engines" data-i18n="navEngines">المحركات</a>
+      <a href="#how" data-i18n="navHow">كيف يعمل</a>
+      <a href="#start" data-i18n="navStart">ابدأ</a>
+      <a href="../real-estate-content-engine.html" data-i18n="navRe">العقار الآن</a>
+      <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">ابدأ الآن</a>
+    </nav>
+
+    <main id="main">
+      <section class="rce-hero ai-hero">
+        <div class="container rce-hero-grid">
+          <div class="reveal">
+            <span class="svc-tag" data-i18n="heroEyebrow">بيزموشن · AI Content Engine</span>
+            <h1 data-i18n="heroTitle">محرك محتوى بالذكاء الاصطناعي… يحوّل أصولك إلى عملاء.</h1>
+            <p class="rce-hero-sub" data-i18n="heroSub">لسنا استوديو مونتاج بطيء، ولسنا أداة DIY. نحن نظام Done-For-You يحوّل الصور والمواد إلى Reels وصفحات هبوط ومسارات عملاء — بسرعة الوكالة المدعومة بالتقنية.</p>
+            <div class="rce-hero-ctas">
+              <a class="btn btn-pill btn-on-light" href="../real-estate-content-engine.html" data-i18n="heroCta">ابدأ بمحرك العقار</a>
+              <a class="btn btn-pill btn-outline-dark" href="#start" data-i18n="heroCta2">اطلب قطاعك</a>
+            </div>
+            <div class="rce-stats" aria-label="Highlights">
+              <div class="rce-stat"><strong data-i18n="stat1v">Done-For-You</strong><span data-i18n="stat1l">نحن ننفّذ</span></div>
+              <div class="rce-stat"><strong data-i18n="stat2v">~٤٨ ساعة</strong><span data-i18n="stat2l">أول تسليم عقاري</span></div>
+              <div class="rce-stat"><strong data-i18n="stat3v">Leads</strong><span data-i18n="stat3l">ليس مشاهدات فقط</span></div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="ai-launchpad">
+              <div class="ai-launchpad-kicker" data-i18n="padKicker">نقطة الانطلاق</div>
+              <h2 data-i18n="padTitle">العقار حيّ الآن</h2>
+              <p data-i18n="padBody">محرك العملاء العقاريين بالذكاء الاصطناعي: صور ثابتة → Reels → صفحة هبوط → واتساب / نموذج.</p>
+              <ul class="ai-launchpad-list">
+                <li data-i18n="pad1">Starter للدخول السريع</li>
+                <li data-i18n="pad2">PRO للاشتراك الشهري</li>
+                <li data-i18n="pad3">Campaign للمشاريع الكبرى</li>
+              </ul>
+              <a class="btn btn-pill btn-on-light" href="../real-estate-content-engine.html" data-i18n="padCta">افتح محرك العقار ←</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band-paper-rce" style="padding: 4rem 0" id="position">
+        <div class="container">
+          <div class="section-head reveal" style="max-width: 42rem">
+            <span class="svc-tag" data-i18n="posTag">التموضع</span>
+            <h2 class="font-headline-xl" data-i18n="posTitle">وكالة مدعومة بالتقنية — لا أداة، ولا إنتاج تقليدي فقط.</h2>
+            <p class="font-body-md" data-i18n="posSub">نمزج سرعة الذكاء الاصطناعي بخبرة الوكالة: صياغة، تحريك، مراجعة صدق بصري، وربط بالمبيعات.</p>
+          </div>
+          <div class="rce-diff reveal">
+            <article class="rce-diff-card">
+              <div class="kicker" data-i18n="v1k">Speed</div>
+              <h3 data-i18n="v1t">سرعة فائقة</h3>
+              <p data-i18n="v1d">من أصول جامدة إلى سلسلة محتوى وصفحة هبوط خلال أيام — لا أسابيع تصوير ومونتاج تقليدي.</p>
+            </article>
+            <article class="rce-diff-card rce-diff-card--accent">
+              <div class="kicker" data-i18n="v2k">Convenience</div>
+              <h3 data-i18n="v2t">صفر مجهود تشغيلي</h3>
+              <p data-i18n="v2d">أرسل المواد. نحن نتكفّل بالصياغة والتحريك والمونتاج والربط التقني — Done-For-You بالكامل.</p>
+            </article>
+            <article class="rce-diff-card">
+              <div class="kicker" data-i18n="v3k">Leads</div>
+              <h3 data-i18n="v3t">ربط مباشر بالمبيعات</h3>
+              <p data-i18n="v3d">المحتوى مصمَّم ليقود إلى صفحة هبوط ثم واتساب أو نموذج — وليس مشاهدات فارغة.</p>
+            </article>
+            <article class="rce-diff-card">
+              <div class="kicker" data-i18n="v4k">Honesty</div>
+              <h3 data-i18n="v4t">صدق بصري</h3>
+              <p data-i18n="v4d">الذكاء الاصطناعي يُخرج ويُحسّن الواقع — دون اختراع غرف أو تشطيبات وهمية تحرث الثقة.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="engines" class="band-mist-rce" style="padding: 4.5rem 0">
+        <div class="container">
+          <div class="section-head reveal" style="max-width: 40rem">
+            <span class="svc-tag" data-i18n="engTag">المحركات القطاعية</span>
+            <h2 class="font-headline-xl" data-i18n="engTitle">نفس المنهجية. لغة كل قطاع.</h2>
+            <p class="font-body-md" data-i18n="engSub">نبدأ من العقار كرأس حربة، ثم نوسّع لنفس النظام في الطب والصناعة والتجارة.</p>
+          </div>
+          <div class="ai-engines reveal">
+            <a class="ai-engine ai-engine--live" href="../real-estate-content-engine.html">
+              <span class="ai-engine-status" data-i18n="engLive">متاح الآن</span>
+              <h3 data-i18n="eng1t">عقاري</h3>
+              <p data-i18n="eng1d">محرك عملاء عقاريين: صور الوحدة → Reels → Landing → Leads خلال ~٤٨ ساعة.</p>
+              <span class="ai-engine-cta" data-i18n="eng1c">ادخل المحرك ←</span>
+            </a>
+            <article class="ai-engine">
+              <span class="ai-engine-status ai-engine-status--soon" data-i18n="engSoon">قريبًا</span>
+              <h3 data-i18n="eng2t">طبي / رعاية صحية</h3>
+              <p data-i18n="eng2d">محتوى تثقيفي وحملات طبية قصيرة مع ضوابط ثقة وصدق بصري أعلى.</p>
+            </article>
+            <article class="ai-engine">
+              <span class="ai-engine-status ai-engine-status--soon" data-i18n="engSoon">قريبًا</span>
+              <h3 data-i18n="eng3t">صناعي / B2B</h3>
+              <p data-i18n="eng3d">منتجات ومصانع ومعدات → فيديوهات قصيرة تشرح القيمة للمشترين.</p>
+            </article>
+            <article class="ai-engine">
+              <span class="ai-engine-status ai-engine-status--soon" data-i18n="engSoon">قريبًا</span>
+              <h3 data-i18n="eng4t">تجاري / تجزئة</h3>
+              <p data-i18n="eng4d">فروع وعروض وسلاسل → محتوى دائم السرعة للحملات والمواقع.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="band-paper-rce" style="padding: 4.5rem 0">
+        <div class="container">
+          <div class="section-head reveal" style="max-width: 40rem">
+            <span class="svc-tag" data-i18n="howTag">كيف يعمل</span>
+            <h2 class="font-headline-xl" data-i18n="howTitle">أصول → محتوى → صفحة → عملاء</h2>
+          </div>
+          <div class="rce-steps reveal">
+            <article class="rce-step"><div class="num">01</div><h3 data-i18n="h1t">أرسل الأصول</h3><p data-i18n="h1d">صور، مواد، موجز بسيط عن العرض والهدف.</p></article>
+            <article class="rce-step"><div class="num">02</div><h3 data-i18n="h2t">ننتج لك</h3><p data-i18n="h2d">زوايا، تحريك، صياغة، مراجعة صدق بصري.</p></article>
+            <article class="rce-step"><div class="num">03</div><h3 data-i18n="h3t">نربط التحويل</h3><p data-i18n="h3d">CTA، صفحة هبوط عند الحاجة، مسار واتساب.</p></article>
+            <article class="rce-step"><div class="num">04</div><h3 data-i18n="h4t">توسّع أو تصعيد</h3><p data-i18n="h4d">PRO شهريًا — أو Graphics House للـ CGI المتقدم.</p></article>
+          </div>
+          <p class="ai-gh-note reveal" data-i18n="ghNote">صمام الأمان: المشاريع التي تحتاج CGI أو 3D معماريًا متقدمًا تُحوَّل بسلاسة إلى الشركة الشقيقة Graphics House.</p>
+        </div>
+      </section>
+
+      <section id="start" class="band-cream-rce" style="padding: 4.5rem 0 5rem">
+        <div class="container rce-form-wrap">
+          <div class="reveal">
+            <span class="svc-tag" data-i18n="formTag">ابدأ الآن</span>
+            <h2 class="font-headline-xl" data-i18n="formTitle">اختر محركك أو اطلب قطاعك.</h2>
+            <p class="font-body-md" data-i18n="formSub">العقار جاهز للطلب فورًا. القطاعات الأخرى تُسجَّل في قائمة الإطلاق المبكر.</p>
+            <ul class="rce-bullets">
+              <li data-i18n="formBullet1">Done-For-You — لا حاجة لتعلّم أدوات</li>
+              <li data-i18n="formBullet2">Starter ← PRO ← Campaign ← Graphics House</li>
+              <li data-i18n="formBullet3">واتساب مباشر لفريق بيزموشن</li>
+            </ul>
+            <div class="ai-quick-links">
+              <a class="btn btn-pill btn-on-light" href="../real-estate-content-engine.html#start" data-i18n="formRe">طلب محرك العقار</a>
+              <a class="btn btn-pill btn-outline-dark" href="https://wa.me/966502786513?text=%D8%B7%D9%84%D8%A8%20AI%20Content%20Engine" target="_blank" rel="noopener" data-i18n="formWa">واتساب مباشر</a>
+            </div>
+          </div>
+          <form id="aiForm" class="rce-form reveal" novalidate>
+            <div class="rce-form-grid">
+              <label><span data-i18n="labelName">الاسم</span><input name="name" required /></label>
+              <label><span data-i18n="labelPhone">الجوال (واتساب)</span><input name="phone" type="tel" required /></label>
+              <label class="full"><span data-i18n="labelCompany">الشركة / المكتب</span><input name="company" /></label>
+              <label class="full">
+                <span data-i18n="labelSector">القطاع</span>
+                <select name="sector" id="sectorSelect">
+                  <option value="real-estate" data-i18n="secRe" selected>عقاري (متاح الآن)</option>
+                  <option value="healthcare" data-i18n="secHc">طبي / رعاية صحية</option>
+                  <option value="industrial" data-i18n="secInd">صناعي / B2B</option>
+                  <option value="commercial" data-i18n="secCom">تجاري / تجزئة</option>
+                  <option value="other" data-i18n="secOther">أخرى</option>
+                </select>
+              </label>
+              <label class="full"><span data-i18n="labelNotes">ملاحظات</span><textarea name="notes" rows="3"></textarea></label>
+            </div>
+            <button type="submit" class="btn btn-pill btn-on-light" data-i18n="formCta">أرسل عبر واتساب</button>
+            <p class="rce-form-note" data-i18n="formNote">بدون عروض مطوّلة. موجز سريع ← بداية سريعة.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <a class="wa-float" href="https://wa.me/966502786513" target="_blank" rel="noopener" aria-label="WhatsApp"><span data-i18n="floatingWa">واتساب</span></a>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid" style="grid-template-columns: 1.4fr 1fr">
+          <div>
+            <img src="../assets/img/bees-motion-logo.png" alt="Bees Motion" class="footer-logo footer-logo--light" width="680" height="330" />
+            <p style="max-width: 28rem; margin-top: 0.75rem" data-i18n="footerAbout">محرك المحتوى بالذكاء الاصطناعي من بيزموشن: أصول → محتوى → عملاء. ضمن مجموعة تسامي.</p>
+          </div>
+          <div>
+            <strong style="color: #fff; display: block; margin-bottom: 12px" data-i18n="footerLinks">روابط</strong>
+            <div class="footer-links">
+              <a href="/">Bees Motion</a>
+              <a href="../real-estate-content-engine.html" data-i18n="navRe">محرك العقار</a>
+              <a href="https://3dgraphicshouse.com/" target="_blank" rel="noopener">Graphics House</a>
+              <a href="https://www.tasamify.com/" target="_blank" rel="noopener" data-i18n="footerGroup">مجموعة تسامي</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-meta">
+            <p class="footer-affiliation" data-i18n-html="footerAffHtml">شركة ضمن <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">مجموعة تسامي<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+            <span>© <span id="year"></span> Bees Motion</span>
+          </div>
+          <a href="https://beesmotion.com/ai/">beesmotion.com/ai</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var WA = "966502786513";
+        var KEY = "bm-ai-lang";
+        var I18N = {
+          ar: {
+            skip: "تخطي إلى المحتوى",
+            brandSub: "محرك المحتوى بالذكاء الاصطناعي",
+            navEngines: "المحركات",
+            navHow: "كيف يعمل",
+            navStart: "ابدأ",
+            navRe: "العقار الآن",
+            ctaNav: "ابدأ الآن",
+            heroEyebrow: "بيزموشن · AI Content Engine",
+            heroTitle: "محرك محتوى بالذكاء الاصطناعي… يحوّل أصولك إلى عملاء.",
+            heroSub: "لسنا استوديو مونتاج بطيء، ولسنا أداة DIY. نحن نظام Done-For-You يحوّل الصور والمواد إلى Reels وصفحات هبوط ومسارات عملاء — بسرعة الوكالة المدعومة بالتقنية.",
+            heroCta: "ابدأ بمحرك العقار",
+            heroCta2: "اطلب قطاعك",
+            stat1v: "Done-For-You",
+            stat1l: "نحن ننفّذ",
+            stat2v: "~٤٨ ساعة",
+            stat2l: "أول تسليم عقاري",
+            stat3v: "Leads",
+            stat3l: "ليس مشاهدات فقط",
+            padKicker: "نقطة الانطلاق",
+            padTitle: "العقار حيّ الآن",
+            padBody: "محرك العملاء العقاريين بالذكاء الاصطناعي: صور ثابتة → Reels → صفحة هبوط → واتساب / نموذج.",
+            pad1: "Starter للدخول السريع",
+            pad2: "PRO للاشتراك الشهري",
+            pad3: "Campaign للمشاريع الكبرى",
+            padCta: "افتح محرك العقار ←",
+            posTag: "التموضع",
+            posTitle: "وكالة مدعومة بالتقنية — لا أداة، ولا إنتاج تقليدي فقط.",
+            posSub: "نمزج سرعة الذكاء الاصطناعي بخبرة الوكالة: صياغة، تحريك، مراجعة صدق بصري، وربط بالمبيعات.",
+            v1k: "Speed",
+            v1t: "سرعة فائقة",
+            v1d: "من أصول جامدة إلى سلسلة محتوى وصفحة هبوط خلال أيام — لا أسابيع تصوير ومونتاج تقليدي.",
+            v2k: "Convenience",
+            v2t: "صفر مجهود تشغيلي",
+            v2d: "أرسل المواد. نحن نتكفّل بالصياغة والتحريك والمونتاج والربط التقني — Done-For-You بالكامل.",
+            v3k: "Leads",
+            v3t: "ربط مباشر بالمبيعات",
+            v3d: "المحتوى مصمَّم ليقود إلى صفحة هبوط ثم واتساب أو نموذج — وليس مشاهدات فارغة.",
+            v4k: "Honesty",
+            v4t: "صدق بصري",
+            v4d: "الذكاء الاصطناعي يُخرج ويُحسّن الواقع — دون اختراع غرف أو تشطيبات وهمية تحرث الثقة.",
+            engTag: "المحركات القطاعية",
+            engTitle: "نفس المنهجية. لغة كل قطاع.",
+            engSub: "نبدأ من العقار كرأس حربة، ثم نوسّع لنفس النظام في الطب والصناعة والتجارة.",
+            engLive: "متاح الآن",
+            engSoon: "قريبًا",
+            eng1t: "عقاري",
+            eng1d: "محرك عملاء عقاريين: صور الوحدة → Reels → Landing → Leads خلال ~٤٨ ساعة.",
+            eng1c: "ادخل المحرك ←",
+            eng2t: "طبي / رعاية صحية",
+            eng2d: "محتوى تثقيفي وحملات طبية قصيرة مع ضوابط ثقة وصدق بصري أعلى.",
+            eng3t: "صناعي / B2B",
+            eng3d: "منتجات ومصانع ومعدات → فيديوهات قصيرة تشرح القيمة للمشترين.",
+            eng4t: "تجاري / تجزئة",
+            eng4d: "فروع وعروض وسلاسل → محتوى دائم السرعة للحملات والمواقع.",
+            howTag: "كيف يعمل",
+            howTitle: "أصول → محتوى → صفحة → عملاء",
+            h1t: "أرسل الأصول",
+            h1d: "صور، مواد، موجز بسيط عن العرض والهدف.",
+            h2t: "ننتج لك",
+            h2d: "زوايا، تحريك، صياغة، مراجعة صدق بصري.",
+            h3t: "نربط التحويل",
+            h3d: "CTA، صفحة هبوط عند الحاجة، مسار واتساب.",
+            h4t: "توسّع أو تصعيد",
+            h4d: "PRO شهريًا — أو Graphics House للـ CGI المتقدم.",
+            ghNote: "صمام الأمان: المشاريع التي تحتاج CGI أو 3D معماريًا متقدمًا تُحوَّل بسلاسة إلى الشركة الشقيقة Graphics House.",
+            formTag: "ابدأ الآن",
+            formTitle: "اختر محركك أو اطلب قطاعك.",
+            formSub: "العقار جاهز للطلب فورًا. القطاعات الأخرى تُسجَّل في قائمة الإطلاق المبكر.",
+            formBullet1: "Done-For-You — لا حاجة لتعلّم أدوات",
+            formBullet2: "Starter ← PRO ← Campaign ← Graphics House",
+            formBullet3: "واتساب مباشر لفريق بيزموشن",
+            formRe: "طلب محرك العقار",
+            formWa: "واتساب مباشر",
+            labelName: "الاسم",
+            labelPhone: "الجوال (واتساب)",
+            labelCompany: "الشركة / المكتب",
+            labelSector: "القطاع",
+            secRe: "عقاري (متاح الآن)",
+            secHc: "طبي / رعاية صحية",
+            secInd: "صناعي / B2B",
+            secCom: "تجاري / تجزئة",
+            secOther: "أخرى",
+            labelNotes: "ملاحظات",
+            formCta: "أرسل عبر واتساب",
+            formNote: "بدون عروض مطوّلة. موجز سريع ← بداية سريعة.",
+            floatingWa: "واتساب",
+            footerAbout: "محرك المحتوى بالذكاء الاصطناعي من بيزموشن: أصول → محتوى → عملاء. ضمن مجموعة تسامي.",
+            footerLinks: "روابط",
+            footerGroup: "مجموعة تسامي",
+            footerAffHtml: 'شركة ضمن <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">مجموعة تسامي<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>',
+            metaTitle: "محرك المحتوى بالذكاء الاصطناعي | بيزموشن",
+            metaDesc: "محرك محتوى Done-For-You من بيزموشن: نحوّل أصولك إلى Reels وصفحات هبوط وعملاء — عقاري الآن، وطبي وصناعي وتجاري قريبًا.",
+            waPrefix: "طلب AI Content Engine",
+          },
+          en: {
+            skip: "Skip to content",
+            brandSub: "AI Content Engine",
+            navEngines: "Engines",
+            navHow: "How it works",
+            navStart: "Start",
+            navRe: "Real estate now",
+            ctaNav: "Get started",
+            heroEyebrow: "Bees Motion · AI Content Engine",
+            heroTitle: "An AI content engine that turns your assets into leads.",
+            heroSub: "Not a slow editing studio. Not a DIY tool. A Done-For-You system that turns photos and assets into Reels, landing pages, and lead pathways — at tech-enabled agency speed.",
+            heroCta: "Start with Real Estate",
+            heroCta2: "Request your sector",
+            stat1v: "Done-For-You",
+            stat1l: "We produce",
+            stat2v: "~48 hrs",
+            stat2l: "First RE delivery",
+            stat3v: "Leads",
+            stat3l: "Not empty views",
+            padKicker: "Launchpad",
+            padTitle: "Real estate is live",
+            padBody: "AI-powered real estate lead engine: still photos → Reels → landing page → WhatsApp / form.",
+            pad1: "Starter for fast entry",
+            pad2: "PRO for monthly subscription",
+            pad3: "Campaign for larger projects",
+            padCta: "Open Real Estate Engine →",
+            posTag: "Positioning",
+            posTitle: "A tech-enabled agency — not a tool, not traditional production alone.",
+            posSub: "We blend AI speed with agency craft: copy, motion, visual honesty checks, and sales linkage.",
+            v1k: "Speed",
+            v1t: "Extreme speed",
+            v1d: "From static assets to a content series and landing page in days — not weeks of traditional shoot and edit.",
+            v2k: "Convenience",
+            v2t: "Zero operational load",
+            v2d: "Send assets. We handle copy, motion, editing, and technical linking — fully Done-For-You.",
+            v3k: "Leads",
+            v3t: "Tied to sales",
+            v3d: "Content is built to drive a landing page, then WhatsApp or a form — not empty views.",
+            v4k: "Honesty",
+            v4t: "Visual honesty",
+            v4d: "AI enhances and outputs reality — never invents rooms or finishes that destroy trust.",
+            engTag: "Vertical engines",
+            engTitle: "One method. Sector language.",
+            engSub: "We lead with real estate as the wedge, then expand the same system into healthcare, industrial, and commercial.",
+            engLive: "Live now",
+            engSoon: "Coming soon",
+            eng1t: "Real estate",
+            eng1d: "Lead engine: unit photos → Reels → Landing → Leads in ~48 hours.",
+            eng1c: "Enter engine →",
+            eng2t: "Healthcare",
+            eng2d: "Education and medical short-form with higher trust and visual-honesty controls.",
+            eng3t: "Industrial / B2B",
+            eng3d: "Products, plants, and equipment → short videos that sell value to buyers.",
+            eng4t: "Commercial / retail",
+            eng4d: "Branches, offers, and chains → always-on content for campaigns and locations.",
+            howTag: "How it works",
+            howTitle: "Assets → content → page → leads",
+            h1t: "Send assets",
+            h1d: "Photos, materials, and a simple brief on offer and goal.",
+            h2t: "We produce",
+            h2d: "Angles, motion, copy, and visual honesty review.",
+            h3t: "We connect conversion",
+            h3d: "CTA, landing page when needed, WhatsApp path.",
+            h4t: "Scale or escalate",
+            h4d: "Monthly PRO — or Graphics House for advanced CGI.",
+            ghNote: "Safety valve: projects that need advanced CGI or architectural 3D transfer seamlessly to sister company Graphics House.",
+            formTag: "Get started",
+            formTitle: "Choose your engine or request your sector.",
+            formSub: "Real estate is ready to order now. Other sectors join the early-access list.",
+            formBullet1: "Done-For-You — no tools to learn",
+            formBullet2: "Starter → PRO → Campaign → Graphics House",
+            formBullet3: "Direct WhatsApp to Bees Motion",
+            formRe: "Order Real Estate Engine",
+            formWa: "WhatsApp now",
+            labelName: "Name",
+            labelPhone: "Phone (WhatsApp)",
+            labelCompany: "Company / Office",
+            labelSector: "Sector",
+            secRe: "Real estate (live now)",
+            secHc: "Healthcare",
+            secInd: "Industrial / B2B",
+            secCom: "Commercial / retail",
+            secOther: "Other",
+            labelNotes: "Notes",
+            formCta: "Send via WhatsApp",
+            formNote: "No long proposals. Fast brief → fast start.",
+            floatingWa: "WhatsApp",
+            footerAbout: "Bees Motion AI Content Engine: assets → content → leads. Within Tasami Group.",
+            footerLinks: "Links",
+            footerGroup: "Tasami Group",
+            footerAffHtml: 'A company within <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">Tasami Group<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>',
+            metaTitle: "AI Content Engine | Bees Motion",
+            metaDesc: "Done-For-You AI content engines from Bees Motion: assets to Reels, landing pages, and leads — real estate live; healthcare, industrial, commercial next.",
+            waPrefix: "AI Content Engine inquiry",
+          },
+        };
+
+        function getLang() {
+          try {
+            var lang = localStorage.getItem(KEY);
+            return lang === "en" || lang === "ar" ? lang : "ar";
+          } catch (e) {
+            return "ar";
+          }
+        }
+
+        function applyLang(lang) {
+          var dict = I18N[lang] || I18N.ar;
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+          document.body.classList.toggle("lang-ar", lang === "ar");
+          document.body.classList.toggle("lang-en", lang === "en");
+          document.querySelectorAll("[data-i18n]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n");
+            if (dict[key] != null) el.textContent = dict[key];
+          });
+          document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n-html");
+            if (dict[key] != null) el.innerHTML = dict[key];
+          });
+          document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+            btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+          });
+          if (dict.metaTitle) document.title = dict.metaTitle;
+          var meta = document.querySelector('meta[name="description"]');
+          if (meta && dict.metaDesc) meta.setAttribute("content", dict.metaDesc);
+          try {
+            localStorage.setItem(KEY, lang);
+          } catch (e) {}
+        }
+
+        document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            applyLang(btn.getAttribute("data-lang"));
+          });
+        });
+
+        var menuBtn = document.getElementById("menuBtn");
+        var mobileNav = document.getElementById("mobileNav");
+        if (menuBtn && mobileNav) {
+          menuBtn.addEventListener("click", function () {
+            var open = !mobileNav.classList.contains("open");
+            mobileNav.classList.toggle("open", open);
+            menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+            document.body.classList.toggle("nav-open", open);
+          });
+          mobileNav.querySelectorAll("a").forEach(function (a) {
+            a.addEventListener("click", function () {
+              mobileNav.classList.remove("open");
+              menuBtn.setAttribute("aria-expanded", "false");
+              document.body.classList.remove("nav-open");
+            });
+          });
+        }
+
+        var header = document.querySelector(".site-header");
+        if (header) {
+          var onScroll = function () {
+            header.classList.toggle("scrolled", window.scrollY > 8);
+          };
+          window.addEventListener("scroll", onScroll, { passive: true });
+          onScroll();
+        }
+
+        document.querySelectorAll(".reveal").forEach(function (el) {
+          el.classList.add("visible");
+        });
+
+        document.getElementById("aiForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var lang = getLang();
+          var dict = I18N[lang] || I18N.ar;
+          var fd = new FormData(e.target);
+          var lines = [
+            dict.waPrefix,
+            "",
+            (lang === "ar" ? "الاسم: " : "Name: ") + (fd.get("name") || ""),
+            (lang === "ar" ? "الجوال: " : "Phone: ") + (fd.get("phone") || ""),
+            (lang === "ar" ? "الشركة: " : "Company: ") + (fd.get("company") || ""),
+            (lang === "ar" ? "القطاع: " : "Sector: ") + (fd.get("sector") || ""),
+            (lang === "ar" ? "ملاحظات: " : "Notes: ") + (fd.get("notes") || ""),
+          ];
+          var sector = fd.get("sector");
+          if (sector === "real-estate") {
+            window.location.href = "../real-estate-content-engine.html#start";
+            return;
+          }
+          window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+        applyLang(getLang());
+      })();
+    </script>
+  </body>
+</html>

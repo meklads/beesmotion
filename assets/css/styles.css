@@ -8344,6 +8344,16 @@ html[dir="rtl"] .series-album-meta strong {
   margin-top: clamp(28px, 4vw, 40px);
 }
 
+.smart-home-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 980px) {
+  .smart-home-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .smart-home-card {
   display: flex;
   flex-direction: column;

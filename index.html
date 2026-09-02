@@ -39,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260817h" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260903b" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -67,6 +67,7 @@
                 <nav class="nav-desktop" aria-label="Primary">
           <a href="#creative" data-i18n="navProduction">Creative</a>
           <a href="#services" data-i18n="navServices">Services</a>
+          <a href="/ai/" data-i18n="navAiEngine">AI Engine</a>
           <a href="#smart" data-i18n="navSmart">Smart systems</a>
           <a href="#systems" data-i18n="navIndustries">Industries</a>
           <a href="case-study.html" data-i18n="navSolutions">Case study</a>
@@ -88,6 +89,7 @@
         <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
       <a href="#creative" data-i18n="navProduction">Creative</a>
       <a href="#services" data-i18n="navServices">Services</a>
+      <a href="/ai/" data-i18n="navAiEngine">AI Engine</a>
       <a href="#smart" data-i18n="navSmart">Smart systems</a>
       <a href="#systems" data-i18n="navIndustries">Industries</a>
       <a href="case-study.html" data-i18n="navSolutions">Case study</a>
@@ -274,7 +276,19 @@
             <h2 class="font-headline-xl" data-i18n="smartTitle">When marketing meets smart experience</h2>
             <p class="font-body-md" data-i18n="smartSub">Beyond campaigns and content: interactive hospital systems and AI experience platforms — part of Bees Motion’s marketing, content, and AI solutions within Tasami Group.</p>
           </div>
-          <div class="smart-home-grid">
+          <div class="smart-home-grid smart-home-grid--3">
+            <a class="smart-home-card smart-home-card--accent reveal" href="/ai/">
+              <span class="smart-home-kicker" data-i18n="engineTag">AI · Content Engine</span>
+              <h3 data-i18n="smartEngineTitle">AI Content Engine</h3>
+              <p data-i18n="smartEngineBody">Done-For-You engines that turn assets into Reels, landing pages, and leads — real estate live now; healthcare, industrial, and commercial next.</p>
+              <ul>
+                <li data-i18n="engineF1">Real estate lead engine (live)</li>
+                <li data-i18n="engineF2">Landing pages + WhatsApp paths</li>
+                <li data-i18n="engineF3">Starter → PRO subscription</li>
+                <li data-i18n="engineF4">Escalate CGI to Graphics House</li>
+              </ul>
+              <span class="smart-home-cta" data-i18n="smartEngineCta">Open AI Content Engine →</span>
+            </a>
             <a class="smart-home-card reveal" href="smart-healthcare.html">
               <span class="smart-home-kicker" data-i18n="hcTag">Healthcare · Smart experience</span>
               <h3 data-i18n="smartHcTitle">Smart hospital experience</h3>
@@ -287,7 +301,7 @@
               </ul>
               <span class="smart-home-cta" data-i18n="smartHcCta">Explore healthcare systems →</span>
             </a>
-            <a class="smart-home-card smart-home-card--accent reveal" href="ai-systems.html">
+            <a class="smart-home-card reveal" href="ai-systems.html">
               <span class="smart-home-kicker" data-i18n="aiTag">AI · Experience systems</span>
               <h3 data-i18n="smartAiTitle">AI experience systems</h3>
               <p data-i18n="smartAiBody">AI sales agents, call bots, customer automation, and knowledge assistants for healthcare, real estate, and enterprise.</p>
@@ -753,6 +767,7 @@
                     <option value="creative" data-i18n="needCreative">Creative content</option>
                     <option value="both" data-i18n="needBoth">Marketing + creative</option>
                     <option value="smart-hc" data-i18n="needSmartHc">Smart hospital experience</option>
+                    <option value="content-engine" data-i18n="needContentEngine">AI Content Engine</option>
                     <option value="ai-systems" data-i18n="needAi">AI experience systems</option>
                     <option value="agency" data-i18n="needAgency">Agency partnership</option>
                     <option value="unsure" data-i18n="needUnsure">Not sure yet</option>
@@ -820,6 +835,7 @@
             <div class="footer-links">
               <a href="#creative" data-i18n="navProduction">Creative</a>
               <a href="#services" data-i18n="navServices">Services</a>
+              <a href="/ai/" data-i18n="navAiEngine">AI Engine</a>
               <a href="#smart" data-i18n="navSmart">Smart systems</a>
               <a href="case-study.html" data-i18n="navSolutions">Case study</a>
               <a href="#packages" data-i18n="navPackages">Engage</a>
@@ -839,7 +855,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260817h"></script>
-    <script src="assets/js/app.js?v=20260817h"></script>
+    <script src="assets/js/translations.js?v=20260903b"></script>
+    <script src="assets/js/app.js?v=20260903b"></script>
   </body>
 </html>
