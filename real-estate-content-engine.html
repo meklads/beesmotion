@@ -20,13 +20,10 @@
     <title>محرك المحتوى العقاري | بيزموشن</title>
     <meta
       name="description"
-      content="حوّل صور عقارك إلى Reels وصفحات هبوط جاهزة للنشر والإعلان وتوليد العملاء. خدمة مصغّرة سريعة من بيزموشن للوسطاء والمسوقين والمطورين."
+      content="حوّل صور عقارك إلى Reels وصفحات هبوط جاهزة للنشر والإعلان وتوليد العملاء. خدمة سريعة من بيزموشن للوسطاء والمسوقين والمطورين."
     />
     <meta property="og:title" content="Real Estate Content Engine | Bees Motion" />
-    <meta
-      property="og:description"
-      content="Turn property photos into ready-to-publish Reels, ads, and lead-gen landing pages. Fast marketing production by Bees Motion."
-    />
+    <meta property="og:description" content="Turn property photos into ready-to-publish Reels, ads, and lead-gen landing pages by Bees Motion." />
     <meta property="og:url" content="https://beesmotion.com/real-estate-content-engine.html" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://beesmotion.com/assets/img/bees-motion-logo.png" />
@@ -35,488 +32,350 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              ink: "#0b0c0f",
-              panel: "#12141a",
-              line: "#232733",
-              mute: "#9aa3b5",
-              gold: "#e5a823",
-              "gold-soft": "#f5c84d",
-              ice: "#f4f6fa",
-            },
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
-              ar: ['"Cairo"', "Tahoma", "sans-serif"],
-            },
-            boxShadow: {
-              glow: "0 0 0 1px rgba(229,168,35,.18), 0 24px 60px rgba(0,0,0,.45)",
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background: #0b0c0f;
-        color: #f4f6fa;
-      }
-      html[lang="ar"] body {
-        font-family: "Cairo", Tahoma, sans-serif;
-      }
-      html[lang="en"] body {
-        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-      }
-      .mesh {
-        background:
-          radial-gradient(900px 420px at 85% -10%, rgba(229, 168, 35, 0.18), transparent 60%),
-          radial-gradient(700px 360px at 10% 20%, rgba(56, 120, 255, 0.12), transparent 55%),
-          linear-gradient(180deg, #0b0c0f 0%, #10131a 100%);
-      }
-      .phone-frame {
-        aspect-ratio: 9 / 16;
-        background: linear-gradient(180deg, #1a1d27, #0e1016);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
-      }
-      .angle-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(229, 168, 35, 0.45);
-      }
-      .pkg-featured {
-        box-shadow: 0 0 0 1px rgba(229, 168, 35, 0.45), 0 28px 70px rgba(229, 168, 35, 0.12);
-      }
-      .wa-float {
-        position: fixed;
-        bottom: 1.25rem;
-        inset-inline-end: 1.25rem;
-        z-index: 60;
-      }
-      [data-i18n-hide] {
-        display: none !important;
-      }
-      html[lang="ar"] [data-show="ar"],
-      html[lang="en"] [data-show="en"] {
-        display: inline !important;
-      }
-      html[lang="ar"] [data-show-block="ar"],
-      html[lang="en"] [data-show-block="en"] {
-        display: block !important;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260903a" />
+    <link rel="stylesheet" href="assets/css/rce.css?v=20260903a" />
   </head>
-  <body class="antialiased">
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:start-3 focus:bg-gold focus:text-ink focus:px-3 focus:py-2 focus:rounded">Skip</a>
+  <body class="lang-ar page-rce">
+    <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 border-b border-white/5 bg-ink/85 backdrop-blur-xl">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <a href="/" class="flex items-center gap-3 min-w-0">
-          <img src="assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="h-9 w-auto brightness-0 invert sm:h-10" width="200" height="96" />
-          <span class="hidden sm:block text-[11px] leading-tight text-mute border-s border-white/10 ps-3">
-            <span data-i18n="brandSub">Real Estate Content Engine</span>
-          </span>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion" style="display: flex; align-items: center; gap: 0">
+          <img src="assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
+          <span class="rce-brand-sub" data-i18n="brandSub">محرك المحتوى العقاري</span>
         </a>
-        <nav class="hidden lg:flex items-center gap-6 text-sm text-mute">
-          <a href="#how" class="hover:text-white transition" data-i18n="navHow">How it Works</a>
-          <a href="#angles" class="hover:text-white transition" data-i18n="navAngles">Content Angles</a>
-          <a href="#packages" class="hover:text-white transition" data-i18n="navPackages">Packages</a>
-          <a href="#faq" class="hover:text-white transition" data-i18n="navFaq">FAQ</a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#how" data-i18n="navHow">كيف تعمل</a>
+          <a href="#angles" data-i18n="navAngles">زوايا المحتوى</a>
+          <a href="#packages" data-i18n="navPackages">الباقات</a>
+          <a href="#faq" data-i18n="navFaq">الأسئلة</a>
         </nav>
-        <div class="flex items-center gap-2 sm:gap-3">
-          <div class="flex rounded-full border border-white/10 bg-white/5 p-0.5 text-xs font-semibold" role="group" aria-label="Language">
-            <button type="button" data-lang="ar" class="lang-btn rounded-full px-2.5 py-1.5">AR</button>
-            <button type="button" data-lang="en" class="lang-btn rounded-full px-2.5 py-1.5">EN</button>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="ar" class="active">AR</button>
           </div>
-          <a href="#start" class="rounded-full bg-gold px-3.5 py-2 text-xs sm:text-sm font-bold text-ink hover:bg-gold-soft transition" data-i18n="ctaNav">Get Started</a>
+          <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">ابدأ الآن</a>
+          <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
         </div>
       </div>
     </header>
 
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#how" data-i18n="navHow">كيف تعمل</a>
+      <a href="#angles" data-i18n="navAngles">زوايا المحتوى</a>
+      <a href="#packages" data-i18n="navPackages">الباقات</a>
+      <a href="#faq" data-i18n="navFaq">الأسئلة</a>
+      <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">ابدأ الآن</a>
+    </nav>
+
     <main id="main">
-      <!-- Hero -->
-      <section class="mesh relative overflow-hidden">
-        <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8 lg:py-20">
-          <div class="lg:col-span-7">
-            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-gold-soft">
-              <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
-              <span data-i18n="heroEyebrow">Bees Motion · Productized Service</span>
-            </p>
-            <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]" data-i18n="heroTitle">
-              Turn Your Property Photos Into a High-Converting Content Engine.
-            </h1>
-            <p class="mt-5 max-w-2xl text-base leading-relaxed text-mute sm:text-lg" data-i18n="heroSub">
-              Stop wasting time and budget on traditional shoots. We transform your existing property photos into professional, ready-to-advertise short-form videos and lead-gen landing pages.
-            </p>
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a href="#start" class="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3.5 text-sm font-bold text-ink hover:bg-gold-soft transition" data-i18n="heroCta">
-                Send Your Property Photos & Start Your First Reel
-              </a>
-              <a href="#packages" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white hover:border-gold/50 transition" data-i18n="heroCta2">
-                View Packages
-              </a>
+      <section class="rce-hero">
+        <div class="container rce-hero-grid">
+          <div class="reveal">
+            <span class="svc-tag" data-i18n="heroEyebrow">بيزموشن · خدمة محتوى عقاري</span>
+            <h1 data-i18n="heroTitle">حوّل صور عقارك إلى محتوى تسويقي يلفت الانتباه ويقود العملاء إليك.</h1>
+            <p class="rce-hero-sub" data-i18n="heroSub">توقف عن إضاعة الوقت والميزانية على التصوير التقليدي لكل وحدة. نحوّل صور العقار المتوفرة إلى فيديوهات قصيرة احترافية وصفحات هبوط جاهزة للإعلان وتوليد العملاء.</p>
+            <div class="rce-hero-ctas">
+              <a class="btn btn-pill btn-on-light" href="#start" data-i18n="heroCta">أرسل صور عقارك وابدأ بأول Reel</a>
+              <a class="btn btn-pill btn-outline-dark" href="#packages" data-i18n="heroCta2">عرض الباقات</a>
             </div>
-            <div class="mt-8 grid grid-cols-3 gap-3 max-w-lg text-center sm:text-start">
-              <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-3">
-                <p class="text-lg font-bold text-gold-soft" data-i18n="stat1v">24–72h</p>
-                <p class="text-[11px] text-mute" data-i18n="stat1l">Typical first delivery</p>
-              </div>
-              <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-3">
-                <p class="text-lg font-bold text-gold-soft" data-i18n="stat2v">3–8</p>
-                <p class="text-[11px] text-mute" data-i18n="stat2l">Angles per property</p>
-              </div>
-              <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-3">
-                <p class="text-lg font-bold text-gold-soft" data-i18n="stat3v">9:16</p>
-                <p class="text-[11px] text-mute" data-i18n="stat3l">Ready for Reels & Ads</p>
-              </div>
+            <div class="rce-stats" aria-label="Highlights">
+              <div class="rce-stat"><strong data-i18n="stat1v">٢٤–٧٢ ساعة</strong><span data-i18n="stat1l">تسليم أول عادةً</span></div>
+              <div class="rce-stat"><strong data-i18n="stat2v">٣–٨</strong><span data-i18n="stat2l">زوايا لكل عقار</span></div>
+              <div class="rce-stat"><strong data-i18n="stat3v">٩:١٦</strong><span data-i18n="stat3l">جاهز للريلز والإعلانات</span></div>
             </div>
           </div>
-
-          <div class="lg:col-span-5">
-            <div class="relative mx-auto w-[min(100%,280px)]">
-              <div class="phone-frame overflow-hidden rounded-[2rem] p-2">
-                <div class="relative h-full overflow-hidden rounded-[1.55rem]">
-                  <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-90" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                  <div class="absolute inset-x-0 bottom-0 p-4">
-                    <p class="text-[10px] uppercase tracking-[0.18em] text-gold-soft" data-i18n="demoTag">Demo Reel Mock</p>
-                    <p class="mt-1 text-sm font-bold" data-i18n="demoTitle">Property photos → publish-ready content</p>
-                    <div class="mt-3 flex items-center gap-2 text-[11px] text-white/80">
-                      <span class="rounded-full bg-white/10 px-2 py-1" data-i18n="demoChip1">Tour</span>
-                      <span class="rounded-full bg-white/10 px-2 py-1" data-i18n="demoChip2">Offer</span>
-                      <span class="rounded-full bg-white/10 px-2 py-1" data-i18n="demoChip3">CTA</span>
+          <div class="reveal">
+            <div class="rce-device">
+              <div class="rce-phone">
+                <div class="rce-phone-inner">
+                  <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" width="720" height="1280" />
+                  <div class="rce-phone-fade"></div>
+                  <div class="rce-honesty-chip" data-i18n="demoBadge">صدق بصري ✓</div>
+                  <div class="rce-phone-copy">
+                    <div class="tag" data-i18n="demoTag">نموذج محتوى</div>
+                    <strong data-i18n="demoTitle">صور العقار → محتوى جاهز للنشر</strong>
+                    <div class="rce-phone-chips">
+                      <span data-i18n="demoChip1">جولة</span>
+                      <span data-i18n="demoChip2">عرض</span>
+                      <span data-i18n="demoChip3">CTA</span>
                     </div>
                   </div>
-                  <div class="absolute start-3 top-3 rounded-full bg-black/50 px-2.5 py-1 text-[10px] font-semibold backdrop-blur" data-i18n="demoBadge">Visual Honesty ✓</div>
                 </div>
               </div>
-              <div class="absolute -bottom-4 -end-2 rounded-2xl border border-white/10 bg-panel px-3 py-2 text-xs shadow-glow">
-                <span class="text-mute" data-i18n="flowMini">Photos → Content → Landing → Leads</span>
-              </div>
+              <div class="rce-flow-chip" data-i18n="flowMini">صور ← محتوى ← صفحة ← عملاء</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Problem / Solution -->
-      <section class="border-t border-white/5 bg-panel">
-        <div class="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-8">
-          <article class="rounded-3xl border border-white/8 bg-ink/60 p-7 sm:p-8">
-            <p class="text-xs font-bold uppercase tracking-[0.16em] text-red-300/90" data-i18n="problemTag">The Problem</p>
-            <h2 class="mt-3 text-2xl font-bold sm:text-3xl" data-i18n="problemTitle">You have inventory. You don’t have a content engine.</h2>
-            <ul class="mt-5 space-y-3 text-sm leading-relaxed text-mute">
-              <li class="flex gap-3"><span class="mt-1 text-red-300">✕</span><span data-i18n="problem1">Brokers and marketers manage many units — but content stays static.</span></li>
-              <li class="flex gap-3"><span class="mt-1 text-red-300">✕</span><span data-i18n="problem2">Traditional video per property is slow and expensive.</span></li>
-              <li class="flex gap-3"><span class="mt-1 text-red-300">✕</span><span data-i18n="problem3">One ad goes live… then the listing disappears from the feed.</span></li>
-              <li class="flex gap-3"><span class="mt-1 text-red-300">✕</span><span data-i18n="problem4">No system connecting Reels → Landing Page → Leads.</span></li>
+      <section class="band-paper-rce" style="padding: 4.5rem 0">
+        <div class="container rce-split">
+          <article class="rce-card rce-card--problem reveal">
+            <span class="svc-tag" data-i18n="problemTag">المشكلة</span>
+            <h2 data-i18n="problemTitle">لديك مخزون عقارات… لكن بدون آلة محتوى.</h2>
+            <ul>
+              <li data-i18n="problem1">الوسيط والمسوّق لديهم وحدات كثيرة، والمحتوى يبقى صورًا ثابتة.</li>
+              <li data-i18n="problem2">إنتاج فيديو تقليدي لكل عقار مكلف وبطيء.</li>
+              <li data-i18n="problem3">إعلان واحد يظهر ثم يختفي العقار من التغذية.</li>
+              <li data-i18n="problem4">لا يوجد نظام يربط الريلز بصفحة هبوط ثم بعملاء محتملين.</li>
             </ul>
           </article>
-          <article class="rounded-3xl border border-gold/25 bg-gradient-to-br from-gold/10 to-transparent p-7 sm:p-8">
-            <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold-soft" data-i18n="solutionTag">The Solution</p>
-            <h2 class="mt-3 text-2xl font-bold sm:text-3xl" data-i18n="solutionTitle">Bees Motion Real Estate Content Engine</h2>
-            <p class="mt-4 text-sm leading-relaxed text-mute" data-i18n="solutionBody">
-              Send your property assets. We build publish-ready short content, CTAs, and optional landing pages. You publish, advertise, and capture leads — without reinventing production for every listing.
-            </p>
-            <div class="mt-6 grid grid-cols-2 gap-3 text-sm font-semibold">
-              <div class="rounded-2xl border border-white/10 bg-ink/40 p-4" data-i18n="solChip1">Speed</div>
-              <div class="rounded-2xl border border-white/10 bg-ink/40 p-4" data-i18n="solChip2">Repeatability</div>
-              <div class="rounded-2xl border border-white/10 bg-ink/40 p-4" data-i18n="solChip3">Lead Utility</div>
-              <div class="rounded-2xl border border-white/10 bg-ink/40 p-4" data-i18n="solChip4">Visual Honesty</div>
+          <article class="rce-card rce-card--solution reveal">
+            <span class="svc-tag" data-i18n="solutionTag">الحل</span>
+            <h2 data-i18n="solutionTitle">محرك المحتوى العقاري من بيزموشن</h2>
+            <p style="margin: 0 0 0.5rem; color: var(--rce-mute); line-height: 1.65" data-i18n="solutionBody">أرسل مواد العقار. نصنع محتوى قصيرًا جاهزًا للنشر مع CTA، وصفحات هبوط عند الحاجة. أنت تنشر وتعلن وتستقبل العملاء — بدون إعادة اختراع الإنتاج لكل وحدة.</p>
+            <div class="rce-mini-grid">
+              <span data-i18n="solChip1">سرعة</span>
+              <span data-i18n="solChip2">قابلية التكرار</span>
+              <span data-i18n="solChip3">توليد عملاء</span>
+              <span data-i18n="solChip4">صدق بصري</span>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- 8 Angles -->
-      <section id="angles" class="border-t border-white/5">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="max-w-3xl">
-            <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold-soft" data-i18n="anglesTag">8 Content Angles</p>
-            <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl" data-i18n="anglesTitle">One property. Multiple marketing shots.</h2>
-            <p class="mt-4 text-mute" data-i18n="anglesSub">The product isn’t one Reel. It’s extracting several selling angles from the same asset set.</p>
+      <section id="angles" class="band-mist-rce" style="padding: 4.5rem 0">
+        <div class="container">
+          <div class="section-head reveal" style="max-width: 40rem">
+            <span class="svc-tag" data-i18n="anglesTag">٨ زوايا محتوى</span>
+            <h2 class="font-headline-xl" data-i18n="anglesTitle">عقار واحد. طلقات تسويقية متعددة.</h2>
+            <p class="font-body-md" data-i18n="anglesSub">المنتج ليس Reel واحدًا. المنتج هو استخراج عدة زوايا بيع من نفس المواد.</p>
           </div>
-          <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">01</p><h3 class="mt-2 font-bold" data-i18n="a1t">Property Tour</h3><p class="mt-2 text-sm text-mute" data-i18n="a1d">A fast vertical walkthrough of the unit.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">02</p><h3 class="mt-2 font-bold" data-i18n="a2t">Luxury / Lifestyle</h3><p class="mt-2 text-sm text-mute" data-i18n="a2d">Sell the living experience, not only the area.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">03</p><h3 class="mt-2 font-bold" data-i18n="a3t">Design & Features</h3><p class="mt-2 text-sm text-mute" data-i18n="a3d">Finishes, details, and standout specs.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">04</p><h3 class="mt-2 font-bold" data-i18n="a4t">Location & Neighborhood</h3><p class="mt-2 text-sm text-mute" data-i18n="a4d">Area advantages and nearby services.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">05</p><h3 class="mt-2 font-bold" data-i18n="a5t">Price / Special Offer</h3><p class="mt-2 text-sm text-mute" data-i18n="a5d">Commercial hooks that move decisions.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">06</p><h3 class="mt-2 font-bold" data-i18n="a6t">Investment Opportunity</h3><p class="mt-2 text-sm text-mute" data-i18n="a6d">Frame the unit as an investment play.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">07</p><h3 class="mt-2 font-bold" data-i18n="a7t">Problem / Solution Hook</h3><p class="mt-2 text-sm text-mute" data-i18n="a7d">Open with a buyer pain, close with the property.</p></article>
-            <article class="angle-card rounded-2xl border border-white/8 bg-panel p-5 transition"><p class="text-gold-soft text-xs font-bold">08</p><h3 class="mt-2 font-bold" data-i18n="a8t">Direct CTA</h3><p class="mt-2 text-sm text-mute" data-i18n="a8d">Call / WhatsApp / Book / Request details.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Workflow -->
-      <section id="how" class="border-t border-white/5 bg-panel">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="max-w-3xl">
-            <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold-soft" data-i18n="howTag">How It Works</p>
-            <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl" data-i18n="howTitle">Send assets. We create. You publish. Capture leads.</h2>
-          </div>
-          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <div class="rounded-3xl border border-white/8 bg-ink/50 p-6">
-              <p class="text-3xl font-black text-gold/80">01</p>
-              <h3 class="mt-3 text-lg font-bold" data-i18n="s1t">Send Property Assets</h3>
-              <p class="mt-2 text-sm text-mute" data-i18n="s1d">Photos, unit details, price/offer if available, and your preferred CTA.</p>
-            </div>
-            <div class="rounded-3xl border border-white/8 bg-ink/50 p-6">
-              <p class="text-3xl font-black text-gold/80">02</p>
-              <h3 class="mt-3 text-lg font-bold" data-i18n="s2t">Engine + Fact-Check</h3>
-              <p class="mt-2 text-sm text-mute" data-i18n="s2d">AI-assisted motion & edit on your real assets — then human QC and visual honesty review.</p>
-            </div>
-            <div class="rounded-3xl border border-white/8 bg-ink/50 p-6">
-              <p class="text-3xl font-black text-gold/80">03</p>
-              <h3 class="mt-3 text-lg font-bold" data-i18n="s3t">Publish Everywhere</h3>
-              <p class="mt-2 text-sm text-mute" data-i18n="s3d">Receive 9:16 files ready for Reels, Stories, TikTok, Snapchat, and paid ads.</p>
-            </div>
-            <div class="rounded-3xl border border-white/8 bg-ink/50 p-6">
-              <p class="text-3xl font-black text-gold/80">04</p>
-              <h3 class="mt-3 text-lg font-bold" data-i18n="s4t">Capture Leads</h3>
-              <p class="mt-2 text-sm text-mute" data-i18n="s4d">Optional landing pages and WhatsApp CTAs turn attention into inquiries.</p>
-            </div>
-          </div>
-          <p class="mt-8 rounded-2xl border border-gold/20 bg-gold/5 px-5 py-4 text-sm text-mute" data-i18n="honestyNote">
-            Visual Honesty: we animate and enhance real property assets. We do not invent rooms, views, layouts, or amenities that don’t exist.
-          </p>
-        </div>
-      </section>
-
-      <!-- Packages -->
-      <section id="packages" class="border-t border-white/5">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="max-w-3xl">
-            <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold-soft" data-i18n="pkgTag">Packages</p>
-            <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl" data-i18n="pkgTitle">Start small. Scale to monthly. Expand to campaigns.</h2>
-            <p class="mt-4 text-mute" data-i18n="pkgSub">Designed for cash flow: low-ticket entry → recurring subscription → high-ticket campaigns.</p>
-          </div>
-
-          <div class="mt-10 grid gap-5 lg:grid-cols-3">
-            <!-- Starter -->
-            <article class="flex flex-col rounded-3xl border border-white/10 bg-panel p-7">
-              <p class="text-xs font-bold uppercase tracking-[0.14em] text-mute" data-i18n="starterTag">One-Off</p>
-              <h3 class="mt-2 text-2xl font-extrabold">STARTER</h3>
-              <p class="mt-3 text-3xl font-black text-gold-soft">
-                <span data-show="ar" data-i18n-hide>١٬٤٩٠ ر.س</span>
-                <span data-show="en" data-i18n-hide>$399</span>
-              </p>
-              <p class="mt-1 text-sm text-mute" data-i18n="starterWho">1 property · first proof of value</p>
-              <ul class="mt-6 flex-1 space-y-2.5 text-sm text-mute">
-                <li data-i18n="starter1">3 Reels from one property</li>
-                <li data-i18n="starter2">Multiple content angles</li>
-                <li data-i18n="starter3">CTA + WhatsApp prompt on each Reel</li>
-                <li data-i18n="starter4">Fast delivery window</li>
-                <li data-i18n="starter5">Limited revision round</li>
-              </ul>
-              <a href="#start" data-pkg="STARTER" class="pkg-cta mt-8 inline-flex justify-center rounded-full bg-white/10 px-5 py-3 text-sm font-bold hover:bg-gold hover:text-ink transition" data-i18n="starterCta">Start with Starter</a>
-            </article>
-
-            <!-- Pro -->
-            <article class="pkg-featured relative flex flex-col rounded-3xl border border-gold/40 bg-gradient-to-b from-gold/10 to-panel p-7">
-              <span class="absolute -top-3 start-6 rounded-full bg-gold px-3 py-1 text-[11px] font-extrabold text-ink" data-i18n="proBadge">Best for Cash Flow</span>
-              <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-soft" data-i18n="proTag">Monthly Subscription</p>
-              <h3 class="mt-2 text-2xl font-extrabold">PRO</h3>
-              <p class="mt-3 text-3xl font-black text-gold-soft">
-                <span data-show="ar" data-i18n-hide>٤٬٩٩٠ ر.س<span class="text-base font-semibold text-mute"> / شهر</span></span>
-                <span data-show="en" data-i18n-hide>$1,299<span class="text-base font-semibold text-mute"> / mo</span></span>
-              </p>
-              <p class="mt-1 text-sm text-mute" data-i18n="proWho">Up to 5 properties / month</p>
-              <ul class="mt-6 flex-1 space-y-2.5 text-sm text-mute">
-                <li data-i18n="pro1">12–15 Reels every month</li>
-                <li data-i18n="pro2">Core hooks + captions</li>
-                <li data-i18n="pro3">Landing pages included (per plan)</li>
-                <li data-i18n="pro4">Publish-ready packaging</li>
-                <li data-i18n="pro5">Monthly performance snapshot</li>
-              </ul>
-              <a href="#start" data-pkg="PRO" class="pkg-cta mt-8 inline-flex justify-center rounded-full bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-soft transition" data-i18n="proCta">Start PRO Subscription</a>
-            </article>
-
-            <!-- Campaign -->
-            <article class="flex flex-col rounded-3xl border border-white/10 bg-panel p-7">
-              <p class="text-xs font-bold uppercase tracking-[0.14em] text-mute" data-i18n="campTag">Developers & Projects</p>
-              <h3 class="mt-2 text-2xl font-extrabold">CAMPAIGN</h3>
-              <p class="mt-3 text-3xl font-black text-gold-soft">
-                <span data-show="ar" data-i18n-hide>من ١٨٬٠٠٠ ر.س</span>
-                <span data-show="en" data-i18n-hide>From $4,800</span>
-              </p>
-              <p class="mt-1 text-sm text-mute" data-i18n="campWho">1 major project / launch cycle</p>
-              <ul class="mt-6 flex-1 space-y-2.5 text-sm text-mute">
-                <li data-i18n="camp1">20–40 short content pieces</li>
-                <li data-i18n="camp2">Dedicated project landing page</li>
-                <li data-i18n="camp3">Multi-ad copy variants</li>
-                <li data-i18n="camp4">Retargeting creatives</li>
-                <li data-i18n="camp5">Ad management as add-on</li>
-              </ul>
-              <a href="#start" data-pkg="CAMPAIGN" class="pkg-cta mt-8 inline-flex justify-center rounded-full bg-white/10 px-5 py-3 text-sm font-bold hover:bg-gold hover:text-ink transition" data-i18n="campCta">Plan a Campaign</a>
-            </article>
+          <div class="rce-angles reveal">
+            <article class="rce-angle"><div class="num">01</div><h3 data-i18n="a1t">جولة العقار</h3><p data-i18n="a1d">جولة رأسية سريعة داخل الوحدة.</p></article>
+            <article class="rce-angle"><div class="num">02</div><h3 data-i18n="a2t">فخامة / أسلوب حياة</h3><p data-i18n="a2d">نبيع الإحساس والمعيشة لا المساحة فقط.</p></article>
+            <article class="rce-angle"><div class="num">03</div><h3 data-i18n="a3t">التصميم والمميزات</h3><p data-i18n="a3d">التشطيبات والتفاصيل والمواصفات البارزة.</p></article>
+            <article class="rce-angle"><div class="num">04</div><h3 data-i18n="a4t">الموقع والحي</h3><p data-i18n="a4d">مميزات الموقع وقربه من الخدمات.</p></article>
+            <article class="rce-angle"><div class="num">05</div><h3 data-i18n="a5t">السعر / العرض</h3><p data-i18n="a5d">هوك تجاري يحرّك القرار.</p></article>
+            <article class="rce-angle"><div class="num">06</div><h3 data-i18n="a6t">فرصة استثمارية</h3><p data-i18n="a6d">تقديم العقار كفرصة استثمار.</p></article>
+            <article class="rce-angle"><div class="num">07</div><h3 data-i18n="a7t">مشكلة / حل</h3><p data-i18n="a7d">نبدأ بألم العميل ونغلق بالعقار كحل.</p></article>
+            <article class="rce-angle"><div class="num">08</div><h3 data-i18n="a8t">CTA مباشر</h3><p data-i18n="a8d">اتصل — واتساب — احجز — اطلب التفاصيل.</p></article>
           </div>
         </div>
       </section>
 
-      <!-- Add-ons -->
-      <section class="border-t border-white/5 bg-panel">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-extrabold" data-i18n="addonsTitle">Add-ons that grow the ticket size</h2>
-          <p class="mt-3 max-w-2xl text-mute" data-i18n="addonsSub">Keep the core engine lean. Expand with services that increase margin and client lifetime value.</p>
-          <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl border border-white/8 bg-ink/40 px-5 py-4 text-sm" data-i18n="add1">Extra Reels</div>
-            <div class="rounded-2xl border border-white/8 bg-ink/40 px-5 py-4 text-sm" data-i18n="add2">Extra Landing Pages</div>
-            <div class="rounded-2xl border border-white/8 bg-ink/40 px-5 py-4 text-sm" data-i18n="add3">Copywriting & Ad Copy</div>
-            <div class="rounded-2xl border border-white/8 bg-ink/40 px-5 py-4 text-sm" data-i18n="add4">Meta / TikTok / Snapchat Ads Management</div>
-            <div class="rounded-2xl border border-white/8 bg-ink/40 px-5 py-4 text-sm" data-i18n="add5">Voice-over</div>
-            <div class="rounded-2xl border border-white/8 bg-ink/40 px-5 py-4 text-sm" data-i18n="add6">Bilingual versions (AR / EN)</div>
+      <section id="how" class="band-paper-rce" style="padding: 4.5rem 0">
+        <div class="container">
+          <div class="section-head reveal" style="max-width: 42rem">
+            <span class="svc-tag" data-i18n="howTag">كيف تعمل</span>
+            <h2 class="font-headline-xl" data-i18n="howTitle">أرسل المواد. نصنع المحتوى. تنشر. تستقبل العملاء.</h2>
           </div>
-          <p class="mt-6 text-sm text-mute" data-i18n="ghNote">
-            Need advanced CGI, 3D, or architectural visualization? We refer seamlessly to our sister company, Graphics House.
-          </p>
+          <div class="rce-steps reveal">
+            <article class="rce-step"><div class="num">01</div><h3 data-i18n="s1t">أرسل مواد العقار</h3><p data-i18n="s1d">الصور، تفاصيل الوحدة، السعر/العرض إن وجد، ووسيلة التواصل المفضلة.</p></article>
+            <article class="rce-step"><div class="num">02</div><h3 data-i18n="s2t">المحرك + فحص الحقائق</h3><p data-i18n="s2d">تحريك ومونتاج بمساعدة الذكاء الاصطناعي على أصولك الحقيقية، ثم مراجعة بشرية وصدق بصري.</p></article>
+            <article class="rce-step"><div class="num">03</div><h3 data-i18n="s3t">انشر في كل المنصات</h3><p data-i18n="s3d">ملفات ٩:١٦ جاهزة للريلز والستوريز وتيك توك وسناب والإعلانات.</p></article>
+            <article class="rce-step"><div class="num">04</div><h3 data-i18n="s4t">التقط العملاء</h3><p data-i18n="s4d">صفحات هبوط اختيارية وCTA واتساب يحوّلان المشاهدة إلى استفسار.</p></article>
+          </div>
+          <p class="rce-note reveal" data-i18n="honestyNote">الصدق البصري: نحوّك ونحسّن الأصول الحقيقية للعقار. لا نخترع غرفًا أو إطلالات أو مساحات أو مرافق غير موجودة.</p>
         </div>
       </section>
 
-      <!-- FAQ + Honesty -->
-      <section id="faq" class="border-t border-white/5">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="grid gap-10 lg:grid-cols-12">
-            <div class="lg:col-span-5">
-              <p class="text-xs font-bold uppercase tracking-[0.16em] text-gold-soft" data-i18n="faqTag">Trust & FAQ</p>
-              <h2 class="mt-3 text-3xl font-extrabold" data-i18n="faqTitle">Clear answers before you buy.</h2>
-              <div class="mt-6 rounded-3xl border border-gold/25 bg-gold/5 p-6">
-                <h3 class="font-bold text-gold-soft" data-i18n="honestyTitle">Visual Honesty Policy</h3>
-                <p class="mt-3 text-sm leading-relaxed text-mute" data-i18n="honestyBody">
-                  AI is used to animate, edit, and enhance real assets — never to fabricate rooms, windows, views, finishes, or amenities. If a visual is conceptual, it will be labeled clearly.
-                </p>
+      <section id="packages" class="band-cream-rce" style="padding: 4.5rem 0">
+        <div class="container">
+          <div class="section-head reveal" style="max-width: 42rem">
+            <span class="svc-tag" data-i18n="pkgTag">الباقات</span>
+            <h2 class="font-headline-xl" data-i18n="pkgTitle">ابدأ بعقار واحد. ثم انتقل للاشتراك الشهري أو الحملات.</h2>
+            <p class="font-body-md" data-i18n="pkgSub">مسار واضح للنمو: تجربة أولى، ثم محتوى شهري مستمر، ثم حملات للمشاريع الكبرى.</p>
+          </div>
+          <div class="rce-packages reveal">
+            <article class="rce-pkg">
+              <div class="label" data-i18n="starterTag">طلب لمرة واحدة</div>
+              <h3>STARTER</h3>
+              <div class="price">
+                <span data-show="ar">١٬٤٩٠ ر.س</span>
+                <span data-show="en">$399</span>
               </div>
-            </div>
-            <div class="lg:col-span-7 space-y-3">
-              <details class="group rounded-2xl border border-white/8 bg-panel p-5 open:border-gold/30">
-                <summary class="cursor-pointer font-semibold" data-i18n="f1q">Do I need a professional shoot?</summary>
-                <p class="mt-3 text-sm text-mute" data-i18n="f1a">No. Existing listing photos are enough for most Starter and PRO deliveries. Field shoots are available as an add-on.</p>
-              </details>
-              <details class="group rounded-2xl border border-white/8 bg-panel p-5">
-                <summary class="cursor-pointer font-semibold" data-i18n="f2q">Can we use only the photos I already have?</summary>
-                <p class="mt-3 text-sm text-mute" data-i18n="f2a">Yes. We run an asset check first and select the strongest sequence for motion and storytelling.</p>
-              </details>
-              <details class="group rounded-2xl border border-white/8 bg-panel p-5">
-                <summary class="cursor-pointer font-semibold" data-i18n="f3q">How fast is delivery?</summary>
-                <p class="mt-3 text-sm text-mute" data-i18n="f3a">Starter typically moves in 24–72 hours after complete assets. PRO runs on a monthly content calendar.</p>
-              </details>
-              <details class="group rounded-2xl border border-white/8 bg-panel p-5">
-                <summary class="cursor-pointer font-semibold" data-i18n="f4q">Does the package include ad management?</summary>
-                <p class="mt-3 text-sm text-mute" data-i18n="f4a">Not by default. Media buying for Meta, TikTok, and Snapchat is available as an add-on.</p>
-              </details>
-              <details class="group rounded-2xl border border-white/8 bg-panel p-5">
-                <summary class="cursor-pointer font-semibold" data-i18n="f5q">How many revisions are included?</summary>
-                <p class="mt-3 text-sm text-mute" data-i18n="f5a">A limited revision round is included. Extra rounds are priced separately to protect delivery speed.</p>
-              </details>
-            </div>
+              <p class="who" data-i18n="starterWho">عقار واحد · إثبات قيمة سريع</p>
+              <ul>
+                <li data-i18n="starter1">٣ Reels من عقار واحد</li>
+                <li data-i18n="starter2">زوايا محتوى مختلفة</li>
+                <li data-i18n="starter3">CTA وواتساب على كل Reel</li>
+                <li data-i18n="starter4">نافذة تسليم سريعة</li>
+                <li data-i18n="starter5">جولة تعديلات محدودة</li>
+              </ul>
+              <a class="btn btn-pill btn-outline-dark pkg-cta" href="#start" data-pkg="STARTER" data-i18n="starterCta">ابدأ بـ STARTER</a>
+            </article>
+
+            <article class="rce-pkg rce-pkg--featured">
+              <span class="rce-pkg-badge" data-i18n="proBadge">الأكثر طلبًا</span>
+              <div class="label" data-i18n="proTag">اشتراك شهري</div>
+              <h3>PRO</h3>
+              <div class="price">
+                <span data-show="ar">٤٬٩٩٠ ر.س <small>/ شهر</small></span>
+                <span data-show="en">$1,299 <small>/ mo</small></span>
+              </div>
+              <p class="who" data-i18n="proWho">حتى ٥ عقارات شهريًا</p>
+              <ul>
+                <li data-i18n="pro1">١٢–١٥ Reel كل شهر</li>
+                <li data-i18n="pro2">هوكات وكابشنز أساسية</li>
+                <li data-i18n="pro3">Landing Pages ضمن الباقة</li>
+                <li data-i18n="pro4">تجهيز جاهز للنشر</li>
+                <li data-i18n="pro5">تقرير أداء شهري مختصر</li>
+              </ul>
+              <a class="btn btn-pill btn-on-light pkg-cta" href="#start" data-pkg="PRO" data-i18n="proCta">ابدأ اشتراك PRO</a>
+            </article>
+
+            <article class="rce-pkg">
+              <div class="label" data-i18n="campTag">للمطورين والمشاريع</div>
+              <h3>CAMPAIGN</h3>
+              <div class="price">
+                <span data-show="ar">من ١٨٬٠٠٠ ر.س</span>
+                <span data-show="en">From $4,800</span>
+              </div>
+              <p class="who" data-i18n="campWho">مشروع عقاري واحد / دورة إطلاق</p>
+              <ul>
+                <li data-i18n="camp1">٢٠–٤٠ قطعة محتوى قصيرة</li>
+                <li data-i18n="camp2">Landing Page مخصصة للمشروع</li>
+                <li data-i18n="camp3">نسخ إعلانية متعددة</li>
+                <li data-i18n="camp4">إبداعات Retargeting</li>
+                <li data-i18n="camp5">إدارة إعلانات كخدمة إضافية</li>
+              </ul>
+              <a class="btn btn-pill btn-outline-dark pkg-cta" href="#start" data-pkg="CAMPAIGN" data-i18n="campCta">خطّط حملة CAMPAIGN</a>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Lead form -->
-      <section id="start" class="border-t border-white/5 bg-panel">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-            <div class="lg:col-span-5">
-              <h2 class="text-3xl font-extrabold sm:text-4xl" data-i18n="formTitle">Send your property photos and start your first Reel.</h2>
-              <p class="mt-4 text-mute" data-i18n="formSub">Tell us your portfolio size and preferred package. We’ll reply on WhatsApp with next steps.</p>
-              <ul class="mt-6 space-y-2 text-sm text-mute">
-                <li data-i18n="formBullet1">Built for brokers, marketers, property managers, and developers</li>
-                <li data-i18n="formBullet2">Optimized for Saudi market terms in Arabic + global terms in English</li>
-                <li data-i18n="formBullet3">Path: Starter → PRO → Campaign → Graphics House when needed</li>
-              </ul>
-            </div>
-            <form id="rceForm" class="lg:col-span-7 rounded-3xl border border-white/10 bg-ink/70 p-6 sm:p-8 shadow-glow" novalidate>
-              <div class="grid gap-4 sm:grid-cols-2">
-                <label class="block text-sm">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelName">Name</span>
-                  <input name="name" required class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-gold" />
-                </label>
-                <label class="block text-sm">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelPhone">Phone (WhatsApp)</span>
-                  <input name="phone" required type="tel" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-gold" />
-                </label>
-                <label class="block text-sm sm:col-span-2">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelCompany">Company / Office</span>
-                  <input name="company" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-gold" />
-                </label>
-                <label class="block text-sm">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelRole">You are</span>
-                  <select name="role" class="w-full rounded-xl border border-white/10 bg-ink px-4 py-3 outline-none focus:border-gold">
-                    <option value="broker" data-i18n="roleBroker">Real Estate Broker</option>
-                    <option value="marketer" data-i18n="roleMarketer">Independent Marketer</option>
-                    <option value="pm" data-i18n="rolePm">Property Management</option>
-                    <option value="developer" data-i18n="roleDev">Developer</option>
-                    <option value="other" data-i18n="roleOther">Other</option>
-                  </select>
-                </label>
-                <label class="block text-sm">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelPortfolio">Property portfolio size</span>
-                  <select name="portfolio" class="w-full rounded-xl border border-white/10 bg-ink px-4 py-3 outline-none focus:border-gold">
-                    <option value="1-5">1–5</option>
-                    <option value="6-20">6–20</option>
-                    <option value="21-50">21–50</option>
-                    <option value="50+">50+</option>
-                  </select>
-                </label>
-                <label class="block text-sm sm:col-span-2">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelPackage">Preferred package</span>
-                  <select name="package" id="pkgSelect" class="w-full rounded-xl border border-white/10 bg-ink px-4 py-3 outline-none focus:border-gold">
-                    <option value="STARTER">STARTER</option>
-                    <option value="PRO" selected>PRO</option>
-                    <option value="CAMPAIGN">CAMPAIGN</option>
-                    <option value="UNSURE" data-i18n="pkgUnsure">Not sure yet</option>
-                  </select>
-                </label>
-                <label class="block text-sm sm:col-span-2">
-                  <span class="mb-1.5 block text-mute" data-i18n="labelNotes">Notes / property type</span>
-                  <textarea name="notes" rows="3" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-gold"></textarea>
-                </label>
-              </div>
-              <button type="submit" class="mt-6 w-full rounded-full bg-gold px-6 py-3.5 text-sm font-extrabold text-ink hover:bg-gold-soft transition" data-i18n="formCta">
-                Send via WhatsApp
-              </button>
-              <p class="mt-3 text-center text-xs text-mute" data-i18n="formNote">No long proposals. Fast brief → fast start.</p>
-            </form>
+      <section class="band-mist-rce" style="padding: 4.5rem 0">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="svc-tag" data-i18n="addonsTag">إضافات</span>
+            <h2 class="font-headline-xl" data-i18n="addonsTitle">خدمات إضافية عند الحاجة</h2>
+            <p class="font-body-md" data-i18n="addonsSub">نبقي الخدمة الأساسية سريعة وواضحة، ونضيف ما يرفع قيمة النتيجة.</p>
           </div>
+          <div class="rce-addons reveal">
+            <div class="rce-addon" data-i18n="add1">Reel إضافي</div>
+            <div class="rce-addon" data-i18n="add2">Landing Page إضافية</div>
+            <div class="rce-addon" data-i18n="add3">كتابة محتوى ونسخ إعلانية</div>
+            <div class="rce-addon" data-i18n="add4">إدارة إعلانات Meta / TikTok / Snapchat</div>
+            <div class="rce-addon" data-i18n="add5">تعليق صوتي</div>
+            <div class="rce-addon" data-i18n="add6">نسخ ثنائية اللغة (عربي / إنجليزي)</div>
+          </div>
+          <p class="rce-note reveal" data-i18n="ghNote">تحتاج CGI أو 3D أو تصورًا معماريًا متقدمًا؟ نحوّلك بسلاسة إلى الشركة الشقيقة Graphics House.</p>
+        </div>
+      </section>
+
+      <section id="faq" class="band-paper-rce" style="padding: 4.5rem 0">
+        <div class="container rce-faq-grid">
+          <div class="reveal">
+            <span class="svc-tag" data-i18n="faqTag">الثقة والأسئلة</span>
+            <h2 class="font-headline-xl" data-i18n="faqTitle">إجابات واضحة قبل البدء.</h2>
+            <div class="rce-honesty">
+              <h3 data-i18n="honestyTitle">سياسة الصدق البصري</h3>
+              <p data-i18n="honestyBody">الذكاء الاصطناعي يحرّك ويعدّل ويحسّن الأصول الحقيقية — ولا يختلق غرفًا أو نوافذ أو إطلالات أو تشطيبات أو مرافق غير موجودة. أي تصور Conceptual يُوضَّح بوضوح.</p>
+            </div>
+          </div>
+          <div class="rce-faq reveal">
+            <details open>
+              <summary data-i18n="f1q">هل أحتاج تصويرًا احترافيًا؟</summary>
+              <p data-i18n="f1a">لا. صور الإعلان الحالية تكفي غالبًا لباقات STARTER وPRO. التصوير الميداني متاح كخدمة إضافية.</p>
+            </details>
+            <details>
+              <summary data-i18n="f2q">هل يمكن الاعتماد على الصور الموجودة فقط؟</summary>
+              <p data-i18n="f2a">نعم. نبدأ بفحص المواد ونختار أقوى تسلسل بصري للتحريك والسرد.</p>
+            </details>
+            <details>
+              <summary data-i18n="f3q">كم يستغرق التنفيذ؟</summary>
+              <p data-i18n="f3a">STARTER عادة خلال ٢٤–٧٢ ساعة بعد اكتمال المواد. PRO يعمل وفق جدول محتوى شهري.</p>
+            </details>
+            <details>
+              <summary data-i18n="f4q">هل تشمل الباقة إدارة الإعلانات؟</summary>
+              <p data-i18n="f4a">ليس افتراضيًا. إدارة Meta وTikTok وSnapchat متاحة كإضافة.</p>
+            </details>
+            <details>
+              <summary data-i18n="f5q">كم عدد التعديلات؟</summary>
+              <p data-i18n="f5a">جولة تعديلات محدودة مشمولة. الجولات الإضافية تُسعَّر منفصلًا لحماية سرعة التسليم.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="start" class="band-cream-rce" style="padding: 4.5rem 0 5rem">
+        <div class="container rce-form-wrap">
+          <div class="reveal">
+            <span class="svc-tag" data-i18n="formTag">ابدأ الآن</span>
+            <h2 class="font-headline-xl" data-i18n="formTitle">أرسل صور عقارك وابدأ بأول Reel.</h2>
+            <p class="font-body-md" data-i18n="formSub">أخبرنا بحجم المحفظة والباقة المناسبة. نرد عبر واتساب بخطوات البدء.</p>
+            <ul class="rce-bullets">
+              <li data-i18n="formBullet1">موجّه للوسطاء والمسوقين وشركات إدارة الأملاك والمطورين</li>
+              <li data-i18n="formBullet2">عربية بمصطلحات السوق السعودي + إنجليزية احترافية عالمية</li>
+              <li data-i18n="formBullet3">المسار: STARTER ← PRO ← CAMPAIGN ← Graphics House عند الحاجة</li>
+            </ul>
+          </div>
+          <form id="rceForm" class="rce-form reveal" novalidate>
+            <div class="rce-form-grid">
+              <label><span data-i18n="labelName">الاسم</span><input name="name" required /></label>
+              <label><span data-i18n="labelPhone">الجوال (واتساب)</span><input name="phone" type="tel" required /></label>
+              <label class="full"><span data-i18n="labelCompany">الشركة / المكتب</span><input name="company" /></label>
+              <label>
+                <span data-i18n="labelRole">أنت</span>
+                <select name="role">
+                  <option value="broker" data-i18n="roleBroker">وسيط عقاري</option>
+                  <option value="marketer" data-i18n="roleMarketer">مسوّق عقاري مستقل</option>
+                  <option value="pm" data-i18n="rolePm">شركة إدارة أملاك</option>
+                  <option value="developer" data-i18n="roleDev">مطور عقاري</option>
+                  <option value="other" data-i18n="roleOther">أخرى</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="labelPortfolio">حجم محفظة العقارات</span>
+                <select name="portfolio">
+                  <option value="1-5">1–5</option>
+                  <option value="6-20">6–20</option>
+                  <option value="21-50">21–50</option>
+                  <option value="50+">50+</option>
+                </select>
+              </label>
+              <label class="full">
+                <span data-i18n="labelPackage">الباقة المفضلة</span>
+                <select name="package" id="pkgSelect">
+                  <option value="STARTER">STARTER</option>
+                  <option value="PRO" selected>PRO</option>
+                  <option value="CAMPAIGN">CAMPAIGN</option>
+                  <option value="UNSURE" data-i18n="pkgUnsure">غير محدد بعد</option>
+                </select>
+              </label>
+              <label class="full"><span data-i18n="labelNotes">ملاحظات / نوع العقار</span><textarea name="notes" rows="3"></textarea></label>
+            </div>
+            <button class="btn btn-pill btn-on-light" type="submit" data-i18n="formCta">أرسل عبر واتساب</button>
+            <p class="rce-form-note" data-i18n="formNote">بدون عروض مطوّلة. موجز سريع ← بداية سريعة.</p>
+          </form>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-white/5">
-      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
-        <div>
-          <img src="assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="h-8 w-auto brightness-0 invert" width="180" height="88" />
-          <p class="mt-3 max-w-md text-sm text-mute" data-i18n="footerAbout">
-            Bees Motion sells speed + content + leads — not “AI video.” AI is the backend engine inside a productized real estate content system.
-          </p>
+    <a class="wa-float" href="https://wa.me/966502786513" target="_blank" rel="noopener" aria-label="WhatsApp"><span data-i18n="floatingWa">واتساب</span></a>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid" style="grid-template-columns: 1.4fr 1fr">
+          <div>
+            <img src="assets/img/bees-motion-logo.png" alt="Bees Motion" class="footer-logo footer-logo--light" width="680" height="330" />
+            <p style="max-width: 28rem; margin-top: 0.75rem" data-i18n="footerAbout">بيزموشن تحوّل صور العقار إلى محتوى تسويقي جاهز للنشر والإعلان وتوليد العملاء. الذكاء الاصطناعي أداة داخلية — والمنتج هو نظام المحتوى.</p>
+          </div>
+          <div>
+            <strong style="color: #fff; display: block; margin-bottom: 12px" data-i18n="footerLinks">روابط</strong>
+            <div class="footer-links">
+              <a href="/">Bees Motion</a>
+              <a href="https://3dgraphicshouse.com/" target="_blank" rel="noopener">Graphics House</a>
+              <a href="https://www.tasamify.com/" target="_blank" rel="noopener" data-i18n="footerGroup">مجموعة تسامي</a>
+            </div>
+          </div>
         </div>
-        <div class="space-y-3">
-          <p class="footer-affiliation inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1.5 text-xs text-white/75">
-            <span data-i18n="footerAffix">A company within</span>
-            <a href="https://www.tasamify.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-bold text-gold-soft hover:text-white">
-              <span data-i18n="footerGroup">Tasami Group</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3 w-3" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-            </a>
-          </p>
-          <p class="text-xs text-mute">© <span id="year"></span> Bees Motion · <a href="/" class="hover:text-white">beesmotion.com</a></p>
+        <div class="footer-bottom">
+          <div class="footer-bottom-meta">
+            <p class="footer-affiliation" data-i18n-html="footerAffHtml">شركة ضمن <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">مجموعة تسامي<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+            <span>© <span id="year"></span> Bees Motion</span>
+          </div>
+          <a href="https://beesmotion.com">beesmotion.com</a>
         </div>
       </div>
     </footer>
-
-    <a class="wa-float inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-bold text-ink shadow-lg hover:brightness-110" href="https://wa.me/966502786513" target="_blank" rel="noopener" aria-label="WhatsApp">
-      WhatsApp
-    </a>
 
     <script>
       (function () {
@@ -524,13 +383,14 @@
         var KEY = "bm-rce-lang";
         var I18N = {
           ar: {
+            skip: "تخطي إلى المحتوى",
             brandSub: "محرك المحتوى العقاري",
             navHow: "كيف تعمل",
             navAngles: "زوايا المحتوى",
             navPackages: "الباقات",
             navFaq: "الأسئلة",
             ctaNav: "ابدأ الآن",
-            heroEyebrow: "بيزموشن · خدمة مصغّرة قابلة للتكرار",
+            heroEyebrow: "بيزموشن · خدمة محتوى عقاري",
             heroTitle: "حوّل صور عقارك إلى محتوى تسويقي يلفت الانتباه ويقود العملاء إليك.",
             heroSub: "توقف عن إضاعة الوقت والميزانية على التصوير التقليدي لكل وحدة. نحوّل صور العقار المتوفرة إلى فيديوهات قصيرة احترافية وصفحات هبوط جاهزة للإعلان وتوليد العملاء.",
             heroCta: "أرسل صور عقارك وابدأ بأول Reel",
@@ -592,8 +452,8 @@
             s4d: "صفحات هبوط اختيارية وCTA واتساب يحوّلان المشاهدة إلى استفسار.",
             honestyNote: "الصدق البصري: نحوّك ونحسّن الأصول الحقيقية للعقار. لا نخترع غرفًا أو إطلالات أو مساحات أو مرافق غير موجودة.",
             pkgTag: "الباقات",
-            pkgTitle: "ابدأ صغيرًا. انتقل للاشتراك. توسّع للحملات.",
-            pkgSub: "مصمّمة للكاش فلو: دخول منخفض التكلفة ← اشتراك شهري ← حملات عالية القيمة.",
+            pkgTitle: "ابدأ بعقار واحد. ثم انتقل للاشتراك الشهري أو الحملات.",
+            pkgSub: "مسار واضح للنمو: تجربة أولى، ثم محتوى شهري مستمر، ثم حملات للمشاريع الكبرى.",
             starterTag: "طلب لمرة واحدة",
             starterWho: "عقار واحد · إثبات قيمة سريع",
             starter1: "٣ Reels من عقار واحد",
@@ -602,7 +462,7 @@
             starter4: "نافذة تسليم سريعة",
             starter5: "جولة تعديلات محدودة",
             starterCta: "ابدأ بـ STARTER",
-            proBadge: "الأفضل للكاش فلو",
+            proBadge: "الأكثر طلبًا",
             proTag: "اشتراك شهري",
             proWho: "حتى ٥ عقارات شهريًا",
             pro1: "١٢–١٥ Reel كل شهر",
@@ -619,8 +479,9 @@
             camp4: "إبداعات Retargeting",
             camp5: "إدارة إعلانات كخدمة إضافية",
             campCta: "خطّط حملة CAMPAIGN",
-            addonsTitle: "خدمات إضافية ترفع قيمة الطلب",
-            addonsSub: "نبقي المحرك الأساسي خفيفًا، ونوسّع بالخدمات التي تزيد الهامش وقيمة العميل.",
+            addonsTag: "إضافات",
+            addonsTitle: "خدمات إضافية عند الحاجة",
+            addonsSub: "نبقي الخدمة الأساسية سريعة وواضحة، ونضيف ما يرفع قيمة النتيجة.",
             add1: "Reel إضافي",
             add2: "Landing Page إضافية",
             add3: "كتابة محتوى ونسخ إعلانية",
@@ -629,7 +490,7 @@
             add6: "نسخ ثنائية اللغة (عربي / إنجليزي)",
             ghNote: "تحتاج CGI أو 3D أو تصورًا معماريًا متقدمًا؟ نحوّلك بسلاسة إلى الشركة الشقيقة Graphics House.",
             faqTag: "الثقة والأسئلة",
-            faqTitle: "إجابات واضحة قبل الشراء.",
+            faqTitle: "إجابات واضحة قبل البدء.",
             honestyTitle: "سياسة الصدق البصري",
             honestyBody: "الذكاء الاصطناعي يحرّك ويعدّل ويحسّن الأصول الحقيقية — ولا يختلق غرفًا أو نوافذ أو إطلالات أو تشطيبات أو مرافق غير موجودة. أي تصور Conceptual يُوضَّح بوضوح.",
             f1q: "هل أحتاج تصويرًا احترافيًا؟",
@@ -642,6 +503,7 @@
             f4a: "ليس افتراضيًا. إدارة Meta وTikTok وSnapchat متاحة كإضافة.",
             f5q: "كم عدد التعديلات؟",
             f5a: "جولة تعديلات محدودة مشمولة. الجولات الإضافية تُسعَّر منفصلًا لحماية سرعة التسليم.",
+            formTag: "ابدأ الآن",
             formTitle: "أرسل صور عقارك وابدأ بأول Reel.",
             formSub: "أخبرنا بحجم المحفظة والباقة المناسبة. نرد عبر واتساب بخطوات البدء.",
             formBullet1: "موجّه للوسطاء والمسوقين وشركات إدارة الأملاك والمطورين",
@@ -662,21 +524,24 @@
             labelNotes: "ملاحظات / نوع العقار",
             formCta: "أرسل عبر واتساب",
             formNote: "بدون عروض مطوّلة. موجز سريع ← بداية سريعة.",
-            footerAbout: "بيزموشن تبيع السرعة + المحتوى + العملاء — وليست «فيديو بالذكاء الاصطناعي». الذكاء الاصطناعي محرك خلفي داخل نظام محتوى عقاري منتج.",
-            footerAffix: "شركة ضمن",
+            floatingWa: "واتساب",
+            footerAbout: "بيزموشن تحوّل صور العقار إلى محتوى تسويقي جاهز للنشر والإعلان وتوليد العملاء. الذكاء الاصطناعي أداة داخلية — والمنتج هو نظام المحتوى.",
+            footerLinks: "روابط",
             footerGroup: "مجموعة تسامي",
+            footerAffHtml: 'شركة ضمن <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">مجموعة تسامي<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>',
             metaTitle: "محرك المحتوى العقاري | بيزموشن",
-            metaDesc: "حوّل صور عقارك إلى Reels وصفحات هبوط جاهزة للنشر والإعلان وتوليد العملاء. خدمة مصغّرة سريعة من بيزموشن للوسطاء والمسوقين والمطورين.",
+            metaDesc: "حوّل صور عقارك إلى Reels وصفحات هبوط جاهزة للنشر والإعلان وتوليد العملاء. خدمة سريعة من بيزموشن للوسطاء والمسوقين والمطورين.",
             waPrefix: "طلب محرك المحتوى العقاري",
           },
           en: {
+            skip: "Skip to content",
             brandSub: "Real Estate Content Engine",
             navHow: "How it Works",
             navAngles: "Content Angles",
             navPackages: "Packages",
             navFaq: "FAQ",
             ctaNav: "Get Started",
-            heroEyebrow: "Bees Motion · Productized Service",
+            heroEyebrow: "Bees Motion · Real Estate Content",
             heroTitle: "Turn Your Property Photos Into a High-Converting Content Engine.",
             heroSub: "Stop wasting time and budget on traditional shoots. We transform your existing property photos into professional, ready-to-advertise short-form videos and lead-gen landing pages.",
             heroCta: "Send Your Property Photos & Start Your First Reel",
@@ -687,7 +552,7 @@
             stat2l: "Angles per property",
             stat3v: "9:16",
             stat3l: "Ready for Reels & Ads",
-            demoTag: "Demo Reel Mock",
+            demoTag: "Content Preview",
             demoTitle: "Property photos → publish-ready content",
             demoChip1: "Tour",
             demoChip2: "Offer",
@@ -695,7 +560,7 @@
             demoBadge: "Visual Honesty ✓",
             flowMini: "Photos → Content → Landing → Leads",
             problemTag: "The Problem",
-            problemTitle: "You have inventory. You don’t have a content engine.",
+            problemTitle: "You have inventory — but no content engine.",
             problem1: "Brokers and marketers manage many units — but content stays static.",
             problem2: "Traditional video per property is slow and expensive.",
             problem3: "One ad goes live… then the listing disappears from the feed.",
@@ -705,7 +570,7 @@
             solutionBody: "Send your property assets. We build publish-ready short content, CTAs, and optional landing pages. You publish, advertise, and capture leads — without reinventing production for every listing.",
             solChip1: "Speed",
             solChip2: "Repeatability",
-            solChip3: "Lead Utility",
+            solChip3: "Lead Generation",
             solChip4: "Visual Honesty",
             anglesTag: "8 Content Angles",
             anglesTitle: "One property. Multiple marketing shots.",
@@ -738,22 +603,22 @@
             s4d: "Optional landing pages and WhatsApp CTAs turn attention into inquiries.",
             honestyNote: "Visual Honesty: we animate and enhance real property assets. We do not invent rooms, views, layouts, or amenities that don’t exist.",
             pkgTag: "Packages",
-            pkgTitle: "Start small. Scale to monthly. Expand to campaigns.",
-            pkgSub: "Designed for cash flow: low-ticket entry → recurring subscription → high-ticket campaigns.",
+            pkgTitle: "Start with one property. Then move to monthly or campaigns.",
+            pkgSub: "A clear growth path: first trial, then ongoing monthly content, then campaigns for major projects.",
             starterTag: "One-Off",
-            starterWho: "1 property · first proof of value",
+            starterWho: "1 property · fast proof of value",
             starter1: "3 Reels from one property",
             starter2: "Multiple content angles",
-            starter3: "CTA + WhatsApp prompt on each Reel",
+            starter3: "CTA + WhatsApp on each Reel",
             starter4: "Fast delivery window",
             starter5: "Limited revision round",
-            starterCta: "Start with Starter",
-            proBadge: "Best for Cash Flow",
+            starterCta: "Start with STARTER",
+            proBadge: "Most Popular",
             proTag: "Monthly Subscription",
             proWho: "Up to 5 properties / month",
             pro1: "12–15 Reels every month",
             pro2: "Core hooks + captions",
-            pro3: "Landing pages included (per plan)",
+            pro3: "Landing pages included",
             pro4: "Publish-ready packaging",
             pro5: "Monthly performance snapshot",
             proCta: "Start PRO Subscription",
@@ -764,9 +629,10 @@
             camp3: "Multi-ad copy variants",
             camp4: "Retargeting creatives",
             camp5: "Ad management as add-on",
-            campCta: "Plan a Campaign",
-            addonsTitle: "Add-ons that grow the ticket size",
-            addonsSub: "Keep the core engine lean. Expand with services that increase margin and client lifetime value.",
+            campCta: "Plan a CAMPAIGN",
+            addonsTag: "Add-ons",
+            addonsTitle: "Extra services when you need them",
+            addonsSub: "Keep the core offer fast and clear — add only what improves the outcome.",
             add1: "Extra Reels",
             add2: "Extra Landing Pages",
             add3: "Copywriting & Ad Copy",
@@ -775,24 +641,25 @@
             add6: "Bilingual versions (AR / EN)",
             ghNote: "Need advanced CGI, 3D, or architectural visualization? We refer seamlessly to our sister company, Graphics House.",
             faqTag: "Trust & FAQ",
-            faqTitle: "Clear answers before you buy.",
+            faqTitle: "Clear answers before you start.",
             honestyTitle: "Visual Honesty Policy",
             honestyBody: "AI is used to animate, edit, and enhance real assets — never to fabricate rooms, windows, views, finishes, or amenities. If a visual is conceptual, it will be labeled clearly.",
             f1q: "Do I need a professional shoot?",
-            f1a: "No. Existing listing photos are enough for most Starter and PRO deliveries. Field shoots are available as an add-on.",
+            f1a: "No. Existing listing photos are enough for most STARTER and PRO deliveries. Field shoots are available as an add-on.",
             f2q: "Can we use only the photos I already have?",
             f2a: "Yes. We run an asset check first and select the strongest sequence for motion and storytelling.",
             f3q: "How fast is delivery?",
-            f3a: "Starter typically moves in 24–72 hours after complete assets. PRO runs on a monthly content calendar.",
+            f3a: "STARTER typically moves in 24–72 hours after complete assets. PRO runs on a monthly content calendar.",
             f4q: "Does the package include ad management?",
             f4a: "Not by default. Media buying for Meta, TikTok, and Snapchat is available as an add-on.",
             f5q: "How many revisions are included?",
             f5a: "A limited revision round is included. Extra rounds are priced separately to protect delivery speed.",
+            formTag: "Get Started",
             formTitle: "Send your property photos and start your first Reel.",
             formSub: "Tell us your portfolio size and preferred package. We’ll reply on WhatsApp with next steps.",
             formBullet1: "Built for brokers, marketers, property managers, and developers",
             formBullet2: "Saudi-market Arabic terms + global English terminology",
-            formBullet3: "Path: Starter → PRO → Campaign → Graphics House when needed",
+            formBullet3: "Path: STARTER → PRO → CAMPAIGN → Graphics House when needed",
             labelName: "Name",
             labelPhone: "Phone (WhatsApp)",
             labelCompany: "Company / Office",
@@ -808,11 +675,13 @@
             labelNotes: "Notes / property type",
             formCta: "Send via WhatsApp",
             formNote: "No long proposals. Fast brief → fast start.",
-            footerAbout: "Bees Motion sells speed + content + leads — not “AI video.” AI is the backend engine inside a productized real estate content system.",
-            footerAffix: "A company within",
+            floatingWa: "WhatsApp",
+            footerAbout: "Bees Motion turns property photos into marketing content ready to publish, advertise, and generate leads. AI is an internal tool — the product is the content system.",
+            footerLinks: "Links",
             footerGroup: "Tasami Group",
+            footerAffHtml: 'A company within <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">Tasami Group<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>',
             metaTitle: "Real Estate Content Engine | Bees Motion",
-            metaDesc: "Turn property photos into ready-to-publish Reels, ads, and lead-gen landing pages. A fast productized service by Bees Motion for brokers, marketers, and developers.",
+            metaDesc: "Turn property photos into ready-to-publish Reels, ads, and lead-gen landing pages. A fast Bees Motion service for brokers, marketers, and developers.",
             waPrefix: "Real Estate Content Engine inquiry",
           },
         };
@@ -830,15 +699,18 @@
           var dict = I18N[lang] || I18N.ar;
           document.documentElement.lang = lang;
           document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+          document.body.classList.toggle("lang-ar", lang === "ar");
+          document.body.classList.toggle("lang-en", lang === "en");
           document.querySelectorAll("[data-i18n]").forEach(function (el) {
             var key = el.getAttribute("data-i18n");
             if (dict[key] != null) el.textContent = dict[key];
           });
-          document.querySelectorAll(".lang-btn").forEach(function (btn) {
-            var active = btn.getAttribute("data-lang") === lang;
-            btn.classList.toggle("bg-gold", active);
-            btn.classList.toggle("text-ink", active);
-            btn.classList.toggle("text-mute", !active);
+          document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n-html");
+            if (dict[key] != null) el.innerHTML = dict[key];
+          });
+          document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
+            btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
           });
           if (dict.metaTitle) document.title = dict.metaTitle;
           var meta = document.querySelector('meta[name="description"]');
@@ -848,10 +720,41 @@
           } catch (e) {}
         }
 
-        document.querySelectorAll(".lang-btn").forEach(function (btn) {
+        document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
           btn.addEventListener("click", function () {
             applyLang(btn.getAttribute("data-lang"));
           });
+        });
+
+        var menuBtn = document.getElementById("menuBtn");
+        var mobileNav = document.getElementById("mobileNav");
+        if (menuBtn && mobileNav) {
+          menuBtn.addEventListener("click", function () {
+            var open = !mobileNav.classList.contains("open");
+            mobileNav.classList.toggle("open", open);
+            menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+            document.body.classList.toggle("nav-open", open);
+          });
+          mobileNav.querySelectorAll("a").forEach(function (a) {
+            a.addEventListener("click", function () {
+              mobileNav.classList.remove("open");
+              menuBtn.setAttribute("aria-expanded", "false");
+              document.body.classList.remove("nav-open");
+            });
+          });
+        }
+
+        var header = document.querySelector(".site-header");
+        if (header) {
+          var onScroll = function () {
+            header.classList.toggle("scrolled", window.scrollY > 8);
+          };
+          window.addEventListener("scroll", onScroll, { passive: true });
+          onScroll();
+        }
+
+        document.querySelectorAll(".reveal").forEach(function (el) {
+          el.classList.add("visible");
         });
 
         document.querySelectorAll(".pkg-cta").forEach(function (btn) {
@@ -878,8 +781,7 @@
             (lang === "ar" ? "الباقة" : "Package") + ": " + (fd.get("package") || ""),
             (lang === "ar" ? "ملاحظات" : "Notes") + ": " + (fd.get("notes") || ""),
           ];
-          var url = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
-          window.open(url, "_blank", "noopener");
+          window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
         });
 
         document.getElementById("year").textContent = new Date().getFullYear();
