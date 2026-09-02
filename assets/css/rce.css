@@ -919,6 +919,23 @@ a.ai-engine:hover {
   line-height: 1.65;
 }
 
+.ai-quote {
+  margin: 0 0 2rem;
+  max-width: 44rem;
+  padding: 1.25rem 1.5rem;
+  border-inline-start: 3px solid var(--gold, #e5a823);
+  background: rgba(229, 168, 35, 0.08);
+  border-radius: 0 16px 16px 0;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.65;
+  color: var(--rce-ink);
+}
+
+html[dir="rtl"] .ai-quote {
+  border-radius: 16px 0 0 16px;
+}
+
 .ai-quick-links {
   display: flex;
   flex-wrap: wrap;
