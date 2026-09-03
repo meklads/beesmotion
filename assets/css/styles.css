@@ -9905,8 +9905,11 @@ body:has(.bm-hero--tri) .site-header {
 
 /* ===== Homepage dual-pane hero: PropMotion | MedMotion ===== */
 .bm-hero--dual {
+  --hero-medical-blue: #b7d6e6;
+  --hero-medical-blue-deep: #9fc7db;
+  --hero-diagonal: clamp(2.75rem, 5.5vw, 4.75rem);
   margin-top: var(--header-h, 72px);
-  padding: 0;
+  padding: clamp(1.35rem, 3.2vw, 2.35rem) 0 0;
   background: #ffffff;
   border-bottom: none;
   overflow: hidden;
@@ -9914,28 +9917,76 @@ body:has(.bm-hero--tri) .site-header {
 }
 
 .hero-dual {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100svh - var(--header-h, 72px));
+  min-height: calc(100svh - var(--header-h, 72px) - clamp(1.35rem, 3.2vw, 2.35rem));
   width: 100%;
+  isolation: isolate;
+}
+
+/* Soft diagonal seam between the two markets */
+.hero-dual::after {
+  content: "";
+  position: absolute;
+  top: -4%;
+  bottom: -4%;
+  inset-inline-start: calc(50% - 1px);
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 70, 95, 0.06),
+    rgba(15, 70, 95, 0.22) 45%,
+    rgba(15, 70, 95, 0.06)
+  );
+  transform: skewX(-10deg);
+  z-index: 4;
+  pointer-events: none;
 }
 
 .hero-dual-pane {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: clamp(0.85rem, 1.8vw, 1.25rem);
-  padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.35rem, 3.2vw, 2.75rem);
   min-width: 0;
 }
 
 .hero-dual-pane--prop {
   background: #ffffff;
+  z-index: 2;
+  padding-inline-end: calc(clamp(1.35rem, 3.2vw, 2.75rem) + 1.25rem);
+}
+
+/* White pane extends past center on a diagonal */
+.hero-dual-pane--prop::after {
+  content: "";
+  position: absolute;
+  top: -6%;
+  bottom: -6%;
+  inset-inline-end: calc(var(--hero-diagonal) * -1);
+  width: calc(var(--hero-diagonal) * 2);
+  background: #ffffff;
+  transform: skewX(-10deg);
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: 10px 0 28px rgba(15, 70, 95, 0.06);
 }
 
 .hero-dual-pane--med {
-  background: #eef6f9;
+  background:
+    linear-gradient(
+      155deg,
+      #c9e4f0 0%,
+      var(--hero-medical-blue) 48%,
+      var(--hero-medical-blue-deep) 100%
+    );
+  padding-inline-start: calc(clamp(1.35rem, 3.2vw, 2.75rem) + 1.5rem);
+  z-index: 1;
 }
 
 .hero-dual-copy {
@@ -9957,7 +10008,7 @@ body:has(.bm-hero--tri) .site-header {
 }
 
 .hero-dual-pane--prop .hero-dual-kicker { color: #8a5a00; }
-.hero-dual-pane--med .hero-dual-kicker { color: #0f4c63; }
+.hero-dual-pane--med .hero-dual-kicker { color: #0a5570; }
 
 .hero-dual-brand {
   margin: 0 0 0.65rem;
@@ -9977,7 +10028,8 @@ body:has(.bm-hero--tri) .site-header {
 }
 
 .hero-dual-pane--med .hero-dual-brand {
-  border-color: rgba(15, 90, 120, 0.28);
+  border-color: rgba(10, 85, 112, 0.32);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .hero-dual-brand sup {
@@ -10001,7 +10053,11 @@ body:has(.bm-hero--tri) .site-header {
 }
 
 .hero-dual-pane--med .hero-dual-title {
-  color: #0f4c63;
+  color: #0a5570;
+}
+
+.hero-dual-pane--med .hero-dual-sub {
+  color: rgba(15, 45, 58, 0.78);
 }
 
 .hero-dual-sub {
@@ -10134,6 +10190,7 @@ body:has(.bm-hero--tri) .site-header {
 @media (max-width: 980px) {
   .bm-hero--dual {
     min-height: 0;
+    padding-top: 1.15rem;
   }
 
   .hero-dual {
@@ -10141,13 +10198,32 @@ body:has(.bm-hero--tri) .site-header {
     min-height: 0;
   }
 
+  .hero-dual::after {
+    display: none;
+  }
+
   .hero-dual-pane {
-    padding: 1.5rem 1.15rem 1.35rem;
+    padding: 1.65rem 1.15rem 1.45rem;
     gap: 1rem;
   }
 
-  .hero-dual-pane--prop { order: 1; }
-  .hero-dual-pane--med { order: 2; }
+  .hero-dual-pane--prop {
+    order: 1;
+    padding-inline-end: 1.15rem;
+  }
+
+  .hero-dual-pane--prop::after {
+    display: none;
+  }
+
+  .hero-dual-pane--med {
+    order: 2;
+    padding-inline-start: 1.15rem;
+    padding-top: 2.35rem;
+    /* Diagonal handoff when stacked */
+    clip-path: polygon(0 1.65rem, 100% 0, 100% 100%, 0 100%);
+    margin-top: -0.35rem;
+  }
 
   .hero-dual-media {
     max-width: min(100%, 380px);
