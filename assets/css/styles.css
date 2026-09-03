@@ -10793,3 +10793,19 @@ body.lang-en .axis-card h3 {
 .page-case-study .bm-hero--case {
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
+
+/* Medical album on case-study hub */
+.page-case-hub .cs-med-album {
+  padding: clamp(2.25rem, 4.5vw, 3.5rem) 0;
+  border-top: 1px solid rgba(12, 13, 16, 0.06);
+}
+
+.page-case-hub .cs-med-album .creative-studio {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.page-case-hub .cs-med-album .creative-album {
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+}
