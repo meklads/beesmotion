@@ -15,3 +15,25 @@
 /case-study /case-study-imc 301
 /case-study.html /case-study-imc 301
 /case-study/ /case-study-imc 301
+
+# Incomplete service placeholders → parent hubs
+/services/medical-content /medmotion/ 301
+/services/medical-content/ /medmotion/ 301
+/services/healthcare-brand /medmotion/ 301
+/services/healthcare-brand/ /medmotion/ 301
+/services/campaign-content /medmotion/ 301
+/services/campaign-content/ /medmotion/ 301
+/services/patient-experience /medmotion/ 301
+/services/patient-experience/ /medmotion/ 301
+/services/property-content /real-estate-content-engine 301
+/services/property-content/ /real-estate-content-engine 301
+/services/project-marketing /propmotion/ 301
+/services/project-marketing/ /propmotion/ 301
+/services/campaign-leads /propmotion/ 301
+/services/campaign-leads/ /propmotion/ 301
+/services/photography-editing /propmotion/ 301
+/services/photography-editing/ /propmotion/ 301
+/services/content-activation /propmotion/ 301
+/services/content-activation/ /propmotion/ 301
+/services/visualisation-cgi /propmotion/ 301
+/services/visualisation-cgi/ /propmotion/ 301
