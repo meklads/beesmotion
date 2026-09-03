@@ -11029,9 +11029,11 @@ body.lang-en .axis-card h3 {
 .series-split-still {
   margin: 0;
   display: block;
+  position: relative;
 }
 
-.series-split-still > img {
+.series-split-still > img,
+.series-split-still .yt-facade img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -11850,7 +11852,8 @@ body.lang-ar .lp-enquire-title {
 .page-case-study .creative-album-thumb img,
 .page-case-study .creative-album-player img,
 .page-case-study .bm-video-crop img,
-.page-case-study .series-split-still > img {
+.page-case-study .series-split-still > img,
+.page-case-study .series-split-still .yt-facade img {
   width: 100%;
   height: 100%;
   object-fit: cover;
