@@ -643,3 +643,90 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
 .med-xp-unit.video-modal {
   background: rgba(0,0,0,0.93);
 }
+
+/* Tasami Group trust band on MedMotion */
+.page-hub--med .med-group-trust {
+  padding: clamp(2.25rem, 4.5vw, 3.25rem) 0;
+  background: linear-gradient(180deg, #0c2834 0%, #0a3d52 100%);
+  color: #f4f8fa;
+}
+.page-hub--med .med-group-trust-inner {
+  display: grid;
+  gap: 1.35rem;
+}
+.page-hub--med .med-group-trust-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(183, 214, 230, 0.9);
+}
+html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
+  letter-spacing: 0;
+  text-transform: none;
+}
+.page-hub--med .med-group-trust-title {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #fff;
+}
+.page-hub--med .med-group-trust-body {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(244, 248, 250, 0.72);
+}
+.page-hub--med .med-group-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.page-hub--med .med-group-chip {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.05rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(183, 214, 230, 0.18);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.page-hub--med a.med-group-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 168, 76, 0.45);
+  background: rgba(255, 255, 255, 0.09);
+}
+.page-hub--med .med-group-chip--active {
+  background: rgba(10, 85, 112, 0.35);
+  border-color: rgba(183, 214, 230, 0.35);
+}
+.page-hub--med .med-group-chip strong {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+}
+.page-hub--med .med-group-chip span {
+  font-size: 0.85rem;
+  color: rgba(244, 248, 250, 0.62);
+}
+.page-hub--med .med-group-trust-link {
+  justify-self: start;
+  color: #c9a84c;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.page-hub--med .med-group-trust-link:hover {
+  color: #e0c06a;
+}
+@media (max-width: 720px) {
+  .page-hub--med .med-group-trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
