@@ -13672,3 +13672,15 @@ body.lang-ar .med-pillar-panel p {
   opacity: 0.65;
   font-size: 0.85em;
 }
+
+
+.series-all-lines {
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+  max-width: 48rem;
+}
+.series-all-body {
+  margin: 0.35rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(20, 40, 30, 0.72);
+}
