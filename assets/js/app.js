@@ -200,7 +200,7 @@
       } catch (_) {}
       const popup = window.open(waUrl, "_blank", "noopener");
       if (!popup) {
-        /* popup blocked — thank-you page will offer WhatsApp again */
+        /* popup blocked. thank-you page will offer WhatsApp again */
       }
       window.location.href = "thank-you.html";
     });
@@ -538,7 +538,7 @@
   function initReadyQuiz() {
     const quiz = document.getElementById("readyQuiz");
     if (!quiz) return;
-    const items = [...quiz.querySelectorAll(".sol-quiz-item")];
+    const items = [..quiz.querySelectorAll(".sol-quiz-item")];
     const result = document.getElementById("readyResult");
     const scoreEl = document.getElementById("readyScore");
     const progressBar = document.getElementById("readyProgress");
