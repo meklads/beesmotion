@@ -12300,7 +12300,8 @@ body.lang-ar .lp-legacy-title {
   background:
     radial-gradient(ellipse 95% 70% at 50% 110%, rgba(18, 52, 40, 0.55), transparent 58%),
     linear-gradient(165deg, #071510 0%, #040e0b 42%, #0a1c14 100%);
-  padding: clamp(2.25rem, 5.5vh, 3.75rem) var(--gutter);
+  /* Extra room so the tilted frame isn’t clipped */
+  padding: clamp(2.75rem, 6.5vh, 4.25rem) var(--gutter);
 }
 
 /* Soft caustic ribbons — visible green light ripples */
@@ -12442,17 +12443,16 @@ body.lang-ar .lp-legacy-title {
   }
 }
 
-/* Centered composition: video + copy as one mid unit */
+/* Centered composition — aligned to body container width */
 .bm-hero-v2-stage {
   position: relative;
   z-index: 1;
-  width: max-content;
-  max-width: min(100%, 72rem);
+  width: min(100%, var(--container));
+  max-width: var(--container);
   margin-inline: auto;
   display: grid;
-  /* Fixed track — auto collapsed to 0 when children are absolute */
-  grid-template-columns: minmax(320px, 468px) minmax(260px, 32rem);
-  gap: clamp(1.5rem, 3.2vw, 2.5rem);
+  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+  gap: clamp(2.75rem, 6vw, 5.25rem);
   align-items: center;
   justify-content: center;
   direction: ltr;
@@ -12462,15 +12462,29 @@ body.lang-ar .lp-legacy-title {
   position: relative;
   z-index: 0;
   width: 100%;
-  min-width: 320px;
-  min-height: 468px;
+  min-width: 280px;
+  min-height: 440px;
   aspect-ratio: 3 / 4;
-  max-height: min(72vh, 728px);
+  max-height: min(70vh, 680px);
   border-radius: 18px;
   overflow: hidden;
   background: #0a0a0a;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  justify-self: stretch;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  justify-self: start;
+  /* Gentle left tilt — cool without competing with copy */
+  transform: rotate(-5deg);
+  transform-origin: center center;
+  margin-block: 0.75rem;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.bm-hero-v2-media:hover {
+  transform: rotate(-3.5deg) translateY(-4px);
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .bm-hero-v2-media .bm-hero-reel {
@@ -12531,8 +12545,9 @@ body.lang-ar .lp-legacy-title {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 32rem;
+  max-width: 36rem;
   margin: 0;
+  margin-inline-start: auto;
   padding: 0;
   color: #f7f6f2;
   display: grid;
@@ -12615,9 +12630,35 @@ body.lang-ar .bm-hero-v2-inner {
 .bm-hero-v2-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  gap: 0.85rem;
   margin-top: 1.1rem;
   justify-content: flex-start;
+}
+
+/* Primary CTA was invisible on dark (btn-on-dark had no base styles) */
+.bm-hero--v2 .btn-on-dark {
+  background: #f7f6f2;
+  color: #0c1210;
+  border: 1.5px solid #f7f6f2;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.bm-hero--v2 .btn-on-dark:hover {
+  background: #fff;
+  color: #0c1210;
+  border-color: #fff;
+}
+
+.bm-hero--v2 .btn-outline-light {
+  background: transparent;
+  color: #f7f6f2;
+  border: 1.5px solid rgba(247, 246, 242, 0.88);
+}
+
+.bm-hero--v2 .btn-outline-light:hover {
+  background: rgba(247, 246, 242, 0.1);
+  border-color: #fff;
+  color: #fff;
 }
 
 html[dir="rtl"] .bm-hero-v2-eyebrow,
@@ -12641,24 +12682,39 @@ body.lang-ar .bm-hero-v2-title {
 
   .bm-hero-v2-stage {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
     width: 100%;
     max-width: 100%;
     justify-items: center;
   }
 
   .bm-hero-v2-media {
-    width: min(100%, 416px);
+    width: min(100%, 360px);
     min-width: 0;
-    min-height: 480px;
-    max-height: min(58vh, 560px);
+    min-height: 440px;
+    max-height: min(54vh, 520px);
     aspect-ratio: 3 / 4;
     border-radius: 16px;
     justify-self: center;
+    transform: rotate(-3.5deg);
+    margin-block: 0.5rem 0.75rem;
+  }
+
+  .bm-hero-v2-media:hover {
+    transform: rotate(-2.5deg) translateY(-2px);
   }
 
   .bm-hero-v2-inner {
     max-width: none;
+    margin-inline-start: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm-hero-v2-media,
+  .bm-hero-v2-media:hover {
+    transform: none;
+    transition: none;
   }
 }
 
