@@ -906,6 +906,24 @@
     });
   }
 
+  function initMedPillars() {
+    const root = document.querySelector(".med-pillars-grid");
+    if (!root) return;
+
+    root.querySelectorAll("[data-pillar-toggle]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".med-pillar");
+        const panel = card && card.querySelector("[data-pillar-panel]");
+        if (!card || !panel) return;
+
+        const willOpen = !card.classList.contains("is-open");
+        card.classList.toggle("is-open", willOpen);
+        btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+        panel.hidden = !willOpen;
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     cleanLegacyHashes();
     initLang();
@@ -923,5 +941,6 @@
     initCaseFilters();
     initSolSticky();
     initReadyQuiz();
+    initMedPillars();
   });
 })();
