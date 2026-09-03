@@ -239,7 +239,7 @@
               `الشركة: ${company}`,
               `القطاع: ${industryLabel}`,
               `الاحتياج: ${needLabel}`,
-              `الهدف: ${objectiveLabel || "، "}`,
+              `الهدف: ${objectiveLabel || ""}`,
               `الطلب: ${message}`,
             ].filter(Boolean)
           : [
