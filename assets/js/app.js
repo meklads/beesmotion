@@ -239,7 +239,7 @@
               `الشركة: ${company}`,
               `القطاع: ${industryLabel}`,
               `الاحتياج: ${needLabel}`,
-              `الهدف: ${objectiveLabel || "—"}`,
+              `الهدف: ${objectiveLabel || "، "}`,
               `الطلب: ${message}`,
             ].filter(Boolean)
           : [
@@ -327,7 +327,7 @@
     iframe.style.setProperty("pointer-events", "none", "important");
   }
 
-  /** Fit full 16:9 frame inside crop — no top/bottom crop (Graphics House–style clarity). */
+  /** Fit full 16:9 frame inside crop, no top/bottom crop (Graphics House–style clarity). */
   function sizeContainIframe(crop, iframe) {
     const w = crop.clientWidth || crop.offsetWidth;
     const h = crop.clientHeight || crop.offsetHeight;
@@ -356,12 +356,12 @@
     iframe.style.setProperty("pointer-events", "none", "important");
   }
 
-  /** Cover crop with full-bleed 16:9 — fills hero, keeps focal center (e.g. film frame). */
+  /** Cover crop with full-bleed 16:9, fills hero, keeps focal center (e.g. film frame). */
   function sizeCoverIframe(crop, iframe) {
     const w = crop.clientWidth || crop.offsetWidth;
     const h = crop.clientHeight || crop.offsetHeight;
     if (!w || !h) {
-      /* Parent may not have laid out yet — retry once */
+      /* Parent may not have laid out yet, retry once */
       requestAnimationFrame(() => {
         const w2 = crop.clientWidth || crop.offsetWidth;
         const h2 = crop.clientHeight || crop.offsetHeight;

@@ -567,13 +567,6 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   border: 1px solid rgba(10, 85, 112, 0.12);
   background: linear-gradient(165deg, #f7fbfd, #eef5f8);
 }
-.page-hub--med .med-path-card--focus {
-  background: linear-gradient(165deg, #0a5570, #0c2834);
-  border-color: transparent;
-  color: #fff;
-}
-.page-hub--med .med-path-card--focus h3 { color: #fff; }
-.page-hub--med .med-path-card--focus p { color: rgba(255,255,255,0.72); }
 .page-hub--med .med-path-num {
   display: block;
   font-size: 0.72rem;
@@ -582,7 +575,6 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   color: rgba(10, 85, 112, 0.55);
   margin-bottom: 0.55rem;
 }
-.page-hub--med .med-path-card--focus .med-path-num { color: rgba(183,214,230,0.75); }
 .page-hub--med .med-path-card h3 {
   margin: 0 0 0.45rem;
   font-size: 1.08rem;
@@ -594,6 +586,24 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   font-size: 0.92rem;
   line-height: 1.5;
   color: rgba(12,40,52,0.7);
+}
+.page-hub--med .med-path-card--focus {
+  background: linear-gradient(165deg, #0a5570, #0c2834);
+  border-color: transparent;
+  color: #fff;
+}
+.page-hub--med .med-path-card--focus,
+.page-hub--med .med-path-card--focus h3,
+.page-hub--med .med-path-card--focus p,
+.page-hub--med .med-path-card--focus span,
+.page-hub--med .med-path-card--focus strong {
+  color: #fff !important;
+}
+.page-hub--med .med-path-card--focus p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.page-hub--med .med-path-card--focus .med-path-num {
+  color: rgba(183, 214, 230, 0.85) !important;
 }
 
 .page-hub--med .med-xp-services {
