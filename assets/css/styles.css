@@ -12888,6 +12888,47 @@ body.lang-en .work-feature-role {
   font-family: var(--font-en);
 }
 
+.work-feature-proof {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.work-feature-proof li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.55rem;
+  align-items: baseline;
+  padding: 0.35rem 0.55rem;
+  border-radius: 10px;
+  background: rgba(12, 13, 16, 0.04);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: #3d3d3d;
+}
+
+.work-feature-proof strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.work-feature--med .work-feature-proof {
+  background: transparent;
+}
+
+.work-feature--med .work-feature-proof li {
+  background: rgba(10, 85, 112, 0.08);
+}
+
+.work-feature--prop .work-feature-proof li {
+  background: rgba(184, 134, 11, 0.1);
+}
+
 .work-feature-cta {
   margin-top: 0.45rem;
   font-family: var(--font-ar);
@@ -13001,6 +13042,106 @@ body.lang-ar .system-flow--rich li:not(:last-child)::after {
 .caps-note--secondary {
   font-weight: 500;
   color: var(--muted);
+}
+
+.caps-note--solo {
+  max-width: 40rem;
+  margin: 1.25rem auto 0;
+  text-align: center;
+  font-weight: 600;
+  color: #3d5560;
+}
+
+/* Slim engagement strip — not a traditional agency packages wall */
+.engage-strip {
+  padding: clamp(1.5rem, 3.5vw, 2.25rem) 0;
+  background: #f4f1ea;
+  border-block: 1px solid rgba(21, 21, 19, 0.08);
+}
+
+.engage-strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+
+.engage-strip-tag {
+  margin: 0 0 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark, #b8860b);
+}
+
+.engage-strip-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+html[dir="rtl"] .engage-strip-title,
+body.lang-ar .engage-strip-title {
+  font-family: Tajawal, var(--font-ar), sans-serif;
+  letter-spacing: 0;
+}
+
+.engage-strip-paths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.engage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(12, 13, 16, 0.12);
+  background: #fff;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.engage-chip span {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.engage-chip strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.engage-chip:hover {
+  border-color: rgba(12, 13, 16, 0.28);
+  transform: translateY(-1px);
+}
+
+.engage-chip--featured {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.engage-chip--featured span {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 720px) {
+  .engage-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 980px) {
