@@ -1327,6 +1327,8 @@ window.BM_I18N = {
   medLegacyTitle: "A medical content system built for trust",
   medLegacyBody: "MedMotion™ turns scattered hospital posts into connected series patients understand, share, and act on.",
   lpOfferPropHero: "Exclusive launch system · Sell before the build",
+  propLegacyTitle: "A visual sales system built before concrete",
+  propLegacyBody: "PropMotion™ turns projects and properties into cinematic stories investors and buyers feel before the build.",
   csShowcaseMedTitle: "One system. Four pillars. One film language.",
   csShowcaseMedBody: "Writing, branding, specialized production, and lead generation under one medical visual system.",
   csShowcasePropTitle: "One launch language. Four pillars. One cinematic feel.",
