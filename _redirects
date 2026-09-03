@@ -4,6 +4,9 @@
 /ai.html /ai/ 301
 
 # PropMotion landing aliases (extensionless; do NOT rewrite to .html — that loops with CF pretty URLs)
-/prop-motion /real-estate-content-engine 301
-/propmotion /real-estate-content-engine 301
+/prop-motion /propmotion 301
+/propmotion-engine /real-estate-content-engine 301
 /real-estate-content-engine.html /real-estate-content-engine 301
+/med-motion /medmotion 301
+/medmotion.html /medmotion 301
+/propmotion.html /propmotion 301

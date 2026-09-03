@@ -1965,24 +1965,34 @@ body.has-sol-sticky .wa-float {
 
 /* Footer */
 .site-footer {
-  background: var(--ink);
-  color: rgba(255, 255, 255, 0.75);
-  padding: 48px 0 28px;
+  background: #0c0d10;
+  color: rgba(255, 255, 255, 0.72);
+  padding: clamp(2.75rem, 5vw, 3.75rem) 0 1.5rem;
 }
 
-.footer-grid {
+.footer-top {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 32px;
+  grid-template-columns: 1.35fr repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+  padding-bottom: clamp(1.75rem, 3vw, 2.25rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  max-width: 22rem;
 }
 
 .footer-logo {
   display: block;
   height: clamp(40px, 5vw, 52px);
   width: auto;
-  max-width: 240px;
-  margin-bottom: 16px;
+  max-width: 220px;
+  margin: 0;
   object-fit: contain;
   background: transparent;
   opacity: 0.95;
@@ -1992,6 +2002,40 @@ body.has-sol-sticky .wa-float {
   filter: brightness(0) invert(1);
 }
 
+.footer-blurb {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-cta { margin-top: 0.25rem; }
+
+.footer-col-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
 .footer-grid a:hover {
   color: var(--gold-light);
 }
@@ -2028,17 +2072,12 @@ body.has-sol-sticky .wa-float {
   flex-shrink: 0;
 }
 
-[dir="rtl"] .footer-affiliation a svg {
-  transform: scaleX(-1);
-}
-
-.footer-affiliation a:hover {
-  color: #fff;
-}
+[dir="rtl"] .footer-affiliation a svg { transform: scaleX(-1); }
+.footer-affiliation a:hover { color: #fff; }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
+  padding-top: 0;
+  border-top: none;
   font-size: 13px;
   display: flex;
   flex-wrap: wrap;
@@ -2054,14 +2093,20 @@ body.has-sol-sticky .wa-float {
   gap: 0.6rem;
 }
 
-[dir="rtl"] .footer-bottom-meta {
-  align-items: flex-end;
+[dir="rtl"] .footer-bottom-meta { align-items: flex-end; }
+
+.footer-domain {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+.footer-domain:hover { color: var(--gold-light); }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
 }
 
 /* Reveal */
@@ -2131,7 +2176,8 @@ body.has-sol-sticky .wa-float {
   .services-grid {
     grid-template-columns: 1fr;
   }
-  .footer-grid {
+  .footer-grid,
+  .footer-top {
     grid-template-columns: 1fr;
   }
   .mobile-nav {
@@ -10634,4 +10680,66 @@ body.lang-en .axis-card h3 {
 
 .page-svc-soon .site-footer {
   margin-top: 0;
+}
+
+
+/* ===== Sector hub pages ===== */
+.hub-hero {
+  margin-top: var(--header-h);
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+.hub-hero--med {
+  background: linear-gradient(155deg, #c9e4f0 0%, #b7d6e6 48%, #eef6f9 100%);
+}
+
+.hub-hero--prop {
+  background: linear-gradient(155deg, #ffffff 0%, #fff8ea 55%, #ffffff 100%);
+}
+
+.hub-hero-inner {
+  max-width: 44rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.hub-hero-inner .font-headline-xl {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.hub-hero-inner .font-headline-xl sup {
+  font-size: 0.42em;
+  position: relative;
+  top: -0.9em;
+  margin-left: 0.08em;
+  color: var(--gold-dark);
+}
+
+.hub-hero--med .hub-hero-inner .font-headline-xl sup { color: #0a5570; }
+
+.hub-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.hub-services {
+  border-top: none;
+}
+
+.page-hub--med .sector-detail--med,
+.page-hub--prop .sector-detail--prop {
+  padding-top: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
 }
