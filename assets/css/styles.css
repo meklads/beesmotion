@@ -12277,12 +12277,12 @@ body.lang-ar .lp-legacy-title {
   padding: clamp(2.25rem, 5.5vh, 3.75rem) var(--gutter);
 }
 
-/* Centered composition: video left · copy right */
+/* Centered composition: narrower video frame · copy right */
 .bm-hero-v2-stage {
-  width: min(100%, 72rem);
+  width: min(100%, 68rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
-  gap: clamp(1.5rem, 3.5vw, 3rem);
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.25rem);
   align-items: center;
   direction: ltr;
 }
@@ -12290,14 +12290,15 @@ body.lang-ar .lp-legacy-title {
 .bm-hero-v2-media {
   position: relative;
   z-index: 0;
-  width: 100%;
-  /* Shorter than hero — does not touch top/bottom */
-  aspect-ratio: 16 / 10;
-  max-height: min(58vh, 520px);
+  /* Narrower frame — video scales up to fill it completely */
+  width: min(100%, 380px);
+  aspect-ratio: 3 / 4;
+  max-height: min(62vh, 560px);
   border-radius: 18px;
   overflow: hidden;
-  background: #111;
+  background: #0a0a0a;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  justify-self: end;
 }
 
 .bm-hero-v2-media .bm-hero-reel {
@@ -12315,7 +12316,7 @@ body.lang-ar .lp-legacy-title {
   height: 100%;
   border-radius: 0;
   overflow: hidden;
-  background: #0c0c0a;
+  background: #0a0a0a;
 }
 
 .bm-hero--v2 .bm-hero-v2-crop .yt-facade,
@@ -12328,7 +12329,7 @@ body.lang-ar .lp-legacy-title {
   border: 0;
   padding: 0;
   margin: 0;
-  background: transparent;
+  background: #0a0a0a;
   cursor: default;
 }
 
@@ -12336,8 +12337,8 @@ body.lang-ar .lp-legacy-title {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 138%;
-  height: 138%;
+  width: 165%;
+  height: 165%;
   object-fit: cover;
   object-position: center center;
   transform: translate(-50%, -50%);
@@ -12468,12 +12469,15 @@ body.lang-ar .bm-hero-v2-title {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     width: 100%;
+    justify-items: center;
   }
 
   .bm-hero-v2-media {
-    max-height: none;
-    aspect-ratio: 16 / 10;
+    width: min(100%, 320px);
+    max-height: min(52vh, 480px);
+    aspect-ratio: 3 / 4;
     border-radius: 16px;
+    justify-self: center;
   }
 
   .bm-hero-v2-inner {
