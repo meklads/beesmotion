@@ -39,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260903x" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260903y" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -94,39 +94,63 @@
     </nav>
 
     <main id="main">
-      <!-- Brand intro: light, first screen -->
+      <!-- Brand intro -->
       <section class="bm-hero bm-hero--brand" aria-label="Bees Motion">
         <div class="container bm-hero-wrap">
           <div class="bm-brand-intro reveal">
-            <span class="bm-eyebrow" data-i18n="heroTag">MARKETING · CONTENT · AI</span>
+            <p class="bm-brand-kicker" data-i18n="heroTag">MARKETING · CONTENT · AI</p>
             <h1 class="font-headline-xl">
               <span class="brand-mark" dir="ltr">Bees Motion</span>
-              <strong class="bm-hero-em">
-                <span data-i18n="heroTitle">Stories built</span>
-                <span data-i18n="heroTitleEm"> to perform.</span>
-              </strong>
+              <strong class="bm-hero-em" data-i18n="heroLead">Content systems built for markets that demand trust and clarity.</strong>
             </h1>
-            <p class="bm-hero-sub" data-i18n="heroSubShort">Healthcare and real estate. Content systems that move people to act.</p>
+            <p class="bm-hero-sub" data-i18n="heroSubShort">What follows is how we work in real estate and healthcare. Same craft. Different language for each market.</p>
             <div class="hero-ctas">
-              <a class="btn btn-pill btn-on-light" href="#hero-med" data-i18n="ctaExploreHc">Explore Healthcare</a>
-              <a class="btn btn-pill btn-outline-dark" href="#hero-prop" data-i18n="ctaExploreRe">Explore Real Estate</a>
+              <a class="btn btn-pill btn-on-light" href="#hero-prop" data-i18n="heroCtaContinue">Continue</a>
             </div>
-          </div>
-          <div class="hero-caps-bar reveal" aria-label="Focus">
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="navHealthcare">Healthcare</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="navRealEstate">Real Estate</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capMarketing">Marketing</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capContent">Content</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capAi">AI</span></div>
           </div>
         </div>
       </section>
 
-      <!-- Sector hero 1: MedMotion -->
+      <!-- Sector hero 1: PropMotion (first) -->
+      <section class="bm-hero bm-hero--sector bm-hero--prop" id="hero-prop" aria-label="PropMotion">
+        <div class="container bm-hero-wrap">
+          <div class="bm-hero-split reveal">
+            <div class="bm-hero-copy">
+              <span class="bm-eyebrow" data-i18n="sysPropSector">Real estate</span>
+              <h2 class="font-headline-xl">
+                <span class="brand-mark" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
+                <strong class="bm-hero-em" data-i18n="sectorPropTitle">One property. Multiple stories.</strong>
+              </h2>
+              <p class="bm-hero-sub" data-i18n="sectorPropSub">Turn property assets into Reels, landing pages, campaigns, and lead paths. Done-For-You.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-pill btn-on-light" href="#real-estate" data-i18n="sectorPropCta">View real estate services</a>
+                <a class="btn btn-pill btn-outline-dark" href="real-estate-content-engine.html" data-i18n="pillarPropCta">Open Real Estate Engine</a>
+              </div>
+            </div>
+            <div class="bm-hero-video">
+              <div
+                class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel bm-video-crop--cover-fill"
+                data-hero-autoplay="e4ZuwoSHs_8"
+                data-hero-title="PropMotion real estate motion"
+              >
+                <button
+                  type="button"
+                  class="yt-facade yt-facade--cover"
+                  data-yt-id="e4ZuwoSHs_8"
+                  data-yt-title="PropMotion real estate motion"
+                  data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=e4ZuwoSHs_8&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1"
+                  aria-label="Play video"
+                >
+                  <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="eager" width="1280" height="720" decoding="async" />
+                  <span class="yt-facade-play" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sector hero 2: MedMotion -->
       <section class="bm-hero bm-hero--sector bm-hero--med" id="hero-med" aria-label="MedMotion">
         <div class="container bm-hero-wrap">
           <div class="bm-hero-split reveal">
@@ -165,41 +189,13 @@
         </div>
       </section>
 
-      <!-- Sector hero 2: PropMotion -->
-      <section class="bm-hero bm-hero--sector bm-hero--prop" id="hero-prop" aria-label="PropMotion">
-        <div class="container bm-hero-wrap">
-          <div class="bm-hero-split reveal">
-            <div class="bm-hero-copy">
-              <span class="bm-eyebrow" data-i18n="sysPropSector">Real estate</span>
-              <h2 class="font-headline-xl">
-                <span class="brand-mark" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
-                <strong class="bm-hero-em" data-i18n="sectorPropTitle">One property. Multiple stories.</strong>
-              </h2>
-              <p class="bm-hero-sub" data-i18n="sectorPropSub">Turn property assets into Reels, landing pages, campaigns, and lead paths. Done-For-You.</p>
-              <div class="hero-ctas">
-                <a class="btn btn-pill btn-on-light" href="#real-estate" data-i18n="sectorPropCta">View real estate services</a>
-                <a class="btn btn-pill btn-outline-dark" href="real-estate-content-engine.html" data-i18n="pillarPropCta">Open Real Estate Engine</a>
-              </div>
-            </div>
-            <div class="bm-hero-video">
-              <div
-                class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel bm-video-crop--cover-fill"
-                data-hero-autoplay="e4ZuwoSHs_8"
-                data-hero-title="PropMotion real estate motion"
-              >
-                <button
-                  type="button"
-                  class="yt-facade yt-facade--cover"
-                  data-yt-id="e4ZuwoSHs_8"
-                  data-yt-title="PropMotion real estate motion"
-                  data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=e4ZuwoSHs_8&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1"
-                  aria-label="Play video"
-                >
-                  <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="eager" width="1280" height="720" decoding="async" />
-                  <span class="yt-facade-play" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
+      <!-- Distinction bridge -->
+      <section class="sector-bridge" aria-label="Standard">
+        <div class="container">
+          <div class="sector-bridge-inner reveal">
+            <p class="sector-bridge-kicker" data-i18n="bridgeKicker">One standard</p>
+            <h2 class="font-headline-xl" data-i18n="bridgeTitle">Depth in both markets. No generic middle.</h2>
+            <p class="font-body-md" data-i18n="bridgeBody">PropMotion™ and MedMotion™ share the same production discipline under Bees Motion. Each speaks the language of its market.</p>
           </div>
         </div>
       </section>
@@ -679,7 +675,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260903x"></script>
-    <script src="assets/js/app.js?v=20260903x"></script>
+    <script src="assets/js/translations.js?v=20260903y"></script>
+    <script src="assets/js/app.js?v=20260903y"></script>
   </body>
 </html>
