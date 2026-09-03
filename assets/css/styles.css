@@ -12372,8 +12372,6 @@ body.lang-ar .lp-legacy-title {
   align-items: center;
   justify-content: center;
   direction: ltr;
-  perspective: 1400px;
-  perspective-origin: 35% 50%;
 }
 
 .bm-hero-v2-media {
@@ -12388,24 +12386,20 @@ body.lang-ar .lp-legacy-title {
   overflow: hidden;
   background: #0a0a0a;
   box-shadow:
-    0 32px 70px rgba(0, 0, 0, 0.48),
-    18px 28px 50px rgba(0, 0, 0, 0.28),
+    0 28px 70px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.06);
   justify-self: stretch;
-  /* Paper lean — tip back in 3D (trial; easy to revert to rotate(-5deg)) */
-  transform: rotateY(-11deg) rotateX(5deg) rotateZ(-1.5deg);
+  /* Gentle left tilt — cool without competing with copy */
+  transform: rotate(-5deg);
   transform-origin: center center;
-  transform-style: preserve-3d;
-  will-change: transform;
   margin-block: 0.75rem;
   transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
 .bm-hero-v2-media:hover {
-  transform: rotateY(-8deg) rotateX(3.5deg) rotateZ(-1deg) translateY(-4px);
+  transform: rotate(-3.5deg) translateY(-4px);
   box-shadow:
-    0 38px 84px rgba(0, 0, 0, 0.52),
-    14px 24px 44px rgba(0, 0, 0, 0.3),
+    0 34px 80px rgba(0, 0, 0, 0.55),
     0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
@@ -12617,12 +12611,12 @@ body.lang-ar .bm-hero-v2-title {
     aspect-ratio: 3 / 4;
     border-radius: 16px;
     justify-self: center;
-    transform: rotateY(-7deg) rotateX(4deg) rotateZ(-1deg);
+    transform: rotate(-3.5deg);
     margin-block: 0.5rem 0.75rem;
   }
 
   .bm-hero-v2-media:hover {
-    transform: rotateY(-5deg) rotateX(3deg) rotateZ(-0.5deg) translateY(-2px);
+    transform: rotate(-2.5deg) translateY(-2px);
   }
 
   .bm-hero-v2-inner {
