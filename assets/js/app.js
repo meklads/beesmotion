@@ -704,9 +704,10 @@
           iframe.style.cssText =
             "position:absolute;top:50%;left:50%;width:178%;height:178%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;";
         } else if (shortCrop) {
-          /* Zoom into vertical center — crop top & bottom chrome/letterbox */
+          const isShort = facade.closest(".short-crop-media--short");
+          const zoom = isShort ? "min-width:100%;min-height:125%;width:100%;height:100%;" : "min-width:100%;min-height:177.78%;width:100%;height:100%;";
           iframe.style.cssText =
-            "position:absolute;top:50%;left:50%;width:135%;height:135%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;";
+            "position:absolute;top:50%;left:50%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;" + zoom;
         } else {
           iframe.style.cssText =
             "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";

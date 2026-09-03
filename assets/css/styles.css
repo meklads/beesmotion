@@ -8698,9 +8698,9 @@ html[dir="rtl"] .smart-hero-panel h2 {
 
 /* —— Dual pillars: MedMotion × PropMotion (light) —— */
 .pillars-band {
-  padding: clamp(4.5rem, 9vw, 7rem) 0;
+  padding: clamp(3.25rem, 6vw, 5.5rem) 0;
   background:
-    linear-gradient(180deg, #ffffff 0%, #f7f8fa 48%, #ffffff 100%);
+    linear-gradient(180deg, #f4f6f8 0%, #ffffff 38%, #ffffff 100%);
   border-bottom: 1px solid rgba(12, 13, 16, 0.06);
 }
 
@@ -8844,36 +8844,102 @@ html[dir="rtl"] .smart-hero-panel h2 {
 
 .short-crop-media {
   position: relative;
-  aspect-ratio: 9 / 14;
+  aspect-ratio: 9 / 16;
   overflow: hidden;
   border-radius: 16px;
-  background: #111;
+  background: #0c0d10;
+  isolation: isolate;
 }
 
 .short-crop-media .yt-facade,
-.short-crop-media .yt-facade img,
-.short-crop-media iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 135%;
-  height: 135%;
-  max-width: none;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  border: 0;
-}
-
-.short-crop-media .yt-facade {
-  inset: auto;
-  display: block;
+.short-crop-media .yt-facade--cover {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  transform: none !important;
+  display: block !important;
+  overflow: hidden !important;
+  background: #0c0d10 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
   cursor: pointer;
-  background: #111;
 }
 
-.short-crop-media .yt-facade-play {
-  z-index: 1;
-  transform: translate(-50%, -50%) scale(0.85);
+/* Portrait thumbs (oar2) fill the phone; landscape medical stills cover-crop to center */
+.short-crop-media .yt-facade img,
+.short-crop-media .yt-facade--cover img {
+  position: absolute !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  transform: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  filter: none !important;
+}
+
+.short-crop-media .yt-facade:hover img,
+.short-crop-media .yt-facade--cover:hover img {
+  transform: scale(1.04) !important;
+  transform-origin: center center !important;
+}
+
+/* Playback: oversized iframe centered — crops YouTube chrome / letterbox */
+.short-crop-media iframe {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 177.78% !important;
+  max-width: none !important;
+  transform: translate(-50%, -50%) !important;
+  border: 0 !important;
+  pointer-events: auto;
+}
+
+.short-crop-media--short iframe {
+  /* Vertical shorts: zoom into center to hide top/bottom UI */
+  min-width: 100% !important;
+  min-height: 125% !important;
+}
+
+.short-crop-media .yt-facade-play,
+.short-crop-media .yt-facade--cover .yt-facade-play {
+  z-index: 3;
+  width: 40px !important;
+  height: 40px !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.pillar-panel--med .short-phone {
+  box-shadow: 0 16px 36px rgba(15, 90, 120, 0.12);
+}
+
+.pillar-panel--prop .short-phone {
+  box-shadow: 0 16px 36px rgba(229, 168, 35, 0.14);
+}
+
+.pillar-panel--med .btn-on-light {
+  background: #0f4c63;
+  color: #fff;
+  border-color: #0f4c63;
+}
+
+.pillar-panel--prop .btn-on-light {
+  background: #0c0d10;
+  color: #fff;
 }
 
 .short-phone-cap {
@@ -8902,3 +8968,65 @@ html[dir="rtl"] .smart-hero-panel h2 {
 html[dir="rtl"] .pillar-panel h3 .brand-mark {
   font-family: var(--font-display);
 }
+
+
+.pillar-panel--med {
+  border-color: rgba(15, 90, 120, 0.14);
+  background:
+    linear-gradient(180deg, #f7fbfd 0%, #ffffff 42%);
+}
+
+.pillar-panel--med .pillar-panel-kicker {
+  color: #0f4c63;
+  background: rgba(15, 90, 120, 0.1);
+}
+
+.pillar-panel--med .pillar-panel-points li::before {
+  background: #1a7a96;
+}
+
+.pillar-panel--prop {
+  border-color: rgba(229, 168, 35, 0.28);
+  background:
+    linear-gradient(180deg, #fffbf3 0%, #ffffff 42%);
+}
+
+.pillar-panel--prop .pillar-panel-kicker {
+  color: #8a5a00;
+  background: rgba(229, 168, 35, 0.16);
+}
+
+.pillar-shorts--one {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  justify-content: stretch !important;
+}
+
+.systems-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .systems-grid--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.smart-home-grid--2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+@media (max-width: 820px) {
+  .smart-home-grid--2 { grid-template-columns: 1fr; }
+}
+.smart-home-card--med {
+  border-color: rgba(15, 90, 120, 0.16);
+  background: linear-gradient(180deg, #f7fbfd 0%, #fff 55%);
+}
+.smart-home-card--med .smart-home-kicker { color: #0f4c63; }
+.smart-home-card--prop {
+  border-color: rgba(229, 168, 35, 0.28);
+  background: linear-gradient(180deg, #fffbf3 0%, #fff 55%);
+}
+.smart-home-card--prop .smart-home-kicker { color: #8a5a00; }
