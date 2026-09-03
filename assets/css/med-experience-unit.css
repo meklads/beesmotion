@@ -826,3 +826,74 @@ body.med-xp-modal-open {
 .med-xp-unit .s2-watch-btn {
   z-index: 9;
 }
+
+/* Restructure: merged frame + compact method strip */
+.page-hub--med .med-frame {
+  padding: clamp(3rem, 6vw, 4.75rem) 0;
+  background: #fff;
+}
+.page-hub--med .med-frame-define {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+.page-hub--med .med-frame-define .font-headline-xl {
+  margin: 0.35rem 0 0.75rem;
+}
+.page-hub--med .med-method-strip {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0.85rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+  border-radius: 14px;
+  background: linear-gradient(165deg, #f5f9fb, #eef5f8);
+  border: 1px solid rgba(10, 85, 112, 0.1);
+}
+.page-hub--med .med-method-strip li {
+  margin: 0;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0c2834;
+  text-align: center;
+  border-inline-end: 1px solid rgba(10, 85, 112, 0.1);
+}
+.page-hub--med .med-method-strip li:last-child {
+  border-inline-end: 0;
+}
+.page-hub--med .med-frame-paths-title {
+  margin: 0.35rem 0 0.65rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 800;
+  color: #0c2834;
+}
+.page-hub--med .med-series--compact {
+  padding-block: clamp(2.25rem, 4.5vw, 3.25rem);
+}
+.page-hub--med .med-series--compact .med-series-grid {
+  gap: 0.75rem;
+}
+.page-hub--med .med-series--compact .med-series-body {
+  padding: 0.85rem 0.9rem 1rem;
+}
+.page-hub--med .med-series--compact .med-series-body h3 {
+  font-size: 0.95rem;
+}
+.page-hub--med .med-group-trust--compact {
+  padding: clamp(2rem, 4vw, 2.75rem) 0;
+}
+.page-hub--med .med-group-trust--compact .med-group-trust-title {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+}
+.page-hub--med .med-group-trust--compact .med-group-trust-body {
+  font-size: 0.92rem;
+}
+@media (max-width: 720px) {
+  .page-hub--med .med-method-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .page-hub--med .med-method-strip li:nth-child(2) {
+    border-inline-end: 0;
+  }
+}
