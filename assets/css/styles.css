@@ -13904,3 +13904,42 @@ body.lang-ar .med-pillar-panel p {
     grid-template-columns: 1fr;
   }
 }
+
+/* MedMotion service deliverables */
+.page-hub--med .med-gets-label {
+  margin: 0.85rem 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a5570;
+}
+.page-hub--med .med-gets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+.page-hub--med .med-gets li {
+  position: relative;
+  padding-inline-start: 1.05rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: rgba(12, 40, 52, 0.82);
+}
+.page-hub--med .med-gets li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #0a5570;
+}
+html[dir="rtl"] .page-hub--med .med-gets-label {
+  letter-spacing: 0;
+  text-transform: none;
+}
