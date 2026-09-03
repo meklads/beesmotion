@@ -9534,8 +9534,33 @@ body:has(.bm-hero--splitwall) .site-header.scrolled .brand-logo {
 }
 @media (min-width: 800px) {
   .axis-grid { grid-template-columns: repeat(2, 1fr); }
+  .axis-grid--6 { grid-template-columns: repeat(3, 1fr); }
   .prop-levels { grid-template-columns: 1fr 1fr; }
   .caps-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.svc-list-label {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sector-accent, var(--muted));
+}
+
+.axis-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--sector-accent, var(--navy));
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--sector-accent, var(--navy)) 35%, transparent);
+}
+
+.axis-link:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 .axis-card span {
