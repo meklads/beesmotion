@@ -39,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260903w" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260903x" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -94,26 +94,55 @@
     </nav>
 
     <main id="main">
-      <section class="bm-hero bm-hero--home" aria-label="Bees Motion">
+      <!-- Brand intro: light, first screen -->
+      <section class="bm-hero bm-hero--brand" aria-label="Bees Motion">
+        <div class="container bm-hero-wrap">
+          <div class="bm-brand-intro reveal">
+            <span class="bm-eyebrow" data-i18n="heroTag">MARKETING · CONTENT · AI</span>
+            <h1 class="font-headline-xl">
+              <span class="brand-mark" dir="ltr">Bees Motion</span>
+              <strong class="bm-hero-em">
+                <span data-i18n="heroTitle">Stories built</span>
+                <span data-i18n="heroTitleEm"> to perform.</span>
+              </strong>
+            </h1>
+            <p class="bm-hero-sub" data-i18n="heroSubShort">Healthcare and real estate. Content systems that move people to act.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-pill btn-on-light" href="#hero-med" data-i18n="ctaExploreHc">Explore Healthcare</a>
+              <a class="btn btn-pill btn-outline-dark" href="#hero-prop" data-i18n="ctaExploreRe">Explore Real Estate</a>
+            </div>
+          </div>
+          <div class="hero-caps-bar reveal" aria-label="Focus">
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="navHealthcare">Healthcare</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="navRealEstate">Real Estate</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capMarketing">Marketing</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capContent">Content</span></div>
+            <span class="cap-bar-dot" aria-hidden="true"></span>
+            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capAi">AI</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sector hero 1: MedMotion -->
+      <section class="bm-hero bm-hero--sector bm-hero--med" id="hero-med" aria-label="MedMotion">
         <div class="container bm-hero-wrap">
           <div class="bm-hero-split reveal">
             <div class="bm-hero-copy">
-              <span class="bm-eyebrow" data-i18n="heroTag">MARKETING · CONTENT · AI</span>
-              <h1 class="font-headline-xl">
-                <span class="brand-mark" dir="ltr">Bees Motion</span>
-                <strong class="bm-hero-em">
-                  <span data-i18n="heroTitle">Stories built</span>
-                  <span data-i18n="heroTitleEm"> to perform.</span>
-                </strong>
-              </h1>
-              <p class="bm-hero-sub" data-i18n="heroSub">Bees Motion is a marketing and creative content company focused on healthcare and real estate. We combine strategy, production, campaigns and AI to create content that moves people to act.</p>
+              <span class="bm-eyebrow" data-i18n="sysMedSector">Healthcare</span>
+              <h2 class="font-headline-xl">
+                <span class="brand-mark" dir="ltr">MedMotion<sup aria-hidden="true">™</sup></span>
+                <strong class="bm-hero-em" data-i18n="sectorMedTitle">The medical content system that turns awareness into trust</strong>
+              </h2>
+              <p class="bm-hero-sub" data-i18n="sectorMedSub">Patient education, hospital brand content, campaigns, patient experience, and medical AI.</p>
               <div class="hero-ctas">
-                <a class="btn btn-pill btn-on-light" href="#healthcare" data-i18n="ctaExploreHc">Explore Healthcare</a>
-                <a class="btn btn-pill btn-outline-dark" href="#real-estate" data-i18n="ctaExploreRe">Explore Real Estate</a>
+                <a class="btn btn-pill btn-on-light" href="#healthcare" data-i18n="sectorMedCta">View healthcare services</a>
+                <a class="btn btn-pill btn-outline-dark" href="case-study-imc.html" data-i18n="pillarMedCta">IMC case study</a>
               </div>
             </div>
-
-            <div class="bm-hero-video bm-hero-films" aria-label="Showreels">
+            <div class="bm-hero-video">
               <div
                 class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel bm-video-crop--cover-fill"
                 data-hero-autoplay="wzUNAKqOE8Q"
@@ -131,6 +160,28 @@
                   <span class="yt-facade-play" aria-hidden="true"></span>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sector hero 2: PropMotion -->
+      <section class="bm-hero bm-hero--sector bm-hero--prop" id="hero-prop" aria-label="PropMotion">
+        <div class="container bm-hero-wrap">
+          <div class="bm-hero-split reveal">
+            <div class="bm-hero-copy">
+              <span class="bm-eyebrow" data-i18n="sysPropSector">Real estate</span>
+              <h2 class="font-headline-xl">
+                <span class="brand-mark" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
+                <strong class="bm-hero-em" data-i18n="sectorPropTitle">One property. Multiple stories.</strong>
+              </h2>
+              <p class="bm-hero-sub" data-i18n="sectorPropSub">Turn property assets into Reels, landing pages, campaigns, and lead paths. Done-For-You.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-pill btn-on-light" href="#real-estate" data-i18n="sectorPropCta">View real estate services</a>
+                <a class="btn btn-pill btn-outline-dark" href="real-estate-content-engine.html" data-i18n="pillarPropCta">Open Real Estate Engine</a>
+              </div>
+            </div>
+            <div class="bm-hero-video">
               <div
                 class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel bm-video-crop--cover-fill"
                 data-hero-autoplay="e4ZuwoSHs_8"
@@ -149,18 +200,6 @@
                 </button>
               </div>
             </div>
-          </div>
-
-          <div class="hero-caps-bar reveal" aria-label="Focus">
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="navHealthcare">Healthcare</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="navRealEstate">Real Estate</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capMarketing">Marketing</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capContent">Content</span></div>
-            <span class="cap-bar-dot" aria-hidden="true"></span>
-            <div class="cap-bar-item"><span class="cap-bar-label" data-i18n="capAi">AI</span></div>
           </div>
         </div>
       </section>
@@ -640,7 +679,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/js/translations.js?v=20260903w"></script>
-    <script src="assets/js/app.js?v=20260903w"></script>
+    <script src="assets/js/translations.js?v=20260903x"></script>
+    <script src="assets/js/app.js?v=20260903x"></script>
   </body>
 </html>
