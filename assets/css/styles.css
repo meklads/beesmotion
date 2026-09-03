@@ -12262,29 +12262,42 @@ body.lang-ar .lp-legacy-title {
 }
 
 /* =========================================================
-   HOMEPAGE V2 — fullscreen showreel · copy on the right
+   HOMEPAGE V2 — centered stage: video + copy side by side
    ========================================================= */
 
 .bm-hero--v2 {
   position: relative;
   margin-top: var(--header-h);
-  min-height: min(88vh, 860px);
+  min-height: min(84vh, 820px);
   display: grid;
   align-items: center;
-  justify-items: stretch;
+  justify-items: center;
   overflow: hidden;
   background: #0c0c0a;
-  padding: 0;
+  padding: clamp(2.25rem, 5.5vh, 3.75rem) var(--gutter);
 }
 
-.bm-hero-v2-media,
-.bm-hero-v2-veil {
-  position: absolute;
-  inset: 0;
+/* Centered composition: video left · copy right */
+.bm-hero-v2-stage {
+  width: min(100%, 72rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: center;
+  direction: ltr;
 }
 
 .bm-hero-v2-media {
+  position: relative;
   z-index: 0;
+  width: 100%;
+  /* Shorter than hero — does not touch top/bottom */
+  aspect-ratio: 16 / 10;
+  max-height: min(58vh, 520px);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
 .bm-hero-v2-media .bm-hero-reel {
@@ -12339,42 +12352,27 @@ body.lang-ar .lp-legacy-title {
   max-width: none !important;
 }
 
-/* Corner + top/bottom vignette — center of film stays open */
-.bm-hero-v2-veil {
-  z-index: 1;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(8, 8, 6, 0.55) 0%, rgba(8, 8, 6, 0.15) 16%, transparent 32%, transparent 68%, rgba(8, 8, 6, 0.22) 84%, rgba(8, 8, 6, 0.62) 100%),
-    radial-gradient(ellipse 90% 75% at 50% 50%, transparent 35%, rgba(8, 8, 6, 0.28) 78%, rgba(8, 8, 6, 0.5) 100%);
-}
-
-/* Copy block: physical right half, not stacked over the whole frame */
 .bm-hero-v2-inner {
   position: relative;
   z-index: 2;
-  justify-self: right;
-  align-self: center;
-  width: min(100%, 38rem);
-  max-width: 38rem;
-  margin-left: auto;
-  margin-right: 0;
-  padding-block: clamp(2.5rem, 6vw, 4rem);
-  padding-inline: clamp(1.25rem, 3vw, 2rem) clamp(1.35rem, 3.5vw, 2.75rem);
+  width: 100%;
+  max-width: 32rem;
+  margin: 0;
+  padding: 0;
   color: #f7f6f2;
   display: grid;
   gap: 0.55rem;
   text-align: start;
   justify-items: start;
   box-sizing: border-box;
-  background:
-    linear-gradient(
-      to left,
-      rgba(8, 8, 6, 0.72) 0%,
-      rgba(8, 8, 6, 0.45) 55%,
-      rgba(8, 8, 6, 0.12) 88%,
-      transparent 100%
-    );
-  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+  background: none;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  direction: ltr;
+}
+
+html[dir="rtl"] .bm-hero-v2-inner,
+body.lang-ar .bm-hero-v2-inner {
+  direction: rtl;
 }
 
 .bm-hero-v2-eyebrow {
@@ -12397,7 +12395,7 @@ body.lang-ar .lp-legacy-title {
 .bm-hero-v2-title {
   margin: 0.15rem 0 0;
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6.2vw, 4.4rem);
+  font-size: clamp(2.2rem, 4.6vw, 3.75rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.045em;
@@ -12415,8 +12413,8 @@ body.lang-ar .lp-legacy-title {
 
 .bm-hero-v2-sub {
   margin: 0.35rem 0 0;
-  max-width: 32rem;
-  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  max-width: 30rem;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
   line-height: 1.65;
   font-weight: 500;
   color: rgba(247, 246, 242, 0.82);
@@ -12460,32 +12458,26 @@ body.lang-ar .bm-hero-v2-title {
   font-family: Tajawal, sans-serif;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .bm-hero--v2 {
-    min-height: min(82vh, 720px);
-    align-items: end;
+    min-height: 0;
+    padding: clamp(1.75rem, 4vh, 2.5rem) var(--gutter) clamp(2.25rem, 5vh, 3rem);
   }
 
-  .bm-hero-v2-veil {
-    background:
-      linear-gradient(180deg, rgba(8, 8, 6, 0.4) 0%, transparent 22%, transparent 42%, rgba(8, 8, 6, 0.5) 70%, rgba(8, 8, 6, 0.88) 100%),
-      radial-gradient(ellipse 100% 85% at 50% 45%, transparent 28%, rgba(8, 8, 6, 0.35) 100%);
+  .bm-hero-v2-stage {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .bm-hero-v2-media {
+    max-height: none;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
   }
 
   .bm-hero-v2-inner {
-    justify-self: stretch;
-    width: 100%;
     max-width: none;
-    margin-left: 0;
-    padding-inline: var(--gutter);
-    padding-bottom: clamp(2rem, 8vw, 3rem);
-    background:
-      linear-gradient(
-        180deg,
-        transparent 0%,
-        rgba(8, 8, 6, 0.5) 28%,
-        rgba(8, 8, 6, 0.88) 100%
-      );
   }
 }
 
