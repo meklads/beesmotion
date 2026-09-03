@@ -75,7 +75,7 @@ const creativeNew = `<section id="creative" class="creative-band band-paper has-
           </div>
           <div class="hero-ctas reveal" style="margin-top: 28px">
             <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaProduction" data-track="cta_creative">Discuss a content project</a>
-            <a class="btn btn-pill btn-outline-dark" href="case-study.html" data-i18n="ctaExploreWork">Explore our work</a>
+            <a class="btn btn-pill btn-outline-dark" href="case-study-imc.html" data-i18n="ctaExploreWork">Explore our work</a>
           </div>
         </div>
       </section>`;

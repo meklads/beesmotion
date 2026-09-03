@@ -80,6 +80,68 @@
         a.addEventListener("click", () => setOpen(false));
       });
     }
+
+    document.querySelectorAll(".nav-dd").forEach((dd) => {
+      const toggle = dd.querySelector(".nav-dd-toggle");
+      const panel = dd.querySelector(".nav-dd-panel");
+      if (!toggle || !panel) return;
+      const setOpen = (open) => {
+        dd.classList.toggle("is-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        panel.hidden = !open;
+      };
+      toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const willOpen = panel.hidden;
+        document.querySelectorAll(".nav-dd.is-open").forEach((other) => {
+          if (other !== dd) {
+            other.classList.remove("is-open");
+            const t = other.querySelector(".nav-dd-toggle");
+            const p = other.querySelector(".nav-dd-panel");
+            if (t) t.setAttribute("aria-expanded", "false");
+            if (p) p.hidden = true;
+          }
+        });
+        setOpen(willOpen);
+      });
+      panel.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => setOpen(false));
+      });
+    });
+
+    document.querySelectorAll(".mobile-nav-dd").forEach((dd) => {
+      const toggle = dd.querySelector(".mobile-nav-dd-toggle");
+      const panel = dd.querySelector(".mobile-nav-dd-panel");
+      if (!toggle || !panel) return;
+      toggle.addEventListener("click", () => {
+        const open = panel.hidden;
+        dd.classList.toggle("is-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        panel.hidden = !open;
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (e.target.closest(".nav-dd")) return;
+      document.querySelectorAll(".nav-dd.is-open").forEach((dd) => {
+        dd.classList.remove("is-open");
+        const t = dd.querySelector(".nav-dd-toggle");
+        const p = dd.querySelector(".nav-dd-panel");
+        if (t) t.setAttribute("aria-expanded", "false");
+        if (p) p.hidden = true;
+      });
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      document.querySelectorAll(".nav-dd.is-open").forEach((dd) => {
+        dd.classList.remove("is-open");
+        const t = dd.querySelector(".nav-dd-toggle");
+        const p = dd.querySelector(".nav-dd-panel");
+        if (t) t.setAttribute("aria-expanded", "false");
+        if (p) p.hidden = true;
+      });
+    });
   }
 
   function initReveal() {

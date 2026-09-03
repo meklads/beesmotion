@@ -258,6 +258,186 @@ a {
   opacity: 1;
 }
 
+/* Case study dropdown */
+.nav-dd {
+  position: relative;
+}
+
+.nav-dd-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  opacity: 0.88;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.nav-dd-toggle::after {
+  content: "";
+  width: 0.45em;
+  height: 0.45em;
+  border-inline-end: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-0.1em);
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.nav-dd.is-open .nav-dd-toggle::after {
+  transform: rotate(225deg) translateY(-0.05em);
+}
+
+.nav-dd-toggle:hover,
+.nav-dd.is-active .nav-dd-toggle,
+.nav-dd.is-open .nav-dd-toggle {
+  color: var(--gold-dark);
+  opacity: 1;
+}
+
+.nav-dd-panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  min-width: 280px;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(12, 13, 16, 0.12);
+  z-index: 80;
+}
+
+html[dir="rtl"] .nav-dd-panel {
+  transform: translateX(50%);
+}
+
+.nav-dd-panel[hidden] {
+  display: none;
+}
+
+.nav-dd-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.nav-dd-card--prop {
+  background: linear-gradient(135deg, #f7f6f3 0%, #efece6 100%);
+  color: var(--navy);
+}
+
+.nav-dd-card--med {
+  background: linear-gradient(135deg, #d7e8f2 0%, #b7d6e6 100%);
+  color: var(--navy);
+}
+
+.nav-dd-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(12, 13, 16, 0.12);
+  opacity: 1;
+}
+
+.nav-dd-card.is-active {
+  border-color: rgba(12, 13, 16, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(12, 13, 16, 0.06);
+}
+
+.nav-dd-brand {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  opacity: 1 !important;
+}
+
+.nav-dd-label {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.72 !important;
+}
+
+.mobile-nav-dd {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-nav-dd-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobile-nav-dd-toggle::after {
+  content: "+";
+  font-weight: 500;
+  opacity: 0.55;
+}
+
+.mobile-nav-dd.is-open .mobile-nav-dd-toggle::after {
+  content: "–";
+}
+
+.mobile-nav-dd-panel {
+  display: grid;
+  gap: 10px;
+  padding: 8px 0 4px 12px;
+}
+
+html[dir="rtl"] .mobile-nav-dd-panel {
+  padding: 8px 12px 4px 0;
+}
+
+.mobile-nav-dd-panel[hidden] {
+  display: none;
+}
+
+.mobile-nav-dd-panel a {
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+.page-case-imc .cs-med-album,
+.page-case-hub .cs-med-album {
+  padding: clamp(2.25rem, 4.5vw, 3.5rem) 0;
+  border-top: 1px solid rgba(12, 13, 16, 0.06);
+}
+
+.page-case-imc .cs-med-album .creative-studio,
+.page-case-hub .cs-med-album .creative-studio {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.page-case-imc .cs-med-album .creative-album,
+.page-case-hub .cs-med-album .creative-album {
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
 .header-actions {
   display: flex;
   align-items: center;

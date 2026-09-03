@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260903ai" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260903ak" />
   </head>
   <body class="lang-en page-thanks" data-i18n-meta="thanks">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -42,7 +42,20 @@
           <a href="/#work" data-i18n="navWork">Work</a>
           <a href="/medmotion/" data-i18n="navHealthcare">Healthcare</a>
           <a href="/propmotion/" data-i18n="navRealEstate">Real Estate</a>
-          <a href="/case-study.html" data-i18n="navSolutions">Case study</a>
+                <div class="nav-dd">
+            <button type="button" class="nav-dd-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="navCaseMenu" data-i18n="navSolutions">Case study</button>
+            <div class="nav-dd-panel" id="navCaseMenu" role="menu" hidden>
+              <a class="nav-dd-card nav-dd-card--prop" href="/case-study-real-estate.html" role="menuitem">
+                <span class="nav-dd-brand" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
+                <span class="nav-dd-label" data-i18n="navCsProp">Real Estate</span>
+              </a>
+              <a class="nav-dd-card nav-dd-card--med" href="/case-study-imc.html" role="menuitem">
+                <span class="nav-dd-brand" dir="ltr">MedMotion<sup aria-hidden="true">™</sup></span>
+                <span class="nav-dd-label" data-i18n="navCsMed">Healthcare</span>
+              </a>
+            </div>
+          </div>
+
           <a href="/#contact" data-i18n="navContact">Contact</a>
         </nav>
         <div class="header-actions">
@@ -60,7 +73,14 @@
       <a href="/#work" data-i18n="navWork">Work</a>
       <a href="/medmotion/" data-i18n="navHealthcare">Healthcare</a>
       <a href="/propmotion/" data-i18n="navRealEstate">Real Estate</a>
-      <a href="/case-study.html" data-i18n="navSolutions">Case study</a>
+      <div class="mobile-nav-dd">
+        <button type="button" class="mobile-nav-dd-toggle" aria-expanded="false" data-i18n="navSolutions">Case study</button>
+        <div class="mobile-nav-dd-panel" hidden>
+          <a href="/case-study-real-estate.html"><span dir="ltr">PropMotion™</span> <span data-i18n="navCsProp">Real Estate</span></a>
+          <a href="/case-study-imc.html"><span dir="ltr">MedMotion™</span> <span data-i18n="navCsMed">Healthcare</span></a>
+        </div>
+      </div>
+
       <a href="/#contact" data-i18n="navContact">Contact</a>
       <a class="btn btn-pill btn-on-light" href="/#contact" data-i18n="ctaNav">Start a project</a>
     </nav>
@@ -73,7 +93,7 @@
           <p class="font-body-md" data-i18n="thanksSub">Your details were saved and a WhatsApp draft was prepared. If the chat did not open, use the button below.</p>
           <div class="thanks-actions">
             <a class="btn btn-pill btn-on-light" id="thanksWa" href="https://wa.me/966502786513" target="_blank" rel="noopener" data-i18n="thanksWa">Open WhatsApp</a>
-            <a class="btn btn-pill btn-outline-dark" href="case-study.html" data-i18n="thanksCases">Explore case studies</a>
+            <a class="btn btn-pill btn-outline-dark" href="case-study-imc.html" data-i18n="thanksCases">Explore case studies</a>
             <a class="btn btn-pill btn-outline-dark" href="index.html" data-i18n="thanksHome">Back to home</a>
           </div>
           <p class="thanks-note" data-i18n="thanksNote">Typical reply within one business hour on WhatsApp.</p>
@@ -111,7 +131,9 @@
             <p class="footer-col-title" data-i18n="footerCompany">Company</p>
             <div class="footer-links">
               <a href="/#work" data-i18n="navWork">Work</a>
-              <a href="/case-study.html" data-i18n="navSolutions">Case study</a>
+      <a href="/case-study-imc.html" data-i18n="navCsMedFull">MedMotion Healthcare</a>
+              <a href="/case-study-real-estate.html" data-i18n="navCsPropFull">PropMotion Real Estate</a>
+
               <a href="/#contact" data-i18n="navContact">Contact</a>
               <a href="https://3dgraphicshouse.com/" target="_blank" rel="noopener" data-i18n="aboutGh">Graphics House</a>
               <a href="https://www.tasamify.com/" target="_blank" rel="noopener" data-i18n="aboutTasamify">Tasami Group</a>
@@ -131,7 +153,7 @@
     <script>
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
-    <script src="assets/js/translations.js?v=20260903ai"></script>
-    <script src="assets/js/app.js?v=20260903ai"></script>
+    <script src="assets/js/translations.js?v=20260903ak"></script>
+    <script src="assets/js/app.js?v=20260903ak"></script>
   </body>
 </html>
