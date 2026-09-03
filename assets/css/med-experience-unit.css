@@ -1067,3 +1067,226 @@ html[dir="rtl"] .page-hub--med .med-pillar-badge {
     width: min(132px, 70%);
   }
 }
+
+/* ===== Mobile-first restack: experience unit + MedMotion density ===== */
+.med-xp-unit .hotspot.is-active .hotspot-tooltip,
+.med-xp-unit .hotspot:focus-within .hotspot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.med-xp-unit .hotspot.is-active .hotspot-dot {
+  transform: scale(1.15);
+  background: #C9A84C;
+}
+.med-xp-unit .hotspot-tooltip {
+  max-width: min(300px, calc(100vw - 2rem));
+}
+
+@media (max-width: 900px) {
+  .med-xp-unit .s2-hero-wrap {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    background: #0a0a0a;
+  }
+
+  .med-xp-unit .s2-hero-bg {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: min(52vh, 420px);
+    aspect-ratio: 4 / 5;
+    max-height: 520px;
+  }
+
+  .med-xp-unit .s2-hero-inner {
+    position: relative;
+    top: auto;
+    inset: auto !important;
+    max-width: none;
+    width: 100%;
+    padding: 1.15rem 1.25rem 0.35rem !important;
+    text-align: start !important;
+    background: #0a0a0a;
+  }
+
+  .med-xp-unit .s2-hero-inner::before {
+    display: none;
+  }
+
+  .med-xp-unit .s2-hero-title {
+    font-size: clamp(1.2rem, 5.2vw, 1.55rem);
+  }
+
+  .med-xp-unit .s2-hero-desc {
+    font-size: 0.92rem;
+    margin-top: 0.65rem;
+    max-width: none;
+  }
+
+  /* Keep hotspots over the image only */
+  .med-xp-unit .hotspot {
+    position: absolute;
+    z-index: 6;
+  }
+
+  .med-xp-unit .hotspot-1 { top: 58% !important; left: 62% !important; }
+  .med-xp-unit .hotspot-2 { top: 40% !important; left: 78% !important; }
+  .med-xp-unit .hotspot-3 { top: 34% !important; left: 48% !important; }
+  .med-xp-unit .hotspot-4 { top: 36% !important; left: 26% !important; }
+
+  .med-xp-unit .hotspot-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .med-xp-unit .hotspot-tooltip {
+    min-width: 0;
+    width: min(240px, calc(100vw - 2.5rem));
+    padding: 12px 14px;
+    bottom: calc(100% + 12px);
+  }
+
+  .med-xp-unit .s2-play-btn {
+    position: absolute;
+    bottom: auto;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+  }
+
+  .med-xp-unit .s2-watch-btn {
+    position: relative;
+    inset: auto !important;
+    top: auto !important;
+    transform: none;
+    margin: 0.65rem 1.25rem 0.35rem;
+    align-self: flex-start;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .med-xp-unit .s2-hero-gallery {
+    position: relative;
+    inset: auto !important;
+    top: auto !important;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.75rem 1rem 1.25rem;
+    background: #0a0a0a;
+  }
+
+  .med-xp-unit .s2-hero-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .med-xp-unit .s2-hero-gallery-grid {
+    display: flex;
+    width: max-content;
+    gap: 8px;
+    padding: 0;
+    grid-template-columns: none;
+  }
+
+  .med-xp-unit .s2-hero-gallery-grid .s2-hero-thumb {
+    width: 72px;
+    height: 72px;
+    flex: 0 0 auto;
+  }
+
+  .med-xp-unit .s2-hero-gallery-grid .s2-hero-thumb:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Hotspots become hard to use; highlights below cover the story */
+  .med-xp-unit .hotspot {
+    display: none;
+  }
+
+  .med-xp-unit .s2-hero-bg {
+    min-height: min(46vh, 360px);
+    max-height: 420px;
+  }
+
+  .page-hub--med .med-method-strip {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    grid-template-columns: none;
+    scrollbar-width: none;
+  }
+
+  .page-hub--med .med-method-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-hub--med .med-method-strip li {
+    flex: 0 0 auto;
+    min-width: 7.5rem;
+    border-inline-end: 0 !important;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.65);
+    font-size: 0.8rem;
+    padding: 0.55rem 0.85rem;
+  }
+
+  .page-hub--med .hub-hero--bleed .hub-hero-lead {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .page-hub--med .hub-hero--bleed .hub-hero-ctas {
+    width: 100%;
+  }
+
+  .page-hub--med .hub-hero--bleed .hub-hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-hub--med .lp-enquire-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .page-hub--med .lp-enquire-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-hub--med .med-frame {
+    padding: clamp(2.25rem, 5vw, 3.25rem) 0;
+  }
+
+  .page-hub--med .med-outcomes {
+    padding: 1.1rem 1rem 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .med-xp-unit .s2-play-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .med-xp-unit .s2-hero-gallery-grid .s2-hero-thumb {
+    width: 64px;
+    height: 64px;
+  }
+}

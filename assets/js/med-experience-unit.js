@@ -70,6 +70,18 @@
   window.openMedXpImage = openMedXpImage;
   window.closeMedXpLightbox = closeMedXpLightbox;
 
+  function setHotspotOpen(hotspot, open) {
+    if (!hotspot) return;
+    hotspot.classList.toggle("is-active", open);
+    hotspot.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function closeAllHotspots(except) {
+    document.querySelectorAll(".med-xp-unit .hotspot.is-active").forEach(function (el) {
+      if (el !== except) setHotspotOpen(el, false);
+    });
+  }
+
   document.addEventListener("click", function (e) {
     var videoBtn = e.target.closest("[data-med-xp-video]");
     if (videoBtn) {
@@ -97,6 +109,19 @@
       return;
     }
 
+    var hotspot = e.target.closest(".med-xp-unit .hotspot");
+    if (hotspot) {
+      e.preventDefault();
+      var willOpen = !hotspot.classList.contains("is-active");
+      closeAllHotspots(hotspot);
+      setHotspotOpen(hotspot, willOpen);
+      return;
+    }
+
+    if (!e.target.closest(".med-xp-unit .hotspot")) {
+      closeAllHotspots();
+    }
+
     var videoModal = document.getElementById("medVideoModal");
     if (videoModal && e.target === videoModal) {
       closeMedXpVideo();
@@ -110,7 +135,18 @@
   });
 
   document.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      var hotspot = e.target.closest && e.target.closest(".med-xp-unit .hotspot");
+      if (hotspot) {
+        e.preventDefault();
+        var willOpen = !hotspot.classList.contains("is-active");
+        closeAllHotspots(hotspot);
+        setHotspotOpen(hotspot, willOpen);
+        return;
+      }
+    }
     if (e.key !== "Escape") return;
+    closeAllHotspots();
     var imageModal = document.getElementById("medImageLightbox");
     if (imageModal && imageModal.classList.contains("is-open")) {
       closeMedXpLightbox();

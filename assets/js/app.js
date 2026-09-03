@@ -910,6 +910,18 @@
   }
 
   function initMedPillars() {
+    const collapseCoreOnMobile = () => {
+      if (!window.matchMedia("(max-width: 720px)").matches) return;
+      document.querySelectorAll(".page-hub--med .med-pillars-grid--core .med-pillar.is-open").forEach((card) => {
+        if (card.classList.contains("med-pillar--lead")) return;
+        const btn = card.querySelector("[data-pillar-toggle]");
+        const panel = card.querySelector("[data-pillar-panel]");
+        card.classList.remove("is-open");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+        if (panel) panel.hidden = true;
+      });
+    };
+
     document.querySelectorAll(".med-pillars-grid").forEach((root) => {
       root.querySelectorAll("[data-pillar-toggle]").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -924,6 +936,8 @@
         });
       });
     });
+
+    collapseCoreOnMobile();
   }
 
   document.addEventListener("DOMContentLoaded", () => {
