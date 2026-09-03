@@ -907,3 +907,46 @@ body.med-xp-modal-open {
     border-inline-end: 0;
   }
 }
+
+/* MedMotion hero: clear Bees Motion (no TM / no middot / no harsh uppercase) */
+.page-hub--med .hub-hero--bleed .hub-hero-kicker {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+.page-hub--med .hub-hero--bleed .hub-brand {
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.page-hub--med .hub-hero--bleed .lp-hero-offer {
+  color: #fff;
+}
+.page-hub--med .lp-mega-item--logo {
+  align-content: center;
+  justify-items: start;
+  gap: 0.55rem;
+}
+.page-hub--med .lp-mega-logo {
+  display: block;
+  width: min(148px, 100%);
+  height: auto;
+  max-height: 72px;
+  object-fit: contain;
+  object-position: start center;
+  padding: 0.45rem 0.55rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.page-hub--med .lp-mega-item--logo span {
+  max-width: 11rem;
+}
+@media (max-width: 720px) {
+  .page-hub--med .lp-mega-logo {
+    max-height: 64px;
+    width: min(132px, 70%);
+  }
+}
