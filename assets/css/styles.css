@@ -12368,7 +12368,8 @@ body.lang-ar .lp-legacy-title {
   margin-inline: auto;
   display: grid;
   grid-template-columns: minmax(360px, 500px) minmax(260px, 34rem);
-  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+  /* Breathing room between tilted reel and copy */
+  gap: clamp(2.75rem, 5.5vw, 4.25rem);
   align-items: center;
   justify-content: center;
   direction: ltr;
