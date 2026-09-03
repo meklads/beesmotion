@@ -12732,24 +12732,43 @@ body.lang-ar .sector-gate-kicker {
   }
 }
 
-/* Selected work — large features */
+/* Selected work — light band, dark type (matches body sections) */
 .work-feature-band {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  color: var(--ink);
 }
 
-.work-feature-band .section-head .font-headline-xl,
+.work-feature-band .section-head .font-headline-xl {
+  color: var(--ink) !important;
+  font-family: var(--font-ar);
+  font-weight: 700;
+}
+
+html[dir="ltr"] .work-feature-band .section-head .font-headline-xl,
+body.lang-en .work-feature-band .section-head .font-headline-xl {
+  font-family: var(--font-display);
+}
+
 .work-feature-band .section-head .font-body-md,
 .work-feature-band .clients-label {
-  color: #f7f6f2;
+  color: #3d3d3d !important;
+  opacity: 1;
 }
 
-.work-feature-band .font-body-md {
-  opacity: 0.78;
+.work-feature-band .clients-label {
+  font-family: var(--font-ar);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+html[dir="ltr"] .work-feature-band .clients-label,
+body.lang-en .work-feature-band .clients-label {
+  font-family: var(--font-en);
 }
 
 .work-feature-band .svc-tag {
-  color: rgba(245, 200, 77, 0.9);
-  border-color: rgba(245, 200, 77, 0.35);
+  color: var(--gold-dark, #b8860b);
+  border-color: rgba(184, 134, 11, 0.35);
 }
 
 .work-feature-grid {
@@ -12762,16 +12781,17 @@ body.lang-ar .sector-gate-kicker {
 .work-feature {
   display: grid;
   text-decoration: none;
-  color: inherit;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(247, 246, 242, 0.1);
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.08);
   overflow: hidden;
-  transition: border-color 0.3s ease, transform 0.35s ease;
+  transition: border-color 0.3s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .work-feature:hover {
-  border-color: rgba(245, 200, 77, 0.45);
+  border-color: rgba(184, 134, 11, 0.45);
   transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(12, 13, 16, 0.08);
 }
 
 .work-feature-media {
@@ -12800,36 +12820,62 @@ body.lang-ar .sector-gate-kicker {
 
 .work-feature-sector {
   margin: 0;
+  font-family: var(--font-ar);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 200, 77, 0.88);
+  color: var(--gold-dark, #b8860b);
+}
+
+html[dir="rtl"] .work-feature-sector,
+body.lang-ar .work-feature-sector {
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+html[dir="ltr"] .work-feature-sector,
+body.lang-en .work-feature-sector {
+  font-family: var(--font-en);
 }
 
 .work-feature-title {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(1.25rem, 2vw, 1.55rem);
   font-weight: 800;
-  color: #fff;
+  color: var(--ink);
 }
 
 .work-feature-role {
   margin: 0;
+  font-family: var(--font-ar);
   font-size: 0.95rem;
+  font-weight: 500;
   line-height: 1.5;
-  color: rgba(247, 246, 242, 0.72);
+  color: #3d3d3d;
+}
+
+html[dir="ltr"] .work-feature-role,
+body.lang-en .work-feature-role {
+  font-family: var(--font-en);
 }
 
 .work-feature-cta {
   margin-top: 0.45rem;
+  font-family: var(--font-ar);
   font-size: 0.88rem;
   font-weight: 700;
-  color: #f5c84d;
+  color: var(--gold-dark, #b8860b);
+}
+
+html[dir="ltr"] .work-feature-cta,
+body.lang-en .work-feature-cta {
+  font-family: var(--font-en);
 }
 
 .work-feature-band .clients-marquee {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 @media (max-width: 820px) {
