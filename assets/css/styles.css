@@ -10743,3 +10743,53 @@ body.lang-en .axis-card h3 {
     max-width: none;
   }
 }
+
+/* ===== Sitewide chrome polish after homepage system ===== */
+.nav-desktop a.is-active,
+.mobile-nav a.is-active {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+.hub-proof {
+  border-bottom: 1px solid rgba(12, 13, 16, 0.06);
+}
+
+.page-hub--med .hub-proof {
+  background: #f7fbfd;
+}
+
+.page-hub--prop .hub-proof {
+  background: #fffdf8;
+}
+
+.proof-card--soft {
+  opacity: 0.95;
+}
+
+.hub-cross-copy {
+  margin: 0;
+  flex: 1;
+}
+
+/* Legacy solution / case pages: denser type matching home */
+.page-sol .font-body-md,
+.page-case-study .font-body-md,
+.page-case-hub .font-body-md,
+.page-smart .font-body-md {
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.page-sol .section-head .font-headline-xl,
+.page-case-study .font-headline-xl,
+.page-case-hub .font-headline-xl,
+.page-smart .font-headline-xl {
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.2;
+}
+
+.page-sol .bm-hero--case,
+.page-case-study .bm-hero--case {
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
