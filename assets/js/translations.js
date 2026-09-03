@@ -7,6 +7,7 @@ window.BM_I18N = {
 
   navSmart: "الأنظمة الذكية",
   navAiEngine: "نظام المحتوى",
+  navReEngine: "محرك العقار",
   smartBack: "← الأنظمة الذكية",
   smartTag: "محتوى وأنظمة ذكية",
   smartTitle: "الذكاء الاصطناعي يعزّز الوكالة — ولا يستبدلها.",
@@ -781,6 +782,7 @@ window.BM_I18N = {
 
   navSmart: "Smart systems",
   navAiEngine: "Content System",
+  navReEngine: "Real Estate Engine",
   smartBack: "← Smart systems",
   smartTag: "Content & smart systems",
   smartTitle: "AI strengthens the agency — it doesn’t replace it.",
