@@ -846,26 +846,101 @@ body.med-xp-modal-open {
 }
 .page-hub--med .med-method-strip {
   list-style: none;
-  margin: 0 0 2rem;
-  padding: 0.85rem 1rem;
+  margin: 0.65rem 0 0;
+  padding: 0.85rem 0.75rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.65rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
   border-radius: 14px;
   background: linear-gradient(165deg, #f5f9fb, #eef5f8);
   border: 1px solid rgba(10, 85, 112, 0.1);
 }
+.page-hub--med .med-how {
+  margin: 0 0 1.75rem;
+}
+.page-hub--med .med-how .svc-tag {
+  margin-bottom: 0.65rem;
+}
 .page-hub--med .med-method-strip li {
   margin: 0;
-  padding: 0.35rem 0.5rem;
-  font-size: 0.92rem;
+  padding: 0.45rem 0.4rem;
+  font-size: clamp(0.72rem, 1.1vw, 0.86rem);
   font-weight: 700;
   color: #0c2834;
   text-align: center;
   border-inline-end: 1px solid rgba(10, 85, 112, 0.1);
+  position: relative;
 }
 .page-hub--med .med-method-strip li:last-child {
   border-inline-end: 0;
+}
+.page-hub--med .med-outcomes {
+  margin: 0 0 2.25rem;
+  padding: 1.35rem 1.25rem 1.45rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(10, 85, 112, 0.1);
+}
+.page-hub--med .med-outcomes .svc-tag {
+  margin-bottom: 0.35rem;
+}
+.page-hub--med .med-outcomes-grid {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.page-hub--med .med-outcomes-grid li {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: linear-gradient(165deg, #f5f9fb, #eef5f8);
+  border: 1px solid rgba(10, 85, 112, 0.08);
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1.4;
+  color: #0c2834;
+}
+.page-hub--med .med-flagship-proof {
+  list-style: none;
+  margin: 1rem 0 1.1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.page-hub--med .med-flagship-proof li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(12, 40, 52, 0.72);
+}
+.page-hub--med .med-flagship-proof strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0a5570;
+  min-width: 3.2rem;
+}
+.page-hub--med .med-pillar--lead {
+  border-color: rgba(10, 85, 112, 0.28);
+  box-shadow: 0 10px 28px rgba(8, 40, 55, 0.08);
+}
+.page-hub--med .med-pillar-badge {
+  display: inline-block;
+  margin: 0.2rem 0 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0a5570;
+  background: rgba(10, 85, 112, 0.1);
+}
+html[dir="rtl"] .page-hub--med .med-pillar-badge {
+  letter-spacing: 0;
 }
 .page-hub--med .med-frame-paths-title {
   margin: 0.35rem 0 0.65rem;
@@ -927,12 +1002,26 @@ body.med-xp-modal-open {
   margin-top: 1.5rem;
   line-height: 1.6;
 }
+@media (max-width: 900px) {
+  .page-hub--med .med-method-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .page-hub--med .med-method-strip li:nth-child(3n) {
+    border-inline-end: 0;
+  }
+  .page-hub--med .med-outcomes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 @media (max-width: 720px) {
   .page-hub--med .med-method-strip {
     grid-template-columns: 1fr 1fr;
   }
-  .page-hub--med .med-method-strip li:nth-child(2) {
+  .page-hub--med .med-method-strip li:nth-child(2n) {
     border-inline-end: 0;
+  }
+  .page-hub--med .med-outcomes-grid {
+    grid-template-columns: 1fr;
   }
 }
 
