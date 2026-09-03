@@ -20,14 +20,14 @@
     <title>PropMotion™ | محرك المحتوى العقاري | بيز موشن</title>
     <meta
       name="description"
-      content="PropMotion™ من بيز موشن: عقار واحد وأكثر من قصة. حوّل أصول العقار إلى منظومة محتوى Done-For-You. ريلز، صفحات هبوط، وحملات."
+      content="PropMotion™ من بيز موشن: عقار واحد وأكثر من قصة. حوّل أصول العقار إلى منظومة محتوى Done-For-You."
     />
     <meta property="og:title" content="PropMotion™ | Real Estate Content Engine | Bees Motion" />
     <meta property="og:description" content="One property. Multiple stories. A Done-For-You real estate content system by Bees Motion." />
-    <meta property="og:url" content="https://beesmotion.com/real-estate-content-engine.html" />
+    <meta property="og:url" content="https://beesmotion.com/real-estate-content-engine" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://beesmotion.com/assets/img/bees-motion-logo.png" />
-    <link rel="canonical" href="https://beesmotion.com/real-estate-content-engine.html" />
+    <link rel="canonical" href="https://beesmotion.com/real-estate-content-engine" />
     <link rel="icon" href="assets/img/bees-motion-favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,8 +35,8 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260903p" />
-    <link rel="stylesheet" href="assets/css/rce.css?v=20260903p" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260903v2" />
+    <link rel="stylesheet" href="assets/css/rce.css?v=20260903v2" />
   </head>
   <body class="lang-ar page-rce">
     <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
@@ -51,11 +51,10 @@
           </span>
         </a>
         <nav class="nav-desktop" aria-label="Primary">
+          <a href="#stories" data-i18n="navStories">Stories</a>
           <a href="#how" data-i18n="navHow">How It Works</a>
-          <a href="#stories" data-i18n="navContent">Content</a>
-          <a href="#examples" data-i18n="navExamples">Examples</a>
+          <a href="#ways" data-i18n="navWays">Ways</a>
           <a href="#developers" data-i18n="navDev">For Developers</a>
-          <a href="#ways" data-i18n="navTeams">For Teams</a>
         </nav>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language">
@@ -69,15 +68,15 @@
     </header>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#stories" data-i18n="navStories">Stories</a>
       <a href="#how" data-i18n="navHow">How It Works</a>
-      <a href="#stories" data-i18n="navContent">Content</a>
-      <a href="#examples" data-i18n="navExamples">Examples</a>
+      <a href="#ways" data-i18n="navWays">Ways</a>
       <a href="#developers" data-i18n="navDev">For Developers</a>
-      <a href="#ways" data-i18n="navTeams">For Teams</a>
       <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">Start a Project</a>
     </nav>
 
     <main id="main">
+      <!-- 1. Hero: one property → multiple stories -->
       <section class="pm-hero">
         <div class="container pm-hero-grid">
           <div class="reveal">
@@ -86,212 +85,279 @@
               <span data-i18n="heroTitle1">One property.</span>
               <span data-i18n="heroTitle2">Multiple stories.</span>
             </h1>
-            <p class="pm-hero-sub" data-i18n="heroSub">Turn the property assets you already have into a continuous stream of marketing content. from Reels and social content to landing pages and campaigns.</p>
+            <p class="pm-hero-sub" data-i18n="heroSub">Turn the assets you already have into Reels, landing pages, and campaign content. Done-For-You.</p>
             <div class="pm-hero-ctas">
               <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">Start a Project</a>
-              <a class="btn btn-pill btn-outline-dark" href="#how" data-i18n="heroCta2">See How It Works</a>
+              <a class="btn btn-pill btn-outline-dark" href="#stories" data-i18n="heroCta2">See what it becomes</a>
             </div>
             <p class="pm-dfy" data-i18n="heroDfy">Done-For-You. AI-assisted. Human-directed.</p>
           </div>
 
-          <div class="pm-orbit reveal" aria-hidden="false">
-            <div class="pm-orbit-media">
-              <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" width="1080" height="1920" loading="eager" />
+          <div class="pm-sig reveal" aria-label="One property to many stories">
+            <div class="pm-sig-out">
+              <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="eager" width="360" height="640" />
+              <span data-i18n="chip1">9:16 Reel</span>
             </div>
-            <div class="pm-orbit-veil"></div>
-            <div class="pm-chip" data-i18n="chip1">9:16 Reel</div>
-            <div class="pm-chip" data-i18n="chip2">Lifestyle</div>
-            <div class="pm-chip" data-i18n="chip3">Location</div>
-            <div class="pm-chip" data-i18n="chip4">Investment</div>
-            <div class="pm-chip" data-i18n="chip5">CTA</div>
-            <div class="pm-orbit-core">
-              <strong data-i18n="orbitTitle">Property assets → content</strong>
-              <span data-i18n="orbitSub">A living content system around every listing</span>
+            <div class="pm-sig-out">
+              <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="eager" width="360" height="640" />
+              <span data-i18n="chip2">Lifestyle</span>
+            </div>
+            <div class="pm-sig-out">
+              <img src="assets/img/thumbs/u_rZiifgBWo.jpg" alt="" loading="eager" width="360" height="640" />
+              <span data-i18n="chip3">Location</span>
+            </div>
+            <div class="pm-sig-out">
+              <img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="eager" width="640" height="360" />
+              <span data-i18n="chip4">Investment</span>
+            </div>
+            <div class="pm-sig-core">
+              <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" width="1280" height="720" loading="eager" />
+              <div class="pm-sig-label">
+                <strong data-i18n="orbitTitle">Your property assets</strong>
+                <span data-i18n="orbitSub">Become a living content system</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="pm-band pm-band--paper" id="problem">
+      <!-- 2. Before / After -->
+      <section class="pm-band pm-band--paper" id="before">
         <div class="container">
           <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="problemTag">The problem</span>
-            <h2 data-i18n="problemTitle">You already have the assets.</h2>
-            <p data-i18n="problemSub">The problem isn't the lack of assets. It's what happens after you receive them.</p>
+            <span class="svc-tag" data-i18n="baTag">Before / After</span>
+            <h2 data-i18n="baTitle">Assets sitting idle. Or a content system.</h2>
+            <p data-i18n="baSub">You already have the raw material. PropMotion turns it into marketing that keeps working.</p>
           </div>
-          <div class="pm-asset-row reveal">
-            <span class="pm-asset-pill" data-i18n="asset1">Photos</span>
-            <span class="pm-asset-pill" data-i18n="asset2">Renders</span>
-            <span class="pm-asset-pill" data-i18n="asset3">Floor plans</span>
-            <span class="pm-asset-pill" data-i18n="asset4">Project information</span>
-            <span class="pm-asset-pill" data-i18n="asset5">Existing videos</span>
-          </div>
-          <div class="pm-contrast reveal">
-            <article class="pm-contrast-card">
-              <h3 data-i18n="vsBadTitle">One property today</h3>
-              <ul>
-                <li data-i18n="vsBad1">One post</li>
-                <li data-i18n="vsBad2">One listing</li>
-                <li data-i18n="vsBad3">One campaign burst</li>
-              </ul>
+          <div class="pm-ba reveal">
+            <article class="pm-ba-card">
+              <h3 data-i18n="baBefore">What you have today</h3>
+              <div class="pm-ba-pills">
+                <span data-i18n="asset1">Photos</span>
+                <span data-i18n="asset2">Renders</span>
+                <span data-i18n="asset3">Floor plans</span>
+                <span data-i18n="asset4">Project info</span>
+                <span data-i18n="asset5">Existing videos</span>
+              </div>
             </article>
-            <article class="pm-contrast-card pm-contrast-card--good">
-              <h3 data-i18n="vsGoodTitle">One property with PropMotion™</h3>
-              <ul>
-                <li data-i18n="vsGood1">Multiple stories</li>
-                <li data-i18n="vsGood2">Multiple formats</li>
-                <li data-i18n="vsGood3">Continuous content</li>
-                <li data-i18n="vsGood4">Landing page → campaign → leads</li>
-              </ul>
+            <div class="pm-ba-arrow" aria-hidden="true">→</div>
+            <article class="pm-ba-card pm-ba-card--after">
+              <h3 data-i18n="baAfter">What PropMotion™ builds</h3>
+              <div class="pm-ba-pills">
+                <span data-i18n="out1">Multiple stories</span>
+                <span data-i18n="out2">Multiple formats</span>
+                <span data-i18n="out3">Continuous content</span>
+                <span data-i18n="out4">Landing → campaign → leads</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="pm-band pm-band--dark" id="system">
+      <!-- 3. Stories wall + video proof -->
+      <section class="pm-band pm-band--dark" id="stories">
         <div class="container">
           <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="systemTag">The system</span>
+            <span class="svc-tag" data-i18n="storiesTag">What one property can become</span>
             <h2>
-              <span data-i18n="systemTitle1">From property assets</span>
-              <span data-i18n="systemTitle2">to marketing content.</span>
+              <span data-i18n="storiesTitle1">Eight angles.</span>
+              <span data-i18n="storiesTitle2">One listing.</span>
             </h2>
+            <p data-i18n="storiesSub">Not one video. A content system around the property.</p>
           </div>
-          <div class="pm-flow reveal">
-            <article class="pm-flow-step"><span class="k" data-i18n="flow1k">01 Assets</span><strong data-i18n="flow1t">Assets</strong><p data-i18n="flow1d">Photos · Renders · Plans · Project data</p></article>
-            <article class="pm-flow-step"><span class="k" data-i18n="flow2k">02 Content</span><strong data-i18n="flow2t">Content</strong><p data-i18n="flow2d">Reels · Stories · Motion · Lifestyle · Investment</p></article>
-            <article class="pm-flow-step"><span class="k" data-i18n="flow3k">03 Landing</span><strong data-i18n="flow3t">Landing</strong><p data-i18n="flow3d">Landing page · WhatsApp · Project page</p></article>
-            <article class="pm-flow-step"><span class="k" data-i18n="flow4k">04 Campaign</span><strong data-i18n="flow4t">Campaign</strong><p data-i18n="flow4d">Meta · TikTok · Snap · Digital campaigns</p></article>
-            <article class="pm-flow-step"><span class="k" data-i18n="flow5k">05 Leads</span><strong data-i18n="flow5t">Leads</strong><p data-i18n="flow5d">Enquiries · Sales conversations</p></article>
-          </div>
-        </div>
-      </section>
 
-      <section class="pm-band pm-band--cream" id="how">
-        <div class="container">
-          <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="howTag">How it works</span>
-            <h2 data-i18n="howTitle">Three clear steps.</h2>
-            <p data-i18n="howSub">You bring the property. We build the content system. Then the content goes to work.</p>
+          <div class="pm-wall reveal">
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">01</span><strong data-i18n="a1t">Property Tour</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">02</span><strong data-i18n="a2t">Lifestyle</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/u_rZiifgBWo.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">03</span><strong data-i18n="a3t">Design & Features</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">04</span><strong data-i18n="a4t">Location</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">05</span><strong data-i18n="a5t">Investment</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">06</span><strong data-i18n="a6t">Offer</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/u_rZiifgBWo.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">07</span><strong data-i18n="a7t">Problem / Solution</strong></div>
+            </article>
+            <article class="pm-wall-tile">
+              <img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="lazy" width="720" height="900" />
+              <div class="pm-wall-meta"><span class="n">08</span><strong data-i18n="a8t">Direct CTA</strong></div>
+            </article>
           </div>
-          <div class="pm-steps reveal">
-            <article class="pm-step">
-              <div class="num">01</div>
-              <h3 data-i18n="s1t">Bring what you have.</h3>
-              <p data-i18n="s1d">Photos, renders, project information, existing videos, brand guidelines.</p>
-            </article>
-            <article class="pm-step">
-              <div class="num">02</div>
-              <h3 data-i18n="s2t">We turn it into content.</h3>
-              <p data-i18n="s2d">AI-assisted production with human creative direction. Multiple angles and formats from the same property.</p>
-            </article>
-            <article class="pm-step">
-              <div class="num">03</div>
-              <h3 data-i18n="s3t">Put it to work.</h3>
-              <p data-i18n="s3d">Publish, advertise, drive traffic, and capture enquiries. with your team or with Bees Motion.</p>
-            </article>
-          </div>
-          <div class="pm-dual reveal">
-            <article class="pm-dual-card">
-              <h4 data-i18n="dual1t">You run the campaign</h4>
-              <p data-i18n="dual1d">We deliver campaign-ready content. Your marketing team activates it.</p>
-            </article>
-            <article class="pm-dual-card">
-              <h4 data-i18n="dual2t">We help activate it</h4>
-              <p data-i18n="dual2d">Need distribution and lead paths too? Bees Motion can take more of the execution.</p>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section class="pm-band pm-band--paper" id="stories">
-        <div class="container">
-          <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="storiesTag">Content system</span>
-            <h2>
-              <span data-i18n="storiesTitle1">One property.</span>
-              <span data-i18n="storiesTitle2">Multiple stories.</span>
-            </h2>
-            <p data-i18n="storiesSub">We are not making one video. We are building a content system around the property.</p>
-          </div>
-          <div class="pm-stories reveal">
-            <article class="pm-story"><span class="num">01</span><h3 data-i18n="a1t">Property Tour</h3><p data-i18n="a1d">Show the property clearly.</p></article>
-            <article class="pm-story"><span class="num">02</span><h3 data-i18n="a2t">Lifestyle</h3><p data-i18n="a2d">Show what living there feels like.</p></article>
-            <article class="pm-story"><span class="num">03</span><h3 data-i18n="a3t">Design & Features</h3><p data-i18n="a3d">Turn architectural details into content.</p></article>
-            <article class="pm-story"><span class="num">04</span><h3 data-i18n="a4t">Location</h3><p data-i18n="a4d">Connect the property to its surroundings.</p></article>
-            <article class="pm-story"><span class="num">05</span><h3 data-i18n="a5t">Investment</h3><p data-i18n="a5d">Explain the opportunity.</p></article>
-            <article class="pm-story"><span class="num">06</span><h3 data-i18n="a6t">Offer</h3><p data-i18n="a6d">Create urgency around the right proposition.</p></article>
-            <article class="pm-story"><span class="num">07</span><h3 data-i18n="a7t">Problem / Solution</h3><p data-i18n="a7d">Start with the buyer need and close with the property.</p></article>
-            <article class="pm-story"><span class="num">08</span><h3 data-i18n="a8t">Direct CTA</h3><p data-i18n="a8d">Move the viewer toward enquiry.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="pm-band pm-band--dark" id="examples">
-        <div class="container">
-          <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="examplesTag">Examples</span>
-            <h2 data-i18n="examplesTitle">Content made to move.</h2>
-            <p data-i18n="examplesSub">Real formats from live real-estate work. Video is the proof.</p>
-          </div>
-          <div class="pm-examples reveal">
-            <article class="pm-example">
-              <div class="pm-example-media">
-                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="WoYMS7Xs7cY" data-yt-title="Real estate services" aria-label="Play">
+          <div class="pm-proof reveal" id="examples">
+            <article class="pm-proof-card">
+              <div class="pm-proof-media">
+                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="WoYMS7Xs7cY" data-yt-title="Property story" aria-label="Play">
                   <img src="assets/img/thumbs/WoYMS7Xs7cY.jpg" alt="" loading="lazy" width="720" height="1280" />
                   <span class="yt-facade-play" aria-hidden="true"></span>
                 </button>
               </div>
-              <div class="pm-example-copy">
+              <div class="pm-proof-copy">
                 <span class="fmt" data-i18n="ex1f">9:16</span>
                 <h3 data-i18n="ex1t">Property story</h3>
-                <p data-i18n="ex1d">Show the property clearly.</p>
               </div>
             </article>
-            <article class="pm-example">
-              <div class="pm-example-media">
-                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="e4ZuwoSHs_8" data-yt-title="Architectural visualisation" aria-label="Play">
+            <article class="pm-proof-card">
+              <div class="pm-proof-media">
+                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="e4ZuwoSHs_8" data-yt-title="Design visualisation" aria-label="Play">
                   <img src="assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="720" height="1280" />
                   <span class="yt-facade-play" aria-hidden="true"></span>
                 </button>
               </div>
-              <div class="pm-example-copy">
+              <div class="pm-proof-copy">
                 <span class="fmt" data-i18n="ex2f">MOTION</span>
                 <h3 data-i18n="ex2t">Design & visualisation</h3>
-                <p data-i18n="ex2d">Turn architectural detail into content.</p>
               </div>
             </article>
-            <article class="pm-example">
-              <div class="pm-example-media">
-                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="u_rZiifgBWo" data-yt-title="Media production" aria-label="Play">
+            <article class="pm-proof-card">
+              <div class="pm-proof-media">
+                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="u_rZiifgBWo" data-yt-title="Launch content" aria-label="Play">
                   <img src="assets/img/thumbs/u_rZiifgBWo.jpg" alt="" loading="lazy" width="720" height="1280" />
                   <span class="yt-facade-play" aria-hidden="true"></span>
                 </button>
               </div>
-              <div class="pm-example-copy">
+              <div class="pm-proof-copy">
                 <span class="fmt" data-i18n="ex3f">CAMPAIGN</span>
                 <h3 data-i18n="ex3t">Launch content</h3>
-                <p data-i18n="ex3d">Content ready for paid and social distribution.</p>
               </div>
             </article>
-            <article class="pm-example">
-              <div class="pm-example-media">
+            <article class="pm-proof-card">
+              <div class="pm-proof-media">
                 <button type="button" class="yt-facade yt-facade--cover" data-yt-id="qCYcoSsy3fs" data-yt-title="Project film" aria-label="Play">
                   <img src="assets/img/thumbs/qCYcoSsy3fs.jpg" alt="" loading="lazy" width="1280" height="720" />
                   <span class="yt-facade-play" aria-hidden="true"></span>
                 </button>
               </div>
-              <div class="pm-example-copy">
+              <div class="pm-proof-copy">
                 <span class="fmt" data-i18n="ex4f">PROJECT</span>
                 <h3 data-i18n="ex4t">Project storytelling</h3>
-                <p data-i18n="ex4d">For developers when the brief gets bigger.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="pm-band pm-band--cream" id="difference">
+      <!-- 4. Compact system path -->
+      <section class="pm-band pm-band--dark" id="system" style="padding-top: 0">
+        <div class="container">
+          <div class="pm-head pm-head--center reveal">
+            <span class="svc-tag" data-i18n="systemTag">The path</span>
+            <h2 data-i18n="systemTitle">Assets → Content → Landing → Campaign → Leads</h2>
+          </div>
+          <div class="pm-flow reveal">
+            <article class="pm-flow-step"><span class="k">01</span><strong data-i18n="flow1t">Assets</strong></article>
+            <article class="pm-flow-step"><span class="k">02</span><strong data-i18n="flow2t">Content</strong></article>
+            <article class="pm-flow-step"><span class="k">03</span><strong data-i18n="flow3t">Landing</strong></article>
+            <article class="pm-flow-step"><span class="k">04</span><strong data-i18n="flow4t">Campaign</strong></article>
+            <article class="pm-flow-step"><span class="k">05</span><strong data-i18n="flow5t">Leads</strong></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. How it works -->
+      <section class="pm-band pm-band--cream" id="how">
+        <div class="container">
+          <div class="pm-head reveal">
+            <span class="svc-tag" data-i18n="howTag">How it works</span>
+            <h2 data-i18n="howTitle">Three clear steps.</h2>
+            <p data-i18n="howSub">You bring the property. We build the system. Content goes to work.</p>
+          </div>
+          <div class="pm-steps reveal">
+            <article class="pm-step">
+              <div class="num">01</div>
+              <h3 data-i18n="s1t">Send what you have.</h3>
+              <p data-i18n="s1d">Photos, renders, plans, project info, existing video, brand guidelines.</p>
+            </article>
+            <article class="pm-step">
+              <div class="num">02</div>
+              <h3 data-i18n="s2t">We turn it into content.</h3>
+              <p data-i18n="s2d">AI-assisted production with human creative direction. Multiple angles from one property.</p>
+            </article>
+            <article class="pm-step">
+              <div class="num">03</div>
+              <h3 data-i18n="s3t">Put it to work.</h3>
+              <p data-i18n="s3d">Publish, advertise, drive traffic, capture enquiries. with your team or with us.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Who it's for -->
+      <section class="pm-band pm-band--dark" id="who">
+        <div class="container">
+          <div class="pm-head reveal">
+            <span class="svc-tag" data-i18n="whoTag">Who it’s for</span>
+            <h2 data-i18n="whoTitle">Built for real-estate teams.</h2>
+          </div>
+          <div class="pm-who reveal">
+            <article class="pm-who-card">
+              <h3 data-i18n="who1t">Developers</h3>
+              <p data-i18n="who1d">Launch and sustain project communication from one visual system.</p>
+            </article>
+            <article class="pm-who-card">
+              <h3 data-i18n="who2t">Brokers</h3>
+              <p data-i18n="who2d">More listing stories without rebuilding production every week.</p>
+            </article>
+            <article class="pm-who-card">
+              <h3 data-i18n="who3t">Marketing teams</h3>
+              <p data-i18n="who3d">Campaign-ready assets that feed paid and organic channels.</p>
+            </article>
+            <article class="pm-who-card">
+              <h3 data-i18n="who4t">Agencies</h3>
+              <p data-i18n="who4d">Production depth when your clients need volume and quality.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Product framing -->
+      <section class="pm-band pm-band--paper" id="products">
+        <div class="container">
+          <div class="pm-head reveal">
+            <span class="svc-tag" data-i18n="prodTag">What you can start with</span>
+            <h2 data-i18n="prodTitle">Clear starting points. Scoped to the brief.</h2>
+            <p data-i18n="prodSub">No fake package counts. Scope follows the assets, the property, and how far you want to go.</p>
+          </div>
+          <div class="pm-products reveal">
+            <article class="pm-product">
+              <span class="opt" data-i18n="prod1opt">01</span>
+              <h3 data-i18n="prod1t">Property Content System</h3>
+              <p data-i18n="prod1d">One listing. Multiple stories and formats ready for social and campaigns.</p>
+            </article>
+            <article class="pm-product">
+              <span class="opt" data-i18n="prod2opt">02</span>
+              <h3 data-i18n="prod2t">Project Content</h3>
+              <p data-i18n="prod2d">Developer and launch storytelling when the brief is a full project.</p>
+            </article>
+            <article class="pm-product">
+              <span class="opt" data-i18n="prod3opt">03</span>
+              <h3 data-i18n="prod3t">Content + Activation</h3>
+              <p data-i18n="prod3d">Content plus landing, distribution support, and lead paths.</p>
+            </article>
+          </div>
+          <p class="pm-product-note reveal" data-i18n="prodNote">Send what you already have. We’ll show the right scope.</p>
+        </div>
+      </section>
+
+      <!-- 8. Why PropMotion -->
+      <section class="pm-band pm-band--dark" id="why">
         <div class="container">
           <div class="pm-head reveal">
             <span class="svc-tag" data-i18n="diffTag">Why PropMotion™</span>
@@ -301,76 +367,61 @@
             </h2>
           </div>
           <div class="pm-points reveal">
-            <article class="pm-point"><h3 data-i18n="d1t">AI-assisted production</h3><p data-i18n="d1d">Faster production without removing creative control.</p></article>
-            <article class="pm-point"><h3 data-i18n="d2t">Human direction</h3><p data-i18n="d2d">Angles, messaging and quality are reviewed by a creative team.</p></article>
-            <article class="pm-point"><h3 data-i18n="d3t">Built for real estate</h3><p data-i18n="d3d">Designed around how properties are marketed and sold.</p></article>
-            <article class="pm-point"><h3 data-i18n="d4t">Ready for campaigns</h3><p data-i18n="d4d">Content can move into paid media, landing pages and lead generation.</p></article>
+            <article class="pm-point"><h3 data-i18n="d1t">AI-assisted</h3><p data-i18n="d1d">Faster production without losing creative control.</p></article>
+            <article class="pm-point"><h3 data-i18n="d2t">Human-directed</h3><p data-i18n="d2d">Angles, messaging, and quality reviewed by a creative team.</p></article>
+            <article class="pm-point"><h3 data-i18n="d3t">Real-estate specific</h3><p data-i18n="d3d">Built around how properties are marketed and sold.</p></article>
+            <article class="pm-point"><h3 data-i18n="d4t">Campaign-ready</h3><p data-i18n="d4d">Assets move into paid media, landing pages, and lead capture.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="pm-band pm-band--dark" id="truth">
+      <!-- 9. Visual truth -->
+      <section class="pm-band pm-band--cream" id="truth">
         <div class="container">
           <div class="pm-truth reveal">
             <span class="svc-tag" data-i18n="truthTag">Visual truth</span>
             <h2>
               <span data-i18n="truthTitle1">Show the property.</span>
-              <span data-i18n="truthTitle2">Don't invent it.</span>
+              <span data-i18n="truthTitle2">Don’t invent it.</span>
             </h2>
-            <p data-i18n="truthBody">We do not invent rooms, views, amenities or project features that do not exist in the supplied information. Conceptual or illustrative visuals are clearly treated as such.</p>
+            <p data-i18n="truthBody">We don’t invent rooms, views, amenities, or features that aren’t in the supplied information. Conceptual visuals are labeled as such.</p>
           </div>
         </div>
       </section>
 
-      <section class="pm-band pm-band--paper" id="leads">
+      <!-- 10. Ways: how far we go -->
+      <section class="pm-band pm-band--paper" id="ways">
         <div class="container">
           <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="leadsTag">From content to leads</span>
-            <h2 data-i18n="leadsTitle">Content should go somewhere.</h2>
-            <p data-i18n="leadsSub">A Reel should not end with a view. It should have somewhere to take the interested buyer.</p>
-          </div>
-          <div class="pm-lead-path reveal">
-            <span data-i18n="lp1">Content</span><i aria-hidden="true">→</i>
-            <span data-i18n="lp2">Landing page</span><i aria-hidden="true">→</i>
-            <span data-i18n="lp3">WhatsApp</span><i aria-hidden="true">→</i>
-            <span data-i18n="lp4">Lead</span>
-          </div>
-          <div class="reveal">
-            <a class="btn btn-pill btn-on-light" href="#start" data-i18n="leadsCta">Build My Property Content System</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="pm-band pm-band--cream" id="ways">
-        <div class="container">
-          <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="waysTag">For teams</span>
-            <h2 data-i18n="waysTitle">Two ways to work with us.</h2>
+            <span class="svc-tag" data-i18n="waysTag">You choose how far we go</span>
+            <h2 class="pm-ways-head" data-i18n="waysTitle">Content only. Or content + activation.</h2>
+            <p data-i18n="waysSub">Same engine. Different depth of execution.</p>
           </div>
           <div class="pm-ways reveal">
             <article class="pm-way">
-              <span class="opt" data-i18n="way1opt">Option 01</span>
-              <h3 data-i18n="way1t">Give us the content brief.</h3>
-              <p data-i18n="way1d">We produce the content. Your team runs the campaign.</p>
+              <span class="opt" data-i18n="way1opt">Content only</span>
+              <h3 data-i18n="way1t">We produce. You activate.</h3>
+              <p data-i18n="way1d">Campaign-ready content delivered to your marketing team.</p>
             </article>
-            <article class="pm-way">
-              <span class="opt" data-i18n="way2opt">Option 02</span>
-              <h3 data-i18n="way2t">Give us the project.</h3>
-              <p data-i18n="way2d">We produce the content and help activate the system. landing, distribution, and lead paths.</p>
+            <article class="pm-way pm-way--focus">
+              <span class="opt" data-i18n="way2opt">Content + Activation</span>
+              <h3 data-i18n="way2t">We produce and help activate.</h3>
+              <p data-i18n="way2d">Content plus landing, distribution support, and lead paths with Bees Motion.</p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- 11. Scale / group -->
       <section class="pm-band pm-band--dark" id="developers">
         <div class="container">
           <div class="pm-head reveal">
-            <span class="svc-tag" data-i18n="devTag">For developers</span>
+            <span class="svc-tag" data-i18n="devTag">When the project gets bigger</span>
             <h2>
-              <span data-i18n="devTitle1">When the project gets bigger,</span>
-              <span data-i18n="devTitle2">the system gets bigger.</span>
+              <span data-i18n="devTitle1">The system scales</span>
+              <span data-i18n="devTitle2">with the brief.</span>
             </h2>
-            <p data-i18n="devSub">Launch films, CGI, architectural visualization, campaign storytelling, interactive presentations, and sales-room content.</p>
+            <p data-i18n="devSub">Launch films, CGI, architectural visualisation, interactive presentations, sales-room content.</p>
           </div>
           <div class="pm-scale-grid reveal">
             <span data-i18n="scale1">Launch films</span>
@@ -378,9 +429,7 @@
             <span data-i18n="scale3">Campaign storytelling</span>
             <span data-i18n="scale4">Interactive presentations</span>
             <span data-i18n="scale5">Sales presentations</span>
-            <span data-i18n="scale6">Social content systems</span>
-            <span data-i18n="scale7">Landing pages</span>
-            <span data-i18n="scale8">Lead campaigns</span>
+            <span data-i18n="scale6">Lead campaigns</span>
           </div>
           <div class="pm-group-links reveal">
             <a href="https://3dgraphicshouse.com/" target="_blank" rel="noopener" data-i18n="ghLink">Advanced CGI → Graphics House</a>
@@ -389,6 +438,7 @@
         </div>
       </section>
 
+      <!-- 12. Case study -->
       <section class="pm-band pm-band--paper" id="case">
         <div class="container pm-case">
           <div class="pm-case-media reveal">
@@ -400,7 +450,7 @@
           <div class="pm-case-copy reveal">
             <span class="svc-tag" data-i18n="caseTag">Case study</span>
             <h2 data-i18n="caseTitle">From visualisation to market communication.</h2>
-            <p data-i18n="caseBody">A real-estate visual story that moves from project vision into content and campaign assets. backed by deeper production when needed.</p>
+            <p data-i18n="caseBody">A real-estate visual story that moves from project vision into content and campaign assets.</p>
             <div class="pm-case-chain">
               <span data-i18n="case1">Project</span>
               <span data-i18n="case2">Visual story</span>
@@ -412,6 +462,7 @@
         </div>
       </section>
 
+      <!-- 13. Final CTA + form -->
       <section class="pm-band pm-band--cream">
         <div class="container">
           <div class="pm-final reveal">
@@ -419,7 +470,7 @@
               <span data-i18n="finalTitle1">Have a property</span>
               <span data-i18n="finalTitle2">that needs more content?</span>
             </h2>
-            <p data-i18n="finalSub">Send us what you already have. We'll show you what it can become.</p>
+            <p data-i18n="finalSub">Send what you already have. We’ll show you what it can become.</p>
             <div class="pm-final-actions">
               <a class="btn btn-pill btn-on-light" href="#start" data-i18n="ctaNav">Start a Project</a>
               <a class="btn btn-pill btn-outline-dark" href="https://wa.me/966502786513" target="_blank" rel="noopener" data-i18n="ctaWa">WhatsApp Us</a>
@@ -433,7 +484,7 @@
           <div class="reveal">
             <span class="svc-tag" data-i18n="formTag">Start a project</span>
             <h2 class="font-headline-xl" data-i18n="formTitle">Tell us about the property.</h2>
-            <p class="font-body-md" data-i18n="formSub">Send a short brief. We reply on WhatsApp with the right next step.</p>
+            <p class="font-body-md" data-i18n="formSub">Short brief. We reply on WhatsApp with the next step.</p>
           </div>
           <form class="pm-form reveal" id="rceForm">
             <label><span data-i18n="labelName">Name</span><input name="name" required autocomplete="name" /></label>
@@ -453,16 +504,16 @@
               <label>
                 <span data-i18n="labelNeed">What do you need?</span>
                 <select name="need" id="svcSelect">
-                  <option value="content-engine" data-i18n="needEngine">Property content system</option>
+                  <option value="property-system" data-i18n="needEngine">Property content system</option>
                   <option value="content-only" data-i18n="needContent">Content only</option>
-                  <option value="content-campaign" data-i18n="needBoth">Content + campaign help</option>
-                  <option value="project" data-i18n="needProject">Developer / project marketing</option>
+                  <option value="content-activation" data-i18n="needBoth">Content + Activation</option>
+                  <option value="project" data-i18n="needProject">Project content</option>
                 </select>
               </label>
             </div>
             <label><span data-i18n="labelNotes">Property / project notes</span><textarea name="notes" rows="4"></textarea></label>
             <button type="submit" class="btn btn-pill btn-on-light" data-i18n="formCta">Start the conversation</button>
-            <p class="pm-form-note" data-i18n="formNote">No long proposals. Clear brief → clear next step.</p>
+            <p class="pm-form-note" data-i18n="formNote">Clear brief → clear next step.</p>
           </form>
         </div>
       </section>
@@ -500,7 +551,7 @@
       <span data-i18n="floatingWa">WhatsApp</span>
     </a>
 
-    <script src="assets/js/app.js?v=20260903p"></script>
+    <script src="assets/js/app.js?v=20260903v2"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -510,170 +561,149 @@
           ar: {
             skip: "تخطي إلى المحتوى",
             brandSub: "محرك المحتوى العقاري",
+            navStories: "القصص",
             navHow: "كيف تعمل",
-            navContent: "المحتوى",
-            navExamples: "أمثلة",
+            navWays: "المدى",
             navDev: "للمطورين",
-            navTeams: "للفرق",
             navWork: "الأعمال",
             navCapabilities: "القدرات",
             ctaNav: "ابدأ مشروعك",
             ctaWa: "واتساب",
             heroEyebrow: "PROPMOTION™ / محرك المحتوى العقاري",
             heroTitle1: "عقار واحد.",
-            heroTitle2: "أكثر من قصة للبيع.",
-            heroSub: "حوّل الأصول التي لديك بالفعل إلى منظومة مستمرة من المحتوى التسويقي. من الريلز والمحتوى الاجتماعي إلى صفحات الهبوط والحملات.",
-            heroCta2: "شاهد كيف تعمل",
+            heroTitle2: "أكثر من قصة.",
+            heroSub: "حوّل الأصول التي لديك إلى ريلز وصفحات هبوط ومحتوى حملات. Done-For-You.",
+            heroCta2: "شاهد ماذا يصبح",
             heroDfy: "Done-For-You. بمساعدة الذكاء الاصطناعي. وبتوجيه بشري.",
             chip1: "ريل ٩:١٦",
             chip2: "أسلوب حياة",
             chip3: "موقع",
             chip4: "استثمار",
-            chip5: "دعوة لإجراء",
-            orbitTitle: "أصول العقار ← محتوى",
-            orbitSub: "منظومة محتوى حية حول كل عقار",
-            problemTag: "المشكلة",
-            problemTitle: "غالبًا كل ما يحتاجه عقارك موجود بالفعل.",
-            problemSub: "المشكلة ليست في نقص الأصول. بل في عدم تحويلها إلى محتوى مستمر.",
+            orbitTitle: "أصول عقارك",
+            orbitSub: "تصبح منظومة محتوى حية",
+            baTag: "قبل / بعد",
+            baTitle: "أصول خامدة. أو منظومة محتوى.",
+            baSub: "المواد موجودة لديك. PropMotion تحوّلها إلى تسويق يستمر في العمل.",
+            baBefore: "ما لديك اليوم",
+            baAfter: "ما تبنيه PropMotion™",
             asset1: "صور",
             asset2: "رندرات",
             asset3: "مخططات",
             asset4: "معلومات المشروع",
             asset5: "فيديوهات موجودة",
-            vsBadTitle: "عقار واحد اليوم",
-            vsBad1: "منشور واحد",
-            vsBad2: "إعلان واحد",
-            vsBad3: "حملة قصيرة ثم صمت",
-            vsGoodTitle: "عقار واحد مع PropMotion™",
-            vsGood1: "أكثر من قصة",
-            vsGood2: "أكثر من صيغة",
-            vsGood3: "محتوى مستمر",
-            vsGood4: "صفحة هبوط ← حملة ← عملاء",
-            systemTag: "المنظومة",
-            systemTitle1: "من أصول العقار",
-            systemTitle2: "إلى محتوى تسويقي مستمر.",
-            flow1k: "01 أصول",
-            flow1t: "أصول",
-            flow1d: "صور · رندرات · مخططات · بيانات المشروع",
-            flow2k: "02 محتوى",
-            flow2t: "محتوى",
-            flow2d: "ريلز · ستوريز · موشن · أسلوب حياة · استثمار",
-            flow3k: "03 هبوط",
-            flow3t: "هبوط",
-            flow3d: "صفحة هبوط · واتساب · صفحة مشروع",
-            flow4k: "04 حملة",
-            flow4t: "حملة",
-            flow4d: "Meta · TikTok · Snap · حملات رقمية",
-            flow5k: "05 عملاء",
-            flow5t: "عملاء",
-            flow5d: "استفسارات · محادثات بيع",
-            howTag: "كيف تعمل",
-            howTitle: "ثلاث خطوات واضحة.",
-            howSub: "ترسل العقار. نبني منظومة المحتوى. ثم يذهب المحتوى إلى العمل.",
-            s1t: "أرسل ما لديك.",
-            s1d: "صور، رندرات، معلومات المشروع، فيديوهات موجودة، وإرشادات العلامة.",
-            s2t: "نحوّل الأصول إلى محتوى.",
-            s2d: "إنتاج بمساعدة الذكاء الاصطناعي مع توجيه إبداعي بشري. زوايا وصيغ متعددة من نفس العقار.",
-            s3t: "نضع المحتوى في مكانه.",
-            s3d: "نشر، إعلان، جلب زيارات، والتقاط الاستفسارات. مع فريقك أو مع بيز موشن.",
-            dual1t: "فريقك يدير الحملة",
-            dual1d: "نسلّم محتوى جاهزًا للحملة. وفريقك التسويقي يفعّله.",
-            dual2t: "نساعدك في التفعيل",
-            dual2d: "تحتاج توزيعًا ومسارات عملاء أيضًا؟ بيز موشن تستطيع تحمّل جزء أكبر من التنفيذ.",
-            storiesTag: "منظومة المحتوى",
-            storiesTitle1: "عقار واحد.",
-            storiesTitle2: "أكثر من قصة.",
-            storiesSub: "لسنا نصنع فيديو واحدًا. نحن نبني منظومة محتوى حول العقار.",
+            out1: "أكثر من قصة",
+            out2: "أكثر من صيغة",
+            out3: "محتوى مستمر",
+            out4: "هبوط ← حملة ← عملاء",
+            storiesTag: "ماذا يصبح العقار الواحد",
+            storiesTitle1: "ثماني زوايا.",
+            storiesTitle2: "عقار واحد.",
+            storiesSub: "ليس فيديو واحدًا. منظومة محتوى حول العقار.",
             a1t: "جولة العقار",
-            a1d: "أظهر العقار بوضوح.",
             a2t: "أسلوب حياة",
-            a2d: "أظهر شعور السكن هناك.",
             a3t: "التصميم والمزايا",
-            a3d: "حوّل التفاصيل المعمارية إلى محتوى.",
             a4t: "الموقع",
-            a4d: "اربط العقار بمحيطه.",
             a5t: "الاستثمار",
-            a5d: "اشرح الفرصة.",
             a6t: "العرض",
-            a6d: "ابنِ إلحاحًا حول العرض المناسب.",
             a7t: "مشكلة / حل",
-            a7d: "ابدأ بحاجة المشتري وأغلق بالعقار.",
             a8t: "دعوة مباشرة",
-            a8d: "حرّك المشاهد نحو الاستفسار.",
-            examplesTag: "أمثلة",
-            examplesTitle: "محتوى صُنع ليتحرّك.",
-            examplesSub: "صيغ حقيقية من أعمال عقارية. الفيديو هو الإثبات.",
             ex1f: "٩:١٦",
             ex1t: "قصة العقار",
-            ex1d: "أظهر العقار بوضوح.",
             ex2f: "موشن",
             ex2t: "تصميم وتصور",
-            ex2d: "حوّل التفاصيل المعمارية إلى محتوى.",
             ex3f: "حملة",
             ex3t: "محتوى إطلاق",
-            ex3d: "محتوى جاهز للتوزيع المدفوع والاجتماعي.",
             ex4f: "مشروع",
             ex4t: "سرد المشروع",
-            ex4d: "للمطورين عندما يكبر الموجز.",
+            systemTag: "المسار",
+            systemTitle: "أصول ← محتوى ← هبوط ← حملة ← عملاء",
+            flow1t: "أصول",
+            flow2t: "محتوى",
+            flow3t: "هبوط",
+            flow4t: "حملة",
+            flow5t: "عملاء",
+            howTag: "كيف تعمل",
+            howTitle: "ثلاث خطوات واضحة.",
+            howSub: "ترسل العقار. نبني المنظومة. ثم يذهب المحتوى إلى العمل.",
+            s1t: "أرسل ما لديك.",
+            s1d: "صور، رندرات، مخططات، معلومات المشروع، فيديو موجود، وإرشادات العلامة.",
+            s2t: "نحوّله إلى محتوى.",
+            s2d: "إنتاج بمساعدة الذكاء الاصطناعي مع توجيه إبداعي بشري. زوايا متعددة من عقار واحد.",
+            s3t: "نضعه في العمل.",
+            s3d: "نشر، إعلان، زيارات، واستفسارات. مع فريقك أو معنا.",
+            whoTag: "لمن",
+            whoTitle: "مصمم لفرق العقار.",
+            who1t: "المطورون",
+            who1d: "إطلاق واستمرار تواصل المشروع من منظومة بصرية واحدة.",
+            who2t: "الوسطاء",
+            who2d: "قصص أكثر للإعلان دون إعادة بناء الإنتاج كل أسبوع.",
+            who3t: "فرق التسويق",
+            who3d: "أصول جاهزة للحملات تغذي القنوات المدفوعة والعضوية.",
+            who4t: "الوكالات",
+            who4d: "عمق إنتاج عندما يحتاج عملاؤك حجمًا وجودة.",
+            prodTag: "من أين تبدأ",
+            prodTitle: "نقاط بداية واضحة. النطاق حسب الموجز.",
+            prodSub: "بلا أرقام باقات وهمية. النطاق يتبع الأصول والعقار ومدى التنفيذ الذي تريده.",
+            prod1opt: "01",
+            prod1t: "منظومة محتوى العقار",
+            prod1d: "إعلان واحد. قصص وصيغ متعددة جاهزة للسوشيال والحملات.",
+            prod2opt: "02",
+            prod2t: "محتوى المشروع",
+            prod2d: "سرد للمطورين والإطلاق عندما يكون الموجز مشروعًا كاملًا.",
+            prod3opt: "03",
+            prod3t: "محتوى + تفعيل",
+            prod3d: "محتوى مع هبوط ودعم توزيع ومسارات عملاء.",
+            prodNote: "أرسل ما لديك. وسنريك النطاق المناسب.",
             diffTag: "لماذا PropMotion™",
             diffTitle1: "محتوى أكثر.",
             diffTitle2: "دون مضاعفة عبء الإنتاج.",
-            d1t: "إنتاج بمساعدة الذكاء الاصطناعي",
-            d1d: "سرعة أعلى دون إزالة السيطرة الإبداعية.",
-            d2t: "توجيه بشري",
+            d1t: "بمساعدة الذكاء الاصطناعي",
+            d1d: "إنتاج أسرع دون فقدان السيطرة الإبداعية.",
+            d2t: "بتوجيه بشري",
             d2d: "الزوايا والرسالة والجودة تُراجع من فريق إبداعي.",
-            d3t: "مبني للعقار",
-            d3d: "مصمم حول طريقة تسويق العقار وبيعه.",
+            d3t: "مخصص للعقار",
+            d3d: "مبني حول طريقة تسويق العقار وبيعه.",
             d4t: "جاهز للحملات",
-            d4d: "المحتوى ينتقل إلى الإعلان وصفحات الهبوط وتوليد العملاء.",
+            d4d: "الأصول تنتقل إلى الإعلان وصفحات الهبوط والتقاط العملاء.",
             truthTag: "الصدق البصري",
             truthTitle1: "نُظهر العقار.",
-            truthTitle2: "ولا نخترع ما ليس فيه.",
-            truthBody: "لا نضيف غرفًا أو إطلالات أو مرافق أو مزايا غير موجودة في المعلومات المعتمدة. وأي محتوى تصوري أو توضيحي يتم التعامل معه بوضوح على هذا الأساس.",
-            leadsTag: "من المحتوى إلى العملاء",
-            leadsTitle: "المحتوى يجب أن يقود إلى خطوة تالية.",
-            leadsSub: "لا يجب أن ينتهي الريلز عند المشاهدة. بل يجب أن يقود المهتم إلى خطوة واضحة.",
-            lp1: "محتوى",
-            lp2: "صفحة هبوط",
-            lp3: "واتساب",
-            lp4: "عميل محتمل",
-            leadsCta: "ابنِ منظومة محتوى عقاري",
-            waysTag: "للفرق",
-            waysTitle: "طريقتان للعمل معنا.",
-            way1opt: "الخيار 01",
-            way1t: "أعطنا موجز المحتوى.",
-            way1d: "ننتج المحتوى. وفريقك يدير الحملة.",
-            way2opt: "الخيار 02",
-            way2t: "أعطنا المشروع.",
-            way2d: "ننتج المحتوى ونساعدك في تفعيل المنظومة. الهبوط والتوزيع ومسارات العملاء.",
-            devTag: "للمطورين",
-            devTitle1: "عندما يكبر المشروع،",
-            devTitle2: "تتوسع المنظومة.",
-            devSub: "أفلام إطلاق، CGI، تصور معماري، سرد حملات، عروض تفاعلية، ومحتوى صالات البيع.",
+            truthTitle2: "ولا نخترعه.",
+            truthBody: "لا نضيف غرفًا أو إطلالات أو مرافق أو مزايا غير موجودة في المعلومات المعتمدة. وأي محتوى تصوري يُوضَّح على هذا الأساس.",
+            waysTag: "أنت تختار المدى",
+            waysTitle: "محتوى فقط. أو محتوى + تفعيل.",
+            waysSub: "نفس المحرك. عمق تنفيذ مختلف.",
+            way1opt: "محتوى فقط",
+            way1t: "ننتج. أنتم تفعّلون.",
+            way1d: "محتوى جاهز للحملة يُسلَّم لفريقكم التسويقي.",
+            way2opt: "محتوى + تفعيل",
+            way2t: "ننتج ونساعد في التفعيل.",
+            way2d: "محتوى مع هبوط ودعم توزيع ومسارات عملاء مع بيز موشن.",
+            devTag: "عندما يكبر المشروع",
+            devTitle1: "تتوسع المنظومة",
+            devTitle2: "مع الموجز.",
+            devSub: "أفلام إطلاق، CGI، تصور معماري، عروض تفاعلية، ومحتوى صالات البيع.",
             scale1: "أفلام إطلاق",
             scale2: "CGI وموشن",
             scale3: "سرد الحملات",
             scale4: "عروض تفاعلية",
             scale5: "عروض مبيعات",
-            scale6: "منظومات محتوى اجتماعي",
-            scale7: "صفحات هبوط",
-            scale8: "حملات عملاء",
+            scale6: "حملات عملاء",
             ghLink: "CGI متقدم ← جرافيكس هاوس",
             tuLink: "تنفيذ مكاني ← توريفا",
             caseTag: "دراسة حالة",
             caseTitle: "من التصور إلى التواصل مع السوق.",
-            caseBody: "قصة بصرية عقارية تنتقل من رؤية المشروع إلى محتوى وأصول حملات. مع عمق إنتاج أكبر عند الحاجة.",
+            caseBody: "قصة بصرية عقارية تنتقل من رؤية المشروع إلى محتوى وأصول حملات.",
             case1: "مشروع",
             case2: "قصة بصرية",
             case3: "محتوى",
             case4: "أصول حملة",
             caseCta: "شاهد دراسة الحالة العقارية",
             finalTitle1: "لديك عقار",
-            finalTitle2: "يحتاج إلى محتوى أكثر؟",
-            finalSub: "أرسل لنا ما لديك بالفعل. وسنريك كيف يمكن تحويله إلى منظومة محتوى.",
+            finalTitle2: "يحتاج محتوى أكثر؟",
+            finalSub: "أرسل ما لديك بالفعل. وسنريك ماذا يمكن أن يصبح.",
             formTag: "ابدأ مشروعك",
             formTitle: "أخبرنا عن العقار.",
-            formSub: "أرسل موجزًا قصيرًا. نرد عبر واتساب بالخطوة التالية الأنسب.",
+            formSub: "موجز قصير. نرد عبر واتساب بالخطوة التالية.",
             labelName: "الاسم",
             labelPhone: "واتساب",
             labelCompany: "الشركة",
@@ -685,12 +715,12 @@
             roleMarketer: "مسوّق عقاري",
             roleAgency: "وكالة",
             roleOther: "أخرى",
-            needEngine: "منظومة محتوى عقاري",
+            needEngine: "منظومة محتوى العقار",
             needContent: "محتوى فقط",
-            needBoth: "محتوى + مساعدة حملة",
-            needProject: "تسويق مشروع / مطور",
+            needBoth: "محتوى + تفعيل",
+            needProject: "محتوى مشروع",
             formCta: "ابدأ المحادثة",
-            formNote: "لا مقترحات طويلة. موجز واضح ← خطوة تالية واضحة.",
+            formNote: "موجز واضح ← خطوة تالية واضحة.",
             footerBm: "تسويق · محتوى · ذكاء اصطناعي",
             footerAbout: "PropMotion™ هو محرك المحتوى العقاري داخل بيز موشن.",
             footerSectors: "القطاعان",
@@ -698,17 +728,16 @@
             footerGroup: "مجموعة تسامي",
             floatingWa: "واتساب",
             metaTitle: "PropMotion™ | محرك المحتوى العقاري | بيز موشن",
-            metaDesc: "عقار واحد وأكثر من قصة. PropMotion™ من بيز موشن: منظومة محتوى عقاري Done-For-You من الأصول إلى الحملات.",
+            metaDesc: "عقار واحد وأكثر من قصة. PropMotion™ من بيز موشن: منظومة محتوى عقاري Done-For-You.",
             waPrefix: "استفسار PropMotion / محرك المحتوى العقاري",
           },
           en: {
             skip: "Skip to content",
             brandSub: "Real Estate Content Engine",
+            navStories: "Stories",
             navHow: "How It Works",
-            navContent: "Content",
-            navExamples: "Examples",
+            navWays: "Ways",
             navDev: "For Developers",
-            navTeams: "For Teams",
             navWork: "Work",
             navCapabilities: "Capabilities",
             ctaNav: "Start a Project",
@@ -716,147 +745,127 @@
             heroEyebrow: "PROPMOTION™ / REAL ESTATE CONTENT ENGINE",
             heroTitle1: "One property.",
             heroTitle2: "Multiple stories.",
-            heroSub: "Turn the property assets you already have into a continuous stream of marketing content. from Reels and social content to landing pages and campaigns.",
-            heroCta2: "See How It Works",
+            heroSub: "Turn the assets you already have into Reels, landing pages, and campaign content. Done-For-You.",
+            heroCta2: "See what it becomes",
             heroDfy: "Done-For-You. AI-assisted. Human-directed.",
             chip1: "9:16 Reel",
             chip2: "Lifestyle",
             chip3: "Location",
             chip4: "Investment",
-            chip5: "CTA",
-            orbitTitle: "Property assets → content",
-            orbitSub: "A living content system around every listing",
-            problemTag: "The problem",
-            problemTitle: "You already have the assets.",
-            problemSub: "The problem isn't the lack of assets. It's what happens after you receive them.",
+            orbitTitle: "Your property assets",
+            orbitSub: "Become a living content system",
+            baTag: "Before / After",
+            baTitle: "Assets sitting idle. Or a content system.",
+            baSub: "You already have the raw material. PropMotion turns it into marketing that keeps working.",
+            baBefore: "What you have today",
+            baAfter: "What PropMotion™ builds",
             asset1: "Photos",
             asset2: "Renders",
             asset3: "Floor plans",
-            asset4: "Project information",
+            asset4: "Project info",
             asset5: "Existing videos",
-            vsBadTitle: "One property today",
-            vsBad1: "One post",
-            vsBad2: "One listing",
-            vsBad3: "One campaign burst",
-            vsGoodTitle: "One property with PropMotion™",
-            vsGood1: "Multiple stories",
-            vsGood2: "Multiple formats",
-            vsGood3: "Continuous content",
-            vsGood4: "Landing page → campaign → leads",
-            systemTag: "The system",
-            systemTitle1: "From property assets",
-            systemTitle2: "to marketing content.",
-            flow1k: "01 Assets",
-            flow1t: "Assets",
-            flow1d: "Photos · Renders · Plans · Project data",
-            flow2k: "02 Content",
-            flow2t: "Content",
-            flow2d: "Reels · Stories · Motion · Lifestyle · Investment",
-            flow3k: "03 Landing",
-            flow3t: "Landing",
-            flow3d: "Landing page · WhatsApp · Project page",
-            flow4k: "04 Campaign",
-            flow4t: "Campaign",
-            flow4d: "Meta · TikTok · Snap · Digital campaigns",
-            flow5k: "05 Leads",
-            flow5t: "Leads",
-            flow5d: "Enquiries · Sales conversations",
-            howTag: "How it works",
-            howTitle: "Three clear steps.",
-            howSub: "You bring the property. We build the content system. Then the content goes to work.",
-            s1t: "Bring what you have.",
-            s1d: "Photos, renders, project information, existing videos, brand guidelines.",
-            s2t: "We turn it into content.",
-            s2d: "AI-assisted production with human creative direction. Multiple angles and formats from the same property.",
-            s3t: "Put it to work.",
-            s3d: "Publish, advertise, drive traffic, and capture enquiries. with your team or with Bees Motion.",
-            dual1t: "You run the campaign",
-            dual1d: "We deliver campaign-ready content. Your marketing team activates it.",
-            dual2t: "We help activate it",
-            dual2d: "Need distribution and lead paths too? Bees Motion can take more of the execution.",
-            storiesTag: "Content system",
-            storiesTitle1: "One property.",
-            storiesTitle2: "Multiple stories.",
-            storiesSub: "We are not making one video. We are building a content system around the property.",
+            out1: "Multiple stories",
+            out2: "Multiple formats",
+            out3: "Continuous content",
+            out4: "Landing → campaign → leads",
+            storiesTag: "What one property can become",
+            storiesTitle1: "Eight angles.",
+            storiesTitle2: "One listing.",
+            storiesSub: "Not one video. A content system around the property.",
             a1t: "Property Tour",
-            a1d: "Show the property clearly.",
             a2t: "Lifestyle",
-            a2d: "Show what living there feels like.",
             a3t: "Design & Features",
-            a3d: "Turn architectural details into content.",
             a4t: "Location",
-            a4d: "Connect the property to its surroundings.",
             a5t: "Investment",
-            a5d: "Explain the opportunity.",
             a6t: "Offer",
-            a6d: "Create urgency around the right proposition.",
             a7t: "Problem / Solution",
-            a7d: "Start with the buyer need and close with the property.",
             a8t: "Direct CTA",
-            a8d: "Move the viewer toward enquiry.",
-            examplesTag: "Examples",
-            examplesTitle: "Content made to move.",
-            examplesSub: "Real formats from live real-estate work. Video is the proof.",
             ex1f: "9:16",
             ex1t: "Property story",
-            ex1d: "Show the property clearly.",
             ex2f: "MOTION",
             ex2t: "Design & visualisation",
-            ex2d: "Turn architectural detail into content.",
             ex3f: "CAMPAIGN",
             ex3t: "Launch content",
-            ex3d: "Content ready for paid and social distribution.",
             ex4f: "PROJECT",
             ex4t: "Project storytelling",
-            ex4d: "For developers when the brief gets bigger.",
+            systemTag: "The path",
+            systemTitle: "Assets → Content → Landing → Campaign → Leads",
+            flow1t: "Assets",
+            flow2t: "Content",
+            flow3t: "Landing",
+            flow4t: "Campaign",
+            flow5t: "Leads",
+            howTag: "How it works",
+            howTitle: "Three clear steps.",
+            howSub: "You bring the property. We build the system. Content goes to work.",
+            s1t: "Send what you have.",
+            s1d: "Photos, renders, plans, project info, existing video, brand guidelines.",
+            s2t: "We turn it into content.",
+            s2d: "AI-assisted production with human creative direction. Multiple angles from one property.",
+            s3t: "Put it to work.",
+            s3d: "Publish, advertise, drive traffic, capture enquiries. with your team or with us.",
+            whoTag: "Who it’s for",
+            whoTitle: "Built for real-estate teams.",
+            who1t: "Developers",
+            who1d: "Launch and sustain project communication from one visual system.",
+            who2t: "Brokers",
+            who2d: "More listing stories without rebuilding production every week.",
+            who3t: "Marketing teams",
+            who3d: "Campaign-ready assets that feed paid and organic channels.",
+            who4t: "Agencies",
+            who4d: "Production depth when your clients need volume and quality.",
+            prodTag: "What you can start with",
+            prodTitle: "Clear starting points. Scoped to the brief.",
+            prodSub: "No fake package counts. Scope follows the assets, the property, and how far you want to go.",
+            prod1opt: "01",
+            prod1t: "Property Content System",
+            prod1d: "One listing. Multiple stories and formats ready for social and campaigns.",
+            prod2opt: "02",
+            prod2t: "Project Content",
+            prod2d: "Developer and launch storytelling when the brief is a full project.",
+            prod3opt: "03",
+            prod3t: "Content + Activation",
+            prod3d: "Content plus landing, distribution support, and lead paths.",
+            prodNote: "Send what you already have. We’ll show the right scope.",
             diffTag: "Why PropMotion™",
             diffTitle1: "More content.",
             diffTitle2: "Without multiplying production.",
-            d1t: "AI-assisted production",
-            d1d: "Faster production without removing creative control.",
-            d2t: "Human direction",
-            d2d: "Angles, messaging and quality are reviewed by a creative team.",
-            d3t: "Built for real estate",
-            d3d: "Designed around how properties are marketed and sold.",
-            d4t: "Ready for campaigns",
-            d4d: "Content can move into paid media, landing pages and lead generation.",
+            d1t: "AI-assisted",
+            d1d: "Faster production without losing creative control.",
+            d2t: "Human-directed",
+            d2d: "Angles, messaging, and quality reviewed by a creative team.",
+            d3t: "Real-estate specific",
+            d3d: "Built around how properties are marketed and sold.",
+            d4t: "Campaign-ready",
+            d4d: "Assets move into paid media, landing pages, and lead capture.",
             truthTag: "Visual truth",
             truthTitle1: "Show the property.",
-            truthTitle2: "Don't invent it.",
-            truthBody: "We do not invent rooms, views, amenities or project features that do not exist in the supplied information. Conceptual or illustrative visuals are clearly treated as such.",
-            leadsTag: "From content to leads",
-            leadsTitle: "Content should go somewhere.",
-            leadsSub: "A Reel should not end with a view. It should have somewhere to take the interested buyer.",
-            lp1: "Content",
-            lp2: "Landing page",
-            lp3: "WhatsApp",
-            lp4: "Lead",
-            leadsCta: "Build My Property Content System",
-            waysTag: "For teams",
-            waysTitle: "Two ways to work with us.",
-            way1opt: "Option 01",
-            way1t: "Give us the content brief.",
-            way1d: "We produce the content. Your team runs the campaign.",
-            way2opt: "Option 02",
-            way2t: "Give us the project.",
-            way2d: "We produce the content and help activate the system. landing, distribution, and lead paths.",
-            devTag: "For developers",
-            devTitle1: "When the project gets bigger,",
-            devTitle2: "the system gets bigger.",
-            devSub: "Launch films, CGI, architectural visualization, campaign storytelling, interactive presentations, and sales-room content.",
+            truthTitle2: "Don’t invent it.",
+            truthBody: "We don’t invent rooms, views, amenities, or features that aren’t in the supplied information. Conceptual visuals are labeled as such.",
+            waysTag: "You choose how far we go",
+            waysTitle: "Content only. Or content + activation.",
+            waysSub: "Same engine. Different depth of execution.",
+            way1opt: "Content only",
+            way1t: "We produce. You activate.",
+            way1d: "Campaign-ready content delivered to your marketing team.",
+            way2opt: "Content + Activation",
+            way2t: "We produce and help activate.",
+            way2d: "Content plus landing, distribution support, and lead paths with Bees Motion.",
+            devTag: "When the project gets bigger",
+            devTitle1: "The system scales",
+            devTitle2: "with the brief.",
+            devSub: "Launch films, CGI, architectural visualisation, interactive presentations, sales-room content.",
             scale1: "Launch films",
             scale2: "CGI & motion",
             scale3: "Campaign storytelling",
             scale4: "Interactive presentations",
             scale5: "Sales presentations",
-            scale6: "Social content systems",
-            scale7: "Landing pages",
-            scale8: "Lead campaigns",
+            scale6: "Lead campaigns",
             ghLink: "Advanced CGI → Graphics House",
             tuLink: "Spatial execution → Turriva",
             caseTag: "Case study",
             caseTitle: "From visualisation to market communication.",
-            caseBody: "A real-estate visual story that moves from project vision into content and campaign assets. backed by deeper production when needed.",
+            caseBody: "A real-estate visual story that moves from project vision into content and campaign assets.",
             case1: "Project",
             case2: "Visual story",
             case3: "Content",
@@ -864,10 +873,10 @@
             caseCta: "View real estate case",
             finalTitle1: "Have a property",
             finalTitle2: "that needs more content?",
-            finalSub: "Send us what you already have. We'll show you what it can become.",
+            finalSub: "Send what you already have. We’ll show you what it can become.",
             formTag: "Start a project",
             formTitle: "Tell us about the property.",
-            formSub: "Send a short brief. We reply on WhatsApp with the right next step.",
+            formSub: "Short brief. We reply on WhatsApp with the next step.",
             labelName: "Name",
             labelPhone: "WhatsApp",
             labelCompany: "Company",
@@ -881,10 +890,10 @@
             roleOther: "Other",
             needEngine: "Property content system",
             needContent: "Content only",
-            needBoth: "Content + campaign help",
-            needProject: "Developer / project marketing",
+            needBoth: "Content + Activation",
+            needProject: "Project content",
             formCta: "Start the conversation",
-            formNote: "No long proposals. Clear brief → clear next step.",
+            formNote: "Clear brief → clear next step.",
             footerBm: "Marketing · Content · AI",
             footerAbout: "PropMotion™ is the real-estate content engine inside Bees Motion.",
             footerSectors: "Sectors",
@@ -892,7 +901,7 @@
             footerGroup: "Tasami Group",
             floatingWa: "WhatsApp",
             metaTitle: "PropMotion™ | Real Estate Content Engine | Bees Motion",
-            metaDesc: "One property. Multiple stories. PropMotion™ by Bees Motion: a Done-For-You real estate content system from assets to campaigns.",
+            metaDesc: "One property. Multiple stories. PropMotion™ by Bees Motion: a Done-For-You real estate content system.",
             waPrefix: "PropMotion / Real Estate Content Engine inquiry",
           },
         };
