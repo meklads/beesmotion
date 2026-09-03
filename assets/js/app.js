@@ -251,7 +251,9 @@
       const id = crop.getAttribute("data-hero-autoplay");
       if (!id || crop.querySelector("iframe")) return;
       const title = crop.getAttribute("data-hero-title") || "Showreel";
-      const poster = crop.querySelector(".hero-tri-poster, img, .yt-facade");
+      const poster =
+        crop.querySelector(":scope > .yt-facade, :scope > .hero-tri-poster, :scope > img") ||
+        crop.querySelector(".yt-facade, .hero-tri-poster, img");
       const next = buildHeroIframe(id, title);
       if (crop.classList.contains("hero-tri-crop") || crop.closest(".hero-tri-panel")) {
         next.style.cssText =
