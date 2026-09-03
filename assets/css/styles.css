@@ -9669,20 +9669,21 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
 .bm-hero--tri {
   padding: 0;
   margin: 0;
-  background: #f7f4ef;
+  background: #fffcf8;
   overflow: hidden;
 }
 
 .hero-tri {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.92fr) minmax(0, 1fr);
-  min-height: min(100svh, 920px);
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.9fr) minmax(0, 1.05fr);
+  min-height: min(100svh, 960px);
   direction: ltr;
+  isolation: isolate;
 }
 
 .hero-tri-panel {
   position: relative;
-  min-height: min(100svh, 920px);
+  min-height: min(100svh, 960px);
   overflow: hidden;
   background: #0c0d10;
 }
@@ -9703,19 +9704,26 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   border: 0;
+  transform: scale(1.04);
+  filter: saturate(1.06) contrast(1.04);
 }
 
 .hero-tri-crop iframe {
-  /* cover vertical short inside panel */
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
   min-width: 100%;
   min-height: 177.78%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.06);
+  filter: saturate(1.06) contrast(1.04);
   pointer-events: none;
+}
+
+.hero-tri-crop .hero-tri-poster {
+  transform: scale(1.06);
 }
 
 .hero-tri-veil {
@@ -9725,91 +9733,89 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   pointer-events: none;
 }
 
+/* Strong white blooms from inner corners — same family as center paper */
 .hero-tri-veil--med {
   background:
-    linear-gradient(90deg, rgba(8, 28, 40, 0.28), rgba(8, 28, 40, 0.08) 55%, rgba(8, 28, 40, 0.35)),
-    linear-gradient(180deg, rgba(8, 10, 14, 0.12), rgba(8, 10, 14, 0.45));
+    radial-gradient(140% 95% at 100% 0%, #fffcf8 0%, rgba(255, 252, 248, 0.85) 22%, rgba(255, 252, 248, 0.35) 42%, transparent 62%),
+    radial-gradient(140% 95% at 100% 100%, #fffcf8 0%, rgba(255, 252, 248, 0.85) 22%, rgba(255, 252, 248, 0.35) 42%, transparent 62%),
+    linear-gradient(90deg, transparent 20%, rgba(255, 252, 248, 0.18) 58%, rgba(255, 252, 248, 0.72) 82%, #fffcf8 100%);
 }
 
 .hero-tri-veil--prop {
   background:
-    linear-gradient(270deg, rgba(28, 20, 8, 0.28), rgba(28, 20, 8, 0.08) 55%, rgba(28, 20, 8, 0.35)),
-    linear-gradient(180deg, rgba(8, 10, 14, 0.12), rgba(8, 10, 14, 0.45));
+    radial-gradient(140% 95% at 0% 0%, #fffcf8 0%, rgba(255, 252, 248, 0.85) 22%, rgba(255, 252, 248, 0.35) 42%, transparent 62%),
+    radial-gradient(140% 95% at 0% 100%, #fffcf8 0%, rgba(255, 252, 248, 0.85) 22%, rgba(255, 252, 248, 0.35) 42%, transparent 62%),
+    linear-gradient(270deg, transparent 20%, rgba(255, 252, 248, 0.18) 58%, rgba(255, 252, 248, 0.72) 82%, #fffcf8 100%);
 }
 
-.hero-tri-chip {
+.hero-tri-panel--med::after,
+.hero-tri-panel--prop::after {
+  content: "";
   position: absolute;
+  inset: 0;
   z-index: 2;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1.25rem;
-  display: grid;
-  gap: 0.15rem;
-  padding: 0.75rem 0.9rem;
-  border-radius: 16px;
-  background: rgba(255, 252, 248, 0.92);
-  color: #151513;
-  text-decoration: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-  transition: transform 0.35s ease, background 0.35s ease;
+  pointer-events: none;
 }
 
-.hero-tri-chip:hover {
-  transform: translateY(-2px);
-  background: #fffcf8;
+/* Extra hard edge wash into the center column */
+.hero-tri-panel--med::after {
+  background:
+    linear-gradient(90deg, transparent 40%, rgba(255, 252, 248, 0.35) 70%, rgba(255, 252, 248, 0.85) 88%, #fffcf8 100%),
+    radial-gradient(90% 70% at 100% 50%, rgba(255, 252, 248, 0.75), transparent 68%);
+  mix-blend-mode: normal;
 }
 
-.hero-tri-chip span {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #5c5a54;
-}
-
-.hero-tri-panel--med .hero-tri-chip span { color: #0f4c63; }
-.hero-tri-panel--prop .hero-tri-chip span { color: #8a5a00; }
-
-.hero-tri-chip strong {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+.hero-tri-panel--prop::after {
+  background:
+    linear-gradient(270deg, transparent 40%, rgba(255, 252, 248, 0.35) 70%, rgba(255, 252, 248, 0.85) 88%, #fffcf8 100%),
+    radial-gradient(90% 70% at 0% 50%, rgba(255, 252, 248, 0.75), transparent 68%);
+  mix-blend-mode: normal;
 }
 
 .hero-tri-center {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(5.5rem, 10vh, 7rem) clamp(1.1rem, 2.2vw, 2rem) clamp(2rem, 4vh, 3rem);
+  padding: clamp(5.5rem, 10vh, 7rem) clamp(1.25rem, 2.4vw, 2.25rem) clamp(2rem, 4vh, 3rem);
   background:
-    radial-gradient(80% 60% at 50% 0%, rgba(196, 146, 42, 0.1), transparent 60%),
-    linear-gradient(180deg, #ffffff 0%, #f7f4ef 100%);
-  border-inline: 1px solid rgba(21, 21, 19, 0.06);
-  z-index: 2;
+    radial-gradient(90% 70% at 50% -10%, rgba(196, 146, 42, 0.12), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #fffcf8 48%, #f7f4ef 100%);
+  border-inline: 0;
+  z-index: 3;
+  box-shadow:
+    -56px 0 100px #fffcf8,
+    56px 0 100px #fffcf8,
+    -24px 0 48px rgba(255, 252, 248, 0.95),
+    24px 0 48px rgba(255, 252, 248, 0.95);
 }
 
 .hero-tri-copy {
-  width: min(100%, 28rem);
+  position: relative;
+  z-index: 1;
+  width: min(100%, 29rem);
   text-align: center;
 }
 
 .hero-tri-copy .ed-brand {
   margin-bottom: 0.45rem;
+  letter-spacing: 0.14em;
 }
 
 .hero-tri-copy .ed-title {
-  font-size: clamp(2rem, 3.6vw, 3.15rem);
+  font-size: clamp(2.05rem, 3.7vw, 3.25rem);
+  text-wrap: balance;
 }
 
 .hero-tri-copy .ed-sub {
   margin-inline: auto;
   font-size: 0.98rem;
+  max-width: 26rem;
 }
 
 .hero-tri-copy .ed-actions {
   justify-content: center;
+  gap: 0.65rem;
 }
 
 .hero-tri-copy .ed-core {
@@ -9852,4 +9858,22 @@ html[dir="rtl"] .hero-tri-copy {
 body:has(.bm-hero--tri) .site-header {
   background: rgba(255, 252, 248, 0.88);
   backdrop-filter: blur(10px);
+}
+
+@media (max-width: 980px) {
+  .hero-tri-veil--med,
+  .hero-tri-veil--prop {
+    background:
+      linear-gradient(180deg, rgba(255, 252, 248, 0.55), transparent 35%),
+      linear-gradient(0deg, rgba(255, 252, 248, 0.7), transparent 40%);
+  }
+  .hero-tri-panel--med::after,
+  .hero-tri-panel--prop::after {
+    background:
+      linear-gradient(180deg, rgba(255, 252, 248, 0.35), transparent 40%),
+      linear-gradient(0deg, rgba(255, 252, 248, 0.55), transparent 45%);
+  }
+  .hero-tri-center {
+    box-shadow: none;
+  }
 }
