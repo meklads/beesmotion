@@ -11004,3 +11004,413 @@ body.lang-en .axis-card h3 {
   object-fit: cover;
   display: block;
 }
+
+/* =========================================================
+   Case study elevation — MedMotion + PropMotion sales pages
+   ========================================================= */
+.page-case-imc {
+  --case-wash: #b7d6e6;
+  --case-wash-soft: #eaf3f8;
+  --case-deep: #0e2a3d;
+  --case-accent: #4f8fad;
+}
+
+.page-case-re {
+  --case-wash: #efeae2;
+  --case-wash-soft: #f7f4ef;
+  --case-deep: #12141a;
+  --case-accent: #c4a574;
+}
+
+.page-case-study .bm-hero--case {
+  padding-top: clamp(5.5rem, 10vw, 7rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.page-case-imc .bm-hero--case {
+  background:
+    radial-gradient(ellipse 90% 70% at 100% 0%, rgba(183, 214, 230, 0.72), transparent 58%),
+    linear-gradient(165deg, #e8f2f7 0%, #f5f9fb 48%, #fafcfd 100%);
+}
+
+.page-case-re .bm-hero--case {
+  background:
+    radial-gradient(ellipse 80% 60% at 0% 10%, rgba(229, 168, 35, 0.14), transparent 55%),
+    linear-gradient(165deg, #f4f0ea 0%, #faf8f5 50%, #fcfcfb 100%);
+}
+
+.page-case-study .bm-hero--case .bm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--case-accent, var(--gold-dark));
+  margin-bottom: 0.85rem;
+}
+
+.page-case-study .bm-hero--case h1.font-headline-xl {
+  max-width: 14.5em;
+  gap: 0.65em;
+}
+
+.page-case-study .bm-hero--case h1.font-headline-xl > .brand-mark {
+  font-size: clamp(1.85rem, 4vw, 3.1rem);
+  padding: 0.28em 0.7em 0.32em;
+  border-radius: 14px;
+}
+
+.page-case-imc .bm-hero--case h1.font-headline-xl > .brand-mark {
+  background: linear-gradient(135deg, #d7e8f2, #b7d6e6);
+  border: 1.5px solid rgba(15, 61, 89, 0.18);
+  color: var(--navy);
+}
+
+.page-case-re .bm-hero--case h1.font-headline-xl > .brand-mark {
+  background: #fff;
+  border: 1.5px solid rgba(18, 20, 26, 0.12);
+  color: var(--navy);
+}
+
+.page-case-study .bm-hero--case .bm-hero-em {
+  font-family: var(--font-display, "Plus Jakarta Sans", Tajawal, sans-serif);
+  font-size: clamp(1.45rem, 2.8vw, 2.35rem);
+  line-height: 1.18;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em;
+  color: var(--navy);
+}
+
+html[dir="rtl"] .page-case-study .bm-hero--case .bm-hero-em,
+body.lang-ar .page-case-study .bm-hero--case .bm-hero-em {
+  font-family: Tajawal, "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0;
+  line-height: 1.28;
+}
+
+.page-case-study .bm-hero--case .bm-hero-sub {
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.7;
+  color: rgba(15, 35, 71, 0.78);
+  font-weight: 500;
+}
+
+.page-case-study .bm-hero-video .bm-video-crop {
+  border-radius: 22px;
+  box-shadow:
+    0 28px 60px rgba(12, 24, 40, 0.16),
+    0 0 0 1px rgba(15, 35, 71, 0.06);
+  overflow: hidden;
+}
+
+.page-case-imc .bm-hero-video .bm-video-crop {
+  box-shadow:
+    0 28px 60px rgba(14, 42, 61, 0.18),
+    0 0 0 1px rgba(79, 143, 173, 0.22);
+}
+
+/* Unified section type */
+.page-case-study .sol-eyebrow,
+.page-case-study .svc-tag,
+.page-case-study .pf-head .sol-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-case-study .sol-h2,
+.page-case-study .creative-studio-title,
+.page-case-study .pf-head .sol-h2 {
+  font-family: var(--font-display, "Plus Jakarta Sans", Tajawal, sans-serif);
+  font-size: clamp(1.7rem, 3vw, 2.55rem);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+html[dir="rtl"] .page-case-study .sol-h2,
+html[dir="rtl"] .page-case-study .creative-studio-title,
+body.lang-ar .page-case-study .sol-h2,
+body.lang-ar .page-case-study .creative-studio-title {
+  font-family: Tajawal, "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.page-case-study .sol-body,
+.page-case-study .creative-studio-sub,
+.page-case-study .pf-head .sol-body {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.7;
+  font-weight: 500;
+  color: rgba(15, 35, 71, 0.76);
+  max-width: 38rem;
+}
+
+.page-case-study .sol-section-head {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+/* Dark rhythm bands */
+.page-case-study .cs-band-ink {
+  background:
+    radial-gradient(ellipse 70% 80% at 15% 0%, rgba(229, 168, 35, 0.12), transparent 50%),
+    linear-gradient(160deg, #0e1219 0%, #151b26 55%, #10151d 100%);
+  color: #eef1f5;
+  padding: clamp(3.25rem, 6vw, 5rem) 0;
+}
+
+.page-case-imc .cs-band-ink {
+  background:
+    radial-gradient(ellipse 70% 80% at 85% 0%, rgba(183, 214, 230, 0.18), transparent 52%),
+    linear-gradient(160deg, #0c1a24 0%, #122433 55%, #0e1c28 100%);
+}
+
+.page-case-study .cs-band-ink .sol-eyebrow {
+  color: rgba(245, 200, 77, 0.92);
+}
+
+.page-case-imc .cs-band-ink .sol-eyebrow {
+  color: #9cc9dd;
+}
+
+.page-case-study .cs-band-ink .sol-h2,
+.page-case-study .cs-band-ink .sol-body {
+  color: #f4f6f9;
+}
+
+.page-case-study .cs-band-ink .sol-body {
+  color: rgba(238, 241, 245, 0.78);
+}
+
+.page-case-study .cs-band-ink .sol-journey-card,
+.page-case-study .cs-band-ink .sol-ready-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.page-case-study .cs-band-ink .sol-journey-card h3,
+.page-case-study .cs-band-ink .sol-quiz-item p,
+.page-case-study .cs-band-ink .sol-ready-panel {
+  color: #f4f6f9;
+}
+
+.page-case-study .cs-band-ink .sol-journey-card p,
+.page-case-study .cs-band-ink .sol-quiz-progress-label {
+  color: rgba(238, 241, 245, 0.72);
+}
+
+.page-case-study .cs-band-ink .sol-journey-step,
+.page-case-study .cs-band-ink .sol-quiz-num {
+  color: var(--gold-light);
+}
+
+.page-case-imc .cs-band-ink .sol-journey-step,
+.page-case-imc .cs-band-ink .sol-quiz-num {
+  color: #9cc9dd;
+}
+
+.page-case-study .cs-band-ink .quiz-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f4f6f9;
+}
+
+.page-case-study .cs-band-ink .quiz-btn:hover,
+.page-case-study .cs-band-ink .quiz-btn.is-selected {
+  background: rgba(229, 168, 35, 0.22);
+  border-color: rgba(229, 168, 35, 0.55);
+}
+
+.page-case-study .cs-band-ink .btn-outline-dark {
+  color: #f4f6f9;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.page-case-study .cs-band-ink .btn-outline-dark:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Clinical wash for medical album */
+.page-case-imc .cs-band-clinical {
+  background:
+    linear-gradient(180deg, #dceaf2 0%, #eaf3f8 40%, #f4f8fb 100%);
+  padding: clamp(3rem, 5.5vw, 4.5rem) 0;
+  border-top: 0;
+}
+
+.page-case-imc .cs-band-clinical .creative-studio-title {
+  color: var(--navy);
+}
+
+.page-case-imc .cs-band-clinical .creative-album-player {
+  border-radius: 22px;
+  box-shadow:
+    0 26px 55px rgba(14, 42, 61, 0.14),
+    0 0 0 1px rgba(79, 143, 173, 0.2);
+}
+
+.page-case-imc .cs-band-clinical .creative-album-thumb.is-active {
+  outline-color: rgba(79, 143, 173, 0.55);
+}
+
+/* Series / proof media polish */
+.page-case-study .series-stack {
+  padding-top: clamp(3rem, 5vw, 4.5rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.page-case-imc .series-stack {
+  background: #f7fafc;
+}
+
+.page-case-re .series-stack {
+  background: #faf8f5;
+}
+
+.page-case-study .series-split-title {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.page-case-study .series-split-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-case-imc .series-split-tag {
+  color: #4f8fad;
+}
+
+.page-case-re .series-split-tag {
+  color: #a8844a;
+}
+
+.page-case-study .series-split-album .creative-album-player,
+.page-case-study .series-split-still {
+  border-radius: 20px;
+}
+
+.page-case-study .series-album-strip .creative-album-thumb {
+  border-radius: 12px;
+}
+
+.page-case-re .cs-proof-rail {
+  background: var(--case-deep);
+  color: #f4f6f9;
+  padding: clamp(2rem, 4vw, 2.75rem) 0;
+}
+
+.page-case-re .cs-proof-rail .sol-strip-item strong {
+  color: #fff;
+}
+
+.page-case-re .cs-proof-rail .sol-strip-item span {
+  color: rgba(244, 246, 249, 0.72);
+}
+
+.page-case-re .cs-proof-rail .sol-strip-item:not(:last-child) {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Cross-sell */
+.cs-xsell {
+  padding: clamp(2.75rem, 5vw, 4rem) 0;
+}
+
+.cs-xsell--prop {
+  background:
+    radial-gradient(ellipse 60% 80% at 100% 50%, rgba(229, 168, 35, 0.16), transparent 55%),
+    #12141a;
+  color: #f4f6f9;
+}
+
+.cs-xsell--med {
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%, rgba(183, 214, 230, 0.28), transparent 55%),
+    #0e2a3d;
+  color: #f4f6f9;
+}
+
+.cs-xsell-inner {
+  display: grid;
+  gap: 0.85rem;
+  justify-items: start;
+  max-width: 40rem;
+}
+
+.cs-xsell-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.cs-xsell-title {
+  margin: 0;
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.cs-xsell-sub {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.cs-xsell .btn-on-light {
+  background: #fff;
+  color: #12141a;
+}
+
+.cs-xsell--med .btn-on-light {
+  color: #0e2a3d;
+}
+
+/* Close / story polish */
+.page-case-study .sol-close {
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
+}
+
+.page-case-imc .sol-close {
+  background: linear-gradient(180deg, #f0f6fa 0%, #e8f1f6 100%);
+}
+
+.page-case-re .sol-close {
+  background: linear-gradient(180deg, #f6f3ee 0%, #efeae2 100%);
+}
+
+.page-case-study .sol-story-card,
+.page-case-study .sol-idea-card {
+  border-radius: 18px;
+}
+
+.page-case-imc .sol-seal-card {
+  background: linear-gradient(160deg, #fff 0%, #f3f8fb 100%);
+  border: 1px solid rgba(79, 143, 173, 0.18);
+  box-shadow: 0 24px 50px rgba(14, 42, 61, 0.08);
+}
+
+@media (max-width: 900px) {
+  .page-case-study .bm-hero--case h1.font-headline-xl {
+    max-width: none;
+  }
+
+  .cs-xsell-inner {
+    max-width: none;
+  }
+}
