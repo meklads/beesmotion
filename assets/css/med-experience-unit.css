@@ -730,3 +730,99 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
     grid-template-columns: 1fr;
   }
 }
+
+/* Fixed modal layer — ID selectors (scoped descendant rules were broken) */
+body.med-xp-modal-open {
+  overflow: hidden;
+}
+#medVideoModal,
+#medImageLightbox {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 10050 !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.93);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+#medVideoModal.is-open,
+#medImageLightbox.is-open {
+  display: flex !important;
+}
+#medImageLightbox {
+  background: rgba(0, 0, 0, 0.92);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+#medImageLightbox.is-visible {
+  opacity: 1;
+}
+#medVideoModal .video-modal-inner {
+  width: 100%;
+  max-width: min(1100px, calc((100dvh - 120px) * 16 / 9));
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+#medVideoModalPlayer {
+  position: absolute;
+  inset: 0;
+}
+#medVideoModalPlayer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#medVideoModal .video-modal-close,
+#medImageLightbox .image-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10060;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+#medImageLightbox .image-lightbox-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92vw;
+  max-height: 90vh;
+}
+#medImageLightboxImg {
+  width: auto;
+  height: auto;
+  max-width: 85vw;
+  max-height: 85vh;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.med-xp-unit .s2-hero-gallery,
+.med-xp-unit .s2-watch-btn,
+.med-xp-unit .s2-play-btn,
+.med-xp-unit .hotspot {
+  pointer-events: auto;
+  z-index: 8;
+}
+.med-xp-unit .s2-hero-gallery {
+  z-index: 9;
+}
+.med-xp-unit .s2-watch-btn {
+  z-index: 9;
+}
