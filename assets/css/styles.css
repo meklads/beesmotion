@@ -12046,12 +12046,13 @@ body.lang-ar .lp-enquire-title {
 }
 
 .hub-hero--bleed .hub-hero-veil {
+  /* Darken the physical right — where hero copy sits */
   background:
     linear-gradient(
-      105deg,
-      rgba(6, 18, 28, 0.82) 0%,
-      rgba(8, 24, 36, 0.62) 40%,
-      rgba(8, 24, 36, 0.28) 70%,
+      to left,
+      rgba(6, 18, 28, 0.86) 0%,
+      rgba(8, 24, 36, 0.68) 38%,
+      rgba(8, 24, 36, 0.32) 68%,
       rgba(8, 24, 36, 0.12) 100%
     ),
     linear-gradient(180deg, rgba(6, 18, 28, 0.28) 0%, transparent 42%, rgba(6, 18, 28, 0.58) 100%);
@@ -12064,13 +12065,20 @@ body.lang-ar .lp-enquire-title {
 .hub-hero--bleed .hub-hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 40rem;
-  padding: clamp(3.25rem, 9vw, 6rem) 0 clamp(2.75rem, 6vw, 4.25rem);
+  /* Pin copy to the extreme physical right, with breathing room from the edge */
+  justify-self: right;
+  width: min(100%, 36rem);
+  max-width: 36rem;
+  margin-inline: 0;
+  margin-right: 0;
+  margin-left: auto;
+  padding-block: clamp(3.25rem, 9vw, 6rem) clamp(2.75rem, 6vw, 4.25rem);
+  padding-inline: clamp(1.15rem, 2.8vw, 1.75rem) clamp(1.35rem, 3.5vw, 2.75rem);
   color: #f4f8fb;
   gap: 0.7rem;
   text-align: start;
   justify-items: start;
-  margin-inline: 0;
+  box-sizing: border-box;
 }
 
 .hub-hero--bleed .hub-hero-kicker {
@@ -12189,7 +12197,11 @@ body.lang-ar .lp-legacy-title {
   }
 
   .hub-hero--bleed .hub-hero-inner {
+    justify-self: stretch;
+    width: 100%;
     max-width: none;
+    margin-left: 0;
+    padding-inline: var(--gutter);
   }
 }
 
@@ -12205,10 +12217,10 @@ body.lang-ar .lp-legacy-title {
 .hub-hero--bleed.hub-hero--prop .hub-hero-veil {
   background:
     linear-gradient(
-      105deg,
-      rgba(10, 12, 16, 0.84) 0%,
-      rgba(14, 16, 22, 0.62) 42%,
-      rgba(14, 16, 22, 0.28) 72%,
+      to left,
+      rgba(10, 12, 16, 0.88) 0%,
+      rgba(14, 16, 22, 0.68) 40%,
+      rgba(14, 16, 22, 0.3) 70%,
       rgba(14, 16, 22, 0.12) 100%
     ),
     linear-gradient(180deg, rgba(10, 12, 16, 0.25) 0%, transparent 40%, rgba(10, 12, 16, 0.55) 100%);
