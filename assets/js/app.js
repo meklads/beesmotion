@@ -353,6 +353,35 @@
     iframe.style.setProperty("pointer-events", "none", "important");
   }
 
+  /** Cover crop with full-bleed 16:9 — fills hero, keeps focal center (e.g. film frame). */
+  function sizeCoverIframe(crop, iframe) {
+    const w = crop.clientWidth || crop.offsetWidth;
+    const h = crop.clientHeight || crop.offsetHeight;
+    if (!w || !h) return;
+    const ratio = 16 / 9;
+    let iw;
+    let ih;
+    if (w / h > ratio) {
+      iw = w;
+      ih = Math.round(w / ratio);
+    } else {
+      ih = h;
+      iw = Math.round(h * ratio);
+    }
+    iframe.style.cssText = "";
+    iframe.style.setProperty("position", "absolute", "important");
+    iframe.style.setProperty("left", "50%", "important");
+    iframe.style.setProperty("top", "50%", "important");
+    iframe.style.setProperty("right", "auto", "important");
+    iframe.style.setProperty("bottom", "auto", "important");
+    iframe.style.setProperty("width", iw + "px", "important");
+    iframe.style.setProperty("height", ih + "px", "important");
+    iframe.style.setProperty("max-width", "none", "important");
+    iframe.style.setProperty("transform", "translate(-50%, -50%)", "important");
+    iframe.style.setProperty("border", "0", "important");
+    iframe.style.setProperty("pointer-events", "none", "important");
+  }
+
   function initHeroReelAutoplay() {
     const crops = document.querySelectorAll("[data-hero-autoplay]");
     if (!crops.length) return;
@@ -365,23 +394,26 @@
         crop.querySelector(":scope > .yt-facade, :scope > .hero-tri-poster, :scope > img") ||
         crop.querySelector(".yt-facade, .hero-tri-poster, img");
       const coverFill = crop.classList.contains("bm-video-crop--cover-fill");
-      const containFit =
-        crop.getAttribute("data-hero-fit") === "contain" ||
-        crop.classList.contains("bm-video-crop--contain");
+      const fit = crop.getAttribute("data-hero-fit");
+      const containFit = fit === "contain" || crop.classList.contains("bm-video-crop--contain");
+      const coverFit = fit === "cover" || crop.classList.contains("bm-video-crop--cover");
       const next = buildHeroIframe(id, title);
       if (crop.classList.contains("hero-tri-crop") || crop.closest(".hero-tri-panel")) {
         next.style.cssText =
           "position:absolute;top:50%;left:50%;width:100%;height:100%;min-width:100%;min-height:177.78%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:none;";
       } else if (containFit) {
         sizeContainIframe(crop, next);
+      } else if (coverFit) {
+        sizeCoverIframe(crop, next);
       } else if (coverFill) {
         sizeCoverFillIframe(crop, next);
       }
       if (poster) poster.replaceWith(next);
       else crop.appendChild(next);
-      if (containFit || coverFill) {
+      if (containFit || coverFit || coverFill) {
         const resize = () => {
           if (containFit) sizeContainIframe(crop, next);
+          else if (coverFit) sizeCoverIframe(crop, next);
           else sizeCoverFillIframe(crop, next);
         };
         resize();

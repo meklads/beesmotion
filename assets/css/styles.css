@@ -12304,6 +12304,7 @@ body.lang-ar .lp-legacy-title {
 }
 
 .bm-hero--v2 .bm-hero-v2-crop .yt-facade,
+.bm-hero--v2 .bm-hero-v2-crop .yt-facade--cover,
 .bm-hero--v2 .bm-hero-v2-crop .yt-facade--contain {
   position: absolute;
   inset: 0;
@@ -12320,12 +12321,10 @@ body.lang-ar .lp-legacy-title {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
   transform: translate(-50%, -50%);
 }
 
@@ -12335,17 +12334,17 @@ body.lang-ar .lp-legacy-title {
 }
 
 .bm-hero--v2 .bm-hero-v2-crop iframe {
-  /* sized by JS contain — override global 178% hero-reel zoom */
+  /* sized by JS cover — override global 178% hero-reel zoom */
   max-width: none !important;
 }
 
-/* Graphics House–style: corner vignette only — video stays clear in the center */
+/* GH-style cinematic veil: corners + top/bottom only — center stays open */
 .bm-hero-v2-veil {
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 95% 85% at 50% 48%, transparent 42%, rgba(12, 12, 10, 0.22) 78%, rgba(12, 12, 10, 0.48) 100%),
-    linear-gradient(180deg, rgba(12, 12, 10, 0.28) 0%, transparent 14%, transparent 78%, rgba(12, 12, 10, 0.2) 100%);
+    linear-gradient(180deg, rgba(8, 8, 6, 0.62) 0%, rgba(8, 8, 6, 0.18) 18%, transparent 32%, transparent 68%, rgba(8, 8, 6, 0.28) 82%, rgba(8, 8, 6, 0.72) 100%),
+    radial-gradient(ellipse 92% 78% at 50% 50%, transparent 38%, rgba(8, 8, 6, 0.28) 72%, rgba(8, 8, 6, 0.55) 100%);
 }
 
 .bm-hero-v2-inner {
@@ -12364,16 +12363,15 @@ body.lang-ar .lp-legacy-title {
   text-align: start;
   justify-items: start;
   box-sizing: border-box;
-  /* Local scrim only behind copy — rest of frame stays open */
+  /* Soft local scrim behind copy only */
   background:
     linear-gradient(
       to left,
-      rgba(12, 12, 10, 0.78) 0%,
-      rgba(12, 12, 10, 0.55) 55%,
-      rgba(12, 12, 10, 0.18) 85%,
+      rgba(8, 8, 6, 0.72) 0%,
+      rgba(8, 8, 6, 0.42) 58%,
+      rgba(8, 8, 6, 0.12) 88%,
       transparent 100%
     );
-  border-radius: 0;
   text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
 }
 
@@ -12467,8 +12465,8 @@ body.lang-ar .bm-hero-v2-title {
 
   .bm-hero-v2-veil {
     background:
-      radial-gradient(ellipse 100% 90% at 50% 40%, transparent 35%, rgba(12, 12, 10, 0.28) 75%, rgba(12, 12, 10, 0.55) 100%),
-      linear-gradient(180deg, rgba(12, 12, 10, 0.22) 0%, transparent 16%, transparent 48%, rgba(12, 12, 10, 0.55) 100%);
+      linear-gradient(180deg, rgba(8, 8, 6, 0.45) 0%, transparent 22%, transparent 45%, rgba(8, 8, 6, 0.55) 72%, rgba(8, 8, 6, 0.88) 100%),
+      radial-gradient(ellipse 100% 90% at 50% 40%, transparent 30%, rgba(8, 8, 6, 0.35) 100%);
   }
 
   .bm-hero-v2-inner {
@@ -12481,8 +12479,8 @@ body.lang-ar .bm-hero-v2-title {
       linear-gradient(
         180deg,
         transparent 0%,
-        rgba(12, 12, 10, 0.55) 28%,
-        rgba(12, 12, 10, 0.82) 100%
+        rgba(8, 8, 6, 0.5) 22%,
+        rgba(8, 8, 6, 0.88) 100%
       );
   }
 }
@@ -12695,54 +12693,87 @@ body.lang-ar .sector-gate-kicker {
 
 /* Capabilities — progressive flow, no card catalogue */
 .system-flow--rich {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.85rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0;
   list-style: none;
-  margin: 0 0 1.5rem;
+  margin: 0 auto 1.75rem;
   padding: 0;
   counter-reset: flow;
+  max-width: 68rem;
+  justify-content: center;
 }
 
 .system-flow--rich li {
   counter-increment: flow;
   display: grid;
-  gap: 0.45rem;
-  padding: 1.1rem 1rem;
-  background: rgba(21, 21, 19, 0.03);
-  border-top: 2px solid rgba(21, 21, 19, 0.12);
+  gap: 0.4rem;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 1.05rem 0.95rem;
+  background: #f3f2ef;
+  border: 1px solid rgba(21, 21, 19, 0.08);
+  border-radius: 1.15rem;
+  position: relative;
+  margin-inline-end: 1.15rem;
+}
+
+.system-flow--rich li:last-child {
+  margin-inline-end: 0;
+}
+
+.system-flow--rich li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  inset-inline-end: -0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(21, 21, 19, 0.35);
+  font-weight: 700;
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+html[dir="rtl"] .system-flow--rich li:not(:last-child)::after,
+body.lang-ar .system-flow--rich li:not(:last-child)::after {
+  content: "←";
 }
 
 .system-flow--rich li::before {
   content: counter(flow, decimal-leading-zero);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--muted);
 }
 
 .system-flow--rich strong {
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   font-weight: 800;
   color: var(--ink);
 }
 
 .system-flow--rich span {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.84rem;
+  line-height: 1.45;
   color: var(--muted);
 }
 
 .caps-notes {
   display: grid;
-  gap: 0.55rem;
-  max-width: 42rem;
+  gap: 0.45rem;
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
 }
 
 .caps-note {
   margin: 0;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.55;
   color: var(--ink);
 }
@@ -12754,11 +12785,36 @@ body.lang-ar .sector-gate-kicker {
 
 @media (max-width: 980px) {
   .system-flow--rich {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    max-width: 28rem;
+  }
+
+  .system-flow--rich li {
+    margin-inline-end: 0;
+    margin-bottom: 1rem;
+  }
+
+  .system-flow--rich li:last-child {
+    margin-bottom: 0;
+  }
+
+  .system-flow--rich li:not(:last-child)::after {
+    content: "↓";
+    inset-inline-end: auto;
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: -0.85rem;
+    transform: translateX(-50%);
+  }
+
+  html[dir="rtl"] .system-flow--rich li:not(:last-child)::after,
+  body.lang-ar .system-flow--rich li:not(:last-child)::after {
+    content: "↓";
   }
 }
 
-/* Contact dark band */
+/* Contact dark band — white form card needs dark ink */
 .contact-band-v2 {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   background: #151513;
@@ -12779,21 +12835,42 @@ body.lang-ar .sector-gate-kicker {
   border-color: rgba(245, 200, 77, 0.35);
 }
 
+.contact-band-v2 .contact-form {
+  background: #ffffff;
+  color: #151513;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
 .contact-band-v2 .contact-form label {
-  color: rgba(247, 246, 242, 0.78);
+  color: #151513 !important;
 }
 
 .contact-band-v2 .contact-form input,
 .contact-band-v2 .contact-form select,
 .contact-band-v2 .contact-form textarea {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(247, 246, 242, 0.16);
-  color: #f7f6f2;
+  background: transparent !important;
+  border-color: rgba(21, 21, 19, 0.16) !important;
+  color: #151513 !important;
+  -webkit-text-fill-color: #151513;
 }
 
 .contact-band-v2 .contact-form input::placeholder,
 .contact-band-v2 .contact-form textarea::placeholder {
-  color: rgba(247, 246, 242, 0.4);
+  color: rgba(21, 21, 19, 0.42) !important;
+  -webkit-text-fill-color: rgba(21, 21, 19, 0.42);
+  opacity: 1;
+}
+
+.contact-band-v2 .contact-form select option {
+  color: #151513;
+  background: #fff;
+}
+
+.contact-band-v2 .contact-form input:focus,
+.contact-band-v2 .contact-form select:focus,
+.contact-band-v2 .contact-form textarea:focus {
+  border-bottom-color: var(--gold) !important;
 }
 
 .contact-band-v2 .method-card {
