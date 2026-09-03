@@ -12192,3 +12192,56 @@ body.lang-ar .lp-legacy-title {
     max-width: none;
   }
 }
+
+/* PropMotion bleed hero — warm gold luxury overlay on bright villa */
+.hub-hero--bleed.hub-hero--prop {
+  background: #12141a;
+}
+
+.hub-hero--bleed.hub-hero--prop .hub-hero-media img {
+  object-position: 62% 45%;
+}
+
+.hub-hero--bleed.hub-hero--prop .hub-hero-veil {
+  background:
+    linear-gradient(
+      105deg,
+      rgba(10, 12, 16, 0.84) 0%,
+      rgba(14, 16, 22, 0.62) 42%,
+      rgba(14, 16, 22, 0.28) 72%,
+      rgba(14, 16, 22, 0.12) 100%
+    ),
+    linear-gradient(180deg, rgba(10, 12, 16, 0.25) 0%, transparent 40%, rgba(10, 12, 16, 0.55) 100%);
+}
+
+.hub-hero--bleed.hub-hero--prop .hub-hero-kicker {
+  color: rgba(245, 200, 77, 0.92);
+}
+
+.hub-hero--bleed.hub-hero--prop .font-headline-xl sup {
+  color: var(--gold-light);
+}
+
+.hub-hero--bleed.hub-hero--prop .lp-hero-offer {
+  color: #f5c84d;
+}
+
+.lp-legacy--prop {
+  background: linear-gradient(180deg, #0f1014 0%, #161820 100%);
+  color: #f4f1ea;
+}
+
+.lp-legacy--prop .lp-legacy-body {
+  color: rgba(244, 241, 234, 0.78);
+}
+
+@media (max-width: 760px) {
+  .hub-hero--bleed.hub-hero--prop .hub-hero-media img {
+    object-position: 70% 40%;
+  }
+
+  .hub-hero--bleed.hub-hero--prop .hub-hero-veil {
+    background:
+      linear-gradient(180deg, rgba(10, 12, 16, 0.3) 0%, rgba(10, 12, 16, 0.58) 48%, rgba(10, 12, 16, 0.86) 100%);
+  }
+}

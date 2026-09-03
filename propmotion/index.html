@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903ao" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903as" />
   </head>
   <body class="lang-en page-hub page-hub--prop">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -81,17 +81,35 @@
     </nav>
 
     <main id="main">
-      <section class="hub-hero hub-hero--prop">
+      <section class="hub-hero hub-hero--prop hub-hero--bleed" aria-label="PropMotion">
+        <!-- Hero photo: Unsplash free — modern villa with pool (photo-1580587771525) -->
+        <div class="hub-hero-media" aria-hidden="true">
+          <img
+            src="/assets/img/heroes/propmotion-hero.jpg?v=20260903as"
+            alt=""
+            width="2400"
+            height="1800"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hub-hero-veil" aria-hidden="true"></div>
         <div class="container hub-hero-inner reveal">
-          <p class="sector-parent">Bees Motion</p>
+          <p class="hub-hero-kicker"><span dir="ltr">Bees Motion</span> · <span data-i18n="sysPropSector">Real estate</span></p>
           <h1 class="font-headline-xl" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></h1>
-          <p class="sector-label" data-i18n="sysPropSector">Real estate</p>
+          <p class="lp-hero-offer" data-i18n="lpOfferPropHero">Exclusive launch system · Sell before the build</p>
           <p class="sector-line sector-line--lg" data-i18n="propLine">Real estate content built to move properties and projects closer to market.</p>
-          <p class="font-body-md" data-i18n="propHeroLine">Make the property easier to see. Easier to choose.</p>
+          <p class="hub-hero-lead" data-i18n="propHeroLine">Make the property easier to see. Easier to choose.</p>
           <div class="hub-hero-ctas">
-            <a class="btn btn-pill btn-on-light" href="/#contact" data-i18n="ctaNav">Start a project</a>
-            <a class="btn btn-pill btn-outline-dark" href="/real-estate-content-engine.html" data-i18n="pillarPropCta">Open Real Estate Engine</a>
+            <a class="btn btn-pill btn-on-dark" href="/#contact" data-i18n="ctaNav">Start a project</a>
+            <a class="btn btn-pill btn-outline-light" href="/real-estate-content-engine.html" data-i18n="pillarPropCta">Open Real Estate Engine</a>
           </div>
+        </div>
+      </section>
+
+      <section class="lp-legacy lp-legacy--prop" aria-label="Legacy">
+        <div class="container lp-legacy-inner reveal">
+          <h2 class="lp-legacy-title" data-i18n="propLegacyTitle">A visual sales system built before concrete</h2>
+          <p class="lp-legacy-body" data-i18n="propLegacyBody">PropMotion™ turns projects and properties into cinematic stories investors and buyers feel before the build.</p>
         </div>
       </section>
 
@@ -237,7 +255,7 @@
       </div>
     </footer>
     <script>document.querySelectorAll(".year").forEach(function(el){{el.textContent=new Date().getFullYear();}});</script>
-    <script src="/assets/js/translations.js?v=20260903ao"></script>
-    <script src="/assets/js/app.js?v=20260903ao"></script>
+    <script src="/assets/js/translations.js?v=20260903as"></script>
+    <script src="/assets/js/app.js?v=20260903as"></script>
   </body>
 </html>
