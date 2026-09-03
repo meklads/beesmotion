@@ -9661,3 +9661,195 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   opacity: 1;
   transform: none;
 }
+
+
+
+
+/* ===== Tri-panel hero: Med | Copy | Prop ===== */
+.bm-hero--tri {
+  padding: 0;
+  margin: 0;
+  background: #f7f4ef;
+  overflow: hidden;
+}
+
+.hero-tri {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.92fr) minmax(0, 1fr);
+  min-height: min(100svh, 920px);
+  direction: ltr;
+}
+
+.hero-tri-panel {
+  position: relative;
+  min-height: min(100svh, 920px);
+  overflow: hidden;
+  background: #0c0d10;
+}
+
+.hero-tri-crop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-tri-poster,
+.hero-tri-crop iframe,
+.hero-tri-crop .yt-facade,
+.hero-tri-crop .yt-facade--cover,
+.hero-tri-crop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+
+.hero-tri-crop iframe {
+  /* cover vertical short inside panel */
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 177.78%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-tri-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-tri-veil--med {
+  background:
+    linear-gradient(90deg, rgba(8, 28, 40, 0.28), rgba(8, 28, 40, 0.08) 55%, rgba(8, 28, 40, 0.35)),
+    linear-gradient(180deg, rgba(8, 10, 14, 0.12), rgba(8, 10, 14, 0.45));
+}
+
+.hero-tri-veil--prop {
+  background:
+    linear-gradient(270deg, rgba(28, 20, 8, 0.28), rgba(28, 20, 8, 0.08) 55%, rgba(28, 20, 8, 0.35)),
+    linear-gradient(180deg, rgba(8, 10, 14, 0.12), rgba(8, 10, 14, 0.45));
+}
+
+.hero-tri-chip {
+  position: absolute;
+  z-index: 2;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1.25rem;
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 16px;
+  background: rgba(255, 252, 248, 0.92);
+  color: #151513;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.hero-tri-chip:hover {
+  transform: translateY(-2px);
+  background: #fffcf8;
+}
+
+.hero-tri-chip span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c5a54;
+}
+
+.hero-tri-panel--med .hero-tri-chip span { color: #0f4c63; }
+.hero-tri-panel--prop .hero-tri-chip span { color: #8a5a00; }
+
+.hero-tri-chip strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-tri-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5.5rem, 10vh, 7rem) clamp(1.1rem, 2.2vw, 2rem) clamp(2rem, 4vh, 3rem);
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(196, 146, 42, 0.1), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f7f4ef 100%);
+  border-inline: 1px solid rgba(21, 21, 19, 0.06);
+  z-index: 2;
+}
+
+.hero-tri-copy {
+  width: min(100%, 28rem);
+  text-align: center;
+}
+
+.hero-tri-copy .ed-brand {
+  margin-bottom: 0.45rem;
+}
+
+.hero-tri-copy .ed-title {
+  font-size: clamp(2rem, 3.6vw, 3.15rem);
+}
+
+.hero-tri-copy .ed-sub {
+  margin-inline: auto;
+  font-size: 0.98rem;
+}
+
+.hero-tri-copy .ed-actions {
+  justify-content: center;
+}
+
+.hero-tri-copy .ed-core {
+  display: none;
+}
+
+html[dir="rtl"] .hero-tri-copy {
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .hero-tri {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: 0;
+  }
+  .hero-tri-center {
+    order: 1;
+    padding-top: calc(var(--header-h, 72px) + 2rem);
+    border-inline: 0;
+    border-bottom: 1px solid rgba(21, 21, 19, 0.06);
+  }
+  .hero-tri-panel--med { order: 2; min-height: 58vw; max-height: 420px; }
+  .hero-tri-panel--prop { order: 3; min-height: 58vw; max-height: 420px; }
+  .hero-tri-panel {
+    min-height: 58vw;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 980px) {
+  .hero-tri {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-tri-center {
+    grid-column: 1 / -1;
+  }
+}
+
+/* header stays readable over light center; no invert needed */
+body:has(.bm-hero--tri) .site-header {
+  background: rgba(255, 252, 248, 0.88);
+  backdrop-filter: blur(10px);
+}

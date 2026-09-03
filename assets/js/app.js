@@ -244,51 +244,42 @@
   }
 
   function initHeroReelAutoplay() {
-    const mq = window.matchMedia("(min-width: 901px)");
     const crops = document.querySelectorAll("[data-hero-autoplay]");
     if (!crops.length) return;
 
-    function sync() {
-      crops.forEach((crop) => {
-        const id = crop.getAttribute("data-hero-autoplay");
-        if (!id) return;
-        const title = crop.getAttribute("data-hero-title") || "Showreel";
-        const facade = crop.querySelector(".yt-facade");
-        const iframe = crop.querySelector("iframe");
-        if (mq.matches) {
-          if (!iframe) {
-            const next = buildHeroIframe(id, title);
-            if (facade) facade.replaceWith(next);
-            else crop.appendChild(next);
-          }
-        } else if (iframe && !facade) {
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "yt-facade yt-facade--cover";
-          btn.setAttribute("data-yt-id", id);
-          btn.setAttribute("data-yt-title", title);
-          btn.setAttribute(
-            "data-yt-params",
-            `autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1`
-          );
-          btn.setAttribute("aria-label", "Play showreel");
-          btn.innerHTML =
-            `<img src="assets/img/thumbs/${id}.jpg" alt="${title}" loading="eager" width="1280" height="720" />` +
-            '<span class="yt-facade-play" aria-hidden="true"></span>';
-          iframe.replaceWith(btn);
-          btn.addEventListener("click", () => {
-            const play = buildHeroIframe(id, title);
-            play.style.pointerEvents = "auto";
-            play.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1`;
-            btn.replaceWith(play);
-          });
-        }
-      });
-    }
+    const mount = (crop) => {
+      const id = crop.getAttribute("data-hero-autoplay");
+      if (!id || crop.querySelector("iframe")) return;
+      const title = crop.getAttribute("data-hero-title") || "Showreel";
+      const poster = crop.querySelector(".hero-tri-poster, img, .yt-facade");
+      const next = buildHeroIframe(id, title);
+      if (crop.classList.contains("hero-tri-crop") || crop.closest(".hero-tri-panel")) {
+        next.style.cssText =
+          "position:absolute;top:50%;left:50%;width:100%;height:100%;min-width:100%;min-height:177.78%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:none;";
+      }
+      if (poster) poster.replaceWith(next);
+      else crop.appendChild(next);
+    };
 
-    sync();
-    if (typeof mq.addEventListener === "function") mq.addEventListener("change", sync);
-    else if (typeof mq.addListener === "function") mq.addListener(sync);
+    const io =
+      "IntersectionObserver" in window
+        ? new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  mount(entry.target);
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { rootMargin: "120px 0px", threshold: 0.05 }
+          )
+        : null;
+
+    crops.forEach((crop) => {
+      if (io) io.observe(crop);
+      else mount(crop);
+    });
   }
 
   function prepVideo(v) {
