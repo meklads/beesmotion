@@ -9653,3 +9653,11 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   .btn-text { width: 100%; text-align: center; }
   .system-flow li:not(:last-child)::after { display: none; }
 }
+
+
+/* Fail-safe: first viewport never stays invisible if JS breaks */
+.bm-hero--editorial .reveal,
+.bm-hero .reveal:first-child {
+  opacity: 1;
+  transform: none;
+}
