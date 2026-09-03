@@ -9994,14 +9994,15 @@ body:has(.bm-hero--tri) .site-header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 28rem;
+  max-width: 34rem;
   width: 100%;
 }
 
 .hero-dual-kicker {
-  margin: 0 0 0.7rem;
-  font-size: 0.72rem;
-  font-weight: 750;
+  margin: 0 0 0.75rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -10011,12 +10012,12 @@ body:has(.bm-hero--tri) .site-header {
 .hero-dual-pane--med .hero-dual-kicker { color: #0a5570; }
 
 .hero-dual-brand {
-  margin: 0 0 0.65rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  margin: 0 0 0.75rem;
+  font-family: var(--font-ar);
+  font-size: clamp(1.85rem, 3.5vw, 2.85rem);
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
   color: var(--ink);
   display: inline-flex;
   align-items: baseline;
@@ -10025,6 +10026,12 @@ body:has(.bm-hero--tri) .site-header {
   border: 1.5px solid rgba(229, 168, 35, 0.5);
   background: #ffffff;
   box-shadow: none;
+}
+
+html[dir="ltr"] .hero-dual-brand,
+body.lang-en .hero-dual-brand {
+  font-family: var(--font-display);
+  letter-spacing: -0.035em;
 }
 
 .hero-dual-pane--med .hero-dual-brand {
@@ -10043,13 +10050,20 @@ body:has(.bm-hero--tri) .site-header {
 }
 
 .hero-dual-title {
-  margin: 0 0 0.7rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+  margin: 0 0 0.85rem;
+  font-family: var(--font-ar);
+  font-size: clamp(1.4rem, 2.7vw, 2.05rem);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
   color: var(--gold-dark);
+  max-width: 32rem;
+}
+
+html[dir="ltr"] .hero-dual-title,
+body.lang-en .hero-dual-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
 }
 
 .hero-dual-pane--med .hero-dual-title {
@@ -10057,15 +10071,17 @@ body:has(.bm-hero--tri) .site-header {
 }
 
 .hero-dual-pane--med .hero-dual-sub {
-  color: rgba(15, 45, 58, 0.78);
+  color: rgba(12, 42, 55, 0.88);
 }
 
 .hero-dual-sub {
   margin: 0;
-  font-size: clamp(0.92rem, 1.15vw, 1.02rem);
-  line-height: 1.65;
-  color: var(--muted);
-  max-width: 26rem;
+  font-family: inherit;
+  font-size: clamp(1rem, 1.3vw, 1.14rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: #3a3a3a;
+  max-width: 32rem;
 }
 
 .hero-dual-ctas {
@@ -10074,7 +10090,7 @@ body:has(.bm-hero--tri) .site-header {
   justify-content: center;
   gap: 0.65rem;
   width: 100%;
-  max-width: 28rem;
+  max-width: 34rem;
 }
 
 .hero-dual-media {
@@ -10082,6 +10098,29 @@ body:has(.bm-hero--tri) .site-header {
   max-width: min(100%, 420px);
   margin-inline: auto;
   min-width: 0;
+}
+
+@media (min-width: 981px) {
+  .hero-dual-media {
+    max-width: min(100%, 540px);
+  }
+
+  .hero-dual-copy {
+    max-width: 36rem;
+  }
+
+  .hero-dual-title {
+    font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+  }
+
+  .hero-dual-brand {
+    font-size: clamp(2.05rem, 3vw, 2.95rem);
+  }
+
+  .hero-dual-sub {
+    font-size: 1.08rem;
+    max-width: 34rem;
+  }
 }
 
 .bm-hero--dual .bm-video-crop,
