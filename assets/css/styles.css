@@ -13684,3 +13684,223 @@ body.lang-ar .med-pillar-panel p {
   line-height: 1.55;
   color: rgba(20, 40, 30, 0.72);
 }
+
+/* ── MedMotion hub pitch page (v4) ───────────────────────────── */
+.page-hub--med .med-define {
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+}
+.page-hub--med .med-define .svc-tag {
+  margin-bottom: 0.75rem;
+}
+.page-hub--med .med-define-note {
+  margin: 1rem 0 0;
+  max-width: 40rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: rgba(12, 40, 52, 0.72);
+}
+
+.page-hub--med .med-work {
+  padding: clamp(3.25rem, 7vw, 5.5rem) 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(10, 85, 112, 0.07), transparent 55%),
+    linear-gradient(180deg, #f5f9fb 0%, #eef5f8 100%);
+}
+.page-hub--med .med-work-album {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+.page-hub--med .med-work .creative-album-player {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 28px 60px rgba(8, 40, 55, 0.18);
+}
+
+.page-hub--med .med-series {
+  padding: clamp(3.25rem, 7vw, 5.5rem) 0;
+  background: #fff;
+}
+.page-hub--med .med-series-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+.page-hub--med .med-series-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(165deg, #f7fbfd 0%, #e8f1f5 100%);
+  border: 1px solid rgba(10, 85, 112, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.page-hub--med .med-series-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(8, 40, 55, 0.1);
+}
+.page-hub--med .med-series-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0a5570;
+}
+.page-hub--med .med-series-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.page-hub--med .med-series-card:hover .med-series-media img {
+  transform: scale(1.04);
+}
+.page-hub--med .med-series-body {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.05rem 1.2rem;
+  flex: 1;
+}
+.page-hub--med .med-series-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(10, 85, 112, 0.55);
+}
+.page-hub--med .med-series-body h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0c2834;
+}
+.page-hub--med .med-series-body p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: rgba(12, 40, 52, 0.62);
+}
+.page-hub--med .med-series-card:not(.med-series-card--media) .med-series-body {
+  padding-top: 1.35rem;
+  min-height: 9.5rem;
+}
+
+.page-hub--med .med-method {
+  padding: clamp(3.25rem, 7vw, 5.5rem) 0;
+  background:
+    linear-gradient(180deg, #0a3d52 0%, #0c2834 100%);
+  color: #f4f8fa;
+}
+.page-hub--med .med-method .svc-tag {
+  color: rgba(183, 214, 230, 0.9);
+}
+.page-hub--med .med-method .font-headline-xl {
+  color: #fff;
+}
+.page-hub--med .med-method .font-body-md {
+  color: rgba(244, 248, 250, 0.72);
+}
+.page-hub--med .med-method-grid {
+  list-style: none;
+  margin: clamp(1.75rem, 3.5vw, 2.5rem) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.page-hub--med .med-method-step {
+  padding: 1.25rem 1.15rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(183, 214, 230, 0.18);
+}
+.page-hub--med .med-method-num {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(183, 214, 230, 0.7);
+}
+.page-hub--med .med-method-step h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+.page-hub--med .med-method-step p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(244, 248, 250, 0.68);
+}
+
+.page-hub--med .med-flagship {
+  padding: clamp(3.25rem, 7vw, 5.5rem) 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 90% 20%, rgba(10, 85, 112, 0.08), transparent 50%),
+    linear-gradient(180deg, #f7fbfd 0%, #eef4f7 100%);
+}
+.page-hub--med .med-flagship-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+.page-hub--med .med-flagship-copy .font-headline-xl {
+  margin: 0.4rem 0 0.85rem;
+}
+.page-hub--med .med-flagship-copy .flagship-principle {
+  margin: 0.85rem 0 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0a5570;
+}
+.page-hub--med .med-flagship-player {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(8, 40, 55, 0.16);
+}
+.page-hub--med .med-flagship-caption {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(12, 40, 52, 0.55);
+}
+
+.page-hub--med .lp-enquire-lead {
+  margin: 0.75rem 0 0;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(244, 248, 250, 0.72);
+}
+.page-hub--med .lp-enquire-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.page-hub--med .hub-xsell--foot {
+  padding: 1.75rem 0 2.5rem;
+  border-top: 1px solid rgba(10, 85, 112, 0.08);
+  background: #fff;
+}
+
+@media (max-width: 1100px) {
+  .page-hub--med .med-series-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .page-hub--med .med-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .page-hub--med .med-flagship-inner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .page-hub--med .med-series-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-hub--med .med-method-grid {
+    grid-template-columns: 1fr;
+  }
+}
