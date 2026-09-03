@@ -357,7 +357,20 @@
   function sizeCoverIframe(crop, iframe) {
     const w = crop.clientWidth || crop.offsetWidth;
     const h = crop.clientHeight || crop.offsetHeight;
-    if (!w || !h) return;
+    if (!w || !h) {
+      /* Parent may not have laid out yet — retry once */
+      requestAnimationFrame(() => {
+        const w2 = crop.clientWidth || crop.offsetWidth;
+        const h2 = crop.clientHeight || crop.offsetHeight;
+        if (!w2 || !h2) {
+          iframe.style.cssText =
+            "position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;";
+          return;
+        }
+        sizeCoverIframe(crop, iframe);
+      });
+      return;
+    }
     const ratio = 16 / 9;
     /* Zoom past cover so more top/bottom is cropped and the center scene fills the hero */
     const zoomAttr = parseFloat(crop.getAttribute("data-hero-zoom") || "1.32", 10);
