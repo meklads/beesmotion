@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beesmotion.com/sitemap.xml

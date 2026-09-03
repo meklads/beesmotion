@@ -16,6 +16,14 @@
 /case-study.html /case-study-imc 301
 /case-study/ /case-study-imc 301
 
+# Old portfolio / work aliases → homepage (SEO consistency)
+/portfolio / 301
+/portfolio/ / 301
+/portfolio.html / 301
+/work / 301
+/work/ / 301
+/work.html / 301
+
 # Incomplete service placeholders → parent hubs
 /services/medical-content /medmotion/ 301
 /services/medical-content/ /medmotion/ 301

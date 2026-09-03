@@ -107,9 +107,9 @@ html = html.replace(
               <span class="systems-cta" data-i18n="sysPropCta">Plan your project campaign</span>
             </a>
             <a class="systems-card reveal" href="#contact">
-              <span class="systems-sector" data-i18n="sysCorpSector">Corporate & commercial</span>
-              <h3 data-i18n="sysCorpName">Corporate marketing & creative content</h3>
-              <p data-i18n="sysCorpBody">Brand films, explainers, social campaigns, and performance marketing for companies and consumer brands.</p>
+              <span class="systems-sector" data-i18n="sysCorpSector">Other briefs</span>
+              <h3 data-i18n="sysCorpName">Campaign content beyond core sectors</h3>
+              <p data-i18n="sysCorpBody">We stay focused on healthcare and real estate. Other briefs are evaluated case by case.</p>
               <span class="systems-cta" data-i18n="sysCorpCta">Talk to our team</span>
             </a>
           </div>`,
@@ -141,9 +141,9 @@ html = html.replace(
                 <img src="assets/img/visuals/corporate.jpg" alt="" loading="lazy" width="640" height="360" />
               </div>
               <div class="systems-body">
-                <span class="systems-sector" data-i18n="sysCorpSector">Corporate & commercial</span>
-                <h3 data-i18n="sysCorpName">Corporate marketing & creative content</h3>
-                <p data-i18n="sysCorpBody">Brand films, explainers, social campaigns, and performance marketing for companies and consumer brands.</p>
+                <span class="systems-sector" data-i18n="sysCorpSector">Other briefs</span>
+                <h3 data-i18n="sysCorpName">Campaign content beyond core sectors</h3>
+                <p data-i18n="sysCorpBody">We stay focused on healthcare and real estate. Other briefs are evaluated case by case.</p>
                 <span class="systems-cta" data-i18n="sysCorpCta">Talk to our team</span>
               </div>
             </a>

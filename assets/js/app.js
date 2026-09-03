@@ -210,6 +210,7 @@
       const lang = getLang();
       const name = form.name.value.trim();
       const phone = form.phone.value.trim();
+      const email = form.email ? form.email.value.trim() : "";
       const company = form.company.value.trim();
       const industryEl = form.industry;
       const needEl = form.need;
@@ -234,22 +235,24 @@
               "مرحباً بيز موشن،",
               `الاسم: ${name}`,
               `الجوال: ${phone}`,
+              email ? `البريد: ${email}` : null,
               `الشركة: ${company}`,
               `القطاع: ${industryLabel}`,
               `الاحتياج: ${needLabel}`,
               `الهدف: ${objectiveLabel || "—"}`,
               `الطلب: ${message}`,
-            ]
+            ].filter(Boolean)
           : [
               "Hello Bees Motion,",
               `Name: ${name}`,
               `Phone: ${phone}`,
+              email ? `Email: ${email}` : null,
               `Company: ${company}`,
               `Industry: ${industryLabel}`,
               `Need: ${needLabel}`,
               `Objective: ${objectiveLabel || "-"}`,
               `Request: ${message}`,
-            ];
+            ].filter(Boolean);
       const plain = lines.join("\n");
       try {
         localStorage.setItem(
