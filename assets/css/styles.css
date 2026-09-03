@@ -10024,6 +10024,19 @@ body:has(.bm-hero--tri) .site-header {
   cursor: pointer;
 }
 
+/* Cover-fill: JS sets exact px size (full width × 9:16 height), CSS only positions */
+.bm-hero--home .bm-hero-films .bm-video-crop--cover-fill iframe {
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  max-width: none !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none;
+  border: 0;
+}
+
 .bm-hero--home .bm-hero-films .yt-facade img,
 .bm-hero--home .bm-hero-films .bm-video-crop > img {
   position: absolute;
@@ -10031,22 +10044,8 @@ body:has(.bm-hero--tri) .site-header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   display: block;
-}
-
-/* Same cover-crop fill as case-study-imc hero reel */
-.bm-hero--home .bm-hero-films .bm-video-crop--hero-reel iframe {
-  position: absolute !important;
-  inset: auto !important;
-  top: 50% !important;
-  left: 50% !important;
-  width: 178% !important;
-  height: 178% !important;
-  max-width: none !important;
-  transform: translate(-50%, -50%) !important;
-  pointer-events: none;
-  border: 0;
 }
 
 .bm-hero--home .bm-hero-films .yt-facade-play {

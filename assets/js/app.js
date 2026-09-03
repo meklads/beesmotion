@@ -243,6 +243,25 @@
     return iframe;
   }
 
+  function sizeCoverFillIframe(crop, iframe) {
+    const w = crop.clientWidth || crop.offsetWidth;
+    if (!w) return;
+    /* 9:16 frame at full crop width → fills width, crops top/bottom */
+    const h = Math.round((w * 16) / 9);
+    iframe.style.cssText = "";
+    iframe.style.setProperty("position", "absolute", "important");
+    iframe.style.setProperty("left", "0", "important");
+    iframe.style.setProperty("right", "auto", "important");
+    iframe.style.setProperty("top", "50%", "important");
+    iframe.style.setProperty("bottom", "auto", "important");
+    iframe.style.setProperty("width", w + "px", "important");
+    iframe.style.setProperty("height", h + "px", "important");
+    iframe.style.setProperty("max-width", "none", "important");
+    iframe.style.setProperty("transform", "translateY(-50%)", "important");
+    iframe.style.setProperty("border", "0", "important");
+    iframe.style.setProperty("pointer-events", "none", "important");
+  }
+
   function initHeroReelAutoplay() {
     const crops = document.querySelectorAll("[data-hero-autoplay]");
     if (!crops.length) return;
@@ -254,13 +273,21 @@
       const poster =
         crop.querySelector(":scope > .yt-facade, :scope > .hero-tri-poster, :scope > img") ||
         crop.querySelector(".yt-facade, .hero-tri-poster, img");
+      const coverFill = crop.classList.contains("bm-video-crop--cover-fill");
       const next = buildHeroIframe(id, title);
       if (crop.classList.contains("hero-tri-crop") || crop.closest(".hero-tri-panel")) {
         next.style.cssText =
           "position:absolute;top:50%;left:50%;width:100%;height:100%;min-width:100%;min-height:177.78%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:none;";
+      } else if (coverFill) {
+        sizeCoverFillIframe(crop, next);
       }
       if (poster) poster.replaceWith(next);
       else crop.appendChild(next);
+      if (coverFill) {
+        sizeCoverFillIframe(crop, next);
+        const onResize = () => sizeCoverFillIframe(crop, next);
+        window.addEventListener("resize", onResize, { passive: true });
+      }
     };
 
     const io =
