@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903ao" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903ap" />
   </head>
   <body class="lang-en page-hub page-hub--med">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -81,17 +81,35 @@
     </nav>
 
     <main id="main">
-      <section class="hub-hero hub-hero--med">
+      <section class="hub-hero hub-hero--med hub-hero--bleed" aria-label="MedMotion">
+        <div class="hub-hero-media" aria-hidden="true">
+          <img
+            <!-- Unsplash free license: doctor explaining X-ray to patient -->
+            src="/assets/img/heroes/medmotion-hero.jpg"
+            alt=""
+            width="2400"
+            height="1350"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hub-hero-veil" aria-hidden="true"></div>
         <div class="container hub-hero-inner reveal">
-          <p class="sector-parent">Bees Motion</p>
+          <p class="hub-hero-kicker"><span dir="ltr">Bees Motion</span> · <span data-i18n="sysMedSector">Healthcare</span></p>
           <h1 class="font-headline-xl" dir="ltr">MedMotion<sup aria-hidden="true">™</sup></h1>
-          <p class="sector-label" data-i18n="sysMedSector">Healthcare</p>
+          <p class="lp-hero-offer" data-i18n="lpOfferMedHero">Exclusive healthcare content system · Done-For-You</p>
           <p class="sector-line sector-line--lg" data-i18n="medLine">Healthcare content built for understanding and trust.</p>
-          <p class="font-body-md" data-i18n="medBody">Patient education, hospital brand content, medical storytelling, campaign content, patient experience, and medical AI. Clear services for hospitals and health brands.</p>
+          <p class="hub-hero-lead" data-i18n="medBody">Patient education, hospital brand content, medical storytelling, campaign content, patient experience, and medical AI. Clear services for hospitals and health brands.</p>
           <div class="hub-hero-ctas">
-            <a class="btn btn-pill btn-on-light" href="/#contact" data-i18n="ctaNav">Start a project</a>
-            <a class="btn btn-pill btn-outline-dark" href="/case-study-imc.html" data-i18n="pillarMedCta">IMC case study</a>
+            <a class="btn btn-pill btn-on-dark" href="/#contact" data-i18n="ctaNav">Start a project</a>
+            <a class="btn btn-pill btn-outline-light" href="/case-study-imc.html" data-i18n="pillarMedCta">IMC case study</a>
           </div>
+        </div>
+      </section>
+
+      <section class="lp-legacy lp-legacy--med" aria-label="Legacy">
+        <div class="container lp-legacy-inner reveal">
+          <h2 class="lp-legacy-title" data-i18n="medLegacyTitle">A medical content system built for trust</h2>
+          <p class="lp-legacy-body" data-i18n="medLegacyBody">MedMotion™ turns scattered hospital posts into connected series patients understand, share, and act on.</p>
         </div>
       </section>
 
@@ -233,7 +251,7 @@
       </div>
     </footer>
     <script>document.querySelectorAll(".year").forEach(function(el){{el.textContent=new Date().getFullYear();}});</script>
-    <script src="/assets/js/translations.js?v=20260903ao"></script>
-    <script src="/assets/js/app.js?v=20260903ao"></script>
+    <script src="/assets/js/translations.js?v=20260903ap"></script>
+    <script src="/assets/js/app.js?v=20260903ap"></script>
   </body>
 </html>

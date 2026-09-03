@@ -12009,3 +12009,167 @@ body.lang-ar .lp-enquire-title {
   color: #fff;
   border-color: var(--gold-light);
 }
+
+/* MedMotion DAMAC-style full-bleed hero */
+.hub-hero--bleed {
+  position: relative;
+  margin-top: var(--header-h);
+  min-height: min(88vh, 860px);
+  padding: 0;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background: #0c1a24;
+}
+
+.hub-hero--bleed .hub-hero-media,
+.hub-hero--bleed .hub-hero-veil {
+  position: absolute;
+  inset: 0;
+}
+
+.hub-hero--bleed .hub-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+  display: block;
+  transform: scale(1.02);
+}
+
+.hub-hero--bleed .hub-hero-veil {
+  background:
+    linear-gradient(
+      105deg,
+      rgba(6, 18, 28, 0.92) 0%,
+      rgba(8, 24, 36, 0.78) 38%,
+      rgba(8, 24, 36, 0.35) 68%,
+      rgba(8, 24, 36, 0.2) 100%
+    ),
+    linear-gradient(180deg, rgba(6, 18, 28, 0.35) 0%, transparent 42%, rgba(6, 18, 28, 0.72) 100%);
+}
+
+.hub-hero--bleed .hub-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 40rem;
+  padding: clamp(3.25rem, 9vw, 6rem) 0 clamp(2.75rem, 6vw, 4.25rem);
+  color: #f4f8fb;
+  gap: 0.7rem;
+}
+
+.hub-hero--bleed .hub-hero-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(183, 214, 230, 0.92);
+}
+
+.hub-hero--bleed .font-headline-xl {
+  color: #fff;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hub-hero--bleed .lp-hero-offer {
+  margin: 0.15rem 0 0.15rem;
+  color: #f5c84d;
+  text-shadow: none;
+}
+
+.hub-hero--bleed .sector-line--lg {
+  color: #fff;
+  max-width: 22rem;
+  margin: 0.2rem 0 0;
+}
+
+.hub-hero--bleed .hub-hero-lead {
+  margin: 0;
+  max-width: 34rem;
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.7;
+  font-weight: 500;
+  color: rgba(244, 248, 251, 0.82);
+}
+
+.hub-hero--bleed .hub-hero-ctas {
+  margin-top: 1.15rem;
+}
+
+.hub-hero--bleed .btn-on-dark {
+  background: #fff;
+  color: #0c1a24;
+  border: 1.5px solid #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.hub-hero--bleed .btn-on-dark:hover {
+  background: #f4f8fb;
+  color: #0c1a24;
+}
+
+.hub-hero--bleed .btn-outline-light {
+  border-width: 1.5px;
+}
+
+.lp-legacy {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  text-align: center;
+}
+
+.lp-legacy--med {
+  background: linear-gradient(180deg, #0a1620 0%, #0e2230 100%);
+  color: #eef5f9;
+}
+
+.lp-legacy-inner {
+  max-width: 46rem;
+  margin-inline: auto;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.lp-legacy-title {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+html[dir="rtl"] .lp-legacy-title,
+body.lang-ar .lp-legacy-title {
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: Tajawal, sans-serif;
+}
+
+.lp-legacy-body {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: rgba(238, 245, 249, 0.78);
+}
+
+@media (max-width: 760px) {
+  .hub-hero--bleed {
+    min-height: min(78vh, 680px);
+    align-items: end;
+  }
+
+  .hub-hero--bleed .hub-hero-media img {
+    object-position: 70% center;
+  }
+
+  .hub-hero--bleed .hub-hero-veil {
+    background:
+      linear-gradient(180deg, rgba(6, 18, 28, 0.45) 0%, rgba(6, 18, 28, 0.82) 55%, rgba(6, 18, 28, 0.92) 100%);
+  }
+
+  .hub-hero--bleed .hub-hero-inner {
+    max-width: none;
+  }
+}
