@@ -394,6 +394,16 @@
     const videos = document.querySelectorAll(".bm-hero-reel");
     if (!videos.length) return;
 
+    const reduceMotion =
+      window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      videos.forEach((v) => {
+        v.removeAttribute("autoplay");
+        v.pause();
+      });
+      return;
+    }
+
     const tryPlayAll = () => videos.forEach(tryPlay);
 
     if ("IntersectionObserver" in window) {
