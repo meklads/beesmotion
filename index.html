@@ -39,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903v2g" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903v2h" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -112,47 +112,43 @@
     </nav>
 
     <main id="main">
-      <!-- 01 — Brand hero: video left · copy right -->
+      <!-- 01 — Brand hero: fullscreen showreel · copy on the right -->
       <section class="bm-hero bm-hero--v2" aria-label="Bees Motion">
-        <div class="bm-hero-v2-split">
-          <div class="bm-hero-v2-media">
-            <div
-              class="bm-video-crop bm-hero-v2-crop bm-video-crop--cover"
-              data-hero-autoplay="x4Ya98nRnog"
-              data-hero-title="Bees Motion showreel"
-              data-hero-fit="cover"
-              data-hero-zoom="1.28"
+        <div class="bm-hero-v2-media" aria-hidden="true">
+          <div
+            class="bm-video-crop bm-hero-v2-crop bm-video-crop--cover"
+            data-hero-autoplay="x4Ya98nRnog"
+            data-hero-title="Bees Motion showreel"
+            data-hero-fit="cover"
+            data-hero-zoom="1.38"
+          >
+            <button
+              type="button"
+              class="yt-facade yt-facade--cover"
+              data-yt-id="x4Ya98nRnog"
+              data-yt-title="Bees Motion showreel"
+              data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=x4Ya98nRnog&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1"
+              aria-label="Play showreel"
             >
-              <button
-                type="button"
-                class="yt-facade yt-facade--cover"
-                data-yt-id="x4Ya98nRnog"
-                data-yt-title="Bees Motion showreel"
-                data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=x4Ya98nRnog&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1"
-                aria-label="Play showreel"
-              >
-                <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="" loading="eager" width="1280" height="720" decoding="async" fetchpriority="high" />
-                <span class="yt-facade-play" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="bm-hero-v2-veil" aria-hidden="true"></div>
+              <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="" loading="eager" width="1280" height="720" decoding="async" fetchpriority="high" />
+              <span class="yt-facade-play" aria-hidden="true"></span>
+            </button>
           </div>
-          <div class="bm-hero-v2-copy">
-            <div class="bm-hero-v2-inner reveal">
-              <p class="bm-hero-v2-eyebrow" data-i18n="heroEyebrow">Bees Motion</p>
-              <p class="bm-hero-v2-tag" data-i18n="heroTag">Marketing · Content · AI</p>
-              <h1 class="bm-hero-v2-title">
-                <span data-i18n="heroTitle">Stories built</span>
-                <em class="bm-hero-em" data-i18n="heroTitleEm">to perform.</em>
-              </h1>
-              <p class="bm-hero-v2-sub" data-i18n="heroSub">Marketing, content and AI built around the industries we know best.</p>
-              <p class="bm-hero-v2-markets" data-i18n="heroMarkets">Healthcare · Real Estate</p>
-              <p class="bm-hero-v2-systems" dir="ltr">MedMotion<sup aria-hidden="true">™</sup> · PropMotion<sup aria-hidden="true">™</sup></p>
-              <div class="bm-hero-v2-ctas">
-                <a class="btn btn-pill btn-on-light" href="/#contact" data-i18n="heroCta1" data-track="cta_hero_start">Start a Project</a>
-                <a class="btn btn-pill btn-outline-dark" href="/#work" data-i18n="heroCta2" data-track="cta_hero_work">Explore Our Work</a>
-              </div>
-            </div>
+        </div>
+        <div class="bm-hero-v2-veil" aria-hidden="true"></div>
+        <div class="container bm-hero-v2-inner reveal">
+          <p class="bm-hero-v2-eyebrow" data-i18n="heroEyebrow">Bees Motion</p>
+          <p class="bm-hero-v2-tag" data-i18n="heroTag">Marketing · Content · AI</p>
+          <h1 class="bm-hero-v2-title">
+            <span data-i18n="heroTitle">Stories built</span>
+            <em class="bm-hero-em" data-i18n="heroTitleEm">to perform.</em>
+          </h1>
+          <p class="bm-hero-v2-sub" data-i18n="heroSub">Marketing, content and AI built around the industries we know best.</p>
+          <p class="bm-hero-v2-markets" data-i18n="heroMarkets">Healthcare · Real Estate</p>
+          <p class="bm-hero-v2-systems" dir="ltr">MedMotion<sup aria-hidden="true">™</sup> · PropMotion<sup aria-hidden="true">™</sup></p>
+          <div class="bm-hero-v2-ctas">
+            <a class="btn btn-pill btn-on-dark" href="/#contact" data-i18n="heroCta1" data-track="cta_hero_start">Start a Project</a>
+            <a class="btn btn-pill btn-outline-light" href="/#work" data-i18n="heroCta2" data-track="cta_hero_work">Explore Our Work</a>
           </div>
         </div>
       </section>
@@ -554,7 +550,7 @@
     <script>
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
-    <script src="/assets/js/translations.js?v=20260903v2g"></script>
-    <script src="/assets/js/app.js?v=20260903v2g"></script>
+    <script src="/assets/js/translations.js?v=20260903v2h"></script>
+    <script src="/assets/js/app.js?v=20260903v2h"></script>
   </body>
 </html>

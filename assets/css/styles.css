@@ -12262,33 +12262,29 @@ body.lang-ar .lp-legacy-title {
 }
 
 /* =========================================================
-   HOMEPAGE V2 — split hero (video left · copy right)
+   HOMEPAGE V2 — fullscreen showreel · copy on the right
    ========================================================= */
 
 .bm-hero--v2 {
   position: relative;
   margin-top: var(--header-h);
-  min-height: 0;
-  padding: 0;
+  min-height: min(88vh, 860px);
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
   overflow: hidden;
-  background: #f7f6f2;
+  background: #0c0c0a;
+  padding: 0;
 }
 
-/* Force physical order: video LEFT · copy RIGHT (even in RTL) */
-.bm-hero-v2-split {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  min-height: min(86vh, 820px);
-  direction: ltr;
-  align-items: stretch;
+.bm-hero-v2-media,
+.bm-hero-v2-veil {
+  position: absolute;
+  inset: 0;
 }
 
 .bm-hero-v2-media {
-  position: relative;
   z-index: 0;
-  min-height: 0;
-  background: #0c0c0a;
-  overflow: hidden;
 }
 
 .bm-hero-v2-media .bm-hero-reel {
@@ -12327,8 +12323,8 @@ body.lang-ar .lp-legacy-title {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 128%;
-  height: 128%;
+  width: 138%;
+  height: 138%;
   object-fit: cover;
   object-position: center center;
   transform: translate(-50%, -50%);
@@ -12343,51 +12339,42 @@ body.lang-ar .lp-legacy-title {
   max-width: none !important;
 }
 
-/* Soft cinematic edge on the video pane only */
+/* Corner + top/bottom vignette — center of film stays open */
 .bm-hero-v2-veil {
-  position: absolute;
-  inset: 0;
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(8, 8, 6, 0.35) 0%, transparent 22%, transparent 78%, rgba(8, 8, 6, 0.4) 100%),
-    radial-gradient(ellipse 95% 90% at 50% 50%, transparent 45%, rgba(8, 8, 6, 0.28) 100%),
-    linear-gradient(90deg, transparent 70%, rgba(247, 246, 242, 0.12) 100%);
+    linear-gradient(180deg, rgba(8, 8, 6, 0.55) 0%, rgba(8, 8, 6, 0.15) 16%, transparent 32%, transparent 68%, rgba(8, 8, 6, 0.22) 84%, rgba(8, 8, 6, 0.62) 100%),
+    radial-gradient(ellipse 90% 75% at 50% 50%, transparent 35%, rgba(8, 8, 6, 0.28) 78%, rgba(8, 8, 6, 0.5) 100%);
 }
 
-.bm-hero-v2-copy {
-  display: grid;
-  align-items: center;
-  background:
-    radial-gradient(80% 70% at 100% 0%, rgba(229, 168, 35, 0.08), transparent 55%),
-    linear-gradient(165deg, #ffffff 0%, #f7f6f2 55%, #efeae2 100%);
-  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3.5rem);
-}
-
+/* Copy block: physical right half, not stacked over the whole frame */
 .bm-hero-v2-inner {
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: 34rem;
-  margin-inline: 0;
-  margin-inline-start: auto;
-  padding: 0;
-  color: var(--ink);
+  justify-self: right;
+  align-self: center;
+  width: min(100%, 38rem);
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: 0;
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  padding-inline: clamp(1.25rem, 3vw, 2rem) clamp(1.35rem, 3.5vw, 2.75rem);
+  color: #f7f6f2;
   display: grid;
   gap: 0.55rem;
   text-align: start;
   justify-items: start;
   box-sizing: border-box;
-  background: none;
-  text-shadow: none;
-  direction: ltr;
-}
-
-html[dir="rtl"] .bm-hero-v2-inner,
-body.lang-ar .bm-hero-v2-inner {
-  direction: rtl;
-  margin-inline-start: 0;
-  margin-inline-end: auto;
+  background:
+    linear-gradient(
+      to left,
+      rgba(8, 8, 6, 0.72) 0%,
+      rgba(8, 8, 6, 0.45) 55%,
+      rgba(8, 8, 6, 0.12) 88%,
+      transparent 100%
+    );
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
 }
 
 .bm-hero-v2-eyebrow {
@@ -12396,7 +12383,7 @@ body.lang-ar .bm-hero-v2-inner {
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(21, 21, 19, 0.55);
+  color: rgba(247, 246, 242, 0.72);
 }
 
 .bm-hero-v2-tag {
@@ -12404,23 +12391,23 @@ body.lang-ar .bm-hero-v2-inner {
   font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: #8a6a12;
+  color: rgba(245, 200, 77, 0.92);
 }
 
 .bm-hero-v2-title {
   margin: 0.15rem 0 0;
   font-family: var(--font-display);
-  font-size: clamp(2.35rem, 4.8vw, 4rem);
+  font-size: clamp(2.5rem, 6.2vw, 4.4rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.045em;
-  color: var(--ink);
-  text-shadow: none;
+  color: #fff;
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 .bm-hero-v2-title .bm-hero-em {
   display: inline;
-  color: #b8860b;
+  color: #f5c84d;
   font-style: normal;
   background: none;
   -webkit-text-fill-color: currentColor;
@@ -12428,11 +12415,11 @@ body.lang-ar .bm-hero-v2-inner {
 
 .bm-hero-v2-sub {
   margin: 0.35rem 0 0;
-  max-width: 30rem;
-  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  max-width: 32rem;
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
   line-height: 1.65;
   font-weight: 500;
-  color: rgba(21, 21, 19, 0.72);
+  color: rgba(247, 246, 242, 0.82);
 }
 
 .bm-hero-v2-markets,
@@ -12440,11 +12427,11 @@ body.lang-ar .bm-hero-v2-inner {
   margin: 0.15rem 0 0;
   font-size: 0.92rem;
   font-weight: 700;
-  color: rgba(21, 21, 19, 0.88);
+  color: rgba(247, 246, 242, 0.92);
 }
 
 .bm-hero-v2-systems {
-  color: #8a6a12;
+  color: rgba(245, 200, 77, 0.88);
   font-weight: 600;
 }
 
@@ -12473,29 +12460,32 @@ body.lang-ar .bm-hero-v2-title {
   font-family: Tajawal, sans-serif;
 }
 
-@media (max-width: 900px) {
-  .bm-hero-v2-split {
-    grid-template-columns: 1fr;
-    min-height: 0;
+@media (max-width: 760px) {
+  .bm-hero--v2 {
+    min-height: min(82vh, 720px);
+    align-items: end;
   }
 
-  .bm-hero-v2-media {
-    min-height: min(52vh, 420px);
-    aspect-ratio: 16 / 10;
-  }
-
-  .bm-hero-v2-copy {
-    padding: clamp(2rem, 6vw, 3rem) var(--gutter);
+  .bm-hero-v2-veil {
+    background:
+      linear-gradient(180deg, rgba(8, 8, 6, 0.4) 0%, transparent 22%, transparent 42%, rgba(8, 8, 6, 0.5) 70%, rgba(8, 8, 6, 0.88) 100%),
+      radial-gradient(ellipse 100% 85% at 50% 45%, transparent 28%, rgba(8, 8, 6, 0.35) 100%);
   }
 
   .bm-hero-v2-inner {
+    justify-self: stretch;
+    width: 100%;
     max-width: none;
-    margin-inline: 0;
-  }
-
-  html[dir="rtl"] .bm-hero-v2-inner,
-  body.lang-ar .bm-hero-v2-inner {
-    margin-inline: 0;
+    margin-left: 0;
+    padding-inline: var(--gutter);
+    padding-bottom: clamp(2rem, 8vw, 3rem);
+    background:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(8, 8, 6, 0.5) 28%,
+        rgba(8, 8, 6, 0.88) 100%
+      );
   }
 }
 
