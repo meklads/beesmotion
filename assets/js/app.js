@@ -616,7 +616,7 @@
     const hero = document.querySelector(".bm-hero--case, .bm-hero");
     if (!bar || !hero) return;
     const sync = () => {
-      const past = window.scrollY > hero.offsetHeight * 0.65;
+      const past = window.scrollY > hero.offsetHeight * 0.35;
       bar.hidden = !past;
       document.body.classList.toggle("has-sol-sticky", past);
     };
