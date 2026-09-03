@@ -13101,7 +13101,8 @@ body.lang-ar .engage-strip-title {
 .engage-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.45rem;
   padding: 0.55rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(12, 13, 16, 0.12);
@@ -13120,6 +13121,19 @@ body.lang-ar .engage-strip-title {
 .engage-chip strong {
   font-size: 0.92rem;
   font-weight: 700;
+}
+
+.engage-chip em {
+  flex-basis: 100%;
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.25;
+}
+
+.engage-chip--featured em {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .engage-chip:hover {
