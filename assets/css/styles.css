@@ -10989,3 +10989,18 @@ body.lang-en .axis-card h3 {
 .page-case-hub .cs-med-album .creative-album {
   margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
 }
+
+/* Still photo stage inside series albums */
+.series-split-still {
+  margin: 0;
+  display: block;
+}
+
+.series-split-still > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
