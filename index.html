@@ -39,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903v2a" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260903v2b" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -115,17 +115,23 @@
       <!-- 01 — Brand hero: SHOW + POSITION -->
       <section class="bm-hero bm-hero--v2" aria-label="Bees Motion">
         <div class="bm-hero-v2-media" aria-hidden="true">
-          <video
-            class="bm-hero-reel"
-            poster="/assets/img/thumbs/x4Ya98nRnog.jpg"
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            autoplay
+          <div
+            class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel bm-video-crop--cover-fill bm-hero-v2-crop"
+            data-hero-autoplay="x4Ya98nRnog"
+            data-hero-title="Bees Motion showreel"
           >
-            <source src="/assets/video/gh-marketing-media.mp4" type="video/mp4" />
-          </video>
+            <button
+              type="button"
+              class="yt-facade yt-facade--cover"
+              data-yt-id="x4Ya98nRnog"
+              data-yt-title="Bees Motion showreel"
+              data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=x4Ya98nRnog&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1"
+              aria-label="Play showreel"
+            >
+              <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="" loading="eager" width="1280" height="720" decoding="async" fetchpriority="high" />
+              <span class="yt-facade-play" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
         <div class="bm-hero-v2-veil" aria-hidden="true"></div>
         <div class="container bm-hero-v2-inner reveal">
@@ -323,23 +329,23 @@
               <p class="model-kicker" data-i18n="pkg1badge">01. Foundation</p>
               <h3 class="model-name" data-i18n="pkg1">Foundation</h3>
               <p class="model-line" data-i18n="pkg1line">Build the content foundation.</p>
-              <p class="model-for" data-i18n="pkg1for">For brands that need a clear content base and a reliable publishing rhythm.</p>
               <a class="btn btn-pill btn-outline-dark model-cta" href="#contact" data-i18n="ctaFoundation" data-track="cta_foundation">Discuss Foundation</a>
             </article>
             <article class="model-card model-card--featured">
               <p class="model-kicker" data-i18n="pkgPopular">02. Growth</p>
               <h3 class="model-name" data-i18n="pkg2">Growth</h3>
               <p class="model-line" data-i18n="pkg2line">Build momentum through continuous content and paid distribution.</p>
-              <p class="model-for" data-i18n="pkg2for">For brands that want ongoing presence, stronger creative cadence, and measurable demand.</p>
               <a class="btn btn-pill btn-on-light model-cta" href="#contact" data-i18n="ctaGrowth" data-track="cta_growth">Discuss Growth</a>
             </article>
             <article class="model-card">
               <p class="model-kicker" data-i18n="pkg3badge">03. Campaign</p>
               <h3 class="model-name" data-i18n="pkg3">Campaign</h3>
               <p class="model-line" data-i18n="pkg3line">Bring strategy, production and distribution together around a specific business objective.</p>
-              <p class="model-for" data-i18n="pkg3for">For launches and initiatives that need content moving in market, not sitting in a portfolio.</p>
               <a class="btn btn-pill btn-outline-dark model-cta" href="#contact" data-i18n="ctaBuildCampaign" data-track="cta_campaign_model">Build a Campaign</a>
             </article>
+          </div>
+          <div class="engage-foot reveal">
+            <a class="btn btn-pill btn-on-light" href="#contact" data-i18n="ctaDiscussPath" data-track="cta_discuss_path">Discuss the right path</a>
           </div>
         </div>
       </section>
@@ -370,12 +376,21 @@
         </div>
       </section>
 
+      <section id="agency" class="agency-band agency-band--v2" aria-label="Agency partners">
+        <div class="container agency-inner reveal">
+          <span class="svc-tag" data-i18n="agencyTag">Agency partners</span>
+          <h2 class="font-headline-xl" data-i18n="agencyTitle">Your client. Your strategy. Our production depth.</h2>
+          <p class="font-body-md" data-i18n="agencyBody">A secondary path for agencies that need production depth without losing strategy ownership.</p>
+          <a class="btn btn-pill btn-outline-light" href="#contact" data-i18n="agencyCta" data-track="cta_agency">Partner with us</a>
+        </div>
+      </section>
+
       <section id="ecosystem" class="eco-band band-mist">
         <div class="container">
           <div class="section-head reveal">
             <span class="svc-tag" data-i18n="ecoTag">Tasami Group</span>
             <h2 class="font-headline-xl" data-i18n="ecoTitle">Different expertise. One group.</h2>
-            <p class="font-body-md" data-i18n="ecoLead">Bees Motion is part of Tasami Group, alongside specialized companies including Graphics House and Turriva.</p>
+            <p class="font-body-md" data-i18n="ecoLead">Bees Motion leads marketing and content. Graphics House and Turriva escalate when the brief needs advanced visual or spatial depth.</p>
           </div>
           <div class="eco-grid reveal">
             <article class="eco-card eco-card--active">
@@ -427,11 +442,9 @@
                     <option value="campaign" data-i18n="needCampaign">Campaign</option>
                     <option value="creative" data-i18n="needCreative">Creative Production</option>
                     <option value="patient-experience" data-i18n="needPatientExp">Patient Experience</option>
-                    <option value="medical-ai" data-i18n="needMedicalAi">Medical AI</option>
-                    <option value="smart-hospital" data-i18n="needSmartHc">Smart hospital experience</option>
                     <option value="property-engine" data-i18n="needPropEngine">Property Content Engine</option>
-                    <option value="ai" data-i18n="needAiLite">AI / Automation</option>
                     <option value="interactive" data-i18n="needInteractive">Interactive Experience</option>
+                    <option value="agency" data-i18n="needAgency">Agency partnership</option>
                     <option value="unsure" data-i18n="needUnsure">Not sure yet</option>
                   </select>
                 </div>
@@ -535,7 +548,7 @@
     <script>
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
-    <script src="/assets/js/translations.js?v=20260903v2a"></script>
-    <script src="/assets/js/app.js?v=20260903v2a"></script>
+    <script src="/assets/js/translations.js?v=20260903v2b"></script>
+    <script src="/assets/js/app.js?v=20260903v2b"></script>
   </body>
 </html>

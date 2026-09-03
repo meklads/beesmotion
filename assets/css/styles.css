@@ -12764,3 +12764,75 @@ body.lang-ar .sector-gate-kicker {
     transform: none;
   }
 }
+
+/* V2b — hero YT crop, agency strip, engage foot, hub xsell */
+.bm-hero-v2-crop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.bm-hero-v2-crop iframe,
+.bm-hero-v2-crop .yt-facade,
+.bm-hero-v2-crop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bm-hero-v2-crop .yt-facade-play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.engage-foot {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.agency-band--v2 {
+  background: #151513;
+  color: #f7f6f2;
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+}
+
+.agency-band--v2 .agency-inner {
+  max-width: 40rem;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.agency-band--v2 .font-headline-xl {
+  margin: 0;
+}
+
+.agency-band--v2 .font-body-md {
+  margin: 0 0 0.5rem;
+  max-width: 34rem;
+}
+
+.hub-xsell {
+  padding: 1.35rem 0;
+  background: #f7f6f2;
+  border-block: 1px solid rgba(21, 21, 19, 0.08);
+}
+
+.hub-xsell-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hub-xsell-copy {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  max-width: 36rem;
+}
