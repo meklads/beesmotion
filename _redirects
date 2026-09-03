@@ -2,3 +2,8 @@
 /ai-content-engine /ai/ 301
 /ai-content-engine.html /ai/ 301
 /ai.html /ai/ 301
+
+# PropMotion landing
+/real-estate-content-engine /real-estate-content-engine.html 200
+/prop-motion /real-estate-content-engine.html 301
+/propmotion /real-estate-content-engine.html 301
