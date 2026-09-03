@@ -27,7 +27,7 @@ const creativeNew = `<section id="creative" class="creative-band band-paper has-
           <div class="section-head section-head--editorial reveal">
             <span class="svc-tag" data-i18n="creativeTag">Creative production</span>
             <h2 class="font-headline-xl" data-i18n="creativeTitle">The content that gives marketing something to work with</h2>
-            <p class="font-body-md" data-i18n="creativeSub">Studio-grade video, animation, and motion, built for campaigns, not for the shelf. 100+ animated films across healthcare and real estate.</p>
+            <p class="font-body-md" data-i18n="creativeSub">Studio-grade video, animation, and motion, built for campaigns, not for the shelf. 100+ films, designs & presentations for IMC in about one year.</p>
           </div>
           <div class="creative-bento reveal">
             <article class="bento-item bento-item--lg">

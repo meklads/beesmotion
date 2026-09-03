@@ -13641,3 +13641,13 @@ body.lang-ar .med-pillar-panel p {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Case study delivery ownership */
+.bm-delivery {
+  margin: 0.35rem 0 0.85rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: rgba(20, 40, 30, 0.62);
+  font-weight: 600;
+}
