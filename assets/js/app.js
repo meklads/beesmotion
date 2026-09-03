@@ -151,14 +151,19 @@
       const company = form.company.value.trim();
       const industryEl = form.industry;
       const needEl = form.need;
+      const objectiveEl = form.objective;
       const industry = industryEl ? industryEl.value : "";
       const need = needEl ? needEl.value : "";
+      const objective = objectiveEl ? objectiveEl.value : "";
       const industryLabel = industryEl && industryEl.selectedOptions[0]
         ? industryEl.selectedOptions[0].textContent.trim()
         : industry;
       const needLabel = needEl && needEl.selectedOptions[0]
         ? needEl.selectedOptions[0].textContent.trim()
         : need;
+      const objectiveLabel = objectiveEl && objectiveEl.selectedOptions[0]
+        ? objectiveEl.selectedOptions[0].textContent.trim()
+        : objective;
       const message = form.message.value.trim();
       track("cta_form_whatsapp", { industry: industry, need: need, lang: lang });
       const lines =
@@ -170,6 +175,7 @@
               `الشركة: ${company}`,
               `القطاع: ${industryLabel}`,
               `الاحتياج: ${needLabel}`,
+              `الهدف: ${objectiveLabel || "—"}`,
               `الطلب: ${message}`,
             ]
           : [
@@ -179,6 +185,7 @@
               `Company: ${company}`,
               `Industry: ${industryLabel}`,
               `Need: ${needLabel}`,
+              `Objective: ${objectiveLabel || "-"}`,
               `Request: ${message}`,
             ];
       const plain = lines.join("\n");
