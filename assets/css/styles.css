@@ -12028,6 +12028,14 @@ body.lang-ar .lp-enquire-title {
   inset: 0;
 }
 
+.hub-hero--bleed .hub-hero-media {
+  z-index: 0;
+}
+
+.hub-hero--bleed .hub-hero-veil {
+  z-index: 1;
+}
+
 .hub-hero--bleed .hub-hero-media img {
   width: 100%;
   height: 100%;
@@ -12041,12 +12049,16 @@ body.lang-ar .lp-enquire-title {
   background:
     linear-gradient(
       105deg,
-      rgba(6, 18, 28, 0.92) 0%,
-      rgba(8, 24, 36, 0.78) 38%,
-      rgba(8, 24, 36, 0.35) 68%,
-      rgba(8, 24, 36, 0.2) 100%
+      rgba(6, 18, 28, 0.72) 0%,
+      rgba(8, 24, 36, 0.48) 42%,
+      rgba(8, 24, 36, 0.18) 72%,
+      rgba(8, 24, 36, 0.08) 100%
     ),
-    linear-gradient(180deg, rgba(6, 18, 28, 0.35) 0%, transparent 42%, rgba(6, 18, 28, 0.72) 100%);
+    linear-gradient(180deg, rgba(6, 18, 28, 0.22) 0%, transparent 45%, rgba(6, 18, 28, 0.55) 100%);
+}
+
+.hub-hero--bleed.hub-hero--med {
+  background: #0c1a24;
 }
 
 .hub-hero--bleed .hub-hero-inner {
@@ -12056,6 +12068,9 @@ body.lang-ar .lp-enquire-title {
   padding: clamp(3.25rem, 9vw, 6rem) 0 clamp(2.75rem, 6vw, 4.25rem);
   color: #f4f8fb;
   gap: 0.7rem;
+  text-align: start;
+  justify-items: start;
+  margin-inline: 0;
 }
 
 .hub-hero--bleed .hub-hero-kicker {
@@ -12070,6 +12085,10 @@ body.lang-ar .lp-enquire-title {
 .hub-hero--bleed .font-headline-xl {
   color: #fff;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hub-hero--bleed.hub-hero--med .font-headline-xl sup {
+  color: #b7d6e6;
 }
 
 .hub-hero--bleed .lp-hero-offer {
@@ -12166,7 +12185,7 @@ body.lang-ar .lp-legacy-title {
 
   .hub-hero--bleed .hub-hero-veil {
     background:
-      linear-gradient(180deg, rgba(6, 18, 28, 0.45) 0%, rgba(6, 18, 28, 0.82) 55%, rgba(6, 18, 28, 0.92) 100%);
+      linear-gradient(180deg, rgba(6, 18, 28, 0.28) 0%, rgba(6, 18, 28, 0.55) 48%, rgba(6, 18, 28, 0.82) 100%);
   }
 
   .hub-hero--bleed .hub-hero-inner {
