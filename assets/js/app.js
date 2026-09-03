@@ -699,9 +699,14 @@
         iframe.setAttribute("playsinline", "1");
         const parent = btn.parentElement;
         const heroReel = parent && parent.classList.contains("bm-video-crop--hero-reel");
+        const shortCrop = parent && parent.classList.contains("short-crop-media");
         if (heroReel) {
           iframe.style.cssText =
             "position:absolute;top:50%;left:50%;width:178%;height:178%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;";
+        } else if (shortCrop) {
+          /* Zoom into vertical center — crop top & bottom chrome/letterbox */
+          iframe.style.cssText =
+            "position:absolute;top:50%;left:50%;width:135%;height:135%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;";
         } else {
           iframe.style.cssText =
             "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
