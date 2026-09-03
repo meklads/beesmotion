@@ -12265,11 +12265,11 @@ body.lang-ar .lp-legacy-title {
 .bm-hero--v2 {
   position: relative;
   margin-top: var(--header-h);
-  min-height: min(92vh, 900px);
+  min-height: min(88vh, 860px);
   display: grid;
   align-items: end;
   overflow: hidden;
-  background: #151513;
+  background: #0c0c0a;
   padding: 0;
 }
 
@@ -12286,23 +12286,66 @@ body.lang-ar .lp-legacy-title {
 .bm-hero-v2-media .bm-hero-reel {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
-  transform: scale(1.03);
+  transform: none;
 }
 
+/* Full-frame showreel — no aggressive crop */
+.bm-hero--v2 .bm-hero-v2-crop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  background: #0c0c0a;
+}
+
+.bm-hero--v2 .bm-hero-v2-crop .yt-facade,
+.bm-hero--v2 .bm-hero-v2-crop .yt-facade--contain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: default;
+}
+
+.bm-hero--v2 .bm-hero-v2-crop .yt-facade img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: translate(-50%, -50%);
+}
+
+.bm-hero--v2 .bm-hero-v2-crop .yt-facade-play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bm-hero--v2 .bm-hero-v2-crop iframe {
+  /* sized by JS contain — override global 178% hero-reel zoom */
+  max-width: none !important;
+}
+
+/* Graphics House–style: corner vignette only — video stays clear in the center */
 .bm-hero-v2-veil {
   z-index: 1;
+  pointer-events: none;
   background:
-    linear-gradient(
-      to left,
-      rgba(21, 21, 19, 0.88) 0%,
-      rgba(21, 21, 19, 0.62) 42%,
-      rgba(21, 21, 19, 0.28) 72%,
-      rgba(21, 21, 19, 0.18) 100%
-    ),
-    linear-gradient(180deg, rgba(21, 21, 19, 0.35) 0%, transparent 40%, rgba(21, 21, 19, 0.72) 100%);
+    radial-gradient(ellipse 95% 85% at 50% 48%, transparent 42%, rgba(12, 12, 10, 0.22) 78%, rgba(12, 12, 10, 0.48) 100%),
+    linear-gradient(180deg, rgba(12, 12, 10, 0.28) 0%, transparent 14%, transparent 78%, rgba(12, 12, 10, 0.2) 100%);
 }
 
 .bm-hero-v2-inner {
@@ -12313,14 +12356,25 @@ body.lang-ar .lp-legacy-title {
   max-width: 38rem;
   margin-left: auto;
   margin-right: 0;
-  padding-block: clamp(3.5rem, 10vw, 6.5rem) clamp(3rem, 7vw, 4.5rem);
-  padding-inline: clamp(1.15rem, 2.8vw, 1.75rem) clamp(1.35rem, 3.5vw, 2.75rem);
+  padding-block: clamp(2.75rem, 7vw, 4.5rem);
+  padding-inline: clamp(1.25rem, 3vw, 2rem) clamp(1.35rem, 3.5vw, 2.75rem);
   color: #f7f6f2;
   display: grid;
   gap: 0.55rem;
   text-align: start;
   justify-items: start;
   box-sizing: border-box;
+  /* Local scrim only behind copy — rest of frame stays open */
+  background:
+    linear-gradient(
+      to left,
+      rgba(12, 12, 10, 0.78) 0%,
+      rgba(12, 12, 10, 0.55) 55%,
+      rgba(12, 12, 10, 0.18) 85%,
+      transparent 100%
+    );
+  border-radius: 0;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
 }
 
 .bm-hero-v2-eyebrow {
@@ -12407,13 +12461,14 @@ body.lang-ar .bm-hero-v2-title {
 
 @media (max-width: 760px) {
   .bm-hero--v2 {
-    min-height: min(84vh, 720px);
+    min-height: min(78vh, 680px);
     align-items: end;
   }
 
   .bm-hero-v2-veil {
     background:
-      linear-gradient(180deg, rgba(21, 21, 19, 0.25) 0%, rgba(21, 21, 19, 0.55) 45%, rgba(21, 21, 19, 0.9) 100%);
+      radial-gradient(ellipse 100% 90% at 50% 40%, transparent 35%, rgba(12, 12, 10, 0.28) 75%, rgba(12, 12, 10, 0.55) 100%),
+      linear-gradient(180deg, rgba(12, 12, 10, 0.22) 0%, transparent 16%, transparent 48%, rgba(12, 12, 10, 0.55) 100%);
   }
 
   .bm-hero-v2-inner {
@@ -12422,6 +12477,13 @@ body.lang-ar .bm-hero-v2-title {
     max-width: none;
     margin-left: 0;
     padding-inline: var(--gutter);
+    background:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(12, 12, 10, 0.55) 28%,
+        rgba(12, 12, 10, 0.82) 100%
+      );
   }
 }
 
@@ -12766,27 +12828,6 @@ body.lang-ar .sector-gate-kicker {
 }
 
 /* V2b — hero YT crop, agency strip, engage foot, hub xsell */
-.bm-hero-v2-crop {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-}
-
-.bm-hero-v2-crop iframe,
-.bm-hero-v2-crop .yt-facade,
-.bm-hero-v2-crop img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.bm-hero-v2-crop .yt-facade-play {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .engage-foot {
   display: flex;
   justify-content: center;
