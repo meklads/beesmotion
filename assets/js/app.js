@@ -359,6 +359,9 @@
     const h = crop.clientHeight || crop.offsetHeight;
     if (!w || !h) return;
     const ratio = 16 / 9;
+    /* Zoom past cover so more top/bottom is cropped and the center scene fills the hero */
+    const zoomAttr = parseFloat(crop.getAttribute("data-hero-zoom") || "1.32", 10);
+    const zoom = Number.isFinite(zoomAttr) && zoomAttr > 1 ? zoomAttr : 1.32;
     let iw;
     let ih;
     if (w / h > ratio) {
@@ -368,6 +371,8 @@
       ih = h;
       iw = Math.round(h * ratio);
     }
+    iw = Math.round(iw * zoom);
+    ih = Math.round(ih * zoom);
     iframe.style.cssText = "";
     iframe.style.setProperty("position", "absolute", "important");
     iframe.style.setProperty("left", "50%", "important");

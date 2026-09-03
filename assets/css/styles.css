@@ -12267,7 +12267,8 @@ body.lang-ar .lp-legacy-title {
   margin-top: var(--header-h);
   min-height: min(88vh, 860px);
   display: grid;
-  align-items: end;
+  align-items: center;
+  justify-items: center;
   overflow: hidden;
   background: #0c0c0a;
   padding: 0;
@@ -12321,8 +12322,8 @@ body.lang-ar .lp-legacy-title {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 100%;
-  height: 100%;
+  width: 138%;
+  height: 138%;
   object-fit: cover;
   object-position: center center;
   transform: translate(-50%, -50%);
@@ -12334,45 +12335,44 @@ body.lang-ar .lp-legacy-title {
 }
 
 .bm-hero--v2 .bm-hero-v2-crop iframe {
-  /* sized by JS cover — override global 178% hero-reel zoom */
+  /* sized by JS cover + zoom — override global 178% hero-reel zoom */
   max-width: none !important;
 }
 
-/* GH-style cinematic veil: corners + top/bottom only — center stays open */
+/* GH-style cinematic veil: corners + top/bottom — center stays open for copy */
 .bm-hero-v2-veil {
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(8, 8, 6, 0.62) 0%, rgba(8, 8, 6, 0.18) 18%, transparent 32%, transparent 68%, rgba(8, 8, 6, 0.28) 82%, rgba(8, 8, 6, 0.72) 100%),
-    radial-gradient(ellipse 92% 78% at 50% 50%, transparent 38%, rgba(8, 8, 6, 0.28) 72%, rgba(8, 8, 6, 0.55) 100%);
+    linear-gradient(180deg, rgba(8, 8, 6, 0.7) 0%, rgba(8, 8, 6, 0.22) 16%, transparent 34%, transparent 66%, rgba(8, 8, 6, 0.28) 82%, rgba(8, 8, 6, 0.78) 100%),
+    radial-gradient(ellipse 88% 72% at 50% 50%, transparent 28%, rgba(8, 8, 6, 0.32) 70%, rgba(8, 8, 6, 0.58) 100%);
 }
 
 .bm-hero-v2-inner {
   position: relative;
   z-index: 2;
-  justify-self: right;
-  width: min(100%, 38rem);
-  max-width: 38rem;
-  margin-left: auto;
-  margin-right: 0;
-  padding-block: clamp(2.75rem, 7vw, 4.5rem);
-  padding-inline: clamp(1.25rem, 3vw, 2rem) clamp(1.35rem, 3.5vw, 2.75rem);
+  justify-self: center;
+  width: min(100%, 44rem);
+  max-width: 44rem;
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
   color: #f7f6f2;
   display: grid;
   gap: 0.55rem;
-  text-align: start;
-  justify-items: start;
+  text-align: center;
+  justify-items: center;
   box-sizing: border-box;
-  /* Soft local scrim behind copy only */
+  /* Soft centered scrim behind copy */
   background:
-    linear-gradient(
-      to left,
+    radial-gradient(
+      ellipse 90% 85% at 50% 50%,
       rgba(8, 8, 6, 0.72) 0%,
-      rgba(8, 8, 6, 0.42) 58%,
-      rgba(8, 8, 6, 0.12) 88%,
+      rgba(8, 8, 6, 0.42) 48%,
+      rgba(8, 8, 6, 0.12) 78%,
       transparent 100%
     );
-  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.5);
 }
 
 .bm-hero-v2-eyebrow {
@@ -12442,6 +12442,7 @@ body.lang-ar .lp-legacy-title {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1.1rem;
+  justify-content: center;
 }
 
 html[dir="rtl"] .bm-hero-v2-eyebrow,
@@ -12460,27 +12461,29 @@ body.lang-ar .bm-hero-v2-title {
 @media (max-width: 760px) {
   .bm-hero--v2 {
     min-height: min(78vh, 680px);
-    align-items: end;
+    align-items: center;
   }
 
   .bm-hero-v2-veil {
     background:
-      linear-gradient(180deg, rgba(8, 8, 6, 0.45) 0%, transparent 22%, transparent 45%, rgba(8, 8, 6, 0.55) 72%, rgba(8, 8, 6, 0.88) 100%),
-      radial-gradient(ellipse 100% 90% at 50% 40%, transparent 30%, rgba(8, 8, 6, 0.35) 100%);
+      linear-gradient(180deg, rgba(8, 8, 6, 0.55) 0%, transparent 24%, transparent 48%, rgba(8, 8, 6, 0.5) 72%, rgba(8, 8, 6, 0.88) 100%),
+      radial-gradient(ellipse 100% 85% at 50% 50%, transparent 22%, rgba(8, 8, 6, 0.4) 100%);
   }
 
   .bm-hero-v2-inner {
-    justify-self: stretch;
-    width: 100%;
+    justify-self: center;
+    width: min(100%, 36rem);
     max-width: none;
-    margin-left: 0;
+    margin-inline: auto;
     padding-inline: var(--gutter);
+    text-align: center;
+    justify-items: center;
     background:
-      linear-gradient(
-        180deg,
-        transparent 0%,
-        rgba(8, 8, 6, 0.5) 22%,
-        rgba(8, 8, 6, 0.88) 100%
+      radial-gradient(
+        ellipse 100% 90% at 50% 50%,
+        rgba(8, 8, 6, 0.78) 0%,
+        rgba(8, 8, 6, 0.48) 55%,
+        transparent 100%
       );
   }
 }
