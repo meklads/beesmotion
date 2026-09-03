@@ -8,20 +8,20 @@
   --ink: #0c0d10;
   --ink-soft: #16181d;
   --on-bg: #1a1a1a;
-  --secondary: #5a5a5a;
+  --secondary: #454545;
   --cream: #f7f5f1;
   --cream-2: #f1eee8;
   --mist: #f3f1ec;
   --paper: #ffffff;
   --white: #ffffff;
-  --muted: #5a5a5a;
+  --muted: #4a4a4a;
   --border: rgba(12, 13, 16, 0.08);
   --shadow: 0 20px 50px rgba(12, 13, 16, 0.07);
   --radius: 22px;
   --radius-sm: 14px;
   --header-h: 88px;
-  --section-y: clamp(88px, 11vw, 140px);
-  --section-gap: clamp(40px, 5vw, 64px);
+  --section-y: clamp(72px, 8vw, 110px);
+  --section-gap: clamp(28px, 3.5vw, 48px);
   /* Dual width: prose focus vs media breadth (not Ruwaq 96rem, not old 1240 only) */
   --container: 84rem; /* ~1344px — default */
   --container-media: 92rem; /* ~1472px — albums / reels */
@@ -51,7 +51,7 @@ body {
   color: var(--on-bg);
   line-height: 1.65;
   overflow-x: hidden;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
@@ -64,9 +64,9 @@ body.lang-en {
 /* —— GH / ProjectLaunch typography scale —— */
 .font-headline-xl {
   font-family: var(--font-ar);
-  font-size: clamp(32px, 4.8vw, 56px);
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.18;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
@@ -75,29 +75,29 @@ html[dir="ltr"] .font-headline-xl,
 body.lang-en .font-headline-xl {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 
 .font-headline-md {
   font-family: var(--font-ar);
-  font-size: clamp(16px, 1.5vw, 19px);
-  font-weight: 500;
-  line-height: 1.45;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.4;
   color: var(--ink);
 }
 
 .font-body-lg {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
   color: var(--secondary);
 }
 
 .font-body-md {
   font-size: clamp(15px, 1.15vw, 17px);
   line-height: 1.7;
-  font-weight: 400;
-  color: var(--secondary);
+  font-weight: 500;
+  color: #3d3d3d;
 }
 
 .svc-tag {
@@ -9698,9 +9698,10 @@ body.lang-en .cap-card h3 {
 .level-card p,
 .cap-card p {
   margin: 0;
-  color: rgba(40, 44, 52, 0.82);
-  line-height: 1.5;
-  font-size: 0.9rem;
+  color: #3a3a3a;
+  line-height: 1.55;
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
 .flagship {
@@ -10275,7 +10276,7 @@ body.lang-en .hero-dual-title {
   margin: 0;
   font-family: inherit;
   font-size: clamp(1rem, 1.3vw, 1.14rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.7;
   color: #3a3a3a;
   max-width: 32rem;
@@ -10469,4 +10470,168 @@ body.lang-en .hero-dual-title {
   .bm-hero--dual .bm-video-crop--hero-reel {
     border-radius: 16px;
   }
+}
+
+/* ===== Service cards as links + under-construction pages ===== */
+a.axis-card--link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+a.axis-card--link:hover {
+  transform: translateY(-2px);
+}
+
+a.axis-card--link .axis-more {
+  display: inline-flex;
+  margin-top: auto;
+  padding-top: 0.65rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--sector-accent, var(--gold-dark));
+  border-bottom: none;
+}
+
+/* ===== Unified homepage type rhythm ===== */
+.section-head .font-headline-xl,
+.sector-bridge-inner .font-headline-xl,
+.sector-detail-head .font-headline-xl,
+.agency-copy .font-headline-xl {
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.2;
+}
+
+.sector-bridge-inner p.font-body-md,
+.section-head .font-body-md,
+.sector-detail-head .font-body-md {
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.sector-detail-head h2.font-headline-xl {
+  font-family: var(--font-display);
+}
+
+.why-card h3,
+.eco-card h3,
+.model-name,
+.level-card h3,
+.flagship h3,
+.cap-card h3,
+.axis-card h3 {
+  font-family: var(--font-ar);
+  font-weight: 700;
+}
+
+html[dir="ltr"] .why-card h3,
+body.lang-en .why-card h3,
+html[dir="ltr"] .eco-card h3,
+body.lang-en .eco-card h3,
+html[dir="ltr"] .model-name,
+body.lang-en .model-name,
+html[dir="ltr"] .level-card h3,
+body.lang-en .level-card h3,
+html[dir="ltr"] .flagship h3,
+body.lang-en .flagship h3,
+html[dir="ltr"] .cap-card h3,
+body.lang-en .cap-card h3,
+html[dir="ltr"] .axis-card h3,
+body.lang-en .axis-card h3 {
+  font-family: var(--font-display);
+}
+
+.why-card p,
+.eco-card p,
+.model-for,
+.flagship p,
+.agency-copy p {
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.why-band.band-ink .why-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+}
+
+/* ===== Service under-construction page ===== */
+.page-svc-soon .svc-soon-band {
+  margin-top: var(--header-h);
+  min-height: calc(100svh - var(--header-h));
+  display: flex;
+  align-items: center;
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+}
+
+.page-svc-soon--med .svc-soon-band {
+  background: linear-gradient(160deg, #c9e4f0 0%, #b7d6e6 45%, #eef6f9 100%);
+}
+
+.page-svc-soon--prop .svc-soon-band {
+  background: linear-gradient(160deg, #ffffff 0%, #fff8ea 55%, #ffffff 100%);
+}
+
+.svc-soon-inner {
+  max-width: 40rem;
+}
+
+.svc-soon-inner .bm-hero-crumb {
+  margin: 0 0 1rem;
+}
+
+.svc-soon-inner .bm-hero-crumb a {
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.svc-soon-inner .bm-hero-crumb a:hover {
+  color: var(--ink);
+}
+
+.soon-badge {
+  display: inline-flex;
+  margin: 0 0 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(12, 13, 16, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.page-svc-soon--med .soon-badge {
+  color: #0a5570;
+  border-color: rgba(10, 85, 112, 0.22);
+}
+
+.svc-soon-inner .font-headline-xl {
+  margin: 0 0 0.85rem;
+}
+
+.svc-soon-lead {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.svc-soon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.35rem;
+}
+
+.page-svc-soon .site-footer {
+  margin-top: 0;
 }
