@@ -345,3 +345,273 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
   position: relative;
   z-index: 1;
 }
+
+/* =========================================================
+   PropMotion enrichment — work / method / flagship / products
+   ========================================================= */
+
+.page-hub--prop .prop-work {
+  padding: clamp(2.75rem, 5.5vw, 4.5rem) 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(229, 168, 35, 0.08), transparent 55%),
+    linear-gradient(180deg, #faf8f4 0%, #f3efe8 100%);
+  border-block: 1px solid rgba(21, 21, 19, 0.06);
+}
+
+.page-hub--prop .prop-work-album {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.page-hub--prop .prop-work .creative-album-stage {
+  display: grid;
+  place-items: center;
+}
+
+.page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"] {
+  --album-ratio: 16 / 9;
+  aspect-ratio: var(--album-ratio) !important;
+  width: min(100%, 920px) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: min(70vh, 520px);
+  margin-inline: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0a0a0a;
+  box-shadow: 0 28px 60px rgba(12, 13, 16, 0.18);
+  transition: width 0.35s ease, max-height 0.35s ease, aspect-ratio 0.35s ease;
+}
+
+.page-hub--prop .prop-work .creative-album-player .yt-facade,
+.page-hub--prop .prop-work .creative-album-player .yt-facade--cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hub--prop .prop-work .creative-album-player .yt-facade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.page-hub--prop .prop-method {
+  padding: clamp(2.75rem, 5.5vw, 4.25rem) 0;
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(229, 168, 35, 0.06), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f7f5f0 100%);
+  border-bottom: 1px solid rgba(21, 21, 19, 0.06);
+}
+
+.page-hub--prop .prop-method-grid {
+  list-style: none;
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.page-hub--prop .prop-method-step {
+  margin: 0;
+  padding: 1.25rem 1.1rem 1.4rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.08);
+  box-shadow: 0 10px 28px rgba(12, 13, 16, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.page-hub--prop .prop-method-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(12, 13, 16, 0.08);
+  border-color: rgba(229, 168, 35, 0.35);
+}
+
+.page-hub--prop .prop-method-num {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+}
+
+.page-hub--prop .prop-method-step h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.page-hub--prop .prop-method-step p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(12, 13, 16, 0.68);
+}
+
+.page-hub--prop .level-card--rich {
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+  padding: 1.5rem 1.35rem 1.6rem;
+}
+
+.page-hub--prop .level-card--rich .prop-product-flow {
+  margin: 0.15rem 0 0;
+  font-size: 0.86rem;
+  font-weight: 650;
+  color: rgba(12, 13, 16, 0.55);
+}
+
+.page-hub--prop .level-card--rich .prop-product-for {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+.page-hub--prop .level-card--rich .med-gets-label {
+  margin: 0.55rem 0 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(12, 13, 16, 0.45);
+}
+
+.page-hub--prop .level-card--rich .med-gets {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.page-hub--prop .level-card--rich .med-gets li {
+  position: relative;
+  padding-inline-start: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(12, 13, 16, 0.78);
+}
+
+.page-hub--prop .level-card--rich .med-gets li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.page-hub--prop .level-card--rich .btn {
+  justify-self: start;
+  margin-top: 0.25rem;
+}
+
+.page-hub--prop .prop-flagship {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 90% 20%, rgba(229, 168, 35, 0.1), transparent 50%),
+    linear-gradient(180deg, #faf8f4 0%, #f0ebe3 100%);
+  border-block: 1px solid rgba(21, 21, 19, 0.06);
+}
+
+.page-hub--prop .prop-flagship-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.page-hub--prop .prop-flagship-copy .font-headline-xl {
+  margin: 0.4rem 0 0.85rem;
+}
+
+.page-hub--prop .prop-flagship-proof {
+  list-style: none;
+  margin: 1rem 0 1.1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.page-hub--prop .prop-flagship-proof li {
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(229, 168, 35, 0.12);
+  border: 1px solid rgba(229, 168, 35, 0.28);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #5c4508;
+}
+
+.page-hub--prop .prop-flagship-copy .flagship-principle {
+  margin: 0 0 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--gold-dark);
+}
+
+.page-hub--prop .prop-flagship-player {
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #0a0a0a;
+  box-shadow: 0 24px 50px rgba(12, 13, 16, 0.16);
+}
+
+.page-hub--prop .prop-flagship-caption {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(12, 13, 16, 0.55);
+}
+
+.page-hub--prop .lp-enquire-lead {
+  margin: 0.75rem 0 0;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(244, 241, 234, 0.72);
+}
+
+.page-hub--prop .hub-xsell--foot {
+  padding: 1.75rem 0 2.25rem;
+  background:
+    linear-gradient(180deg, #f4f2ed 0%, #efede8 100%);
+  border-block: 1px solid rgba(21, 21, 19, 0.08);
+}
+
+@media (max-width: 980px) {
+  .page-hub--prop .prop-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .page-hub--prop .prop-flagship-inner {
+    grid-template-columns: 1fr;
+  }
+  .page-hub--prop .prop-method-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+html[dir="rtl"] .page-hub--prop .prop-method-num,
+html[dir="rtl"] .page-hub--prop .level-card--rich .med-gets-label,
+body.lang-ar .page-hub--prop .prop-method-num,
+body.lang-ar .page-hub--prop .level-card--rich .med-gets-label {
+  letter-spacing: 0;
+  text-transform: none;
+}
