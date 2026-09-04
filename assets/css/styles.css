@@ -12788,6 +12788,82 @@ body.lang-en .bm-hero-v2-eyebrow {
   font-weight: 600;
 }
 
+.bm-hero-v2-offer {
+  color: rgba(245, 200, 77, 0.95) !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.02rem, 1.35vw, 1.18rem) !important;
+  line-height: 1.4 !important;
+  max-width: 30rem;
+}
+
+/* Sector hubs reuse homepage hero stage system */
+.bm-hero--v2-med {
+  background:
+    radial-gradient(ellipse 90% 65% at 80% 20%, rgba(10, 85, 112, 0.35), transparent 55%),
+    radial-gradient(ellipse 95% 70% at 50% 110%, rgba(12, 40, 52, 0.5), transparent 58%),
+    linear-gradient(165deg, #06141c 0%, #0a1f2a 42%, #0c2834 100%);
+}
+
+.bm-hero--v2-med .bm-hero-v2-tag {
+  color: rgba(183, 214, 230, 0.95);
+}
+
+.bm-hero--v2-med .bm-hero-v2-title sup {
+  color: #b7d6e6;
+  font-size: 0.45em;
+}
+
+.bm-hero--v2-med .btn-on-dark {
+  background: #f5c84d;
+  color: #0c1a24;
+  border-color: #f5c84d;
+}
+
+.bm-hero--v2-med .btn-on-dark:hover {
+  background: #ffd666;
+  color: #0c1a24;
+  border-color: #ffd666;
+}
+
+.bm-hero--v2-prop {
+  background:
+    radial-gradient(ellipse 90% 60% at 78% 18%, rgba(229, 168, 35, 0.18), transparent 52%),
+    radial-gradient(ellipse 95% 70% at 50% 110%, rgba(18, 20, 28, 0.55), transparent 58%),
+    linear-gradient(165deg, #0c0e14 0%, #12141a 42%, #1a1d26 100%);
+}
+
+.bm-hero--v2-prop .bm-hero-v2-tag {
+  color: rgba(245, 200, 77, 0.92);
+}
+
+.bm-hero--v2-prop .bm-hero-v2-title sup {
+  color: var(--gold-light);
+  font-size: 0.45em;
+}
+
+.bm-hero--v2-prop .btn-on-dark {
+  background: #f5c84d;
+  color: #12141a;
+  border-color: #f5c84d;
+}
+
+.bm-hero--v2-prop .btn-on-dark:hover {
+  background: #ffd666;
+  color: #12141a;
+  border-color: #ffd666;
+}
+
+html[dir="rtl"] .bm-hero--v2 .bm-hero-v2-inner,
+body.lang-ar .bm-hero--v2 .bm-hero-v2-inner {
+  text-align: right;
+  justify-items: stretch;
+}
+
+html[dir="rtl"] .bm-hero--v2 .bm-hero-v2-ctas,
+body.lang-ar .bm-hero--v2 .bm-hero-v2-ctas {
+  justify-content: flex-start;
+}
+
 .bm-hero-v2-systems sup {
   font-size: 0.55em;
   letter-spacing: 0;
@@ -12799,6 +12875,14 @@ body.lang-en .bm-hero-v2-eyebrow {
   gap: 0.85rem;
   margin-top: 0.85rem;
   justify-content: flex-start;
+}
+
+.bm-hero--v2 .bm-hero-v2-ctas .btn {
+  min-height: 50px;
+  min-width: 12rem;
+  padding: 0.95rem 1.9rem;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
 }
 
 /* Primary CTA was invisible on dark (btn-on-dark had no base styles) */
