@@ -4,7 +4,7 @@
         <script>
       (function () {
         try {
-          var KEY = "bm-lang-v2";
+          var KEY = "bm-lang-v3";
           var lang = localStorage.getItem(KEY);
           if (lang !== "en" && lang !== "ar") lang = "en";
           document.documentElement.lang = lang;
@@ -594,7 +594,7 @@
     <script>
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
-    <script src="/assets/js/translations.js?v=20260904face"></script>
-    <script src="/assets/js/app.js?v=20260904face"></script>
+    <script src="/assets/js/translations.js?v=20260904lang"></script>
+    <script src="/assets/js/app.js?v=20260904lang"></script>
   </body>
 </html>

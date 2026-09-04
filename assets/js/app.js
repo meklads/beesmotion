@@ -1,7 +1,7 @@
 (function () {
   const WA = "966502786513";
-  // v2: English is the site default; old "bm-lang" prefs are ignored once.
-  const STORAGE_KEY = "bm-lang-v2";
+  // v3: English is the site default; prior lang prefs reset once.
+  const STORAGE_KEY = "bm-lang-v3";
   const DEFAULT_LANG = "en";
 
   function getLang() {
