@@ -829,6 +829,8 @@
       const stage = album.querySelector("[data-album-stage]");
       if (!stage) return;
       const thumbs = album.querySelectorAll("[data-album-id]");
+      const coverFit = stage.getAttribute("data-album-fit") === "cover";
+      let resizeBound = null;
 
       function playInStage(id, title) {
         const iframe = document.createElement("iframe");
@@ -841,8 +843,21 @@
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
         iframe.setAttribute("frameborder", "0");
         iframe.setAttribute("playsinline", "1");
-        iframe.style.cssText =
-          "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
+
+        if (resizeBound) {
+          window.removeEventListener("resize", resizeBound);
+          resizeBound = null;
+        }
+
+        if (coverFit) {
+          sizeCoverIframe(stage, iframe);
+          iframe.style.setProperty("pointer-events", "auto", "important");
+          resizeBound = () => sizeCoverIframe(stage, iframe);
+          window.addEventListener("resize", resizeBound, { passive: true });
+        } else {
+          iframe.style.cssText =
+            "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
+        }
 
         stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
         const corners = stage.querySelectorAll(".bm-video-corner");
@@ -893,14 +908,28 @@
         const parent = btn.parentElement;
         const heroReel = parent && parent.classList.contains("bm-video-crop--hero-reel");
         const shortCrop = parent && parent.classList.contains("short-crop-media");
+        const albumCover =
+          parent &&
+          parent.hasAttribute("data-album-stage") &&
+          parent.getAttribute("data-album-fit") === "cover";
         if (heroReel) {
           iframe.style.cssText =
             "position:absolute;top:50%;left:50%;width:178%;height:178%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;";
         } else if (shortCrop) {
-          const isShort = facade.closest(".short-crop-media--short");
+          const isShort = btn.closest(".short-crop-media--short");
           const zoom = isShort ? "min-width:100%;min-height:125%;width:100%;height:100%;" : "min-width:100%;min-height:177.78%;width:100%;height:100%;";
           iframe.style.cssText =
             "position:absolute;top:50%;left:50%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:auto;" + zoom;
+        } else if (albumCover) {
+          sizeCoverIframe(parent, iframe);
+          iframe.style.setProperty("pointer-events", "auto", "important");
+          window.addEventListener(
+            "resize",
+            () => {
+              if (iframe.isConnected) sizeCoverIframe(parent, iframe);
+            },
+            { passive: true }
+          );
         } else {
           iframe.style.cssText =
             "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";

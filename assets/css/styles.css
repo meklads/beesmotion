@@ -14576,9 +14576,29 @@ body.lang-ar .med-pillar-panel p {
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
 }
 .page-hub--med .med-work .creative-album-player {
+  aspect-ratio: 1 / 1;
+  width: min(100%, 640px);
+  min-height: 0;
+  margin-inline: auto;
   border-radius: 18px;
   overflow: hidden;
+  background: #0a0a0a;
   box-shadow: 0 28px 60px rgba(8, 40, 55, 0.18);
+}
+.page-hub--med .med-work .creative-album-player .yt-facade,
+.page-hub--med .med-work .creative-album-player .yt-facade--cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-hub--med .med-work .creative-album-player .yt-facade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .page-hub--med .med-series {
