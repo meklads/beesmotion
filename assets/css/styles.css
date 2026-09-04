@@ -12301,7 +12301,8 @@ body.lang-ar .lp-legacy-title {
   background: #0a0a0a;
 }
 .hub-hero--with-reel .hub-hero-reel-crop .yt-facade,
-.hub-hero--with-reel .hub-hero-reel-crop .yt-facade--cover {
+.hub-hero--with-reel .hub-hero-reel-crop .yt-facade--cover,
+.hub-hero--with-reel .hub-hero-reel-crop .yt-facade--contain {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -12317,7 +12318,7 @@ body.lang-ar .lp-legacy-title {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transform: none;
 }
