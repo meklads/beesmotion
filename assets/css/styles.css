@@ -13128,14 +13128,54 @@ body.lang-ar .bm-hero-v2-title {
   }
 }
 
-/* Sector gateway */
+/* Sector gateway — split med / prop backgrounds */
 .sector-gateway {
+  position: relative;
+  isolation: isolate;
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
-  background: #f7f6f2;
+  overflow: hidden;
+  background: #0a1f2a;
+  color: #f7f6f2;
+}
+
+.sector-gateway::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #0a1f2a 0%,
+    #0c2834 50%,
+    #14161c 50%,
+    #1a1d26 100%
+  );
+}
+
+html[dir="rtl"] .sector-gateway::before,
+body.lang-ar .sector-gateway::before {
+  background: linear-gradient(
+    90deg,
+    #14161c 0%,
+    #1a1d26 50%,
+    #0a1f2a 50%,
+    #0c2834 100%
+  );
+}
+
+.sector-gateway .container {
+  position: relative;
+  z-index: 1;
 }
 
 .sector-gateway .section-head {
   margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.sector-gateway .section-head .font-headline-xl {
+  color: #fff !important;
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
 }
 
 .sector-gateway-grid {
@@ -13147,16 +13187,36 @@ body.lang-ar .bm-hero-v2-title {
 .sector-gate {
   display: grid;
   grid-template-rows: auto 1fr;
-  background: #fff;
   overflow: hidden;
-  border: 1px solid rgba(21, 21, 19, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.sector-gate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.sector-gate--med {
+  background:
+    linear-gradient(165deg, rgba(10, 85, 112, 0.35), rgba(6, 20, 28, 0.55)),
+    rgba(8, 28, 38, 0.72);
+  border-color: rgba(183, 214, 230, 0.22);
+}
+
+.sector-gate--prop {
+  background:
+    linear-gradient(165deg, rgba(229, 168, 35, 0.16), rgba(12, 14, 20, 0.55)),
+    rgba(18, 20, 28, 0.78);
+  border-color: rgba(245, 200, 77, 0.22);
 }
 
 .sector-gate-media {
   display: block;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #151513;
+  background: #050505;
 }
 
 .sector-gate-media img {
@@ -13176,6 +13236,7 @@ body.lang-ar .bm-hero-v2-title {
   gap: 0.55rem;
   align-content: start;
   padding: clamp(1.25rem, 3vw, 1.85rem);
+  color: #f7f6f2;
 }
 
 .sector-gate-kicker {
@@ -13184,7 +13245,14 @@ body.lang-ar .bm-hero-v2-title {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+}
+
+.sector-gate--med .sector-gate-kicker {
+  color: rgba(183, 214, 230, 0.92);
+}
+
+.sector-gate--prop .sector-gate-kicker {
+  color: rgba(245, 200, 77, 0.92);
 }
 
 .sector-gate-brand {
@@ -13192,7 +13260,7 @@ body.lang-ar .bm-hero-v2-title {
   font-size: clamp(1.55rem, 2.4vw, 2rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--ink);
+  color: #fff;
 }
 
 .sector-gate-brand sup {
@@ -13200,11 +13268,19 @@ body.lang-ar .bm-hero-v2-title {
 }
 
 .sector-gate--med .sector-gate-brand {
-  color: #0a5570;
+  color: #e8f4f8;
+}
+
+.sector-gate--med .sector-gate-brand sup {
+  color: #b7d6e6;
 }
 
 .sector-gate--prop .sector-gate-brand {
-  color: #8a6a12;
+  color: #fff8e8;
+}
+
+.sector-gate--prop .sector-gate-brand sup {
+  color: #f5c84d;
 }
 
 .sector-gate-line {
@@ -13212,8 +13288,33 @@ body.lang-ar .bm-hero-v2-title {
   font-size: 1.02rem;
   line-height: 1.55;
   font-weight: 500;
-  color: var(--ink);
+  color: rgba(247, 246, 242, 0.82);
   max-width: 26rem;
+}
+
+.sector-gate .btn-on-light {
+  justify-self: start;
+  background: #f7f6f2;
+  color: #0c1210;
+  border-color: #f7f6f2;
+}
+
+.sector-gate--med .btn-on-light:hover {
+  background: #b7d6e6;
+  border-color: #b7d6e6;
+  color: #06141c;
+}
+
+.sector-gate--prop .btn-on-light {
+  background: #f5c84d;
+  border-color: #f5c84d;
+  color: #12141a;
+}
+
+.sector-gate--prop .btn-on-light:hover {
+  background: #ffd666;
+  border-color: #ffd666;
+  color: #12141a;
 }
 
 html[dir="rtl"] .sector-gate-kicker,
@@ -13223,6 +13324,18 @@ body.lang-ar .sector-gate-kicker {
 }
 
 @media (max-width: 820px) {
+  .sector-gateway::before,
+  html[dir="rtl"] .sector-gateway::before,
+  body.lang-ar .sector-gateway::before {
+    background: linear-gradient(
+      180deg,
+      #0a1f2a 0%,
+      #0c2834 50%,
+      #14161c 50%,
+      #1a1d26 100%
+    );
+  }
+
   .sector-gateway-grid {
     grid-template-columns: 1fr;
   }
