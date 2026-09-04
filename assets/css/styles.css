@@ -14575,15 +14575,30 @@ body.lang-ar .med-pillar-panel p {
 .page-hub--med .med-work-album {
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
 }
+.page-hub--med .med-work .creative-album-stage {
+  display: grid;
+  place-items: center;
+}
 .page-hub--med .med-work .creative-album-player {
-  aspect-ratio: 1 / 1;
-  width: min(100%, 640px);
+  --album-ratio: 1 / 1;
+  aspect-ratio: var(--album-ratio);
+  width: min(100%, 560px);
   min-height: 0;
+  max-height: min(70vh, 560px);
   margin-inline: auto;
   border-radius: 18px;
   overflow: hidden;
   background: #0a0a0a;
   box-shadow: 0 28px 60px rgba(8, 40, 55, 0.18);
+  transition: width 0.35s ease, max-height 0.35s ease;
+}
+.page-hub--med .med-work .creative-album-player.is-landscape {
+  width: min(100%, 920px);
+  max-height: min(70vh, 520px);
+}
+.page-hub--med .med-work .creative-album-player.is-square {
+  width: min(100%, 560px);
+  max-height: min(70vh, 560px);
 }
 .page-hub--med .med-work .creative-album-player .yt-facade,
 .page-hub--med .med-work .creative-album-player .yt-facade--cover {

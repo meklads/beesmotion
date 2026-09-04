@@ -832,7 +832,31 @@
       const coverFit = stage.getAttribute("data-album-fit") === "cover";
       let resizeBound = null;
 
-      function playInStage(id, title) {
+      function applyStageRatio(ratioAttr) {
+        const raw = (ratioAttr || "16/9").trim();
+        const parts = raw.split(/[/:]/).map((n) => Number(n));
+        const w = parts[0] > 0 ? parts[0] : 16;
+        const h = parts[1] > 0 ? parts[1] : 9;
+        const square = w / h <= 1.15;
+        stage.style.setProperty("--album-ratio", `${w} / ${h}`);
+        stage.classList.toggle("is-square", square);
+        stage.classList.toggle("is-landscape", !square);
+        stage.setAttribute("data-hero-zoom", "1");
+      }
+
+      function mountCoverIframe(iframe) {
+        const fit = () => sizeCoverIframe(stage, iframe);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            fit();
+            iframe.style.setProperty("pointer-events", "auto", "important");
+          });
+        });
+        resizeBound = fit;
+        window.addEventListener("resize", resizeBound, { passive: true });
+      }
+
+      function playInStage(id, title, ratioAttr) {
         const iframe = document.createElement("iframe");
         iframe.src = `https://www.youtube.com/embed/${id}?${HD}`;
         iframe.title = title || "Video";
@@ -849,11 +873,10 @@
           resizeBound = null;
         }
 
+        applyStageRatio(ratioAttr);
+
         if (coverFit) {
-          sizeCoverIframe(stage, iframe);
-          iframe.style.setProperty("pointer-events", "auto", "important");
-          resizeBound = () => sizeCoverIframe(stage, iframe);
-          window.addEventListener("resize", resizeBound, { passive: true });
+          mountCoverIframe(iframe);
         } else {
           iframe.style.cssText =
             "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
@@ -868,11 +891,15 @@
         }
       }
 
+      const active = album.querySelector(".creative-album-thumb.is-active[data-album-ratio]");
+      if (active) applyStageRatio(active.getAttribute("data-album-ratio"));
+
       thumbs.forEach((thumb) => {
         thumb.addEventListener("click", () => {
           const id = thumb.getAttribute("data-album-id");
           if (!id) return;
           const title = thumb.getAttribute("data-album-title") || "Video";
+          const ratio = thumb.getAttribute("data-album-ratio") || "16/9";
 
           thumbs.forEach((tEl) => {
             tEl.classList.remove("is-active");
@@ -881,7 +908,7 @@
           thumb.classList.add("is-active");
           thumb.setAttribute("aria-pressed", "true");
 
-          playInStage(id, title);
+          playInStage(id, title, ratio);
         });
       });
     });
