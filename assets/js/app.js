@@ -944,6 +944,35 @@
     collapseCoreOnMobile();
   }
 
+  function initSectorBridgeFace() {
+    const section = document.querySelector(".sector-gateway");
+    const face = section && section.querySelector(".sector-bridge-face");
+    if (!section || !face) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const reset = () => {
+      face.style.setProperty("--look-x", "0");
+      face.style.setProperty("--look-y", "0");
+    };
+
+    const onMove = (e) => {
+      const rect = face.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const rtl = document.documentElement.getAttribute("dir") === "rtl";
+      let dx = Math.max(-1, Math.min(1, (e.clientX - cx) / 56));
+      const dy = Math.max(-1, Math.min(1, (e.clientY - cy) / 56));
+      /* Counter the SVG scaleX(-1) used in RTL so eyes still follow the cursor */
+      if (rtl) dx = -dx;
+      face.style.setProperty("--look-x", dx.toFixed(3));
+      face.style.setProperty("--look-y", dy.toFixed(3));
+    };
+
+    section.addEventListener("mousemove", onMove, { passive: true });
+    section.addEventListener("mouseleave", reset);
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     cleanLegacyHashes();
     initLang();
@@ -962,5 +991,6 @@
     initSolSticky();
     initReadyQuiz();
     initMedPillars();
+    initSectorBridgeFace();
   });
 })();

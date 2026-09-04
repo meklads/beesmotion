@@ -13163,13 +13163,13 @@ body.lang-ar .bm-hero-v2-title {
   }
 }
 
-/* Sector gateway — split med / prop backgrounds */
+/* Sector gateway — split med / prop backgrounds + bridge face */
 .sector-gateway {
   position: relative;
   isolation: isolate;
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   overflow: hidden;
-  background: #0a1f2a;
+  background: #071820;
   color: #f7f6f2;
 }
 
@@ -13181,21 +13181,35 @@ body.lang-ar .bm-hero-v2-title {
   pointer-events: none;
   background: linear-gradient(
     90deg,
-    #0a1f2a 0%,
+    #062838 0%,
+    #0a5570 46%,
     #0c2834 50%,
-    #14161c 50%,
-    #1a1d26 100%
+    #1a1620 54%,
+    #12141a 100%
   );
+}
+
+.sector-gateway::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 42% 70% at 18% 40%, rgba(183, 214, 230, 0.14), transparent 70%),
+    radial-gradient(ellipse 40% 65% at 82% 55%, rgba(245, 200, 77, 0.12), transparent 70%);
+  opacity: 0.9;
 }
 
 html[dir="rtl"] .sector-gateway::before,
 body.lang-ar .sector-gateway::before {
   background: linear-gradient(
     90deg,
-    #14161c 0%,
-    #1a1d26 50%,
-    #0a1f2a 50%,
-    #0c2834 100%
+    #12141a 0%,
+    #1a1620 46%,
+    #0c2834 50%,
+    #0a5570 54%,
+    #062838 100%
   );
 }
 
@@ -13213,10 +13227,14 @@ body.lang-ar .sector-gateway::before {
   text-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
 }
 
+.sector-gateway-stage {
+  position: relative;
+}
+
 .sector-gateway-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2.5vw, 1.75rem);
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
 }
 
 .sector-gate {
@@ -13235,16 +13253,58 @@ body.lang-ar .sector-gateway::before {
 
 .sector-gate--med {
   background:
-    linear-gradient(165deg, rgba(10, 85, 112, 0.35), rgba(6, 20, 28, 0.55)),
-    rgba(8, 28, 38, 0.72);
-  border-color: rgba(183, 214, 230, 0.22);
+    linear-gradient(165deg, rgba(10, 85, 112, 0.42), rgba(6, 20, 28, 0.62)),
+    rgba(8, 28, 38, 0.78);
+  border-color: rgba(183, 214, 230, 0.28);
 }
 
 .sector-gate--prop {
   background:
-    linear-gradient(165deg, rgba(229, 168, 35, 0.16), rgba(12, 14, 20, 0.55)),
-    rgba(18, 20, 28, 0.78);
-  border-color: rgba(245, 200, 77, 0.22);
+    linear-gradient(165deg, rgba(229, 168, 35, 0.2), rgba(12, 14, 20, 0.62)),
+    rgba(18, 20, 28, 0.84);
+  border-color: rgba(245, 200, 77, 0.28);
+}
+
+.sector-bridge-face {
+  --look-x: 0;
+  --look-y: 0;
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.sector-face-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+html[dir="rtl"] .sector-face-svg,
+body.lang-ar .sector-face-svg {
+  /* Keep doctor/engineer halves aligned with med/prop cards in RTL */
+  transform: scaleX(-1);
+}
+
+.sector-face-pupil {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translate(calc(var(--look-x) * 2.4px), calc(var(--look-y) * 1.8px));
+  transition: transform 0.12s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sector-face-pupil {
+    transition: none;
+    transform: none;
+  }
 }
 
 .sector-gate-media {
@@ -13364,15 +13424,26 @@ body.lang-ar .sector-gate-kicker {
   body.lang-ar .sector-gateway::before {
     background: linear-gradient(
       180deg,
-      #0a1f2a 0%,
+      #062838 0%,
+      #0a5570 46%,
       #0c2834 50%,
-      #14161c 50%,
-      #1a1d26 100%
+      #1a1620 54%,
+      #12141a 100%
     );
   }
 
   .sector-gateway-grid {
     grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+
+  .sector-bridge-face {
+    top: auto;
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
   }
 }
 
