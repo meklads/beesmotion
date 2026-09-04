@@ -10,6 +10,14 @@
     return DEFAULT_LANG;
   }
 
+  function protectBrandMarks(str) {
+    return String(str)
+      .replace(/PropMotion™/g, "\u2066PropMotion™\u2069")
+      .replace(/MedMotion™/g, "\u2066MedMotion™\u2069")
+      .replace(/PropMotion\u2122/g, "\u2066PropMotion\u2122\u2069")
+      .replace(/MedMotion\u2122/g, "\u2066MedMotion\u2122\u2069");
+  }
+
   function applyLang(lang) {
     const dict = window.BM_I18N[lang];
     if (!dict) return;
@@ -24,26 +32,26 @@
       const val = dict[key];
       if (val == null) return;
       if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-        el.placeholder = val;
+        el.placeholder = protectBrandMarks(val);
       } else if (el.tagName === "OPTION") {
-        el.textContent = val;
+        el.textContent = protectBrandMarks(val);
       } else {
-        el.textContent = val;
+        el.textContent = protectBrandMarks(val);
       }
     });
 
     document.querySelectorAll("[data-i18n-html]").forEach((el) => {
       const key = el.getAttribute("data-i18n-html");
       const val = dict[key];
-      if (val != null) el.innerHTML = val;
+      if (val != null) el.innerHTML = protectBrandMarks(val);
     });
 
     const metaKey = document.body.getAttribute("data-i18n-meta");
     const title = metaKey && dict[`${metaKey}MetaTitle`] ? dict[`${metaKey}MetaTitle`] : dict.metaTitle;
     const desc = metaKey && dict[`${metaKey}MetaDesc`] ? dict[`${metaKey}MetaDesc`] : dict.metaDesc;
-    if (title) document.title = title;
+    if (title) document.title = protectBrandMarks(title);
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && desc) metaDesc.setAttribute("content", desc);
+    if (metaDesc && desc) metaDesc.setAttribute("content", protectBrandMarks(desc));
 
     document.querySelectorAll(".lang-toggle button").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.lang === lang);

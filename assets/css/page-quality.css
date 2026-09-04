@@ -367,6 +367,7 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
   place-items: center;
 }
 
+/* Same adaptive album system as MedMotion work */
 .page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"] {
   --album-ratio: 16 / 9;
   aspect-ratio: var(--album-ratio) !important;
@@ -380,6 +381,16 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
   background: #0a0a0a;
   box-shadow: 0 28px 60px rgba(12, 13, 16, 0.18);
   transition: width 0.35s ease, max-height 0.35s ease, aspect-ratio 0.35s ease;
+}
+
+.page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"].is-landscape {
+  width: min(100%, 920px) !important;
+  max-height: min(70vh, 520px);
+}
+
+.page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"].is-square {
+  width: min(100%, 560px) !important;
+  max-height: min(70vh, 560px);
 }
 
 .page-hub--prop .prop-work .creative-album-player .yt-facade,
@@ -397,6 +408,23 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+/* Keep ™ after PropMotion / MedMotion in any direction */
+.tm-brand {
+  display: inline-block;
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+}
+
+.tm-brand sup {
+  font-size: 0.45em;
+  font-weight: 700;
+  line-height: 0;
+  position: relative;
+  top: -0.85em;
+  margin-inline-start: 0.08em;
 }
 
 .page-hub--prop .prop-method {
