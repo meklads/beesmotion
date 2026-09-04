@@ -12911,6 +12911,30 @@ body.lang-ar .bm-hero--v2 .bm-hero-v2-ctas {
   color: #fff;
 }
 
+.bm-hero--v2.bm-hero--v2-med .btn-on-dark {
+  background: #f5c84d;
+  color: #0c1a24;
+  border-color: #f5c84d;
+}
+
+.bm-hero--v2.bm-hero--v2-med .btn-on-dark:hover {
+  background: #ffd666;
+  color: #0c1a24;
+  border-color: #ffd666;
+}
+
+.bm-hero--v2.bm-hero--v2-prop .btn-on-dark {
+  background: #f5c84d;
+  color: #12141a;
+  border-color: #f5c84d;
+}
+
+.bm-hero--v2.bm-hero--v2-prop .btn-on-dark:hover {
+  background: #ffd666;
+  color: #12141a;
+  border-color: #ffd666;
+}
+
 html[dir="rtl"] .bm-hero-v2-eyebrow,
 body.lang-ar .bm-hero-v2-eyebrow {
   letter-spacing: 0.02em;
