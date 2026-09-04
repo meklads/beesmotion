@@ -12247,6 +12247,135 @@ body.lang-ar .lp-legacy-title {
   }
 }
 
+
+/* MedMotion bleed hero — tilted landscape reel + copy */
+.hub-hero--with-reel {
+  align-items: center;
+}
+.hub-hero--with-reel .hub-hero-stage {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: min(100%, 72rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 500px) minmax(260px, 34rem);
+  gap: clamp(1.75rem, 4vw, 3.25rem);
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+  padding-block: clamp(2.5rem, 7vw, 4.5rem);
+}
+.hub-hero--with-reel .hub-hero-reel {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0a0a0a;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  transform: rotate(-5deg);
+  transform-origin: center center;
+  margin-block: 0.75rem;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+.hub-hero--with-reel .hub-hero-reel:hover {
+  transform: rotate(-3.5deg) translateY(-4px);
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.hub-hero--with-reel .hub-hero-reel-crop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+.hub-hero--with-reel .hub-hero-reel-crop .yt-facade,
+.hub-hero--with-reel .hub-hero-reel-crop .yt-facade--cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: #0a0a0a;
+  cursor: default;
+}
+.hub-hero--with-reel .hub-hero-reel-crop .yt-facade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: none;
+}
+.hub-hero--with-reel .hub-hero-reel-crop .yt-facade-play {
+  opacity: 0;
+  pointer-events: none;
+}
+.hub-hero--with-reel .hub-hero-reel-crop iframe {
+  max-width: none !important;
+}
+.hub-hero--with-reel .hub-hero-inner {
+  justify-self: stretch;
+  width: 100%;
+  max-width: 34rem;
+  margin: 0;
+  padding-block: 0.5rem;
+  padding-inline: 0;
+}
+html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .hub-hero--with-reel {
+    align-items: end;
+    min-height: min(78vh, 720px);
+  }
+  .hub-hero--with-reel .hub-hero-stage {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    justify-items: center;
+    padding-block: clamp(1.75rem, 5vw, 2.75rem) clamp(1.5rem, 4vw, 2.25rem);
+  }
+  .hub-hero--with-reel .hub-hero-reel {
+    width: min(100%, 500px);
+    transform: rotate(-3deg);
+    margin-block: 0.25rem;
+  }
+  .hub-hero--with-reel .hub-hero-reel:hover {
+    transform: rotate(-2deg) translateY(-2px);
+  }
+  .hub-hero--with-reel .hub-hero-inner {
+    max-width: none;
+    justify-self: stretch;
+    padding-inline: 0;
+  }
+}
+@media (max-width: 560px) {
+  .hub-hero--with-reel .hub-hero-reel {
+    width: 100%;
+    transform: rotate(-2deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hub-hero--with-reel .hub-hero-reel,
+  .hub-hero--with-reel .hub-hero-reel:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
 /* PropMotion bleed hero — warm gold luxury overlay on bright villa */
 .hub-hero--bleed.hub-hero--prop {
   background: #12141a;
