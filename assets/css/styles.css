@@ -13771,11 +13771,21 @@ body.lang-ar .engage-strip-title {
   }
 }
 
-/* Contact dark band — white form card needs dark ink */
+/* Contact dark band — polished form layout */
 .contact-band-v2 {
-  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
-  background: #151513;
+  position: relative;
+  padding: clamp(3.75rem, 7.5vw, 6rem) 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 12% 18%, rgba(245, 200, 77, 0.1), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 88% 82%, rgba(10, 85, 112, 0.18), transparent 58%),
+    #121210;
   color: #f7f6f2;
+  overflow: hidden;
+}
+
+.contact-band-v2 .section-head {
+  max-width: 40rem;
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
 }
 
 .contact-band-v2 .section-head .font-headline-xl,
@@ -13792,30 +13802,89 @@ body.lang-ar .engage-strip-title {
   border-color: rgba(245, 200, 77, 0.35);
 }
 
+.contact-band-v2 .contact-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.75fr);
+  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  align-items: start;
+}
+
 .contact-band-v2 .contact-form {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.35rem, 3vw, 2rem);
   background: #ffffff;
   color: #151513;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+.contact-band-v2 .contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1rem;
+  margin: 0;
+}
+
+.contact-band-v2 .contact-form .form-field {
+  display: grid;
+  gap: 0.4rem;
+  min-width: 0;
 }
 
 .contact-band-v2 .contact-form label {
-  color: #151513 !important;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2a2a28 !important;
 }
 
 .contact-band-v2 .contact-form input,
 .contact-band-v2 .contact-form select,
 .contact-band-v2 .contact-form textarea {
-  background: transparent !important;
-  border-color: rgba(21, 21, 19, 0.16) !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0.85rem 0.95rem !important;
+  border: 1.5px solid rgba(21, 21, 19, 0.14) !important;
+  border-radius: 12px !important;
+  background: #f7f6f2 !important;
   color: #151513 !important;
   -webkit-text-fill-color: #151513;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact-band-v2 .contact-form select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #8a6a12 50%),
+    linear-gradient(135deg, #8a6a12 50%, transparent 50%),
+    linear-gradient(#f7f6f2, #f7f6f2) !important;
+  background-position:
+    calc(100% - 16px) calc(50% - 1px),
+    calc(100% - 11px) calc(50% - 1px),
+    0 0 !important;
+  background-size: 5px 5px, 5px 5px, 100% 100% !important;
+  background-repeat: no-repeat !important;
+  padding-inline-end: 2.25rem !important;
+  cursor: pointer;
+}
+
+html[dir="rtl"] .contact-band-v2 .contact-form select,
+body.lang-ar .contact-band-v2 .contact-form select {
+  background-position:
+    11px calc(50% - 1px),
+    16px calc(50% - 1px),
+    0 0 !important;
+  padding-inline-end: 0.95rem !important;
+  padding-inline-start: 2.25rem !important;
 }
 
 .contact-band-v2 .contact-form input::placeholder,
 .contact-band-v2 .contact-form textarea::placeholder {
-  color: rgba(21, 21, 19, 0.42) !important;
-  -webkit-text-fill-color: rgba(21, 21, 19, 0.42);
+  color: rgba(21, 21, 19, 0.4) !important;
+  -webkit-text-fill-color: rgba(21, 21, 19, 0.4);
   opacity: 1;
 }
 
@@ -13824,24 +13893,133 @@ body.lang-ar .engage-strip-title {
   background: #fff;
 }
 
+.contact-band-v2 .contact-form input:hover,
+.contact-band-v2 .contact-form select:hover,
+.contact-band-v2 .contact-form textarea:hover {
+  border-color: rgba(21, 21, 19, 0.28) !important;
+}
+
 .contact-band-v2 .contact-form input:focus,
 .contact-band-v2 .contact-form select:focus,
 .contact-band-v2 .contact-form textarea:focus {
-  border-bottom-color: var(--gold) !important;
+  outline: none;
+  border-color: #e5a823 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3px rgba(229, 168, 35, 0.18);
 }
 
-.contact-band-v2 .method-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(247, 246, 242, 0.12);
-  color: #f7f6f2;
+.contact-band-v2 .contact-form textarea {
+  min-height: 7.5rem;
+  resize: vertical;
 }
 
-.contact-band-v2 .method-card strong {
+.contact-band-v2 .form-actions {
+  margin-top: 0.35rem;
+}
+
+.contact-band-v2 .contact-submit {
+  width: 100%;
+  min-height: 52px;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 12px 28px rgba(229, 168, 35, 0.28);
+}
+
+.contact-band-v2 .contact-aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: clamp(1.15rem, 2.5vw, 1.5rem);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(247, 246, 242, 0.1);
+}
+
+.contact-band-v2 .contact-aside-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
   color: #fff;
 }
 
-.contact-band-v2 .method-card span {
+.contact-band-v2 .contact-aside-note {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(247, 246, 242, 0.62);
+}
+
+.contact-band-v2 .contact-methods {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-band-v2 .method-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 1rem 1.05rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(247, 246, 242, 0.12);
+  color: #f7f6f2;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.contact-band-v2 .method-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 200, 77, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-band-v2 .method-card strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: #fff;
+  font-size: 0.98rem;
+}
+
+.contact-band-v2 .method-card span:not(.method-icon) {
   color: rgba(247, 246, 242, 0.7);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.contact-band-v2 .method-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  color: #151513;
+  background: #f5c84d;
+  border: none;
+}
+
+.contact-band-v2 .method-icon--wa {
+  color: #fff;
+  background: #25d366;
+}
+
+.contact-band-v2 .method-icon--tel {
+  color: #151513;
+  background: #f5c84d;
+}
+
+.contact-band-v2 .field-optional {
+  color: rgba(42, 42, 40, 0.55);
+}
+
+@media (max-width: 900px) {
+  .contact-band-v2 .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-band-v2 .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
