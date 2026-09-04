@@ -839,8 +839,18 @@
         const h = parts[1] > 0 ? parts[1] : 9;
         const square = w / h <= 1.15;
         stage.style.setProperty("--album-ratio", `${w} / ${h}`);
+        /* Inline aspect-ratio beats page-case-study 16:9 locks */
+        stage.style.aspectRatio = `${w} / ${h}`;
         stage.classList.toggle("is-square", square);
         stage.classList.toggle("is-landscape", !square);
+        if (coverFit) {
+          stage.style.width = square ? "min(100%, 560px)" : "min(100%, 920px)";
+          stage.style.maxHeight = square
+            ? "min(70vh, 560px)"
+            : "min(70vh, 520px)";
+          stage.style.marginInline = "auto";
+          stage.style.height = "auto";
+        }
         stage.setAttribute("data-hero-zoom", "1");
       }
 

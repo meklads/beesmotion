@@ -8216,7 +8216,7 @@ html[dir="rtl"] .creative-album-player .bento-label {
     flex: 0 0 min(42vw, 200px);
     scroll-snap-align: start;
   }
-  .creative-album-player {
+  .creative-album-player:not([data-album-fit="cover"]) {
     aspect-ratio: 16 / 9;
     min-height: 200px;
   }
@@ -11979,9 +11979,9 @@ body.lang-ar .lp-enquire-title {
   }
 }
 
-/* Unified media frame on case pages */
-.page-case-study .bm-video-crop,
-.page-case-study .creative-album-player,
+/* Unified media frame on case pages (skip adaptive album stages) */
+.page-case-study .bm-video-crop:not([data-album-fit="cover"]),
+.page-case-study .creative-album-player:not([data-album-fit="cover"]),
 .page-case-study .series-split-still {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -12019,25 +12019,26 @@ body.lang-ar .lp-enquire-title {
   display: grid;
   place-items: center;
 }
-.page-case-imc .cs-med-album .cs-med-work-album .creative-album-player {
+.page-case-imc .cs-med-album .cs-med-work-album .creative-album-player[data-album-fit="cover"] {
   --album-ratio: 1 / 1;
-  aspect-ratio: var(--album-ratio);
-  width: min(100%, 560px);
-  min-height: 0;
+  aspect-ratio: var(--album-ratio) !important;
+  width: min(100%, 560px) !important;
+  min-height: 0 !important;
+  height: auto !important;
   max-height: min(70vh, 560px);
   margin-inline: auto;
   border-radius: 18px;
   overflow: hidden;
   background: #0a0a0a;
   box-shadow: 0 28px 60px rgba(8, 40, 55, 0.18);
-  transition: width 0.35s ease, max-height 0.35s ease;
+  transition: width 0.35s ease, max-height 0.35s ease, aspect-ratio 0.35s ease;
 }
-.page-case-imc .cs-med-album .cs-med-work-album .creative-album-player.is-landscape {
-  width: min(100%, 920px);
+.page-case-imc .cs-med-album .cs-med-work-album .creative-album-player[data-album-fit="cover"].is-landscape {
+  width: min(100%, 920px) !important;
   max-height: min(70vh, 520px);
 }
-.page-case-imc .cs-med-album .cs-med-work-album .creative-album-player.is-square {
-  width: min(100%, 560px);
+.page-case-imc .cs-med-album .cs-med-work-album .creative-album-player[data-album-fit="cover"].is-square {
+  width: min(100%, 560px) !important;
   max-height: min(70vh, 560px);
 }
 .page-case-imc .cs-med-album .cs-med-work-album .creative-album-player .yt-facade,
@@ -12056,10 +12057,12 @@ body.lang-ar .lp-enquire-title {
   object-position: center center;
 }
 
-.page-case-imc .series-album--square .creative-album-player {
+.page-case-imc .series-album--square .creative-album-player[data-album-fit="cover"] {
   --album-ratio: 1 / 1;
-  aspect-ratio: var(--album-ratio);
-  width: min(100%, 420px);
+  aspect-ratio: var(--album-ratio) !important;
+  width: min(100%, 420px) !important;
+  min-height: 0 !important;
+  height: auto !important;
   max-height: min(60vh, 420px);
   margin-inline: auto;
   overflow: hidden;
