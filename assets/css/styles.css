@@ -6367,6 +6367,7 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   display: grid;
   place-items: center;
   min-height: 2.75rem;
+  max-width: 9rem;
   padding: 0.35rem 0.55rem;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
@@ -6381,19 +6382,21 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
 
 .footer-sister-brands img {
   display: block;
-  width: auto;
-  height: 1.55rem;
-  max-width: 7.5rem;
+  width: auto !important;
+  height: 1.55rem !important;
+  max-width: 7.5rem !important;
+  max-height: 2.25rem !important;
   object-fit: contain;
 }
 
 .footer-sister-brands a:nth-child(2) img {
-  height: 2.15rem;
+  height: 2.15rem !important;
+  max-height: 2.35rem !important;
 }
 
 .footer-sister-brands a:nth-child(3) img {
-  height: 1.05rem;
-  max-width: 8.5rem;
+  height: 1.05rem !important;
+  max-width: 8.5rem !important;
 }
 
 @media (max-width: 720px) {
