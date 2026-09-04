@@ -12259,8 +12259,8 @@ body.lang-ar .lp-legacy-title {
   max-width: min(100%, 72rem);
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(300px, 500px) minmax(260px, 34rem);
-  gap: clamp(1.75rem, 4vw, 3.25rem);
+  grid-template-columns: minmax(360px, 500px) minmax(260px, 34rem);
+  gap: clamp(2.75rem, 5.5vw, 4.25rem);
   align-items: center;
   justify-content: center;
   direction: ltr;
@@ -12270,8 +12270,10 @@ body.lang-ar .lp-legacy-title {
   position: relative;
   z-index: 0;
   width: 100%;
-  min-width: 0;
-  aspect-ratio: 16 / 9;
+  min-width: 360px;
+  min-height: 500px;
+  aspect-ratio: 3 / 4;
+  max-height: min(74vh, 720px);
   border-radius: 18px;
   overflow: hidden;
   background: #0a0a0a;
@@ -12349,7 +12351,11 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
     padding-block: clamp(1.75rem, 5vw, 2.75rem) clamp(1.5rem, 4vw, 2.25rem);
   }
   .hub-hero--with-reel .hub-hero-reel {
-    width: min(100%, 500px);
+    width: min(100%, 400px);
+    min-width: 0;
+    min-height: 0;
+    max-height: min(42vh, 380px);
+    aspect-ratio: 3 / 4;
     transform: rotate(-3deg);
     margin-block: 0.25rem;
   }
@@ -12364,7 +12370,7 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
 }
 @media (max-width: 560px) {
   .hub-hero--with-reel .hub-hero-reel {
-    width: 100%;
+    width: min(100%, 340px);
     transform: rotate(-2deg);
   }
 }
