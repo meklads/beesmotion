@@ -692,8 +692,8 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
 }
 .page-hub--med .med-group-chip {
   display: grid;
-  gap: 0.25rem;
-  padding: 1rem 1.05rem;
+  gap: 0.55rem;
+  padding: 0.85rem 0.9rem 1rem;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(183, 214, 230, 0.18);
@@ -709,6 +709,10 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
 .page-hub--med .med-group-chip--active {
   background: rgba(10, 85, 112, 0.35);
   border-color: rgba(183, 214, 230, 0.35);
+}
+.page-hub--med .med-group-chip .eco-logo-stage {
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 .page-hub--med .med-group-chip strong {
   font-size: 1rem;
