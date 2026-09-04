@@ -12943,6 +12943,21 @@ body.lang-en .bm-hero-v2-eyebrow {
   border-color: #ffd666;
 }
 
+/*
+  MedMotion reel content is square (1:1) inside a 16:9 YouTube frame.
+  Match the stage to 1:1 so true cover fills the black area and shows the full film.
+*/
+.bm-hero--v2-med .bm-hero-v2-media {
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  max-height: min(74vh, 560px);
+}
+
+.bm-hero--v2-med .bm-hero-v2-crop .yt-facade img {
+  object-fit: cover;
+  object-position: center center;
+}
+
 .bm-hero--v2-prop {
   background:
     radial-gradient(ellipse 90% 60% at 78% 18%, rgba(229, 168, 35, 0.18), transparent 52%),
@@ -13113,6 +13128,12 @@ body.lang-ar .bm-hero-v2-title {
     justify-self: center;
     transform: rotate(-2.5deg);
     margin-block: 0.35rem 0.5rem;
+  }
+
+  .bm-hero--v2-med .bm-hero-v2-media {
+    aspect-ratio: 1 / 1;
+    max-height: min(48vh, 360px);
+    width: min(100%, 360px);
   }
 
   .bm-hero-v2-ctas {

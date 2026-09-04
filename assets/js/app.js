@@ -377,7 +377,11 @@
     const ratio = 16 / 9;
     /* Zoom past cover so more top/bottom is cropped and the center scene fills the hero */
     const zoomAttr = parseFloat(crop.getAttribute("data-hero-zoom") || "1.32", 10);
-    const zoom = Number.isFinite(zoomAttr) && zoomAttr > 1 ? zoomAttr : 1.32;
+    /* Respect explicit zoom=1 (true cover). Only fall back when attribute missing/invalid. */
+    const zoom =
+      Number.isFinite(zoomAttr) && zoomAttr >= 1
+        ? zoomAttr
+        : 1.32;
     let iw;
     let ih;
     if (w / h > ratio) {
