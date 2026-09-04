@@ -719,9 +719,13 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
   font-weight: 800;
   color: #fff;
 }
-.page-hub--med .med-group-chip span {
-  font-size: 0.85rem;
-  color: rgba(244, 248, 250, 0.62);
+.page-hub--med .med-group-chip span,
+.page-hub--med .med-group-chip .eco-card-role {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: rgba(244, 248, 250, 0.88);
+  text-align: center;
 }
 .page-hub--med .med-group-trust-link {
   justify-self: start;

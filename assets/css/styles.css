@@ -1153,16 +1153,16 @@ a.eco-card:hover {
 .eco-logo-stage {
   display: grid;
   place-items: center;
-  min-height: 7.5rem;
-  padding: 1.1rem 1.25rem;
+  min-height: 8.5rem;
+  padding: 1.25rem 1.35rem;
   border-radius: 12px;
   background: #050505;
   overflow: hidden;
 }
 
 .eco-logo-stage--compact {
-  min-height: 5.75rem;
-  padding: 0.85rem 1rem;
+  min-height: 6.5rem;
+  padding: 1rem 1.1rem;
   border-radius: 10px;
 }
 
@@ -1171,21 +1171,23 @@ a.eco-card:hover {
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: 4.75rem;
+  max-height: 5.5rem;
   object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
 }
 
 .eco-logo--bm {
-  max-height: 3.85rem;
+  max-height: 4.6rem;
 }
 
 .eco-logo--gh {
-  max-height: 5.1rem;
+  max-height: 5.75rem;
 }
 
 .eco-logo--tu {
-  max-height: 2.35rem;
-  width: min(100%, 15rem);
+  max-height: 2.85rem;
+  width: min(100%, 17rem);
 }
 
 .eco-card h3 {
@@ -1195,11 +1197,14 @@ a.eco-card:hover {
   color: var(--ink);
 }
 
-.eco-card p {
+.eco-card p,
+.eco-card-role {
   margin: 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  text-align: center;
 }
 
 .eco-note {
@@ -10956,6 +10961,12 @@ body.lang-en .axis-card h3 {
 .agency-copy p {
   font-weight: 500;
   color: #3d3d3d;
+}
+
+.eco-card .eco-card-role {
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
 }
 
 .why-band.band-ink .why-card p {
