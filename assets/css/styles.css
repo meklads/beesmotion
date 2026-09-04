@@ -12943,15 +12943,6 @@ body.lang-en .bm-hero-v2-eyebrow {
   border-color: #ffd666;
 }
 
-/* MedMotion reel tilts the opposite way of homepage (right instead of left) */
-.bm-hero--v2-med .bm-hero-v2-media {
-  transform: rotate(5deg);
-}
-
-.bm-hero--v2-med .bm-hero-v2-media:hover {
-  transform: rotate(3.5deg) translateY(-4px);
-}
-
 .bm-hero--v2-prop {
   background:
     radial-gradient(ellipse 90% 60% at 78% 18%, rgba(229, 168, 35, 0.18), transparent 52%),
@@ -13136,14 +13127,6 @@ body.lang-ar .bm-hero-v2-title {
 
   .bm-hero-v2-media:hover {
     transform: rotate(-2.5deg) translateY(-2px);
-  }
-
-  .bm-hero--v2-med .bm-hero-v2-media {
-    transform: rotate(2.5deg);
-  }
-
-  .bm-hero--v2-med .bm-hero-v2-media:hover {
-    transform: rotate(2.5deg) translateY(-2px);
   }
 
   .bm-hero-v2-inner {
