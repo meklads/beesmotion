@@ -14,8 +14,10 @@
     return String(str)
       .replace(/PropMotion™/g, "\u2066PropMotion™\u2069")
       .replace(/MedMotion™/g, "\u2066MedMotion™\u2069")
+      .replace(/SpaceLaunch™/g, "\u2066SpaceLaunch™\u2069")
       .replace(/PropMotion\u2122/g, "\u2066PropMotion\u2122\u2069")
-      .replace(/MedMotion\u2122/g, "\u2066MedMotion\u2122\u2069");
+      .replace(/MedMotion\u2122/g, "\u2066MedMotion\u2122\u2069")
+      .replace(/SpaceLaunch\u2122/g, "\u2066SpaceLaunch\u2122\u2069");
   }
 
   function applyLang(lang) {

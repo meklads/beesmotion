@@ -11,6 +11,15 @@
 /medmotion.html /medmotion 301
 /propmotion.html /propmotion 301
 
+# SpaceLaunch™ launch halls
+/launch-halls /launch-halls/ 301
+/spacelaunch /launch-halls/ 301
+/spacelaunch/ /launch-halls/ 301
+/space-launch /launch-halls/ 301
+/space-launch/ /launch-halls/ 301
+/project-launch /launch-halls/ 301
+/project-launch/ /launch-halls/ 301
+
 # Case study hub retired → MedMotion case (album lives there)
 /case-study /case-study-imc 301
 /case-study.html /case-study-imc 301

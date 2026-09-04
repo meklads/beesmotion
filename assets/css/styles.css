@@ -346,6 +346,11 @@ html[dir="rtl"] .nav-dd-panel {
   color: var(--navy);
 }
 
+.nav-dd-card--launch {
+  background: linear-gradient(135deg, #efe8d8 0%, #e2d4b8 100%);
+  color: var(--navy);
+}
+
 .nav-dd-card:hover {
   transform: translateY(-1px);
   border-color: rgba(12, 13, 16, 0.12);
@@ -13848,6 +13853,25 @@ html[dir="rtl"] .engage-strip-title,
 body.lang-ar .engage-strip-title {
   font-family: Tajawal, var(--font-ar), sans-serif;
   letter-spacing: 0;
+}
+
+.launch-home-strip {
+  background:
+    radial-gradient(90% 120% at 0% 50%, rgba(229, 168, 35, 0.08), transparent 55%),
+    radial-gradient(70% 100% at 100% 50%, rgba(10, 85, 112, 0.06), transparent 50%),
+    linear-gradient(180deg, #f7f4ee 0%, #f1ede5 100%);
+}
+
+.launch-home-strip .engage-strip-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 36rem;
+}
+
+.launch-home-strip .engage-strip-title .tm-brand {
+  font-size: 0.82em;
+  color: var(--gold-dark);
 }
 
 .engage-strip-paths {
