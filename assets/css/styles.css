@@ -2117,16 +2117,15 @@ body.lang-ar .trust-ticket-track {
 }
 
 .trust-ticket-face {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   margin-inline: auto;
   border-radius: 50%;
   overflow: hidden;
-  background: #efeae2;
-  border: 1px solid rgba(184, 134, 11, 0.22);
+  background: #f0ebe3;
+  border: 1px solid rgba(18, 20, 26, 0.08);
 }
 
-.trust-ticket-face picture,
 .trust-ticket-face img {
   display: block;
   width: 100%;
