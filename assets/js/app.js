@@ -60,10 +60,12 @@
     });
 
     localStorage.setItem(STORAGE_KEY, lang);
+    syncLangUrl(lang);
   }
 
   function initLang() {
-    applyLang(getLang());
+    const fromUrl = readLangFromUrl();
+    applyLang(fromUrl || getLang());
     document.querySelectorAll(".lang-toggle button").forEach((btn) => {
       btn.addEventListener("click", () => applyLang(btn.dataset.lang));
     });
@@ -201,15 +203,65 @@
     } catch (_) {}
   }
 
+  function initAnalytics() {
+    const id =
+      (window.BM_SITE && window.BM_SITE.ga4MeasurementId) ||
+      document.querySelector('meta[name="bm-ga4"]')?.content ||
+      "";
+    if (!id || !/^G-[A-Z0-9]+$/i.test(id)) return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments);
+      };
+    window.gtag("js", new Date());
+    window.gtag("config", id, {
+      anonymize_ip: true,
+      send_page_view: true,
+    });
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(s);
+  }
+
   function initTracking() {
     document.addEventListener("click", (e) => {
-      const el = e.target.closest("[data-track]");
+      const el = e.target.closest("[data-track], a[href*='wa.me'], a.wa-float, a.floating-wa");
       if (!el) return;
-      track(el.getAttribute("data-track"), {
-        href: el.getAttribute("href") || "",
-        lang: getLang(),
-      });
+      const named = el.getAttribute("data-track");
+      const href = el.getAttribute("href") || "";
+      if (named) {
+        track(named, { href: href, lang: getLang() });
+      } else if (/wa\.me|whatsapp/i.test(href) || el.classList.contains("wa-float") || el.classList.contains("floating-wa")) {
+        track("click_whatsapp", {
+          href: href,
+          lang: getLang(),
+          placement: el.classList.contains("wa-float") || el.classList.contains("floating-wa") ? "float" : "link",
+        });
+      }
     });
+  }
+
+  function syncLangUrl(lang) {
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.get("lang") === lang) return;
+      url.searchParams.set("lang", lang);
+      window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+    } catch (_) {}
+  }
+
+  function readLangFromUrl() {
+    try {
+      const q = new URLSearchParams(window.location.search).get("lang");
+      if (q === "ar" || q === "en") {
+        localStorage.setItem(STORAGE_KEY, q);
+        return q;
+      }
+    } catch (_) {}
+    return null;
   }
 
   function initForm() {
@@ -238,6 +290,12 @@
         ? objectiveEl.selectedOptions[0].textContent.trim()
         : objective;
       const message = form.message.value.trim();
+      track("generate_lead", {
+        industry: industry,
+        need: need,
+        lang: lang,
+        method: "whatsapp_form",
+      });
       track("cta_form_whatsapp", { industry: industry, need: need, lang: lang });
       const lines =
         lang === "ar"
@@ -1137,6 +1195,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     cleanLegacyHashes();
     initLang();
+    initAnalytics();
     initHeader();
     initReveal();
     initTracking();

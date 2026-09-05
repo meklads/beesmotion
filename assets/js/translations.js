@@ -1271,6 +1271,19 @@ window.BM_I18N = {
   pil5b2: "رؤى التحويل",
   pil5b3: "تقارير شهرية وتحسين",
 
+  /* Homepage FAQ */
+  faqTag: "أسئلة شائعة",
+  faqTitle: "إجابات واضحة قبل الموجز.",
+  faqSub: "كيف تتوزع MedMotion™ و PropMotion™ و SpaceLaunch™ — وكيف تبدأ.",
+  faq1q: "ما هي MedMotion™؟",
+  faq1a: "تسويق رعاية صحية ومنظومات محتوى طبي للمستشفيات والعلامات الصحية — سلاسل تثقيف، أفلام علامة، حملات، وإنتاج مستمر.",
+  faq2q: "ما هي PropMotion™؟",
+  faq2a: "محتوى وتسويق عقار — أفلام مشاريع، قصص قوائم، أصول إطلاق، ومحرك يحوّل الصور والرندر والمخططات إلى عمل جاهز للحملات.",
+  faq3q: "ما هي SpaceLaunch™؟",
+  faq3a: "امتداد مكاني لصالات المبيعات والمعارض الطبية، مع جرافيكس هاوس وتوريفا عند الحاجة لـ CGI أو تجهيز أو تنفيذ ميداني.",
+  faq4q: "كيف نبدأ؟",
+  faq4a: "أرسل موجزاً عبر النموذج أدناه أو واتساب. أخبرنا بالقطاع والأصول والهدف — نحدد المسار المناسب تحت بيز موشن.",
+
   /* AI + RCE + legal meta — auto-filled */
   a1t: "جولة العقار",
   secRe: "عقاري (متاح الآن)",
@@ -2734,6 +2747,19 @@ window.BM_I18N = {
   pil5b1: "Performance analytics",
   pil5b2: "Conversion insights",
   pil5b3: "Monthly reporting & improvement",
+
+  /* Homepage FAQ */
+  faqTag: "FAQ",
+  faqTitle: "Clear answers before the brief.",
+  faqSub: "How MedMotion™, PropMotion™, and SpaceLaunch™ fit — and how to start.",
+  faq1q: "What is MedMotion™?",
+  faq1a: "Healthcare marketing and medical content systems for hospitals and health brands — education series, brand films, campaigns, and continuous production.",
+  faq2q: "What is PropMotion™?",
+  faq2a: "Real-estate content and marketing — property films, listing stories, launch assets, and a content engine that turns photos, renders, and plans into campaign-ready work.",
+  faq3q: "What is SpaceLaunch™?",
+  faq3a: "A spatial extension for sales galleries and medical exhibition halls, with Graphics House and Turriva when the brief needs CGI, fit-out, or on-site execution.",
+  faq4q: "How do we start?",
+  faq4a: "Send a brief via the form below or WhatsApp. Tell us your industry, assets, and goal — we map the right path under Bees Motion.",
 
   /* AI + RCE + legal meta — auto-filled */
   a1t: "Property Tour",

@@ -16,6 +16,18 @@ python3 -m http.server 8080
 
 Open http://localhost:8080
 
+## Analytics (GA4)
+
+1. Open `assets/js/site-config.js`
+2. Set `ga4MeasurementId` to your Measurement ID (`G-XXXXXXXX`)
+3. Push to `main`
+
+Events already wired when GA4 is set:
+- page views
+- `generate_lead` / `cta_form_whatsapp` (homepage form)
+- `click_whatsapp` / `click_whatsapp_float`
+- `data-track` CTA clicks
+
 ## Hosting (current live)
 
 **Production DNS** for [beesmotion.com](https://beesmotion.com/) currently points to **GitHub Pages** (`meklads.github.io`).

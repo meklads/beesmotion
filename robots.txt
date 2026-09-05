@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /services/
 
 Sitemap: https://beesmotion.com/sitemap.xml
