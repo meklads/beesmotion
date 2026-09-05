@@ -88,9 +88,16 @@
     const mobileNav = document.getElementById("mobileNav");
     if (menuBtn && mobileNav) {
       const setOpen = (open) => {
+        const wasOpen = mobileNav.classList.contains("open");
         mobileNav.classList.toggle("open", open);
         menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
         document.body.classList.toggle("nav-open", open);
+        if (open && !wasOpen) {
+          const first = mobileNav.querySelector("a, button");
+          if (first) first.focus({ preventScroll: true });
+        } else if (!open && wasOpen) {
+          menuBtn.focus({ preventScroll: true });
+        }
       };
       menuBtn.addEventListener("click", () => {
         setOpen(!mobileNav.classList.contains("open"));
@@ -153,13 +160,24 @@
 
     document.addEventListener("keydown", (e) => {
       if (e.key !== "Escape") return;
+      let closed = false;
       document.querySelectorAll(".nav-dd.is-open").forEach((dd) => {
         dd.classList.remove("is-open");
         const t = dd.querySelector(".nav-dd-toggle");
         const p = dd.querySelector(".nav-dd-panel");
         if (t) t.setAttribute("aria-expanded", "false");
         if (p) p.hidden = true;
+        closed = true;
+        if (t) t.focus({ preventScroll: true });
       });
+      if (menuBtn && mobileNav && mobileNav.classList.contains("open")) {
+        mobileNav.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        document.body.classList.toggle("nav-open", false);
+        menuBtn.focus({ preventScroll: true });
+        closed = true;
+      }
+      if (closed) e.preventDefault();
     });
   }
 
