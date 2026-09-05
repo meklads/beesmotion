@@ -13772,19 +13772,21 @@ body.lang-ar .work-feature-band--split::before {
   margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
-.work-feature-band--split .section-head .font-headline-xl {
-  color: #fff !important;
+.work-feature-band--split .section-head .font-headline-xl,
+.work-feature-band--split .section-head h2 {
+  color: #ffffff !important;
   text-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
 }
 
 .work-feature-band--split .section-head .font-body-md,
+.work-feature-band--split .section-head p,
 .work-feature-band--split .clients-label {
-  color: rgba(247, 246, 242, 0.78) !important;
+  color: rgba(247, 246, 242, 0.88) !important;
 }
 
 .work-feature-band--split .svc-tag {
-  color: rgba(245, 200, 77, 0.92);
-  border-color: rgba(245, 200, 77, 0.35);
+  color: #f5c84d !important;
+  border-color: rgba(245, 200, 77, 0.45);
 }
 
 .work-feature-band--split .work-feature {
@@ -13865,7 +13867,7 @@ body.lang-ar .work-feature-band--split::before {
   }
 }
 
-.work-feature-band .section-head .font-headline-xl {
+.work-feature-band:not(.work-feature-band--split) .section-head .font-headline-xl {
   color: var(--ink) !important;
   font-family: var(--font-ar);
   font-weight: 700;
@@ -13876,8 +13878,8 @@ body.lang-en .work-feature-band .section-head .font-headline-xl {
   font-family: var(--font-display);
 }
 
-.work-feature-band .section-head .font-body-md,
-.work-feature-band .clients-label {
+.work-feature-band:not(.work-feature-band--split) .section-head .font-body-md,
+.work-feature-band:not(.work-feature-band--split) .clients-label {
   color: #3d3d3d !important;
   opacity: 1;
 }
