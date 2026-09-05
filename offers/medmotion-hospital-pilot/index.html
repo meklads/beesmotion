@@ -6,7 +6,7 @@
     <title>MedMotion™ Hospital Content Pilot | Bees Motion</title>
     <meta
       name="description"
-      content="MedMotion Hospital Content Pilot: 14 days to prove a medical content system — not a video package. Scope, scripts, production, delivery."
+      content="MedMotion Hospital Content Pilot: 14 days to prove a medical content system — not a video package."
     />
     <meta name="robots" content="noindex, nofollow" />
     <link rel="canonical" href="https://beesmotion.com/offers/medmotion-hospital-pilot/" />
@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/offer-pilot.css?v=20260905pilot2" />
+    <link rel="stylesheet" href="/assets/css/offer-pilot.css?v=20260905deck13" />
   </head>
   <body>
     <header class="op-top">
@@ -37,7 +37,6 @@
     </header>
 
     <main>
-      <!-- 00 HERO -->
       <section class="op-hero">
         <div class="op-hero-bg" aria-hidden="true"></div>
         <div class="op-wrap">
@@ -51,8 +50,8 @@
             من المعلومة الطبية إلى تواصل يفهمه المريض. الأفلام الثلاثة وخريطة الـ 30 يوماً أدلة ملموسة على أن النظام يعمل… قبل أي توسع.
           </p>
           <div class="op-hero-actions">
-            <a class="op-btn op-btn--light" href="#challenge" data-i18n="ctaSee">شاهد الفكرة</a>
-            <a class="op-btn op-btn--ghost" href="#start" data-i18n="ctaStart" style="border-color: rgba(255,255,255,0.35); color: #fff">ابدأ تحديد النطاق</a>
+            <a class="op-btn op-btn--light" href="#deck" data-i18n="ctaSee">معاينة العرض (13 سلايد)</a>
+            <a class="op-btn op-btn--ghost" href="#offer" data-i18n="ctaStart" style="border-color: rgba(255,255,255,0.35); color: #fff">اقرأ العرض</a>
           </div>
           <div class="op-path" aria-hidden="true">
             <span data-i18n="path1">التحدي</span>
@@ -65,91 +64,92 @@
         </div>
       </section>
 
-      <!-- 01 CHALLENGE -->
-      <section class="op-section" id="challenge">
-        <div class="op-wrap op-split">
+      <!-- Standalone 13-slide deck preview -->
+      <section class="op-deck" id="deck" aria-labelledby="deckTitle">
+        <div class="op-wrap op-wrap--deck">
+          <div class="op-deck-head">
+            <p class="op-eyebrow" data-i18n="deckEyebrow">معاينة العرض</p>
+            <h2 id="deckTitle" data-i18n="deckTitle">13 سلايداً مترابطة — من البداية إلى النهاية</h2>
+            <p data-i18n="deckSub">ألبوم منفصل عن نص العرض. تصفّح السلايدات بالترتيب كما تُعرض للجهة.</p>
+          </div>
+
+          <div class="op-album" data-slide-album>
+            <div class="op-album-stage" data-album-stage tabindex="0" role="region" aria-roledescription="carousel" aria-label="Hospital Pilot deck">
+              <button type="button" class="op-album-nav op-album-nav--prev" data-album-prev aria-label="Previous">‹</button>
+              <button type="button" class="op-album-nav op-album-nav--next" data-album-next aria-label="Next">›</button>
+              <!-- slides injected -->
+            </div>
+
+            <div class="op-album-meta">
+              <div class="op-album-progress">
+                <span data-i18n="deckSlide">سلايد</span>
+                <b><span data-album-current>1</span> / <span data-album-total>13</span></b>
+                <div class="op-album-ends" aria-hidden="true">
+                  <span data-end-start data-i18n="deckStart">البداية</span>
+                  <span data-end-finish data-i18n="deckEnd">النهاية</span>
+                </div>
+              </div>
+              <p class="op-album-caption" data-album-caption></p>
+            </div>
+
+            <div class="op-album-strip" data-album-strip role="list" aria-label="Slides"></div>
+            <p class="op-album-hint" data-i18n="deckHint">استخدم الأسهم أو الشريط السفلي. لا يُعاد من النهاية تلقائياً.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Text offer only -->
+      <section class="op-section" id="offer">
+        <div class="op-wrap op-text-grid">
           <div>
             <p class="op-eyebrow" data-i18n="chEyebrow">01 · التحدي</p>
             <h2 data-i18n="chTitle">المريض لا يحتاج مزيداً من المعلومات. يحتاج وضوحاً.</h2>
             <p class="op-copy" data-i18n="chBody">
               المعلومة الطبية موجودة غالباً. لكنها موزعة: موعد، ورقة، رسالة، صفحة، منشور. النتيجة: أسئلة قبل الزيارة، ضغط على الفريق، ومحتوى لا يبني ثقة متراكمة.
             </p>
-            <ul class="op-lines">
-              <li data-i18n="ch1">Patients don’t need more information.</li>
-              <li data-i18n="ch2">They need clarity.</li>
-              <li data-i18n="ch3">Information alone is not communication.</li>
-            </ul>
           </div>
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/challenge-patient.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/challenge-patient.jpg" alt="" width="1600" height="900" loading="eager" decoding="async" />
-            </picture>
-          </figure>
+          <ul class="op-lines">
+            <li data-i18n="ch1">Patients don’t need more information.</li>
+            <li data-i18n="ch2">They need clarity.</li>
+            <li data-i18n="ch3">Information alone is not communication.</li>
+          </ul>
         </div>
       </section>
 
-      <!-- 02 THE PILOT -->
       <section class="op-section op-section--dark" id="pilot">
-        <div class="op-wrap op-split op-split--rev">
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/timeline-engine.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/timeline-engine.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
-            </picture>
-          </figure>
-          <div>
-            <p class="op-eyebrow" data-i18n="piEyebrow">02 · الـ Pilot</p>
-            <h2 data-i18n="piTitle">اختبار مضبوط خلال 14 يوم عمل.</h2>
-            <p class="op-copy" data-i18n="piBody">
-              لا نطلب قرار تعاقد سنوي الآن. نطلب فرصة محددة لإثبات الأسلوب، دورة الموافقات، ووضوح المحتوى للمريض — ثم تقررون التوسع.
-            </p>
-            <div class="op-flow">
-              <article><strong>01–02</strong><span data-i18n="piS1">Scope</span></article>
-              <article><strong>03–05</strong><span data-i18n="piS2">Script</span></article>
-              <article><strong>06–12</strong><span data-i18n="piS3">Production</span></article>
-              <article><strong>13–14</strong><span data-i18n="piS4">Delivery</span></article>
-            </div>
-            <p class="op-note" data-i18n="piNote">14 DAYS. ONE PROVEN SYSTEM.</p>
+        <div class="op-wrap">
+          <p class="op-eyebrow" data-i18n="piEyebrow">02 · الـ Pilot</p>
+          <h2 data-i18n="piTitle">اختبار مضبوط خلال 14 يوم عمل.</h2>
+          <p class="op-copy" data-i18n="piBody">
+            لا نطلب قرار تعاقد سنوي الآن. نطلب فرصة محددة لإثبات الأسلوب، دورة الموافقات، ووضوح المحتوى للمريض — ثم تقررون التوسع.
+          </p>
+          <div class="op-flow">
+            <article><strong>01–02</strong><span data-i18n="piS1">تحديد النطاق</span></article>
+            <article><strong>03–05</strong><span data-i18n="piS2">السكربت</span></article>
+            <article><strong>06–12</strong><span data-i18n="piS3">الإنتاج</span></article>
+            <article><strong>13–14</strong><span data-i18n="piS4">التسليم</span></article>
           </div>
+          <p class="op-note" data-i18n="piNote">14 يوماً. نظام واحد مثبت.</p>
         </div>
       </section>
 
-      <!-- 03 SYSTEM -->
       <section class="op-section op-section--tint" id="system">
-        <div class="op-wrap op-split">
-          <div>
-            <p class="op-eyebrow" data-i18n="syEyebrow">03 · النظام</p>
-            <h2 data-i18n="syTitle">من Brief طبي إلى محتوى جاهز للمريض.</h2>
-            <p class="op-copy" data-i18n="syBody">
-              MedMotion ليست «تصوير فيديو». المسار: Brief → Script → مراجعة طبية للادعاءات واللغة → إنتاج → نشر متعدد الصيغ.
-            </p>
-            <ul class="op-lines">
-              <li data-i18n="sy1">Clinical accuracy</li>
-              <li data-i18n="sy2">Patient language</li>
-              <li data-i18n="sy3">Approved claims & safety boundaries</li>
-              <li data-i18n="sy4">SCRIPT → VIDEO → REEL → PUBLISH</li>
-            </ul>
-          </div>
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/clarity-system.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/clarity-system.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-            </picture>
-          </figure>
-        </div>
-        <div class="op-wrap" style="margin-top: 1.25rem">
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/content-map.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/content-map.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-            </picture>
-          </figure>
-          <p class="op-note" data-i18n="syMapNote">One Pilot. A 30-day content system — الأفلام داخل الخريطة وليست بديلاً عنها.</p>
+        <div class="op-wrap">
+          <p class="op-eyebrow" data-i18n="syEyebrow">03 · النظام</p>
+          <h2 data-i18n="syTitle">من Brief طبي إلى محتوى جاهز للمريض.</h2>
+          <p class="op-copy" data-i18n="syBody">
+            MedMotion ليست «تصوير فيديو». المسار: Brief → Script → مراجعة طبية للادعاءات واللغة → إنتاج → نشر متعدد الصيغ.
+          </p>
+          <ul class="op-lines">
+            <li data-i18n="sy1">دقة سريرية</li>
+            <li data-i18n="sy2">لغة يفهمها المريض</li>
+            <li data-i18n="sy3">ادعاءات معتمدة وحدود أمان</li>
+            <li data-i18n="sy4">SCRIPT → VIDEO → REEL → PUBLISH</li>
+          </ul>
+          <p class="op-note" data-i18n="syMapNote">الأفلام داخل خريطة 30 يوماً — وليست بديلاً عن النظام.</p>
         </div>
       </section>
 
-      <!-- 04 OUTPUT -->
       <section class="op-section" id="output">
         <div class="op-wrap">
           <p class="op-eyebrow" data-i18n="ouEyebrow">04 · المخرجات</p>
@@ -157,70 +157,31 @@
           <p class="op-copy" data-i18n="ouBody">
             ثلاثة أفلام قصيرة (قبل / فهم الخدمة / بعد) + خريطة 30 يوماً + قصّات وصيغ نشر. هذه المخرجات تثبت النظام — وليست «سعر الفيديو».
           </p>
-          <div class="op-films">
-            <article class="op-film">
-              <picture>
-                <source srcset="/assets/img/offers/hospital-pilot/film01-storyboard.webp" type="image/webp" />
-                <img src="/assets/img/offers/hospital-pilot/film01-storyboard.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-              </picture>
-              <h3 data-i18n="f1t">Film 01 · Before your visit</h3>
-              <p data-i18n="f1b">وضوح ما قبل الموعد: ماذا تحضر، متى تصل، ماذا تتوقع.</p>
-            </article>
-            <article class="op-film">
-              <picture>
-                <source srcset="/assets/img/offers/hospital-pilot/film02-storyboard.webp" type="image/webp" />
-                <img src="/assets/img/offers/hospital-pilot/film02-storyboard.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-              </picture>
-              <h3 data-i18n="f2t">Film 02 · Understand the service</h3>
-              <p data-i18n="f2b">شرح مبسط قبل / أثناء / بعد — بلغة المريض مع تنويه توعوي.</p>
-            </article>
-            <article class="op-film">
-              <picture>
-                <source srcset="/assets/img/offers/hospital-pilot/film03-storyboard.webp" type="image/webp" />
-                <img src="/assets/img/offers/hospital-pilot/film03-storyboard.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-              </picture>
-              <h3 data-i18n="f3t">Film 03 · Care continues</h3>
-              <p data-i18n="f3b">تعليمات بعد الزيارة ومتى تتواصل — الرعاية لا تنتهي بانتهاء الموعد.</p>
-            </article>
-          </div>
           <div class="op-stats">
             <div><strong>14</strong><span data-i18n="st1">يوم عمل</span></div>
             <div><strong>3</strong><span data-i18n="st2">أفلام رئيسية</span></div>
             <div><strong>30</strong><span data-i18n="st3">يوم خريطة محتوى</span></div>
             <div><strong>1</strong><span data-i18n="st4">جولة تعديل لكل فيلم</span></div>
           </div>
+          <ul class="op-lines" style="margin-top: 1.1rem">
+            <li data-i18n="f1t">فيلم 01 · قبل الزيارة</li>
+            <li data-i18n="f2t">فيلم 02 · افهم الخدمة</li>
+            <li data-i18n="f3t">فيلم 03 · الرعاية مستمرة</li>
+          </ul>
         </div>
       </section>
 
-      <!-- 05 CHANNELS + DELIVERY -->
       <section class="op-section op-section--tint" id="delivery">
-        <div class="op-wrap op-split">
-          <div>
-            <p class="op-eyebrow" data-i18n="deEyebrow">05 · التسليم</p>
-            <h2 data-i18n="deTitle">فكرة واحدة. صيغ جاهزة للنشر.</h2>
-            <p class="op-copy" data-i18n="deBody">
-              Master Film ثم Reel / Story / Social cuts / Captions. ثم مجلد تسليم منظم: أفلام، قصّات، نصوص، خريطة، خطة نشر، تقرير إغلاق.
-            </p>
-            <p class="op-note" data-i18n="deNote">READY TO PUBLISH — نظام تسليم… لا ملفات عشوائية.</p>
-          </div>
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/one-film-many-channels.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/one-film-many-channels.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
-            </picture>
-          </figure>
-        </div>
-        <div class="op-wrap" style="margin-top: 1.25rem">
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/delivery-folder.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/delivery-folder.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
-            </picture>
-          </figure>
+        <div class="op-wrap">
+          <p class="op-eyebrow" data-i18n="deEyebrow">05 · التسليم</p>
+          <h2 data-i18n="deTitle">فكرة واحدة. صيغ جاهزة للنشر.</h2>
+          <p class="op-copy" data-i18n="deBody">
+            Master Film ثم Reel / Story / Social cuts / Captions. ثم مجلد تسليم منظم: أفلام، قصّات، نصوص، خريطة، خطة نشر، تقرير إغلاق.
+          </p>
+          <p class="op-note" data-i18n="deNote">جاهز للنشر — نظام تسليم… لا ملفات عشوائية.</p>
         </div>
       </section>
 
-      <!-- 06 SUCCESS TEST -->
       <section class="op-section" id="success">
         <div class="op-wrap">
           <p class="op-eyebrow" data-i18n="suEyebrow">06 · بعد 14 يوماً</p>
@@ -236,39 +197,29 @@
         </div>
       </section>
 
-      <!-- 07 SCALE -->
       <section class="op-section op-section--ink" id="scale">
-        <div class="op-wrap op-split">
-          <div>
-            <p class="op-eyebrow" data-i18n="scEyebrow">07 · الخطوة التالية</p>
-            <h2 data-i18n="scTitle">ابدأ بتخصص واحد. وسّع ما ينجح.</h2>
-            <p class="op-copy" data-i18n="scBody">
-              المسار التجاري الحقيقي: Pilot → نظام محتوى شهري → تخصصات متعددة → Enterprise. القرار يصبح منطقياً بعد إثبات صغير مضبوط.
-            </p>
-            <div class="op-ladder">
-              <span data-i18n="scL1">One specialty</span>
-              <em>→</em>
-              <span data-i18n="scL2">3 films</span>
-              <em>→</em>
-              <span data-i18n="scL3">30 days</span>
-              <em>→</em>
-              <span data-i18n="scL4">Multi-specialty</span>
-              <em>→</em>
-              <span data-i18n="scL5">Ongoing system</span>
-            </div>
+        <div class="op-wrap">
+          <p class="op-eyebrow" data-i18n="scEyebrow">07 · الخطوة التالية</p>
+          <h2 data-i18n="scTitle">ابدأ بتخصص واحد. وسّع ما ينجح.</h2>
+          <p class="op-copy" data-i18n="scBody">
+            المسار التجاري الحقيقي: Pilot → نظام محتوى شهري → تخصصات متعددة → Enterprise. القرار يصبح منطقياً بعد إثبات صغير مضبوط.
+          </p>
+          <div class="op-ladder">
+            <span data-i18n="scL1">تخصص واحد</span>
+            <em>→</em>
+            <span data-i18n="scL2">3 أفلام</span>
+            <em>→</em>
+            <span data-i18n="scL3">30 يوماً</span>
+            <em>→</em>
+            <span data-i18n="scL4">تخصصات متعددة</span>
+            <em>→</em>
+            <span data-i18n="scL5">نظام مستمر</span>
           </div>
-          <figure class="op-media">
-            <picture>
-              <source srcset="/assets/img/offers/hospital-pilot/scale-path.webp" type="image/webp" />
-              <img src="/assets/img/offers/hospital-pilot/scale-path.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
-            </picture>
-          </figure>
         </div>
       </section>
 
-      <!-- SCOPE / EXCLUSIONS / PRICE / CTA -->
       <section class="op-section" id="scope">
-        <div class="op-wrap op-split">
+        <div class="op-wrap op-text-grid">
           <div>
             <p class="op-eyebrow" data-i18n="skEyebrow">النطاق</p>
             <h2 data-i18n="skTitle">ماذا يشمل / ماذا لا يشمل</h2>
@@ -299,7 +250,7 @@
               <a class="op-btn op-btn--ghost" href="https://beesmotion.com/medmotion/" data-i18n="ctaMed" style="border-color: rgba(255,255,255,0.28); color: #fff">عن MedMotion</a>
             </div>
           </div>
-          <p class="op-note" data-i18n="proofNote">إثبات تشغيلي قائم: إنتاج طبي مستمر مع المركز الطبي الدولي ضمن MedMotion (أفلام وتصاميم وعروض وسلاسل متصلة عبر فترة ممتدة) — دون اختراع نتائج حملات.</p>
+          <p class="op-note" data-i18n="proofNote">إثبات تشغيلي قائم: إنتاج طبي مستمر مع المركز الطبي الدولي ضمن MedMotion — دون اختراع نتائج حملات.</p>
         </div>
       </section>
     </main>
@@ -314,6 +265,22 @@
     <script src="/assets/js/site-config.js"></script>
     <script>
       (function () {
+        var SLIDES = [
+          { n: "01", ar: "ستوري بورد · فيلم 01", en: "Storyboard · Film 01" },
+          { n: "02", ar: "ستوري بورد · فيلم 02", en: "Storyboard · Film 02" },
+          { n: "03", ar: "ستوري بورد · فيلم 03", en: "Storyboard · Film 03" },
+          { n: "04", ar: "محتوى واضح ومنظم", en: "Clear, organized content" },
+          { n: "05", ar: "جاهز للنشر", en: "Ready to publish" },
+          { n: "06", ar: "نتائج واضحة · توسع بثقة", en: "Clear results · scale with confidence" },
+          { n: "07", ar: "الوضوح للمريض", en: "Patient clarity" },
+          { n: "08", ar: "نظام يستمر", en: "A system that keeps delivering" },
+          { n: "09", ar: "فيلم واحد · قنوات متعددة", en: "One film · many channels" },
+          { n: "10", ar: "التسليم جاهز للنشر", en: "Delivery · ready to publish" },
+          { n: "11", ar: "محرك 14 يوماً", en: "The 14-day engine" },
+          { n: "12", ar: "من تخصص إلى توسع", en: "From specialty to scale" },
+          { n: "13", ar: "الخلاصة · MedMotion", en: "Summary · MedMotion" },
+        ];
+
         var I18N = {
           ar: {
             forLabel: "عرض مخصص لـ",
@@ -322,14 +289,21 @@
             heroLead:
               "من المعلومة الطبية إلى تواصل يفهمه المريض. الأفلام الثلاثة وخريطة الـ 30 يوماً أدلة ملموسة على أن النظام يعمل… قبل أي توسع.",
             ctaTop: "احجز جلسة تحديد النطاق",
-            ctaSee: "شاهد الفكرة",
-            ctaStart: "ابدأ تحديد النطاق",
+            ctaSee: "معاينة العرض (13 سلايد)",
+            ctaStart: "اقرأ العرض",
             path1: "التحدي",
             path2: "الـ Pilot",
             path3: "النظام",
             path4: "المخرجات",
             path5: "التسليم",
             path6: "التوسع",
+            deckEyebrow: "معاينة العرض",
+            deckTitle: "13 سلايداً مترابطة — من البداية إلى النهاية",
+            deckSub: "ألبوم منفصل عن نص العرض. تصفّح السلايدات بالترتيب كما تُعرض للجهة.",
+            deckSlide: "سلايد",
+            deckStart: "البداية",
+            deckEnd: "النهاية",
+            deckHint: "استخدم الأسهم أو الشريط السفلي. لا يُعاد من النهاية تلقائياً.",
             chEyebrow: "01 · التحدي",
             chTitle: "المريض لا يحتاج مزيداً من المعلومات. يحتاج وضوحاً.",
             chBody:
@@ -354,17 +328,14 @@
             sy2: "لغة يفهمها المريض",
             sy3: "ادعاءات معتمدة وحدود أمان",
             sy4: "SCRIPT → VIDEO → REEL → PUBLISH",
-            syMapNote: "Pilot واحد. نظام محتوى لـ 30 يوماً — الأفلام داخل الخريطة وليست بديلاً عنها.",
+            syMapNote: "الأفلام داخل خريطة 30 يوماً — وليست بديلاً عن النظام.",
             ouEyebrow: "04 · المخرجات",
             ouTitle: "أدلة ملموسة على أن النظام يعمل.",
             ouBody:
               "ثلاثة أفلام قصيرة (قبل / فهم الخدمة / بعد) + خريطة 30 يوماً + قصّات وصيغ نشر. هذه المخرجات تثبت النظام — وليست «سعر الفيديو».",
             f1t: "فيلم 01 · قبل الزيارة",
-            f1b: "وضوح ما قبل الموعد: ماذا تحضر، متى تصل، ماذا تتوقع.",
             f2t: "فيلم 02 · افهم الخدمة",
-            f2b: "شرح مبسط قبل / أثناء / بعد — بلغة المريض مع تنويه توعوي.",
             f3t: "فيلم 03 · الرعاية مستمرة",
-            f3b: "تعليمات بعد الزيارة ومتى تتواصل — الرعاية لا تنتهي بانتهاء الموعد.",
             st1: "يوم عمل",
             st2: "أفلام رئيسية",
             st3: "يوم خريطة محتوى",
@@ -417,14 +388,21 @@
             heroLead:
               "From medical information to patient-ready communication. The three films and 30-day map are proof the system works… before you scale.",
             ctaTop: "Book a scoping call",
-            ctaSee: "See the idea",
-            ctaStart: "Start scoping",
+            ctaSee: "Preview deck (13 slides)",
+            ctaStart: "Read the offer",
             path1: "Challenge",
             path2: "Pilot",
             path3: "System",
             path4: "Output",
             path5: "Delivery",
             path6: "Scale",
+            deckEyebrow: "Deck preview",
+            deckTitle: "13 connected slides — beginning to end",
+            deckSub: "A standalone album, separate from the offer copy. Browse in pitch order.",
+            deckSlide: "Slide",
+            deckStart: "Start",
+            deckEnd: "End",
+            deckHint: "Use arrows or the strip below. Does not loop from the end.",
             chEyebrow: "01 · The challenge",
             chTitle: "Patients don’t need more information. They need clarity.",
             chBody:
@@ -449,17 +427,14 @@
             sy2: "Patient language",
             sy3: "Approved claims & safety boundaries",
             sy4: "SCRIPT → VIDEO → REEL → PUBLISH",
-            syMapNote: "One Pilot. A 30-day content system — films live inside the map, they are not a substitute for it.",
+            syMapNote: "Films live inside a 30-day map — they are not a substitute for the system.",
             ouEyebrow: "04 · The output",
             ouTitle: "Tangible proof the system works.",
             ouBody:
               "Three short films (before / understand / after) + a 30-day map + publish cuts. These outputs prove the system — they are not “price per video.”",
             f1t: "Film 01 · Before your visit",
-            f1b: "Pre-appointment clarity: what to bring, when to arrive, what to expect.",
             f2t: "Film 02 · Understand the service",
-            f2b: "Simple before / during / after — patient language with an educational disclaimer.",
             f3t: "Film 03 · Care continues",
-            f3b: "Aftercare instructions and when to contact — care does not end at checkout.",
             st1: "working days",
             st2: "master films",
             st3: "day content map",
@@ -507,16 +482,31 @@
           },
         };
 
+        var lang = "ar";
+        var index = 0;
         var wa = "966502786513";
         try {
           if (window.BM_SITE && window.BM_SITE.whatsapp) wa = String(window.BM_SITE.whatsapp).replace(/\D/g, "") || wa;
         } catch (e) {}
 
+        var album = document.querySelector("[data-slide-album]");
+        var stage = album && album.querySelector("[data-album-stage]");
+        var strip = album && album.querySelector("[data-album-strip]");
+        var prevBtn = album && album.querySelector("[data-album-prev]");
+        var nextBtn = album && album.querySelector("[data-album-next]");
+        var curEl = album && album.querySelector("[data-album-current]");
+        var totEl = album && album.querySelector("[data-album-total]");
+        var capEl = album && album.querySelector("[data-album-caption]");
+        var endStart = album && album.querySelector("[data-end-start]");
+        var endFinish = album && album.querySelector("[data-end-finish]");
+        var stageImgs = [];
+        var thumbBtns = [];
+
         function orgFromQuery() {
           return (new URLSearchParams(location.search).get("for") || new URLSearchParams(location.search).get("org") || "").trim();
         }
 
-        function setOrg(lang) {
+        function setOrg() {
           var el = document.getElementById("orgName");
           if (!el) return;
           var custom = orgFromQuery();
@@ -524,7 +514,8 @@
           if (custom) document.title = "MedMotion™ Pilot · " + custom + " | Bees Motion";
         }
 
-        function applyLang(lang) {
+        function applyLang(next) {
+          lang = next;
           var dict = I18N[lang] || I18N.ar;
           document.documentElement.lang = lang;
           document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
@@ -535,7 +526,7 @@
           document.querySelectorAll(".op-lang button").forEach(function (btn) {
             btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
           });
-          setOrg(lang);
+          setOrg();
           var org = orgFromQuery() || (lang === "ar" ? "جهة صحية" : "healthcare org");
           var msg =
             lang === "ar"
@@ -543,6 +534,110 @@
               : "Hello — I’d like a MedMotion Hospital Content Pilot scoping call for: " + org;
           var waLink = document.getElementById("waCta");
           if (waLink) waLink.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(msg);
+          show(index);
+        }
+
+        function buildAlbum() {
+          if (!stage || !strip) return;
+          if (totEl) totEl.textContent = String(SLIDES.length);
+
+          SLIDES.forEach(function (s, i) {
+            var img = document.createElement("img");
+            img.src = "/assets/img/offers/hospital-pilot/slide-" + s.n + ".webp";
+            img.alt = "";
+            img.width = 1600;
+            img.height = 900;
+            img.decoding = "async";
+            img.loading = i === 0 ? "eager" : "lazy";
+            img.onerror = function () {
+              img.src = "/assets/img/offers/hospital-pilot/slide-" + s.n + ".jpg";
+            };
+            if (i === 0) img.className = "is-on";
+            stage.appendChild(img);
+            stageImgs.push(img);
+
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.setAttribute("role", "listitem");
+            btn.setAttribute("aria-label", "Slide " + s.n);
+            btn.innerHTML =
+              '<span class="op-thumb-n">' +
+              s.n +
+              '</span><img src="/assets/img/offers/hospital-pilot/slide-' +
+              s.n +
+              '.webp" alt="" width="160" height="90" loading="lazy" onerror="this.src=this.src.replace(\'.webp\',\'.jpg\')" />';
+            btn.addEventListener("click", function () {
+              show(i);
+            });
+            strip.appendChild(btn);
+            thumbBtns.push(btn);
+          });
+        }
+
+        function show(i) {
+          if (!stageImgs.length) return;
+          index = Math.max(0, Math.min(SLIDES.length - 1, i));
+          stageImgs.forEach(function (img, k) {
+            img.classList.toggle("is-on", k === index);
+          });
+          thumbBtns.forEach(function (btn, k) {
+            btn.classList.toggle("is-active", k === index);
+          });
+          if (curEl) curEl.textContent = String(index + 1);
+          if (capEl) capEl.textContent = lang === "ar" ? SLIDES[index].ar : SLIDES[index].en;
+          if (prevBtn) prevBtn.disabled = index === 0;
+          if (nextBtn) nextBtn.disabled = index === SLIDES.length - 1;
+          if (endStart) endStart.classList.toggle("is-live", index === 0);
+          if (endFinish) endFinish.classList.toggle("is-live", index === SLIDES.length - 1);
+          var activeThumb = thumbBtns[index];
+          if (activeThumb && activeThumb.scrollIntoView) {
+            activeThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+          }
+        }
+
+        function bindAlbum() {
+          if (!album) return;
+          if (prevBtn) prevBtn.addEventListener("click", function () { show(index - 1); });
+          if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
+
+          if (stage) {
+            stage.addEventListener("keydown", function (e) {
+              if (e.key === "ArrowLeft") {
+                e.preventDefault();
+                show(document.documentElement.dir === "rtl" ? index + 1 : index - 1);
+              } else if (e.key === "ArrowRight") {
+                e.preventDefault();
+                show(document.documentElement.dir === "rtl" ? index - 1 : index + 1);
+              } else if (e.key === "Home") {
+                e.preventDefault();
+                show(0);
+              } else if (e.key === "End") {
+                e.preventDefault();
+                show(SLIDES.length - 1);
+              }
+            });
+
+            var startX = 0;
+            stage.addEventListener(
+              "touchstart",
+              function (e) {
+                if (e.changedTouches && e.changedTouches[0]) startX = e.changedTouches[0].clientX;
+              },
+              { passive: true }
+            );
+            stage.addEventListener(
+              "touchend",
+              function (e) {
+                if (!e.changedTouches || !e.changedTouches[0]) return;
+                var dx = e.changedTouches[0].clientX - startX;
+                if (Math.abs(dx) < 48) return;
+                var rtl = document.documentElement.dir === "rtl";
+                if (dx < 0) show(rtl ? index - 1 : index + 1);
+                else show(rtl ? index + 1 : index - 1);
+              },
+              { passive: true }
+            );
+          }
         }
 
         document.querySelectorAll(".op-lang button").forEach(function (btn) {
@@ -551,6 +646,8 @@
           });
         });
 
+        buildAlbum();
+        bindAlbum();
         applyLang("ar");
       })();
     </script>

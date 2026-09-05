@@ -1,4 +1,4 @@
-/* MedMotion Hospital Pilot — product experience offer */
+/* MedMotion Hospital Pilot — text offer + slide-deck album */
 :root {
   --op-ink: #0b1216;
   --op-muted: #5a6570;
@@ -7,7 +7,6 @@
   --op-med-deep: #061820;
   --op-gold: #c9a227;
   --op-bg: #f3f6f8;
-  --op-card: #fff;
   --font-ar: "Tajawal", sans-serif;
   --font-en: "Plus Jakarta Sans", sans-serif;
 }
@@ -28,6 +27,9 @@ img { max-width: 100%; height: auto; display: block; }
 .op-wrap {
   width: min(1080px, calc(100% - 2rem));
   margin-inline: auto;
+}
+.op-wrap--deck {
+  width: min(1120px, calc(100% - 1.25rem));
 }
 
 .op-top {
@@ -81,6 +83,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0.72rem 1.15rem;
   border: 1px solid transparent;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 .op-btn--solid {
   background: var(--op-med);
@@ -112,8 +115,8 @@ img { max-width: 100%; height: auto; display: block; }
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(105deg, rgba(6, 24, 32, 0.92) 0%, rgba(6, 24, 32, 0.72) 48%, rgba(6, 24, 32, 0.55) 100%),
-    url("/assets/img/offers/hospital-pilot/hero-system.jpg") center / cover no-repeat;
+    radial-gradient(ellipse 80% 70% at 70% 20%, rgba(10, 85, 112, 0.55), transparent 55%),
+    linear-gradient(145deg, #061820 0%, #0a3a4d 52%, #061820 100%);
 }
 .op-kicker {
   margin: 0 0 0.85rem;
@@ -163,9 +166,181 @@ html[lang="en"] .op-hero h1 { max-width: 16ch; }
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: rgba(244, 241, 234, 0.85);
 }
-html[dir="rtl"] .op-path span,
-body.lang-ar .op-path span { letter-spacing: 0; text-transform: none; }
+html[dir="rtl"] .op-path span { letter-spacing: 0; text-transform: none; }
 
+/* —— Slide deck album (separate from copy) —— */
+.op-deck {
+  padding: clamp(2rem, 4.5vw, 3.25rem) 0 clamp(2.5rem, 5vw, 3.75rem);
+  background: #10161b;
+  color: #f4f1ea;
+  border-top: 0;
+}
+.op-deck-head {
+  margin-bottom: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+}
+.op-deck-head .op-eyebrow { color: #f5c84d; }
+.op-deck-head h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  letter-spacing: -0.02em;
+  max-width: none;
+}
+.op-deck-head p {
+  margin: 0;
+  color: rgba(244, 241, 234, 0.65);
+  max-width: 40rem;
+  font-size: 0.98rem;
+}
+
+.op-album {
+  display: grid;
+  gap: 0.85rem;
+}
+.op-album-stage {
+  position: relative;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+}
+.op-album-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0a0f12;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+.op-album-stage img.is-on { opacity: 1; }
+
+.op-album-nav {
+  position: absolute;
+  inset-block: 0;
+  width: 2.75rem;
+  border: 0;
+  background: rgba(6, 24, 32, 0.45);
+  color: #fff;
+  font-size: 1.35rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+.op-album-nav:hover { background: rgba(6, 24, 32, 0.72); }
+.op-album-nav:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.op-album-nav--prev { inset-inline-start: 0; }
+.op-album-nav--next { inset-inline-end: 0; }
+
+.op-album-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+}
+.op-album-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: rgba(244, 241, 234, 0.8);
+}
+.op-album-progress b {
+  color: #f5c84d;
+  font-variant-numeric: tabular-nums;
+}
+.op-album-ends {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+.op-album-ends span {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(244, 241, 234, 0.45);
+}
+.op-album-ends span.is-live {
+  border-color: rgba(245, 200, 77, 0.55);
+  color: #f5c84d;
+  background: rgba(245, 200, 77, 0.08);
+}
+html[dir="rtl"] .op-album-ends span { letter-spacing: 0; text-transform: none; }
+
+.op-album-caption {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(244, 241, 234, 0.7);
+  min-height: 1.4em;
+}
+
+.op-album-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(72px, 1fr);
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.op-album-strip button {
+  appearance: none;
+  border: 2px solid transparent;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  cursor: pointer;
+  scroll-snap-align: start;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  opacity: 0.55;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+.op-album-strip button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.op-album-strip button.is-active {
+  opacity: 1;
+  border-color: #f5c84d;
+}
+.op-album-strip button:focus-visible {
+  outline: 2px solid #f5c84d;
+  outline-offset: 2px;
+}
+.op-album-strip .op-thumb-n {
+  position: absolute;
+  inset-inline-start: 0.25rem;
+  inset-block-start: 0.2rem;
+  font-size: 0.62rem;
+  font-weight: 800;
+  background: rgba(6, 24, 32, 0.75);
+  color: #fff;
+  padding: 0.1rem 0.3rem;
+  line-height: 1.2;
+}
+
+.op-album-hint {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  color: rgba(244, 241, 234, 0.4);
+}
+
+/* —— Text sections (no interleaved slides) —— */
 .op-section {
   padding: clamp(2.5rem, 5.5vw, 4rem) 0;
   border-top: 1px solid var(--op-line);
@@ -192,14 +367,13 @@ body.lang-ar .op-path span { letter-spacing: 0; text-transform: none; }
 }
 .op-section--dark .op-eyebrow,
 .op-section--ink .op-eyebrow { color: #f5c84d; }
-html[dir="rtl"] .op-eyebrow,
-body.lang-ar .op-eyebrow { letter-spacing: 0; text-transform: none; }
+html[dir="rtl"] .op-eyebrow { letter-spacing: 0; text-transform: none; }
 
 .op-section h2 {
   margin: 0 0 0.75rem;
   font-size: clamp(1.45rem, 3vw, 2rem);
   letter-spacing: -0.02em;
-  max-width: 22ch;
+  max-width: 28ch;
 }
 .op-copy {
   margin: 0;
@@ -210,22 +384,12 @@ body.lang-ar .op-eyebrow { letter-spacing: 0; text-transform: none; }
 .op-section--dark .op-copy,
 .op-section--ink .op-copy { color: rgba(244, 241, 234, 0.75); }
 
-.op-split {
+.op-text-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(1.25rem, 3vw, 2.25rem);
-  align-items: center;
+  align-items: start;
 }
-.op-split--rev { grid-template-columns: 0.95fr 1.05fr; }
-.op-media {
-  border: 1px solid var(--op-line);
-  background: #0a0a0a;
-  overflow: hidden;
-}
-.op-section--dark .op-media,
-.op-section--ink .op-media { border-color: rgba(255, 255, 255, 0.1); }
-.op-media picture,
-.op-media img { width: 100%; }
 
 .op-lines {
   margin: 1.1rem 0 0;
@@ -299,29 +463,6 @@ body.lang-ar .op-eyebrow { letter-spacing: 0; text-transform: none; }
   margin-top: 0.1rem;
 }
 .op-check p { margin: 0; font-weight: 600; font-size: 0.95rem; }
-
-.op-films {
-  margin-top: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
-}
-.op-film {
-  background: #fff;
-  border: 1px solid var(--op-line);
-  overflow: hidden;
-}
-.op-film h3 {
-  margin: 0;
-  padding: 0.85rem 0.9rem 0.2rem;
-  font-size: 0.98rem;
-}
-.op-film p {
-  margin: 0;
-  padding: 0 0.9rem 1rem;
-  color: var(--op-muted);
-  font-size: 0.88rem;
-}
 
 .op-stats {
   margin-top: 1.35rem;
@@ -403,12 +544,14 @@ body.lang-ar .op-eyebrow { letter-spacing: 0; text-transform: none; }
 
 @media (max-width: 860px) {
   .op-top-actions .op-btn { display: none; }
-  .op-split,
-  .op-split--rev,
-  .op-films,
+  .op-text-grid,
   .op-flow,
   .op-stats {
     grid-template-columns: 1fr;
   }
   .op-hero h1 { max-width: none; }
+  .op-album-nav { width: 2.35rem; font-size: 1.15rem; }
+  .op-album-strip {
+    grid-auto-columns: 64px;
+  }
 }
