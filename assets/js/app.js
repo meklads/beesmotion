@@ -1164,32 +1164,51 @@
   }
 
   function initSectorBridgeFace() {
-    const section = document.querySelector(".sector-gateway");
-    const face = section && section.querySelector(".sector-bridge-face");
-    if (!section || !face) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const reset = () => {
-      face.style.setProperty("--look-x", "0");
-      face.style.setProperty("--look-y", "0");
-    };
+    document.querySelectorAll("[data-face-look]").forEach((stage) => {
+      const face = stage.querySelector(".sector-bridge-face");
+      if (!face) return;
 
-    const onMove = (e) => {
-      const rect = face.getBoundingClientRect();
-      if (!rect.width || !rect.height) return;
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const rtl = document.documentElement.getAttribute("dir") === "rtl";
-      let dx = Math.max(-1, Math.min(1, (e.clientX - cx) / 56));
-      const dy = Math.max(-1, Math.min(1, (e.clientY - cy) / 56));
-      /* Counter the SVG scaleX(-1) used in RTL so eyes still follow the cursor */
-      if (rtl) dx = -dx;
-      face.style.setProperty("--look-x", dx.toFixed(3));
-      face.style.setProperty("--look-y", dy.toFixed(3));
-    };
+      const reset = () => {
+        face.style.setProperty("--look-x", "0");
+        face.style.setProperty("--look-y", "0");
+        face.classList.remove("is-look-med", "is-look-prop");
+      };
 
-    section.addEventListener("mousemove", onMove, { passive: true });
-    section.addEventListener("mouseleave", reset);
+      const onMove = (e) => {
+        const rect = face.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const rtl = document.documentElement.getAttribute("dir") === "rtl";
+        let dx = Math.max(-1, Math.min(1, (e.clientX - cx) / 56));
+        const dy = Math.max(-1, Math.min(1, (e.clientY - cy) / 56));
+        if (rtl) dx = -dx;
+        face.style.setProperty("--look-x", dx.toFixed(3));
+        face.style.setProperty("--look-y", dy.toFixed(3));
+      };
+
+      const lookToSide = (side) => {
+        const rtl = document.documentElement.getAttribute("dir") === "rtl";
+        /* In LTR: med is left (−1), prop is right (+1). RTL flips visual halves via SVG scale. */
+        let x = side === "med" ? -0.85 : 0.85;
+        if (rtl) x = -x;
+        face.style.setProperty("--look-x", String(x));
+        face.style.setProperty("--look-y", "0");
+        face.classList.toggle("is-look-med", side === "med");
+        face.classList.toggle("is-look-prop", side === "prop");
+      };
+
+      stage.addEventListener("mousemove", onMove, { passive: true });
+      stage.addEventListener("mouseleave", reset);
+
+      stage.querySelectorAll("[data-face-side]").forEach((card) => {
+        const side = card.getAttribute("data-face-side");
+        card.addEventListener("mouseenter", () => lookToSide(side));
+        card.addEventListener("mouseleave", reset);
+      });
+    });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
