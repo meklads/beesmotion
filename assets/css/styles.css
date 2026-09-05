@@ -13987,6 +13987,18 @@ body.lang-ar .sector-gate-kicker {
   color: #fff;
 }
 
+.work-feature-band--split .work-feature--med .work-feature-proof li {
+  background: rgba(183, 214, 230, 0.1);
+}
+
+.work-feature-band--split .work-feature--prop .work-feature-proof li {
+  background: rgba(245, 200, 77, 0.1);
+}
+
+.work-feature-band--split .work-feature-cta {
+  color: #f5c84d;
+}
+
 .work-feature-band--split .work-feature-grid {
   margin-bottom: 0;
   gap: clamp(2.5rem, 5vw, 4rem);
