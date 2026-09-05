@@ -717,6 +717,61 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   min-width: 0;
 }
 
+/* Video sound toggle — default muted, optional unmute */
+.bm-sound-toggle {
+  position: absolute;
+  z-index: 8;
+  inset-inline-start: 12px;
+  bottom: 12px;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(8, 12, 16, 0.66);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.25s ease;
+}
+
+.bm-sound-toggle:hover,
+.bm-sound-toggle:focus-visible {
+  background: rgba(8, 12, 16, 0.88);
+  transform: scale(1.05);
+  outline: none;
+}
+
+.bm-sound-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
+}
+
+.bm-sound-toggle.is-muted .bm-sound-icon--on {
+  display: none;
+}
+
+.bm-sound-toggle:not(.is-muted) .bm-sound-icon--off {
+  display: none;
+}
+
+[data-hero-autoplay]:not(.is-hero-playing) > .bm-sound-toggle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-hero-autoplay].is-hero-playing > .bm-sound-toggle {
+  opacity: 1;
+}
+
 .bm-video-crop {
   position: relative;
   width: 100%;

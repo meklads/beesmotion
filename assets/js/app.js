@@ -59,6 +59,13 @@
       btn.classList.toggle("active", btn.dataset.lang === lang);
     });
 
+    document.querySelectorAll(".bm-sound-toggle").forEach((btn) => {
+      const muted = btn.getAttribute("data-sound-muted") !== "0";
+      const labels = soundToggleLabels();
+      btn.setAttribute("aria-label", muted ? labels.unmute : labels.mute);
+      btn.title = muted ? labels.unmute : labels.mute;
+    });
+
     localStorage.setItem(STORAGE_KEY, lang);
     syncLangUrl(lang);
   }
@@ -359,6 +366,96 @@
     }
   }
 
+  function ytPlayerCommand(iframe, func, args) {
+    if (!iframe || !iframe.contentWindow) return;
+    try {
+      iframe.contentWindow.postMessage(
+        JSON.stringify({
+          event: "command",
+          func: func,
+          args: args || [],
+        }),
+        "https://www.youtube.com"
+      );
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function ensureYtEmbedParams(params, { muteDefault }) {
+    let p = String(params || "").replace(/^\?/, "");
+    if (!/(^|&)enablejsapi=1(&|$)/.test(p)) p += (p ? "&" : "") + "enablejsapi=1";
+    if (muteDefault !== false) {
+      if (/(^|&)mute=0(&|$)/.test(p)) p = p.replace(/(^|&)mute=0(&|$)/, "$1mute=1$2");
+      else if (!/(^|&)mute=1(&|$)/.test(p)) p += (p ? "&" : "") + "mute=1";
+    }
+    if (typeof location !== "undefined" && location.origin && !/(^|&)origin=/.test(p)) {
+      p += "&origin=" + encodeURIComponent(location.origin);
+    }
+    return p;
+  }
+
+  function soundToggleLabels() {
+    const ar =
+      document.documentElement.getAttribute("lang") === "ar" ||
+      document.documentElement.getAttribute("dir") === "rtl" ||
+      document.body.classList.contains("lang-ar");
+    return ar
+      ? { unmute: "تشغيل الصوت", mute: "كتم الصوت" }
+      : { unmute: "Unmute video", mute: "Mute video" };
+  }
+
+  function attachSoundToggle(host) {
+    if (!host || host.getAttribute("data-sound-toggle") === "off") return null;
+
+    let btn = host.querySelector(":scope > .bm-sound-toggle");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "bm-sound-toggle is-muted";
+      btn.setAttribute("data-sound-muted", "1");
+      btn.innerHTML =
+        '<svg class="bm-sound-icon bm-sound-icon--off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l4 3V7l-4 3H4zm11.5 2a2.5 2.5 0 0 0-1.4-2.2v4.4A2.5 2.5 0 0 0 15.5 12zm0-6.2v1.7a5.1 5.1 0 0 1 0 9v1.7a6.8 6.8 0 0 0 0-12.4z"/><path d="m19.1 7.1-1.4 1.4 1.9 1.9-1.9 1.9 1.4 1.4 1.9-1.9 1.9 1.9 1.4-1.4-1.9-1.9 1.9-1.9-1.4-1.4-1.9 1.9-1.9-1.9z"/></svg>' +
+        '<svg class="bm-sound-icon bm-sound-icon--on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l4 3V7l-4 3H4zm11.5 2a2.5 2.5 0 0 0-1.4-2.2v4.4A2.5 2.5 0 0 0 15.5 12zm0-6.2v1.7a5.1 5.1 0 0 1 0 9v1.7a6.8 6.8 0 0 0 0-12.4z"/></svg>';
+      host.appendChild(btn);
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const muted = btn.getAttribute("data-sound-muted") !== "0";
+        const nextMuted = !muted;
+        const iframe = host.querySelector("iframe");
+        const video = host.querySelector("video");
+        if (iframe) {
+          ytPlayerCommand(iframe, nextMuted ? "mute" : "unMute");
+          if (!nextMuted) ytPlayerCommand(iframe, "setVolume", [100]);
+        }
+        if (video) {
+          video.muted = nextMuted;
+          if (!nextMuted) {
+            try {
+              video.volume = 1;
+            } catch (_) {}
+          }
+        }
+        btn.setAttribute("data-sound-muted", nextMuted ? "1" : "0");
+        btn.classList.toggle("is-muted", nextMuted);
+        const labels = soundToggleLabels();
+        btn.setAttribute("aria-label", nextMuted ? labels.unmute : labels.mute);
+        btn.setAttribute("aria-pressed", nextMuted ? "false" : "true");
+        btn.title = nextMuted ? labels.unmute : labels.mute;
+      });
+    }
+
+    const labels = soundToggleLabels();
+    btn.setAttribute("data-sound-muted", "1");
+    btn.classList.add("is-muted");
+    btn.setAttribute("aria-label", labels.unmute);
+    btn.setAttribute("aria-pressed", "false");
+    btn.title = labels.unmute;
+    return btn;
+  }
+
   function buildHeroIframe(id, title) {
     const iframe = document.createElement("iframe");
     const origin =
@@ -588,6 +685,7 @@
       });
       /* Absolute fallback so the hero never stays locked on the poster */
       window.setTimeout(reveal, 4500);
+      attachSoundToggle(crop);
     };
 
     const io =
@@ -658,9 +756,15 @@
       videos.forEach((v) => {
         prepVideo(v);
         io.observe(v);
+        const host = v.closest(".bm-video-crop, .bm-hero-video, .bm-hero-v2-media") || v.parentElement;
+        if (host) attachSoundToggle(host);
       });
     } else {
       tryPlayAll();
+      videos.forEach((v) => {
+        const host = v.closest(".bm-video-crop, .bm-hero-video, .bm-hero-v2-media") || v.parentElement;
+        if (host) attachSoundToggle(host);
+      });
     }
 
     document.addEventListener("touchstart", tryPlayAll, { once: true, passive: true });
@@ -671,8 +775,10 @@
   }
 
   function initSeriesAlbum() {
-    const HD =
-      "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1";
+    const HD = ensureYtEmbedParams(
+      "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1",
+      { muteDefault: true }
+    );
 
     document.querySelectorAll("[data-series-album]").forEach((album) => {
       const stage = album.querySelector("[data-album-stage]");
@@ -713,10 +819,11 @@
         const corners = stage.querySelectorAll(".bm-video-corner");
         if (corners.length) corners[corners.length - 1].after(iframe);
         else stage.prepend(iframe);
+        attachSoundToggle(stage);
       }
 
       function setStageFacade(id, title) {
-        stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
+        stage.querySelectorAll("iframe, .yt-facade, .bm-sound-toggle").forEach((el) => el.remove());
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "yt-facade yt-facade--cover";
@@ -966,8 +1073,10 @@
   }
 
   function initCreativeAlbum() {
-    const HD =
-      "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1";
+    const HD = ensureYtEmbedParams(
+      "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1",
+      { muteDefault: true }
+    );
 
     document.querySelectorAll("[data-creative-album]").forEach((album) => {
       const stage = album.querySelector("[data-album-stage]");
@@ -1045,16 +1154,15 @@
             "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
         }
 
-        stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
+        stage.querySelectorAll("iframe, .yt-facade, .bm-sound-toggle").forEach((el) => el.remove());
         const corners = stage.querySelectorAll(".bm-video-corner");
         if (corners.length) {
           corners[corners.length - 1].after(iframe);
         } else {
           stage.prepend(iframe);
         }
+        attachSoundToggle(stage);
       }
-
-      const active = album.querySelector(".creative-album-thumb.is-active[data-album-ratio]");
       if (active) applyStageRatio(active.getAttribute("data-album-ratio"));
 
       thumbs.forEach((thumb) => {
@@ -1085,6 +1193,8 @@
         const title = btn.getAttribute("data-yt-title") || "Video";
         let params = btn.getAttribute("data-yt-params") || "autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1";
         if (!/[?&]vq=/.test(params)) params += "&vq=hd1080&hd=1";
+        /* Default muted; visitor can unmute via the sound toggle */
+        params = ensureYtEmbedParams(params, { muteDefault: true });
         const iframe = document.createElement("iframe");
         iframe.src = `https://www.youtube.com/embed/${id}?${params}`;
         iframe.title = title;
@@ -1128,6 +1238,7 @@
           parent.style.position = "relative";
         }
         btn.replaceWith(iframe);
+        if (parent) attachSoundToggle(parent);
       });
     });
   }
