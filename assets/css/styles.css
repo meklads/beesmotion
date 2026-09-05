@@ -2055,6 +2055,63 @@ body.lang-ar .clients-band .clients-label {
   width: 100%;
 }
 
+/* Client testimonials — light trust band */
+.trust-quotes {
+  background:
+    linear-gradient(180deg, #f7f8fa 0%, #ffffff 55%, #f7f8fa 100%);
+  padding: clamp(3.25rem, 6vw, 5rem) 0;
+  border-bottom: 1px solid rgba(18, 20, 26, 0.06);
+}
+
+.trust-quotes .section-head {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.trust-quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.trust-quote {
+  margin: 0;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  border-top: 2px solid rgba(184, 134, 11, 0.45);
+  background: transparent;
+}
+
+.trust-quote p {
+  margin: 0 0 1.1rem;
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  line-height: 1.65;
+  color: #1a1d24;
+  font-weight: 500;
+}
+
+.trust-quote footer {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.trust-quote cite {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #12141a;
+}
+
+.trust-quote footer span {
+  font-size: 0.86rem;
+  color: #5b6470;
+  font-weight: 500;
+}
+
+@media (max-width: 720px) {
+  .trust-quotes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .clients-track {
   display: flex !important;
   flex-direction: row !important;

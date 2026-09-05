@@ -41,7 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260905center" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260905trust" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -126,7 +126,7 @@
         <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Bees Motion">
-          <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
+          <img src="/assets/img/bees-motion-logo-header.png?v=20260905perf" alt="Bees Motion" class="brand-logo" width="200" height="94" decoding="async" />
         </a>
         <nav class="nav-desktop" aria-label="Primary">
           <a href="/#work" data-i18n="navWork">Work</a>
@@ -202,7 +202,10 @@
                 data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=x4Ya98nRnog&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1"
                 aria-label="Play showreel"
               >
-                <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="" loading="eager" width="1280" height="720" decoding="async" fetchpriority="high" />
+                <picture>
+                  <source srcset="/assets/img/thumbs/x4Ya98nRnog.webp" type="image/webp" />
+                  <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="" loading="eager" width="1080" height="1920" decoding="async" fetchpriority="high" />
+                </picture>
                 <span class="yt-facade-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -235,7 +238,10 @@
             <div class="sector-gateway-grid">
               <article class="sector-gate sector-gate--med reveal" data-face-side="med">
                 <a class="sector-gate-media" href="/medmotion/" tabindex="-1" aria-hidden="true">
-                  <img src="/assets/img/heroes/medmotion-hero.jpg?v=20260903v3e" alt="" loading="lazy" width="1074" height="720" decoding="async" />
+                  <picture>
+                    <source srcset="/assets/img/heroes/medmotion-hero.webp" type="image/webp" />
+                    <img src="/assets/img/heroes/medmotion-hero.jpg?v=20260905perf" alt="" loading="lazy" width="1600" height="1066" decoding="async" />
+                  </picture>
                 </a>
                 <div class="sector-gate-copy">
                   <p class="sector-gate-kicker" data-i18n="sysMedSector">Healthcare</p>
@@ -246,7 +252,10 @@
               </article>
               <article class="sector-gate sector-gate--prop reveal" data-face-side="prop">
                 <a class="sector-gate-media" href="/propmotion/" tabindex="-1" aria-hidden="true">
-                  <img src="/assets/img/heroes/propmotion-hero.jpg" alt="" loading="lazy" width="1074" height="720" decoding="async" />
+                  <picture>
+                    <source srcset="/assets/img/heroes/propmotion-hero.webp" type="image/webp" />
+                    <img src="/assets/img/heroes/propmotion-hero.jpg?v=20260905perf" alt="" loading="lazy" width="1400" height="1050" decoding="async" />
+                  </picture>
                 </a>
                 <div class="sector-gate-copy">
                   <p class="sector-gate-kicker" data-i18n="sysPropSector">Real estate</p>
@@ -311,7 +320,10 @@
           <div class="work-feature-grid">
             <a class="work-feature work-feature--med reveal" href="/case-study-imc.html" data-face-side="med">
               <div class="work-feature-media">
-                <img src="/assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="IMC MedMotion healthcare content still" loading="lazy" width="1280" height="720" decoding="async" />
+                <picture>
+                  <source srcset="/assets/img/thumbs/wzUNAKqOE8Q.webp" type="image/webp" />
+                  <img src="/assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="IMC MedMotion healthcare content still" loading="lazy" width="1280" height="720" decoding="async" />
+                </picture>
               </div>
               <div class="work-feature-meta">
                 <p class="work-feature-sector" data-i18n="proofHcLabel">Healthcare</p>
@@ -327,7 +339,10 @@
             </a>
             <a class="work-feature work-feature--prop reveal" href="/case-study-real-estate.html" data-face-side="prop">
               <div class="work-feature-media">
-                <img src="/assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="PropMotion real estate storytelling still" loading="lazy" width="1280" height="720" decoding="async" />
+                <picture>
+                  <source srcset="/assets/img/thumbs/e4ZuwoSHs_8.webp" type="image/webp" />
+                  <img src="/assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="PropMotion real estate storytelling still" loading="lazy" width="1080" height="1920" decoding="async" />
+                </picture>
               </div>
               <div class="work-feature-meta">
                 <p class="work-feature-sector" data-i18n="proofReLabel">Real Estate</p>
@@ -382,6 +397,67 @@
               <span class="clients-logo" aria-hidden="true"><img src="assets/img/clients/toyota.png" alt="" loading="lazy" /></span>
               <span class="clients-logo" aria-hidden="true"><img src="assets/img/clients/al-owla.png" alt="" loading="lazy" /></span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-quotes" aria-label="Client testimonials">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="svc-tag" data-i18n="trustTag">Client voices</span>
+            <h2 class="font-headline-xl" data-i18n="trustTitle">Trusted by teams who ship real work.</h2>
+            <p class="font-body-md" data-i18n="trustSub">Words from partners across healthcare, real estate, exhibitions, and cultural projects.</p>
+          </div>
+          <div class="trust-quotes-grid">
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ1">Bees Motion became a reliable content partner for our hospital. The work was clear, medically respectful, and consistent enough to support how we communicate with patients and the public.</p>
+              <footer>
+                <cite data-i18n="trustA1">Marketing Director</cite>
+                <span data-i18n="trustO1">International Medical Center</span>
+              </footer>
+            </blockquote>
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ2">What mattered most was trust. Their team understood the standards of a hospital environment and delivered content that strengthened our presence without compromising medical credibility.</p>
+              <footer>
+                <cite data-i18n="trustA2">Hospital Director</cite>
+                <span data-i18n="trustO2">International Medical Center</span>
+              </footer>
+            </blockquote>
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ3">For our Project Launch exhibition, they delivered the full experience — models, décor, and films — with the polish and coordination the event needed. The result was a launch we are proud of.</p>
+              <footer>
+                <cite data-i18n="trustA3">Chief Executive Officer</cite>
+                <span data-i18n="trustO3">Anan Iskan</span>
+              </footer>
+            </blockquote>
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ4">The Wahat Al-Salam masterplan film was completed with excellence. It supported the market story of the project and contributed to a full sell-through of the offering.</p>
+              <footer>
+                <cite data-i18n="trustA4">Marketing Director</cite>
+                <span data-i18n="trustO4">Aqarat</span>
+              </footer>
+            </blockquote>
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ5">Thank you for the successful delivery of the Al-Tilal Tower model and the supporting artistic work. The craftsmanship and presentation elevated how the project is seen.</p>
+              <footer>
+                <cite data-i18n="trustA5">Leadership team</cite>
+                <span data-i18n="trustO5">Makkiyoon</span>
+              </footer>
+            </blockquote>
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ6">They took full ownership of our Project Launch exhibition at Jeddah Hilton — design, décor, models, and software. The Secretary General of the League praised the quality of the delivery.</p>
+              <footer>
+                <cite data-i18n="trustA6">Mohammed Al-Ja’ir · Media Director</cite>
+                <span data-i18n="trustO6">Muslim World League</span>
+              </footer>
+            </blockquote>
+            <blockquote class="trust-quote reveal">
+              <p data-i18n="trustQ7">Among several successful works, the Second Ring Road model in Madinah stood out. It was well received and selected for display in the Madinah exhibition.</p>
+              <footer>
+                <cite data-i18n="trustA7">Managing Director</cite>
+                <span data-i18n="trustO7">Al-Ayouni</span>
+              </footer>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -669,7 +745,10 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="/assets/img/bees-motion-logo.png" alt="Bees Motion" class="footer-logo footer-logo--light" width="680" height="330" />
+            <picture>
+              <source srcset="/assets/img/bees-motion-logo-sm.webp" type="image/webp" />
+              <img src="/assets/img/bees-motion-logo-sm.png" alt="Bees Motion" class="footer-logo footer-logo--light" width="280" height="132" loading="lazy" decoding="async" />
+            </picture>
             <p class="footer-blurb" data-i18n="footerBlurb">Marketing and creative content for healthcare and real estate.</p>
             <a class="btn btn-pill btn-on-light footer-cta" href="/#contact" data-i18n="ctaNav">Start a project</a>
           </div>
@@ -729,7 +808,7 @@
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
     <script src="/assets/js/site-config.js?v=20260905ga4fix"></script>
-    <script src="/assets/js/translations.js?v=20260905ga4fix"></script>
-    <script src="/assets/js/app.js?v=20260905sound"></script>
+    <script src="/assets/js/translations.js?v=20260905trust"></script>
+    <script src="/assets/js/app.js?v=20260905trust"></script>
   </body>
 </html>
