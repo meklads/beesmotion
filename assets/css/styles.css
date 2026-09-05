@@ -2055,60 +2055,129 @@ body.lang-ar .clients-band .clients-label {
   width: 100%;
 }
 
-/* Client testimonials — light trust band */
-.trust-quotes {
-  background:
-    linear-gradient(180deg, #f7f8fa 0%, #ffffff 55%, #f7f8fa 100%);
-  padding: clamp(3.25rem, 6vw, 5rem) 0;
+/* Client trust tickets — compact horizontal loop */
+.trust-tickets {
+  background: #f7f8fa;
+  padding: clamp(2.25rem, 4.5vw, 3.25rem) 0 clamp(2.5rem, 5vw, 3.75rem);
   border-bottom: 1px solid rgba(18, 20, 26, 0.06);
+  overflow: hidden;
 }
 
-.trust-quotes .section-head {
-  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+.trust-tickets .section-head {
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
-.trust-quotes-grid {
+.trust-ticket-rail {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.trust-ticket-track {
+  display: flex;
+  align-items: stretch;
+  gap: 0.85rem;
+  width: max-content;
+  padding-inline: clamp(12px, 3vw, 28px);
+  animation: trust-ticket-scroll 48s linear infinite;
+  will-change: transform;
+}
+
+.trust-ticket-rail:hover .trust-ticket-track,
+.trust-ticket-rail:focus-within .trust-ticket-track {
+  animation-play-state: paused;
+}
+
+html[dir="rtl"] .trust-ticket-track,
+body.lang-ar .trust-ticket-track {
+  animation-name: trust-ticket-scroll-rtl;
+}
+
+@keyframes trust-ticket-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes trust-ticket-scroll-rtl {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(50%, 0, 0); }
+}
+
+.trust-ticket {
+  flex: 0 0 clamp(210px, 22vw, 250px);
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2.5vw, 1.5rem);
+  grid-template-rows: auto 1fr auto;
+  gap: 0.65rem;
+  padding: 0.9rem 0.9rem 1rem;
+  background: #fff;
+  border: 1px solid rgba(18, 20, 26, 0.08);
+  border-radius: 4px;
+  box-shadow: 0 10px 28px rgba(15, 25, 40, 0.05);
+  min-height: 0;
 }
 
-.trust-quote {
+.trust-ticket-face {
+  width: 72px;
+  height: 72px;
+  margin-inline: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #efeae2;
+  border: 1px solid rgba(184, 134, 11, 0.22);
+}
+
+.trust-ticket-face picture,
+.trust-ticket-face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trust-ticket-quote {
   margin: 0;
-  padding: clamp(1.25rem, 2.5vw, 1.75rem);
-  border-top: 2px solid rgba(184, 134, 11, 0.45);
-  background: transparent;
-}
-
-.trust-quote p {
-  margin: 0 0 1.1rem;
-  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
-  line-height: 1.65;
-  color: #1a1d24;
-  font-weight: 500;
-}
-
-.trust-quote footer {
-  display: grid;
-  gap: 0.15rem;
-}
-
-.trust-quote cite {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: #12141a;
-}
-
-.trust-quote footer span {
   font-size: 0.86rem;
-  color: #5b6470;
-  font-weight: 500;
+  line-height: 1.55;
+  color: #2a2e38;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trust-ticket-org {
+  margin: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0a5570;
+}
+
+html[dir="rtl"] .trust-ticket-org,
+body.lang-ar .trust-ticket-org {
+  letter-spacing: 0;
 }
 
 @media (max-width: 720px) {
-  .trust-quotes-grid {
-    grid-template-columns: 1fr;
+  .trust-ticket {
+    flex-basis: min(78vw, 240px);
+  }
+
+  .trust-ticket-quote {
+    -webkit-line-clamp: 4;
+    font-size: 0.84rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-ticket-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: min(1180px, 92vw);
+    margin-inline: auto;
+    justify-content: center;
   }
 }
 

@@ -815,7 +815,7 @@
         iframe.style.cssText =
           "position:absolute;inset:0;width:100%;height:100%;border:0;display:block;";
 
-        stage.querySelectorAll("iframe, .yt-facade").forEach((el) => el.remove());
+        stage.querySelectorAll("iframe, .yt-facade, .bm-sound-toggle").forEach((el) => el.remove());
         const corners = stage.querySelectorAll(".bm-video-corner");
         if (corners.length) corners[corners.length - 1].after(iframe);
         else stage.prepend(iframe);
@@ -832,7 +832,7 @@
         btn.setAttribute("data-yt-params", HD);
         btn.setAttribute("aria-label", title || "Play episode");
         btn.innerHTML =
-          `<img src="assets/img/thumbs/${id}.jpg" alt="" loading="eager" width="1280" height="720" />` +
+          `<img src="/assets/img/thumbs/${id}.jpg" alt="" loading="eager" width="1280" height="720" />` +
           '<span class="yt-facade-play" aria-hidden="true"></span>';
         const corners = stage.querySelectorAll(".bm-video-corner");
         if (corners.length) corners[corners.length - 1].after(btn);
@@ -1163,7 +1163,11 @@
         }
         attachSoundToggle(stage);
       }
-      if (active) applyStageRatio(active.getAttribute("data-album-ratio"));
+
+      const active = album.querySelector(
+        ".creative-album-thumb.is-active[data-album-ratio], [data-album-id].is-active[data-album-ratio], [data-album-id].is-active"
+      );
+      if (active) applyStageRatio(active.getAttribute("data-album-ratio") || "16/9");
 
       thumbs.forEach((thumb) => {
         thumb.addEventListener("click", () => {
@@ -1187,6 +1191,8 @@
 
   function initYtFacades() {
     document.querySelectorAll(".yt-facade").forEach((btn) => {
+      /* Album stages manage their own play/switch flow */
+      if (btn.closest("[data-album-stage], [data-creative-album], [data-series-album]")) return;
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-yt-id");
         if (!id) return;
@@ -1322,6 +1328,20 @@
     });
   }
 
+  function initTrustTickets() {
+    const track = document.querySelector("[data-trust-track]");
+    if (!track || track.dataset.looped === "1") return;
+    const tickets = Array.from(track.children);
+    if (tickets.length < 2) return;
+    tickets.forEach((ticket) => {
+      const clone = ticket.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.querySelectorAll("[data-i18n]").forEach((el) => el.removeAttribute("data-i18n"));
+      track.appendChild(clone);
+    });
+    track.dataset.looped = "1";
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     cleanLegacyHashes();
     initLang();
@@ -1342,5 +1362,6 @@
     initReadyQuiz();
     initMedPillars();
     initSectorBridgeFace();
+    initTrustTickets();
   });
 })();
