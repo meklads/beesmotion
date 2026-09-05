@@ -1,0 +1,368 @@
+/* MedMotion Hospital Pilot — standalone offer page */
+:root {
+  --op-ink: #0c1210;
+  --op-muted: #4a5560;
+  --op-line: rgba(12, 18, 16, 0.1);
+  --op-med: #0a5570;
+  --op-med-soft: #d7e8f2;
+  --op-bg: #f4f7f8;
+  --op-card: #ffffff;
+  --op-dark: #061820;
+  --op-gold: #b8860b;
+  --font-ar: "Tajawal", sans-serif;
+  --font-en: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--op-ink);
+  background: var(--op-bg);
+  font-family: var(--font-ar);
+  line-height: 1.6;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-en);
+}
+
+a {
+  color: inherit;
+}
+
+.op-wrap {
+  width: min(920px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.op-top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(244, 247, 248, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--op-line);
+}
+
+.op-top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+}
+
+.op-brand {
+  text-decoration: none;
+  display: grid;
+  gap: 0.1rem;
+}
+
+.op-brand span {
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--op-med);
+}
+
+.op-brand small {
+  font-size: 0.72rem;
+  color: var(--op-muted);
+}
+
+.op-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.op-lang {
+  display: inline-flex;
+  border: 1px solid var(--op-line);
+  background: #fff;
+}
+
+.op-lang button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0.65rem;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--op-muted);
+}
+
+.op-lang button.is-active {
+  background: var(--op-ink);
+  color: #fff;
+}
+
+.op-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.op-btn--solid {
+  background: var(--op-med);
+  color: #fff;
+  border-color: var(--op-med);
+}
+
+.op-btn--solid:hover {
+  background: #08607a;
+}
+
+.op-btn--ghost {
+  background: transparent;
+  border-color: rgba(10, 85, 112, 0.35);
+  color: var(--op-med);
+}
+
+.op-btn--ghost:hover {
+  background: rgba(10, 85, 112, 0.06);
+}
+
+.op-hero {
+  padding: clamp(2.5rem, 6vw, 4.25rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+.op-kicker {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  color: var(--op-muted);
+}
+
+.op-kicker strong {
+  color: var(--op-med);
+  font-weight: 800;
+}
+
+.op-hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 4.2vw, 2.55rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+html[lang="en"] .op-hero h1 {
+  max-width: 22ch;
+}
+
+.op-lead,
+.op-wide {
+  margin: 0;
+  color: var(--op-muted);
+  font-size: 1.05rem;
+  max-width: 42rem;
+}
+
+.op-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.35rem;
+}
+
+.op-note,
+.op-foot {
+  margin: 1rem 0 0;
+  font-size: 0.86rem;
+  color: var(--op-muted);
+}
+
+.op-block {
+  padding: clamp(2rem, 4.5vw, 3.25rem) 0;
+  border-top: 1px solid var(--op-line);
+}
+
+.op-block--tint {
+  background: #eef5f8;
+}
+
+.op-block--dark {
+  background: var(--op-dark);
+  color: #f3f0ea;
+  border-top: 0;
+}
+
+.op-block--dark .op-foot {
+  color: rgba(243, 240, 234, 0.7);
+}
+
+.op-block--cta {
+  background: linear-gradient(180deg, #eef5f8, #f4f7f8);
+}
+
+.op-block h2 {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  letter-spacing: -0.02em;
+}
+
+.op-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.op-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.op-list li {
+  padding: 0.85rem 1rem;
+  background: var(--op-card);
+  border: 1px solid var(--op-line);
+}
+
+.op-list--mute li {
+  background: transparent;
+}
+
+.op-stats {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.op-stats div {
+  background: #fff;
+  border: 1px solid var(--op-line);
+  padding: 1rem 0.85rem;
+  text-align: center;
+}
+
+.op-stats strong {
+  display: block;
+  font-size: 1.7rem;
+  color: var(--op-med);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.op-stats span {
+  font-size: 0.82rem;
+  color: var(--op-muted);
+}
+
+.op-cards {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.op-card {
+  background: #fff;
+  border: 1px solid var(--op-line);
+  border-top: 3px solid var(--op-med);
+  padding: 1.1rem 1rem 1.15rem;
+}
+
+.op-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.op-card p {
+  margin: 0;
+  color: var(--op-muted);
+  font-size: 0.94rem;
+}
+
+.op-steps {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.op-steps li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.op-steps strong {
+  color: #b7d6e6;
+  font-size: 0.9rem;
+}
+
+.op-price-box {
+  margin-top: 1rem;
+  padding: 1.1rem 1.15rem;
+  background: #fff;
+  border: 1px solid var(--op-line);
+  border-inline-start: 3px solid var(--op-gold);
+}
+
+.op-price-box p {
+  margin: 0;
+  color: var(--op-ink);
+  font-weight: 600;
+}
+
+.op-footbar {
+  border-top: 1px solid var(--op-line);
+  padding: 1.1rem 0 1.4rem;
+  font-size: 0.84rem;
+  color: var(--op-muted);
+}
+
+.op-footbar .op-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.op-footbar a {
+  color: var(--op-med);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .op-top-inner {
+    flex-wrap: wrap;
+    padding-block: 0.65rem;
+  }
+
+  .op-top-actions .op-btn {
+    display: none;
+  }
+
+  .op-grid-2,
+  .op-cards,
+  .op-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .op-hero h1 {
+    max-width: none;
+  }
+}
