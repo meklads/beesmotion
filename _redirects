@@ -20,6 +20,16 @@
 /project-launch /launch-halls/ 301
 /project-launch/ /launch-halls/ 301
 
+# Legal
+/privacy /privacy/ 301
+/privacy.html /privacy/ 301
+/terms /terms/ 301
+/terms.html /terms/ 301
+/terms-of-use /terms/ 301
+/terms-of-use/ /terms/ 301
+/privacy-policy /privacy/ 301
+/privacy-policy/ /privacy/ 301
+
 # Case study hub retired → MedMotion case (album lives there)
 /case-study /case-study-imc 301
 /case-study.html /case-study-imc 301

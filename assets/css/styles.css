@@ -182,6 +182,65 @@ a {
   max-width: var(--container-prose);
 }
 
+/* Legal pages */
+.legal-band {
+  padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 7vw, 5rem);
+  background:
+    radial-gradient(90% 60% at 100% 0%, rgba(229, 168, 35, 0.06), transparent 55%),
+    linear-gradient(180deg, #faf8f4 0%, #f3efe8 100%);
+}
+
+.legal-inner h1 {
+  margin: 0.35rem 0 0.5rem;
+}
+
+.legal-updated {
+  margin: 0 0 1.25rem;
+  font-size: 0.88rem;
+  color: rgba(12, 13, 16, 0.55);
+}
+
+.legal-inner h2 {
+  margin: 1.75rem 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.legal-inner p {
+  margin: 0 0 0.85rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: rgba(12, 13, 16, 0.72);
+  max-width: 42rem;
+}
+
+.legal-inner a {
+  color: var(--gold-dark);
+  text-underline-offset: 0.15em;
+}
+
+.legal-note {
+  margin-top: 1.5rem !important;
+  font-size: 0.92rem !important;
+  color: rgba(12, 13, 16, 0.55) !important;
+}
+
+.legal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.75rem;
+}
+
+html[dir="rtl"] .legal-inner h2,
+body.lang-ar .legal-inner h2 {
+  font-family: Tajawal, var(--font-ar), sans-serif;
+  letter-spacing: 0;
+}
+
 /* Honeycomb bg */
 .honey-bg {
   position: relative;
