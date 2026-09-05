@@ -806,6 +806,15 @@ body.lang-ar .page-hub--prop .level-card--rich .med-gets-label {
 }
 
 .page-hub--launch .prop-work,
+/* Proof unit sits before film album on SpaceLaunch */
+.page-hub--launch .med-xp-unit {
+  margin-top: 0;
+  border-top: 1px solid rgba(12, 13, 16, 0.06);
+}
+.page-hub--launch .med-xp-unit + .launch-work {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+}
+
 .page-hub--launch .launch-work {
   padding: clamp(2.75rem, 5.5vw, 4.5rem) 0;
   background:
