@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 900" preserveAspectRatio="xMidYMid slice" fill="none">
+  <defs>
+    <radialGradient id="medGlow" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#7eb8ce" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#a8d4e4" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#a8d4e4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="900" fill="url(#medGlow)"/>
+  <!-- Clinical pulse rings -->
+  <g stroke="#0a5570" stroke-width="1.35" fill="none" opacity="0.22">
+    <circle cx="240" cy="340" r="42">
+      <animate attributeName="r" values="42;52;42" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.28;0.12;0.28" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="340" r="92"/>
+    <circle cx="240" cy="340" r="152"/>
+    <circle cx="240" cy="340" r="222"/>
+    <circle cx="240" cy="340" r="302"/>
+  </g>
+  <!-- Soft ECG waveform -->
+  <g stroke="#0a5570" stroke-width="1.6" fill="none" opacity="0.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-20 560 L60 560 L90 560 L110 480 L130 640 L155 520 L175 560 L260 560 L290 560 L310 500 L330 620 L355 545 L375 560 L520 560"/>
+    <path d="M-20 680 L80 680 L105 680 L120 640 L140 720 L160 665 L180 680 L520 680" opacity="0.65"/>
+  </g>
+  <!-- Fluid medical contours -->
+  <g stroke="#2a7a96" stroke-width="1.05" opacity="0.16">
+    <path d="M-30 160 C70 100 160 220 270 150 S430 90 520 170"/>
+    <path d="M-30 220 C90 160 170 280 280 210 S440 140 520 230"/>
+    <path d="M-30 780 C80 720 170 840 280 770 S440 710 520 800"/>
+  </g>
+  <!-- Subtle plus marks -->
+  <g stroke="#0a5570" stroke-width="1.2" opacity="0.12" stroke-linecap="round">
+    <path d="M72 120 V148 M58 134 H86"/>
+    <path d="M400 720 V748 M386 734 H414"/>
+    <path d="M390 110 V130 M380 120 H400"/>
+  </g>
+</svg>

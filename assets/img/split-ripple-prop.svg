@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 900" preserveAspectRatio="xMidYMid slice" fill="none">
+  <defs>
+    <radialGradient id="propGlow" cx="52%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#e8eaed" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="900" fill="url(#propGlow)"/>
+  <!-- Graphite topographic rings -->
+  <g stroke="#6b7280" stroke-width="1.15" fill="none" opacity="0.2">
+    <circle cx="240" cy="380" r="48">
+      <animate attributeName="r" values="48;58;48" dur="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.26;0.1;0.26" dur="6.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="380" r="102"/>
+    <circle cx="240" cy="380" r="166"/>
+    <circle cx="240" cy="380" r="240"/>
+    <circle cx="240" cy="380" r="324"/>
+  </g>
+  <!-- Architectural elevation contours -->
+  <g stroke="#9ca3af" stroke-width="1" opacity="0.28" fill="none">
+    <path d="M-30 130 C70 80 150 190 255 130 S420 70 510 140"/>
+    <path d="M-30 200 C85 145 165 260 270 195 S435 125 510 210"/>
+    <path d="M-30 270 C95 210 175 330 285 265 S450 195 510 280"/>
+    <path d="M-30 740 C80 685 175 805 280 745 S440 685 510 760"/>
+    <path d="M-30 810 C90 755 180 875 290 815 S450 755 510 830"/>
+  </g>
+  <!-- Fine graphite plan grid -->
+  <g stroke="#d1d5db" stroke-width="0.85" opacity="0.55">
+    <path d="M40 30 V870 M120 30 V870 M200 30 V870 M280 30 V870 M360 30 V870 M440 30 V870"/>
+    <path d="M20 80 H460 M20 200 H460 M20 320 H460 M20 440 H460 M20 560 H460 M20 680 H460 M20 800 H460" opacity="0.45"/>
+  </g>
+  <!-- Soft graphite blooms -->
+  <g fill="#9ca3af" opacity="0.07">
+    <circle cx="400" cy="190" r="95"/>
+    <circle cx="75" cy="710" r="125"/>
+  </g>
+</svg>
