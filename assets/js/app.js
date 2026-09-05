@@ -303,9 +303,14 @@
 
   function buildHeroIframe(id, title) {
     const iframe = document.createElement("iframe");
+    const origin =
+      typeof location !== "undefined" && location.origin
+        ? "&origin=" + encodeURIComponent(location.origin)
+        : "";
     iframe.src =
       `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}` +
-      "&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&vq=hd1080&hd=1";
+      "&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&vq=hd1080&hd=1&enablejsapi=1" +
+      origin;
     iframe.title = title || "Showreel";
     iframe.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
@@ -313,6 +318,7 @@
     iframe.loading = "eager";
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
     iframe.setAttribute("frameborder", "0");
+    iframe.className = "hero-autoplay-iframe";
     iframe.style.cssText =
       "position:absolute;top:50%;left:50%;width:178%;height:178%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:none;";
     return iframe;
@@ -421,9 +427,14 @@
     const crops = document.querySelectorAll("[data-hero-autoplay]");
     if (!crops.length) return;
 
+    const revealPoster = (crop) => {
+      if (!crop || crop.classList.contains("is-hero-playing")) return;
+      crop.classList.add("is-hero-playing");
+    };
+
     const mount = (crop) => {
       const id = crop.getAttribute("data-hero-autoplay");
-      if (!id || crop.querySelector("iframe")) return;
+      if (!id || crop.querySelector("iframe.hero-autoplay-iframe, iframe[src*='youtube.com/embed']")) return;
       const title = crop.getAttribute("data-hero-title") || "Showreel";
       const poster =
         crop.querySelector(":scope > .yt-facade, :scope > .hero-tri-poster, :scope > img") ||
@@ -433,6 +444,21 @@
       const containFit = fit === "contain" || crop.classList.contains("bm-video-crop--contain");
       const coverFit = fit === "cover" || crop.classList.contains("bm-video-crop--cover");
       const next = buildHeroIframe(id, title);
+
+      /* Keep the poster visible until the embed is actually playing. */
+      if (poster) {
+        poster.classList.add("hero-autoplay-poster");
+        poster.setAttribute("aria-hidden", "true");
+        if (poster.tagName === "BUTTON" || poster.classList.contains("yt-facade")) {
+          poster.setAttribute("tabindex", "-1");
+          poster.style.pointerEvents = "none";
+          if ("disabled" in poster) poster.disabled = true;
+        }
+        crop.insertBefore(next, poster);
+      } else {
+        crop.appendChild(next);
+      }
+
       if (crop.classList.contains("hero-tri-crop") || crop.closest(".hero-tri-panel")) {
         next.style.cssText =
           "position:absolute;top:50%;left:50%;width:100%;height:100%;min-width:100%;min-height:177.78%;max-width:none;transform:translate(-50%,-50%);border:0;pointer-events:none;";
@@ -443,10 +469,10 @@
       } else if (coverFill) {
         sizeCoverFillIframe(crop, next);
       }
-      if (poster) poster.replaceWith(next);
-      else crop.appendChild(next);
+
       if (containFit || coverFit || coverFill) {
         const resize = () => {
+          if (!next.isConnected) return;
           if (containFit) sizeContainIframe(crop, next);
           else if (coverFit) sizeCoverIframe(crop, next);
           else sizeCoverFillIframe(crop, next);
@@ -454,6 +480,56 @@
         resize();
         window.addEventListener("resize", resize, { passive: true });
       }
+
+      let revealed = false;
+      const reveal = () => {
+        if (revealed) return;
+        revealed = true;
+        revealPoster(crop);
+        window.removeEventListener("message", onYtMessage);
+      };
+
+      const onYtMessage = (event) => {
+        if (event.source !== next.contentWindow) return;
+        let data = event.data;
+        if (typeof data === "string") {
+          try {
+            data = JSON.parse(data);
+          } catch (err) {
+            return;
+          }
+        }
+        if (!data || typeof data !== "object") return;
+        if (data.event === "onReady") {
+          /* Player ready — give the first frame a beat, then lift the poster. */
+          window.setTimeout(reveal, 280);
+          return;
+        }
+        const state =
+          data.event === "onStateChange"
+            ? data.info
+            : data.info && typeof data.info.playerState === "number"
+              ? data.info.playerState
+              : null;
+        /* 1 = playing */
+        if (state === 1) reveal();
+      };
+      window.addEventListener("message", onYtMessage);
+
+      next.addEventListener("load", () => {
+        try {
+          next.contentWindow.postMessage(
+            JSON.stringify({ event: "listening", id: id }),
+            "https://www.youtube.com"
+          );
+        } catch (err) {
+          /* ignore cross-origin probe failures */
+        }
+        /* Fallback if the API message never arrives */
+        window.setTimeout(reveal, 1600);
+      });
+      /* Absolute fallback so the hero never stays locked on the poster */
+      window.setTimeout(reveal, 4500);
     };
 
     const io =
