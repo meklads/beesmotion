@@ -847,17 +847,26 @@
         const parts = raw.split(/[/:]/).map((n) => Number(n));
         const w = parts[0] > 0 ? parts[0] : 16;
         const h = parts[1] > 0 ? parts[1] : 9;
-        const square = w / h <= 1.15;
+        const rh = w / h;
+        const portrait = rh < 0.85;
+        const square = !portrait && rh <= 1.15;
         stage.style.setProperty("--album-ratio", `${w} / ${h}`);
         /* Inline aspect-ratio beats page-case-study 16:9 locks */
         stage.style.aspectRatio = `${w} / ${h}`;
+        stage.classList.toggle("is-portrait", portrait);
         stage.classList.toggle("is-square", square);
-        stage.classList.toggle("is-landscape", !square);
+        stage.classList.toggle("is-landscape", !square && !portrait);
         if (coverFit) {
-          stage.style.width = square ? "min(100%, 560px)" : "min(100%, 920px)";
-          stage.style.maxHeight = square
-            ? "min(70vh, 560px)"
-            : "min(70vh, 520px)";
+          if (portrait) {
+            stage.style.width = "min(100%, 420px)";
+            stage.style.maxHeight = "min(78vh, 740px)";
+          } else if (square) {
+            stage.style.width = "min(100%, 560px)";
+            stage.style.maxHeight = "min(70vh, 560px)";
+          } else {
+            stage.style.width = "min(100%, 920px)";
+            stage.style.maxHeight = "min(70vh, 520px)";
+          }
           stage.style.marginInline = "auto";
           stage.style.height = "auto";
         }

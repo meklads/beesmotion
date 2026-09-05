@@ -783,32 +783,81 @@ body.lang-ar .page-hub--prop .level-card--rich .med-gets-label {
     linear-gradient(180deg, #faf9f6 0%, #f4f1ea 100%);
 }
 
+/* Same adaptive album system as MedMotion work */
 .page-hub--launch .launch-work-album {
-  margin-top: 1.5rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
 }
 
-.page-hub--launch .prop-work .creative-album-stage {
+.page-hub--launch .launch-work .creative-album-stage {
+  display: grid;
+  place-items: center;
+}
+
+.page-hub--launch .launch-work .creative-album-player[data-album-fit="cover"] {
+  --album-ratio: 9 / 16;
+  position: relative;
+  aspect-ratio: var(--album-ratio) !important;
+  width: min(100%, 420px) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: min(78vh, 740px);
+  margin-inline: auto;
   border-radius: 18px;
   overflow: hidden;
   background: #0a0a0a;
-  box-shadow: 0 24px 50px rgba(12, 13, 16, 0.14);
+  box-shadow: 0 28px 60px rgba(12, 13, 16, 0.18);
+  transition: width 0.35s ease, max-height 0.35s ease, aspect-ratio 0.35s ease;
 }
 
-.page-hub--launch .prop-work .creative-album-player[data-album-fit="cover"] {
-  width: 100%;
-  aspect-ratio: var(--album-ratio, 16 / 9);
+.page-hub--launch .launch-work .creative-album-player[data-album-fit="cover"].is-landscape {
+  width: min(100%, 920px) !important;
+  max-height: min(70vh, 520px);
 }
 
-.page-hub--launch .prop-work .creative-album-player .yt-facade,
-.page-hub--launch .prop-work .creative-album-player .yt-facade--cover {
+.page-hub--launch .launch-work .creative-album-player[data-album-fit="cover"].is-square {
+  width: min(100%, 560px) !important;
+  max-height: min(70vh, 560px);
+}
+
+.page-hub--launch .launch-work .creative-album-player[data-album-fit="cover"].is-portrait {
+  width: min(100%, 420px) !important;
+  max-height: min(78vh, 740px);
+}
+
+.page-hub--launch .launch-work .creative-album-player .yt-facade,
+.page-hub--launch .launch-work .creative-album-player .yt-facade--cover {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.page-hub--launch .prop-work .creative-album-player .yt-facade img {
+.page-hub--launch .launch-work .creative-album-player .yt-facade img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+}
+
+.page-hub--launch .launch-work-album .creative-album-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: min(100%, 920px);
+  margin-inline: auto;
+  margin-top: clamp(0.85rem, 2vw, 1.15rem);
+}
+
+@media (max-width: 640px) {
+  .page-hub--launch .launch-work .creative-album-player[data-album-fit="cover"].is-portrait {
+    width: min(100%, 100%) !important;
+    max-height: min(78vh, 680px);
+  }
+
+  .page-hub--launch .launch-work-album .creative-album-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
 }
 
 .page-hub--launch .launch-envs {
