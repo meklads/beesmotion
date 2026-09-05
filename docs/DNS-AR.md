@@ -1,48 +1,28 @@
-# تفعيل beesmotion.com (مؤقت عبر GitHub Pages)
+# DNS — beesmotion.com (الوضع الحالي)
 
-النسخة الأحدث منشورة على GitHub Pages.  
-نشر **Cloudflare Pages** متعطّل حالياً من هذه الشبكة (`api.cloudflare.com` لا يستجيب)، لذلك الدومين يُوجَّه مؤقتاً إلى GitHub.
+## الحي الآن: GitHub Pages
 
-## 1) في Cloudflare Dashboard (دقيقتان)
+النطاق يشير إلى GitHub Pages عبر Cloudflare DNS (Proxied):
 
-1. افتح: [Cloudflare](https://dash.cloudflare.com) → **beesmotion.com** → **DNS** → **Records**.
-2. عدّل السجلات التالية (أو أضفها إن لم تكن موجودة):
+| Type  | Name | Content              | Proxy |
+| ----- | ---- | -------------------- | ----- |
+| CNAME | `@`  | `meklads.github.io`  | Proxied |
+| CNAME | `www`| `meklads.github.io`  | Proxied |
 
-| Type  | Name | Target / Content       | Proxy |
-| ----- | ---- | ---------------------- | ----- |
-| CNAME | `@`  | `meklads.github.io`    | Proxied (برتقالي) |
-| CNAME | `www`| `meklads.github.io`    | Proxied (برتقالي) |
+- SSL/TLS في Cloudflare: **Full**
+- بعد كل `git push` إلى `main` انتظر دقيقة ثم Hard Refresh
 
-3. احذف أو غيّر أي CNAME قديم يشير إلى `beesmotion.pages.dev`.
-4. (SSL) **SSL/TLS** → **Full** (ليس Flexible).
-5. انتظر 2–5 دقائق، ثم افتح: https://beesmotion.com/ مع Hard Refresh.
-
-### اختياري: `ai`
-
-| Type  | Name | Target              | Proxy |
-| ----- | ---- | ------------------- | ----- |
-| CNAME | `ai` | `meklads.github.io` | Proxied |
-
-## 2) التحقق
-
-- يجب أن يظهر في المصدر: `styles.css?v=20260905footer`
-- رابط GitHub المباشر: https://meklads.github.io/beesmotion/
-
-## 3) من الطرفية (إن وصل الـ API)
-
-```bash
-cd website
-export CLOUDFLARE_API_TOKEN="YOUR_TOKEN"   # Zone → DNS → Edit
-bash scripts/setup-github-pages-dns.sh
-```
+التحقق: في مصدر الصفحة ابحث عن `?v=20260905p0` (أو أحدث cache bust).
 
 ## العودة لاحقاً إلى Cloudflare Pages
 
-عندما يعمل `npm run deploy` مرة أخرى:
+عندما يعمل `npm run deploy` بنجاح:
 
-| Type  | Name | Target                 | Proxy |
-| ----- | ---- | ---------------------- | ----- |
-| CNAME | `@`  | `beesmotion.pages.dev` | Proxied |
-| CNAME | `www`| `beesmotion.pages.dev` | Proxied |
+| Type  | Name | Content                 | Proxy |
+| ----- | ---- | ----------------------- | ----- |
+| CNAME | `@`  | `beesmotion.pages.dev`  | Proxied |
+| CNAME | `www`| `beesmotion.pages.dev`  | Proxied |
 
-أو: `bash scripts/setup-cloudflare-dns.sh`
+أو: `bash scripts/setup-cloudflare-dns.sh` (يحتاج `CLOUDFLARE_API_TOKEN` بصلاحية DNS Edit).
+
+ملاحظة: `_redirects` و `functions/` يعملان على Cloudflare Pages فقط. على GitHub Pages صفحات `services/*` مضبوطة `noindex`.

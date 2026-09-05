@@ -1,57 +1,49 @@
 # Bees Motion Website
 
-Official marketing site for **Bees Motion** — a digital marketing agency specialized in creative content, video, and animation.
+Official marketing site for **Bees Motion** — marketing and creative content for healthcare and real estate within Tasami Group.
 
 ## Stack
 
-Static HTML, CSS, and JavaScript. Bilingual Arabic / English with client-side i18n. Deployed via GitHub Pages.
+Static HTML, CSS, and JavaScript. Bilingual Arabic / English with client-side i18n.
 
 ## Local preview
 
 ```bash
 cd website
 python3 -m http.server 8080
+# or: npm start
 ```
 
 Open http://localhost:8080
 
-## Hosting (Cloudflare Pages)
+## Hosting (current live)
 
-The live site is deployed to **Cloudflare Pages** (same Cloudflare account as Graphics House):
+**Production DNS** for [beesmotion.com](https://beesmotion.com/) currently points to **GitHub Pages** (`meklads.github.io`).
 
-- Preview: [beesmotion.pages.dev](https://beesmotion.pages.dev/)
-- Production: [beesmotion.com](https://beesmotion.com/) (after DNS below)
+- Repo: [meklads/beesmotion](https://github.com/meklads/beesmotion)
+- Push to `main` → GitHub Pages rebuild (usually 1–2 minutes)
+- Custom domain file: `CNAME` → `beesmotion.com`
 
-Pushes to `main` deploy via `.github/workflows/deploy-cloudflare-pages.yml` once these GitHub repo secrets exist:
+Cloudflare still proxies DNS (orange cloud). SSL should stay **Full**.
 
-- `CLOUDFLARE_API_TOKEN` — API token with **Account → Cloudflare Pages → Edit**
-- `CLOUDFLARE_ACCOUNT_ID` — `a617b0adb762f271f09e8e2e5b97f529`
+### Cloudflare Pages (optional / future)
 
-Manual deploy from this folder:
+The repo also supports Cloudflare Pages (`_redirects`, `functions/_middleware.js`, `npm run deploy`). Use that path when `api.cloudflare.com` is reachable and you want Pages Functions + `_redirects` behavior (service stub 301s, `ai.` host rewrite).
 
 ```bash
 npm install
 npx wrangler pages deploy . --project-name=beesmotion
 ```
 
-## Domain DNS (required once)
+Until then, treat **GitHub Pages as source of truth** for what visitors see.
 
-The zone `beesmotion.com` is on Cloudflare but had **no DNS records**. Custom domain on Pages is attached; you must add:
+### Coolify
 
-| Type   | Name | Content               | Proxy   |
-| ------ | ---- | --------------------- | ------- |
-| CNAME  | `@`  | `beesmotion.pages.dev` | Proxied |
-| CNAME  | `www` | `beesmotion.pages.dev` | Proxied |
+`nixpacks.toml` + `npm start` (`serve`) work for Coolify previews. They do **not** update beesmotion.com unless DNS points at that host.
 
-In the dashboard: **Cloudflare → beesmotion.com → DNS → Add record**.
+## DNS notes
 
-Or run locally (after `npx wrangler login` with DNS permission, or use an API token with **Zone → DNS → Edit**):
-
-```bash
-./scripts/setup-cloudflare-dns.sh
-```
-
-GitHub Pages is no longer used for this domain (removed `CNAME` file to avoid deploy timeouts). Use Cloudflare Pages only.
+See [docs/DNS-AR.md](docs/DNS-AR.md) for the live GitHub Pages CNAME targets and how to switch back to Cloudflare Pages later.
 
 ## Contact
 
