@@ -86,16 +86,49 @@
 
     const menuBtn = document.getElementById("menuBtn");
     const mobileNav = document.getElementById("mobileNav");
+    const mainEl = document.getElementById("main") || document.querySelector("main");
+    let trapHandler = null;
+
+    const getFocusable = (root) =>
+      Array.from(
+        root.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((el) => !el.hasAttribute("disabled") && el.offsetParent !== null);
+
     if (menuBtn && mobileNav) {
       const setOpen = (open) => {
         const wasOpen = mobileNav.classList.contains("open");
         mobileNav.classList.toggle("open", open);
         menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
         document.body.classList.toggle("nav-open", open);
-        if (open && !wasOpen) {
-          const first = mobileNav.querySelector("a, button");
+        if (mainEl) {
+          if (open) mainEl.setAttribute("inert", "");
+          else mainEl.removeAttribute("inert");
+        }
+        if (trapHandler) {
+          document.removeEventListener("keydown", trapHandler, true);
+          trapHandler = null;
+        }
+        if (open) {
+          trapHandler = (e) => {
+            if (e.key !== "Tab" || !mobileNav.classList.contains("open")) return;
+            const nodes = getFocusable(mobileNav);
+            if (!nodes.length) return;
+            const first = nodes[0];
+            const last = nodes[nodes.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          };
+          document.addEventListener("keydown", trapHandler, true);
+          const first = getFocusable(mobileNav)[0] || mobileNav.querySelector("a, button");
           if (first) first.focus({ preventScroll: true });
-        } else if (!open && wasOpen) {
+        } else if (wasOpen) {
           menuBtn.focus({ preventScroll: true });
         }
       };
@@ -174,6 +207,11 @@
         mobileNav.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");
         document.body.classList.toggle("nav-open", false);
+        if (mainEl) mainEl.removeAttribute("inert");
+        if (trapHandler) {
+          document.removeEventListener("keydown", trapHandler, true);
+          trapHandler = null;
+        }
         menuBtn.focus({ preventScroll: true });
         closed = true;
       }
@@ -272,9 +310,15 @@
   function syncLangUrl(lang) {
     try {
       const url = new URL(window.location.href);
-      if (url.searchParams.get("lang") === lang) return;
-      url.searchParams.set("lang", lang);
-      window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+      if (lang === "en") {
+        if (!url.searchParams.has("lang")) return;
+        url.searchParams.delete("lang");
+      } else {
+        if (url.searchParams.get("lang") === lang) return;
+        url.searchParams.set("lang", lang);
+      }
+      const q = url.searchParams.toString();
+      window.history.replaceState({}, "", url.pathname + (q ? "?" + q : "") + url.hash);
     } catch (_) {}
   }
 

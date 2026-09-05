@@ -1,5 +1,5 @@
 :root {
-  /* Bees Motion palette */
+
   --gold: #e5a823;
   --gold-light: #f5c84d;
   --gold-dark: #b8860b;
@@ -22,10 +22,10 @@
   --header-h: 88px;
   --section-y: clamp(72px, 8vw, 110px);
   --section-gap: clamp(28px, 3.5vw, 48px);
-  /* Dual width: prose focus vs media breadth (not Ruwaq 96rem, not old 1240 only) */
-  --container: 84rem; /* ~1344px — default */
-  --container-media: 92rem; /* ~1472px — albums / reels */
-  --container-prose: 72rem; /* ~1152px — long case copy */
+
+  --container: 84rem;
+  --container-media: 92rem;
+  --container-prose: 72rem;
   --gutter: clamp(1.25rem, 3vw, 2.5rem);
   --font-ar: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
   --font-en: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
@@ -61,7 +61,6 @@ body.lang-en {
   font-family: var(--font-en);
 }
 
-/* —— GH / ProjectLaunch typography scale —— */
 .font-headline-xl {
   font-family: var(--font-ar);
   font-size: clamp(1.85rem, 3.4vw, 2.75rem);
@@ -182,7 +181,6 @@ a {
   max-width: var(--container-prose);
 }
 
-/* Legal pages */
 .legal-band {
   padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 7vw, 5rem);
   background:
@@ -241,7 +239,6 @@ body.lang-ar .legal-inner h2 {
   letter-spacing: 0;
 }
 
-/* Honeycomb bg */
 .honey-bg {
   position: relative;
 }
@@ -250,7 +247,6 @@ body.lang-ar .legal-inner h2 {
   display: none;
 }
 
-/* Header */
 .site-header {
   position: fixed;
   top: 0;
@@ -317,7 +313,6 @@ body.lang-ar .legal-inner h2 {
   opacity: 1;
 }
 
-/* Case study dropdown */
 .nav-dd {
   position: relative;
 }
@@ -680,7 +675,6 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   opacity: 1;
 }
 
-/* Hero — white split, centered content (not full screen) */
 .bm-hero {
   position: relative;
   margin-top: var(--header-h);
@@ -717,7 +711,6 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   min-width: 0;
 }
 
-/* Video sound toggle — default muted, optional unmute */
 .bm-sound-toggle {
   position: absolute;
   z-index: 8;
@@ -870,7 +863,6 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   transform: scale(1.03);
 }
 
-/* YouTube Short — taller stage, same gold frame */
 .bm-video-crop--embed iframe {
   object-fit: cover;
 }
@@ -1022,7 +1014,6 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   }
 }
 
-/* Case study heroes — same split language as homepage */
 .bm-hero--case {
   background: #fafaf8;
 }
@@ -1103,7 +1094,6 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   }
 }
 
-/* Metrics strip */
 .bm-metrics {
   background: var(--ink);
   padding: 72px 0;
@@ -1154,7 +1144,6 @@ html[dir="rtl"] .mobile-nav-dd-panel {
   }
 }
 
-/* Sections */
 section {
   padding: var(--section-y) 0;
   position: relative;
@@ -1191,7 +1180,6 @@ section {
   color: var(--gold-light);
 }
 
-/* About */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1605,7 +1593,6 @@ a.eco-card:hover {
   margin: 0 0 16px;
 }
 
-/* Services */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1640,7 +1627,6 @@ a.eco-card:hover {
   line-height: 1.75;
 }
 
-/* Creative */
 .creative-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1660,7 +1646,6 @@ a.eco-card:hover {
   font-size: 1.1rem;
 }
 
-/* Process steps — GH oval methodology */
 .bm-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1718,7 +1703,6 @@ a.eco-card:hover {
   margin: 0;
 }
 
-/* Goals */
 .goals-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1748,7 +1732,6 @@ a.eco-card:hover {
   line-height: 1.75;
 }
 
-/* Pricing — outcome cards */
 #packages .section-head .font-body-md {
   max-width: 36rem;
   margin-inline: auto;
@@ -2003,7 +1986,6 @@ a.eco-card:hover {
   }
 }
 
-/* Clients — horizontal logo strip (never stack) */
 #work {
   padding: clamp(56px, 8vw, 96px) 0;
   background: #f7f8fb;
@@ -2055,7 +2037,6 @@ body.lang-ar .clients-band .clients-label {
   width: 100%;
 }
 
-/* Client trust tickets — head matches clients-band (in-section only, no page sticky) */
 .trust-tickets {
   background: #f7f8fa;
   padding: clamp(2.25rem, 4.5vw, 3.25rem) 0 clamp(2.5rem, 5vw, 3.75rem);
@@ -2154,8 +2135,8 @@ body.lang-ar .trust-ticket-track {
 .trust-ticket {
   flex: 0 0 clamp(210px, 22vw, 250px);
   display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 0.75rem;
+  grid-template-rows: 1fr auto auto;
+  gap: 0.45rem;
   padding: 1rem 0.95rem 1.05rem;
   background: #fff;
   border: 1px solid rgba(18, 20, 26, 0.08);
@@ -2176,6 +2157,14 @@ body.lang-ar .trust-ticket-track {
   overflow: hidden;
 }
 
+.trust-ticket-name {
+  margin: 0;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #5c6478;
+}
+
 .trust-ticket-org {
   margin: 0;
   text-align: center;
@@ -2188,6 +2177,11 @@ body.lang-ar .trust-ticket-track {
 html[dir="rtl"] .trust-ticket-org,
 body.lang-ar .trust-ticket-org {
   letter-spacing: 0;
+}
+
+html[dir="rtl"] .trust-ticket-name,
+body.lang-ar .trust-ticket-name {
+  font-family: var(--font-ar);
 }
 
 @media (max-width: 720px) {
@@ -2289,7 +2283,6 @@ body.lang-ar .clients-track {
   }
 }
 
-/* Contact */
 .contact-trust {
   max-width: 640px;
   margin: 0 auto 28px;
@@ -2390,6 +2383,14 @@ html[dir="rtl"] .contact-form select {
 .contact-form textarea:focus,
 .contact-form select:focus {
   outline: none;
+  border-bottom-color: var(--gold);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.contact-form select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
   border-bottom-color: var(--gold);
 }
 
@@ -2506,7 +2507,6 @@ body.has-sol-sticky .wa-float {
   }
 }
 
-/* Footer — deep forest + soft green caustic ripples */
 .site-footer {
   position: relative;
   background:
@@ -2620,7 +2620,6 @@ body.has-sol-sticky .wa-float {
   width: 100%;
 }
 
-/* Keep Latin product names readable, but pin them to the RTL column edge */
 [dir="rtl"] .footer-col-title[dir="ltr"] {
   direction: ltr;
   unicode-bidi: isolate;
@@ -2630,7 +2629,6 @@ body.has-sol-sticky .wa-float {
   font-size: 0.78rem;
 }
 
-/* Arabic company title: avoid Latin uppercase tracking */
 [dir="rtl"] .footer-col-title:not([dir="ltr"]) {
   letter-spacing: 0.02em;
   text-transform: none;
@@ -2675,7 +2673,6 @@ body.has-sol-sticky .wa-float {
   border-color: #fff;
 }
 
-/* Affiliation + sister brands + rights as one centered identity cluster */
 .footer-mid {
   display: flex;
   justify-content: center;
@@ -2776,7 +2773,6 @@ body.has-sol-sticky .wa-float {
   margin-bottom: 32px;
 }
 
-/* Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -2905,7 +2901,6 @@ body.has-sol-sticky .wa-float {
   }
 }
 
-/* ===== Case Study page ===== */
 .page-case-study .cs-hero {
   position: relative;
   margin-top: var(--header-h);
@@ -3139,7 +3134,6 @@ body.has-sol-sticky .wa-float {
   font-weight: 300;
 }
 
-/* GH portfolio-level series cards (white) */
 .pf-head {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -3487,7 +3481,6 @@ body.lang-en .pf-card.is-active .pf-card-cta {
   }
 }
 
-/* Case study hub + crumbs */
 .cs-crumb {
   padding-top: calc(var(--header-h) + 18px);
   padding-bottom: 0;
@@ -3704,7 +3697,6 @@ body.lang-en .pf-card.is-active .pf-card-cta {
   }
 }
 
-/* ===== Solution-style case study (ProjectLaunch rhythm, white) ===== */
 .page-sol {
   background: #ffffff;
 }
@@ -4638,7 +4630,6 @@ body.lang-en .sol-ready-list li {
   }
 }
 
-/* ===== ProjectLaunch cinematic hero (plh) ===== */
 .page-sol .site-header {
   background: rgba(255, 255, 255, 0.92);
 }
@@ -4915,7 +4906,6 @@ body.lang-en .sol-ready-list li {
   }
 }
 
-/* ===== Case study quality elevation ===== */
 .sol-strip {
   background: #0a0a0a;
   color: #fff;
@@ -4956,7 +4946,6 @@ body.lang-en .sol-ready-list li {
   font-weight: 400;
 }
 
-/* IMC partnership seal — premium certificate */
 .page-sol .sol-strip--seal,
 .sol-strip--seal {
   position: relative;
@@ -5419,7 +5408,6 @@ body.has-sol-sticky {
   }
 }
 
-/* ===== Pocket-spirit film hero refinements ===== */
 .plh--film .plh-media iframe,
 .plh--film .plh-video {
   position: absolute;
@@ -5432,7 +5420,7 @@ body.has-sol-sticky {
 }
 
 .plh--film .plh-media iframe {
-  /* scale to hide YouTube chrome / letterbox */
+
   width: 100vw;
   height: 56.25vw;
   min-height: 100%;
@@ -5466,7 +5454,6 @@ body.has-sol-sticky {
   margin-bottom: clamp(64px, 16vh, 160px);
 }
 
-/* Trust logos — horizontal marquee (never stacked) */
 .sol-trust {
   padding: clamp(40px, 5vw, 56px) 0;
   background: #f7f8fb;
@@ -5579,7 +5566,6 @@ body.lang-ar .sol-trust-track {
   }
 }
 
-/* Journey path */
 .sol-journey {
   padding: clamp(64px, 9vw, 110px) 0;
   background: #ffffff;
@@ -5631,7 +5617,6 @@ body.lang-ar .sol-trust-track {
   font-weight: 300;
 }
 
-/* Soften strip after trust */
 .page-sol .sol-strip:not(.sol-strip--seal) {
   background: #111;
 }
@@ -5680,7 +5665,6 @@ body.lang-ar .sol-trust-track {
   }
 }
 
-/* Signature solutions */
 .signature-band {
   padding: clamp(56px, 8vw, 96px) 0;
   background: #fff;
@@ -5701,7 +5685,6 @@ body.lang-ar .sol-trust-track {
   padding-inline: 2px;
 }
 
-/* LTR isolate keeps ™ after the Latin brand name in RTL pages */
 .brand-mark {
   display: inline-flex;
   align-items: baseline;
@@ -5755,7 +5738,6 @@ body.lang-ar .sol-trust-track {
   margin-bottom: 0.35em;
 }
 
-/* Industry title chips */
 .systems-title {
   display: flex;
   flex-wrap: wrap;
@@ -5848,7 +5830,6 @@ body.lang-ar .sector-mark {
   color: var(--navy);
 }
 
-/* Why Bees Motion */
 .why-band {
   padding: clamp(56px, 8vw, 96px) 0;
   background: var(--navy);
@@ -5905,7 +5886,6 @@ body.lang-ar .sector-mark {
   font-size: 14px;
 }
 
-/* 5-step flow */
 .flow-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -5965,7 +5945,6 @@ body.lang-ar .sector-mark {
   }
 }
 
-/* Five capability pillars */
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -6053,7 +6032,6 @@ body.lang-ar .sector-mark {
   }
 }
 
-/* —— Light premium refinements (2026 reposition) —— */
 .band-soft {
   background: #fafaf8 !important;
 }
@@ -6281,10 +6259,6 @@ body.lang-ar .sector-mark {
   }
 }
 
-/* =========================================================
-   DESIGN ELEVATION — creative agency light system
-   ========================================================= */
-
 .band-paper { background: var(--paper); }
 .band-warm {
   background:
@@ -6307,7 +6281,6 @@ body.lang-ar .sector-mark {
 .band-ink .svc-tag { color: var(--gold-light); }
 .band-ink .svc-tag::before { background: var(--gold-light); }
 
-/* Subtle grain / studio texture */
 .bm-hero--studio::before,
 .band-paper.has-index::before,
 .creative-band::before {
@@ -6397,7 +6370,6 @@ html[dir="rtl"] .bm-hero--studio::after {
   color: rgba(255,255,255,0.05);
 }
 
-/* Hero ticker */
 .hero-ticker {
   margin-top: clamp(28px, 4vw, 40px);
   overflow: hidden;
@@ -6437,7 +6409,6 @@ html[dir="rtl"] .hero-ticker-track {
   to { transform: translateX(50%); }
 }
 
-/* Caps bar polish */
 .hero-caps-bar {
   display: flex;
   flex-wrap: wrap;
@@ -6466,7 +6437,6 @@ html[dir="rtl"] .hero-ticker-track {
   opacity: 0.8;
 }
 
-/* Creative production elevation */
 .creative-band {
   overflow: hidden;
 }
@@ -6516,7 +6486,6 @@ html[dir="rtl"] .hero-ticker-track {
   transform: none;
 }
 
-/* Pillars */
 .pillar-card {
   border-radius: 20px;
   padding: 28px 22px;
@@ -6531,7 +6500,6 @@ html[dir="rtl"] .hero-ticker-track {
   font-weight: 750;
 }
 
-/* Process on ink */
 .band-ink .flow-step,
 .flow-grid--on-ink .flow-step {
   background: rgba(255,255,255,0.04);
@@ -6558,7 +6526,6 @@ html[dir="rtl"] .hero-ticker-track {
   letter-spacing: 0.08em;
 }
 
-/* Why on ink */
 .why-band.band-ink {
   background:
     radial-gradient(80% 60% at 90% 10%, rgba(229,168,35,0.16), transparent 50%),
@@ -6581,7 +6548,6 @@ html[dir="rtl"] .hero-ticker-track {
 .why-band.band-ink .why-card p { color: rgba(255,255,255,0.68); }
 .why-band.band-ink .why-num { color: var(--gold-light); }
 
-/* Agency rail */
 .agency-band--rail {
   background: var(--paper) !important;
   color: var(--on-bg) !important;
@@ -6601,7 +6567,6 @@ html[dir="rtl"] .hero-ticker-track {
   border-inline-start: 4px solid var(--gold);
 }
 
-/* Signature / systems / work */
 .signature-card,
 .systems-card,
 .work-case {
@@ -6633,7 +6598,6 @@ html[dir="rtl"] .hero-ticker-track {
     linear-gradient(165deg, #fff 0%, #faf8f4 100%);
 }
 
-/* Packages */
 .pkg-card {
   border-radius: 22px;
   background: rgba(255,255,255,0.92);
@@ -6649,7 +6613,6 @@ html[dir="rtl"] .hero-ticker-track {
   transform: translateY(-6px);
 }
 
-/* About hex polish */
 .hex-stack {
   display: grid;
   gap: 12px;
@@ -6674,7 +6637,6 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   letter-spacing: -0.02em;
 }
 
-/* Buttons — sharper agency feel */
 .btn-pill {
   border-radius: 999px;
   font-family: var(--font-display);
@@ -6709,7 +6671,6 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   background: transparent;
 }
 
-/* Eco / contact */
 .eco-card {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -6791,7 +6752,6 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   padding: clamp(24px, 3vw, 36px);
 }
 
-/* Reveal motion upgrade */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -6803,7 +6763,6 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   transform: none;
 }
 
-/* Header glass */
 .site-header {
   background: rgba(255,255,255,0.86) !important;
   backdrop-filter: saturate(1.2) blur(14px);
@@ -6824,7 +6783,6 @@ body.lang-ar .nav-desktop a {
   font-weight: 500;
 }
 
-/* Video frame on hero */
 .bm-hero-video .bm-video-crop {
   border-radius: 22px;
   box-shadow:
@@ -6832,7 +6790,6 @@ body.lang-ar .nav-desktop a {
     0 0 0 1px rgba(229,168,35,0.22);
 }
 
-/* Spacing rhythm helpers */
 .section-head + .pillar-grid,
 .section-head + .systems-grid,
 .section-head + .signature-grid,
@@ -6871,7 +6828,6 @@ body.lang-ar .nav-desktop a {
   max-width: var(--container) !important;
 }
 
-/* Stagger children */
 .pillar-grid .reveal:nth-child(1),
 .flow-grid .reveal:nth-child(1),
 .why-grid .reveal:nth-child(1),
@@ -6890,10 +6846,6 @@ body.lang-ar .nav-desktop a {
 .pillar-grid .reveal:nth-child(5),
 .flow-grid .reveal:nth-child(5),
 .prod-grid .prod-tile:nth-child(5) { transition-delay: 0.26s; }
-
-/* =========================================================
-   VISUAL MEDIA SYSTEM — section photography + portfolio proof
-   ========================================================= */
 
 .has-bg-media {
   isolation: isolate;
@@ -6916,7 +6868,6 @@ body.lang-ar .nav-desktop a {
 }
 .has-bg-media > * { position: relative; z-index: 1; }
 
-/* About visual */
 .about-visual {
   display: grid;
   gap: 14px;
@@ -7019,7 +6970,6 @@ body.lang-ar .nav-desktop a {
   border: 0;
 }
 
-/* Industry media cards */
 .systems-card--media {
   padding: 0;
   overflow: hidden;
@@ -7049,7 +6999,6 @@ body.lang-ar .nav-desktop a {
   flex: 1;
 }
 
-/* Signature media */
 .signature-card--media {
   padding: 0;
   overflow: hidden;
@@ -7075,7 +7024,6 @@ body.lang-ar .nav-desktop a {
   gap: 10px;
 }
 
-/* Work cases + reel */
 .work-case--media {
   padding: 0;
   overflow: hidden;
@@ -7115,7 +7063,6 @@ body.lang-ar .nav-desktop a {
   box-shadow: 0 14px 36px rgba(12,13,16,0.1);
 }
 
-/* Agency split */
 .agency-band--split {
   background: var(--paper) !important;
   color: var(--on-bg) !important;
@@ -7149,10 +7096,6 @@ body.lang-ar .nav-desktop a {
 @media (max-width: 560px) {
   .work-reel { grid-template-columns: 1fr 1fr; gap: 8px; }
 }
-
-/* =========================================================
-   ABOUT + CREATIVE — layout rewrite (aligned & cinematic)
-   ========================================================= */
 
 .about-section .container {
   display: flex;
@@ -7336,10 +7279,6 @@ body.lang-ar .nav-desktop a {
     flex: 1 1 100%;
   }
 }
-
-/* =========================================================
-   ENGAGEMENT MODELS — no public pricing
-   ========================================================= */
 
 .engage-section .pkg-group-label {
   margin-top: 8px;
@@ -7526,12 +7465,6 @@ body.lang-ar .nav-desktop a {
   background: rgba(229,168,35,0.12) !important;
   border-color: rgba(229,168,35,0.5) !important;
 }
-
-/* Creative section title — cleaner editorial scale */
-
-/* =========================================================
-   CINEMATIC HERO + editorial motion language
-   ========================================================= */
 
 .bm-hero--cinema {
   padding: clamp(48px, 7vw, 88px) 0 clamp(28px, 4vw, 48px);
@@ -7787,10 +7720,6 @@ body.lang-ar .nav-desktop a {
   }
 }
 
-/* =========================================================
-   CREATIVE STUDIO — unified full-width gallery (EN = AR)
-   ========================================================= */
-
 .creative-band {
   padding: var(--section-y) 0;
   overflow: hidden;
@@ -7958,7 +7887,7 @@ html[dir="rtl"] .creative-stat-note {
 }
 
 html[dir="rtl"] .creative-studio-ctas {
-  justify-content: flex-start; /* flex-start follows direction */
+  justify-content: flex-start;
 }
 
 @media (max-width: 900px) {
@@ -8013,7 +7942,6 @@ html[dir="rtl"] .creative-studio-ctas {
   }
 }
 
-/* Creative studio — facade + AR parity polish */
 .creative-shot .yt-facade--cover img {
   max-width: none;
   height: 100%;
@@ -8048,12 +7976,6 @@ html[dir="rtl"] .creative-stat span {
   min-height: 48px;
   padding-inline: 22px;
 }
-
-/* =========================================================
-   MOBILE / MEDIA HARDENING — responsive + video fill
-   ========================================================= */
-
-/* hero main reel sizing handled in HERO REEL block below */
 
 .work-reel-item iframe,
 .creative-shot iframe,
@@ -8182,11 +8104,6 @@ html[dir="rtl"] .creative-stat span {
   }
 }
 
-/* =========================================================
-   HERO REEL — same frame language as case-study PropMotion
-   (16:9 crop, gold L-brackets, soft radius) + corner cards
-   ========================================================= */
-
 .hero-frame--main {
   inset: auto 6% 14% 0;
   width: min(100%, 560px);
@@ -8217,7 +8134,7 @@ html[dir="rtl"] .creative-stat span {
 }
 
 .hero-frame--main .bm-video-crop iframe {
-  /* Vertical Short → fill 16:9 by cropping top/bottom (middle kept) */
+
   position: absolute;
   inset: auto;
   top: 50%;
@@ -8242,7 +8159,6 @@ html[dir="rtl"] .creative-stat span {
   justify-content: flex-start;
 }
 
-/* Keep Healthcare / Real estate as floating corner cards */
 .hero-frame--a {
   width: min(44%, 220px);
   inset-inline-end: 0;
@@ -8280,7 +8196,6 @@ html[dir="rtl"] .creative-stat span {
   }
 }
 
-/* Case study heroes — same reel crop fill as homepage */
 .bm-hero-video .bm-video-crop--hero-reel {
   aspect-ratio: 16 / 9 !important;
   border-radius: 22px;
@@ -8311,7 +8226,6 @@ html[dir="rtl"] .creative-stat span {
   }
 }
 
-/* Vertical short fill — any hero-reel crop (case study featured too) */
 .bm-video-crop--hero-reel iframe {
   position: absolute;
   inset: auto;
@@ -8329,11 +8243,6 @@ html[dir="rtl"] .creative-stat span {
   object-fit: cover;
   object-position: center;
 }
-
-/* =========================================================
-   HEADING SYSTEM — unified Plus Jakarta Sans (EN)
-   Match PropMotion™ light geometric agency look
-   ========================================================= */
 
 html[dir="ltr"] body,
 body.lang-en {
@@ -8372,7 +8281,6 @@ body.lang-en .creative-studio-title {
   text-rendering: optimizeLegibility;
 }
 
-/* PropMotion-like weight: light–regular for product/section titles */
 html[dir="ltr"] .font-headline-xl,
 body.lang-en .font-headline-xl,
 html[dir="ltr"] .sol-h2,
@@ -8391,7 +8299,6 @@ body.lang-en .bm-hero--case h1.font-headline-xl {
   letter-spacing: -0.04em;
 }
 
-/* Homepage cinema hero: slightly firmer, still not heavy */
 html[dir="ltr"] .hero-display,
 body.lang-en .hero-display {
   font-weight: 500 !important;
@@ -8418,7 +8325,6 @@ body.lang-en .font-headline-md {
   letter-spacing: -0.02em;
 }
 
-/* Arabic typography — same stack as Graphics House AR (Tajawal → IBM Plex) */
 html[dir="rtl"] body,
 body.lang-ar {
   font-family: var(--font-ar);
@@ -8474,10 +8380,6 @@ body.lang-ar .bm-hero-em {
   font-family: var(--font-ar) !important;
   font-weight: 700 !important;
 }
-
-/* =========================================================
-   CREATIVE ALBUM — large stage + thumbnail strip
-   ========================================================= */
 
 .creative-album {
   display: flex;
@@ -8609,10 +8511,6 @@ html[dir="rtl"] .creative-album-player .bento-label {
     padding: 5px 8px;
   }
 }
-
-/* =========================================================
-   SERIES ALBUM — IMC / case-study film series
-   ========================================================= */
 
 .series-album {
   display: flex;
@@ -9016,7 +8914,6 @@ html[dir="rtl"] .series-album-meta strong {
   }
 }
 
-/* legacy gallery rules kept inert if markup removed */
 .creative-gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -9038,10 +8935,6 @@ html[dir="rtl"] .series-album-meta strong {
   box-shadow: 0 28px 70px rgba(12, 13, 16, 0.16);
 }
 
-/* =========================================================
-   CONTENT WIDTH — dual measure (default + media + prose)
-   ========================================================= */
-
 .footer-inner {
   width: 100%;
   max-width: var(--container);
@@ -9062,7 +8955,6 @@ html[dir="rtl"] .series-album-meta strong {
   max-width: var(--container-prose);
 }
 
-/* Thank-you page */
 .thanks-band {
   min-height: calc(100svh - var(--header-h) - 120px);
   display: flex;
@@ -9109,11 +9001,6 @@ html[dir="rtl"] .series-album-meta strong {
     --gutter: clamp(1rem, 4.5vw, 1.25rem);
   }
 }
-
-
-/* =========================================================
-   SMART SYSTEMS — Bees Motion (within Tasami Group)
-   ========================================================= */
 
 .smart-home-band {
   padding: clamp(64px, 9vw, 110px) 0;
@@ -9225,7 +9112,6 @@ html[dir="rtl"] .series-album-meta strong {
   color: var(--navy);
 }
 
-/* Accent card — force light text after base rules */
 .smart-home-card.smart-home-card--accent,
 .smart-home-card.smart-home-card--accent h3,
 .smart-home-card.smart-home-card--accent p,
@@ -9479,10 +9365,6 @@ html[dir="rtl"] .smart-hero-panel h2 {
   }
 }
 
-
-/* Footer affiliation pill — gold link handled by .footer-affiliation a */
-
-/* —— Dual pillars: MedMotion × PropMotion (light) —— */
 .pillars-band {
   padding: clamp(3.25rem, 6vw, 5.5rem) 0;
   background:
@@ -9654,7 +9536,6 @@ html[dir="rtl"] .smart-hero-panel h2 {
   cursor: pointer;
 }
 
-/* Portrait thumbs (oar2) fill the phone; landscape medical stills cover-crop to center */
 .short-crop-media .yt-facade img,
 .short-crop-media .yt-facade--cover img {
   position: absolute !important;
@@ -9680,7 +9561,6 @@ html[dir="rtl"] .smart-hero-panel h2 {
   transform-origin: center center !important;
 }
 
-/* Playback: oversized iframe centered — crops YouTube chrome / letterbox */
 .short-crop-media iframe {
   position: absolute !important;
   top: 50% !important;
@@ -9696,7 +9576,7 @@ html[dir="rtl"] .smart-hero-panel h2 {
 }
 
 .short-crop-media--short iframe {
-  /* Vertical shorts: zoom into center to hide top/bottom UI */
+
   min-width: 100% !important;
   min-height: 125% !important;
 }
@@ -9755,7 +9635,6 @@ html[dir="rtl"] .pillar-panel h3 .brand-mark {
   font-family: var(--font-display);
 }
 
-
 .pillar-panel--med {
   border-color: rgba(15, 90, 120, 0.14);
   background:
@@ -9797,7 +9676,6 @@ html[dir="rtl"] .pillar-panel h3 .brand-mark {
   }
 }
 
-
 .smart-home-grid--2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -9817,8 +9695,6 @@ html[dir="rtl"] .pillar-panel h3 .brand-mark {
 }
 .smart-home-card--prop .smart-home-kicker { color: #8a5a00; }
 
-
-/* —— Full-bleed dual pillar hero (GH strip energy, Bees Motion identity) —— */
 .bm-hero--splitwall {
   position: relative;
   padding: 0;
@@ -10030,8 +9906,6 @@ html[dir="rtl"] .pillar-panel h3 .brand-mark {
   }
 }
 
-
-/* Header over full-bleed dark hero */
 body:has(.bm-hero--splitwall) .site-header {
   background: rgba(8, 10, 14, 0.55);
   border-bottom-color: rgba(255,255,255,0.08);
@@ -10068,8 +9942,6 @@ body:has(.bm-hero--splitwall) .site-header.scrolled .brand-logo {
   filter: none;
 }
 
-
-/* ===== Bees Motion reposition: light editorial homepage ===== */
 .bm-hero--editorial {
   padding: clamp(7.5rem, 14vh, 9.5rem) 0 clamp(3.5rem, 7vh, 5.5rem);
   background:
@@ -10612,7 +10484,6 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
 }
 .work-filter:hover { border-color: var(--ink); }
 
-/* Tighter homepage bands after dual hero */
 .sector-bridge {
   padding: clamp(1.75rem, 3.5vw, 2.5rem) 0;
 }
@@ -10665,18 +10536,12 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   }
 }
 
-
-/* Fail-safe: first viewport never stays invisible if JS breaks */
 .bm-hero--editorial .reveal,
 .bm-hero .reveal:first-child {
   opacity: 1;
   transform: none;
 }
 
-
-
-
-/* ===== Tri-panel hero: Med | Copy | Prop ===== */
 .bm-hero--tri {
   padding: 0;
   margin: 0;
@@ -10744,7 +10609,6 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   pointer-events: none;
 }
 
-/* Strong white blooms from inner corners — same family as center paper */
 .hero-tri-veil--med {
   background:
     radial-gradient(140% 95% at 100% 0%, #fffcf8 0%, rgba(255, 252, 248, 0.85) 22%, rgba(255, 252, 248, 0.35) 42%, transparent 62%),
@@ -10768,7 +10632,6 @@ html[dir="rtl"] .system-flow li:not(:last-child)::after {
   pointer-events: none;
 }
 
-/* Extra hard edge wash into the center column */
 .hero-tri-panel--med::after {
   background:
     linear-gradient(90deg, transparent 40%, rgba(255, 252, 248, 0.35) 70%, rgba(255, 252, 248, 0.85) 88%, #fffcf8 100%),
@@ -10865,7 +10728,6 @@ html[dir="rtl"] .hero-tri-copy {
   }
 }
 
-/* header stays readable over light center; no invert needed */
 body:has(.bm-hero--tri) .site-header {
   background: rgba(255, 252, 248, 0.88);
   backdrop-filter: blur(10px);
@@ -10889,7 +10751,6 @@ body:has(.bm-hero--tri) .site-header {
   }
 }
 
-/* ===== Homepage dual-pane hero: PropMotion | MedMotion ===== */
 .bm-hero--dual {
   --hero-medical-blue: #b7d6e6;
   --hero-medical-blue-deep: #9fc7db;
@@ -10911,7 +10772,6 @@ body:has(.bm-hero--tri) .site-header {
   isolation: isolate;
 }
 
-/* Soft diagonal seam between the two markets */
 .hero-dual::after {
   content: "";
   position: absolute;
@@ -10948,7 +10808,6 @@ body:has(.bm-hero--tri) .site-header {
   padding-inline-end: calc(clamp(1.35rem, 3.2vw, 2.75rem) + 1.25rem);
 }
 
-/* White pane extends past center on a diagonal */
 .hero-dual-pane--prop::after {
   content: "";
   position: absolute;
@@ -11245,7 +11104,7 @@ body.lang-en .hero-dual-title {
     order: 2;
     padding-inline-start: 1.15rem;
     padding-top: 2.35rem;
-    /* Diagonal handoff when stacked */
+
     clip-path: polygon(0 1.65rem, 100% 0, 100% 100%, 0 100%);
     margin-top: -0.35rem;
   }
@@ -11260,7 +11119,6 @@ body.lang-en .hero-dual-title {
   }
 }
 
-/* ===== Service cards as links + under-construction pages ===== */
 a.axis-card--link {
   display: flex;
   flex-direction: column;
@@ -11287,7 +11145,6 @@ a.axis-card--link .axis-more {
   border-bottom: none;
 }
 
-/* ===== Unified homepage type rhythm ===== */
 .section-head .font-headline-xl,
 .sector-bridge-inner .font-headline-xl,
 .sector-detail-head .font-headline-xl,
@@ -11355,7 +11212,6 @@ body.lang-en .axis-card h3 {
   font-weight: 500;
 }
 
-/* ===== Service under-construction page ===== */
 .page-svc-soon .svc-soon-band {
   margin-top: var(--header-h);
   min-height: calc(100svh - var(--header-h));
@@ -11430,8 +11286,6 @@ body.lang-en .axis-card h3 {
   margin-top: 0;
 }
 
-
-/* ===== Sector hub pages ===== */
 .hub-hero {
   margin-top: var(--header-h);
   padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(2rem, 4vw, 3rem);
@@ -11502,7 +11356,6 @@ body.lang-en .axis-card h3 {
   }
 }
 
-/* ===== Sitewide chrome polish after homepage system ===== */
 .nav-desktop a.is-active,
 .mobile-nav a.is-active {
   color: var(--gold-dark);
@@ -11530,7 +11383,6 @@ body.lang-en .axis-card h3 {
   flex: 1;
 }
 
-/* Legacy solution / case pages: denser type matching home */
 .page-sol .font-body-md,
 .page-case-study .font-body-md,
 .page-case-hub .font-body-md,
@@ -11552,7 +11404,6 @@ body.lang-en .axis-card h3 {
   padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
-/* Medical album on case-study hub */
 .page-case-hub .cs-med-album {
   padding: clamp(2.25rem, 4.5vw, 3.5rem) 0;
   border-top: 1px solid rgba(12, 13, 16, 0.06);
@@ -11568,7 +11419,6 @@ body.lang-en .axis-card h3 {
   margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
-/* Still photo stage inside series albums */
 .series-split-still {
   margin: 0;
   display: block;
@@ -11585,9 +11435,6 @@ body.lang-en .axis-card h3 {
   display: block;
 }
 
-/* =========================================================
-   Case study elevation — MedMotion + PropMotion sales pages
-   ========================================================= */
 .page-case-imc {
   --case-wash: #b7d6e6;
   --case-wash-soft: #eaf3f8;
@@ -11691,7 +11538,6 @@ body.lang-ar .page-case-study .bm-hero--case .bm-hero-em {
     0 0 0 1px rgba(79, 143, 173, 0.22);
 }
 
-/* Unified section type */
 .page-case-study .sol-eyebrow,
 .page-case-study .svc-tag,
 .page-case-study .pf-head .sol-eyebrow {
@@ -11735,7 +11581,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
 }
 
-/* Dark rhythm bands */
 .page-case-study .cs-band-ink {
   background:
     radial-gradient(ellipse 70% 80% at 15% 0%, rgba(229, 168, 35, 0.12), transparent 50%),
@@ -11793,7 +11638,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   color: #9cc9dd;
 }
 
-/* Quiz cards stay white → ink text (never inherit band light color) */
 .page-case-study .cs-band-ink .sol-quiz-item {
   background: #fff;
   border-color: rgba(12, 13, 16, 0.08);
@@ -11853,7 +11697,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Clinical wash for medical album */
 .page-case-imc .cs-band-clinical {
   background:
     linear-gradient(180deg, #dceaf2 0%, #eaf3f8 40%, #f4f8fb 100%);
@@ -11876,7 +11719,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   outline-color: rgba(79, 143, 173, 0.55);
 }
 
-/* Series / proof media polish */
 .page-case-study .series-stack {
   padding-top: clamp(3rem, 5vw, 4.5rem);
   padding-bottom: clamp(3rem, 5vw, 4.5rem);
@@ -11938,7 +11780,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* Cross-sell */
 .cs-xsell {
   padding: clamp(2.75rem, 5vw, 4rem) 0;
 }
@@ -11998,7 +11839,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   color: #0e2a3d;
 }
 
-/* Close / story polish */
 .page-case-study .sol-close {
   padding: clamp(3.5rem, 6vw, 5rem) 0;
 }
@@ -12032,10 +11872,6 @@ body.lang-ar .page-case-study .creative-studio-title {
   }
 }
 
-/* =========================================================
-   DAMAC-inspired LP power (pattern only, Bees Motion brand)
-   Bold offer bars · mega stats · enquire density · hero scale
-   ========================================================= */
 .lp-offer {
   position: relative;
   z-index: 2;
@@ -12229,7 +12065,6 @@ body.lang-ar .lp-enquire-title {
   border-color: #fff;
 }
 
-/* Hub hero scale — DAMAC-like impact */
 .page-hub .hub-hero {
   padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2.5rem, 5vw, 3.75rem);
 }
@@ -12292,7 +12127,6 @@ body.lang-ar .lp-enquire-title {
   box-shadow: 0 16px 36px rgba(18, 20, 26, 0.06);
 }
 
-/* Case pages: bigger proof medals + sticky power */
 .page-case-study .sol-seal-medal strong {
   font-size: clamp(1.75rem, 3.5vw, 2.6rem);
 }
@@ -12367,7 +12201,6 @@ body.lang-ar .lp-enquire-title {
   }
 }
 
-/* Unified media frame on case pages (skip adaptive album stages) */
 .page-case-study .bm-video-crop:not([data-album-fit="cover"]),
 .page-case-study .creative-album-player:not([data-album-fit="cover"]),
 .page-case-study .series-split-still {
@@ -12402,7 +12235,6 @@ body.lang-ar .lp-enquire-title {
   object-fit: cover;
 }
 
-/* Adaptive medical album on IMC case (same system as MedMotion work) */
 .page-case-imc .cs-med-album .cs-med-work-album .creative-album-stage {
   display: grid;
   place-items: center;
@@ -12492,7 +12324,6 @@ body.lang-ar .lp-enquire-title {
   gap: 10px;
 }
 
-/* DAMAC-like hero offer line + CTA weight */
 .page-case-study .lp-hero-offer {
   margin: 0.85rem 0 0;
   font-size: 0.78rem;
@@ -12517,7 +12348,6 @@ body.lang-ar .lp-enquire-title {
   font-weight: 700;
 }
 
-/* Showcase: icons + video (DAMAC foundation pattern) */
 .cs-showcase {
   padding: clamp(3rem, 6vw, 4.75rem) 0;
   background:
@@ -12626,7 +12456,6 @@ body.lang-ar .lp-enquire-title {
   border-color: var(--gold-light);
 }
 
-/* MedMotion DAMAC-style full-bleed hero */
 .hub-hero--bleed {
   position: relative;
   margin-top: var(--header-h);
@@ -12662,7 +12491,7 @@ body.lang-ar .lp-enquire-title {
 }
 
 .hub-hero--bleed .hub-hero-veil {
-  /* Darken the physical right — where hero copy sits */
+
   background:
     linear-gradient(
       to left,
@@ -12681,7 +12510,7 @@ body.lang-ar .lp-enquire-title {
 .hub-hero--bleed .hub-hero-inner {
   position: relative;
   z-index: 2;
-  /* Pin copy to the extreme physical right, with breathing room from the edge */
+
   justify-self: right;
   width: min(100%, 36rem);
   max-width: 36rem;
@@ -12823,8 +12652,6 @@ body.lang-ar .lp-legacy-title {
   }
 }
 
-
-/* MedMotion bleed hero — tilted landscape reel + copy */
 .hub-hero--with-reel {
   align-items: center;
 }
@@ -13042,7 +12869,6 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   }
 }
 
-/* PropMotion bleed hero — warm gold luxury overlay on bright villa */
 .hub-hero--bleed.hub-hero--prop {
   background: #12141a;
 }
@@ -13095,10 +12921,6 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   }
 }
 
-/* =========================================================
-   HOMEPAGE V2 — centered stage: video + copy side by side
-   ========================================================= */
-
 .bm-hero--v2 {
   position: relative;
   margin-top: var(--header-h);
@@ -13107,15 +12929,14 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   align-items: center;
   justify-items: center;
   overflow: hidden;
-  /* DAMAC-like deep forest base */
+
   background:
     radial-gradient(ellipse 95% 70% at 50% 110%, rgba(18, 52, 40, 0.55), transparent 58%),
     linear-gradient(165deg, #071510 0%, #040e0b 42%, #0a1c14 100%);
-  /* Extra room so the tilted frame isn’t clipped */
+
   padding: clamp(2.75rem, 6.5vh, 4.25rem) var(--gutter);
 }
 
-/* Soft caustic ribbons — subtle green light ripples */
 .bm-hero--v2::before,
 .bm-hero--v2::after {
   content: "";
@@ -13149,7 +12970,6 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   animation: bmAuraDrift 42s ease-in-out infinite alternate-reverse;
 }
 
-/* Keep aura wrapper inert — ribbons removed (were too strong) */
 .bm-hero-v2-aura {
   display: none;
 }
@@ -13172,7 +12992,6 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   }
 }
 
-/* Centered mid unit — video + copy side by side */
 .bm-hero-v2-stage {
   position: relative;
   z-index: 1;
@@ -13181,7 +13000,7 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   margin-inline: auto;
   display: grid;
   grid-template-columns: minmax(360px, 500px) minmax(260px, 34rem);
-  /* Breathing room between tilted reel and copy */
+
   gap: clamp(2.75rem, 5.5vw, 4.25rem);
   align-items: center;
   justify-content: center;
@@ -13203,7 +13022,7 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
     0 28px 70px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.06);
   justify-self: stretch;
-  /* Gentle left tilt — cool without competing with copy */
+
   transform: rotate(-5deg);
   transform-origin: center center;
   margin-block: 0.75rem;
@@ -13271,7 +13090,6 @@ html[dir="rtl"] .hub-hero--with-reel .hub-hero-inner {
   max-width: none !important;
 }
 
-/* Keep hero poster visible until the YouTube embed starts playing */
 [data-hero-autoplay] {
   --hero-poster-fade: 0.55s;
 }
@@ -13352,7 +13170,7 @@ body.lang-ar .bm-hero-v2-inner {
 
 html[dir="ltr"] .bm-hero-v2-eyebrow,
 body.lang-en .bm-hero-v2-eyebrow {
-  /* Match Arabic rhythm — light tracking, not wide caps */
+
   letter-spacing: 0.04em;
   text-transform: none;
   font-weight: 700;
@@ -13430,7 +13248,6 @@ body.lang-en .bm-hero-v2-eyebrow {
   max-width: 30rem;
 }
 
-/* Sector hubs reuse homepage hero stage system */
 .bm-hero--v2-med {
   background:
     radial-gradient(ellipse 90% 65% at 80% 20%, rgba(10, 85, 112, 0.35), transparent 55%),
@@ -13459,10 +13276,6 @@ body.lang-en .bm-hero-v2-eyebrow {
   border-color: #ffd666;
 }
 
-/*
-  MedMotion reel content is square (1:1) inside a 16:9 YouTube frame.
-  Match the stage to 1:1 so true cover fills the black area and shows the full film.
-*/
 .bm-hero--v2-med .bm-hero-v2-media {
   aspect-ratio: 1 / 1;
   min-height: 0;
@@ -13544,7 +13357,6 @@ body.lang-ar .bm-hero--v2 .bm-hero-v2-ctas {
   box-sizing: border-box;
 }
 
-/* Primary CTA was invisible on dark (btn-on-dark had no base styles) */
 .bm-hero--v2 .btn-on-dark {
   background: #f7f6f2;
   color: #0c1210;
@@ -13679,7 +13491,6 @@ body.lang-ar .bm-hero-v2-title {
   }
 }
 
-/* ── Dual market atelier: two cinematic chambers, one living seam ── */
 .bm-split-panes {
   --pane-med: #061820;
   --pane-prop: #141210;
@@ -13722,7 +13533,6 @@ body.lang-ar .bm-split-panes {
   pointer-events: none;
 }
 
-/* Soft light pools only — no motifs, no noise */
 .bm-split-panes::before {
   left: 0;
   background:
@@ -13863,7 +13673,6 @@ body.lang-ar .bm-split-panes::after {
   }
 }
 
-/* Sector gateway — atelier chambers */
 .sector-gateway {
   position: relative;
   isolation: isolate;
@@ -13889,7 +13698,6 @@ body.lang-ar .bm-split-panes::after {
   position: relative;
 }
 
-/* Vertical light seam behind the face */
 .sector-gateway-stage::before,
 .work-feature-stage::before {
   content: "";
@@ -14192,7 +14000,6 @@ body.lang-ar .sector-gate-kicker {
   }
 }
 
-/* Selected work — light band, dark type (matches body sections) */
 .work-feature-band {
   position: relative;
   isolation: isolate;
@@ -14200,7 +14007,6 @@ body.lang-ar .sector-gate-kicker {
   color: var(--ink);
 }
 
-/* Split selected work — same atelier chambers */
 .work-feature-band--split {
   overflow: hidden;
   color: var(--pane-ink, #f3f0ea);
@@ -14483,7 +14289,6 @@ body.lang-en .work-feature-cta {
   }
 }
 
-/* Capabilities — progressive flow, no card catalogue */
 .system-flow--rich {
   display: flex;
   flex-wrap: nowrap;
@@ -14583,7 +14388,6 @@ body.lang-ar .system-flow--rich li:not(:last-child)::after {
   color: #3d5560;
 }
 
-/* Slim engagement strip — not a traditional agency packages wall */
 .engage-strip {
   padding: clamp(1.5rem, 3.5vw, 2.25rem) 0;
   background: #f4f1ea;
@@ -14740,7 +14544,6 @@ body.lang-ar .engage-strip-title {
   }
 }
 
-/* Contact dark band — polished form layout */
 .contact-band-v2 {
   position: relative;
   padding: clamp(3.75rem, 7.5vw, 6rem) 0;
@@ -14877,6 +14680,13 @@ body.lang-ar .contact-band-v2 .contact-form select {
   box-shadow: 0 0 0 3px rgba(229, 168, 35, 0.18);
 }
 
+.contact-band-v2 .contact-form input:focus-visible,
+.contact-band-v2 .contact-form select:focus-visible,
+.contact-band-v2 .contact-form textarea:focus-visible {
+  outline: 2px solid #e5a823;
+  outline-offset: 2px;
+}
+
 .contact-band-v2 .contact-form textarea {
   min-height: 7.5rem;
   resize: vertical;
@@ -15008,7 +14818,6 @@ body.lang-ar .contact-band-v2 .contact-form select {
   }
 }
 
-/* V2b — hero YT crop, agency strip, engage foot, hub xsell */
 .engage-foot {
   display: flex;
   justify-content: center;
@@ -15058,10 +14867,6 @@ body.lang-ar .contact-band-v2 .contact-form select {
   color: var(--ink);
   max-width: 36rem;
 }
-
-/* =========================================================
-   MedMotion — healthcare service pillars
-   ========================================================= */
 
 .med-pillars {
   --med-ink: #0f2a36;
@@ -15308,8 +15113,6 @@ body.lang-ar .med-pillar-panel p {
   }
 }
 
-
-/* PropMotion products + capability chips */
 .prop-product-flow {
   margin: 0.75rem 0 1.25rem;
   font-size: 0.82rem;
@@ -15348,7 +15151,6 @@ body.lang-ar .med-pillar-panel p {
   margin-bottom: 0.5rem;
 }
 
-/* MedMotion core vs advanced */
 .med-tier-label {
   margin: 0 0 0.85rem;
   font-size: 0.78rem;
@@ -15385,8 +15187,6 @@ body.lang-ar .med-pillar-panel p {
   }
 }
 
-
-/* Case study delivery ownership */
 .bm-delivery {
   margin: 0.35rem 0 0.85rem;
   font-size: 0.82rem;
@@ -15395,13 +15195,11 @@ body.lang-ar .med-pillar-panel p {
   font-weight: 600;
 }
 
-
 .field-optional {
   font-weight: 500;
   opacity: 0.65;
   font-size: 0.85em;
 }
-
 
 .series-all-lines {
   margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
@@ -15414,7 +15212,6 @@ body.lang-ar .med-pillar-panel p {
   color: rgba(20, 40, 30, 0.72);
 }
 
-/* ── MedMotion hub pitch page (v4) ───────────────────────────── */
 .page-hub--med .med-define {
   padding-block: clamp(3rem, 6vw, 4.5rem);
 }
@@ -15669,7 +15466,6 @@ body.lang-ar .med-pillar-panel p {
   }
 }
 
-/* MedMotion service deliverables */
 .page-hub--med .med-gets-label {
   margin: 0.85rem 0 0.45rem;
   font-size: 0.78rem;
@@ -15708,7 +15504,6 @@ html[dir="rtl"] .page-hub--med .med-gets-label {
   text-transform: none;
 }
 
-/* Advanced pillars: distinct surface from core 01–04 */
 .page-hub--med .med-pillar--adv {
   background: linear-gradient(165deg, #e8f3f7 0%, #dceef4 100%);
   border-color: rgba(10, 85, 112, 0.22);
@@ -15728,7 +15523,6 @@ html[dir="rtl"] .page-hub--med .med-gets-label {
   border-color: rgba(10, 85, 112, 0.16);
 }
 
-/* Homepage FAQ */
 .home-faq {
   padding: clamp(3rem, 6vw, 4.5rem) 0;
   background: #faf9f6;
@@ -15773,7 +15567,6 @@ html[dir="rtl"] .page-hub--med .med-gets-label {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
 
-/* —— Homepage: three capability work lanes —— */
 .work-cap-band {
   background:
     radial-gradient(ellipse 70% 50% at 10% 0%, rgba(10, 85, 112, 0.06), transparent 55%),
