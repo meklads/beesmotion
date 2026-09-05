@@ -369,12 +369,13 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 /* Same adaptive album system as MedMotion work */
 .page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"] {
-  --album-ratio: 16 / 9;
+  --album-ratio: 1 / 1;
+  position: relative;
   aspect-ratio: var(--album-ratio) !important;
-  width: min(100%, 920px) !important;
+  width: min(100%, 560px) !important;
   min-height: 0 !important;
   height: auto !important;
-  max-height: min(70vh, 520px);
+  max-height: min(70vh, 560px);
   margin-inline: auto;
   border-radius: 18px;
   overflow: hidden;
@@ -393,6 +394,11 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
   max-height: min(70vh, 560px);
 }
 
+.page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"].is-portrait {
+  width: min(100%, 420px) !important;
+  max-height: min(78vh, 740px);
+}
+
 .page-hub--prop .prop-work .creative-album-player .yt-facade,
 .page-hub--prop .prop-work .creative-album-player .yt-facade--cover {
   position: absolute;
@@ -408,6 +414,30 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.page-hub--prop .prop-work-album .creative-album-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: min(100%, 920px);
+  margin-inline: auto;
+  margin-top: clamp(0.85rem, 2vw, 1.15rem);
+}
+
+.page-hub--prop .prop-work .section-head {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 40rem;
+}
+
+@media (max-width: 640px) {
+  .page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"].is-square,
+  .page-hub--prop .prop-work .creative-album-player[data-album-fit="cover"].is-portrait {
+    width: min(100%, 100%) !important;
+  }
+
+  .page-hub--prop .prop-work-album .creative-album-strip {
+    gap: 0.55rem;
+  }
 }
 
 /* Keep ™ after PropMotion / MedMotion in any direction */
