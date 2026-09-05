@@ -1,38 +1,48 @@
-# تفعيل beesmotion.com (خطوة واحدة في Cloudflare)
+# تفعيل beesmotion.com (مؤقت عبر GitHub Pages)
 
-الموقع **جاهز** على: https://beesmotion.pages.dev  
-النطاق **beesmotion.com** لا يعمل لأن **لا توجد سجلات DNS** في Cloudflare (النطاق موجود لكن فارغ).
+النسخة الأحدث منشورة على GitHub Pages.  
+نشر **Cloudflare Pages** متعطّل حالياً من هذه الشبكة (`api.cloudflare.com` لا يستجيب)، لذلك الدومين يُوجَّه مؤقتاً إلى GitHub.
 
-## الحل (دقيقتان)
+## 1) في Cloudflare Dashboard (دقيقتان)
 
-1. افتح: [Cloudflare Dashboard](https://dash.cloudflare.com) → اختر **beesmotion.com** → **DNS** → **Records**.
-2. أضف **سجلين**:
+1. افتح: [Cloudflare](https://dash.cloudflare.com) → **beesmotion.com** → **DNS** → **Records**.
+2. عدّل السجلات التالية (أو أضفها إن لم تكن موجودة):
 
-| Type  | Name | Target / Content        | Proxy status |
-| ----- | ---- | ----------------------- | ------------ |
-| CNAME | `@`  | `beesmotion.pages.dev`  | Proxied (برتقالي) |
-| CNAME | `www`| `beesmotion.pages.dev`  | Proxied (برتقالي) |
+| Type  | Name | Target / Content       | Proxy |
+| ----- | ---- | ---------------------- | ----- |
+| CNAME | `@`  | `meklads.github.io`    | Proxied (برتقالي) |
+| CNAME | `www`| `meklads.github.io`    | Proxied (برتقالي) |
 
-3. انتظر 2–5 دقائق، ثم افتح: https://beesmotion.com/
+3. احذف أو غيّر أي CNAME قديم يشير إلى `beesmotion.pages.dev`.
+4. (SSL) **SSL/TLS** → **Full** (ليس Flexible).
+5. انتظر 2–5 دقائق، ثم افتح: https://beesmotion.com/ مع Hard Refresh.
 
-### من Pages (بديل)
+### اختياري: `ai`
 
-**Workers & Pages** → **beesmotion** → **Custom domains** → بجانب `beesmotion.com` اضغط **Set up DNS** أو **Activate** إن ظهر — Cloudflare يضيف السجلات تلقائياً.
+| Type  | Name | Target              | Proxy |
+| ----- | ---- | ------------------- | ----- |
+| CNAME | `ai` | `meklads.github.io` | Proxied |
 
----
+## 2) التحقق
 
-## رابط مؤقت
+- يجب أن يظهر في المصدر: `styles.css?v=20260905footer`
+- رابط GitHub المباشر: https://meklads.github.io/beesmotion/
 
-حتى يُفعَّل النطاق: https://meklads.github.io/beesmotion/
-
----
-
-## من الطرفية (اختياري)
-
-أنشئ [API Token](https://dash.cloudflare.com/profile/api-tokens) بصلاحية **Zone → DNS → Edit** لـ `beesmotion.com`، ثم:
+## 3) من الطرفية (إن وصل الـ API)
 
 ```bash
 cd website
-export CLOUDFLARE_API_TOKEN="YOUR_TOKEN"
-bash scripts/setup-cloudflare-dns.sh
+export CLOUDFLARE_API_TOKEN="YOUR_TOKEN"   # Zone → DNS → Edit
+bash scripts/setup-github-pages-dns.sh
 ```
+
+## العودة لاحقاً إلى Cloudflare Pages
+
+عندما يعمل `npm run deploy` مرة أخرى:
+
+| Type  | Name | Target                 | Proxy |
+| ----- | ---- | ---------------------- | ----- |
+| CNAME | `@`  | `beesmotion.pages.dev` | Proxied |
+| CNAME | `www`| `beesmotion.pages.dev` | Proxied |
+
+أو: `bash scripts/setup-cloudflare-dns.sh`
