@@ -13348,10 +13348,20 @@ body.lang-en .bm-hero-v2-eyebrow {
   color: rgba(247, 246, 242, 0.82);
 }
 
+.bm-hero-v2-position {
+  margin: 0.85rem 0 0;
+  max-width: 28rem;
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+  line-height: 1.45;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(247, 246, 242, 0.9);
+}
+
 .bm-hero-v2-markets,
 .bm-hero-v2-systems {
-  margin: 0.1rem 0 0;
-  font-size: 0.92rem;
+  margin: 0.55rem 0 0;
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   word-spacing: 0.12em;
@@ -13361,6 +13371,7 @@ body.lang-en .bm-hero-v2-eyebrow {
 .bm-hero-v2-systems {
   color: rgba(245, 200, 77, 0.88);
   font-weight: 600;
+  font-size: 0.84rem;
 }
 
 .bm-hero-v2-offer {
@@ -15711,4 +15722,174 @@ html[dir="rtl"] .page-hub--med .med-gets-label {
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* —— Homepage: three capability work lanes —— */
+.work-cap-band {
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 0%, rgba(10, 85, 112, 0.06), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 95% 10%, rgba(201, 162, 39, 0.07), transparent 50%),
+    #f6f4ef;
+  color: var(--ink);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+}
+
+.work-cap-band .section-head .font-headline-xl {
+  color: var(--ink) !important;
+}
+
+.work-cap-band .section-head .font-body-md {
+  color: #3d3d3d !important;
+  opacity: 1;
+  max-width: 36rem;
+}
+
+.work-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.85rem, 2vw, 1.25rem);
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.work-cap {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.08);
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.3s ease, box-shadow 0.35s ease;
+}
+
+.work-cap:hover {
+  transform: translateY(-4px);
+  border-color: rgba(12, 13, 16, 0.16);
+  box-shadow: 0 18px 44px rgba(12, 13, 16, 0.08);
+}
+
+.work-cap-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0c1216;
+}
+
+.work-cap-media picture,
+.work-cap-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.work-cap:hover .work-cap-media img {
+  transform: scale(1.04);
+}
+
+.work-cap-body {
+  display: grid;
+  gap: 0.35rem;
+  padding: clamp(1rem, 2.2vw, 1.35rem);
+  align-content: start;
+}
+
+.work-cap-num {
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: rgba(12, 13, 16, 0.35);
+}
+
+.work-cap-lane {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dark, #b8860b);
+}
+
+html[dir="rtl"] .work-cap-lane,
+body.lang-ar .work-cap-lane {
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.work-cap--growth .work-cap-lane { color: #0a5570; }
+.work-cap--re .work-cap-lane { color: #9a7a12; }
+.work-cap--xp .work-cap-lane { color: #5a4630; }
+
+.work-cap-title {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+html[dir="rtl"] .work-cap-title,
+body.lang-ar .work-cap-title {
+  font-family: var(--font-ar);
+}
+
+.work-cap-title sup {
+  font-size: 0.55em;
+}
+
+.work-cap-role {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #5a5a5a;
+}
+
+.work-cap-proof {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.work-cap-proof li {
+  display: flex;
+  gap: 0.45rem;
+  align-items: baseline;
+  padding: 0.45rem 0.55rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: #4a4a4a;
+  background: rgba(12, 13, 16, 0.035);
+}
+
+.work-cap--growth .work-cap-proof li { background: rgba(10, 85, 112, 0.07); }
+.work-cap--re .work-cap-proof li { background: rgba(201, 162, 39, 0.1); }
+.work-cap--xp .work-cap-proof li { background: rgba(90, 70, 48, 0.08); }
+
+.work-cap-proof strong {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.work-cap-cta {
+  margin-top: 0.65rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--gold-dark, #b8860b);
+}
+
+.work-cap--growth .work-cap-cta { color: #0a5570; }
+.work-cap--xp .work-cap-cta { color: #5a4630; }
+
+@media (max-width: 960px) {
+  .work-cap-grid {
+    grid-template-columns: 1fr;
+  }
 }
