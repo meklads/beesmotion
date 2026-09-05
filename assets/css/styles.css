@@ -2055,7 +2055,7 @@ body.lang-ar .clients-band .clients-label {
   width: 100%;
 }
 
-/* Client trust tickets — compact horizontal loop */
+/* Client trust tickets — head matches clients-band (in-section only, no page sticky) */
 .trust-tickets {
   background: #f7f8fa;
   padding: clamp(2.25rem, 4.5vw, 3.25rem) 0 clamp(2.5rem, 5vw, 3.75rem);
@@ -2063,8 +2063,56 @@ body.lang-ar .clients-band .clients-label {
   overflow: hidden;
 }
 
-.trust-tickets .section-head {
-  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+.trust-tickets-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trust-tickets-head {
+  width: 100%;
+  margin: 0 0 1.15rem;
+  text-align: center;
+}
+
+.trust-label {
+  width: 100%;
+  margin: 0 0 0.35rem;
+  text-align: center;
+  font-family: var(--font-en);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #3d3d3d;
+}
+
+.trust-label::before,
+.trust-label::after {
+  content: none;
+  display: none;
+}
+
+html[dir="rtl"] .trust-label,
+body.lang-ar .trust-label {
+  font-family: var(--font-ar);
+}
+
+.trust-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+html[dir="rtl"] .trust-title,
+body.lang-ar .trust-title {
+  font-family: var(--font-ar);
+  font-weight: 700;
 }
 
 .trust-ticket-rail {
