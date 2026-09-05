@@ -2320,18 +2320,24 @@ body.has-sol-sticky .wa-float {
   padding-bottom: clamp(1.75rem, 3vw, 2.25rem);
   border-bottom: 1px solid rgba(229, 168, 35, 0.38);
   align-items: start;
+  direction: inherit;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 0.85rem;
   max-width: 22rem;
+  text-align: start;
 }
 
 .footer-col {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
 }
 
 .footer-logo {
@@ -2355,9 +2361,10 @@ body.has-sol-sticky .wa-float {
   line-height: 1.6;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.68);
+  text-align: start;
 }
 
-.footer-cta { margin-top: 0.25rem; }
+.footer-cta { margin-top: 0.25rem; align-self: flex-start; }
 
 .footer-col-title {
   margin: 0 0 0.95rem;
@@ -2368,6 +2375,17 @@ body.has-sol-sticky .wa-float {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-align: start;
+  width: 100%;
+}
+
+/* Keep Latin product names readable, but pin them to the RTL column edge */
+[dir="rtl"] .footer-col-title[dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: right;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
 }
 
 /* Arabic company title: avoid Latin uppercase tracking */
@@ -2375,14 +2393,16 @@ body.has-sol-sticky .wa-float {
   letter-spacing: 0.02em;
   text-transform: none;
   font-size: 0.88rem;
+  text-align: start;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 0.5rem;
   text-align: start;
+  width: 100%;
 }
 
 .footer-links a {
