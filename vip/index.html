@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIP · Bees Motion</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Private landing page index" />
+    <link rel="canonical" href="https://beesmotion.com/vip/" />
+    <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0c0d10;
+        --muted: #5a6570;
+        --med: #0a5570;
+        --line: rgba(12, 13, 16, 0.1);
+        --bg: #f3f6f8;
+        --gold: #c9a227;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Tajawal", "Plus Jakarta Sans", sans-serif;
+        background:
+          radial-gradient(ellipse 70% 50% at 10% 0%, rgba(10, 85, 112, 0.08), transparent 55%),
+          var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+      .wrap {
+        width: min(720px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 3rem 0 4rem;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--med);
+        font-weight: 800;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        margin: 0 0 0.4rem;
+        font-size: clamp(1.6rem, 4vw, 2rem);
+        font-weight: 700;
+      }
+      .sub {
+        margin: 0 0 1.75rem;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+      .gate,
+      .vault {
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 1.35rem 1.25rem;
+      }
+      .gate label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 0.45rem;
+      }
+      .gate input {
+        width: 100%;
+        padding: 0.75rem 0.9rem;
+        border: 1px solid var(--line);
+        font: inherit;
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+      .gate button,
+      .vault .btn {
+        appearance: none;
+        border: 0;
+        background: var(--med);
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        padding: 0.7rem 1.1rem;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .gate .err {
+        margin: 0.65rem 0 0;
+        color: #a11;
+        font-size: 0.88rem;
+        display: none;
+      }
+      .gate .err.is-on { display: block; }
+      .vault[hidden] { display: none !important; }
+      .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.75rem;
+      }
+      .list a {
+        display: grid;
+        gap: 0.2rem;
+        text-decoration: none;
+        color: inherit;
+        padding: 1rem 1.05rem;
+        border: 1px solid var(--line);
+        background: #fafbfc;
+        transition: border-color 0.2s ease, transform 0.2s ease;
+      }
+      .list a:hover {
+        border-color: rgba(10, 85, 112, 0.35);
+        transform: translateY(-1px);
+      }
+      .list strong {
+        font-size: 1.02rem;
+        color: var(--med);
+      }
+      .list span {
+        font-size: 0.82rem;
+        color: var(--muted);
+        word-break: break-all;
+        direction: ltr;
+        text-align: left;
+      }
+      .list em {
+        font-style: normal;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--gold);
+      }
+      .actions {
+        margin-top: 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        align-items: center;
+      }
+      .actions button.ghost {
+        background: transparent;
+        color: var(--med);
+        border: 1px solid rgba(10, 85, 112, 0.35);
+      }
+      .note {
+        margin-top: 1.25rem;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="brand" href="/">Bees Motion · VIP</a>
+      <h1>صفحة خاصة</h1>
+      <p class="sub">فهرس صفحات اللاندنج والعروض الخاصة — للرجوع السريع دون نسيانها.</p>
+
+      <div class="gate" id="gate">
+        <form id="vipForm">
+          <label for="vipPass">كلمة المرور</label>
+          <input id="vipPass" type="password" inputmode="numeric" autocomplete="current-password" required />
+          <button type="submit">دخول</button>
+          <p class="err" id="vipErr">كلمة المرور غير صحيحة.</p>
+        </form>
+      </div>
+
+      <div class="vault" id="vault" hidden>
+        <ul class="list">
+          <li>
+            <a href="/offers/medmotion-hospital-pilot/?for=%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%20%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A">
+              <em>MedMotion™ · Offer</em>
+              <strong>Hospital Content Pilot — المركز الطبي الدولي</strong>
+              <span>https://beesmotion.com/offers/medmotion-hospital-pilot/?for=المركز الطبي الدولي</span>
+            </a>
+          </li>
+          <li>
+            <a href="/offers/medmotion-hospital-pilot/">
+              <em>MedMotion™ · Offer</em>
+              <strong>Hospital Content Pilot — صفحة العرض العامة</strong>
+              <span>https://beesmotion.com/offers/medmotion-hospital-pilot/</span>
+            </a>
+          </li>
+          <li>
+            <a href="/launch-halls/?lang=ar#environments-proof">
+              <em>SpaceLaunch™</em>
+              <strong>صالات الإطلاق — إثبات تنفيذ / مشاريع ناجحة</strong>
+              <span>https://beesmotion.com/launch-halls/?lang=ar#environments-proof</span>
+            </a>
+          </li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="/" style="text-decoration:none">الموقع الرئيسي</a>
+          <button type="button" class="btn ghost" id="vipLock">قفل الصفحة</button>
+        </div>
+        <p class="note">أضف لاحقاً أي لاندنج بيج جديدة هنا. الصفحة غير مفهرسة (noindex).</p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var KEY = "bm-vip-ok";
+        var PASS = "54321";
+        var gate = document.getElementById("gate");
+        var vault = document.getElementById("vault");
+        var form = document.getElementById("vipForm");
+        var err = document.getElementById("vipErr");
+
+        function unlock() {
+          gate.hidden = true;
+          vault.hidden = false;
+          try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
+        }
+        function lock() {
+          vault.hidden = true;
+          gate.hidden = false;
+          err.classList.remove("is-on");
+          try { sessionStorage.removeItem(KEY); } catch (e) {}
+        }
+
+        try {
+          if (sessionStorage.getItem(KEY) === "1") unlock();
+        } catch (e) {}
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var val = document.getElementById("vipPass").value.trim();
+          if (val === PASS) {
+            unlock();
+            document.getElementById("vipPass").value = "";
+          } else {
+            err.classList.add("is-on");
+          }
+        });
+        document.getElementById("vipLock").addEventListener("click", lock);
+      })();
+    </script>
+  </body>
+</html>
