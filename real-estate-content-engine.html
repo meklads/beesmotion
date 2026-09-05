@@ -35,8 +35,8 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260905notickface" />
-    <link rel="stylesheet" href="assets/css/rce.css?v=20260905score95" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260905heroWork3" />
+    <link rel="stylesheet" href="/assets/css/rce.css?v=20260905rceNav" />
   </head>
   <body class="lang-en page-rce">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -569,13 +569,12 @@
       <span data-i18n="floatingWa">WhatsApp</span>
     </a>
 
-    <script src="assets/js/app.js?v=20260905tickets"></script>
+    <script src="/assets/js/site-config.js?v=20260905ga4fix"></script>
+    <script src="/assets/js/translations.js?v=20260905rceNav"></script>
     <script>
-      document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
-
+      /* Page copy merged into site i18n; nav uses the global Arabic menu keys. */
       (function () {
-        var KEY = "bm-lang-v3";
-        var I18N = {
+        var PAGE = {
           ar: {
             skip: "تخطي إلى المحتوى",
             brandSub: "محرك المحتوى العقاري",
@@ -925,81 +924,71 @@
             waPrefix: "PropMotion / Real Estate Content Engine inquiry",
           },
         };
-
-        function getLang() {
-          try {
-            var lang = localStorage.getItem(KEY);
-            return lang === "en" || lang === "ar" ? lang : "en";
-          } catch (e) {
-            return "en";
-          }
-        }
-
-        function applyLang(lang) {
-          var dict = I18N[lang] || I18N.en;
-          document.documentElement.lang = lang;
-          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-          document.body.classList.toggle("lang-ar", lang === "ar");
-          document.body.classList.toggle("lang-en", lang === "en");
-          document.querySelectorAll("[data-i18n]").forEach(function (el) {
-            var key = el.getAttribute("data-i18n");
-            if (dict[key] != null) el.textContent = dict[key];
-          });
-          document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
-            btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
-          });
-          if (dict.metaTitle) document.title = dict.metaTitle;
-          var meta = document.querySelector('meta[name="description"]');
-          if (meta && dict.metaDesc) meta.setAttribute("content", dict.metaDesc);
-          try {
-            localStorage.setItem(KEY, lang);
-          } catch (e) {}
-        }
-
-        document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            applyLang(btn.getAttribute("data-lang"));
-          });
+        if (!window.BM_I18N) window.BM_I18N = { ar: {}, en: {} };
+        Object.assign(window.BM_I18N.ar, PAGE.ar || {});
+        Object.assign(window.BM_I18N.en, PAGE.en || {});
+        /* Ensure primary nav is fully Arabic when AR is active (page dict was incomplete). */
+        Object.assign(window.BM_I18N.ar, {
+          navWork: "الأعمال",
+          navHealthcare: "الرعاية الصحية",
+          navRealEstate: "العقار",
+          navCapabilities: "القدرات",
+          navSolutions: "حلول",
+          navContact: "تواصل معنا",
+          navCsProp: "عقار",
+          navCsMed: "طبي",
+          navLaunchHalls: "صالات الإطلاق",
+          navPrivacy: "سياسة الخصوصية",
+          navTerms: "شروط الاستخدام",
+          navReEngine: "محرك العقار",
+          ctaNav: "ابدأ مشروعك",
+          floatingWa: "واتساب",
+          footerCompany: "الشركة",
+          footerYoutube: "يوتيوب",
+          footerRights: "جميع الحقوق محفوظة",
+          footerSectors: "القطاعان",
+          pillarPropCta2: "دراسة حالة عقارية",
+          pillarMedCta: "دراسة حالة IMC",
         });
-
-        var menuBtn = document.getElementById("menuBtn");
-        var mobileNav = document.getElementById("mobileNav");
-        if (menuBtn && mobileNav) {
-          menuBtn.addEventListener("click", function () {
-            var open = !mobileNav.classList.contains("open");
-            mobileNav.classList.toggle("open", open);
-            menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-            document.body.classList.toggle("nav-open", open);
-          });
-          mobileNav.querySelectorAll("a").forEach(function (a) {
-            a.addEventListener("click", function () {
-              mobileNav.classList.remove("open");
-              menuBtn.setAttribute("aria-expanded", "false");
-              document.body.classList.remove("nav-open");
-            });
-          });
-        }
-
-        var header = document.querySelector(".site-header");
-        if (header) {
-          var onScroll = function () {
-            header.classList.toggle("scrolled", window.scrollY > 8);
-          };
-          window.addEventListener("scroll", onScroll, { passive: true });
-          onScroll();
-        }
-
-        document.querySelectorAll(".reveal").forEach(function (el) {
-          el.classList.add("visible");
+        Object.assign(window.BM_I18N.en, {
+          navWork: "Work",
+          navHealthcare: "Healthcare",
+          navRealEstate: "Real Estate",
+          navCapabilities: "Capabilities",
+          navSolutions: "Solutions",
+          navContact: "Contact",
+          navCsProp: "Real Estate",
+          navCsMed: "Healthcare",
+          navLaunchHalls: "Launch halls",
+          navPrivacy: "Privacy policy",
+          navTerms: "Terms of use",
+          navReEngine: "Real Estate Engine",
+          ctaNav: "Start a project",
+          floatingWa: "WhatsApp",
+          footerCompany: "Company",
+          footerYoutube: "YouTube",
+          footerRights: "All rights reserved",
+          footerSectors: "Sectors",
+          pillarPropCta2: "Real estate case study",
+          pillarMedCta: "IMC case study",
         });
-
-        document.getElementById("rceForm").addEventListener("submit", function (e) {
+      })();
+    </script>
+    <script src="/assets/js/app.js?v=20260905rceNav"></script>
+    <script>
+      document.querySelectorAll(".year").forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+      });
+      (function () {
+        var form = document.getElementById("rceForm");
+        if (!form) return;
+        form.addEventListener("submit", function (e) {
           e.preventDefault();
-          var lang = getLang();
-          var dict = I18N[lang];
+          var lang = document.documentElement.lang === "ar" ? "ar" : "en";
+          var dict = (window.BM_I18N && window.BM_I18N[lang]) || {};
           var fd = new FormData(e.target);
           var lines = [
-            dict.waPrefix,
+            dict.waPrefix || "PropMotion inquiry",
             "",
             (lang === "ar" ? "الاسم: " : "Name: ") + (fd.get("name") || ""),
             (lang === "ar" ? "واتساب: " : "WhatsApp: ") + (fd.get("phone") || ""),
@@ -1009,12 +998,10 @@
             (lang === "ar" ? "ملاحظات: " : "Notes: ") + (fd.get("notes") || ""),
           ];
           window.open(
-            "https://wa.me/966502786513?text=" + encodeURIComponent(lines.join(String.fromCharCode(10))),
+            "https://wa.me/966502786513?text=" + encodeURIComponent(lines.join("\n")),
             "_blank"
           );
         });
-
-        applyLang(getLang());
       })();
     </script>
   </body>
