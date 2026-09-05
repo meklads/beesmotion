@@ -13425,7 +13425,7 @@ body.lang-ar .bm-hero-v2-title {
 
 /* Dual market panes — hard split at center face, no color blending */
 .bm-split-panes {
-  --pane-med: #a8d4e4;
+  --pane-med: #b7d6e6;
   --pane-prop: #ffffff;
   --pane-ink: #12141a;
   position: relative;
@@ -13453,7 +13453,7 @@ body.lang-ar .bm-split-panes {
   );
 }
 
-/* Independent ripple fields per specialty — clipped to each half */
+/* Solid half panes — clean seam only, no pattern noise */
 .bm-split-panes::before,
 .bm-split-panes::after {
   content: "";
@@ -13463,62 +13463,32 @@ body.lang-ar .bm-split-panes {
   width: 50%;
   z-index: 0;
   pointer-events: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .bm-split-panes::before {
   left: 0;
-  background-color: var(--pane-med);
-  background-image: url("/assets/img/split-ripple-med.svg");
-  /* Razor seam toward center — no blend */
-  box-shadow: inset -1.5px 0 0 rgba(10, 85, 112, 0.28);
+  background: var(--pane-med);
+  box-shadow: inset -1px 0 0 rgba(10, 85, 112, 0.2);
 }
 
 .bm-split-panes::after {
   right: 0;
-  background-color: var(--pane-prop);
-  background-image: url("/assets/img/split-ripple-prop.svg");
-  box-shadow: inset 1.5px 0 0 rgba(75, 85, 99, 0.22);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .bm-split-panes::before,
-  .bm-split-panes::after {
-    animation: bm-pane-drift 18s ease-in-out infinite alternate;
-  }
-
-  .bm-split-panes::after {
-    animation-delay: -6s;
-    animation-duration: 22s;
-  }
-}
-
-@keyframes bm-pane-drift {
-  from { background-position: 48% 46%; }
-  to { background-position: 52% 54%; }
+  background: var(--pane-prop);
+  box-shadow: inset 1px 0 0 rgba(18, 20, 26, 0.08);
 }
 
 html[dir="rtl"] .bm-split-panes::before,
 body.lang-ar .bm-split-panes::before {
   left: auto;
   right: 0;
-  box-shadow: inset 1.5px 0 0 rgba(10, 85, 112, 0.28);
+  box-shadow: inset 1px 0 0 rgba(10, 85, 112, 0.2);
 }
 
 html[dir="rtl"] .bm-split-panes::after,
 body.lang-ar .bm-split-panes::after {
   right: auto;
   left: 0;
-  box-shadow: inset -1.5px 0 0 rgba(75, 85, 99, 0.22);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bm-split-panes::before,
-  .bm-split-panes::after {
-    animation: none;
-  }
+  box-shadow: inset -1px 0 0 rgba(18, 20, 26, 0.08);
 }
 
 .bm-split-panes > .container {
