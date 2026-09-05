@@ -2413,22 +2413,32 @@ body.has-sol-sticky .wa-float {
   border-color: #fff;
 }
 
-/* Affiliation pill sits between the two gold rules */
+/* Affiliation + sister brands + rights as one centered identity cluster */
 .footer-mid {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.95rem 0;
+  padding: 1.15rem 0 1.25rem;
   border-bottom: 1px solid rgba(229, 168, 35, 0.38);
+}
+
+.footer-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+  max-width: 40rem;
+  width: 100%;
 }
 
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem 1.5rem;
-  padding-top: 1.35rem;
+  padding-top: 1.1rem;
   border-top: none;
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.55);
@@ -2475,9 +2485,9 @@ body.has-sol-sticky .wa-float {
 .footer-bottom-meta {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 0.75rem;
-  text-align: start;
+  text-align: center;
 }
 
 .footer-copy {
@@ -2485,13 +2495,14 @@ body.has-sol-sticky .wa-float {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.45;
+  text-align: center;
 }
 
 .footer-domain {
   color: rgba(255, 255, 255, 0.55);
   font-weight: 600;
-  text-align: end;
-  align-self: flex-end;
+  text-align: center;
+  align-self: center;
 }
 
 .footer-domain:hover { color: var(--gold-light); }
@@ -6460,7 +6471,7 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 0.75rem 1rem;
   margin: 0;
 }
@@ -11215,14 +11226,14 @@ body.lang-en .axis-card h3 {
     max-width: none;
   }
   .footer-mid {
-    padding: 0.85rem 0;
+    padding: 1rem 0 1.1rem;
   }
   .footer-bottom {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
   }
   .footer-domain {
-    align-self: start;
+    align-self: center;
   }
 }
 
