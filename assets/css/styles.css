@@ -13952,6 +13952,12 @@ body.lang-ar .sector-face-svg {
   filter: saturate(0.92) contrast(1.04);
 }
 
+.sector-gate-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .sector-gate:hover .sector-gate-media img {
   transform: scale(1.05);
   filter: saturate(1.05) contrast(1.06);
@@ -14234,6 +14240,12 @@ body.lang-en .work-feature-band .clients-label {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #0c0c0a;
+}
+
+.work-feature-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .work-feature-media img {
