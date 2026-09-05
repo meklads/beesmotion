@@ -2324,7 +2324,7 @@ body.has-sol-sticky .wa-float {
 .footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: start;
   gap: 0.85rem;
   max-width: 22rem;
 }
@@ -2362,12 +2362,22 @@ body.has-sol-sticky .wa-float {
   color: #fff;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  text-align: start;
+}
+
+/* Arabic company title: avoid Latin uppercase tracking */
+[dir="rtl"] .footer-col-title:not([dir="ltr"]) {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.88rem;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 0.6rem;
+  text-align: start;
 }
 
 .footer-links a {
@@ -2376,6 +2386,7 @@ body.has-sol-sticky .wa-float {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
+  line-height: 1.45;
 }
 
 .footer-links a:hover,
@@ -2409,18 +2420,20 @@ body.has-sol-sticky .wa-float {
 }
 
 .footer-affiliation {
-  margin: 0 0 4px;
+  margin: 0;
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.35rem;
+  max-width: 100%;
   border-radius: 9999px;
   border: 1px solid color-mix(in srgb, var(--gold) 28%, transparent);
   background: color-mix(in srgb, var(--gold) 8%, transparent);
   padding: 0.4rem 0.9rem;
   font-size: 0.75rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.7);
+  text-align: start;
 }
 
 .footer-affiliation a {
@@ -2446,15 +2459,15 @@ body.has-sol-sticky .wa-float {
 .footer-bottom-meta {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
+  align-items: start;
+  gap: 0.65rem;
+  text-align: start;
 }
-
-[dir="rtl"] .footer-bottom-meta { align-items: flex-end; }
 
 .footer-domain {
   color: rgba(255, 255, 255, 0.55);
   font-weight: 600;
+  text-align: end;
 }
 
 .footer-domain:hover { color: var(--gold-light); }
@@ -6423,8 +6436,9 @@ html[dir="rtl"] .hex-item:hover { transform: translateX(-6px); }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: start;
   gap: 0.85rem 1.15rem;
-  margin: 0.85rem 0 0.35rem;
+  margin: 0.15rem 0 0.1rem;
 }
 
 .footer-sister-brands a {
