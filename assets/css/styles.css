@@ -15735,3 +15735,68 @@ body.lang-ar .work-cap-title {
     grid-template-columns: 1fr;
   }
 }
+
+/* Ad-style luminous white — high-contrast fill inside glyphs only (no outer glow) */
+.type-lit {
+  color: #ffffff;
+  text-shadow: none !important;
+  filter: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(
+    185deg,
+    #ffffff 0%,
+    #ffffff 48%,
+    #f5f6f8 82%,
+    #eceff3 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.type-lit .bm-hero-em,
+h1.type-lit .bm-hero-em {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: #f5c84d !important;
+  color: #f5c84d !important;
+  text-shadow: none !important;
+}
+
+.bm-hero--v2 .bm-hero-v2-title.type-lit {
+  text-shadow: none !important;
+}
+
+.sector-gate-brand.type-lit,
+.sector-gate--med .sector-gate-brand.type-lit,
+.sector-gate--prop .sector-gate-brand.type-lit {
+  color: transparent;
+}
+
+.sector-gate-brand.type-lit sup {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.bm-hero-v2-systems.type-lit {
+  color: transparent;
+  letter-spacing: 0.01em;
+}
+
+.bm-hero-v2-systems.type-lit sup {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+.band-ink .font-headline-xl.type-lit,
+.why-band.band-ink .why-card h3.type-lit {
+  color: transparent !important;
+}
+
+@media (prefers-contrast: more) {
+  .type-lit {
+    background-image: none;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+  }
+}
