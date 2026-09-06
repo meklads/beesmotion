@@ -15994,3 +15994,41 @@ body.lang-ar .pl-announce-badge {
   letter-spacing: 0;
   text-transform: none;
 }
+
+/* Home foundation lead — quiet reason before the two sector gates */
+.foundation-lead {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.foundation-lead .font-headline-xl {
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem) !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  max-width: 22em;
+  margin-inline: auto;
+}
+
+.foundation-pair {
+  margin: 0.85rem auto 0;
+  max-width: 22rem;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+html[dir="rtl"] .foundation-pair,
+body.lang-ar .foundation-pair {
+  letter-spacing: 0;
+  font-family: var(--font-ar);
+}
+
+html[dir="rtl"] .foundation-lead .font-headline-xl,
+body.lang-ar .foundation-lead .font-headline-xl {
+  font-family: var(--font-ar);
+  font-weight: 700 !important;
+}
