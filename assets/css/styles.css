@@ -15823,3 +15823,174 @@ h1.type-lit .bm-hero-em {
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
+
+/* ProjectLaunch announcement — distinctive on PropMotion case */
+.pl-announce {
+  position: relative;
+  padding: clamp(2.75rem, 5.5vw, 4.5rem) 0;
+  background:
+    radial-gradient(80% 120% at 100% 0%, rgba(229, 168, 35, 0.22), transparent 55%),
+    radial-gradient(70% 100% at 0% 100%, rgba(183, 214, 230, 0.12), transparent 50%),
+    linear-gradient(145deg, #0a0c10 0%, #151820 48%, #1a1520 100%);
+  color: #f7f4ef;
+  border-block: 1px solid rgba(229, 168, 35, 0.35);
+  overflow: clip;
+}
+
+.pl-announce-inner {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .pl-announce-inner {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.75rem;
+  }
+}
+
+.pl-announce-copy {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.pl-announce-eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.pl-announce-brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.pl-announce-brand\sup {
+  font-size: 0.45em;
+  color: var(--gold-light);
+}
+
+.pl-announce-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #fff;
+  max-width: 22em;
+}
+
+html[dir="rtl"] .pl-announce-title,
+body.lang-ar .pl-announce-title {
+  font-family: var(--font-ar);
+  font-weight: 700;
+}
+
+.pl-announce-body {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.82);
+}
+
+.pl-announce-points {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pl-announce-points li {
+  position: relative;
+  padding-inline-start: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-weight: 600;
+  color: rgba(247, 244, 239, 0.92);
+}
+
+.pl-announce-points li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.pl-announce-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.55rem;
+}
+
+.pl-announce-cta {
+  background: var(--gold) !important;
+  color: #12141a !important;
+  border-color: transparent !important;
+  font-weight: 800 !important;
+  box-shadow: 0 14px 36px rgba(229, 168, 35, 0.35);
+}
+
+.pl-announce-cta:hover {
+  filter: brightness(1.05);
+}
+
+.pl-announce-note {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(247, 244, 239, 0.55);
+}
+
+.pl-announce-visual {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(229, 168, 35, 0.4);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+}
+
+.pl-announce-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.pl-announce-badge {
+  position: absolute;
+  inset-inline-start: 1rem;
+  bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(12, 14, 18, 0.88);
+  border: 1px solid rgba(229, 168, 35, 0.55);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+html[dir="rtl"] .pl-announce-badge,
+body.lang-ar .pl-announce-badge {
+  letter-spacing: 0;
+  text-transform: none;
+}
