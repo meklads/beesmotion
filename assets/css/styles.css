@@ -15800,3 +15800,26 @@ h1.type-lit .bm-hero-em {
     color: #ffffff;
   }
 }
+
+/* PropMotion → SpaceLaunch / ProjectLaunch handoff */
+.cs-handoff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.cs-handoff-visual {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(18, 20, 26, 0.08);
+}
+
+.cs-handoff-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
