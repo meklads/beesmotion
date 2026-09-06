@@ -16464,3 +16464,240 @@ body.lang-ar .prop-paths-face .sector-bridge-halo {
   background: #fff;
   border: 1px solid rgba(21, 21, 19, 0.1);
 }
+
+
+/* ===== Homepage craft-first repositioning ===== */
+.bm-hero-craft {
+  list-style: none;
+  margin: 0.85rem 0 1.15rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  max-width: 36rem;
+}
+
+.bm-hero-craft li {
+  margin: 0;
+  padding: 0.38rem 0.78rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(8, 9, 12, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+html[dir="rtl"] .bm-hero-craft,
+body.lang-ar .bm-hero-craft {
+  font-family: "IBM Plex Sans Arabic", Tajawal, sans-serif;
+}
+
+.craft-band {
+  background: #0f1014;
+  color: #f4f1ea;
+  padding: clamp(2.5rem, 5vw, 4.25rem) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.craft-band .section-head {
+  max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.craft-band .svc-tag {
+  color: rgba(244, 241, 234, 0.62);
+}
+
+.craft-band .font-headline-xl {
+  color: #fff;
+}
+
+.craft-band .font-body-md {
+  color: rgba(244, 241, 234, 0.78);
+}
+
+.craft-duo {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .craft-duo {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.15rem;
+  }
+}
+
+.craft-panel {
+  display: grid;
+  grid-template-rows: minmax(12rem, 42vw) auto;
+  overflow: hidden;
+  background: #17181e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 100%;
+}
+
+@media (min-width: 900px) {
+  .craft-panel {
+    grid-template-rows: minmax(16rem, 22vw) auto;
+  }
+}
+
+.craft-panel-media {
+  position: relative;
+  overflow: hidden;
+  min-height: 12rem;
+}
+
+.craft-panel-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.7s ease;
+}
+
+.craft-panel:hover .craft-panel-media img {
+  transform: scale(1.06);
+}
+
+.craft-panel-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(15, 16, 20, 0.55) 100%);
+  pointer-events: none;
+}
+
+.craft-panel-body {
+  padding: clamp(1.15rem, 2.2vw, 1.55rem);
+}
+
+.craft-panel-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244, 241, 234, 0.55);
+}
+
+.craft-panel-title {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.craft-panel-copy {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(244, 241, 234, 0.72);
+}
+
+.caps-band--home {
+  background: #fff;
+}
+
+.industries-band--visual {
+  background: #f7f5f1;
+  padding: clamp(2.4rem, 4.5vw, 3.75rem) 0;
+}
+
+.industries-band--visual .section-head {
+  max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.industries-visual-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: clamp(1.35rem, 2.5vw, 2rem);
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 900px) {
+  .industries-visual-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+.industry-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 14rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(21, 21, 19, 0.08);
+  background: #1a1b20;
+}
+
+.industry-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.industry-tile:hover img {
+  transform: scale(1.05);
+}
+
+.industry-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 11, 14, 0.15) 0%, rgba(10, 11, 14, 0.78) 100%);
+}
+
+.industry-tile-label,
+.industry-tile-note {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-inline: 1rem;
+}
+
+.industry-tile-label {
+  margin-top: 9.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.industry-tile-note {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0.78;
+}
+
+.industry-tile--brand {
+  cursor: default;
+}
+
+@media (max-width: 640px) {
+  .industries-visual-grid {
+    grid-template-columns: 1fr;
+  }
+  .industry-tile {
+    min-height: 12rem;
+  }
+  .industry-tile-label {
+    margin-top: 7.5rem;
+  }
+}
