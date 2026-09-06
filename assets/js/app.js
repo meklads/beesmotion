@@ -16,10 +16,12 @@
       .replace(/MedMotion™/g, "\u2066MedMotion™\u2069")
       .replace(/SpaceLaunch™/g, "\u2066SpaceLaunch™\u2069")
       .replace(/ProjectLaunch™/g, "\u2066ProjectLaunch™\u2069")
+      .replace(/BrandScale™/g, "\u2066BrandScale™\u2069")
       .replace(/PropMotion\u2122/g, "\u2066PropMotion\u2122\u2069")
       .replace(/MedMotion\u2122/g, "\u2066MedMotion\u2122\u2069")
       .replace(/SpaceLaunch\u2122/g, "\u2066SpaceLaunch\u2122\u2069")
-      .replace(/ProjectLaunch\u2122/g, "\u2066ProjectLaunch\u2122\u2069");
+      .replace(/ProjectLaunch\u2122/g, "\u2066ProjectLaunch\u2122\u2069")
+      .replace(/BrandScale\u2122/g, "\u2066BrandScale\u2122\u2069");
   }
 
   function applyLang(lang) {
