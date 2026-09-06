@@ -16032,3 +16032,138 @@ body.lang-ar .foundation-lead .font-headline-xl {
   font-family: var(--font-ar);
   font-weight: 700 !important;
 }
+
+/* PropMotion — two clear paths under Tasami Group */
+.prop-paths {
+  padding: clamp(3rem, 6vw, 4.75rem) 0;
+  background:
+    radial-gradient(70% 80% at 100% 0%, rgba(229, 168, 35, 0.08), transparent 55%),
+    linear-gradient(180deg, #f7f4ef 0%, #efeae2 100%);
+}
+
+.prop-paths .section-head {
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.prop-path-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 860px) {
+  .prop-path-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+}
+
+.prop-path {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+  padding: clamp(1.35rem, 2.5vw, 1.85rem);
+  border-radius: 18px;
+  border: 1px solid rgba(20, 20, 18, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.prop-path--gh {
+  border-color: rgba(229, 168, 35, 0.45);
+  background:
+    linear-gradient(160deg, rgba(18, 20, 26, 0.96), rgba(28, 24, 18, 0.96));
+  color: #f7f4ef;
+}
+
+.prop-path-who {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 18, 0.55);
+}
+
+.prop-path--gh .prop-path-who {
+  color: var(--gold-light);
+}
+
+.prop-path-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #141412;
+}
+
+.prop-path--gh .prop-path-name {
+  color: #fff;
+}
+
+html[dir="rtl"] .prop-path-name,
+body.lang-ar .prop-path-name {
+  font-family: var(--font-ar);
+  font-weight: 700;
+}
+
+.prop-path-body {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(20, 20, 18, 0.78);
+}
+
+.prop-path--gh .prop-path-body {
+  color: rgba(247, 244, 239, 0.84);
+}
+
+.prop-path-list {
+  margin: 0.25rem 0 0.5rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.prop-path-list li {
+  position: relative;
+  padding-inline-start: 1.05rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgba(20, 20, 18, 0.88);
+}
+
+.prop-path--gh .prop-path-list li {
+  color: rgba(247, 244, 239, 0.92);
+}
+
+.prop-path-list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.5em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: rgba(20, 20, 18, 0.35);
+}
+
+.prop-path--gh .prop-path-list li::before {
+  background: var(--gold);
+}
+
+.prop-path-cta-gh {
+  background: var(--gold) !important;
+  color: #12141a !important;
+  border-color: transparent !important;
+  font-weight: 800 !important;
+  justify-self: start;
+}
+
+.prop-path .btn {
+  justify-self: start;
+  margin-top: 0.25rem;
+}
