@@ -16324,3 +16324,20 @@ body.lang-ar .prop-paths-face .sector-bridge-halo {
 .page-hub--prop .prop-flagship-inner {
   gap: clamp(1.75rem, 3.5vw, 2.75rem);
 }
+
+/* Compact ProjectLaunch reinforce strip on Prop hub */
+.pl-engage-strip {
+  background:
+    radial-gradient(70% 100% at 100% 50%, rgba(229, 168, 35, 0.16), transparent 55%),
+    linear-gradient(120deg, #101218, #18161c);
+  color: #f7f4ef;
+  border-block: 1px solid rgba(229, 168, 35, 0.35);
+}
+
+.pl-engage-strip .engage-strip-title {
+  color: #fff;
+}
+
+.pl-engage-strip .engage-strip-tag {
+  color: var(--gold-light);
+}
