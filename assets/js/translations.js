@@ -2368,7 +2368,7 @@ window.BM_I18N = {
   clientsTag: "Proof",
   clientsTitle: "Selected clients & collaborations",
   trustTag: "Client voices",
-  trustTitle: "Trusted by teams who ship real work.",
+  trustTitle: "Trust we take pride in.",
   trustSub: "Words from partners across healthcare, real estate, exhibitions, and cultural projects.",
   trustQ1: "Bees Motion became a reliable content partner for our hospital. The work was clear, medically respectful, and consistent enough to support how we communicate with patients and the public.",
   trustA1: "Marketing Director",
