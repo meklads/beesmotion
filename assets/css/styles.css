@@ -16425,3 +16425,42 @@ body.lang-ar .prop-paths-face .sector-bridge-halo {
 .pl-engage-strip .engage-strip-inner {
   gap: 1.25rem;
 }
+
+/* Industries band — repositioning */
+.industries-band {
+  background: #f7f5f1;
+  padding: clamp(2rem, 4vw, 3.25rem) 0;
+  border-bottom: 1px solid rgba(21, 21, 19, 0.06);
+}
+
+.industries-band .section-head {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.industries-band .section-head .font-headline-xl {
+  margin-bottom: 0.65rem;
+}
+
+.industries-list {
+  list-style: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem 0.75rem;
+  max-width: 48rem;
+}
+
+.industries-list li {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: #151513;
+  background: #fff;
+  border: 1px solid rgba(21, 21, 19, 0.1);
+}
