@@ -1110,6 +1110,12 @@
       history.replaceState(null, "", location.pathname + location.search + "#work");
       const el = document.getElementById("work");
       if (el) requestAnimationFrame(() => el.scrollIntoView());
+      return;
+    }
+    if (hash === "industries") {
+      history.replaceState(null, "", location.pathname + location.search + "#sectors");
+      const el = document.getElementById("sectors");
+      if (el) requestAnimationFrame(() => el.scrollIntoView());
     }
   }
 
