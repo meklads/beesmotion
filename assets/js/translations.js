@@ -1400,7 +1400,7 @@ window.BM_I18N = {
   faq3q: "ما هي SpaceLaunch™؟",
   faq3a: "مسار بيز موشن لتنسيق صالات البيع والمعارض الطبية عبر المجموعة، مع جرافيكس هاوس وتوريفا عند الحاجة لـ CGI أو تجهيز أو تنفيذ ميداني.",
   faq4q: "هل تعملون فقط في الرعاية الصحية والعقار؟",
-  faq4a: "لا. تخصصنا في التسويق الرقمي والإنتاج الإبداعي للنمو. الرعاية الصحية والعقار مجالان رئيسيان لخبرة مثبتة عبر MedMotion™ و PropMotion™.",
+  faq4a: "لا. عملنا تسويق رقمي وإنتاج إبداعي. الرعاية الصحية والعقار مجالان رئيسيان لخبرة مثبتة عبر MedMotion™ و PropMotion™.",
   faq5q: "كيف نبدأ؟",
   faq5a: "أرسل موجزاً عبر النموذج أدناه أو واتساب. أخبرنا بالقطاع والأصول والهدف. نحدد المسار المناسب تحت بيز موشن.",
 
@@ -2997,7 +2997,7 @@ window.BM_I18N = {
   faq3q: "What is SpaceLaunch™?",
   faq3a: "Bees Motion’s path to orchestrate sales galleries and medical exhibition halls through the group, with Graphics House and Turriva when the brief needs CGI, fit-out, or on-site execution.",
   faq4q: "Do you only work in healthcare and real estate?",
-  faq4a: "No. We specialize in digital marketing and creative production for growth. Healthcare and real estate are major areas of proven delivery through MedMotion™ and PropMotion™.",
+  faq4a: "No. Our work is digital marketing and creative production. Healthcare and real estate are major areas of proven delivery through MedMotion™ and PropMotion™.",
   faq5q: "How do we start?",
   faq5a: "Send a brief via the form below or WhatsApp. Tell us your industry, assets, and goal. We map the right path under Bees Motion.",
 
