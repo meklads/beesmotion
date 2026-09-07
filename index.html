@@ -48,7 +48,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260906cartoonCraft" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260907indAtelier" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -315,28 +315,55 @@
         </div>
       </section>
 
-      <section id="industries" class="industries-band industries-band--visual" aria-labelledby="industries-title">
+      <section id="industries" class="industries-band industries-band--atelier" aria-labelledby="industries-title">
         <div class="container">
           <div class="section-head reveal">
             <span class="svc-tag" data-i18n="industriesTag">Industries we know</span>
-            <h2 id="industries-title" class="font-headline-xl" data-i18n="industriesTitle">We work across industries, with proven depth where we have delivered.</h2>
-            <p class="font-body-md" data-i18n="industriesSub">Deep delivery experience in healthcare and real estate, with institutional work that requires clear marketing and creative production.</p>
+            <h2 id="industries-title" class="font-headline-xl" data-i18n="industriesTitle">Proven sector depth where we have already delivered.</h2>
+            <p class="font-body-md" data-i18n="industriesSub">Healthcare, real estate, and institutions: three arenas we know, where we run marketing and creative production with clarity.</p>
           </div>
-          <div class="industries-visual-grid">
-            <a class="industry-tile industry-tile--hc reveal" href="/medmotion/">
-              <img src="/assets/img/visuals/healthcare.jpg" alt="" loading="lazy" width="900" height="700" decoding="async" />
-              <span class="industry-tile-label" data-i18n="industriesHc">Healthcare</span>
-              <span class="industry-tile-note" data-i18n="industriesHcNote">MedMotion™</span>
+          <div class="industries-atelier-grid">
+            <a class="ind-card ind-card--med reveal" href="/medmotion/" data-track="cta_ind_hc">
+              <div class="ind-card-media">
+                <picture>
+                  <source srcset="/assets/img/heroes/medmotion-hero.webp" type="image/webp" />
+                  <img src="/assets/img/heroes/medmotion-hero.jpg?v=20260905perf" alt="" loading="lazy" width="1600" height="1066" decoding="async" />
+                </picture>
+              </div>
+              <div class="ind-card-body">
+                <span class="ind-card-index" aria-hidden="true">01</span>
+                <p class="ind-card-sector" data-i18n="industriesHc">Healthcare</p>
+                <h3 class="ind-card-brand type-lit" dir="ltr">MedMotion<sup aria-hidden="true">™</sup></h3>
+                <p class="ind-card-line" data-i18n="industriesHcLine">Medical content and campaigns built for trust.</p>
+                <span class="ind-card-cta" data-i18n="industriesHcCta">Open MedMotion</span>
+              </div>
             </a>
-            <a class="industry-tile industry-tile--re reveal" href="/propmotion/">
-              <img src="/assets/img/visuals/real-estate.jpg" alt="" loading="lazy" width="900" height="700" decoding="async" />
-              <span class="industry-tile-label" data-i18n="industriesRe">Real estate</span>
-              <span class="industry-tile-note" data-i18n="industriesReNote">PropMotion™</span>
+            <a class="ind-card ind-card--prop reveal" href="/propmotion/" data-track="cta_ind_re">
+              <div class="ind-card-media">
+                <picture>
+                  <source srcset="/assets/img/heroes/propmotion-hero.webp" type="image/webp" />
+                  <img src="/assets/img/heroes/propmotion-hero.jpg?v=20260905perf" alt="" loading="lazy" width="1400" height="1050" decoding="async" />
+                </picture>
+              </div>
+              <div class="ind-card-body">
+                <span class="ind-card-index" aria-hidden="true">02</span>
+                <p class="ind-card-sector" data-i18n="industriesRe">Real estate</p>
+                <h3 class="ind-card-brand type-lit" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></h3>
+                <p class="ind-card-line" data-i18n="industriesReLine">Property storytelling and campaigns that move the market.</p>
+                <span class="ind-card-cta" data-i18n="industriesReCta">Open PropMotion</span>
+              </div>
             </a>
-            <a class="industry-tile industry-tile--org reveal" href="/launch-halls/">
-              <img src="/assets/img/mwl/makkah-charter-05.jpeg" alt="" loading="lazy" width="900" height="700" decoding="async" />
-              <span class="industry-tile-label" data-i18n="industriesOrg">Institutions &amp; organizations</span>
-              <span class="industry-tile-note" data-i18n="industriesOrgNote">SpaceLaunch™</span>
+            <a class="ind-card ind-card--org reveal" href="/launch-halls/" data-track="cta_ind_org">
+              <div class="ind-card-media">
+                <img src="/assets/img/mwl/makkah-charter-02.jpeg" alt="" loading="lazy" width="1600" height="900" decoding="async" />
+              </div>
+              <div class="ind-card-body">
+                <span class="ind-card-index" aria-hidden="true">03</span>
+                <p class="ind-card-sector" data-i18n="industriesOrg">Institutions &amp; organizations</p>
+                <h3 class="ind-card-brand type-lit" dir="ltr">SpaceLaunch<sup aria-hidden="true">™</sup></h3>
+                <p class="ind-card-line" data-i18n="industriesOrgLine">Spatial launches and institutional experiences that persuade on the floor.</p>
+                <span class="ind-card-cta" data-i18n="industriesOrgCta">Open SpaceLaunch</span>
+              </div>
             </a>
           </div>
         </div>
@@ -882,7 +909,7 @@
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
     <script src="/assets/js/site-config.js?v=20260905ga4fix"></script>
-    <script src="/assets/js/translations.js?v=20260906cartoonCraft"></script>
+    <script src="/assets/js/translations.js?v=20260907indAtelier"></script>
     <script src="/assets/js/app.js?v=20260906qPass"></script>
   </body>
 </html>
