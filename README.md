@@ -1,6 +1,6 @@
 # Bees Motion Website
 
-Official marketing site for **Bees Motion** — marketing and creative content for healthcare and real estate within Tasami Group.
+Official marketing site for **Bees Motion** — digital marketing and creative production within Tasami Group, with proven depth in healthcare and real estate.
 
 ## Stack
 

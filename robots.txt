@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /services/
+Disallow: /vip/
+Disallow: /offers/
+Disallow: /book-appointment/
+Disallow: /thank-you.html
 
 Sitemap: https://beesmotion.com/sitemap.xml
