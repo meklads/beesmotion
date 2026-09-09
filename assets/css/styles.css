@@ -17303,6 +17303,54 @@ html[dir="rtl"] .engage-ladder-list li::before {
   padding: clamp(2.5rem, 5vw, 3.5rem) 0;
 }
 
+.engage-process {
+  padding: clamp(2.75rem, 6vw, 4rem) 0;
+}
+
+.engage-process-grid {
+  list-style: none;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.engage-process-step {
+  padding: 1.35rem 1.25rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.1);
+}
+
+.engage-process-num {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--gold, #c9a227);
+  margin-bottom: 0.65rem;
+}
+
+.engage-process-step h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+}
+
+.engage-process-step p {
+  margin: 0;
+  color: var(--muted, #5a6570);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.engage-process-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
 .engage-onepagers-links {
   display: flex;
   flex-wrap: wrap;
@@ -17322,7 +17370,56 @@ html[dir="rtl"] .engage-ladder-list li::before {
 }
 
 .book-layout {
-  max-width: 40rem;
+  max-width: 58rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.book-aside {
+  padding: 1.35rem 1.25rem;
+  border-radius: 16px;
+  background: #0c0d10;
+  color: #f4f1ea;
+}
+
+.book-aside-tag {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(244, 241, 234, 0.65);
+}
+
+.book-aside-steps {
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+html[dir="rtl"] .book-aside-steps {
+  padding: 0 1.1rem 0 0;
+}
+
+.book-aside-note {
+  margin: 1.1rem 0 0.45rem;
+  font-size: 0.88rem;
+  color: rgba(244, 241, 234, 0.72);
+}
+
+.book-aside-mail {
+  color: #e8c547;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.book-aside-mail:hover {
+  text-decoration: underline;
 }
 
 .book-form {
@@ -17463,8 +17560,10 @@ html[dir="rtl"] .engage-ladder-list li::before {
 
 @media (max-width: 900px) {
   .engage-ladder-grid,
+  .engage-process-grid,
   .brands-engine-grid,
-  .mwl-gallery-grid {
+  .mwl-gallery-grid,
+  .book-layout {
     grid-template-columns: 1fr;
   }
 }

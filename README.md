@@ -33,34 +33,19 @@ Events already wired when GA4 is set:
 
 ## Hosting
 
-**Intended production** is **Cloudflare Pages** (project `beesmotion`, `_redirects`, `functions/_middleware.js`).
+**Production** is **Cloudflare Pages** (project `beesmotion`: `_redirects`, `functions/_middleware.js`, `_headers`).
 
-**Current live DNS** for [beesmotion.com](https://beesmotion.com/) may still point at **GitHub Pages** (`meklads.github.io`) as a **fallback until DNS is switched**.
-
-- Repo: [meklads/beesmotion](https://github.com/meklads/beesmotion)
-- Push to `main` → rebuild on the active host
-- Custom domain file: `CNAME` → `beesmotion.com`
-
-Cloudflare still proxies DNS (orange cloud). SSL should stay **Full**.
-
-### Switch DNS to Cloudflare Pages
-
-When ready to make Pages the live origin:
-
-```bash
-bash scripts/switch-dns-to-pages.sh
-```
-
-Requires `CLOUDFLARE_API_TOKEN` (Zone DNS Edit) or Wrangler OAuth. Points `@`, `www`, and `ai` CNAMEs at `beesmotion.pages.dev`.
-
-Deploy Pages:
+Custom domain CNAMEs for `@`, `www`, and `ai` point at `beesmotion.pages.dev` (proxied). See [docs/DNS-AR.md](docs/DNS-AR.md).
 
 ```bash
 npm install
-npx wrangler pages deploy . --project-name=beesmotion
+npm run deploy
+# optional link check: npm run check:links
 ```
 
-Until DNS is switched, treat the **active DNS target** (often GitHub Pages) as what visitors see; keep Pages deploys in sync for cutover.
+GitHub Pages may still rebuild from `main` as a backup copy; live visitors follow Cloudflare Pages via DNS.
+
+Optional booking calendar: set `bookingUrl` in `site-config.js` (Calendly etc.). Until set, `[data-booking-cta]` links go to `/book/`, and the book form opens WhatsApp via `whatsapp`.
 
 ### Coolify
 

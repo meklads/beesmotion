@@ -391,6 +391,7 @@
       const lang = getLang();
       const name = (form.name.value || "").trim();
       const org = (form.organization.value || "").trim();
+      const phone = (form.phone && form.phone.value ? form.phone.value : "").trim();
       const pathEl = form.path;
       const winEl = form.window;
       const pathLabel = pathEl && pathEl.selectedOptions[0] ? pathEl.selectedOptions[0].textContent.trim() : pathEl.value;
@@ -402,6 +403,7 @@
               "مرحباً بيز موشن — طلب مكالمة استكشاف",
               `الاسم: ${name}`,
               `الجهة: ${org}`,
+              phone ? `الجوال: ${phone}` : null,
               `المسار: ${pathLabel}`,
               `الوقت المفضل (السعودية): ${winLabel}`,
               notes ? `ملاحظات: ${notes}` : null,
@@ -410,6 +412,7 @@
               "Hello Bees Motion — discovery call request",
               `Name: ${name}`,
               `Organization: ${org}`,
+              phone ? `Phone: ${phone}` : null,
               `Path: ${pathLabel}`,
               `Preferred window (KSA): ${winLabel}`,
               notes ? `Notes: ${notes}` : null,

@@ -1,0 +1,27 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+*/
+
+/vip/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/offers/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: private, max-age=300
+
+/book-appointment
+  X-Robots-Tag: noindex
+
+/book-appointment/
+  X-Robots-Tag: noindex
+
+/thank-you.html
+  X-Robots-Tag: noindex
+
+/assets/*
+  Cache-Control: public, max-age=604800, immutable
