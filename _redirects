@@ -1,3 +1,8 @@
+# Old appointment / contact aliases
+/book-appointment /#contact 301
+/book-appointment/ /#contact 301
+/book-appointment.html /#contact 301
+
 # Aliases for AI Content Engine hub
 /ai-content-engine /ai/ 301
 /ai-content-engine.html /ai/ 301
