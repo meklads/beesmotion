@@ -17303,6 +17303,39 @@ html[dir="rtl"] .engage-ladder-list li::before {
   padding: clamp(2.5rem, 5vw, 3.5rem) 0;
 }
 
+.engage-policy {
+  margin-top: 1.75rem;
+  max-width: 42rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: 14px;
+  background: rgba(12, 13, 16, 0.04);
+  border: 1px solid rgba(12, 13, 16, 0.1);
+  text-align: start;
+}
+
+.engage-policy-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold, #c9a227);
+}
+
+.engage-policy-body {
+  margin: 0 0 0.55rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.engage-policy-point {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted, #5a6570);
+}
+
 .engage-process {
   padding: clamp(2.75rem, 6vw, 4rem) 0;
 }
@@ -17404,6 +17437,16 @@ html[dir="rtl"] .engage-ladder-list li::before {
 
 html[dir="rtl"] .book-aside-steps {
   padding: 0 1.1rem 0 0;
+}
+
+.book-aside-policy {
+  margin: 1.15rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(244, 241, 234, 0.16);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: rgba(244, 241, 234, 0.82);
+  font-weight: 600;
 }
 
 .book-aside-note {
@@ -17556,6 +17599,14 @@ html[dir="rtl"] .book-aside-steps {
   gap: 0.65rem;
   width: 100%;
   margin-top: 0.35rem;
+}
+
+.engage-strip-note {
+  width: 100%;
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted, #5a6570);
 }
 
 @media (max-width: 900px) {

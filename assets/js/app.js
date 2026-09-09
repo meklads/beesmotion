@@ -394,8 +394,13 @@
       const phone = (form.phone && form.phone.value ? form.phone.value : "").trim();
       const pathEl = form.path;
       const winEl = form.window;
+      const budgetEl = form.budget;
       const pathLabel = pathEl && pathEl.selectedOptions[0] ? pathEl.selectedOptions[0].textContent.trim() : pathEl.value;
       const winLabel = winEl && winEl.selectedOptions[0] ? winEl.selectedOptions[0].textContent.trim() : winEl.value;
+      const budgetLabel =
+        budgetEl && budgetEl.value && budgetEl.selectedOptions[0]
+          ? budgetEl.selectedOptions[0].textContent.trim()
+          : "";
       const notes = (form.notes.value || "").trim();
       const lines =
         lang === "ar"
@@ -406,7 +411,8 @@
               phone ? `الجوال: ${phone}` : null,
               `المسار: ${pathLabel}`,
               `الوقت المفضل (السعودية): ${winLabel}`,
-              notes ? `ملاحظات: ${notes}` : null,
+              budgetLabel ? `نطاق التخطيط: ${budgetLabel}` : null,
+              notes ? `الهدف: ${notes}` : null,
             ].filter(Boolean)
           : [
               "Hello Bees Motion — discovery call request",
@@ -415,11 +421,17 @@
               phone ? `Phone: ${phone}` : null,
               `Path: ${pathLabel}`,
               `Preferred window (KSA): ${winLabel}`,
-              notes ? `Notes: ${notes}` : null,
+              budgetLabel ? `Planning band: ${budgetLabel}` : null,
+              notes ? `Goal: ${notes}` : null,
             ].filter(Boolean);
       const text = encodeURIComponent(lines.join("\n"));
       const waUrl = `https://wa.me/${wa}?text=${text}`;
-      track("cta_book_whatsapp", { path: pathEl.value, window: winEl.value, lang: lang });
+      track("cta_book_whatsapp", {
+        path: pathEl.value,
+        window: winEl.value,
+        budget: budgetEl && budgetEl.value ? budgetEl.value : "discuss",
+        lang: lang,
+      });
       window.open(waUrl, "_blank", "noopener");
     });
   }

@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909sec" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909policy" />
   </head>
   <body class="lang-en page-book" data-i18n-meta="book">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -76,7 +76,7 @@
         <div class="container page-hero-inner reveal">
           <p class="page-hero-tag" data-i18n="bookTag">Discovery</p>
           <h1 class="page-hero-title" data-i18n="bookTitle">Book a discovery call</h1>
-          <p class="page-hero-sub" data-i18n="bookSub">Tell us who you are and which path fits. We’ll open WhatsApp with a prefilled brief — or your calendar link when it’s configured.</p>
+          <p class="page-hero-sub" data-i18n="bookSub">A short brief starts the discovery. We confirm a call window — then scope and investment are written before any kickoff.</p>
         </div>
       </section>
 
@@ -87,8 +87,9 @@
             <ol class="book-aside-steps">
               <li data-i18n="bookAside1">You send a short brief (form → WhatsApp).</li>
               <li data-i18n="bookAside2">We reply to confirm a call window.</li>
-              <li data-i18n="bookAside3">After the call: written scope before any kickoff.</li>
+              <li data-i18n="bookAside3">After the call: written scope and investment before any kickoff.</li>
             </ol>
+            <p class="book-aside-policy" data-i18n="bookAsidePolicy">No public price menu. No long questionnaire as a gate. Discovery first.</p>
             <p class="book-aside-note" data-i18n="bookAsideNote">Prefer email? Use hello@beesmotion.com — same discovery path.</p>
             <a class="book-aside-mail" href="mailto:hello@beesmotion.com?subject=Discovery%20call%20-%20Bees%20Motion">hello@beesmotion.com</a>
           </aside>
@@ -126,15 +127,25 @@
                 <option value="Evening" data-i18n="bookWinEvening">Evening</option>
               </select>
             </label>
+            <label class="book-field">
+              <span data-i18n="bookBudget">Planning band (optional)</span>
+              <select name="budget">
+                <option value="" data-i18n="bookBudgetSelect">Prefer to discuss on the call</option>
+                <option value="pilot" data-i18n="bookBudgetPilot">Exploring a focused pilot</option>
+                <option value="ongoing" data-i18n="bookBudgetOngoing">Planning ongoing engagement</option>
+                <option value="launch" data-i18n="bookBudgetLaunch">Planning a defined campaign / launch</option>
+                <option value="confidential" data-i18n="bookBudgetConfidential">Have an internal range — discuss privately</option>
+              </select>
+            </label>
             <label class="book-field book-field--full">
-              <span data-i18n="bookNotes">Notes</span>
-              <textarea name="notes" rows="4" data-i18n="bookNotesPh" placeholder="Goal, timeline, or links"></textarea>
+              <span data-i18n="bookNotes">Goal in one line (optional)</span>
+              <textarea name="notes" rows="3" data-i18n="bookNotesPh" placeholder="What should move in the market?"></textarea>
             </label>
             <div class="book-actions">
-              <button type="submit" class="btn btn-pill btn-gold" id="bookPrimaryCta" data-i18n="bookSubmit">Request a call</button>
+              <button type="submit" class="btn btn-pill btn-gold" id="bookPrimaryCta" data-i18n="bookSubmit">Request a discovery call</button>
               <a class="btn btn-pill btn-outline-dark" id="bookPreferWa" href="https://wa.me/966502786513" target="_blank" rel="noopener" data-i18n="bookPreferWa" data-track="click_whatsapp">Prefer WhatsApp now</a>
             </div>
-            <p class="book-hint" data-i18n="bookSuccessHint">Submit opens WhatsApp with your brief so the team can confirm a time. No payment on this step.</p>
+            <p class="book-hint" data-i18n="bookSuccessHint">This opens WhatsApp with your brief so we can confirm a time. Investment is discussed after discovery — not on this step.</p>
           </form>
         </div>
       </section>
@@ -175,8 +186,8 @@
         el.textContent = new Date().getFullYear();
       });
     </script>
-    <script src="/assets/js/site-config.js?v=20260909sec"></script>
-    <script src="/assets/js/translations.js?v=20260909sec"></script>
-    <script src="/assets/js/app.js?v=20260909sec"></script>
+    <script src="/assets/js/site-config.js?v=20260909policy"></script>
+    <script src="/assets/js/translations.js?v=20260909policy"></script>
+    <script src="/assets/js/app.js?v=20260909policy"></script>
   </body>
 </html>
