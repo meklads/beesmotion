@@ -40,6 +40,7 @@
     <link rel="alternate" hreflang="en" href="https://beesmotion.com/" />
     <link rel="alternate" hreflang="ar" href="https://beesmotion.com/?lang=ar" />
     <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/" />
+    <link rel="preload" as="image" href="/assets/img/thumbs/x4Ya98nRnog.webp" type="image/webp" fetchpriority="high" />
     <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +49,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909maint" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909w24" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -174,7 +175,7 @@
             <button type="button" data-lang="en" class="active">EN</button>
             <button type="button" data-lang="ar">AR</button>
           </div>
-          <a class="btn btn-pill btn-on-light" href="/#contact" data-i18n="ctaNav">Start a project</a>
+          <a class="btn btn-pill btn-on-light" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
           <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
         </div>
       </div>
@@ -196,7 +197,7 @@
 </div>
       </div>
       <a href="/#contact" data-i18n="navContact">Contact</a>
-      <a class="btn btn-pill btn-on-light" href="/#contact" data-i18n="ctaNav">Start a project</a>
+      <a class="btn btn-pill btn-on-light" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
     </nav>
 
     <main id="main">
@@ -242,7 +243,7 @@
             </ul>
             <div class="bm-hero-v2-ctas">
               <a class="btn btn-pill btn-on-dark" href="/#contact" data-i18n="heroCta1" data-track="cta_hero_start">Start a Project</a>
-              <a class="btn btn-pill btn-outline-light" href="/#capabilities" data-i18n="heroCta2" data-track="cta_hero_work">See how we work</a>
+              <a class="btn btn-pill btn-outline-light" href="/book/" data-booking-cta data-i18n="bookCta" data-track="cta_hero_book">Book a call</a>
             </div>
           </div>
         </div>
@@ -423,7 +424,7 @@
               </div>
             </a>
 
-            <a class="work-case work-case--org reveal" href="/launch-halls/" data-track="cta_work_xp">
+            <a class="work-case work-case--org reveal" href="/case-study-mwl.html" data-track="cta_work_xp">
               <div class="work-case-media">
                 <img src="/assets/img/mwl/makkah-charter-02.jpeg" alt="" loading="lazy" width="1600" height="900" decoding="async" />
               </div>
@@ -526,9 +527,13 @@
             <h2 class="engage-strip-title" data-i18n="packagesTitle">Three paths. Scoped to the goal.</h2>
           </div>
           <div class="engage-strip-paths" role="list">
-            <a class="engage-chip" href="#contact" role="listitem" data-track="cta_foundation"><span>01</span><strong data-i18n="pkg1">Foundation</strong><em data-i18n="pkg1line">Deliverable: brand film set, messaging map, and channel plan.</em></a>
-            <a class="engage-chip engage-chip--featured" href="#contact" role="listitem" data-track="cta_growth"><span>02</span><strong data-i18n="pkg2">Growth</strong><em data-i18n="pkg2line">Deliverable: monthly content cadence plus paid distribution.</em></a>
-            <a class="engage-chip" href="#contact" role="listitem" data-track="cta_campaign_model"><span>03</span><strong data-i18n="pkg3">Campaign</strong><em data-i18n="pkg3line">Deliverable: launch film, creatives, and a timed go-to-market plan.</em></a>
+            <a class="engage-chip" href="/engage/" role="listitem" data-track="cta_foundation"><span>01</span><strong data-i18n="pkg1">Foundation</strong><em data-i18n="pkg1line">Deliverable: brand film set, messaging map, and channel plan.</em></a>
+            <a class="engage-chip engage-chip--featured" href="/engage/" role="listitem" data-track="cta_growth"><span>02</span><strong data-i18n="pkg2">Growth</strong><em data-i18n="pkg2line">Deliverable: monthly content cadence plus paid distribution.</em></a>
+            <a class="engage-chip" href="/engage/" role="listitem" data-track="cta_campaign_model"><span>03</span><strong data-i18n="pkg3">Campaign</strong><em data-i18n="pkg3line">Deliverable: launch film, creatives, and a timed go-to-market plan.</em></a>
+          </div>
+          <div class="engage-strip-actions">
+            <a class="btn btn-pill btn-gold" href="/engage/" data-i18n="packagesEngageCta" data-track="cta_packages_engage">Full engagement paths</a>
+            <a class="btn btn-pill btn-outline-dark" href="/book/" data-booking-cta data-i18n="packagesBookCta" data-track="cta_packages_book">Book a call</a>
           </div>
         </div>
       </section>
@@ -814,7 +819,8 @@
               <a href="/privacy/" data-i18n="navPrivacy">Privacy policy</a>
               <a href="/terms/" data-i18n="navTerms">Terms of use</a>
               <a href="/ai/" data-i18n="navAiEngine">Content System</a>
-              <a href="/vip/" data-i18n="navVip">VIP</a>
+              <a href="/engage/" data-i18n="navEngage">Engage</a>
+              <a href="/book/" data-booking-cta data-i18n="navBook">Book a call</a>
               <a href="https://www.youtube.com/@beesmotion6657" target="_blank" rel="noopener" data-i18n="footerYoutube">YouTube</a>
             </div>
           </div>
@@ -845,8 +851,8 @@
     <script>
       document.querySelectorAll(".year").forEach(function(el){el.textContent=new Date().getFullYear();});
     </script>
-    <script src="/assets/js/site-config.js?v=20260909maint"></script>
-    <script src="/assets/js/translations.js?v=20260909maint"></script>
-    <script src="/assets/js/app.js?v=20260909maint"></script>
+    <script src="/assets/js/site-config.js?v=20260909w24"></script>
+    <script src="/assets/js/translations.js?v=20260909w24"></script>
+    <script src="/assets/js/app.js?v=20260909w24"></script>
   </body>
 </html>

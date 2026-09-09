@@ -2,4 +2,5 @@
 window.BM_SITE = window.BM_SITE || {
   ga4MeasurementId: "G-VC8WETHL7M",
   whatsapp: "966502786513",
+  bookingUrl: "", // set to Calendly/etc when ready
 };

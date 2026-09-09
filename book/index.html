@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v3";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book a Discovery Call | Bees Motion</title>
+    <meta name="description" content="Book a short discovery call with Bees Motion. Share your path interest and preferred window — we follow up on WhatsApp or your calendar link when set." />
+    <link rel="canonical" href="https://beesmotion.com/book/" />
+    <link rel="alternate" hreflang="en" href="https://beesmotion.com/book/" />
+    <link rel="alternate" hreflang="ar" href="https://beesmotion.com/book/?lang=ar" />
+    <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/book/" />
+    <meta property="og:title" content="Book a Discovery Call | Bees Motion" />
+    <meta property="og:description" content="Short discovery form for Foundation, Growth, Campaign, MedMotion™, PropMotion™, or SpaceLaunch™." />
+    <meta property="og:url" content="https://beesmotion.com/book/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://beesmotion.com/assets/img/og-share.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_SA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909w24" />
+  </head>
+  <body class="lang-en page-book" data-i18n-meta="book">
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion">
+          <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="/#work" data-i18n="navWork">Work</a>
+          <a href="/medmotion/" data-i18n="navHealthcare">Healthcare</a>
+          <a href="/propmotion/" data-i18n="navRealEstate">Real Estate</a>
+          <a href="/engage/" data-i18n="navEngage">Engage</a>
+          <a href="/#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
+          </div>
+          <a class="btn btn-pill btn-on-light" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
+          <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="/#work" data-i18n="navWork">Work</a>
+      <a href="/medmotion/" data-i18n="navHealthcare">Healthcare</a>
+      <a href="/propmotion/" data-i18n="navRealEstate">Real Estate</a>
+      <a href="/engage/" data-i18n="navEngage">Engage</a>
+      <a href="/#contact" data-i18n="navContact">Contact</a>
+      <a class="btn btn-pill btn-on-light" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
+    </nav>
+
+    <main id="main">
+      <section class="page-hero page-hero--book">
+        <div class="container page-hero-inner reveal">
+          <p class="page-hero-tag" data-i18n="bookTag">Discovery</p>
+          <h1 class="page-hero-title" data-i18n="bookTitle">Book a discovery call</h1>
+          <p class="page-hero-sub" data-i18n="bookSub">Tell us who you are and which path fits. We’ll open WhatsApp with a prefilled brief — or your calendar link when it’s configured.</p>
+        </div>
+      </section>
+
+      <section class="book-section">
+        <div class="container book-layout">
+          <form class="book-form reveal" id="bookForm" novalidate>
+            <label class="book-field">
+              <span data-i18n="bookName">Name</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label class="book-field">
+              <span data-i18n="bookOrg">Organization</span>
+              <input type="text" name="organization" required autocomplete="organization" />
+            </label>
+            <label class="book-field">
+              <span data-i18n="bookPath">Path interest</span>
+              <select name="path" required>
+                <option value="" data-i18n="bookPathSelect">Select a path</option>
+                <option value="Foundation" data-i18n="bookPathFoundation">Foundation</option>
+                <option value="Growth" data-i18n="bookPathGrowth">Growth</option>
+                <option value="Campaign" data-i18n="bookPathCampaign">Campaign</option>
+                <option value="MedMotion" data-i18n="bookPathMed">MedMotion™</option>
+                <option value="PropMotion" data-i18n="bookPathProp">PropMotion™</option>
+                <option value="SpaceLaunch" data-i18n="bookPathLaunch">SpaceLaunch™</option>
+              </select>
+            </label>
+            <label class="book-field">
+              <span data-i18n="bookWindow">Preferred window (KSA)</span>
+              <select name="window" required>
+                <option value="" data-i18n="bookWinSelect">Select a window</option>
+                <option value="Morning" data-i18n="bookWinMorning">Morning</option>
+                <option value="Afternoon" data-i18n="bookWinAfternoon">Afternoon</option>
+                <option value="Evening" data-i18n="bookWinEvening">Evening</option>
+              </select>
+            </label>
+            <label class="book-field book-field--full">
+              <span data-i18n="bookNotes">Notes</span>
+              <textarea name="notes" rows="4" data-i18n="bookNotesPh" placeholder="Goal, timeline, or links"></textarea>
+            </label>
+            <div class="book-actions">
+              <button type="submit" class="btn btn-pill btn-gold" id="bookPrimaryCta" data-i18n="bookSubmit">Request a call</button>
+              <a class="btn btn-pill btn-outline-dark" id="bookPreferWa" href="https://wa.me/966502786513" target="_blank" rel="noopener" data-i18n="bookPreferWa" data-track="click_whatsapp">Prefer WhatsApp now</a>
+            </div>
+            <p class="book-hint" data-i18n="bookSuccessHint">Submitting opens WhatsApp with your details. If a calendar link is set in site config, the primary button uses that instead.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <a class="wa-float" href="https://wa.me/966502786513" data-track="click_whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <span data-i18n="floatingWa">WhatsApp</span>
+    </a>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/assets/img/bees-motion-logo.png" alt="Bees Motion" class="footer-logo footer-logo--light" width="680" height="330" />
+            <p class="footer-blurb" data-i18n="footerBlurb">Digital marketing and creative production for growing brands — with proven depth in healthcare and real estate.</p>
+            <a class="btn btn-pill btn-on-light footer-cta" href="/#contact" data-i18n="ctaNav">Start a project</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerCompany">Company</p>
+            <div class="footer-links">
+              <a href="/engage/" data-i18n="navEngage">Engage</a>
+              <a href="/brands/" data-i18n="navBrands">For brands</a>
+              <a href="/#contact" data-i18n="navContact">Contact</a>
+              <a href="/privacy/" data-i18n="navPrivacy">Privacy policy</a>
+              <a href="/terms/" data-i18n="navTerms">Terms of use</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a class="footer-domain" href="https://beesmotion.com">beesmotion.com</a>
+          <p class="footer-copy">© <span class="year"></span> Bees Motion</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".year").forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+      });
+    </script>
+    <script src="/assets/js/site-config.js?v=20260909w24"></script>
+    <script src="/assets/js/translations.js?v=20260909w24"></script>
+    <script src="/assets/js/app.js?v=20260909w24"></script>
+  </body>
+</html>

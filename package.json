@@ -5,7 +5,9 @@
   "scripts": {
     "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000}",
     "deploy": "wrangler pages deploy . --project-name=beesmotion",
-    "dns:setup": "bash scripts/setup-cloudflare-dns.sh"
+    "dns:setup": "bash scripts/setup-cloudflare-dns.sh",
+    "dns:pages": "bash scripts/switch-dns-to-pages.sh",
+    "check:links": "node scripts/check-links.mjs"
   },
   "repository": {
     "type": "git",

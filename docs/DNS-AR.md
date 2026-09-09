@@ -1,28 +1,44 @@
-# DNS — beesmotion.com (الوضع الحالي)
+# DNS — beesmotion.com
 
-## الحي الآن: GitHub Pages
+## المقصود للإنتاج: Cloudflare Pages
 
-النطاق يشير إلى GitHub Pages عبر Cloudflare DNS (Proxied):
+المضيف المقصود للإنتاج هو **Cloudflare Pages** (`beesmotion.pages.dev`) مع `_redirects` و`functions/_middleware.js`.
+
+للتبديل من GitHub Pages إلى Pages:
+
+```bash
+bash scripts/switch-dns-to-pages.sh
+```
+
+يحتاج **`CLOUDFLARE_API_TOKEN` بصلاحية Zone DNS Edit** على نطاق beesmotion.com.  
+OAuth الخاص بـ Wrangler غالباً **لا يكفي** (يرجع 401) — أنشئ API Token من Cloudflare Dashboard → My Profile → API Tokens.
+
+يحدّث سجلات `@` و`www` و`ai` إلى `beesmotion.pages.dev` (Proxied).
+
+| Type  | Name | Content                 | Proxy |
+| ----- | ---- | ----------------------- | ----- |
+| CNAME | `@`  | `beesmotion.pages.dev`  | Proxied |
+| CNAME | `www`| `beesmotion.pages.dev`  | Proxied |
+| CNAME | `ai` | `beesmotion.pages.dev`  | Proxied |
+
+- SSL/TLS في Cloudflare: **Full**
+- بعد التبديل انتظر ٢–٥ دقائق ثم Hard Refresh
+
+## الوضع الاحتياطي الحالي: GitHub Pages
+
+حتى يتم تبديل DNS، النطاق قد يبقى على **GitHub Pages** كاحتياطي:
 
 | Type  | Name | Content              | Proxy |
 | ----- | ---- | -------------------- | ----- |
 | CNAME | `@`  | `meklads.github.io`  | Proxied |
 | CNAME | `www`| `meklads.github.io`  | Proxied |
 
-- SSL/TLS في Cloudflare: **Full**
-- بعد كل `git push` إلى `main` انتظر دقيقة ثم Hard Refresh
+- بعد كل `git push` إلى `main` انتظر دقيقة ثم Hard Refresh على المضيف النشط
 
-التحقق: في مصدر الصفحة ابحث عن `?v=20260905p0` (أو أحدث cache bust).
+التحقق: في مصدر الصفحة ابحث عن أحدث `?v=` (cache bust).
 
-## العودة لاحقاً إلى Cloudflare Pages
+## ملاحظات
 
-عندما يعمل `npm run deploy` بنجاح:
-
-| Type  | Name | Content                 | Proxy |
-| ----- | ---- | ----------------------- | ----- |
-| CNAME | `@`  | `beesmotion.pages.dev`  | Proxied |
-| CNAME | `www`| `beesmotion.pages.dev`  | Proxied |
-
-أو: `bash scripts/setup-cloudflare-dns.sh` (يحتاج `CLOUDFLARE_API_TOKEN` بصلاحية DNS Edit).
-
-ملاحظة: `_redirects` و `functions/` يعملان على Cloudflare Pages فقط. على GitHub Pages صفحات `services/*` مضبوطة `noindex`.
+- `_redirects` و`functions/` يعملان على Cloudflare Pages فقط.
+- على GitHub Pages صفحات `services/*` مضبوطة `noindex`.
+- البديل اليدوي السابق: `bash scripts/setup-cloudflare-dns.sh` إن وُجد.

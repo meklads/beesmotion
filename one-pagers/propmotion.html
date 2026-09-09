@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v3";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PropMotion™ One-pager | Bees Motion</title>
+    <meta name="description" content="PropMotion™ real-estate content and marketing systems by Bees Motion — property films, listing stories, and launch assets." />
+    <link rel="canonical" href="https://beesmotion.com/one-pagers/propmotion.html" />
+    <link rel="alternate" hreflang="en" href="https://beesmotion.com/one-pagers/propmotion.html" />
+    <link rel="alternate" hreflang="ar" href="https://beesmotion.com/one-pagers/propmotion.html?lang=ar" />
+    <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/one-pagers/propmotion.html" />
+    <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909w24" />
+    <link rel="stylesheet" href="/assets/css/one-pager.css?v=20260909w24" />
+  </head>
+  <body class="lang-en" data-i18n-meta="onePagerProp">
+    <a class="skip-link no-print" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header no-print">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion">
+          <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="200" height="94" />
+        </a>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
+          </div>
+          <a class="btn btn-pill btn-on-light" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="one-pager">
+      <div class="one-pager-mark">
+        <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" width="160" height="76" />
+        <span class="one-pager-brand" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
+      </div>
+      <h1 data-i18n="onePagerPropTitle">Real-estate content that sells the story</h1>
+      <p class="one-pager-lead" data-i18n="onePagerPropBody">PropMotion™ is Bees Motion’s real-estate content and marketing system — property films, listing stories, launch assets, and a property content engine that turns existing assets into campaign-ready work.</p>
+      <ul class="one-pager-bullets">
+        <li data-i18n="onePagerProp1">Launch films and project storytelling for developers</li>
+        <li data-i18n="onePagerProp2">Listing and campaign assets ready for paid and organic channels</li>
+        <li data-i18n="onePagerProp3">Property content engine path from assets to market movement</li>
+        <li data-i18n="onePagerProp4">Advanced CGI continues with Graphics House when the brief needs it</li>
+      </ul>
+      <p class="one-pager-proof" data-i18n="onePagerPropProof">Evidenced on site: launch films and market-ready project content across PropMotion™ case work — see the real estate case study for delivered examples.</p>
+      <div class="one-pager-ctas">
+        <a class="btn btn-pill btn-gold" href="/book/" data-booking-cta data-i18n="onePagerCtaBook">Book a call</a>
+        <a class="btn btn-pill btn-outline-dark" href="/#contact" data-i18n="onePagerCtaContact">Start a project</a>
+        <a class="btn btn-pill btn-outline-dark no-print" href="/propmotion/" data-i18n="onePagerCtaHubProp">Open PropMotion™</a>
+      </div>
+    </main>
+
+    <script src="/assets/js/site-config.js?v=20260909w24"></script>
+    <script src="/assets/js/translations.js?v=20260909w24"></script>
+    <script src="/assets/js/app.js?v=20260909w24"></script>
+  </body>
+</html>

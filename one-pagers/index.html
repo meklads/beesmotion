@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v3";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>One-pagers | Bees Motion</title>
+    <meta name="description" content="Print-friendly one-pagers for MedMotion™, PropMotion™, and SpaceLaunch™ by Bees Motion." />
+    <link rel="canonical" href="https://beesmotion.com/one-pagers/" />
+    <link rel="alternate" hreflang="en" href="https://beesmotion.com/one-pagers/" />
+    <link rel="alternate" hreflang="ar" href="https://beesmotion.com/one-pagers/?lang=ar" />
+    <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/one-pagers/" />
+    <meta property="og:title" content="One-pagers | Bees Motion" />
+    <meta property="og:url" content="https://beesmotion.com/one-pagers/" />
+    <meta property="og:image" content="https://beesmotion.com/assets/img/og-share.png" />
+    <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909w24" />
+    <link rel="stylesheet" href="/assets/css/one-pager.css?v=20260909w24" />
+  </head>
+  <body class="lang-en page-onepagers" data-i18n-meta="onePagerIndex">
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion">
+          <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="/engage/" data-i18n="navEngage">Engage</a>
+          <a href="/book/" data-booking-cta data-i18n="navBook">Book a call</a>
+          <a href="/#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
+          </div>
+          <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="/engage/" data-i18n="navEngage">Engage</a>
+      <a href="/book/" data-booking-cta data-i18n="navBook">Book a call</a>
+      <a href="/#contact" data-i18n="navContact">Contact</a>
+    </nav>
+
+    <main id="main" class="one-pager-index">
+      <div class="container">
+        <p class="svc-tag" data-i18n="onePagerIndexTag">Shareable briefs</p>
+        <h1 class="font-headline-xl" data-i18n="onePagerIndexTitle">Sector one-pagers</h1>
+        <p class="font-body-md" data-i18n="onePagerIndexSub">Print-friendly summaries for partners and internal stakeholders.</p>
+        <div class="one-pager-grid">
+          <a class="one-pager-card" href="/one-pagers/medmotion.html">
+            <strong dir="ltr">MedMotion<sup aria-hidden="true">™</sup></strong>
+            <span data-i18n="onePagerMedCard">Healthcare content systems</span>
+          </a>
+          <a class="one-pager-card" href="/one-pagers/propmotion.html">
+            <strong dir="ltr">PropMotion<sup aria-hidden="true">™</sup></strong>
+            <span data-i18n="onePagerPropCard">Real estate content systems</span>
+          </a>
+          <a class="one-pager-card" href="/one-pagers/spacelaunch.html">
+            <strong dir="ltr">SpaceLaunch<sup aria-hidden="true">™</sup></strong>
+            <span data-i18n="onePagerLaunchCard">Launch halls & exhibitions</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer no-print">
+      <div class="container footer-bottom">
+        <a class="footer-domain" href="https://beesmotion.com">beesmotion.com</a>
+      </div>
+    </footer>
+    <script src="/assets/js/site-config.js?v=20260909w24"></script>
+    <script src="/assets/js/translations.js?v=20260909w24"></script>
+    <script src="/assets/js/app.js?v=20260909w24"></script>
+  </body>
+</html>

@@ -337,6 +337,90 @@
     return null;
   }
 
+  function waNumber() {
+    return (window.BM_SITE && window.BM_SITE.whatsapp) || WA;
+  }
+
+  function bookingDestination() {
+    const url = window.BM_SITE && window.BM_SITE.bookingUrl;
+    if (url && String(url).trim()) return String(url).trim();
+    return "/book/";
+  }
+
+  function initBookingCtas() {
+    const dest = bookingDestination();
+    document.querySelectorAll("[data-booking-cta]").forEach((el) => {
+      el.setAttribute("href", dest);
+      if (/^https?:\/\//i.test(dest)) {
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener");
+      } else {
+        el.removeAttribute("target");
+        el.removeAttribute("rel");
+      }
+    });
+  }
+
+  function initBookForm() {
+    const form = document.getElementById("bookForm");
+    if (!form) return;
+
+    const primary = document.getElementById("bookPrimaryCta");
+    const preferWa = document.getElementById("bookPreferWa");
+    const bookingUrl = window.BM_SITE && window.BM_SITE.bookingUrl && String(window.BM_SITE.bookingUrl).trim();
+    const wa = waNumber();
+
+    if (preferWa) {
+      preferWa.setAttribute("href", `https://wa.me/${wa}`);
+    }
+
+    if (bookingUrl && primary) {
+      primary.setAttribute("type", "button");
+      primary.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.open(bookingUrl, "_blank", "noopener");
+      });
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (bookingUrl) {
+        window.open(bookingUrl, "_blank", "noopener");
+        return;
+      }
+      const lang = getLang();
+      const name = (form.name.value || "").trim();
+      const org = (form.organization.value || "").trim();
+      const pathEl = form.path;
+      const winEl = form.window;
+      const pathLabel = pathEl && pathEl.selectedOptions[0] ? pathEl.selectedOptions[0].textContent.trim() : pathEl.value;
+      const winLabel = winEl && winEl.selectedOptions[0] ? winEl.selectedOptions[0].textContent.trim() : winEl.value;
+      const notes = (form.notes.value || "").trim();
+      const lines =
+        lang === "ar"
+          ? [
+              "مرحباً بيز موشن — طلب مكالمة استكشاف",
+              `الاسم: ${name}`,
+              `الجهة: ${org}`,
+              `المسار: ${pathLabel}`,
+              `الوقت المفضل (السعودية): ${winLabel}`,
+              notes ? `ملاحظات: ${notes}` : null,
+            ].filter(Boolean)
+          : [
+              "Hello Bees Motion — discovery call request",
+              `Name: ${name}`,
+              `Organization: ${org}`,
+              `Path: ${pathLabel}`,
+              `Preferred window (KSA): ${winLabel}`,
+              notes ? `Notes: ${notes}` : null,
+            ].filter(Boolean);
+      const text = encodeURIComponent(lines.join("\n"));
+      const waUrl = `https://wa.me/${wa}?text=${text}`;
+      track("cta_book_whatsapp", { path: pathEl.value, window: winEl.value, lang: lang });
+      window.open(waUrl, "_blank", "noopener");
+    });
+  }
+
   function initForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
@@ -1421,6 +1505,8 @@
     initHeader();
     initReveal();
     initTracking();
+    initBookingCtas();
+    initBookForm();
     initForm();
     initThanksPage();
     initHeroVideo();

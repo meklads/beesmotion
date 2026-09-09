@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+      (function () {
+        try {
+          var KEY = "bm-lang-v3";
+          var lang = localStorage.getItem(KEY);
+          if (lang !== "en" && lang !== "ar") lang = "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MedMotion™ One-pager | Bees Motion</title>
+    <meta name="description" content="MedMotion™ healthcare content systems by Bees Motion — strategy, medical films, series, and continuous production." />
+    <link rel="canonical" href="https://beesmotion.com/one-pagers/medmotion.html" />
+    <link rel="alternate" hreflang="en" href="https://beesmotion.com/one-pagers/medmotion.html" />
+    <link rel="alternate" hreflang="ar" href="https://beesmotion.com/one-pagers/medmotion.html?lang=ar" />
+    <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/one-pagers/medmotion.html" />
+    <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909w24" />
+    <link rel="stylesheet" href="/assets/css/one-pager.css?v=20260909w24" />
+  </head>
+  <body class="lang-en" data-i18n-meta="onePagerMed">
+    <a class="skip-link no-print" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header no-print">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Bees Motion">
+          <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="200" height="94" />
+        </a>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="active">EN</button>
+            <button type="button" data-lang="ar">AR</button>
+          </div>
+          <a class="btn btn-pill btn-on-light" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="one-pager">
+      <div class="one-pager-mark">
+        <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" width="160" height="76" />
+        <span class="one-pager-brand" dir="ltr">MedMotion<sup aria-hidden="true">™</sup></span>
+      </div>
+      <h1 data-i18n="onePagerMedTitle">Healthcare content under your brand</h1>
+      <p class="one-pager-lead" data-i18n="onePagerMedBody">MedMotion™ is Bees Motion’s healthcare marketing and medical content system for hospitals and health groups — education series, brand films, campaigns, and continuous production.</p>
+      <ul class="one-pager-bullets">
+        <li data-i18n="onePagerMed1">Patient education series and medical motion under hospital identity</li>
+        <li data-i18n="onePagerMed2">Brand films and campaign assets ready for channel distribution</li>
+        <li data-i18n="onePagerMed3">Done-for-you content cycle from strategy through delivery</li>
+        <li data-i18n="onePagerMed4">Proven continuous production with International Medical Center</li>
+      </ul>
+      <p class="one-pager-proof" data-i18n="onePagerMedProof">Evidenced: 100+ films, designs &amp; presentations; 8 connected medical content series; ~1 year continuous production with IMC.</p>
+      <div class="one-pager-ctas">
+        <a class="btn btn-pill btn-gold" href="/book/" data-booking-cta data-i18n="onePagerCtaBook">Book a call</a>
+        <a class="btn btn-pill btn-outline-dark" href="/#contact" data-i18n="onePagerCtaContact">Start a project</a>
+        <a class="btn btn-pill btn-outline-dark no-print" href="/medmotion/" data-i18n="onePagerCtaHub">Open MedMotion™</a>
+      </div>
+    </main>
+
+    <script src="/assets/js/site-config.js?v=20260909w24"></script>
+    <script src="/assets/js/translations.js?v=20260909w24"></script>
+    <script src="/assets/js/app.js?v=20260909w24"></script>
+  </body>
+</html>

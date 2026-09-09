@@ -17131,3 +17131,346 @@ body.lang-ar .work-case-client--mwl {
 .work-case--med .work-case-media img {
   object-position: center 45%;
 }
+
+/* —— Week 2–4 commercial pages: engage ladder + book form —— */
+.page-hero {
+  padding: clamp(5.5rem, 12vw, 7.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  background:
+    radial-gradient(80% 80% at 10% 0%, rgba(201, 162, 39, 0.1), transparent 55%),
+    linear-gradient(180deg, #f7f5f0 0%, #efece4 100%);
+  border-bottom: 1px solid rgba(12, 13, 16, 0.08);
+}
+
+.page-hero-inner {
+  max-width: 42rem;
+}
+
+.page-hero-tag {
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark, #b8860b);
+}
+
+.page-hero-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+html[dir="rtl"] .page-hero-title,
+body.lang-ar .page-hero-title {
+  font-family: Tajawal, var(--font-ar), sans-serif;
+  letter-spacing: 0;
+}
+
+.page-hero-sub {
+  margin: 0 0 1.35rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--secondary, #5c5a55);
+}
+
+.page-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.engage-ladder {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.engage-ladder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+  align-items: stretch;
+}
+
+.engage-ladder-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.55rem 1.35rem 1.35rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.1);
+  box-shadow: 0 12px 32px rgba(12, 13, 16, 0.04);
+}
+
+.engage-ladder-card--featured {
+  border-color: rgba(201, 162, 39, 0.55);
+  background: linear-gradient(180deg, #fffdf6 0%, #ffffff 48%);
+}
+
+.engage-ladder-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0 0 0.75rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(12, 13, 16, 0.06);
+}
+
+.engage-ladder-badge--hot {
+  background: rgba(201, 162, 39, 0.22);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+}
+
+.engage-ladder-name {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.engage-ladder-for {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--secondary, #5c5a55);
+}
+
+.engage-ladder-meta {
+  margin: 0 0 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(12, 13, 16, 0.08);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-dark, #b8860b);
+}
+
+.engage-ladder-list {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+
+.engage-ladder-list li {
+  position: relative;
+  padding: 0.4rem 0 0.4rem 1rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  border-bottom: 1px solid rgba(12, 13, 16, 0.06);
+}
+
+.engage-ladder-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--gold, #c9a227);
+}
+
+html[dir="rtl"] .engage-ladder-list li {
+  padding: 0.4rem 1rem 0.4rem 0;
+}
+
+html[dir="rtl"] .engage-ladder-list li::before {
+  left: auto;
+  right: 0;
+}
+
+.engage-ladder-line {
+  margin: 0 0 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--secondary, #5c5a55);
+}
+
+.engage-ladder-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.engage-onepagers {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+}
+
+.engage-onepagers-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.engage-onepagers-links a {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.book-section {
+  padding: 0 0 clamp(3rem, 6vw, 4.5rem);
+}
+
+.book-layout {
+  max-width: 40rem;
+}
+
+.book-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.1rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(12, 13, 16, 0.1);
+  box-shadow: 0 14px 36px rgba(12, 13, 16, 0.05);
+}
+
+.book-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.book-field--full {
+  grid-column: 1 / -1;
+}
+
+.book-field input,
+.book-field select,
+.book-field textarea {
+  font: inherit;
+  font-weight: 500;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(12, 13, 16, 0.14);
+  background: #fafaf8;
+  color: var(--ink);
+}
+
+.book-field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.book-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.book-hint {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary, #5c5a55);
+}
+
+.brands-craft {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.brands-proof {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.brands-engine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.brands-engine {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.2rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(12, 13, 16, 0.1);
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.brands-engine:hover {
+  border-color: rgba(201, 162, 39, 0.5);
+  transform: translateY(-2px);
+}
+
+.brands-engine strong {
+  font-size: 1.1rem;
+}
+
+.brands-engine span {
+  font-size: 0.9rem;
+  color: var(--secondary, #5c5a55);
+}
+
+.brands-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.mwl-gallery {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+}
+
+.mwl-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mwl-gallery-grid img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.mwl-film {
+  padding: clamp(2rem, 5vw, 3rem) 0;
+}
+
+.engage-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 900px) {
+  .engage-ladder-grid,
+  .brands-engine-grid,
+  .mwl-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .book-form {
+    grid-template-columns: 1fr;
+  }
+}

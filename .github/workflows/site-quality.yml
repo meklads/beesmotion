@@ -1,0 +1,45 @@
+name: Site quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install serve + linkinator
+        run: npm install --no-save serve linkinator@6
+      - name: Start static server
+        run: npx serve -s . -l 4173 &
+      - name: Wait for server
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:4173/ >/dev/null && exit 0
+            sleep 1
+          done
+          exit 1
+      - name: Crawl internal links
+        run: |
+          npx linkinator http://127.0.0.1:4173 \
+            --recurse \
+            --verbosity error \
+            --skip "^(https?://(?!127\.0\.0\.1).*)" \
+            --timeout 15000
+
+  deploy-cloudflare-pages:
+    needs: link-check
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=beesmotion

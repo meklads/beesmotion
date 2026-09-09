@@ -1,0 +1,183 @@
+/* One-pager print + screen layout — Bees Motion */
+.one-pager {
+  --op-ink: #0c0d10;
+  --op-muted: #5c5a55;
+  --op-gold: #c9a227;
+  --op-line: rgba(12, 13, 16, 0.12);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 1.25rem 3rem;
+  color: var(--op-ink);
+}
+
+.one-pager-mark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--op-line);
+}
+
+.one-pager-mark img {
+  height: 42px;
+  width: auto;
+}
+
+.one-pager-brand {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.one-pager-brand sup {
+  font-size: 0.55em;
+}
+
+.one-pager h1 {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0 0 0.85rem;
+}
+
+.one-pager-lead {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--op-muted);
+  margin: 0 0 1.35rem;
+}
+
+.one-pager-bullets {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.one-pager-bullets li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.15rem;
+  border-bottom: 1px solid var(--op-line);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.one-pager-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--op-gold);
+}
+
+html[dir="rtl"] .one-pager-bullets li {
+  padding: 0.55rem 1.15rem 0.55rem 0;
+}
+
+html[dir="rtl"] .one-pager-bullets li::before {
+  left: auto;
+  right: 0;
+}
+
+.one-pager-proof {
+  margin: 0 0 1.75rem;
+  padding: 0.9rem 1rem;
+  background: rgba(201, 162, 39, 0.08);
+  border-left: 3px solid var(--op-gold);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+html[dir="rtl"] .one-pager-proof {
+  border-left: 0;
+  border-right: 3px solid var(--op-gold);
+}
+
+.one-pager-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.one-pager-index {
+  padding: clamp(4rem, 10vw, 6rem) 0 3rem;
+}
+
+.one-pager-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.one-pager-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.35rem 1.25rem;
+  border: 1px solid var(--op-line);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.one-pager-card:hover {
+  border-color: rgba(201, 162, 39, 0.55);
+  transform: translateY(-2px);
+}
+
+.one-pager-card strong {
+  font-size: 1.1rem;
+}
+
+.one-pager-card span {
+  color: var(--op-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 720px) {
+  .one-pager-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .site-header,
+  .mobile-nav,
+  .wa-float,
+  .site-footer,
+  .skip-link,
+  .lang-toggle,
+  .menu-btn,
+  .one-pager-ctas .btn-outline-dark,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+  }
+
+  .one-pager {
+    max-width: none;
+    padding: 0;
+  }
+
+  .one-pager-proof {
+    break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+}
