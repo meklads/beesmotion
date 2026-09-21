@@ -3,10 +3,16 @@
 /book-appointment/ /#contact 301
 /book-appointment.html /#contact 301
 
-# Aliases for AI Content Engine hub
-/ai-content-engine /ai/ 301
-/ai-content-engine.html /ai/ 301
-/ai.html /ai/ 301
+# Flagship: AI Creative Production
+/ai-creative-production /ai-creative-production/ 301
+/ai-creative-production.html /ai-creative-production/ 301
+
+# Aliases for AI Content Engine hub (legacy → flagship)
+/ai-content-engine /ai-creative-production/ 301
+/ai-content-engine.html /ai-creative-production/ 301
+/ai.html /ai-creative-production/ 301
+/ai /ai-creative-production/ 301
+/ai/ /ai-creative-production/ 301
 
 # PropMotion landing aliases (extensionless; do NOT rewrite to .html — that loops with CF pretty URLs)
 /prop-motion /propmotion 301

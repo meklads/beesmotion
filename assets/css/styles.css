@@ -16542,6 +16542,12 @@ body.lang-ar .bm-hero-craft {
   min-height: 100%;
 }
 
+.craft-panel-link {
+  display: contents;
+  color: inherit;
+  text-decoration: none;
+}
+
 @media (min-width: 900px) {
   .craft-panel {
     grid-template-rows: minmax(16rem, 22vw) auto;
