@@ -42,8 +42,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260921acp" />
-    <link rel="stylesheet" href="/assets/css/acp.css?v=20260921acp" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260922acp2" />
+    <link rel="stylesheet" href="/assets/css/acp.css?v=20260922acp2" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -151,7 +151,7 @@
         </div>
       </section>
 
-      <section class="acp-section acp-outputs band-mist" aria-labelledby="acp-outputs-title">
+      <section id="acp-outputs" class="acp-section acp-outputs band-mist" aria-labelledby="acp-outputs-title">
         <div class="container">
           <div class="section-head reveal">
             <span class="svc-tag" data-i18n="acpOutputsTag">What we produce</span>
@@ -269,7 +269,7 @@
           <p class="font-body-md" data-i18n="acpCloseSub">Let’s build it.</p>
           <div class="acp-hero-ctas">
             <a class="btn btn-pill btn-gold" href="/#contact" data-i18n="ctaStartProject" data-track="cta_acp_close_start">Start a Project</a>
-            <a class="btn btn-pill btn-outline-dark" href="#acp-work" data-i18n="ctaViewWork" data-track="cta_acp_close_work">View Our Work</a>
+            <a class="btn btn-pill btn-outline-light" href="#acp-work" data-i18n="ctaViewWork" data-track="cta_acp_close_work">View Our Work</a>
           </div>
         </div>
       </section>
@@ -283,26 +283,69 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="/assets/img/bees-motion-logo.png" alt="Bees Motion" class="footer-logo footer-logo--light" width="680" height="330" />
-            <p class="footer-blurb" data-i18n="footerBlurbAcp">AI Creative Production for brands — within Tasami Group.</p>
-            <a class="btn btn-pill btn-on-light footer-cta" href="/#contact" data-i18n="ctaStartProject">Start a Project</a>
+            <picture>
+              <source srcset="/assets/img/bees-motion-logo-sm.webp" type="image/webp" />
+              <img
+                src="/assets/img/bees-motion-logo-sm.png"
+                alt="Bees Motion"
+                class="footer-logo footer-logo--light"
+                width="280"
+                height="132"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <p class="footer-blurb" data-i18n="footerBlurbAcp">AI Creative Production for brands — a Tasami Group company.</p>
+            <a class="btn btn-pill btn-on-light footer-cta" href="/#contact" data-i18n="ctaStartProject" data-track="cta_acp_footer">Start a Project</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="navAcp">AI Creative Production</p>
+            <div class="footer-links">
+              <a href="/ai-creative-production/" data-i18n="footerAcpOffer">Flagship offer</a>
+              <a href="/ai-creative-production/#acp-work" data-i18n="navWork">Work</a>
+              <a href="/ai-creative-production/#acp-outputs" data-i18n="acpOutputsTag">What we produce</a>
+              <a href="/#contact" data-i18n="ctaStartProject">Start a Project</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="acpWhoTag">Who it is for</p>
+            <div class="footer-links">
+              <a href="/medmotion/" dir="ltr">MedMotion™</a>
+              <a href="/propmotion/" dir="ltr">PropMotion™</a>
+              <a href="/launch-halls/" dir="ltr">SpaceLaunch™</a>
+              <a href="/#work" data-i18n="ctaViewWork">View Our Work</a>
+            </div>
           </div>
           <div class="footer-col">
             <p class="footer-col-title" data-i18n="footerCompany">Company</p>
             <div class="footer-links">
-              <a href="/ai-creative-production/" data-i18n="navAcp">AI Creative Production</a>
-              <a href="/#work" data-i18n="navWork">Work</a>
-              <a href="/medmotion/" dir="ltr">MedMotion™</a>
-              <a href="/propmotion/" dir="ltr">PropMotion™</a>
+              <a href="/" data-i18n="navHome">Home</a>
               <a href="/#contact" data-i18n="navContact">Contact</a>
-              <a href="/privacy/" data-i18n="navPrivacy">Privacy</a>
-              <a href="/terms/" data-i18n="navTerms">Terms</a>
+              <a href="/book/" data-booking-cta data-i18n="navBook">Book a call</a>
+              <a href="/privacy/" data-i18n="navPrivacy">Privacy policy</a>
+              <a href="/terms/" data-i18n="navTerms">Terms of use</a>
             </div>
+          </div>
+        </div>
+        <div class="footer-mid">
+          <div class="footer-identity">
+            <p class="footer-affiliation" data-i18n-html="footerAffHtml">A company within <a href="https://www.tasamify.com/" target="_blank" rel="noopener noreferrer">Tasami Group<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+            <div class="footer-sister-brands" aria-label="Tasami Group">
+              <a href="https://beesmotion.com/" aria-label="Bees Motion">
+                <img src="/assets/img/brands/bees-motion-logo-on-dark.png?v=20260904fix" alt="Bees Motion" width="140" height="66" loading="lazy" decoding="async" />
+              </a>
+              <a href="https://3dgraphicshouse.com/real-estate/" target="_blank" rel="noopener" aria-label="Graphics House">
+                <img src="/assets/img/brands/graphics-house-logo-gold.png?v=20260904fix" alt="Graphics House" width="160" height="75" loading="lazy" decoding="async" />
+              </a>
+              <a href="https://turriva.com/" target="_blank" rel="noopener" aria-label="Turriva">
+                <img src="/assets/img/brands/turriva-logo-on-dark.png?v=20260904fix" alt="Turriva" width="180" height="36" loading="lazy" decoding="async" />
+              </a>
+            </div>
+            <p class="footer-copy">© <span class="year"></span> Bees Motion · <span data-i18n="footerRights">All rights reserved</span></p>
           </div>
         </div>
         <div class="footer-bottom">
           <a class="footer-domain" href="https://beesmotion.com">beesmotion.com</a>
-          <p class="footer-copy">© <span class="year"></span> Bees Motion</p>
         </div>
       </div>
     </footer>
@@ -312,8 +355,8 @@
         el.textContent = new Date().getFullYear();
       });
     </script>
-    <script src="/assets/js/site-config.js?v=20260921acp"></script>
-    <script src="/assets/js/translations.js?v=20260921acp"></script>
-    <script src="/assets/js/app.js?v=20260921acp"></script>
+    <script src="/assets/js/site-config.js?v=20260922acp"></script>
+    <script src="/assets/js/translations.js?v=20260922acp"></script>
+    <script src="/assets/js/app.js?v=20260922acp"></script>
   </body>
 </html>

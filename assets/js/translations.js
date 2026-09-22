@@ -1750,6 +1750,7 @@ window.BM_I18N = {
   onePagerCtaHub: "افتح MedMotion™",
   onePagerCtaHubProp: "افتح PropMotion™",
   onePagerCtaHubLaunch: "افتح SpaceLaunch™",
+  navHome: "الرئيسية",
   navAcp: "إنتاج إبداعي بالذكاء الاصطناعي",
   ctaStartProject: "ابدأ مشروعاً",
   ctaViewWork: "شاهد أعمالنا",
@@ -1811,7 +1812,8 @@ window.BM_I18N = {
   acpStep5d: "ماسترات جاهزة للسوق وقصات القنوات.",
   acpCloseTitle: "لديكم مشروع إبداعي؟",
   acpCloseSub: "لنبنِه معاً.",
-  footerBlurbAcp: "إنتاج إبداعي بالذكاء الاصطناعي للعلامات — ضمن مجموعة تسامي.",
+  footerAcpOffer: "العرض الرئيسي",
+  footerBlurbAcp: "إنتاج إبداعي بالذكاء الاصطناعي للعلامات — شركة ضمن مجموعة تسامي.",
 
 },
   en: {
@@ -3560,6 +3562,7 @@ window.BM_I18N = {
   onePagerCtaHub: "Open MedMotion™",
   onePagerCtaHubProp: "Open PropMotion™",
   onePagerCtaHubLaunch: "Open SpaceLaunch™",
+  navHome: "Home",
   navAcp: "AI Creative Production",
   ctaStartProject: "Start a Project",
   ctaViewWork: "View Our Work",
@@ -3621,7 +3624,8 @@ window.BM_I18N = {
   acpStep5d: "Market-ready masters and channel cuts.",
   acpCloseTitle: "Have a creative project in mind?",
   acpCloseSub: "Let's build it.",
-  footerBlurbAcp: "AI Creative Production for brands — within Tasami Group.",
+  footerAcpOffer: "Flagship offer",
+  footerBlurbAcp: "AI Creative Production for brands — a Tasami Group company.",
 
 }
 };

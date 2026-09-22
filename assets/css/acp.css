@@ -1,6 +1,11 @@
 /* AI Creative Production flagship — Bees Motion */
+.page-acp {
+  --acp-space-section: clamp(3.5rem, 7.5vw, 5.5rem);
+  --acp-space-block: clamp(1.35rem, 2.4vw, 1.85rem);
+}
+
 .page-acp .acp-hero {
-  padding: clamp(6rem, 12vw, 8rem) 0 clamp(3rem, 6vw, 4.5rem);
+  padding: clamp(6.5rem, 12vw, 8.5rem) 0 clamp(3.25rem, 6vw, 4.75rem);
   background:
     radial-gradient(70% 60% at 85% 10%, rgba(201, 162, 39, 0.12), transparent 55%),
     linear-gradient(180deg, #f7f5f0 0%, #efece4 100%);
@@ -42,7 +47,7 @@
   margin: 0 0 1.75rem;
   max-width: 36rem;
   font-size: clamp(1rem, 1.6vw, 1.125rem);
-  line-height: 1.6;
+  line-height: 1.65;
   color: rgba(12, 13, 16, 0.72);
 }
 
@@ -70,7 +75,16 @@
 }
 
 .acp-section {
-  padding: clamp(3rem, 7vw, 5rem) 0;
+  padding: var(--acp-space-section) 0;
+}
+
+.acp-section .section-head {
+  margin-bottom: 0.35rem;
+}
+
+.acp-section .section-head .font-body-md {
+  margin-top: 0.85rem;
+  max-width: 38rem;
 }
 
 .acp-narrow {
@@ -79,27 +93,28 @@
 
 .acp-output-grid {
   list-style: none;
-  margin: 1.75rem 0 0;
+  margin: var(--acp-space-block) 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .acp-output-grid li {
-  padding: 1rem 1.1rem;
+  padding: 1.05rem 1.15rem;
   border-radius: 12px;
   background: #fff;
   border: 1px solid rgba(12, 13, 16, 0.08);
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--ink, #0c0d10);
+  line-height: 1.35;
 }
 
 .acp-model-grid {
   display: grid;
   gap: 1rem;
-  margin-top: 1.75rem;
+  margin-top: var(--acp-space-block);
 }
 
 @media (min-width: 800px) {
@@ -109,28 +124,30 @@
 }
 
 .acp-model-card {
-  padding: 1.4rem 1.25rem;
+  padding: 1.45rem 1.3rem;
   border-radius: 14px;
   background: #fff;
   border: 1px solid rgba(12, 13, 16, 0.08);
+  height: 100%;
 }
 
 .acp-model-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.55rem;
+  font-size: 1.08rem;
+  line-height: 1.25;
 }
 
 .acp-model-card p {
   margin: 0;
   color: rgba(12, 13, 16, 0.68);
-  line-height: 1.55;
+  line-height: 1.6;
   font-size: 0.95rem;
 }
 
 .acp-work-grid {
   display: grid;
   gap: 1rem;
-  margin-top: 1.75rem;
+  margin-top: var(--acp-space-block);
 }
 
 @media (min-width: 900px) {
@@ -148,6 +165,7 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(12, 13, 16, 0.08);
+  height: 100%;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -165,11 +183,13 @@
 }
 
 .acp-work-meta {
-  padding: 1rem 1.1rem 1.2rem;
+  padding: 1.05rem 1.15rem 1.25rem;
+  display: grid;
+  gap: 0.3rem;
 }
 
 .acp-work-lane {
-  margin: 0 0 0.35rem;
+  margin: 0;
   font-size: 0.7rem;
   font-weight: 750;
   letter-spacing: 0.08em;
@@ -178,8 +198,9 @@
 }
 
 .acp-work-meta h3 {
-  margin: 0 0 0.55rem;
+  margin: 0;
   font-size: 1.05rem;
+  line-height: 1.3;
 }
 
 .acp-work-meta span {
@@ -190,15 +211,15 @@
 
 .acp-who-grid {
   list-style: none;
-  margin: 1.5rem 0 0;
+  margin: var(--acp-space-block) 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
+  gap: 0.7rem;
 }
 
 .acp-who-grid li {
-  padding: 0.65rem 1rem;
+  padding: 0.7rem 1.05rem;
   border-radius: 999px;
   border: 1px solid rgba(12, 13, 16, 0.12);
   background: #fff;
@@ -207,15 +228,16 @@
 }
 
 .acp-who-note {
-  margin: 1.25rem 0 0;
-  max-width: 36rem;
-  font-size: 0.9rem;
+  margin: 1.35rem 0 0;
+  max-width: 38rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
   color: rgba(12, 13, 16, 0.62);
 }
 
 .acp-process-grid {
   list-style: none;
-  margin: 1.75rem 0 0;
+  margin: var(--acp-space-block) 0 0;
   padding: 0;
   display: grid;
   gap: 0.85rem;
@@ -228,12 +250,13 @@
 }
 
 .acp-process-grid li {
-  padding: 1.15rem 1rem;
+  padding: 1.2rem 1.05rem;
   border-radius: 14px;
   background: #fff;
   border: 1px solid rgba(12, 13, 16, 0.08);
   display: grid;
-  gap: 0.35rem;
+  gap: 0.4rem;
+  min-height: 100%;
 }
 
 .acp-process-grid span {
@@ -245,20 +268,22 @@
 
 .acp-process-grid strong {
   font-size: 1rem;
+  line-height: 1.25;
 }
 
 .acp-process-grid em {
   font-style: normal;
   font-size: 0.88rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: rgba(12, 13, 16, 0.65);
 }
 
 .acp-close {
   background:
-    radial-gradient(80% 70% at 50% 0%, rgba(201, 162, 39, 0.1), transparent 60%),
+    radial-gradient(80% 70% at 50% 0%, rgba(201, 162, 39, 0.12), transparent 60%),
     #0c0d10;
   color: #f4f1ea;
+  border-bottom: 1px solid rgba(229, 168, 35, 0.22);
 }
 
 .acp-close .font-headline-xl,
@@ -268,6 +293,7 @@
 
 .acp-close .font-body-md {
   opacity: 0.78;
+  margin-top: 0.75rem;
 }
 
 .acp-close-inner {
@@ -278,14 +304,86 @@
 
 .acp-close .acp-hero-ctas {
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1.65rem;
 }
 
-.acp-close .btn-outline-dark {
-  border-color: rgba(244, 241, 234, 0.35);
+.page-acp .acp-close .btn-outline-light {
+  border-color: rgba(244, 241, 234, 0.4);
   color: #f4f1ea;
+  background: transparent;
 }
 
-.acp-close .btn-outline-dark:hover {
+.page-acp .acp-close .btn-outline-light:hover {
   background: rgba(244, 241, 234, 0.08);
+  border-color: rgba(244, 241, 234, 0.7);
+}
+
+/* Footer quality on ACP — align with homepage density */
+.page-acp .site-footer {
+  margin-top: 0;
+  padding-top: clamp(3.25rem, 5.5vw, 4.5rem);
+}
+
+.page-acp .footer-top {
+  gap: clamp(1.75rem, 3.2vw, 2.75rem);
+}
+
+.page-acp .footer-brand {
+  gap: 1rem;
+  max-width: 24rem;
+}
+
+.page-acp .footer-blurb {
+  margin: 0;
+  line-height: 1.55;
+  max-width: 22rem;
+}
+
+.page-acp .footer-links {
+  gap: 0.55rem;
+}
+
+.page-acp .footer-links a {
+  line-height: 1.4;
+}
+
+.page-acp .footer-mid {
+  margin-top: clamp(1.5rem, 2.5vw, 2rem);
+  padding-top: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.page-acp .footer-bottom {
+  margin-top: 1.25rem;
+  padding-top: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .page-acp .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem 1.25rem;
+  }
+
+  .page-acp .footer-brand {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-acp .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .acp-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .acp-hero-ctas {
+    width: 100%;
+  }
+
+  .acp-hero-ctas .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
 }
