@@ -7,8 +7,8 @@
 .page-acp .acp-hero {
   padding: clamp(6.5rem, 12vw, 8.5rem) 0 clamp(3.25rem, 6vw, 4.75rem);
   background:
-    radial-gradient(70% 60% at 85% 10%, rgba(201, 162, 39, 0.12), transparent 55%),
-    linear-gradient(180deg, #f7f5f0 0%, #efece4 100%);
+    radial-gradient(70% 60% at 85% 10%, rgba(139, 125, 101, 0.12), transparent 55%),
+    linear-gradient(180deg, #f4f4f3 0%, #ebeae8 100%);
   border-bottom: 1px solid rgba(12, 13, 16, 0.08);
 }
 
@@ -30,7 +30,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold, #c9a227);
+  color: var(--gold, #8b7d65);
 }
 
 .acp-hero-title {
@@ -194,7 +194,7 @@
   font-weight: 750;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold, #c9a227);
+  color: var(--gold, #8b7d65);
 }
 
 .acp-work-meta h3 {
@@ -263,7 +263,7 @@
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--gold, #c9a227);
+  color: var(--gold, #8b7d65);
 }
 
 .acp-process-grid strong {
@@ -280,15 +280,15 @@
 
 .acp-close {
   background:
-    radial-gradient(80% 70% at 50% 0%, rgba(201, 162, 39, 0.12), transparent 60%),
+    radial-gradient(80% 70% at 50% 0%, rgba(139, 125, 101, 0.12), transparent 60%),
     #0c0d10;
-  color: #f4f1ea;
-  border-bottom: 1px solid rgba(229, 168, 35, 0.22);
+  color: #f0efee;
+  border-bottom: 1px solid rgba(152, 137, 112, 0.22);
 }
 
 .acp-close .font-headline-xl,
 .acp-close .font-body-md {
-  color: #f4f1ea;
+  color: #f0efee;
 }
 
 .acp-close .font-body-md {
@@ -308,14 +308,14 @@
 }
 
 .page-acp .acp-close .btn-outline-light {
-  border-color: rgba(244, 241, 234, 0.4);
-  color: #f4f1ea;
+  border-color: rgba(240, 239, 238, 0.4);
+  color: #f0efee;
   background: transparent;
 }
 
 .page-acp .acp-close .btn-outline-light:hover {
-  background: rgba(244, 241, 234, 0.08);
-  border-color: rgba(244, 241, 234, 0.7);
+  background: rgba(240, 239, 238, 0.08);
+  border-color: rgba(240, 239, 238, 0.7);
 }
 
 /* Footer quality on ACP — align with homepage density */

@@ -1,5 +1,5 @@
 :root {
-  --med-xp-gold: #C9A84C;
+  --med-xp-gold: #9d8f78;
 }
 .med-xp-unit {
   --gold: var(--med-xp-gold);
@@ -20,7 +20,7 @@
   font-family: var(--font-ar, "Tajawal", sans-serif);
   font-size: clamp(1.15rem, 2.2vw, 1.35rem);
   font-weight: 700;
-  color: #f5c84d;
+  color: #b0a592;
   letter-spacing: 0;
 }
 html[lang="en"] .med-xp-case-label,
@@ -31,7 +31,7 @@ html[dir="ltr"] .med-xp-case-label {
   text-transform: none;
 }
 .med-xp-head .container { max-width: 1100px; }
-.med-xp-head .svc-tag { color: rgba(201,168,76,0.95); }
+.med-xp-head .svc-tag { color: rgba(157, 143, 120,0.95); }
 .med-xp-head .font-headline-xl { color: #fff; margin: 0.4rem 0 0.75rem; }
 .med-xp-head .font-body-md { color: rgba(255,255,255,0.72); max-width: 42rem; }
 .med-xp-head-meta {
@@ -49,8 +49,8 @@ html[dir="ltr"] .med-xp-case-label {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: rgba(201,168,76,0.15);
-  border: 2px solid rgba(201,168,76,0.3);
+  background: rgba(157, 143, 120,0.15);
+  border: 2px solid rgba(157, 143, 120,0.3);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@ html[dir="ltr"] .med-xp-case-label {
 }
 .med-xp-unit .s2-play-btn .material-symbols-outlined {
   font-size: 42px;
-  color: #C9A84C;
+  color: #9d8f78;
 }
 .med-xp-unit .case-content {
   background: #f7fbfd;
@@ -124,7 +124,7 @@ html[dir="ltr"] .med-xp-case-label {
   transform: translateY(-50%);
   width: 2px;
   height: 55%;
-  background: rgba(201,168,76,0.4);
+  background: rgba(157, 143, 120,0.4);
   border-radius: 1px;
 }.med-xp-unit .s2-hero-inner * { pointer-events: auto; }.med-xp-unit .s2-hero-title {
   font-size: clamp(20px, 2.5vw, 34px);
@@ -155,8 +155,8 @@ html[dir="ltr"] .med-xp-case-label {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(201,168,76,0.9);
-  box-shadow: 0 0 20px rgba(201,168,76,0.4), 0 0 0 4px rgba(201,168,76,0.15);
+  background: rgba(157, 143, 120,0.9);
+  box-shadow: 0 0 20px rgba(157, 143, 120,0.4), 0 0 0 4px rgba(157, 143, 120,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,8 +170,8 @@ html[dir="ltr"] .med-xp-case-label {
   color: #fff;
 }.med-xp-unit .hotspot:hover .hotspot-dot {
   transform: scale(1.25);
-  background: #C9A84C;
-  box-shadow: 0 0 40px rgba(201,168,76,0.6), 0 0 0 6px rgba(201,168,76,0.2);
+  background: #9d8f78;
+  box-shadow: 0 0 40px rgba(157, 143, 120,0.6), 0 0 0 6px rgba(157, 143, 120,0.2);
 }.med-xp-unit .hotspot-pulse {
   position: absolute;
   top: 50%;
@@ -181,7 +181,7 @@ html[dir="ltr"] .med-xp-case-label {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: transparent;
-  border: 2px solid rgba(201,168,76,0.7);
+  border: 2px solid rgba(157, 143, 120,0.7);
   animation: hotspot-pulse 2.5s ease-out infinite;
   z-index: 1;
   pointer-events: none;
@@ -194,7 +194,7 @@ html[dir="ltr"] .med-xp-case-label {
   height: 12px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 2px solid rgba(201,168,76,0.4);
+  border: 2px solid rgba(157, 143, 120,0.4);
   animation: hotspot-pulse 2.5s ease-out 0.4s infinite;
 }.med-xp-unit .hotspot-pulse::after {
   content: '';
@@ -205,7 +205,7 @@ html[dir="ltr"] .med-xp-case-label {
   height: 12px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 2px solid rgba(201,168,76,0.2);
+  border: 2px solid rgba(157, 143, 120,0.2);
   animation: hotspot-pulse 2.5s ease-out 0.8s infinite;
 }.med-xp-unit .hotspot-2 .hotspot-pulse { animation-delay: 0.4s; }.med-xp-unit .hotspot-2 .hotspot-pulse::before { animation-delay: 0.8s; }.med-xp-unit .hotspot-2 .hotspot-pulse::after { animation-delay: 1.2s; }.med-xp-unit .hotspot-3 .hotspot-pulse { animation-delay: 0.8s; }.med-xp-unit .hotspot-3 .hotspot-pulse::before { animation-delay: 1.2s; }.med-xp-unit .hotspot-3 .hotspot-pulse::after { animation-delay: 1.6s; }.med-xp-unit .hotspot-4 .hotspot-pulse { animation-delay: 1.2s; }.med-xp-unit .hotspot-4 .hotspot-pulse::before { animation-delay: 1.6s; }.med-xp-unit .hotspot-4 .hotspot-pulse::after { animation-delay: 2.0s; }@keyframes hotspot-pulse {
   0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
@@ -227,7 +227,7 @@ html[dir="ltr"] .med-xp-case-label {
   visibility: hidden;
   transition: all 0.35s cubic-bezier(0.25,0.1,0.1,1);
   pointer-events: none;
-  border: 1px solid rgba(201,168,76,0.15);
+  border: 1px solid rgba(157, 143, 120,0.15);
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }.med-xp-unit .hotspot:hover .hotspot-tooltip {
   opacity: 1;
@@ -241,8 +241,8 @@ html[dir="ltr"] .med-xp-case-label {
   width: 12px;
   height: 12px;
   background: rgba(10,10,10,0.92);
-  border-right: 1px solid rgba(201,168,76,0.15);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
+  border-right: 1px solid rgba(157, 143, 120,0.15);
+  border-bottom: 1px solid rgba(157, 143, 120,0.15);
 }.med-xp-unit .hotspot-badge {
   display: inline-block;
   font-size: 10px;
@@ -251,7 +251,7 @@ html[dir="ltr"] .med-xp-case-label {
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 4px;
-  background: rgba(201,168,76,0.15);
+  background: rgba(157, 143, 120,0.15);
   color: var(--gold);
   margin-bottom: 8px;
 }.med-xp-unit .hotspot-tooltip h4 {
@@ -289,7 +289,7 @@ html[dir="ltr"] .med-xp-case-label {
 }.med-xp-unit .s2-watch-btn:hover {
   background: rgba(255,255,255,0.15);
   border-color: var(--gold);
-  box-shadow: 0 4px 30px rgba(201,168,76,0.2);
+  box-shadow: 0 4px 30px rgba(157, 143, 120,0.2);
 }.med-xp-unit .s2-watch-btn .material-symbols-outlined {
   color: var(--gold);
   font-variation-settings: 'FILL' 1;
@@ -297,10 +297,10 @@ html[dir="ltr"] .med-xp-case-label {
 .s2-hero-wrap .s2-play-btn {
   z-index: 5;
 }.med-xp-unit .s2-hero-wrap .s2-play-btn::before {
-  border-color: rgba(201,168,76,0.3);
+  border-color: rgba(157, 143, 120,0.3);
 }.med-xp-unit .s2-hero-wrap .s2-play-icon {
-  background: rgba(201,168,76,0.2);
-  border-color: rgba(201,168,76,0.3);
+  background: rgba(157, 143, 120,0.2);
+  border-color: rgba(157, 143, 120,0.3);
 }.med-xp-unit /* Thumbnail gallery */
 .s2-hero-gallery {
   position: absolute;
@@ -311,13 +311,13 @@ html[dir="ltr"] .med-xp-case-label {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: rgba(201,168,76,0.3) transparent;
+  scrollbar-color: rgba(157, 143, 120,0.3) transparent;
 }.med-xp-unit /* Float widgets are pinned to the physical left,
 .med-xp-unit which is this side in RTL */
 html[dir="rtl"] .s2-hero-gallery,
 html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   inset-inline-end: 100px;
-}.med-xp-unit .s2-hero-gallery::-webkit-scrollbar { width: 3px; }.med-xp-unit .s2-hero-gallery::-webkit-scrollbar-track { background: transparent; }.med-xp-unit .s2-hero-gallery::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.3); border-radius: 2px; }.med-xp-unit .s2-hero-gallery-grid {
+}.med-xp-unit .s2-hero-gallery::-webkit-scrollbar { width: 3px; }.med-xp-unit .s2-hero-gallery::-webkit-scrollbar-track { background: transparent; }.med-xp-unit .s2-hero-gallery::-webkit-scrollbar-thumb { background: rgba(157, 143, 120,0.3); border-radius: 2px; }.med-xp-unit .s2-hero-gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
@@ -337,7 +337,7 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
 }.med-xp-unit .s2-hero-gallery-grid .s2-hero-thumb:hover {
   border-color: var(--gold);
   transform: scale(1.08);
-  box-shadow: 0 4px 16px rgba(201,168,76,0.25);
+  box-shadow: 0 4px 16px rgba(157, 143, 120,0.25);
   z-index: 2;
 }.med-xp-unit .s2-hero-gallery-grid .s2-hero-thumb img {
   width: 100%;
@@ -391,7 +391,7 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   line-height: 1.7;
 }.med-xp-unit /* Client project block (Anan Eskan) */
 .case-content--client {
-  border-top: 1px solid rgba(201,168,76,0.18);
+  border-top: 1px solid rgba(157, 143, 120,0.18);
   padding-top: 72px;
 }.med-xp-unit .case-client-header {
   display: flex;
@@ -718,7 +718,7 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
 }
 .page-hub--med a.med-group-chip:hover {
   transform: translateY(-2px);
-  border-color: rgba(201, 168, 76, 0.45);
+  border-color: rgba(157, 143, 120, 0.45);
   background: rgba(255, 255, 255, 0.09);
 }
 .page-hub--med .med-group-chip--active {
@@ -744,14 +744,14 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
 }
 .page-hub--med .med-group-trust-link {
   justify-self: start;
-  color: #c9a84c;
+  color: #9d8f78;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .page-hub--med .med-group-trust-link:hover {
-  color: #e0c06a;
+  color: #b3a997;
 }
 @media (max-width: 720px) {
   .page-hub--med .med-group-trust-grid {
@@ -1101,7 +1101,7 @@ html[dir="rtl"] .page-hub--med .med-pillar-badge {
 }
 .med-xp-unit .hotspot.is-active .hotspot-dot {
   transform: scale(1.15);
-  background: #C9A84C;
+  background: #9d8f78;
 }
 .med-xp-unit .hotspot-tooltip {
   max-width: min(300px, calc(100vw - 2rem));
