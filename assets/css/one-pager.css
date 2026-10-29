@@ -2,7 +2,7 @@
 .one-pager {
   --op-ink: #0c0d10;
   --op-muted: #5c5a55;
-  --op-gold: #8b7d65;
+  --op-gold: #aa8946;
   --op-line: rgba(12, 13, 16, 0.12);
   max-width: 720px;
   margin: 0 auto;
@@ -89,7 +89,7 @@ html[dir="rtl"] .one-pager-bullets li::before {
 .one-pager-proof {
   margin: 0 0 1.75rem;
   padding: 0.9rem 1rem;
-  background: rgba(139, 125, 101, 0.08);
+  background: rgba(170, 137, 70, 0.08);
   border-left: 3px solid var(--op-gold);
   font-size: 0.95rem;
   line-height: 1.55;
@@ -131,7 +131,7 @@ html[dir="rtl"] .one-pager-proof {
 }
 
 .one-pager-card:hover {
-  border-color: rgba(139, 125, 101, 0.55);
+  border-color: rgba(170, 137, 70, 0.55);
   transform: translateY(-2px);
 }
 

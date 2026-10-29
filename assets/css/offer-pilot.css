@@ -5,8 +5,8 @@
   --op-line: rgba(12, 13, 16, 0.1);
   --op-med: #0a5570;
   --op-med-deep: #061820;
-  --op-gold: #8b7d65;
-  --op-gold-bright: #b0a592;
+  --op-gold: #aa8946;
+  --op-gold-bright: #c8af7a;
   --op-bg: #f3f6f8;
   --op-paper: #fff;
   --font-ar: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
@@ -455,9 +455,9 @@ html[lang="en"] .op-deck-head h2 {
   color: rgba(245, 245, 244, 0.4);
 }
 .op-album-ends span.is-live {
-  border-color: rgba(176, 165, 146, 0.5);
+  border-color: rgba(200, 175, 122, 0.5);
   color: var(--op-gold-bright);
-  background: rgba(176, 165, 146, 0.08);
+  background: rgba(200, 175, 122, 0.08);
 }
 .op-album-caption {
   margin: 0;
@@ -583,7 +583,7 @@ html[lang="en"] .op-deck-head h2 {
 .op-ladder span {
   padding: 0.5rem 0.75rem;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(176, 165, 146, 0.32);
+  border: 1px solid rgba(200, 175, 122, 0.32);
   font-size: 0.84rem;
   font-weight: 700;
 }

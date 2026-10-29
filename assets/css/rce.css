@@ -6,7 +6,7 @@
   --pm-cream: #f3f2f1;
   --pm-paper: #fcfcfb;
   --pm-line: rgba(21, 21, 19, 0.1);
-  --pm-gold: #8a7c64;
+  --pm-gold: #a98845;
   --pm-dark: #11110f;
   --pm-dark-2: #1a1916;
   --pm-light-text: rgba(252, 252, 251, 0.78);
@@ -121,7 +121,7 @@
 .pm-hero {
   padding: calc(var(--header-h, 72px) + 2.75rem) 0 3.5rem;
   background:
-    radial-gradient(65% 50% at 92% 8%, rgba(138, 124, 100, 0.11), transparent 55%),
+    radial-gradient(65% 50% at 92% 8%, rgba(169, 136, 69, 0.11), transparent 55%),
     linear-gradient(180deg, #fff 0%, var(--pm-cream) 100%);
   overflow: hidden;
 }
@@ -304,7 +304,7 @@
 }
 
 .pm-ba-card--after {
-  border-color: rgba(138, 124, 100, 0.4);
+  border-color: rgba(169, 136, 69, 0.4);
   background: linear-gradient(165deg, #f9f9f9, #fff);
 }
 
@@ -329,8 +329,8 @@
 }
 
 .pm-ba-card--after .pm-ba-pills span {
-  background: rgba(138, 124, 100, 0.1);
-  border-color: rgba(138, 124, 100, 0.28);
+  background: rgba(169, 136, 69, 0.1);
+  border-color: rgba(169, 136, 69, 0.28);
 }
 
 .pm-ba-arrow {
@@ -399,7 +399,7 @@ html[dir="rtl"] .pm-ba-arrow { transform: scaleX(-1); }
   font-size: 0.68rem;
   font-weight: 750;
   letter-spacing: 0.08em;
-  color: rgba(186, 176, 160, 0.95);
+  color: rgba(207, 185, 139, 0.95);
   margin-bottom: 0.2rem;
 }
 
@@ -465,7 +465,7 @@ html[dir="rtl"] .pm-ba-arrow { transform: scaleX(-1); }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(186, 176, 160, 0.95);
+  color: rgba(207, 185, 139, 0.95);
   margin-bottom: 0.2rem;
 }
 
@@ -502,7 +502,7 @@ html[dir="rtl"] .pm-ba-arrow { transform: scaleX(-1); }
   font-weight: 750;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(186, 176, 160, 0.9);
+  color: rgba(207, 185, 139, 0.9);
 }
 
 .pm-flow-step strong {
@@ -698,7 +698,7 @@ html[dir="rtl"] .pm-ba-arrow { transform: scaleX(-1); }
 }
 
 .pm-way--focus {
-  border-color: rgba(138, 124, 100, 0.4);
+  border-color: rgba(169, 136, 69, 0.4);
   background: linear-gradient(165deg, #f9f9f9, #fff);
 }
 
@@ -748,10 +748,10 @@ html[dir="rtl"] .pm-ba-arrow { transform: scaleX(-1); }
 }
 
 .pm-group-links a {
-  color: rgba(186, 176, 160, 0.95);
+  color: rgba(207, 185, 139, 0.95);
   font-weight: 650;
   text-decoration: none;
-  border-bottom: 1px solid rgba(186, 176, 160, 0.35);
+  border-bottom: 1px solid rgba(207, 185, 139, 0.35);
 }
 
 .pm-group-links a:hover {

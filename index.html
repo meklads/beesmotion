@@ -40,17 +40,18 @@
     <link rel="alternate" hreflang="en" href="https://beesmotion.com/" />
     <link rel="alternate" hreflang="ar" href="https://beesmotion.com/?lang=ar" />
     <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/" />
-    <link rel="preload" as="image" href="/assets/img/thumbs/x4Ya98nRnog.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/img/home/hero-path.webp" type="image/webp" media="(min-width: 761px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/img/home/hero-path-960.webp" type="image/webp" media="(max-width: 760px)" fetchpriority="high" />
     <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://3dgraphicshouse.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20261029mono" />
-    <link rel="stylesheet" href="/assets/css/home.css?v=20261029lead" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261029gold" />
+    <link rel="stylesheet" href="/assets/css/home.css?v=20261029img" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,52 +108,60 @@
 }
     </script>
     <script type="application/ld+json" id="bm-faq-jsonld">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is MedMotion™?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "MedMotion™ is Bees Motion’s healthcare marketing and medical content system for hospitals and health brands — education series, brand films, campaigns, and continuous production."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is PropMotion™?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Bees Motion’s real estate marketing and lead-generation service for developers: Pre-Launch (marketing preparation), Launch (campaign activation) and Growth Launch (ongoing optimization), plus a content engine for live inventory. Renders and films are available separately with Graphics House."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is SpaceLaunch™?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SpaceLaunch™ is Bees Motion’s path to orchestrate sales galleries and medical exhibition halls through the group, with Graphics House and Turriva when the brief needs CGI, fit-out, or on-site execution."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you only work in healthcare and real estate?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Bees Motion is a creative production studio. Healthcare and real estate are major areas of proven delivery through MedMotion™ and PropMotion™."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I start a project with Bees Motion?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Use the contact form on beesmotion.com or WhatsApp +966 50 278 6513. Share your industry, assets, and goal — we map the right path under Bees Motion, including MedMotion™, PropMotion™, or SpaceLaunch™ when they fit."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Bees Motion do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We build lead-generation systems in three stages — Pre-Launch, Launch and Growth Launch. Content, social media, ads and landing pages are included where each stage needs them."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer social media management on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as a standalone service. Social media and content are part of the system, tied to a clear goal: qualified leads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only work with real estate and healthcare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. They are the sectors with our documented results. The system works for any business launching or growing an offer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you guarantee leads or sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We commit to the agreed work, tracking and reporting. Results depend on the offer, budget and your sales follow-up, so we don't promise numbers we can't control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who pays for the ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do, directly to the platforms and from accounts you own. Our fee covers the work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is pricing set?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After a short assessment we send a written proposal for the stage you need, with scope, deliverables and timeline."
+      }
+    }
+  ]
+}
     </script>
   </head>
   <body class="lang-en page-home" data-i18n-meta="hm">
@@ -215,7 +224,12 @@
 
     <main id="main">
       <section class="hx-hero" aria-labelledby="hm-title">
-        <div class="container hx-hero-grid">
+        <picture class="hx-hero-media" aria-hidden="true">
+          <source media="(max-width: 760px)" srcset="/assets/img/home/hero-path-960.webp" type="image/webp" />
+          <source srcset="/assets/img/home/hero-path.webp" type="image/webp" />
+          <img src="/assets/img/home/hero-path.jpg" alt="" width="1920" height="1075" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="container hx-hero-inner">
           <div class="hx-hero-copy">
             <p class="hx-kicker" data-i18n="hmKicker">Lead generation · Launch marketing</p>
             <h1 id="hm-title" class="hx-h1" data-i18n="hmTitle">We don't sell posts. We build the path to your next customer.</h1>
@@ -225,136 +239,144 @@
               <a class="hx-btn hx-btn--ghost" href="#system" data-i18n="hmCta2" data-track="cta_home_hero_system">See the system</a>
             </div>
           </div>
-          <div class="hx-flow" aria-label="Bees Motion Lead System">
-            <p class="hx-flow-title" data-i18n="hmSysName">Bees Motion Lead System</p>
-            <ol class="hx-flow-list">
-              <li class="hx-flow-step">
-                <span class="hx-flow-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="hx-flow-name" dir="ltr">Pre-Launch</p>
-                  <p class="hx-flow-state" data-i18n="hmSt1">Ready</p>
-                  <p class="hx-flow-desc" data-i18n="hmSt1d">Offer, content, landing page and lead path prepared</p>
-                </div>
-              </li>
-              <li class="hx-flow-step">
-                <span class="hx-flow-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="hx-flow-name" dir="ltr">Launch</p>
-                  <p class="hx-flow-state" data-i18n="hmSt2">Live</p>
-                  <p class="hx-flow-desc" data-i18n="hmSt2d">Campaigns activated, tracking verified, first inquiries</p>
-                </div>
-              </li>
-              <li class="hx-flow-step">
-                <span class="hx-flow-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="hx-flow-name" dir="ltr">Growth Launch</p>
-                  <p class="hx-flow-state" data-i18n="hmSt3">Growing</p>
-                  <p class="hx-flow-desc" data-i18n="hmSt3d">Monthly optimization toward more qualified leads</p>
-                </div>
-              </li>
-            </ol>
-          </div>
         </div>
-        <div class="container">
+        <div class="container hx-hero-foot">
+          <ol class="hx-path" aria-label="Bees Motion Lead System">
+            <li class="hx-path-step">
+              <span class="hx-path-dot" aria-hidden="true"></span>
+              <p class="hx-path-name" dir="ltr">Pre-Launch</p>
+              <p class="hx-path-state" data-i18n="hmSt1">Ready</p>
+              <p class="hx-path-desc" data-i18n="hmSt1d">Offer, content, landing page and lead path prepared</p>
+            </li>
+            <li class="hx-path-step">
+              <span class="hx-path-dot" aria-hidden="true"></span>
+              <p class="hx-path-name" dir="ltr">Launch</p>
+              <p class="hx-path-state" data-i18n="hmSt2">Live</p>
+              <p class="hx-path-desc" data-i18n="hmSt2d">Campaigns activated, tracking verified, first inquiries</p>
+            </li>
+            <li class="hx-path-step">
+              <span class="hx-path-dot" aria-hidden="true"></span>
+              <p class="hx-path-name" dir="ltr">Growth Launch</p>
+              <p class="hx-path-state" data-i18n="hmSt3">Growing</p>
+              <p class="hx-path-desc" data-i18n="hmSt3d">Monthly optimization toward more qualified leads</p>
+            </li>
+          </ol>
           <div class="hx-inbuilt">
             <p class="hx-inbuilt-label" data-i18n="hmInTag">Built into every stage</p>
             <ul class="hx-inbuilt-list">
-            <li data-i18n="hmIn1">Strategy & offer</li>
-            <li data-i18n="hmIn2">Content production</li>
-            <li data-i18n="hmIn3">Social & paid media</li>
-            <li data-i18n="hmIn4">Landing pages</li>
-            <li data-i18n="hmIn5">Lead routing & CRM</li>
-            <li data-i18n="hmIn6">Reporting</li>
+              <li data-i18n="hmIn1">Strategy & offer</li>
+              <li data-i18n="hmIn2">Content production</li>
+              <li data-i18n="hmIn3">Social & paid media</li>
+              <li data-i18n="hmIn4">Landing pages</li>
+              <li data-i18n="hmIn5">Lead routing & CRM</li>
+              <li data-i18n="hmIn6">Reporting</li>
             </ul>
           </div>
         </div>
       </section>
 
       <section class="hx-section hx-problem" id="problem" aria-labelledby="hx-prob-title">
-        <div class="container">
-          <div class="hx-head hx-head--start reveal">
+        <div class="container hx-prob-layout">
+          <div class="hx-prob-head reveal">
             <p class="hx-kicker hx-kicker--dark" data-i18n="hmProbTag">The real problem</p>
-            <h2 id="hx-prob-title" class="hx-h2" data-i18n="hmProbTitle">Most marketing fails before the first ad runs.</h2>
+            <h2 id="hx-prob-title" class="hx-h2 hx-h2--xl" data-i18n="hmProbTitle">Most marketing fails before the first ad runs.</h2>
+            <p class="hx-prob-fix" data-i18n="hmProbFix">Our system fixes all three — in that order.</p>
           </div>
-          <div class="hx-prob-grid reveal">
-            <article class="hx-prob">
+          <ol class="hx-prob-list reveal">
+            <li class="hx-prob">
               <span class="hx-prob-num" aria-hidden="true">01</span>
-              <h3 data-i18n="hmProb1t">An unclear offer</h3>
-              <p data-i18n="hmProb1d">Buyers can't tell in seconds why this offer is for them.</p>
-            </article>
-            <article class="hx-prob">
+              <div>
+                <h3 data-i18n="hmProb1t">An unclear offer</h3>
+                <p data-i18n="hmProb1d">Buyers can't tell in seconds why this offer is for them.</p>
+              </div>
+            </li>
+            <li class="hx-prob">
               <span class="hx-prob-num" aria-hidden="true">02</span>
-              <h3 data-i18n="hmProb2t">No path to a lead</h3>
-              <p data-i18n="hmProb2d">Interest arrives, but there is no page, form or follow-up ready to catch it.</p>
-            </article>
-            <article class="hx-prob">
+              <div>
+                <h3 data-i18n="hmProb2t">No path to a lead</h3>
+                <p data-i18n="hmProb2d">Interest arrives, but there is no page, form or follow-up ready to catch it.</p>
+              </div>
+            </li>
+            <li class="hx-prob">
               <span class="hx-prob-num" aria-hidden="true">03</span>
-              <h3 data-i18n="hmProb3t">Nothing is measured</h3>
-              <p data-i18n="hmProb3d">Budget is spent on reach and likes, and nobody knows what produced a real customer.</p>
-            </article>
-          </div>
-          <p class="hx-prob-fix reveal" data-i18n="hmProbFix">Our system fixes all three — in that order.</p>
+              <div>
+                <h3 data-i18n="hmProb3t">Nothing is measured</h3>
+                <p data-i18n="hmProb3d">Budget is spent on reach and likes, and nobody knows what produced a real customer.</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section class="hx-section hx-system" id="system" aria-labelledby="hx-sys-title">
         <div class="container">
-          <div class="hx-head reveal">
-            <p class="hx-kicker hx-kicker--dark" data-i18n="hmSysTag">The system</p>
-            <h2 id="hx-sys-title" class="hx-h2" data-i18n="hmSysTitle">Three stages. One path from preparation to qualified leads.</h2>
+          <div class="hx-head hx-head--split reveal">
+            <div>
+              <p class="hx-kicker hx-kicker--dark" data-i18n="hmSysTag">The system</p>
+              <h2 id="hx-sys-title" class="hx-h2" data-i18n="hmSysTitle">Three stages. One path from preparation to qualified leads.</h2>
+            </div>
             <p class="hx-sub" data-i18n="hmSysSub">Start at the stage that fits where you are — or run all three as one journey.</p>
           </div>
           <div class="hx-stage-grid reveal">
             <article class="hx-stage hx-stage--featured" id="stage-1">
-              <div class="hx-stage-top">
+              <figure class="hx-stage-media">
+                <picture><source srcset="/assets/img/home/stage-prelaunch.webp" type="image/webp" /><img src="/assets/img/home/stage-prelaunch.jpg" alt="" width="900" height="599" loading="lazy" decoding="async" /></picture>
                 <span class="hx-stage-num" aria-hidden="true">01</span>
+              </figure>
+              <div class="hx-stage-body">
                 <p class="hx-stage-kicker" data-i18n="hmS1k">Foundation</p>
+                <h3 class="hx-stage-name" dir="ltr">Pre-Launch</h3>
+                <p class="hx-stage-goal" data-i18n="hmS1g">Prepare the offer and the lead path before any money is spent on ads.</p>
+                <p class="hx-stage-label" data-i18n="hmGetLabel">What you get</p>
+                <ul class="hx-stage-list">
+                  <li data-i18n="hmS1a">Offer, audience and core messages</li>
+                  <li data-i18n="hmS1b">Launch content: designs, ad copy and short-video scripts</li>
+                  <li data-i18n="hmS1c">A landing page with an inquiry form</li>
+                  <li data-i18n="hmS1d">Lead routing to your inbox, sheet or CRM, with tracking</li>
+                  <li data-i18n="hmS1e">Launch plan: channels, audiences and budget</li>
+                </ul>
+                <a class="hx-stage-cta" href="#contact" data-home-stage="pre-launch" data-i18n="hmSysCta" data-track="cta_home_stage_1">Request an assessment for your stage</a>
               </div>
-              <h3 class="hx-stage-name" dir="ltr">Pre-Launch</h3>
-              <p class="hx-stage-goal" data-i18n="hmS1g">Prepare the offer and the lead path before any money is spent on ads.</p>
-              <p class="hx-stage-label" data-i18n="hmGetLabel">What you get</p>
-              <ul class="hx-stage-list">
-                <li data-i18n="hmS1a">Offer, audience and core messages</li>
-                <li data-i18n="hmS1b">Launch content: designs, ad copy and short-video scripts</li>
-                <li data-i18n="hmS1c">A landing page with an inquiry form</li>
-                <li data-i18n="hmS1d">Lead routing to your inbox, sheet or CRM, with tracking</li>
-                <li data-i18n="hmS1e">Launch plan: channels, audiences and budget</li>
-              </ul>
-              <a class="hx-stage-cta" href="#contact" data-home-stage="pre-launch" data-i18n="hmSysCta" data-track="cta_home_stage_1">Request an assessment for your stage</a>
             </article>
             <article class="hx-stage" id="stage-2">
-              <div class="hx-stage-top">
+              <figure class="hx-stage-media">
+                <picture><source srcset="/assets/img/home/stage-launch.webp" type="image/webp" /><img src="/assets/img/home/stage-launch.jpg" alt="" width="900" height="599" loading="lazy" decoding="async" /></picture>
                 <span class="hx-stage-num" aria-hidden="true">02</span>
+              </figure>
+              <div class="hx-stage-body">
                 <p class="hx-stage-kicker" data-i18n="hmS2k">Campaign activation</p>
+                <h3 class="hx-stage-name" dir="ltr">Launch</h3>
+                <p class="hx-stage-goal" data-i18n="hmS2g">Switch the campaigns on and prove the path works with real inquiries.</p>
+                <p class="hx-stage-label" data-i18n="hmGetLabel">What you get</p>
+                <ul class="hx-stage-list">
+                  <li data-i18n="hmS2a">Campaign structure on the right platforms</li>
+                  <li data-i18n="hmS2b">Audiences, ads and approved creative</li>
+                  <li data-i18n="hmS2c">Tracking and lead-routing checks before going live</li>
+                  <li data-i18n="hmS2d">Activation, monitoring and fixes</li>
+                  <li data-i18n="hmS2e">First-period report with next steps</li>
+                </ul>
+                <a class="hx-stage-cta" href="#contact" data-home-stage="launch" data-i18n="hmSysCta" data-track="cta_home_stage_2">Request an assessment for your stage</a>
               </div>
-              <h3 class="hx-stage-name" dir="ltr">Launch</h3>
-              <p class="hx-stage-goal" data-i18n="hmS2g">Switch the campaigns on and prove the path works with real inquiries.</p>
-              <p class="hx-stage-label" data-i18n="hmGetLabel">What you get</p>
-              <ul class="hx-stage-list">
-                <li data-i18n="hmS2a">Campaign structure on the right platforms</li>
-                <li data-i18n="hmS2b">Audiences, ads and approved creative</li>
-                <li data-i18n="hmS2c">Tracking and lead-routing checks before going live</li>
-                <li data-i18n="hmS2d">Activation, monitoring and fixes</li>
-                <li data-i18n="hmS2e">First-period report with next steps</li>
-              </ul>
-              <a class="hx-stage-cta" href="#contact" data-home-stage="launch" data-i18n="hmSysCta" data-track="cta_home_stage_2">Request an assessment for your stage</a>
             </article>
             <article class="hx-stage" id="stage-3">
-              <div class="hx-stage-top">
+              <figure class="hx-stage-media">
+                <picture><source srcset="/assets/img/home/stage-growth.webp" type="image/webp" /><img src="/assets/img/home/stage-growth.jpg" alt="" width="900" height="599" loading="lazy" decoding="async" /></picture>
                 <span class="hx-stage-num" aria-hidden="true">03</span>
+              </figure>
+              <div class="hx-stage-body">
                 <p class="hx-stage-kicker" data-i18n="hmS3k">Optimization</p>
+                <h3 class="hx-stage-name" dir="ltr">Growth Launch</h3>
+                <p class="hx-stage-goal" data-i18n="hmS3g">Improve every month: more qualified leads for the same budget.</p>
+                <p class="hx-stage-label" data-i18n="hmGetLabel">What you get</p>
+                <ul class="hx-stage-list">
+                  <li data-i18n="hmS3a">Management of the active campaigns</li>
+                  <li data-i18n="hmS3b">Controlled tests of audiences, messages and creative</li>
+                  <li data-i18n="hmS3c">Landing page and conversion improvements</li>
+                  <li data-i18n="hmS3d">Lead-quality review with your sales team</li>
+                  <li data-i18n="hmS3e">Monthly report and priorities</li>
+                </ul>
+                <a class="hx-stage-cta" href="#contact" data-home-stage="growth-launch" data-i18n="hmSysCta" data-track="cta_home_stage_3">Request an assessment for your stage</a>
               </div>
-              <h3 class="hx-stage-name" dir="ltr">Growth Launch</h3>
-              <p class="hx-stage-goal" data-i18n="hmS3g">Improve every month: more qualified leads for the same budget.</p>
-              <p class="hx-stage-label" data-i18n="hmGetLabel">What you get</p>
-              <ul class="hx-stage-list">
-                <li data-i18n="hmS3a">Management of the active campaigns</li>
-                <li data-i18n="hmS3b">Controlled tests of audiences, messages and creative</li>
-                <li data-i18n="hmS3c">Landing page and conversion improvements</li>
-                <li data-i18n="hmS3d">Lead-quality review with your sales team</li>
-                <li data-i18n="hmS3e">Monthly report and priorities</li>
-              </ul>
-              <a class="hx-stage-cta" href="#contact" data-home-stage="growth-launch" data-i18n="hmSysCta" data-track="cta_home_stage_3">Request an assessment for your stage</a>
             </article>
           </div>
           <p class="hx-sys-note reveal" data-i18n="hmSysNote">Content, social media, ads and production are included where each stage needs them — we don't sell them as separate posts.</p>
@@ -369,19 +391,19 @@
             <p class="hx-sub hx-sub--light" data-i18n="hmMeasSub">Reach and likes are not results. We separate every number into what it really is — and never promise what we can't measure.</p>
           </div>
           <div class="reveal">
-            <ol class="hx-meas-list">
-            <li class="hx-meas-step">
-              <h3 data-i18n="hmM1t">Inquiries</h3>
-              <p data-i18n="hmM1d">Every form, call and WhatsApp message — with its source.</p>
-            </li>
-            <li class="hx-meas-step">
-              <h3 data-i18n="hmM2t">Qualified leads</h3>
-              <p data-i18n="hmM2d">The inquiries your team confirms are serious buyers.</p>
-            </li>
-            <li class="hx-meas-step">
-              <h3 data-i18n="hmM3t">Sales</h3>
-              <p data-i18n="hmM3d">Reported when you share CRM or sales data — so cost per sale is real.</p>
-            </li>
+            <ol class="hx-funnel">
+              <li class="hx-funnel-step">
+                <div class="hx-funnel-bar"><h3 data-i18n="hmM1t">Inquiries</h3></div>
+                <p data-i18n="hmM1d">Every form, call and WhatsApp message — with its source.</p>
+              </li>
+              <li class="hx-funnel-step">
+                <div class="hx-funnel-bar"><h3 data-i18n="hmM2t">Qualified leads</h3></div>
+                <p data-i18n="hmM2d">The inquiries your team confirms are serious buyers.</p>
+              </li>
+              <li class="hx-funnel-step">
+                <div class="hx-funnel-bar"><h3 data-i18n="hmM3t">Sales</h3></div>
+                <p data-i18n="hmM3d">Reported when you share CRM or sales data — so cost per sale is real.</p>
+              </li>
             </ol>
             <p class="hx-meas-foot" data-i18n="hmMeasFoot">Cost per inquiry · cost per qualified lead · marketing cost as a share of sales</p>
           </div>
@@ -390,26 +412,37 @@
 
       <section class="hx-section hx-sectors" id="sectors" aria-labelledby="hx-sec-title">
         <div class="container">
-          <div class="hx-head reveal">
-            <p class="hx-kicker hx-kicker--dark" data-i18n="hmSecTag">Sector playbooks</p>
-            <h2 id="hx-sec-title" class="hx-h2" data-i18n="hmSecTitle">The same system, tuned for demanding sectors.</h2>
+          <div class="hx-head hx-head--split reveal">
+            <div>
+              <p class="hx-kicker hx-kicker--dark" data-i18n="hmSecTag">Sector playbooks</p>
+              <h2 id="hx-sec-title" class="hx-h2" data-i18n="hmSecTitle">The same system, tuned for demanding sectors.</h2>
+            </div>
             <p class="hx-sub" data-i18n="hmSecSub">Each playbook adds the rules, content and compliance its sector needs.</p>
           </div>
           <div class="hx-sector-grid reveal">
             <a class="hx-sector" href="/propmotion/">
-              <h3 data-i18n="hmSecRe">Real estate developers</h3>
-              <p data-i18n="hmSecReD">Pre-Launch, Launch and Growth Launch packages for off-plan and ready projects.</p>
-              <span class="hx-sector-go" data-i18n="hmSecReCta">Open PropMotion™</span>
+              <picture class="hx-sector-media"><source srcset="/assets/img/home/sector-real-estate.webp" type="image/webp" /><img src="/assets/img/home/sector-real-estate.jpg" alt="" width="760" height="1008" loading="lazy" decoding="async" /></picture>
+              <div class="hx-sector-body">
+                <h3 data-i18n="hmSecRe">Real estate developers</h3>
+                <p data-i18n="hmSecReD">Pre-Launch, Launch and Growth Launch packages for off-plan and ready projects.</p>
+                <span class="hx-sector-go" data-i18n="hmSecReCta">Open PropMotion™</span>
+              </div>
             </a>
             <a class="hx-sector" href="/medmotion/">
-              <h3 data-i18n="hmSecMed">Hospitals & clinics</h3>
-              <p data-i18n="hmSecMedD">Patient-trust content and campaigns that respect medical accuracy.</p>
-              <span class="hx-sector-go" data-i18n="hmSecMedCta">Open MedMotion™</span>
+              <picture class="hx-sector-media"><source srcset="/assets/img/home/sector-healthcare.webp" type="image/webp" /><img src="/assets/img/home/sector-healthcare.jpg" alt="" width="760" height="1008" loading="lazy" decoding="async" /></picture>
+              <div class="hx-sector-body">
+                <h3 data-i18n="hmSecMed">Hospitals & clinics</h3>
+                <p data-i18n="hmSecMedD">Patient-trust content and campaigns that respect medical accuracy.</p>
+                <span class="hx-sector-go" data-i18n="hmSecMedCta">Open MedMotion™</span>
+              </div>
             </a>
             <a class="hx-sector" href="#contact">
-              <h3 data-i18n="hmSecAny">Any business launching an offer</h3>
-              <p data-i18n="hmSecAnyD">Products, services, branches or seasons: the three stages work the same way.</p>
-              <span class="hx-sector-go" data-i18n="hmSecAnyCta">Talk to us</span>
+              <picture class="hx-sector-media"><source srcset="/assets/img/home/sector-business.webp" type="image/webp" /><img src="/assets/img/home/sector-business.jpg" alt="" width="760" height="1008" loading="lazy" decoding="async" /></picture>
+              <div class="hx-sector-body">
+                <h3 data-i18n="hmSecAny">Any business launching an offer</h3>
+                <p data-i18n="hmSecAnyD">Products, services, branches or seasons: the three stages work the same way.</p>
+                <span class="hx-sector-go" data-i18n="hmSecAnyCta">Talk to us</span>
+              </div>
             </a>
           </div>
         </div>
@@ -521,11 +554,16 @@
       </section>
 
       <section class="hx-section hx-prod" id="production" aria-labelledby="hx-prod-title">
-        <div class="container hx-prod-inner reveal">
-          <p class="hx-kicker hx-kicker--dark" data-i18n="hmProdTag">Creative production, built in</p>
-          <h2 id="hx-prod-title" class="hx-h2" data-i18n="hmProdTitle">Content made by the team that runs your campaigns.</h2>
-          <p class="hx-sub" data-i18n="hmProdSub">Films, photography, motion and ad creative are produced in-house — AI-assisted for speed — and made to perform in the funnel, not just to look good.</p>
-          <a class="hx-btn hx-btn--dark" href="/ai-creative-production/" data-i18n="hmProdCta" data-track="cta_home_production">See creative production</a>
+        <div class="container hx-prod-grid">
+          <figure class="hx-prod-media reveal">
+            <picture><source srcset="/assets/img/home/production-set.webp" type="image/webp" /><img src="/assets/img/home/production-set.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async" /></picture>
+          </figure>
+          <div class="hx-prod-copy reveal">
+            <p class="hx-kicker hx-kicker--dark" data-i18n="hmProdTag">Creative production, built in</p>
+            <h2 id="hx-prod-title" class="hx-h2" data-i18n="hmProdTitle">Content made by the team that runs your campaigns.</h2>
+            <p class="hx-sub" data-i18n="hmProdSub">Films, photography, motion and ad creative are produced in-house — AI-assisted for speed — and made to perform in the funnel, not just to look good.</p>
+            <a class="hx-btn hx-btn--dark" href="/ai-creative-production/" data-i18n="hmProdCta" data-track="cta_home_production">See creative production</a>
+          </div>
         </div>
       </section>
 
@@ -833,7 +871,7 @@
     </script>
     <script src="/assets/js/site-config.js?v=20260909policy"></script>
     <script src="/assets/js/translations.js?v=20261029lead"></script>
-    <script src="/assets/js/translations-home.js?v=20261029lead"></script>
+    <script src="/assets/js/translations-home.js?v=20261029img"></script>
     <script src="/assets/js/app.js?v=20260910work"></script>
   </body>
 </html>

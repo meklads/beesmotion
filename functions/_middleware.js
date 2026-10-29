@@ -12,7 +12,7 @@
 // (Pages applies variable changes to new deployments only).
 // The access code is stored only as a SHA-256 hash. This is a soft gate for
 // keeping casual visitors out during review, not strong security.
-const GATE_ENABLED = true;
+const GATE_ENABLED = false;
 const GATE_HASH = "20f3765880a5c269b747e1e906054a4b4a3a991259f1e16b5dde4742cec2319a";
 const GATE_COOKIE = "bm_gate";
 const GATE_PATH = "/__gate";
