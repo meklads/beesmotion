@@ -44,6 +44,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/styles.css?v=20261029gold" />
     <link rel="stylesheet" href="/assets/css/acp.css?v=20261029gold" />
+    <link rel="stylesheet" href="/assets/css/bm-system.css?v=20261029b" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -123,24 +124,50 @@
     </nav>
 
     <main id="main">
-      <section class="acp-hero" aria-labelledby="acp-hero-title">
-        <div class="container acp-hero-grid">
-          <div class="acp-hero-copy reveal">
-            <p class="acp-eyebrow" data-i18n="acpEyebrow">Bees Motion · Flagship</p>
-            <h1 id="acp-hero-title" class="acp-hero-title" data-i18n="acpHeroTitle">AI-Powered Creative Production for Brands</h1>
-            <p class="acp-hero-sub" data-i18n="acpHeroSub">Creative direction, AI-assisted production, and professional finishing — for campaign-ready films, product videos, and social creative that scale without losing craft.</p>
-            <div class="acp-hero-ctas">
-              <a class="btn btn-pill btn-gold" href="/#contact" data-i18n="ctaStartProject" data-track="cta_acp_hero_start">Start a Project</a>
-              <a class="btn btn-pill btn-outline-dark" href="#acp-work" data-i18n="ctaViewWork" data-track="cta_acp_hero_work">View Our Work</a>
+      <section class="hx-hero hx-hero--page" aria-labelledby="acp-hero-title">
+        <picture class="hx-hero-media" aria-hidden="true">
+          <source media="(max-width: 760px)" srcset="/assets/img/pages/acp-hero-960.webp" type="image/webp" />
+          <source srcset="/assets/img/pages/acp-hero.webp" type="image/webp" />
+          <img src="/assets/img/pages/acp-hero.jpg" alt="" width="1920" height="1075" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="container hx-hero-inner">
+          <div class="hx-hero-copy">
+            <p class="hx-kicker" data-i18n="acpEyebrow">Bees Motion · Flagship</p>
+            <h1 id="acp-hero-title" class="hx-h1" data-i18n="acpHeroTitle">AI-Powered Creative Production for Brands</h1>
+            <p class="hx-lead" data-i18n="acpHeroSub">Creative direction, AI-assisted production, and professional finishing — for campaign-ready films, product videos, and social creative that scale without losing craft.</p>
+            <div class="hx-actions">
+              <a class="hx-btn hx-btn--light" href="/#contact" data-i18n="ctaStartProject" data-track="cta_acp_hero_start">Start a Project</a>
+              <a class="hx-btn hx-btn--ghost" href="#acp-work" data-i18n="ctaViewWork" data-track="cta_acp_hero_work">View Our Work</a>
             </div>
           </div>
-          <div class="acp-hero-media reveal">
-            <div class="bm-video-crop bm-video-crop--cover" data-hero-autoplay="x4Ya98nRnog" data-hero-title="Bees Motion showreel">
+        </div>
+        <div class="container hx-hero-foot">
+          <div class="hx-inbuilt" id="acp-outputs">
+            <p class="hx-inbuilt-label" data-i18n="acpOutputsTag">What we produce</p>
+            <ul class="hx-inbuilt-list">
+              <li data-i18n="acpOut1">Commercial films</li>
+              <li data-i18n="acpOut2">Product videos</li>
+              <li data-i18n="acpOut3">Campaign videos</li>
+              <li data-i18n="acpOut4">Social video ads</li>
+              <li data-i18n="acpOut5">Creative variations</li>
+              <li data-i18n="acpOut6">Motion content</li>
+              <li data-i18n="acpOut7">Brand films</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="hx-section sx-paper" aria-labelledby="acp-problem-title">
+        <div class="container hx-prod-grid hx-prod-grid--reel">
+          <div class="hx-prod-copy reveal">
+            <p class="hx-kicker hx-kicker--dark" data-i18n="acpProblemTag">The production gap</p>
+            <h2 id="acp-problem-title" class="hx-h2 hx-h2--xl" data-i18n="acpProblemTitle">Brands need more creative. Traditional pipelines struggle to keep up.</h2>
+            <p class="hx-sub" data-i18n="acpProblemBody">Campaign calendars demand volume, variation, and speed. Pure traditional production can be slow and costly to scale. Pure AI output often lacks direction and finish. Bees Motion closes the gap with Creative Direction + AI + Human Production.</p>
+          </div>
+          <div class="hx-reel reveal">
+            <div class="bm-video-crop bm-video-crop--cover">
               <button type="button" class="yt-facade yt-facade--cover" data-yt-id="x4Ya98nRnog" data-yt-title="Bees Motion showreel" data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=x4Ya98nRnog&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1" aria-label="Play showreel">
-                <picture>
-                  <source srcset="/assets/img/thumbs/x4Ya98nRnog.webp" type="image/webp" />
-                  <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="Bees Motion creative showreel" width="1080" height="1920" loading="eager" decoding="async" fetchpriority="high" />
-                </picture>
+                <picture><source srcset="/assets/img/thumbs/x4Ya98nRnog.webp" type="image/webp" /><img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="Bees Motion creative showreel" width="1080" height="1920" loading="lazy" decoding="async" /></picture>
                 <span class="yt-facade-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -148,133 +175,91 @@
         </div>
       </section>
 
-      <section class="acp-section acp-problem" aria-labelledby="acp-problem-title">
-        <div class="container acp-narrow reveal">
-          <p class="svc-tag" data-i18n="acpProblemTag">The production gap</p>
-          <h2 id="acp-problem-title" class="font-headline-xl" data-i18n="acpProblemTitle">Brands need more creative. Traditional pipelines struggle to keep up.</h2>
-          <p class="font-body-md" data-i18n="acpProblemBody">Campaign calendars demand volume, variation, and speed. Pure traditional production can be slow and costly to scale. Pure AI output often lacks direction and finish. Bees Motion closes the gap with Creative Direction + AI + Human Production.</p>
-        </div>
-      </section>
-
-      <section id="acp-outputs" class="acp-section acp-outputs band-mist" aria-labelledby="acp-outputs-title">
+      <section class="hx-section sx-fog" aria-labelledby="acp-model-title">
         <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="acpOutputsTag">What we produce</span>
-            <h2 id="acp-outputs-title" class="font-headline-xl" data-i18n="acpOutputsTitle">Campaign-ready creative outputs</h2>
-            <p class="font-body-md" data-i18n="acpOutputsSub">Not a service catalogue — outputs inside one AI Creative Production system.</p>
+          <div class="hx-head hx-head--split reveal">
+            <div>
+              <p class="hx-kicker hx-kicker--dark" data-i18n="acpModelTag">AI + Human</p>
+              <h2 id="acp-model-title" class="hx-h2" data-i18n="acpModelTitle">AI is a production advantage — not the product.</h2>
+            </div>
+            <p class="hx-sub" data-i18n="acpModelSub">Clients buy creative output and business value. Our model combines human creative direction, AI production capability, and professional post-production.</p>
           </div>
-          <ul class="acp-output-grid">
-            <li class="reveal" data-i18n="acpOut1">Commercial films</li>
-            <li class="reveal" data-i18n="acpOut2">Product videos</li>
-            <li class="reveal" data-i18n="acpOut3">Campaign videos</li>
-            <li class="reveal" data-i18n="acpOut4">Social video ads</li>
-            <li class="reveal" data-i18n="acpOut5">Creative variations</li>
-            <li class="reveal" data-i18n="acpOut6">Motion content</li>
-            <li class="reveal" data-i18n="acpOut7">Brand films</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="acp-section acp-model" aria-labelledby="acp-model-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="acpModelTag">AI + Human</span>
-            <h2 id="acp-model-title" class="font-headline-xl" data-i18n="acpModelTitle">AI is a production advantage — not the product.</h2>
-            <p class="font-body-md" data-i18n="acpModelSub">Clients buy creative output and business value. Our model combines human creative direction, AI production capability, and professional post-production.</p>
-          </div>
-          <div class="acp-model-grid">
-            <article class="acp-model-card reveal">
-              <h3 data-i18n="acpModel1t">Human creative direction</h3>
-              <p data-i18n="acpModel1d">Brief interpretation, narrative, brand language, and taste — before any generation starts.</p>
-            </article>
-            <article class="acp-model-card reveal">
-              <h3 data-i18n="acpModel2t">AI production capability</h3>
-              <p data-i18n="acpModel2d">Faster exploration, variation, and iteration when the brief needs scale and options.</p>
-            </article>
-            <article class="acp-model-card reveal">
-              <h3 data-i18n="acpModel3t">Professional finish</h3>
-              <p data-i18n="acpModel3d">Edit, sound, grade, and delivery standards that hold up in market — not unfinished drafts.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="acp-work" class="acp-section acp-work band-mist" aria-labelledby="acp-work-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="acpWorkTag">Work</span>
-            <h2 id="acp-work-title" class="font-headline-xl" data-i18n="acpWorkTitle">Selected production proof</h2>
-            <p class="font-body-md" data-i18n="acpWorkSub">Verified delivery only. Sector engines show depth — the craft is creative production.</p>
-          </div>
-          <div class="acp-work-grid">
-            <a class="acp-work-card reveal" href="/case-study-imc.html" data-track="cta_acp_work_imc">
-              <img src="/assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="MedMotion medical content film still" loading="lazy" width="640" height="360" />
-              <div class="acp-work-meta">
-                <p class="acp-work-lane">MedMotion™ · IMC</p>
-                <h3 data-i18n="acpWork1t">Healthcare content systems</h3>
-                <span data-i18n="acpWork1c">View case</span>
-              </div>
-            </a>
-            <a class="acp-work-card reveal" href="/case-study-real-estate.html" data-track="cta_acp_work_re">
-              <img src="/assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="PropMotion architectural film still" loading="lazy" width="640" height="360" />
-              <div class="acp-work-meta">
-                <p class="acp-work-lane">PropMotion™</p>
-                <h3 data-i18n="acpWork2t">Real estate launch films</h3>
-                <span data-i18n="acpWork2c">View case</span>
-              </div>
-            </a>
-            <a class="acp-work-card reveal" href="/#work" data-track="cta_acp_work_reel">
-              <img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="Bees Motion showreel still" loading="lazy" width="640" height="360" />
-              <div class="acp-work-meta">
-                <p class="acp-work-lane">Showreel</p>
-                <h3 data-i18n="acpWork3t">Brand &amp; campaign craft</h3>
-                <span data-i18n="acpWork3c">See homepage work</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="acp-section acp-who" aria-labelledby="acp-who-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="acpWhoTag">Who it is for</span>
-            <h2 id="acp-who-title" class="font-headline-xl" data-i18n="acpWhoTitle">Built for teams that need creative that ships</h2>
-          </div>
-          <ul class="acp-who-grid">
-            <li class="reveal" data-i18n="acpWho1">Brands</li>
-            <li class="reveal" data-i18n="acpWho2">Marketing teams</li>
-            <li class="reveal" data-i18n="acpWho3">Product companies</li>
-            <li class="reveal" data-i18n="acpWho4">Campaign teams</li>
-            <li class="reveal" data-i18n="acpWho5">Agencies when the brief needs production depth</li>
-          </ul>
-          <p class="acp-who-note reveal" data-i18n="acpWhoNote">Built for direct work with brands, marketing teams, and organizations. Agencies may collaborate when the brief needs production depth.</p>
-        </div>
-      </section>
-
-      <section class="acp-section acp-process band-mist" aria-labelledby="acp-process-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="acpProcessTag">How it works</span>
-            <h2 id="acp-process-title" class="font-headline-xl" data-i18n="acpProcessTitle">A clear production path</h2>
-          </div>
-          <ol class="acp-process-grid">
-            <li class="reveal"><span>01</span><strong data-i18n="acpStep1t">Brief</strong><em data-i18n="acpStep1d">Objective, audience, channels, and constraints.</em></li>
-            <li class="reveal"><span>02</span><strong data-i18n="acpStep2t">Creative direction</strong><em data-i18n="acpStep2d">Narrative, look, and production plan.</em></li>
-            <li class="reveal"><span>03</span><strong data-i18n="acpStep3t">Production</strong><em data-i18n="acpStep3d">AI-assisted capture and craft under direction.</em></li>
-            <li class="reveal"><span>04</span><strong data-i18n="acpStep4t">Review</strong><em data-i18n="acpStep4d">Structured feedback and controlled revisions.</em></li>
-            <li class="reveal"><span>05</span><strong data-i18n="acpStep5t">Final delivery</strong><em data-i18n="acpStep5d">Market-ready masters and channel cuts.</em></li>
+          <ol class="hx-cols3 reveal">
+            <li><span class="hx-cols3-num" aria-hidden="true">01</span><h3 data-i18n="acpModel1t">Human creative direction</h3><p data-i18n="acpModel1d">Brief interpretation, narrative, brand language, and taste — before any generation starts.</p></li>
+            <li><span class="hx-cols3-num" aria-hidden="true">02</span><h3 data-i18n="acpModel2t">AI production capability</h3><p data-i18n="acpModel2d">Faster exploration, variation, and iteration when the brief needs scale and options.</p></li>
+            <li><span class="hx-cols3-num" aria-hidden="true">03</span><h3 data-i18n="acpModel3t">Professional finish</h3><p data-i18n="acpModel3d">Edit, sound, grade, and delivery standards that hold up in market — not unfinished drafts.</p></li>
           </ol>
         </div>
       </section>
 
-      <section class="acp-section acp-close" aria-labelledby="acp-close-title">
-        <div class="container acp-close-inner reveal">
-          <h2 id="acp-close-title" class="font-headline-xl" data-i18n="acpCloseTitle">Have a creative project in mind?</h2>
-          <p class="font-body-md" data-i18n="acpCloseSub">Let’s build it.</p>
-          <div class="acp-hero-ctas">
-            <a class="btn btn-pill btn-gold" href="/#contact" data-i18n="ctaStartProject" data-track="cta_acp_close_start">Start a Project</a>
-            <a class="btn btn-pill btn-outline-light" href="#acp-work" data-i18n="ctaViewWork" data-track="cta_acp_close_work">View Our Work</a>
+      <section class="hx-section sx-black" id="acp-work" aria-labelledby="acp-work-title">
+        <div class="container">
+          <div class="hx-head hx-head--split reveal">
+            <div>
+              <p class="hx-kicker" data-i18n="acpWorkTag">Work</p>
+              <h2 id="acp-work-title" class="hx-h2 hx-h2--light" data-i18n="acpWorkTitle">Selected production proof</h2>
+            </div>
+            <p class="hx-sub hx-sub--light" data-i18n="acpWorkSub">Verified delivery only. Sector engines show depth — the craft is creative production.</p>
+          </div>
+          <div class="hx-sector-grid hx-sector-grid--wide reveal">
+            <a class="hx-sector hx-sector--wide" href="/case-study-imc.html" data-track="cta_acp_work_imc">
+              <picture class="hx-sector-media"><img src="/assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="" loading="lazy" width="640" height="360" /></picture>
+              <div class="hx-sector-body"><p class="hx-feature-kicker" dir="ltr">MedMotion™ · IMC</p><h3 data-i18n="acpWork1t">Healthcare content systems</h3><span class="hx-sector-go" data-i18n="acpWork1c">View case</span></div>
+            </a>
+            <a class="hx-sector hx-sector--wide" href="/case-study-real-estate.html" data-track="cta_acp_work_re">
+              <picture class="hx-sector-media"><img src="/assets/img/thumbs/e4ZuwoSHs_8.jpg" alt="" loading="lazy" width="640" height="360" /></picture>
+              <div class="hx-sector-body"><p class="hx-feature-kicker" dir="ltr">PropMotion™</p><h3 data-i18n="acpWork2t">Real estate launch films</h3><span class="hx-sector-go" data-i18n="acpWork2c">View case</span></div>
+            </a>
+            <a class="hx-sector hx-sector--wide" href="/#work" data-track="cta_acp_work_reel">
+              <picture class="hx-sector-media"><img src="/assets/img/thumbs/x4Ya98nRnog.jpg" alt="" loading="lazy" width="640" height="360" /></picture>
+              <div class="hx-sector-body"><p class="hx-feature-kicker">Showreel</p><h3 data-i18n="acpWork3t">Brand &amp; campaign craft</h3><span class="hx-sector-go" data-i18n="acpWork3c">See homepage work</span></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hx-section sx-paper" aria-labelledby="acp-who-title">
+        <div class="container hx-who">
+          <div class="reveal">
+            <p class="hx-kicker hx-kicker--dark" data-i18n="acpWhoTag">Who it is for</p>
+            <h2 id="acp-who-title" class="hx-h2" data-i18n="acpWhoTitle">Built for teams that need creative that ships</h2>
+            <p class="hx-sub" data-i18n="acpWhoNote">Built for direct work with brands, marketing teams, and organizations. Agencies may collaborate when the brief needs production depth.</p>
+          </div>
+          <ul class="hx-biglist reveal">
+            <li data-i18n="acpWho1">Brands</li>
+            <li data-i18n="acpWho2">Marketing teams</li>
+            <li data-i18n="acpWho3">Product companies</li>
+            <li data-i18n="acpWho4">Campaign teams</li>
+            <li data-i18n="acpWho5">Agencies when the brief needs production depth</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="hx-section sx-fog" aria-labelledby="acp-process-title">
+        <div class="container">
+          <div class="hx-head hx-head--start reveal">
+            <p class="hx-kicker hx-kicker--dark" data-i18n="acpProcessTag">How it works</p>
+            <h2 id="acp-process-title" class="hx-h2" data-i18n="acpProcessTitle">A clear production path</h2>
+          </div>
+          <ol class="hx-steps hx-steps--5 reveal">
+            <li><span class="hx-steps-dot" aria-hidden="true"></span><span class="hx-steps-num" aria-hidden="true">01</span><h3 data-i18n="acpStep1t">Brief</h3><p data-i18n="acpStep1d">Objective, audience, channels, and constraints.</p></li>
+            <li><span class="hx-steps-dot" aria-hidden="true"></span><span class="hx-steps-num" aria-hidden="true">02</span><h3 data-i18n="acpStep2t">Creative direction</h3><p data-i18n="acpStep2d">Narrative, look, and production plan.</p></li>
+            <li><span class="hx-steps-dot" aria-hidden="true"></span><span class="hx-steps-num" aria-hidden="true">03</span><h3 data-i18n="acpStep3t">Production</h3><p data-i18n="acpStep3d">AI-assisted capture and craft under direction.</p></li>
+            <li><span class="hx-steps-dot" aria-hidden="true"></span><span class="hx-steps-num" aria-hidden="true">04</span><h3 data-i18n="acpStep4t">Review</h3><p data-i18n="acpStep4d">Structured feedback and controlled revisions.</p></li>
+            <li><span class="hx-steps-dot" aria-hidden="true"></span><span class="hx-steps-num" aria-hidden="true">05</span><h3 data-i18n="acpStep5t">Final delivery</h3><p data-i18n="acpStep5d">Market-ready masters and channel cuts.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="hx-section sx-graphite hx-cta" aria-labelledby="acp-close-title">
+        <div class="container hx-cta-inner reveal">
+          <div>
+            <h2 id="acp-close-title" class="hx-h2 hx-h2--light hx-h2--xl" data-i18n="acpCloseTitle">Have a creative project in mind?</h2>
+            <p class="hx-sub hx-sub--light" data-i18n="acpCloseSub">Let’s build it.</p>
+          </div>
+          <div class="hx-cta-actions">
+            <a class="hx-btn hx-btn--gold" href="/#contact" data-i18n="ctaStartProject" data-track="cta_acp_close_start">Start a Project</a>
+            <a class="hx-btn hx-btn--ghost" href="#acp-work" data-i18n="ctaViewWork" data-track="cta_acp_close_work">View Our Work</a>
           </div>
         </div>
       </section>
@@ -362,6 +347,7 @@
     </script>
     <script src="/assets/js/site-config.js?v=20260922acp"></script>
     <script src="/assets/js/translations.js?v=20261029b"></script>
+    <script src="/assets/js/translations-sys.js?v=20261029b"></script>
     <script src="/assets/js/app.js?v=20261029b"></script>
   </body>
 </html>

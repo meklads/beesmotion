@@ -1817,7 +1817,7 @@ window.BM_I18N = {
   acpCloseTitle: "لديكم مشروع إبداعي؟",
   acpCloseSub: "لنبنِه معاً.",
   footerAcpOffer: "العرض الرئيسي",
-  footerBlurbAcp: "إنتاج إبداعي بالذكاء الاصطناعي للعلامات — شركة ضمن مجموعة تسامي.",
+  footerBlurbAcp: "توليد العملاء وتسويق الإطلاق — شركة ضمن مجموعة تسامي.",
 
 },
   en: {
@@ -3633,7 +3633,7 @@ window.BM_I18N = {
   acpCloseTitle: "Have a creative project in mind?",
   acpCloseSub: "Let's build it.",
   footerAcpOffer: "Flagship offer",
-  footerBlurbAcp: "AI Creative Production for brands — a Tasami Group company.",
+  footerBlurbAcp: "Lead generation and launch marketing — a Tasami Group company.",
 
 }
 };
