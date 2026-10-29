@@ -757,3 +757,37 @@ html[dir="rtl"] .hx-biglist li { font-family: var(--font-ar); font-weight: 400; 
 .hx-biglist li:last-child { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--hx-g7); }
 .sx-black .hx-biglist, .sx-black .hx-biglist li, .sx-graphite .hx-biglist, .sx-graphite .hx-biglist li { border-color: rgba(255, 255, 255, 0.14); color: #fff; }
 @media (max-width: 759px) { .hx-sector--wide { aspect-ratio: 4 / 3.2; min-height: 0; } }
+
+/* ---------- SpaceLaunch additions ---------- */
+.hx-cols3-num--word { font-size: clamp(2rem, 3.4vw, 2.8rem); color: var(--hx-ink); letter-spacing: -0.03em; }
+@media (min-width: 860px) {
+  .hx-quad--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hx-quad--3 article:nth-child(odd), .hx-quad--3 article:nth-child(even) { padding-inline: 0 2.4rem; border-inline-end: 0; }
+  .hx-quad--3 article { padding-inline-end: 2.4rem; }
+}
+.hx-quad a { color: inherit; text-decoration-color: var(--hx-gold); }
+.hx-stories { display: grid; gap: 1.1rem; }
+.hx-story { padding: clamp(1.8rem, 3.5vw, 2.8rem); border-radius: var(--hx-radius); background: var(--hx-paper); }
+.hx-story-client { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1rem; margin-bottom: 1.2rem; }
+.hx-story-client img { height: 2.4rem; width: auto; }
+.hx-story-client strong { font-weight: 500; color: var(--hx-ink); }
+.hx-story-client span { font-size: 0.9rem; color: var(--hx-g5); }
+html[dir] body .hx-story h3 { margin: 0 0 1.8rem; max-width: 46rem; font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 300 !important; letter-spacing: -0.025em; line-height: 1.2; color: var(--hx-ink); }
+html[dir="rtl"] body .hx-story h3 { font-family: var(--font-ar); font-weight: 400 !important; letter-spacing: 0; line-height: 1.5; }
+.hx-story-grid { display: grid; gap: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--hx-g2); }
+@media (min-width: 860px) { .hx-story-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem; } }
+.hx-story-grid h4 { margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 500; color: var(--hx-gold); }
+.hx-story-grid p { margin: 0; font-size: 0.97rem; line-height: 1.7; color: var(--hx-g7); }
+.hx-pair-card--fog { background: var(--hx-fog); }
+.hx-notes-left { margin: 1.6rem 0 0; max-width: 44rem; font-size: 0.98rem; line-height: 1.7; color: var(--hx-g7); }
+
+/* Experience unit (SpaceLaunch / MedMotion) harmonised with the monochrome system */
+.med-xp-unit .case-content, .med-xp-unit .med-xp-credit, .med-xp-credit { background: var(--hx-fog); }
+.med-xp-unit .highlight-item { background: var(--hx-paper); border-inline-start-color: var(--hx-gold); min-width: 0; }
+.med-xp-unit .highlight-item .icon { color: var(--hx-gold); }
+.med-xp-unit { background: var(--hx-black); }
+.med-xp-unit .med-xp-head { background: var(--hx-black); padding-top: clamp(4rem, 8vw, 6rem); }
+.med-xp-unit .med-xp-credit { margin: 0; max-width: none; padding-bottom: clamp(3rem, 6vw, 4.5rem); }
+.med-xp-credit a { color: var(--hx-ink); text-decoration-color: var(--hx-gold); }
+.med-xp-unit .med-xp-case-label { color: var(--hx-gold); }
+@media (max-width: 640px) { .med-xp-unit .highlights { grid-template-columns: 1fr; } }
