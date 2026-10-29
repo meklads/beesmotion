@@ -39,9 +39,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260909maint" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261029nav" />
     <link rel="stylesheet" href="/assets/css/page-quality.css?v=20260909maint" />
-      <link rel="stylesheet" href="/assets/css/re-journey.css?v=20261029re" />
+      <link rel="stylesheet" href="/assets/css/re-journey.css?v=20261029pm" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -139,15 +139,11 @@
           <img src="/assets/img/bees-motion-logo-header.png" alt="Bees Motion" class="brand-logo" width="680" height="330" />
         </a>
         <nav class="nav-desktop" aria-label="Primary">
-          <a href="/#work" data-i18n="navWork">Work</a>
-          <a href="/medmotion/" data-i18n="navHealthcare">Healthcare</a>
-          <a href="/propmotion/" class="is-active" data-i18n="navRealEstate">Real Estate</a>
-          <a href="/#capabilities" data-i18n="navCapabilities">Capabilities</a>
-                <div class="nav-dd">
+          <a href="/propmotion/" class="nav-highlight is-active" aria-current="page" data-i18n="navReMarketing">Real Estate Marketing</a>
+          <div class="nav-dd">
             <button type="button" class="nav-dd-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="navCaseMenu" data-i18n="navSolutions">Solutions</button>
             <div class="nav-dd-panel" id="navCaseMenu" role="menu" hidden>
-
-              <a class="nav-dd-card nav-dd-card--prop" href="/propmotion/" role="menuitem">
+              <a class="nav-dd-card nav-dd-card--prop is-active" href="/propmotion/" aria-current="page" role="menuitem">
                 <span class="nav-dd-brand" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
                 <span class="nav-dd-label" data-i18n="navCsProp">Real Estate</span>
               </a>
@@ -159,9 +155,14 @@
                 <span class="nav-dd-brand" dir="ltr">SpaceLaunch<sup aria-hidden="true">™</sup></span>
                 <span class="nav-dd-label" data-i18n="navLaunchHalls">Launch halls</span>
               </a>
-</div>
+              <a class="nav-dd-card" href="/ai-creative-production/" role="menuitem">
+                <span class="nav-dd-brand" data-i18n="navAcp">AI Creative Production</span>
+                <span class="nav-dd-label" data-i18n="navAcpLabel">Creative studio</span>
+              </a>
+            </div>
           </div>
-
+          <a href="/#work" data-i18n="navWork">Work</a>
+          <a href="/#capabilities" data-i18n="navCapabilities">Capabilities</a>
           <a href="/#contact" data-i18n="navContact">Contact</a>
         </nav>
         <div class="header-actions">
@@ -176,20 +177,18 @@
     </header>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-      <a href="/#work" data-i18n="navWork">Work</a>
-      <a href="/medmotion/" data-i18n="navHealthcare">Healthcare</a>
-      <a href="/propmotion/" class="is-active" data-i18n="navRealEstate">Real Estate</a>
-      <a href="/#capabilities" data-i18n="navCapabilities">Capabilities</a>
+      <a href="/propmotion/" class="nav-highlight is-active" aria-current="page" data-i18n="navReMarketing">Real Estate Marketing</a>
       <div class="mobile-nav-dd">
         <button type="button" class="mobile-nav-dd-toggle" aria-expanded="false" data-i18n="navSolutions">Solutions</button>
         <div class="mobile-nav-dd-panel" hidden>
-
           <a href="/propmotion/"><span dir="ltr">PropMotion™</span> <span data-i18n="navCsProp">Real Estate</span></a>
           <a href="/medmotion/"><span dir="ltr">MedMotion™</span> <span data-i18n="navCsMed">Healthcare</span></a>
           <a href="/launch-halls/"><span dir="ltr">SpaceLaunch™</span> <span data-i18n="navLaunchHalls">Launch halls</span></a>
-</div>
+          <a href="/ai-creative-production/" data-i18n="navAcp">AI Creative Production</a>
+        </div>
       </div>
-
+      <a href="/#work" data-i18n="navWork">Work</a>
+      <a href="/#capabilities" data-i18n="navCapabilities">Capabilities</a>
       <a href="/#contact" data-i18n="navContact">Contact</a>
       <a class="btn btn-pill btn-on-light" href="#assessment" data-i18n="ctaNav">Start a project</a>
     </nav>
@@ -233,173 +232,133 @@
         </div>
       </section>
 
-      <section class="re-pick" id="start" aria-labelledby="re-pick-title">
+      <section class="pm-pick" id="start" aria-labelledby="pm-pick-title">
         <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="rjPickTag">Start here</span>
-            <h2 id="re-pick-title" class="font-headline-xl" data-i18n="rjPickTitle">Where is your project now?</h2>
-            <p class="font-body-md" data-i18n="rjPickSub">Pick the situation closest to yours. We will point you to the right stage — buy one stage on its own or run all three.</p>
+          <div class="pm-head pm-head--light reveal">
+            <p class="pm-kicker" data-i18n="rjPickTag">Start here</p>
+            <h2 id="pm-pick-title" class="pm-title" data-i18n="rjPickTitle">Where is your project now?</h2>
+            <p class="pm-sub" data-i18n="rjPickSub">Pick the situation closest to yours. We will point you to the right stage — buy one stage on its own or run all three.</p>
           </div>
-          <div class="re-pick-grid reveal">
-            <article class="re-pick-card">
-              <span class="re-pick-num" aria-hidden="true">01</span>
+          <div class="pm-pick-grid reveal">
+            <a class="pm-pick-card" href="#stage-pre" data-track="cta_re_pick_stage-pre">
+              <span class="pm-pick-dot" aria-hidden="true"></span>
               <h3 data-i18n="rjPick1t">Preparing for launch</h3>
+              <p class="pm-pick-stage" dir="ltr">Pre-Launch</p>
               <p data-i18n="rjPick1d">Approved project information, but no marketing materials, landing page or lead journey yet.</p>
-              <p class="re-pick-stage"><span data-i18n="rjPickGo">Start with</span> <strong dir="ltr">Pre-Launch</strong></p>
-              <div class="re-pick-actions">
-                <a class="btn btn-pill btn-on-light" href="#assessment" data-re-pick="preparing|pre-launch" data-i18n="rjPickCta" data-track="cta_re_pick_pre-launch">Request an assessment for this stage</a>
-                <a class="re-pick-link" href="#stage-pre" data-i18n="rjPickSee">See what is included</a>
-              </div>
-            </article>
-            <article class="re-pick-card">
-              <span class="re-pick-num" aria-hidden="true">02</span>
+            </a>
+            <a class="pm-pick-card" href="#stage-launch" data-track="cta_re_pick_stage-launch">
+              <span class="pm-pick-dot" aria-hidden="true"></span>
               <h3 data-i18n="rjPick2t">Ready to launch now</h3>
+              <p class="pm-pick-stage" dir="ltr">Launch</p>
               <p data-i18n="rjPick2d">Materials and landing page are ready. You need campaigns set up, tracked and activated.</p>
-              <p class="re-pick-stage"><span data-i18n="rjPickGo">Start with</span> <strong dir="ltr">Launch</strong></p>
-              <div class="re-pick-actions">
-                <a class="btn btn-pill btn-on-light" href="#assessment" data-re-pick="launching-now|launch" data-i18n="rjPickCta" data-track="cta_re_pick_launch">Request an assessment for this stage</a>
-                <a class="re-pick-link" href="#stage-launch" data-i18n="rjPickSee">See what is included</a>
-              </div>
-            </article>
-            <article class="re-pick-card">
-              <span class="re-pick-num" aria-hidden="true">03</span>
+            </a>
+            <a class="pm-pick-card" href="#stage-growth" data-track="cta_re_pick_stage-growth">
+              <span class="pm-pick-dot" aria-hidden="true"></span>
               <h3 data-i18n="rjPick3t">Campaigns already running</h3>
+              <p class="pm-pick-stage" dir="ltr">Growth Launch</p>
               <p data-i18n="rjPick3d">You want better inquiry volume and quality from campaigns that are already live.</p>
-              <p class="re-pick-stage"><span data-i18n="rjPickGo">Start with</span> <strong dir="ltr">Growth Launch</strong></p>
-              <div class="re-pick-actions">
-                <a class="btn btn-pill btn-on-light" href="#assessment" data-re-pick="improving|growth-launch" data-i18n="rjPickCta" data-track="cta_re_pick_growth-launch">Request an assessment for this stage</a>
-                <a class="re-pick-link" href="#stage-growth" data-i18n="rjPickSee">See what is included</a>
+            </a>
+          </div>
+          <p class="pm-pick-note reveal" data-i18n="rjPickNote">Choose your project's stage to see the right package.</p>
+        </div>
+      </section>
+
+      <!-- Real-estate marketing packages: Pre-Launch → Launch → Growth Launch -->
+      <section class="pm-pkgs" id="launch-path" aria-labelledby="re-title">
+        <div class="container">
+          <div class="pm-head reveal">
+            <p class="pm-kicker" data-i18n="rjTag">Real estate marketing solutions</p>
+            <h2 id="re-title" class="pm-title" data-i18n="rjTitle">From project preparation to buyer inquiries — in three connected stages.</h2>
+            <p class="pm-sub" data-i18n="rjSub">We help real estate developers prepare their projects for market, launch digital campaigns, attract buyer inquiries, and keep improving performance through measurable digital systems.</p>
+          </div>
+          <div class="pm-pkg-grid">
+            <article class="pm-pkg pm-pkg--featured" id="stage-pre">
+              <span class="pm-badge" data-i18n="rjBadgeStart">Recommended start</span>
+              <p class="pm-chip" data-i18n="rjS1Kicker">Foundation</p>
+              <h3 class="pm-pill" dir="ltr">Pre-Launch</h3>
+              <p class="pm-tagline" data-i18n="rjS1Goal">Prepare the marketing materials, landing page and lead-capture journey before any paid campaign starts.</p>
+              <div class="pm-for">
+                <p><strong data-i18n="rjForLabel">For:</strong> <span data-i18n="rjFor1">A project with approved information that is preparing to go to market.</span></p>
+                <p class="pm-meta" data-i18n="rjMeta1">Timeline: set in your proposal · Review rounds: 2</p>
               </div>
+              <p class="pm-incl" data-i18n="rjInclLabel">Includes</p>
+              <ul class="pm-rows">
+                <li data-i18n="rjS1d1">Project brief, audience, value proposition and core messages — built from your approved information</li>
+                <li data-i18n="rjPl2">Sales collateral: digital brochure (about 12 pages), fact sheet (about 2 pages), sales presentation (about 10 slides) and buyer FAQ</li>
+                <li data-i18n="rjPl3">Launch content: 6 ad and social designs, 3 ad copy variations and 2 short-video scripts from your existing visuals</li>
+                <li data-i18n="rjS1d4">One responsive project landing page with inquiry form, consent notice and confirmation</li>
+                <li data-i18n="rjS1d5">Lead routing to your agreed inbox or supported CRM, with tracking and test submissions</li>
+                <li data-i18n="rjS1d6">Launch plan: channels, audiences, budget allocation, schedule, reporting plan and readiness checklist</li>
+              </ul>
+              <p class="pm-done"><strong data-i18n="rjDoneLabel">Complete when</strong> <span data-i18n="rjS1Done">Collateral is delivered, claims are approved by you, the landing page and form are tested, lead routing and tracking are verified, and the launch plan is handed over.</span></p>
+              <div class="pm-need">
+                <p class="pm-need-title" data-i18n="rjYouTitle">What we need from you</p>
+                <p data-i18n="rjNeed1">Approved project information, plans and visuals, one named approver, and the inbox or CRM that will receive inquiries.</p>
+              </div>
+              <a class="pm-cta pm-cta--gold" href="#assessment" data-re-pick="preparing|pre-launch" data-i18n="rjPickCta" data-track="cta_re_pkg_stage-pre">Request an assessment for this stage</a>
+            </article>
+            <article class="pm-pkg" id="stage-launch">
+              <p class="pm-chip" data-i18n="rjS2Kicker">Campaign activation</p>
+              <h3 class="pm-pill" dir="ltr">Launch</h3>
+              <p class="pm-tagline" data-i18n="rjS2Goal">Activate the agreed digital campaigns using the Pre-Launch infrastructure — or equivalent assets you already have.</p>
+              <div class="pm-for">
+                <p><strong data-i18n="rjForLabel">For:</strong> <span data-i18n="rjFor2">A project whose materials and landing page are ready, and that needs campaigns live now.</span></p>
+                <p class="pm-meta" data-i18n="rjMeta2">Initial monitoring: typically 14 days · Media budget paid by you</p>
+              </div>
+              <p class="pm-incl" data-i18n="rjInclLabel">Includes</p>
+              <ul class="pm-rows">
+                <li data-i18n="rjS2d1">Campaign and ad-set structure for the agreed platforms</li>
+                <li data-i18n="rjS2d2">Audience and targeting configuration, with approved ad copy and assets</li>
+                <li data-i18n="rjS2d3">Tracking, landing page and lead-routing checks before going live</li>
+                <li data-i18n="rjS2d4">Campaign activation, initial monitoring and troubleshooting</li>
+                <li data-i18n="rjS2d5">Initial performance report for the launch period (typically 14 days, or as agreed) with next-step recommendations</li>
+              </ul>
+              <p class="pm-done"><strong data-i18n="rjDoneLabel">Complete when</strong> <span data-i18n="rjS2Done">Campaigns are live as agreed, tracking and lead routing are verified, and the initial report is delivered. Setup and initial monitoring are separate from ongoing monthly management.</span></p>
+              <div class="pm-need">
+                <p class="pm-need-title" data-i18n="rjYouTitle">What we need from you</p>
+                <p data-i18n="rjNeed2">Approved materials and a working landing page (ours or yours), ad accounts owned by you with access for us, and the agreed media budget.</p>
+              </div>
+              <a class="pm-cta" href="#assessment" data-re-pick="launching-now|launch" data-i18n="rjPickCta" data-track="cta_re_pkg_stage-launch">Request an assessment for this stage</a>
+            </article>
+            <article class="pm-pkg" id="stage-growth">
+              <p class="pm-chip" data-i18n="rjS3Kicker">Optimization and growth</p>
+              <h3 class="pm-pill" dir="ltr">Growth Launch</h3>
+              <p class="pm-tagline" data-i18n="rjS3Goal">Improve active campaigns and the inquiry journey through monthly analysis, controlled testing and optimization — also available for campaigns you already run.</p>
+              <div class="pm-for">
+                <p><strong data-i18n="rjForLabel">For:</strong> <span data-i18n="rjFor3">A project with live campaigns that needs more, and better, inquiries.</span></p>
+                <p class="pm-meta" data-i18n="rjMeta3">Billing: monthly · Report: monthly</p>
+              </div>
+              <p class="pm-incl" data-i18n="rjInclLabel">Includes</p>
+              <ul class="pm-rows">
+                <li data-i18n="rjS3d1">Monitoring and management of the agreed active campaigns</li>
+                <li data-i18n="rjS3d2">Controlled tests of audiences, messages or creative variations</li>
+                <li data-i18n="rjS3d3">Landing page review and limited conversion improvements</li>
+                <li data-i18n="rjS3d4">Review of inquiry volume and the lead-quality data you share</li>
+                <li data-i18n="rjS3d5">Monthly performance report with priorities for the next period</li>
+                <li data-i18n="rjS3d6">Review meeting or written review</li>
+              </ul>
+              <p class="pm-done"><strong data-i18n="rjMonthlyLabel">Each month</strong> <span data-i18n="rjS3Done">Channels, campaigns, tests, reports and meetings included are defined in your proposal.</span></p>
+              <div class="pm-need">
+                <p class="pm-need-title" data-i18n="rjYouTitle">What we need from you</p>
+                <p data-i18n="rjNeed3">Access to the active ad accounts and analytics, and the lead-quality feedback your sales team shares each month.</p>
+              </div>
+              <a class="pm-cta" href="#assessment" data-re-pick="improving|growth-launch" data-i18n="rjPickCta" data-track="cta_re_pkg_stage-growth">Request an assessment for this stage</a>
             </article>
           </div>
-        </div>
-      </section>
-
-            <!-- Real-estate marketing journey: Pre-Launch → Launch → Growth Launch -->
-      <section class="re-journey" id="launch-path" aria-labelledby="re-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="rjTag">Real estate marketing solutions</span>
-            <h2 id="re-title" class="font-headline-xl" data-i18n="rjTitle">From project preparation to buyer inquiries — in three connected stages.</h2>
-            <p class="font-body-md" data-i18n="rjSub">We help real estate developers prepare their projects for market, launch digital campaigns, attract buyer inquiries, and keep improving performance through measurable digital systems.</p>
-          </div>
-          <ol class="re-stages">
-        <li class="re-stage reveal" id="stage-pre">
-          <div class="re-stage-head">
-            <span class="re-stage-num" aria-hidden="true">01</span>
-            <div>
-              <p class="re-stage-kicker" data-i18n="rjS1Kicker">Foundation</p>
-              <h3 class="re-stage-name" dir="ltr">Pre-Launch</h3>
-            </div>
-          </div>
-          <p class="re-stage-goal" data-i18n="rjS1Goal">Prepare the marketing materials, landing page and lead-capture journey before any paid campaign starts.</p>
-          <ul class="re-list">
-          <li data-i18n="rjS1d1">Project brief, audience, value proposition and core messages — built from your approved information</li>
-          <li data-i18n="rjS1d2">Sales collateral: digital brochure, fact sheet, short sales presentation and buyer FAQ</li>
-          <li data-i18n="rjS1d3">Initial campaign content: static ad and social designs, ad copy variations and short-form video scripts</li>
-          <li data-i18n="rjS1d4">One responsive project landing page with inquiry form, consent notice and confirmation</li>
-          <li data-i18n="rjS1d5">Lead routing to your agreed inbox or supported CRM, with tracking and test submissions</li>
-          <li data-i18n="rjS1d6">Launch plan: channels, audiences, budget allocation, schedule, reporting plan and readiness checklist</li>
-          </ul>
-          <details class="re-ref">
-            <summary data-i18n="rjRefTitle">Reference scope for a single project</summary>
-            <ul class="re-list">
-              <li data-i18n="rjRef1">Digital brochure of about 12 pages</li>
-              <li data-i18n="rjRef2">Project and unit fact sheet of about 2 pages</li>
-              <li data-i18n="rjRef3">Editable sales presentation of about 10 slides</li>
-              <li data-i18n="rjRef4">Buyer FAQ document</li>
-              <li data-i18n="rjRef5">6 static ad or social designs and 3 ad copy variations</li>
-              <li data-i18n="rjRef6">2 short-form video scripts based on your existing visuals (video production not included)</li>
-            </ul>
+          <div class="pm-notes reveal">
             <p data-i18n="rjRefNote">Final quantities, languages and integrations are fixed in your written proposal.</p>
-          </details>
-          <p class="re-done"><strong data-i18n="rjDoneLabel">Complete when</strong><span data-i18n="rjS1Done">Collateral is delivered, claims are approved by you, the landing page and form are tested, lead routing and tracking are verified, and the launch plan is handed over.</span></p>
-        </li>
-        <li class="re-stage reveal" id="stage-launch">
-          <div class="re-stage-head">
-            <span class="re-stage-num" aria-hidden="true">02</span>
-            <div>
-              <p class="re-stage-kicker" data-i18n="rjS2Kicker">Campaign activation</p>
-              <h3 class="re-stage-name" dir="ltr">Launch</h3>
-            </div>
-          </div>
-          <p class="re-stage-goal" data-i18n="rjS2Goal">Activate the agreed digital campaigns using the Pre-Launch infrastructure — or equivalent assets you already have.</p>
-          <ul class="re-list">
-          <li data-i18n="rjS2d1">Campaign and ad-set structure for the agreed platforms</li>
-          <li data-i18n="rjS2d2">Audience and targeting configuration, with approved ad copy and assets</li>
-          <li data-i18n="rjS2d3">Tracking, landing page and lead-routing checks before going live</li>
-          <li data-i18n="rjS2d4">Campaign activation, initial monitoring and troubleshooting</li>
-          <li data-i18n="rjS2d5">Initial performance report for the launch period (typically 14 days, or as agreed) with next-step recommendations</li>
-          </ul>
-          <p class="re-done"><strong data-i18n="rjDoneLabel">Complete when</strong><span data-i18n="rjS2Done">Campaigns are live as agreed, tracking and lead routing are verified, and the initial report is delivered. Setup and initial monitoring are separate from ongoing monthly management.</span></p>
-        </li>
-        <li class="re-stage reveal" id="stage-growth">
-          <div class="re-stage-head">
-            <span class="re-stage-num" aria-hidden="true">03</span>
-            <div>
-              <p class="re-stage-kicker" data-i18n="rjS3Kicker">Optimization and growth</p>
-              <h3 class="re-stage-name" dir="ltr">Growth Launch</h3>
-            </div>
-          </div>
-          <p class="re-stage-goal" data-i18n="rjS3Goal">Improve active campaigns and the inquiry journey through monthly analysis, controlled testing and optimization — also available for campaigns you already run.</p>
-          <ul class="re-list">
-          <li data-i18n="rjS3d1">Monitoring and management of the agreed active campaigns</li>
-          <li data-i18n="rjS3d2">Controlled tests of audiences, messages or creative variations</li>
-          <li data-i18n="rjS3d3">Landing page review and limited conversion improvements</li>
-          <li data-i18n="rjS3d4">Review of inquiry volume and the lead-quality data you share</li>
-          <li data-i18n="rjS3d5">Monthly performance report with priorities for the next period</li>
-          <li data-i18n="rjS3d6">Review meeting or written review</li>
-          </ul>
-          <p class="re-done"><strong data-i18n="rjMonthlyLabel">Each month</strong><span data-i18n="rjS3Done">Channels, campaigns, tests, reports and meetings included are defined in your proposal.</span></p>
-        </li>
-          </ol>
-          <p class="re-measure reveal" data-i18n="rjMeasure">We report submitted inquiries, qualified leads and sales as separate things. Sales results are reported only where you share reliable CRM or sales data. We do not guarantee lead volume, cost per lead, sales or return on ad spend.</p>
-          <p class="re-flow-note reveal" data-i18n="rjFlowNote">Buy one stage on its own when your project is already prepared — or run all three as one journey.</p>
-          <div class="re-cta-row reveal">
-            <a class="btn btn-pill btn-on-light" href="#assessment" data-i18n="rjSubmit" data-track="cta_re_journey_assess">Request a Project Assessment</a>
+            <p data-i18n="rjMeasure">We report submitted inquiries, qualified leads and sales as separate things. Sales results are reported only where you share reliable CRM or sales data. We do not guarantee lead volume, cost per lead, sales or return on ad spend.</p>
+            <p class="pm-notes-strong" data-i18n="rjFlowNote">Buy one stage on its own when your project is already prepared — or run all three as one journey.</p>
           </div>
         </div>
       </section>
 
-      <section class="prop-demand" id="principles" aria-labelledby="re-prin-title">
-        <span id="demand" aria-hidden="true"></span><!-- legacy anchor: linked from 3dgraphicshouse.com GrowthLaunch pages -->
+      <section class="re-scope pm-levels" id="scope" aria-labelledby="re-scope-title">
         <div class="container">
-          <div class="section-head section-head--compact reveal">
-            <span class="svc-tag" data-i18n="rjPrinTag">Across every stage</span>
-            <h2 id="re-prin-title" class="font-headline-xl" data-i18n="rjPrinTitle">Four principles behind every inquiry journey.</h2>
-            <p class="font-body-md" data-i18n="rjPrinSub">What we build in Pre-Launch, activate in Launch and improve in Growth Launch.</p>
-          </div>
-          <div class="prop-demand-grid reveal">
-            <article class="prop-demand-card">
-              <h3 data-i18n="rjPrin1t">A clear offer</h3>
-              <p data-i18n="rjPrin1d">Landing pages and messages that help serious buyers understand the project quickly.</p>
-            </article>
-            <article class="prop-demand-card">
-              <h3 data-i18n="rjPrin2t">Fast response</h3>
-              <p data-i18n="rjPrin2d">Inquiries reach a named person on your team — by inbox, CRM or WhatsApp — before interest cools.</p>
-            </article>
-            <article class="prop-demand-card">
-              <h3 data-i18n="rjPrin3t">Clear lead ownership</h3>
-              <p data-i18n="rjPrin3d">Every inquiry has a known source and a responsible owner. Your sales team handles follow-up and closing.</p>
-            </article>
-            <article class="prop-demand-card">
-              <h3 data-i18n="rjPrin4t">Measured improvement</h3>
-              <p data-i18n="rjPrin4d">Decisions based on inquiries, cost per inquiry and the lead-quality data you share — not vanity metrics.</p>
-            </article>
-          </div>
-          <div class="prop-demand-actions reveal">
-            <a class="btn btn-pill btn-on-light" href="#assessment" data-i18n="rjSubmit" data-track="cta_re_principles_assess">Request a Project Assessment</a>
-            <a class="btn btn-pill btn-outline-dark" href="#scope" data-i18n="rjPrinCta2">Compare scope levels</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="re-scope" id="scope" aria-labelledby="re-scope-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="svc-tag" data-i18n="rjScopeTag">Scope levels</span>
-            <h2 id="re-scope-title" class="font-headline-xl" data-i18n="rjScopeTitle">One framework. Scope sized to your project.</h2>
-            <p class="font-body-md" data-i18n="rjScopeSub">Scope and price follow project complexity, readiness of your materials, number of deliverables, integrations and operational responsibility — not company size. Every engagement is priced through a tailored written quotation after a short assessment.</p>
+          <div class="pm-head reveal">
+            <p class="pm-kicker" data-i18n="rjScopeTag">Scope levels</p>
+            <h2 id="re-scope-title" class="pm-title" data-i18n="rjScopeTitle">One framework. Scope sized to your project.</h2>
+            <p class="pm-sub" data-i18n="rjScopeSub">Scope and price follow project complexity, readiness of your materials, number of deliverables, integrations and operational responsibility — not company size. Every engagement is priced through a tailored written quotation after a short assessment.</p>
           </div>
           <div class="re-levels reveal">
             <article class="re-level"><h3 data-i18n="rjLvl1">Starter</h3><p data-i18n="rjLvl1d">A single, relatively simple project with approved materials ready.</p></article>
@@ -425,7 +384,7 @@
             </div>
             <p class="re-table-note" data-i18n="rjTblNote">Indicative only — your written proposal defines the exact scope.</p>
           </div>
-          <div class="re-cols reveal">
+          <div class="re-cols re-cols--2 reveal">
             <div class="re-col re-col--you">
               <h3 data-i18n="rjYouTitle">What we need from you</h3>
               <ul class="re-list">
@@ -446,11 +405,40 @@
           <li data-i18n="rjNot5">Custom CRM development</li>
               </ul>
             </div>
-            <div class="re-col re-col--opt">
-              <h3 data-i18n="rjOptTitle">Optional add-ons (quoted separately)</h3>
-              <p data-i18n="rjOptList">Additional landing pages · additional languages · advanced CRM configuration · lead-routing automation · extra creative packs · additional campaign setup · custom reporting dashboards · custom integrations</p>
-              <p class="re-opt-link"><a href="/real-estate-content-engine" data-i18n="rjOptEngine">Property Content Engine — ongoing content for live inventory</a></p>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pm-extras" id="extras" aria-labelledby="pm-ex-title">
+        <div class="container">
+          <div class="pm-head reveal">
+            <p class="pm-kicker" data-i18n="rjExTag">Additional services</p>
+            <h2 id="pm-ex-title" class="pm-title" data-i18n="rjExTitle">Add only what your project needs</h2>
+            <p class="pm-sub" data-i18n="rjExSub">Quoted separately, on top of any stage.</p>
+          </div>
+          <ul class="pm-ex-grid reveal">
+            <li class="pm-ex" data-i18n="rjEx1">Additional landing pages</li>
+            <li class="pm-ex" data-i18n="rjEx2">Additional languages</li>
+            <li class="pm-ex" data-i18n="rjEx3">Advanced CRM configuration</li>
+            <li class="pm-ex" data-i18n="rjEx4">Lead-routing automation</li>
+            <li class="pm-ex" data-i18n="rjEx5">Extra creative packs</li>
+            <li class="pm-ex" data-i18n="rjEx6">Additional campaign setup</li>
+            <li class="pm-ex" data-i18n="rjEx7">Custom reporting dashboards</li>
+            <li class="pm-ex" data-i18n="rjEx8">Custom integrations</li>
+          </ul>
+          <div class="pm-ex-feature reveal">
+            <a class="pm-ex-card" href="/real-estate-content-engine" data-track="cta_re_extra_engine">
+              <span class="pm-ex-kicker" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span>
+              <h3 data-i18n="rjExEngineT">Property Content Engine</h3>
+              <p data-i18n="rjExEngineD">Ongoing content for live inventory and listings, built from your existing assets.</p>
+              <span class="pm-ex-go" data-i18n="propProduct1cta">Open the Engine</span>
+            </a>
+            <a class="pm-ex-card pm-ex-card--dark" href="#paths" data-track="cta_re_extra_visual">
+              <span class="pm-ex-kicker" dir="ltr">Graphics House</span>
+              <h3 data-i18n="rjExVisT">Renders, films and maquettes</h3>
+              <p data-i18n="rjExVisD">New visual production by Graphics House, our sister company, under a separate quotation.</p>
+              <span class="pm-ex-go" data-i18n="rjExVisCta">See visual production</span>
+            </a>
           </div>
         </div>
       </section>
@@ -484,6 +472,39 @@
               <p data-i18n="rjHow4d">Each stage closes with a handover or report and a recommendation for what comes next.</p>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="prop-demand" id="principles" aria-labelledby="re-prin-title">
+        <span id="demand" aria-hidden="true"></span><!-- legacy anchor: linked from 3dgraphicshouse.com GrowthLaunch pages -->
+        <div class="container">
+          <div class="section-head section-head--compact reveal">
+            <span class="svc-tag" data-i18n="rjPrinTag">Across every stage</span>
+            <h2 id="re-prin-title" class="font-headline-xl" data-i18n="rjPrinTitle">Four principles behind every inquiry journey.</h2>
+            <p class="font-body-md" data-i18n="rjPrinSub">What we build in Pre-Launch, activate in Launch and improve in Growth Launch.</p>
+          </div>
+          <div class="prop-demand-grid reveal">
+            <article class="prop-demand-card">
+              <h3 data-i18n="rjPrin1t">A clear offer</h3>
+              <p data-i18n="rjPrin1d">Landing pages and messages that help serious buyers understand the project quickly.</p>
+            </article>
+            <article class="prop-demand-card">
+              <h3 data-i18n="rjPrin2t">Fast response</h3>
+              <p data-i18n="rjPrin2d">Inquiries reach a named person on your team — by inbox, CRM or WhatsApp — before interest cools.</p>
+            </article>
+            <article class="prop-demand-card">
+              <h3 data-i18n="rjPrin3t">Clear lead ownership</h3>
+              <p data-i18n="rjPrin3d">Every inquiry has a known source and a responsible owner. Your sales team handles follow-up and closing.</p>
+            </article>
+            <article class="prop-demand-card">
+              <h3 data-i18n="rjPrin4t">Measured improvement</h3>
+              <p data-i18n="rjPrin4d">Decisions based on inquiries, cost per inquiry and the lead-quality data you share — not vanity metrics.</p>
+            </article>
+          </div>
+          <div class="prop-demand-actions reveal">
+            <a class="btn btn-pill btn-on-light" href="#assessment" data-i18n="rjSubmit" data-track="cta_re_principles_assess">Request a Project Assessment</a>
+            <a class="btn btn-pill btn-outline-dark" href="#scope" data-i18n="rjPrinCta2">Compare scope levels</a>
+          </div>
         </div>
       </section>
 
@@ -618,49 +639,6 @@
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="services" class="sector-detail sector-detail--prop hub-services has-bg-media has-bg-media--soft" style="--section-bg: url(/assets/img/visuals/real-estate.jpg)">
-        <div class="container">
-          <div class="section-head section-head--compact reveal">
-            <span class="svc-tag" data-i18n="rjBeyondTag">Beyond the three stages</span>
-            <h2 class="font-headline-xl" data-i18n="rjBeyondTitle">Two related services, quoted separately</h2>
-            <p class="font-body-md" data-i18n="rjBeyondSub">Ongoing content for live inventory, or visual content for a project before construction.</p>
-          </div>
-
-          <div class="prop-levels prop-products prop-products--rich reveal">
-            <article class="level-card level-card--rich">
-              <p class="level-kicker">01 · <span class="tm-brand" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span></p>
-              <h3 data-i18n="propProduct1t">Property Content Engine</h3>
-              <p data-i18n="propProduct1d">Turn existing assets into continuous marketing content.</p>
-              <p class="prop-product-flow" data-i18n="propProduct1flow">Assets → Content → Landing → Campaign → Leads</p>
-              <p class="prop-product-for" data-i18n="propProduct1for">Best for: inventory, listings, and ongoing sales content.</p>
-              <p class="med-gets-label" data-i18n="medGetsLabel">Outputs</p>
-              <ul class="med-gets" data-i18n-html="propProduct1gets"></ul>
-              <a class="btn btn-pill btn-on-light" href="/real-estate-content-engine" data-i18n="propProduct1cta">Open the Engine</a>
-            </article>
-            <article class="level-card level-card--rich">
-              <p class="level-kicker">02 · <span class="tm-brand" dir="ltr">PropMotion<sup aria-hidden="true">™</sup></span></p>
-              <h3 data-i18n="propProduct2t">Pre-build campaign content</h3>
-              <p data-i18n="propProduct2d">Cinematic vision, motion, and campaign storytelling for market before the build — content and persuasion, not a sales-gallery fit-out.</p>
-              <p class="prop-product-flow" data-i18n="propProduct2flow">Vision → CGI / Motion → Campaign → Investor presence</p>
-              <p class="prop-product-for" data-i18n="propProduct2for">Best for: pre-sales content, investor days, and project campaigns before concrete.</p>
-              <p class="med-gets-label" data-i18n="medGetsLabel">Outputs</p>
-              <ul class="med-gets" data-i18n-html="propProduct2gets"></ul>
-              <a class="btn btn-pill btn-outline-dark" href="/case-study-real-estate.html" data-i18n="propProduct2cta">See launch work</a>
-            </article>
-          </div>
-
-          <p class="prop-caps-label reveal" data-i18n="rjCapsLabel">Capabilities across Bees Motion and Graphics House</p>
-          <ul class="prop-caps-list reveal">
-            <li data-i18n="propSvc1t">Property Content System</li>
-            <li data-i18n="propSvc2t">Project Marketing</li>
-            <li data-i18n="propSvc3t">Campaign & Leads</li>
-            <li data-i18n="propSvc4t">Photography & Editing</li>
-            <li data-i18n="propSvc5t">Content + Activation</li>
-            <li data-i18n="propSvc6t">Visualisation & CGI</li>
-          </ul>
         </div>
       </section>
 
@@ -964,8 +942,8 @@
     </footer>
     <script>document.querySelectorAll(".year").forEach(function(el){{el.textContent=new Date().getFullYear();}});</script>
     <script src="/assets/js/site-config.js?v=20260909maint"></script>
-    <script src="/assets/js/translations.js?v=20260909maint"></script>
-    <script src="/assets/js/translations-re.js?v=20261029re"></script>
+    <script src="/assets/js/translations.js?v=20261029nav"></script>
+    <script src="/assets/js/translations-re.js?v=20261029pm"></script>
     <script src="/assets/js/app.js?v=20260909maint"></script>
     <script src="/assets/js/re-lead.js?v=20261029re"></script>
   </body>

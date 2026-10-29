@@ -17716,3 +17716,8 @@ html[dir="rtl"] .book-aside-steps {
     grid-template-columns: 1fr;
   }
 }
+
+/* Real-estate marketing entry highlighted in the main menu (2026-10-29) */
+.nav-desktop a.nav-highlight,
+.mobile-nav a.nav-highlight { color: var(--gold-dark); font-weight: 800; }
+.mobile-nav a.btn.btn-on-light { color: #fff; }
