@@ -1,0 +1,176 @@
+/* Real-estate marketing journey: PropMotion page sections + homepage entry strip.
+   Reuses site tokens (:root in styles.css). Uses logical properties so RTL works. */
+
+.re-journey,
+.re-scope {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.re-journey {
+  background:
+    radial-gradient(60% 80% at 100% 0%, rgba(229, 168, 35, 0.1), transparent 55%),
+    linear-gradient(180deg, #faf8f4 0%, #f3efe8 100%);
+}
+.re-scope { background: var(--paper); }
+
+.re-journey .section-head,
+.re-scope .section-head { max-width: 46rem; margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem); }
+
+/* Stages */
+.re-stages {
+  list-style: none;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1000px) {
+  .re-stages { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+}
+.re-stage {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.4rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(20, 20, 18, 0.09);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 34px rgba(12, 13, 16, 0.05);
+}
+.re-stage-head { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.9rem; }
+.re-stage-num {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold-light);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.re-stage-kicker {
+  margin: 0 0 0.1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+html[dir="rtl"] .re-stage-kicker { letter-spacing: 0; text-transform: none; font-size: 0.85rem; }
+.re-stage-name { margin: 0; font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: #141412; }
+.re-stage-goal { margin: 0 0 1rem; font-size: 0.96rem; line-height: 1.55; color: rgba(20, 20, 18, 0.78); font-weight: 600; }
+
+.re-list { list-style: none; display: grid; gap: 0.55rem; margin: 0 0 1.1rem; padding: 0; }
+.re-list li {
+  position: relative;
+  padding-inline-start: 1.45rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(20, 20, 18, 0.74);
+}
+.re-list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.45em;
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.re-scope .re-col--not .re-list li::before { background: rgba(20, 20, 18, 0.35); }
+
+.re-done {
+  margin: auto 0 0;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(20, 20, 18, 0.1);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: rgba(20, 20, 18, 0.66);
+}
+.re-done strong { display: block; margin-bottom: 0.2rem; color: #141412; font-size: 0.82rem; }
+
+.re-measure,
+.re-flow-note {
+  max-width: 52rem;
+  margin: 1.4rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: rgba(20, 20, 18, 0.7);
+}
+.re-flow-note { font-weight: 700; color: #141412; margin-top: 0.8rem; }
+.re-cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+
+/* Scope */
+.re-levels {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 800px) { .re-levels { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.re-level {
+  padding: 1.25rem 1.2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--cream);
+}
+.re-level h3 { margin: 0 0 0.4rem; font-size: 1.05rem; font-weight: 800; color: var(--ink); }
+.re-level p { margin: 0; font-size: 0.92rem; line-height: 1.5; color: var(--muted); }
+
+.re-cols {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) { .re-cols { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.re-col {
+  padding: 1.35rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.re-col h3 { margin: 0 0 0.85rem; font-size: 1rem; font-weight: 800; color: var(--ink); }
+.re-col .re-list { margin: 0; }
+.re-col p { margin: 0; font-size: 0.92rem; line-height: 1.65; color: var(--muted); }
+
+/* Assessment form extras (base styles come from .contact-form) */
+.re-assess .section-head { max-width: 46rem; }
+.re-hp { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form .re-consent { display: flex; gap: 0.65rem; align-items: flex-start; margin: 0.25rem 0 1.1rem; }
+.contact-form .re-consent input[type="checkbox"] {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  appearance: auto;
+  accent-color: var(--gold-dark);
+}
+.contact-form .re-consent label { margin: 0; font-size: 0.88rem; font-weight: 500; line-height: 1.55; }
+.contact-form .re-consent a { color: var(--gold-dark); text-decoration: underline; }
+.re-status { margin-top: 0.9rem; font-size: 0.92rem; line-height: 1.5; font-weight: 600; color: var(--muted); }
+.re-status:empty { display: none; }
+.re-status.ok { color: #1b6b3a; }
+.re-status.err { color: #b3261e; }
+.re-status.warn { color: #8a5a00; }
+.re-status .btn { margin-top: 0.7rem; display: inline-flex; }
+.contact-form button[disabled] { opacity: 0.65; cursor: progress; }
+
+/* Homepage entry strip */
+.re-home-strip {
+  padding: clamp(2.25rem, 5vw, 3.5rem) 0;
+  background: var(--ink);
+  color: #fff;
+}
+.re-home-inner {
+  display: grid;
+  gap: 1.25rem 2.5rem;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) { .re-home-inner { grid-template-columns: minmax(0, 1.4fr) auto; } }
+.re-home-tag { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-light); }
+html[dir="rtl"] .re-home-tag { letter-spacing: 0; text-transform: none; font-size: 0.9rem; }
+.re-home-title { margin: 0 0 0.5rem; font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 800; letter-spacing: -0.02em; }
+.re-home-line { margin: 0; max-width: 44rem; font-size: 1rem; line-height: 1.6; color: rgba(255, 255, 255, 0.74); }
+.re-home-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }

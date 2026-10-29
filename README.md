@@ -58,3 +58,17 @@ See [docs/DNS-AR.md](docs/DNS-AR.md) for live CNAME targets, GitHub Pages fallba
 ## Contact
 
 WhatsApp: +966 50 278 6513
+
+## Temporary preview gate
+
+`functions/_middleware.js` locks the whole site behind an access code while `GATE_ENABLED = true`.
+To open the site: set `GATE_ENABLED = false` and deploy (or set Pages variable `GATE_OFF=1` and redeploy).
+
+## Real estate assessment form (`/propmotion/#assessment`)
+
+The form posts to `functions/api/lead.js`. Configure delivery in Cloudflare Pages → Settings → Variables and Secrets (Production), then redeploy:
+
+- Email via Resend: `RESEND_API_KEY` (secret), `LEAD_FROM_EMAIL` (verified sender), `LEAD_TO_EMAIL` (comma-separated)
+- and/or webhook: `LEAD_WEBHOOK_URL` (Google Apps Script, Zapier, Make, CRM)
+
+Until one is configured the endpoint returns 503 and the page offers WhatsApp instead. Content lives in `assets/js/translations-re.js` (EN/AR) and `assets/css/re-journey.css`.
