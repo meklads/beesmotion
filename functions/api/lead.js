@@ -58,7 +58,7 @@ function validate(raw) {
   if (!lead.name) return { error: "name_required" };
   if (digits.length < 7 || digits.length > 15) return { error: "phone_invalid" };
   if (lead.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email)) return { error: "email_invalid" };
-  if (!lead.stage) return { error: "stage_required" };
+  if (!lead.stage && !lead.source.startsWith("home")) return { error: "stage_required" };
   if (raw.consent !== true) return { error: "consent_required" };
   lead.consent = true;
   return { lead };
@@ -85,7 +85,7 @@ function compose(lead, receivedAt) {
 async function sendResend(env, lead, receivedAt) {
   if (!env.RESEND_API_KEY || !env.LEAD_FROM_EMAIL || !env.LEAD_TO_EMAIL) return null;
   const { text, html } = compose(lead, receivedAt);
-  const subject = `New real-estate assessment request — ${lead.project || lead.company || lead.name}`;
+  const subject = (lead.source.startsWith("home") ? "New website inquiry — " : "New real-estate assessment request — ") + (lead.project || lead.company || lead.name);
   const body = {
     from: env.LEAD_FROM_EMAIL,
     to: env.LEAD_TO_EMAIL.split(",").map((s) => s.trim()).filter(Boolean),

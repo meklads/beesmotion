@@ -255,4 +255,30 @@
 };
   Object.keys(en).forEach(function(k){ w.BM_I18N.en[k] = en[k]; });
   Object.keys(ar).forEach(function(k){ w.BM_I18N.ar[k] = ar[k]; });
+  var en2 = {
+  "hmFaqSub": "Have a question that isn't here? Ask us directly — a person replies, usually the same day.",
+  "hmFaqCta": "Ask on WhatsApp",
+  "hmChoose": "Choose",
+  "hmSend": "Send request",
+  "hmConsentHtml": "I agree to be contacted about this request. See the <a href=\"/privacy/\">privacy policy</a>.",
+  "hmFormSending": "Sending…",
+  "hmFormCheck": "Please complete the required fields and accept the consent.",
+  "hmFtTag": "Start with an assessment",
+  "hmFtTitle": "Ready to build the path to your next customer?",
+  "hmFtCta": "Request an assessment"
+};
+  var ar2 = {
+  "hmFaqSub": "لديك سؤال غير موجود هنا؟ اسألنا مباشرة — يرد عليك شخص من الفريق، غالباً في نفس اليوم.",
+  "hmFaqCta": "اسألنا على واتساب",
+  "hmChoose": "اختر",
+  "hmSend": "أرسل الطلب",
+  "hmConsentHtml": "أوافق على التواصل معي بخصوص هذا الطلب. راجع <a href=\"/privacy/\">سياسة الخصوصية</a>.",
+  "hmFormSending": "جارٍ الإرسال…",
+  "hmFormCheck": "يرجى إكمال الحقول المطلوبة والموافقة على التواصل.",
+  "hmFtTag": "ابدأ بتقييم",
+  "hmFtTitle": "جاهز نبني الطريق إلى عميلك القادم؟",
+  "hmFtCta": "اطلب تقييماً"
+};
+  Object.keys(en2).forEach(function(k){ w.BM_I18N.en[k] = en2[k]; });
+  Object.keys(ar2).forEach(function(k){ w.BM_I18N.ar[k] = ar2[k]; });
 })();

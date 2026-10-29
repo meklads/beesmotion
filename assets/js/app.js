@@ -439,8 +439,75 @@
   function initForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
+    const statusEl = form.querySelector(".hx-form-status");
+    const submitBtn = form.querySelector('[type="submit"]');
+    const say = (key, fallback, cls) => {
+      if (!statusEl) return;
+      const dict = (window.BM_I18N && window.BM_I18N[getLang()]) || {};
+      statusEl.textContent = dict[key] || fallback;
+      statusEl.className = "hx-form-status" + (cls ? " is-" + cls : "");
+    };
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        say("hmFormCheck", "Please complete the required fields.", "err");
+        return;
+      }
+      if (!form.consent || !form.need || !form.industry) {
+        sendViaWhatsApp();
+        return;
+      }
+      const lang = getLang();
+      const pick = (el) => (el && el.selectedOptions[0] && el.value ? el.selectedOptions[0].textContent.trim() : "");
+      const needMap = { "pre-launch": "pre-launch", launch: "launch", "growth-launch": "growth-launch" };
+      const payload = {
+        name: form.name.value,
+        company: form.company.value,
+        phone: form.phone.value,
+        email: form.email ? form.email.value : "",
+        project: pick(form.industry),
+        support: needMap[form.need.value] || "not-sure",
+        notes: [
+          "Need: " + pick(form.need),
+          form.objective && form.objective.value ? "Objective: " + pick(form.objective) : "",
+          form.message.value.trim(),
+        ].filter(Boolean).join("\n"),
+        website: form.website ? form.website.value : "",
+        consent: form.consent.checked === true,
+        lang: lang,
+        source: "home-contact",
+      };
+      if (submitBtn) submitBtn.disabled = true;
+      say("hmFormSending", "Sending…", "");
+      const ctrl = "AbortController" in window ? new AbortController() : null;
+      const timer = ctrl ? setTimeout(() => ctrl.abort(), 9000) : null;
+      fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined,
+      })
+        .then((res) => res.json().catch(() => ({})).then((data) => ({ res, data })))
+        .then(({ res, data }) => {
+          if (res.ok && data && data.ok) {
+            track("generate_lead", { industry: form.industry.value, need: form.need.value, lang: lang, method: "api", source: "home_contact" });
+            try { sessionStorage.removeItem("bm-wa-pending"); } catch (_) {}
+            window.location.href = "/thank-you.html";
+          } else if (res.status === 400) {
+            say("hmFormCheck", "Please complete the required fields.", "err");
+          } else {
+            sendViaWhatsApp();
+          }
+        })
+        .catch(() => sendViaWhatsApp())
+        .then(() => {
+          if (timer) clearTimeout(timer);
+          if (submitBtn) submitBtn.disabled = false;
+        });
+    });
+
+    function sendViaWhatsApp() {
       const lang = getLang();
       const name = form.name.value.trim();
       const phone = form.phone.value.trim();
@@ -515,7 +582,7 @@
         /* popup blocked. thank-you page will offer WhatsApp again */
       }
       window.location.href = "thank-you.html";
-    });
+    }
   }
 
   function initThanksPage() {
