@@ -364,3 +364,8 @@ html[dir="rtl"] .page-home .font-headline-xl { font-weight: 400; letter-spacing:
   .hx-stage-media img, .hx-sector-media img { transition: none; }
   .hx-stage:hover .hx-stage-media img, .hx-sector:hover .hx-sector-media img { transform: none; }
 }
+
+/* Override the sitewide h3 weight rule (styles.css uses !important) for display-size h3s on the homepage */
+.page-home .hx-stage-name, .page-home .hx-sector h3 { font-weight: 300 !important; }
+.page-home .hx-prob h3, .page-home .hx-funnel-bar h3, .page-home .hx-why h3 { font-weight: 400 !important; }
+html[dir="rtl"] .page-home .hx-stage-name, html[dir="rtl"] .page-home .hx-sector h3 { font-weight: 400 !important; }
