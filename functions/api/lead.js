@@ -6,6 +6,7 @@
  *
  *   Email via Resend:   RESEND_API_KEY, LEAD_FROM_EMAIL, LEAD_TO_EMAIL (comma-separated)
  *   Webhook (optional): LEAD_WEBHOOK_URL  (Google Apps Script, Zapier, Make, CRM inbound hook…)
+ *   Current setup: Google Sheet via docs/lead-webhook-apps-script.gs (see docs/LEADS-GOOGLE-SHEET-AR.md)
  *
  * If neither is configured the endpoint answers 503 {reason:"not_configured"}
  * and the page falls back to WhatsApp. It never reports success it did not achieve.
@@ -106,7 +107,15 @@ async function sendWebhook(env, lead, receivedAt) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...lead, receivedAt }),
   });
-  return res.ok;
+  if (!res.ok) return false;
+  // Google Apps Script answers 200 even when it rejects a request, so read its {ok} flag.
+  try {
+    const data = await res.json();
+    if (data && data.ok === false) return false;
+  } catch (_) {
+    // Non-JSON 2xx from another webhook (Zapier, Make…) counts as delivered.
+  }
+  return true;
 }
 
 export async function onRequestPost({ request, env }) {

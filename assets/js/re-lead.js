@@ -68,6 +68,16 @@
     track("generate_lead", { method: "whatsapp_fallback", source: "re_assessment", lang: lang() });
   }
 
+  // Stage chooser cards prefill "current stage" and "support needed".
+  document.querySelectorAll("[data-re-pick]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var parts = (link.getAttribute("data-re-pick") || "").split("|");
+      if (parts[0] && form.elements.stage) form.elements.stage.value = parts[0];
+      if (parts[1] && form.elements.support) form.elements.support.value = parts[1];
+      track("select_re_stage", { stage: parts[1] || "", lang: lang() });
+    });
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!form.checkValidity()) {

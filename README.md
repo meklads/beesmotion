@@ -71,4 +71,6 @@ The form posts to `functions/api/lead.js`. Configure delivery in Cloudflare Page
 - Email via Resend: `RESEND_API_KEY` (secret), `LEAD_FROM_EMAIL` (verified sender), `LEAD_TO_EMAIL` (comma-separated)
 - and/or webhook: `LEAD_WEBHOOK_URL` (Google Apps Script, Zapier, Make, CRM)
 
-Until one is configured the endpoint returns 503 and the page offers WhatsApp instead. Content lives in `assets/js/translations-re.js` (EN/AR) and `assets/css/re-journey.css`.
+Until one is configured the endpoint returns 503 and the page offers WhatsApp instead.
+
+**Current setup:** Google Sheet + email alert to beesmotionhome@gmail.com via `docs/lead-webhook-apps-script.gs`. Step-by-step (Arabic): [docs/LEADS-GOOGLE-SHEET-AR.md](docs/LEADS-GOOGLE-SHEET-AR.md). Content lives in `assets/js/translations-re.js` (EN/AR) and `assets/css/re-journey.css`.
