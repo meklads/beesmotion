@@ -791,3 +791,34 @@ html[dir="rtl"] body .hx-story h3 { font-family: var(--font-ar); font-weight: 40
 .med-xp-credit a { color: var(--hx-ink); text-decoration-color: var(--hx-gold); }
 .med-xp-unit .med-xp-case-label { color: var(--hx-gold); }
 @media (max-width: 640px) { .med-xp-unit .highlights { grid-template-columns: 1fr; } }
+
+/* ---------- Case-study hero ---------- */
+.hx-crumb { margin: 0 0 1.4rem; font-size: 0.9rem; }
+.hx-crumb a { color: rgba(255, 255, 255, 0.7); text-decoration: none; }
+.hx-crumb a:hover { color: var(--hx-gold); }
+.hx-h1--case { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+.hx-h1-sub--case { max-width: 40rem; font-size: clamp(1.4rem, 2.6vw, 2.1rem); line-height: 1.25; color: #fff; }
+html[dir="rtl"] .hx-h1-sub--case { line-height: 1.5; }
+.hx-hero--case .hx-h1-sub--case { font-weight: 300; }
+
+/* =====================================================================
+   Legacy harmoniser — pages not yet rebuilt (body.bm-x)
+   ===================================================================== */
+body.bm-x { background: #fff; }
+body.bm-x .svc-tag, body.bm-x .sol-eyebrow, body.bm-x .bm-eyebrow, body.bm-x .pm-kicker, body.bm-x .lp-enquire-kicker {
+  display: inline-flex; align-items: center; gap: 0.7rem; letter-spacing: 0 !important; text-transform: none !important; font-size: 0.92rem !important; font-weight: 500 !important; color: var(--hx-g7) !important; background: none !important; border: 0 !important; padding: 0 !important;
+}
+body.bm-x .svc-tag::before, body.bm-x .sol-eyebrow::before { content: ""; width: 1.8rem; height: 1px; background: var(--hx-gold); }
+body.bm-x .cs-band-ink .svc-tag, body.bm-x .band-ink .svc-tag, body.bm-x .cs-band-ink .sol-eyebrow, body.bm-x .lp-enquire .lp-enquire-kicker { color: rgba(255, 255, 255, 0.62) !important; }
+body.bm-x .font-headline-xl, body.bm-x .sol-h2 { letter-spacing: -0.035em; }
+html[dir="rtl"] body.bm-x .font-headline-xl, html[dir="rtl"] body.bm-x .sol-h2 { letter-spacing: 0; }
+body.bm-x .cs-band-ink, body.bm-x .band-ink, body.bm-x .sol-ready, body.bm-x .sol-journey { background: var(--hx-black) !important; background-image: none !important; }
+body.bm-x .lp-enquire { background: var(--hx-graphite) !important; background-image: none !important; }
+body.bm-x .band-mist, body.bm-x .sol-method, body.bm-x .sol-ideas, body.bm-x .sol-faq, body.bm-x .cs-band-clinical { background: var(--hx-fog) !important; background-image: none !important; }
+body.bm-x .sol-system, body.bm-x .sol-outcomes, body.bm-x .sol-story, body.bm-x .sol-trust, body.bm-x .sol-strip { background: var(--hx-paper) !important; background-image: none !important; }
+body.bm-x .has-bg-media::before { background: rgba(10, 10, 11, 0.82) !important; }
+body.bm-x .btn-gold { background: var(--hx-gold) !important; border-color: var(--hx-gold) !important; color: var(--hx-black) !important; background-image: none !important; box-shadow: none !important; }
+body.bm-x .btn-gold:hover { background: #c9a96d !important; }
+body.bm-x .btn-pill { font-weight: 600; }
+body.bm-x [class*="-card"]:not(.hx-feature):not(.hx-pair-card):not(.hx-series-card) { box-shadow: none !important; }
+html[dir="rtl"] .hx-hero--case .hx-hero-media img { transform: none; }

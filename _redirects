@@ -75,3 +75,9 @@
 /services/content-activation/ /propmotion/ 301
 /services/visualisation-cgi /propmotion/ 301
 /services/visualisation-cgi/ /propmotion/ 301
+
+# Retired pages (2026-10-29): old package and audience pages folded into the Lead System
+/engage /#system 301
+/engage/ /#system 301
+/brands /#sectors 301
+/brands/ /#sectors 301

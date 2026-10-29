@@ -12,7 +12,7 @@
 }
 .med-xp-head {
   padding: clamp(2.5rem, 5vw, 3.75rem) 0 1.25rem;
-  background: linear-gradient(180deg, #0c2834 0%, #0a0a0a 100%);
+  background: linear-gradient(180deg, #1f1f21 0%, #0a0a0a 100%);
   color: #fff;
 }
 .med-xp-case-label {
@@ -63,24 +63,24 @@ html[dir="ltr"] .med-xp-case-label {
   color: #bb9b5a;
 }
 .med-xp-unit .case-content {
-  background: #f7fbfd;
+  background: #fafafa;
 }
 .med-xp-unit .highlight-item {
-  background: #eef5f8;
-  border-inline-start-color: #0a5570;
+  background: #f3f3f3;
+  border-inline-start-color: #3b3b3f;
 }
-.med-xp-unit .highlight-item .icon { color: #0a5570; }
+.med-xp-unit .highlight-item .icon { color: #3b3b3f; }
 .med-xp-credit {
   padding: 1.5rem 1.25rem 2.75rem;
   text-align: center;
-  background: #f7fbfd;
+  background: #fafafa;
   font-size: 0.92rem;
   line-height: 1.55;
-  color: rgba(12,40,52,0.65);
+  color: rgba(31, 31, 33,0.65);
   max-width: 44rem;
   margin-inline: auto;
 }
-.med-xp-credit a { color: #0a5570; font-weight: 600; }
+.med-xp-credit a { color: #3b3b3f; font-weight: 600; }
 
 .med-xp-unit .s2-hero-wrap {
   position: relative;
@@ -347,7 +347,7 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
 }.med-xp-unit /* Content Section */
 .case-content {
   padding: clamp(3rem, 5.5vw, 4.5rem) 0 clamp(2.25rem, 4vw, 3.25rem);
-  background: #f7fbfd;
+  background: #fafafa;
 }html[dir="rtl"] .med-xp-unit .case-content { direction: rtl; }html[dir="ltr"] .med-xp-unit .case-content { direction: ltr; }.med-xp-unit .case-content-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -361,7 +361,7 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
 }.med-xp-unit .case-content p {
   font-size: clamp(1.02rem, 1.4vw, 1.15rem);
   font-weight: 400;
-  color: rgba(12, 40, 52, 0.78);
+  color: rgba(31, 31, 33, 0.78);
   line-height: 1.7;
   margin: 0 0 1.5rem;
   max-width: 42rem;
@@ -372,10 +372,10 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   gap: 1rem;
   margin-bottom: 0;
 }.med-xp-unit .highlight-item {
-  background: #eef5f8;
+  background: #f3f3f3;
   padding: 1.15rem 1.2rem;
   border-radius: 12px;
-  border-inline-start: 3px solid #0a5570;
+  border-inline-start: 3px solid #3b3b3f;
   display: flex;
   align-items: flex-start;
   gap: 14px;
@@ -574,31 +574,31 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
 .page-hub--med .med-path-card {
   padding: 1.35rem 1.25rem 1.5rem;
   border-radius: 16px;
-  border: 1px solid rgba(10, 85, 112, 0.12);
-  background: linear-gradient(165deg, #f7fbfd, #eef5f8);
+  border: 1px solid rgba(59, 59, 63, 0.12);
+  background: linear-gradient(165deg, #fafafa, #f3f3f3);
 }
 .page-hub--med .med-path-num {
   display: block;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: rgba(10, 85, 112, 0.55);
+  color: rgba(59, 59, 63, 0.55);
   margin-bottom: 0.55rem;
 }
 .page-hub--med .med-path-card h3 {
   margin: 0 0 0.45rem;
   font-size: 1.08rem;
   font-weight: 800;
-  color: #0c2834;
+  color: #1f1f21;
 }
 .page-hub--med .med-path-card p {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: rgba(12,40,52,0.7);
+  color: rgba(31, 31, 33,0.7);
 }
 .page-hub--med .med-path-card--focus {
-  background: linear-gradient(165deg, #0a5570, #0c2834);
+  background: linear-gradient(165deg, #3b3b3f, #1f1f21);
   border-color: transparent;
   color: #fff;
 }
@@ -613,12 +613,12 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 .page-hub--med .med-path-card--focus .med-path-num {
-  color: rgba(183, 214, 230, 0.85) !important;
+  color: rgba(205, 205, 208, 0.85) !important;
 }
 
 .page-hub--med .med-xp-services {
   padding: clamp(3rem, 6vw, 4.75rem) 0;
-  background: linear-gradient(180deg, #f5f9fb, #eef5f8);
+  background: linear-gradient(180deg, #f8f8f8, #f3f3f3);
 }
 .page-hub--med .med-xp-grid {
   display: grid;
@@ -630,19 +630,19 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   padding: 1.25rem 1.2rem 1.4rem;
   border-radius: 16px;
   background: #fff;
-  border: 1px solid rgba(10, 85, 112, 0.1);
+  border: 1px solid rgba(59, 59, 63, 0.1);
 }
 .page-hub--med .med-xp-card h3 {
   margin: 0 0 0.55rem;
   font-size: 1.05rem;
   font-weight: 800;
-  color: #0c2834;
+  color: #1f1f21;
 }
 .page-hub--med .med-xp-card .med-gets { margin-top: 0.35rem; }
 .page-hub--med .med-xp-partner {
   margin-top: 1.25rem;
   font-size: 0.95rem;
-  color: rgba(12,40,52,0.68);
+  color: rgba(31, 31, 33,0.68);
   max-width: 40rem;
 }
 
@@ -667,8 +667,8 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
 /* Tasami Group trust band on MedMotion */
 .page-hub--med .med-group-trust {
   padding: clamp(2.25rem, 4.5vw, 3.25rem) 0;
-  background: linear-gradient(180deg, #0c2834 0%, #0a3d52 100%);
-  color: #f4f8fa;
+  background: linear-gradient(180deg, #1f1f21 0%, #2c2d30 100%);
+  color: #f7f7f7;
 }
 .page-hub--med .med-group-trust-inner {
   display: grid;
@@ -680,7 +680,7 @@ html[dir="rtl"] .med-xp-unit .s2-watch-btn {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(183, 214, 230, 0.9);
+  color: rgba(205, 205, 208, 0.9);
 }
 html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
   letter-spacing: 0;
@@ -698,7 +698,7 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
   max-width: 42rem;
   font-size: 0.98rem;
   line-height: 1.55;
-  color: rgba(244, 248, 250, 0.72);
+  color: rgba(247, 247, 247, 0.72);
 }
 .page-hub--med .med-group-trust-grid {
   display: grid;
@@ -711,7 +711,7 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
   padding: 0.85rem 0.9rem 1rem;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(183, 214, 230, 0.18);
+  border: 1px solid rgba(205, 205, 208, 0.18);
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
@@ -722,8 +722,8 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
   background: rgba(255, 255, 255, 0.09);
 }
 .page-hub--med .med-group-chip--active {
-  background: rgba(10, 85, 112, 0.35);
-  border-color: rgba(183, 214, 230, 0.35);
+  background: rgba(59, 59, 63, 0.35);
+  border-color: rgba(205, 205, 208, 0.35);
 }
 .page-hub--med .med-group-chip .eco-logo-stage {
   background: #050505;
@@ -739,7 +739,7 @@ html[dir="rtl"] .page-hub--med .med-group-trust-kicker {
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.4;
-  color: rgba(244, 248, 250, 0.88);
+  color: rgba(247, 247, 247, 0.88);
   text-align: center;
 }
 .page-hub--med .med-group-trust-link {
@@ -875,8 +875,8 @@ body.med-xp-modal-open {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0;
   border-radius: 14px;
-  background: linear-gradient(165deg, #f5f9fb, #eef5f8);
-  border: 1px solid rgba(10, 85, 112, 0.1);
+  background: linear-gradient(165deg, #f8f8f8, #f3f3f3);
+  border: 1px solid rgba(59, 59, 63, 0.1);
 }
 .page-hub--med .med-how {
   margin: 0 0 1.75rem;
@@ -889,9 +889,9 @@ body.med-xp-modal-open {
   padding: 0.45rem 0.4rem;
   font-size: clamp(0.72rem, 1.1vw, 0.86rem);
   font-weight: 700;
-  color: #0c2834;
+  color: #1f1f21;
   text-align: center;
-  border-inline-end: 1px solid rgba(10, 85, 112, 0.1);
+  border-inline-end: 1px solid rgba(59, 59, 63, 0.1);
   position: relative;
 }
 .page-hub--med .med-method-strip li:last-child {
@@ -902,7 +902,7 @@ body.med-xp-modal-open {
   padding: 1.35rem 1.25rem 1.45rem;
   border-radius: 16px;
   background: #fff;
-  border: 1px solid rgba(10, 85, 112, 0.1);
+  border: 1px solid rgba(59, 59, 63, 0.1);
 }
 .page-hub--med .med-outcomes .svc-tag {
   margin-bottom: 0.35rem;
@@ -919,12 +919,12 @@ body.med-xp-modal-open {
   margin: 0;
   padding: 0.9rem 1rem;
   border-radius: 12px;
-  background: linear-gradient(165deg, #f5f9fb, #eef5f8);
-  border: 1px solid rgba(10, 85, 112, 0.08);
+  background: linear-gradient(165deg, #f8f8f8, #f3f3f3);
+  border: 1px solid rgba(59, 59, 63, 0.08);
   font-size: 0.95rem;
   font-weight: 650;
   line-height: 1.4;
-  color: #0c2834;
+  color: #1f1f21;
 }
 .page-hub--med .med-flagship-proof {
   list-style: none;
@@ -939,17 +939,17 @@ body.med-xp-modal-open {
   gap: 0.55rem;
   margin: 0;
   font-size: 0.95rem;
-  color: rgba(12, 40, 52, 0.72);
+  color: rgba(31, 31, 33, 0.72);
 }
 .page-hub--med .med-flagship-proof strong {
   font-size: 1.15rem;
   font-weight: 800;
-  color: #0a5570;
+  color: #3b3b3f;
   min-width: 3.2rem;
 }
 .page-hub--med .med-pillar--lead {
-  border-color: rgba(10, 85, 112, 0.28);
-  box-shadow: 0 10px 28px rgba(8, 40, 55, 0.08);
+  border-color: rgba(59, 59, 63, 0.28);
+  box-shadow: 0 10px 28px rgba(30, 30, 33, 0.08);
 }
 .page-hub--med .med-pillar-badge {
   display: inline-block;
@@ -959,8 +959,8 @@ body.med-xp-modal-open {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #0a5570;
-  background: rgba(10, 85, 112, 0.1);
+  color: #3b3b3f;
+  background: rgba(59, 59, 63, 0.1);
 }
 html[dir="rtl"] .page-hub--med .med-pillar-badge {
   letter-spacing: 0;
@@ -969,7 +969,7 @@ html[dir="rtl"] .page-hub--med .med-pillar-badge {
   margin: 0.35rem 0 0.65rem;
   font-size: clamp(1.25rem, 2.2vw, 1.65rem);
   font-weight: 800;
-  color: #0c2834;
+  color: #1f1f21;
 }
 .page-hub--med .med-series--compact {
   padding-block: clamp(2.25rem, 4.5vw, 3.25rem);
@@ -985,7 +985,7 @@ html[dir="rtl"] .page-hub--med .med-pillar-badge {
 }
 .page-hub--med .med-group-trust--compact {
   padding: clamp(2.25rem, 4.5vw, 3.25rem) 0;
-  border-top: 1px solid rgba(183, 214, 230, 0.12);
+  border-top: 1px solid rgba(205, 205, 208, 0.12);
 }
 .page-hub--med .med-group-trust--compact .med-group-trust-inner {
   gap: 1.5rem;

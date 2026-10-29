@@ -43,8 +43,9 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css?v=20261029gold" />
     <link rel="stylesheet" href="/assets/css/page-quality.css?v=20261029gold" />
+    <link rel="stylesheet" href="/assets/css/bm-system.css?v=20261029b" />
   </head>
-  <body class="lang-en page-case-study page-case-mwl page-sol" data-i18n-meta="mwl">
+  <body class="lang-en page-case-study page-case-mwl page-sol bm-x" data-i18n-meta="mwl">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
     <header class="site-header">
@@ -103,35 +104,20 @@
     </nav>
 
     <main id="main">
-      <section class="bm-hero bm-hero--case">
-        <div class="container bm-hero-wrap">
-          <div class="bm-hero-split reveal">
-            <div class="bm-hero-copy">
-              <p class="bm-hero-crumb">
-                <a href="/launch-halls/" data-i18n="mwlBack">← SpaceLaunch</a>
-              </p>
-              <span class="bm-eyebrow" data-i18n="mwlTag">SpaceLaunch case</span>
-              <h1 class="font-headline-xl">
-                <span class="brand-mark" dir="ltr">SpaceLaunch<sup aria-hidden="true">™</sup></span>
-                <strong class="bm-hero-em" data-i18n="mwlTitleEm">Launch environment, content and interactive experience in under three weeks</strong>
-              </h1>
-              <p class="bm-hero-sub" data-i18n="mwlHeroShort">Muslim World League · Humanity Exhibition — launch environment, content and interactive experience through the TASAMI Group.</p>
-              <div class="hero-ctas">
-                <a class="btn btn-pill btn-gold" href="#film" data-i18n="mwlFilmCta">Watch the film</a>
-                <a class="btn btn-pill btn-outline-dark" href="/#contact" data-i18n="ctaNav">Start a project</a>
-                <a class="btn btn-pill btn-outline-dark" href="/book/" data-booking-cta data-i18n="bookCta">Book a call</a>
-              </div>
-            </div>
-            <div class="bm-hero-video">
-              <div class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel" data-hero-autoplay="H66KNP1sQCk" data-hero-title="SpaceLaunch MWL film">
-                <div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div>
-                <div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div>
-                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="H66KNP1sQCk" data-yt-title="SpaceLaunch MWL film" data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=H66KNP1sQCk&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1" aria-label="Play video">
-                  <img src="/assets/img/thumbs/H66KNP1sQCk.jpg" alt="SpaceLaunch MWL film" loading="eager" width="1280" height="720" />
-                  <span class="yt-facade-play" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
+      <section class="hx-hero hx-hero--page hx-hero--case" aria-labelledby="cs-title">
+        <picture class="hx-hero-media" aria-hidden="true">
+          <source media="(max-width: 760px)" srcset="/assets/img/pages/cs-mwl-hero-960.webp" type="image/webp" />
+          <source srcset="/assets/img/pages/cs-mwl-hero.webp" type="image/webp" />
+          <img src="/assets/img/pages/cs-mwl-hero.jpg" alt="" width="1600" height="900" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="container hx-hero-inner">
+          <div class="hx-hero-copy">
+            <p class="hx-crumb"><a href="/launch-halls/" data-i18n="mwlBack">← SpaceLaunch</a></p>
+            <p class="hx-kicker"><span data-i18n="mwlTag">SpaceLaunch case</span></p>
+            <h1 id="cs-title" class="hx-h1 hx-h1--brand hx-h1--case"><span dir="ltr">SpaceLaunch<sup aria-hidden="true">™</sup></span></h1>
+            <p class="hx-h1-sub hx-h1-sub--case"><span data-i18n="mwlTitleEm">Launch environment, content and interactive experience in under three weeks</span></p>
+            <p class="hx-lead"><span data-i18n="mwlHeroShort">Muslim World League · Humanity Exhibition — launch environment, content and interactive experience through the TASAMI Group.</span></p>
+            <div class="hx-actions"><a class="hx-btn hx-btn--light" href="#film" data-i18n="mwlFilmCta">Watch the film</a><a class="hx-btn hx-btn--ghost" href="/#contact" data-i18n="ctaNav">Start a project</a></div>
           </div>
         </div>
       </section>
@@ -150,7 +136,7 @@
                   width="120"
                   height="93"
                   loading="lazy"
-                  style="background:#0f4d2e;padding:8px;border-radius:8px;object-fit:contain;"
+                  style="background:#2c2d30;padding:8px;border-radius:8px;object-fit:contain;"
                 />
               </div>
               <p class="sol-seal-kicker" data-i18n="mwlClient">Muslim World League</p>
@@ -248,7 +234,6 @@
             <p class="footer-col-title" data-i18n="footerCompany">Company</p>
             <div class="footer-links">
               <a href="/launch-halls/" data-i18n="navLaunchHalls">Launch halls</a>
-              <a href="/engage/" data-i18n="navEngage">Engage</a>
               <a href="/#contact" data-i18n="navContact">Contact</a>
               <a href="/privacy/" data-i18n="navPrivacy">Privacy policy</a>
               <a href="/terms/" data-i18n="navTerms">Terms of use</a>
@@ -269,6 +254,7 @@
     </script>
     <script src="/assets/js/site-config.js?v=20260909w24"></script>
     <script src="/assets/js/translations.js?v=20261029b"></script>
+    <script src="/assets/js/translations-sys.js?v=20261029b"></script>
     <script src="/assets/js/app.js?v=20261029b"></script>
   </body>
 </html>

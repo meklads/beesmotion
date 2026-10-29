@@ -47,8 +47,9 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css?v=20261029gold" />
     <link rel="stylesheet" href="/assets/css/page-quality.css?v=20261029gold" />
+    <link rel="stylesheet" href="/assets/css/bm-system.css?v=20261029b" />
   </head>
-  <body class="lang-en page-case-study page-case-imc page-sol" data-i18n-meta="cs">
+  <body class="lang-en page-case-study page-case-imc page-sol bm-x" data-i18n-meta="cs">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
         <header class="site-header">
@@ -108,46 +109,29 @@
 
     <main id="main">
       <!-- 1. Split hero, same language as homepage -->
-      <section class="bm-hero bm-hero--case">
-        <div class="container bm-hero-wrap">
-          <div class="bm-hero-split reveal">
-            <div class="bm-hero-copy">
-              <p class="bm-hero-crumb">
-                <a href="/medmotion/" data-i18n="csBackMed">← MedMotion</a>
-              </p>
-              <span class="bm-eyebrow" data-i18n="csTag">Healthcare case</span>
-              <h1 class="font-headline-xl">
-                <span class="brand-mark" dir="ltr">MedMotion<sup aria-hidden="true">™</sup></span>
-                <strong class="bm-hero-em" data-i18n="csTitleEm">The medical content system that turns awareness into trust</strong>
-              </h1>
-              <p class="bm-hero-sub" data-i18n="csHeroShort">Strategy, writing, branded motion, and distribution, built so patients understand, engage, and convert.</p>
-              <div class="hero-ctas">
-                <a class="btn btn-pill btn-gold" href="#medical-album" data-i18n="csMedAlbumTag">Medical films</a>
-                <a class="btn btn-pill btn-outline-dark" href="#series" data-i18n="csWatchWork">View the work</a>
-                <a class="btn btn-pill btn-outline-dark" href="/#contact" data-i18n="ctaNav">Start a project</a>
-              </div>
-              <p class="lp-hero-offer" data-i18n="lpOfferMedHero">Healthcare content path · Done-For-You</p>
-            </div>
-                        <div class="bm-hero-video">
-              <div class="bm-video-crop bm-video-crop--embed bm-video-crop--hero-reel" data-hero-autoplay="wzUNAKqOE8Q" data-hero-title="MedMotion healthcare film">
-                <div class="bm-video-corner bm-video-corner--tr" aria-hidden="true"></div>
-                <div class="bm-video-corner bm-video-corner--bl" aria-hidden="true"></div>
-                <button type="button" class="yt-facade yt-facade--cover" data-yt-id="wzUNAKqOE8Q" data-yt-title="MedMotion healthcare film" data-yt-params="autoplay=1&mute=1&controls=0&loop=1&playlist=wzUNAKqOE8Q&modestbranding=1&playsinline=1&rel=0&vq=hd1080&hd=1" aria-label="Play video">
-                  <img src="/assets/img/thumbs/wzUNAKqOE8Q.jpg" alt="MedMotion healthcare film" loading="eager" width="1280" height="720" />
-                  <span class="yt-facade-play" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
+      <section class="hx-hero hx-hero--page hx-hero--case" aria-labelledby="cs-title">
+        <picture class="hx-hero-media" aria-hidden="true">
+          <source media="(max-width: 760px)" srcset="/assets/img/pages/cs-imc-hero-960.webp" type="image/webp" />
+          <source srcset="/assets/img/pages/cs-imc-hero.webp" type="image/webp" />
+          <img src="/assets/img/pages/cs-imc-hero.jpg" alt="" width="1024" height="576" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="container hx-hero-inner">
+          <div class="hx-hero-copy">
+            <p class="hx-crumb"><a href="/medmotion/" data-i18n="csBackMed">← MedMotion</a></p>
+            <p class="hx-kicker"><span data-i18n="csTag">Healthcare case</span></p>
+            <h1 id="cs-title" class="hx-h1 hx-h1--brand hx-h1--case"><span dir="ltr">MedMotion<sup aria-hidden="true">™</sup></span></h1>
+            <p class="hx-h1-sub hx-h1-sub--case"><span data-i18n="csTitleEm">The medical content system that turns awareness into trust</span></p>
+            <p class="hx-lead"><span data-i18n="csHeroShort">Strategy, writing, branded motion, and distribution, built so patients understand, engage, and convert.</span></p>
+            <div class="hx-actions"><a class="hx-btn hx-btn--light" href="#medical-album" data-i18n="csMedAlbumTag">Medical films</a><a class="hx-btn hx-btn--ghost" href="#series" data-i18n="csWatchWork">View the work</a></div>
           </div>
         </div>
-      </section>
-
-      <section class="lp-offer lp-offer--med" aria-label="Offer">
-        <div class="container lp-offer-row">
-          <span class="lp-offer-item"><strong data-i18n="csStrip1n">100+</strong> <em data-i18n="lpOfferMed1">assets in ~1 year</em></span>
-          <span class="lp-offer-item"><strong data-i18n="csStrip2n">8</strong> <em data-i18n="lpOfferMed2">connected series</em></span>
-          <span class="lp-offer-item"><strong data-i18n="lpOfferMed3n">1</strong> <em data-i18n="lpOfferMed3">visual system</em></span>
-          <a class="btn btn-pill btn-gold lp-offer-cta" href="/#contact" data-i18n="ctaNav">Start a project</a>
+        <div class="container hx-hero-foot">
+          <dl class="hx-facts hx-facts--hero">
+            <div><dt data-i18n="csStrip1n">100+</dt><dd data-i18n="lpOfferMed1">assets in ~1 year</dd></div>
+            <div><dt data-i18n="csStrip2n">8</dt><dd data-i18n="lpOfferMed2">connected series</dd></div>
+            <div><dt data-i18n="lpOfferMed3n">1</dt><dd data-i18n="lpOfferMed3">visual system</dd></div>
+            <div><dt dir="ltr">IMC</dt><dd data-i18n="csClient">International Medical Center</dd></div>
+          </dl>
         </div>
       </section>
 
@@ -1028,7 +1012,6 @@
               <a href="/#contact" data-i18n="navContact">Contact</a>
               <a href="/privacy/" data-i18n="navPrivacy">Privacy policy</a>
               <a href="/terms/" data-i18n="navTerms">Terms of use</a>
-              <a href="/ai/" data-i18n="navAiEngine">Content System</a>
               <a href="https://www.youtube.com/@beesmotion6657" target="_blank" rel="noopener" data-i18n="footerYoutube">YouTube</a>
             </div>
           </div>
@@ -1061,6 +1044,7 @@
     </script>
     <script src="/assets/js/site-config.js?v=20260909maint"></script>
     <script src="/assets/js/translations.js?v=20261029b"></script>
+    <script src="/assets/js/translations-sys.js?v=20261029b"></script>
     <script src="/assets/js/app.js?v=20261029b"></script>
   </body>
 </html>

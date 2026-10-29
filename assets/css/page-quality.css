@@ -7,44 +7,44 @@
 /* --- Shared dark bars: homepage ink language --- */
 .lp-mega--med {
   background:
-    radial-gradient(90% 70% at 8% 0%, rgba(183, 214, 230, 0.18), transparent 52%),
-    radial-gradient(70% 55% at 100% 100%, rgba(10, 85, 112, 0.38), transparent 55%),
-    linear-gradient(160deg, #08141c 0%, #0c1a24 52%, #102838 100%);
+    radial-gradient(90% 70% at 8% 0%, rgba(205, 205, 208, 0.18), transparent 52%),
+    radial-gradient(70% 55% at 100% 100%, rgba(59, 59, 63, 0.38), transparent 55%),
+    linear-gradient(160deg, #111113 0%, #171719 52%, #232325 100%);
 }
 
 .lp-mega--prop {
   background:
     radial-gradient(90% 70% at 10% 0%, rgba(184, 150, 80, 0.14), transparent 50%),
-    radial-gradient(70% 55% at 100% 100%, rgba(26, 53, 96, 0.35), transparent 55%),
-    linear-gradient(160deg, #10131a 0%, #0c0d10 55%, #161820 100%);
+    radial-gradient(70% 55% at 100% 100%, rgba(59, 59, 63, 0.35), transparent 55%),
+    linear-gradient(160deg, #141416 0%, #0c0d10 55%, #1a1a1c 100%);
 }
 
 .lp-offer--med {
   background:
-    radial-gradient(80% 120% at 0% 50%, rgba(183, 214, 230, 0.14), transparent 55%),
-    linear-gradient(90deg, #0a1e2c 0%, #14384c 50%, #0a1e2c 100%);
-  border-block-color: rgba(183, 214, 230, 0.12);
+    radial-gradient(80% 120% at 0% 50%, rgba(205, 205, 208, 0.14), transparent 55%),
+    linear-gradient(90deg, #1a1a1c 0%, #2e2e32 50%, #1a1a1c 100%);
+  border-block-color: rgba(205, 205, 208, 0.12);
 }
 
 .lp-offer--prop {
   background:
     radial-gradient(80% 120% at 100% 50%, rgba(184, 150, 80, 0.12), transparent 55%),
-    linear-gradient(90deg, #10131a 0%, #1c1f28 50%, #10131a 100%);
+    linear-gradient(90deg, #141416 0%, #212123 50%, #141416 100%);
   border-block-color: rgba(184, 150, 80, 0.12);
 }
 
 .lp-enquire--med {
   background:
-    radial-gradient(ellipse 70% 90% at 100% 40%, rgba(183, 214, 230, 0.2), transparent 55%),
-    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(10, 85, 112, 0.28), transparent 50%),
-    linear-gradient(155deg, #08141c 0%, #0e2432 48%, #143044 100%);
+    radial-gradient(ellipse 70% 90% at 100% 40%, rgba(205, 205, 208, 0.2), transparent 55%),
+    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(59, 59, 63, 0.28), transparent 50%),
+    linear-gradient(155deg, #111113 0%, #1f1f21 48%, #2a2b2e 100%);
 }
 
 .lp-enquire--prop {
   background:
     radial-gradient(ellipse 70% 90% at 0% 40%, rgba(184, 150, 80, 0.18), transparent 55%),
-    radial-gradient(ellipse 50% 60% at 100% 100%, rgba(26, 53, 96, 0.32), transparent 50%),
-    linear-gradient(155deg, #0c0d10 0%, #141820 48%, #1a1d26 100%);
+    radial-gradient(ellipse 50% 60% at 100% 100%, rgba(59, 59, 63, 0.32), transparent 50%),
+    linear-gradient(155deg, #0c0d10 0%, #19191b 48%, #1f1f21 100%);
 }
 
 /* --- Prop hub: light bridge after hero (homepage sector-bridge feel) --- */
@@ -114,16 +114,16 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 /* --- Med hub: frame / series / flagship / trust rhythm --- */
 .page-hub--med .med-frame {
   background:
-    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(10, 85, 112, 0.07), transparent 52%),
-    linear-gradient(180deg, #f7fbfd 0%, #ffffff 32%, #f3f8fb 100%) !important;
-  border-block: 1px solid rgba(10, 85, 112, 0.08);
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(59, 59, 63, 0.07), transparent 52%),
+    linear-gradient(180deg, #fafafa 0%, #ffffff 32%, #f7f7f7 100%) !important;
+  border-block: 1px solid rgba(59, 59, 63, 0.08);
   padding: clamp(2.5rem, 5vw, 4rem) 0 !important;
 }
 
 .page-hub--med .med-frame-define {
   padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
   margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-  border-bottom: 1px solid rgba(10, 85, 112, 0.1);
+  border-bottom: 1px solid rgba(59, 59, 63, 0.1);
 }
 
 .page-hub--med .med-series {
@@ -135,9 +135,9 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-hub--med .med-flagship {
   background:
-    radial-gradient(ellipse 70% 50% at 90% 20%, rgba(10, 85, 112, 0.1), transparent 50%),
-    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(183, 214, 230, 0.18), transparent 50%),
-    linear-gradient(180deg, #f7fbfd 0%, #e8f2f6 100%) !important;
+    radial-gradient(ellipse 70% 50% at 90% 20%, rgba(59, 59, 63, 0.1), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(205, 205, 208, 0.18), transparent 50%),
+    linear-gradient(180deg, #fafafa 0%, #eeeef0 100%) !important;
 }
 
 .page-hub--med .med-group-trust {
@@ -156,7 +156,7 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 .page-hub--med .med-series-card:hover,
 .page-hub--med .med-path-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(8, 40, 55, 0.08);
+  box-shadow: 0 16px 40px rgba(30, 30, 33, 0.08);
 }
 
 /* --- Case studies: break white tunnels, homepage mid rhythm --- */
@@ -178,8 +178,8 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .sol-ideas {
   background:
-    radial-gradient(ellipse 50% 40% at 0% 0%, rgba(10, 85, 112, 0.08), transparent 55%),
-    linear-gradient(180deg, #f7fbfd 0%, #eef5f8 100%);
+    radial-gradient(ellipse 50% 40% at 0% 0%, rgba(59, 59, 63, 0.08), transparent 55%),
+    linear-gradient(180deg, #fafafa 0%, #f3f3f3 100%);
 }
 
 .page-case-study .sol-system {
@@ -189,7 +189,7 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .sol-system {
   background:
-    linear-gradient(180deg, #ffffff 0%, #f5f9fb 100%);
+    linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
 }
 
 .page-case-study .sol-method {
@@ -200,8 +200,8 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .sol-method {
   background:
-    radial-gradient(120% 80% at 100% 0%, rgba(10, 85, 112, 0.07), transparent 55%),
-    linear-gradient(180deg, #f0f6fa 0%, #e8f1f6 100%);
+    radial-gradient(120% 80% at 100% 0%, rgba(59, 59, 63, 0.07), transparent 55%),
+    linear-gradient(180deg, #f5f5f5 0%, #eeeef0 100%);
 }
 
 .page-case-study .sol-outcomes {
@@ -211,7 +211,7 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .sol-outcomes {
   background:
-    linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
 }
 
 .page-case-study .sol-faq {
@@ -221,7 +221,7 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .sol-faq {
   background:
-    linear-gradient(180deg, #f0f6fa 0%, #e8f1f6 100%);
+    linear-gradient(180deg, #f5f5f5 0%, #eeeef0 100%);
 }
 
 .page-case-study .sol-story {
@@ -232,20 +232,20 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .sol-story {
   background:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(10, 85, 112, 0.08), transparent 55%),
-    linear-gradient(180deg, #f7fbfd 0%, #eef5f8 100%);
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(59, 59, 63, 0.08), transparent 55%),
+    linear-gradient(180deg, #fafafa 0%, #f3f3f3 100%);
 }
 
 .page-case-study .sol-proof.series-stack {
   background:
-    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(26, 86, 168, 0.05), transparent 55%),
-    linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(94, 94, 100, 0.05), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
 }
 
 .page-case-imc .sol-proof.series-stack {
   background:
-    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(10, 85, 112, 0.07), transparent 55%),
-    linear-gradient(180deg, #f7fafc 0%, #eef5f8 100%);
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(59, 59, 63, 0.07), transparent 55%),
+    linear-gradient(180deg, #f9f9fa 0%, #f3f3f3 100%);
 }
 
 .page-case-re .sol-proof.series-stack {
@@ -263,8 +263,8 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .cs-showcase {
   background:
-    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(10, 85, 112, 0.08), transparent 55%),
-    linear-gradient(180deg, #f4f9fb 0%, #e8f2f6 100%);
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(59, 59, 63, 0.08), transparent 55%),
+    linear-gradient(180deg, #f7f7f8 0%, #eeeef0 100%);
 }
 
 .page-case-re .cs-showcase {
@@ -276,21 +276,21 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 .page-case-study .cs-band-ink {
   background:
     radial-gradient(90% 70% at 10% 0%, rgba(184, 150, 80, 0.12), transparent 50%),
-    radial-gradient(70% 60% at 100% 100%, rgba(26, 53, 96, 0.4), transparent 55%),
-    linear-gradient(160deg, #10131a 0%, #0c0d10 55%, #121722 100%);
+    radial-gradient(70% 60% at 100% 100%, rgba(59, 59, 63, 0.4), transparent 55%),
+    linear-gradient(160deg, #141416 0%, #0c0d10 55%, #19191b 100%);
 }
 
 .page-case-imc .cs-band-ink {
   background:
-    radial-gradient(90% 70% at 8% 0%, rgba(183, 214, 230, 0.16), transparent 50%),
-    radial-gradient(70% 60% at 100% 100%, rgba(10, 85, 112, 0.42), transparent 55%),
-    linear-gradient(160deg, #08141c 0%, #0c1a24 52%, #102838 100%);
+    radial-gradient(90% 70% at 8% 0%, rgba(205, 205, 208, 0.16), transparent 50%),
+    radial-gradient(70% 60% at 100% 100%, rgba(59, 59, 63, 0.42), transparent 55%),
+    linear-gradient(160deg, #111113 0%, #171719 52%, #232325 100%);
 }
 
 .page-case-imc .sol-close {
   background:
-    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(10, 85, 112, 0.1), transparent 55%),
-    linear-gradient(180deg, #f0f6fa 0%, #e4eff5 100%);
+    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(59, 59, 63, 0.1), transparent 55%),
+    linear-gradient(180deg, #f5f5f5 0%, #ececed 100%);
 }
 
 .page-case-re .sol-close {
@@ -315,8 +315,8 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 
 .page-case-imc .cs-band-clinical {
   background:
-    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(10, 85, 112, 0.06), transparent 55%),
-    linear-gradient(180deg, #f7fbfd 0%, #eef5f8 100%);
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(59, 59, 63, 0.06), transparent 55%),
+    linear-gradient(180deg, #fafafa 0%, #f3f3f3 100%);
 }
 
 .page-case-study .cs-xsell {
@@ -328,7 +328,7 @@ body.lang-ar .page-hub--prop .lp-legacy--prop .lp-legacy-inner {
 .page-case-re .cs-proof-rail {
   background:
     radial-gradient(90% 70% at 10% 0%, rgba(184, 150, 80, 0.14), transparent 50%),
-    linear-gradient(160deg, #10131a 0%, #161820 100%);
+    linear-gradient(160deg, #141416 0%, #1a1a1c 100%);
 }
 
 /* Photo wash stays soft over sector washes */
@@ -693,7 +693,7 @@ body.lang-ar .page-hub--prop .level-card--rich .med-gets-label {
 .page-hub--launch .lp-legacy--prop {
   background:
     radial-gradient(120% 80% at 0% 0%, rgba(184, 150, 80, 0.08), transparent 55%),
-    radial-gradient(90% 70% at 100% 100%, rgba(10, 85, 112, 0.06), transparent 50%),
+    radial-gradient(90% 70% at 100% 100%, rgba(59, 59, 63, 0.06), transparent 50%),
     linear-gradient(180deg, #f7f7f7 0%, #eeeeed 100%);
   color: var(--ink);
   border-block: 1px solid rgba(21, 21, 19, 0.08);
@@ -734,7 +734,7 @@ body.lang-ar .page-hub--prop .level-card--rich .med-gets-label {
 
 .page-hub--launch .launch-system {
   background:
-    radial-gradient(ellipse 60% 45% at 0% 20%, rgba(10, 85, 112, 0.05), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 0% 20%, rgba(59, 59, 63, 0.05), transparent 50%),
     linear-gradient(180deg, #f5f4f3 0%, #f8f8f8 100%);
 }
 
@@ -830,7 +830,7 @@ body.lang-ar .page-hub--prop .level-card--rich .med-gets-label {
 .page-hub--launch .launch-work {
   padding: clamp(2.75rem, 5.5vw, 4.5rem) 0;
   background:
-    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(26, 53, 96, 0.05), transparent 55%),
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(59, 59, 63, 0.05), transparent 55%),
     linear-gradient(180deg, #f8f8f8 0%, #f0efee 100%);
 }
 
