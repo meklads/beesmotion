@@ -2,223 +2,374 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0c0d10">
-<title>Property Content Engine | Bees Motion</title>
-<meta name="description" content="Turn your property photos, renders and plans into Reels, landing pages and campaign content. AI-assisted production, human-directed. By Bees Motion.">
+<meta name="theme-color" content="#0a0a0b">
+<title>Property Content Engine: One Property, Eight Stories | Bees Motion</title>
+<meta name="description" content="We turn your property photos, renders and plans into reels built on eight selling angles, plus campaign-ready content, with no new shoot. Bees Motion.">
 <link rel="canonical" href="https://beesmotion.com/lp/property-content-engine-en.html">
 <link rel="alternate" hreflang="ar" href="https://beesmotion.com/lp/property-content-engine.html">
 <link rel="alternate" hreflang="en" href="https://beesmotion.com/lp/property-content-engine-en.html">
 <link rel="alternate" hreflang="x-default" href="https://beesmotion.com/lp/property-content-engine-en.html">
 <link rel="icon" href="/assets/img/bees-motion-favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/img/lp/wahat-render.webp">
 <style>
-:root{--ink:#0c0d10;--ink2:#16181d;--gold:#b89650;--gold-d:#8a7039;--cream:#f5f4f3;--paper:#fff;--muted:#4a4a4a;--line:rgba(12,13,16,.12);--r:14px;--gut:clamp(1.25rem,4vw,3rem);--max:72rem}
-*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
-body{font-family:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;color:#1a1a1a;background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:0}
-html[lang=ar] body{font-family:"Tajawal",sans-serif;line-height:1.85}
-img,video{max-width:100%;display:block}a{color:inherit}
-.skip{position:absolute;inset-inline-start:-999px;top:0;background:var(--gold);color:var(--ink);padding:.6rem 1rem;z-index:100}.skip:focus{inset-inline-start:0}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+:root{--ink:#0a0a0b;--graph:#1c1c1f;--graph2:#26262a;--fog:#ececee;--g2:#e3e3e6;--g5:#8d8d94;--g7:#5a5a61;--gold:#b8955a;--gold-l:#c9a96d;--gold-soft:rgba(184,149,90,.38);--paper:#fff;--r:20px;--gut:clamp(1.25rem,4vw,2.5rem);--max:78rem;
+--fd:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;--fa:"Tajawal","IBM Plex Sans Arabic",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--fd);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang=ar] body{font-family:var(--fa);line-height:1.85}
+img{max-width:100%;height:auto;display:block}a{color:inherit}button{font:inherit;color:inherit}
+.skip{position:absolute;inset-inline-start:-999px;top:.5rem;background:var(--gold);color:var(--ink);padding:.6rem 1rem;border-radius:8px;z-index:200}.skip:focus{inset-inline-start:.5rem}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
-h1,h2,h3{line-height:1.2;color:var(--ink);font-weight:700}
-h2{font-size:clamp(1.6rem,3.2vw,2.3rem);margin-bottom:1.75rem;max-width:30ch}
-section{padding-block:clamp(3.5rem,8vw,6rem)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3rem;padding:.7rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--gold);font-size:1rem;cursor:pointer;font-family:inherit}
-.btn-gold{background:var(--gold);color:var(--ink)}.btn-gold:hover{background:#c8af7a}
-.btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}.btn-line:hover{border-color:#fff}
-/* header + hero */
-.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--ink);color:#fff;padding-block:0 clamp(4rem,10vw,7rem)}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.5}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(12,13,16,.55),rgba(12,13,16,.9))}
-.top{display:flex;align-items:center;justify-content:space-between;padding-block:1.1rem}
-.top img{height:44px;width:auto}
-.lang{display:flex;gap:.25rem;font-size:.9rem;font-weight:600}
-.lang a,.lang span{padding:.3rem .65rem;border-radius:999px;text-decoration:none;color:#fff;opacity:.75}.lang span{background:rgba(255,255,255,.14);opacity:1}
-.hero-grid{padding-top:clamp(2.5rem,8vw,6rem)}
-.hero h1{color:#fff;font-size:clamp(2rem,5.2vw,3.5rem);max-width:18ch;margin-bottom:1rem}
-html[lang=ar] .hero h1{max-width:17ch;line-height:1.35}
-.hero .sub{color:#d9d6d0;font-size:1.15rem;max-width:36ch;margin-bottom:1.75rem}
-.ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
-.reply{color:var(--gold);font-weight:600;font-size:.95rem}
-
+section{padding-block:clamp(4.5rem,9vw,7.5rem)}
+.k{display:inline-flex;align-items:center;gap:.75rem;font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g7);margin-bottom:1.2rem}
+html[lang=ar] .k{letter-spacing:0;font-size:.95rem;font-weight:500}
+.k::before{content:"";width:1.8rem;height:1px;background:var(--gold);flex:none}
+.dark .k{color:rgba(255,255,255,.62)}
+h1,h2,h3{font-family:var(--fd);color:inherit}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3{font-family:var(--fa)}
+h2{font-size:clamp(2rem,4.2vw,3.3rem);font-weight:300;line-height:1.1;letter-spacing:-.035em;max-width:22ch;margin-bottom:1rem}
+html[lang=ar] h2{font-weight:500;letter-spacing:0;line-height:1.35}
+h3{font-size:1.18rem;font-weight:600;line-height:1.35;letter-spacing:-.01em}
+html[lang=ar] h3{font-weight:700;letter-spacing:0}
+.lead{font-size:clamp(1.02rem,1.4vw,1.15rem);color:var(--g7);max-width:40rem}
+.dark{background:var(--ink);color:#fff}.dark .lead{color:rgba(255,255,255,.66)}
+.fog{background:var(--fog)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:0 1.8rem;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+html[lang=ar] .btn{font-weight:700}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}.btn-gold:hover{background:var(--gold-l);border-color:var(--gold-l)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:var(--graph2)}
+.btn .ic{width:1.25rem;height:1.25rem}
+.ic{width:1.5rem;height:1.5rem;flex:none}
+/* header */
+.hdr{position:absolute;inset-inline:0;top:0;z-index:20}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:84px}
+.hdr .logo img{height:40px;width:auto}
+.hdr-r{display:flex;align-items:center;gap:.75rem}
+.lang{display:flex;border:1px solid rgba(255,255,255,.28);border-radius:999px;overflow:hidden;font-size:.8rem;font-weight:600;font-family:var(--fd)}
+.lang a,.lang span{padding:.42rem .8rem;text-decoration:none;color:rgba(255,255,255,.75)}.lang span{background:#fff;color:var(--ink)}
+.hdr .btn{min-height:2.6rem;padding:0 1.2rem;font-size:.9rem}
+/* hero */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:center;color:#fff;background:var(--ink);overflow:hidden;padding-block:8.5rem 4.5rem}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,11,.96) 0%,rgba(10,10,11,.82) 45%,rgba(10,10,11,.45) 100%),linear-gradient(0deg,rgba(10,10,11,.9) 0%,rgba(10,10,11,0) 40%)}
+html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(10,10,11,.96) 0%,rgba(10,10,11,.82) 45%,rgba(10,10,11,.45) 100%),linear-gradient(0deg,rgba(10,10,11,.9) 0%,rgba(10,10,11,0) 40%)}
+.hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.9rem);font-weight:300;line-height:1.04;letter-spacing:-.045em;margin-bottom:1.5rem}
+html[lang=ar] .hero h1{font-weight:500;letter-spacing:0;line-height:1.28;font-size:clamp(2.3rem,5vw,4.3rem)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{font-size:clamp(1.05rem,1.45vw,1.2rem);color:rgba(255,255,255,.74);max-width:36rem;margin-bottom:2.2rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.micro{margin-top:1.1rem;font-size:.9rem;color:rgba(255,255,255,.55)}
+.offer{background:rgba(28,28,31,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:clamp(1.5rem,3vw,2.2rem);box-shadow:0 30px 80px rgba(0,0,0,.45);position:relative}
+.offer::before{content:"";position:absolute;inset-inline:2rem;top:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.offer h2{font-size:1.05rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;max-width:none}
+html[lang=ar] .offer h2{letter-spacing:0;font-size:1.15rem;font-weight:700}
+.offer ul{list-style:none;display:grid;gap:.95rem}
+.offer li{display:flex;gap:.8rem;align-items:flex-start;color:rgba(255,255,255,.9)}
+.tick{width:1.6rem;height:1.6rem;border-radius:50%;background:rgba(184,149,90,.16);color:var(--gold);display:grid;place-items:center;flex:none;margin-top:.1rem}
+.tick .ic{width:1rem;height:1rem}
+.plats{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.1)}
+.plats span{font-family:var(--fd);font-size:.78rem;font-weight:500;padding:.32rem .75rem;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.75)}
 /* proof */
-.proof{background:var(--cream);padding-block:2.25rem}
-.proof .row{display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;align-items:center;justify-content:space-between}
-.nums{display:flex;gap:2rem;flex-wrap:wrap}.nums b{display:block;font-size:1.6rem;color:var(--ink)}.nums span{font-size:.9rem;color:var(--muted)}
-.logos{display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center}.logos img{height:42px;width:auto;max-width:110px;object-fit:contain;opacity:.9}
-.proof-h{font-size:.95rem;color:var(--muted);margin-bottom:.9rem;font-weight:600}
-/* problems */
-.cols3{display:grid;gap:1.75rem;grid-template-columns:1fr}
-@media(min-width:48rem){.cols3{grid-template-columns:repeat(3,1fr)}}
-.cols3 h3{font-size:1.15rem;margin-bottom:.5rem}.cols3 p{color:var(--muted)}
-.cols3>div{border-top:3px solid var(--gold);padding-top:1rem}
-/* get */
-.get{background:var(--cream)}
-.get ul{list-style:none;padding:0;display:grid;gap:.75rem;max-width:44rem}
-.get li{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.25rem;position:relative;padding-inline-start:3rem}
-.get li::before{content:"";position:absolute;inset-inline-start:1.1rem;top:1.35rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--gold)}
-/* works: uncropped columns */
-.works .note{color:var(--muted);margin:-1rem 0 1.5rem;font-size:.95rem}
-.gal{columns:2;column-gap:.9rem}
-@media(min-width:48rem){.gal{columns:3}}
-.gal button{display:block;width:100%;margin:0 0 .9rem;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;border-radius:12px;overflow:hidden}
-.gal img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
-dialog{border:0;background:transparent;max-width:96vw;max-height:96vh;padding:0}
-dialog::backdrop{background:rgba(0,0,0,.88)}
-dialog img{max-width:94vw;max-height:88vh;width:auto;height:auto;margin:auto;border-radius:10px}
-dialog .x{position:fixed;top:1rem;inset-inline-end:1rem;background:#fff;border:0;border-radius:999px;min-height:2.75rem;padding:0 1.1rem;font-weight:700;cursor:pointer;font-family:inherit}
-.films{display:grid;gap:1.25rem;grid-template-columns:1fr}
-@media(min-width:48rem){.films{grid-template-columns:1fr 1fr}}
-.film{margin:0}.film button,.film iframe{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;background:#000;border-radius:12px;overflow:hidden;cursor:pointer}
-.film img{width:100%;height:100%;object-fit:contain}
-.film .pl{position:absolute;inset:0;margin:auto;width:4.2rem;height:4.2rem;border-radius:50%;background:rgba(12,13,16,.8);border:2px solid var(--gold)}
-.film .pl::after{content:"";position:absolute;inset:0;margin:auto;border-style:solid;border-width:.7rem 0 .7rem 1.1rem;border-color:transparent transparent transparent var(--gold);width:0;height:0;left:.3rem}
-.film figcaption{margin-top:.6rem;font-weight:600;color:var(--ink)}
+.proof{padding-block:2.2rem;border-bottom:1px solid var(--g2)}
+.proof .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.proof-l{font-size:.85rem;color:var(--g5);margin-bottom:.9rem}
+.logos{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem}
+.logos img{height:40px;width:auto;max-width:104px;object-fit:contain;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
+.logos img:hover{filter:none;opacity:1}
+.stat{display:flex;align-items:center;gap:1rem;padding-inline-start:2rem;border-inline-start:1px solid var(--g2)}
+.stat b{font-family:var(--fd);font-size:3rem;font-weight:300;letter-spacing:-.04em;color:var(--gold);line-height:1}
+.stat span{font-size:.95rem;color:var(--g7);max-width:12rem;line-height:1.4}
+/* problem */
+.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+.prob{background:var(--graph);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:2rem}
+.prob .n{font-family:var(--fd);font-size:.85rem;font-weight:600;color:var(--gold);letter-spacing:.1em;display:block;margin-bottom:2.5rem}
+.prob h3{margin-bottom:.6rem}.prob p{color:rgba(255,255,255,.62)}
+.ans{margin-top:3rem;padding:1.6rem 2rem;border-radius:var(--r);border:1px solid var(--gold-soft);background:linear-gradient(90deg,rgba(184,149,90,.12),rgba(184,149,90,0));font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(255,255,255,.85)}
+html[dir=rtl] .ans{background:linear-gradient(270deg,rgba(184,149,90,.12),rgba(184,149,90,0))}
+.ans b{color:var(--gold);font-weight:600}
+/* deliverables */
+.dels{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);border-radius:var(--r);overflow:hidden;margin-top:3rem}
+.del{background:#fff;padding:2.2rem 2rem;transition:background .3s}
+.del:hover{background:#fbfaf8}
+.del .ic{width:2.1rem;height:2.1rem;color:var(--gold);margin-bottom:1.4rem}
+.del h3{margin-bottom:.5rem}.del p{color:var(--g7)}
+/* work */
+.whead{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.note{font-size:.9rem;color:var(--g5)}
+.films{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.5rem}
+.film{margin:0}
+.film button,.film iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:var(--r);overflow:hidden;background:var(--ink);cursor:pointer;position:relative;padding:0}
+.film button img{width:100%;height:100%;object-fit:contain;transition:transform .5s,opacity .3s;opacity:.88}
+.film button:hover img{transform:scale(1.02);opacity:1}
+.pl{position:absolute;inset:0;margin:auto;width:4.4rem;height:4.4rem;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;box-shadow:0 10px 40px rgba(0,0,0,.4);transition:transform .3s}
+.film button:hover .pl{transform:scale(1.08)}
+.pl .ic{width:1.8rem;height:1.8rem}
+.film figcaption{margin-top:.8rem;font-size:.95rem;color:var(--g7)}
+.gal{columns:3 18rem;column-gap:1.25rem;margin-top:2.5rem}
+.gal button{display:block;width:100%;margin-bottom:1.25rem;border:0;padding:0;background:none;border-radius:var(--r);overflow:hidden;cursor:zoom-in;break-inside:avoid}
+.gal img{width:100%;height:auto;transition:transform .5s}
+.gal button:hover img{transform:scale(1.03)}
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1400px);max-height:92vh;margin:auto}
+dialog::backdrop{background:rgba(10,10,11,.88)}
+dialog img{max-width:min(94vw,1400px);max-height:86vh;width:auto;height:auto;border-radius:12px}
+dialog .x{display:block;margin:0 0 .6rem auto;background:#fff;color:var(--ink);border:0;border-radius:999px;padding:.45rem 1.1rem;font-weight:600;cursor:pointer}
+html[dir=rtl] dialog .x{margin:0 auto .6rem 0}
 /* steps */
-.steps{counter-reset:s;display:grid;gap:1.25rem;grid-template-columns:1fr;list-style:none;padding:0}
-@media(min-width:48rem){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:64rem){.steps{grid-template-columns:repeat(4,1fr)}}
-.steps li{counter-increment:s;background:var(--cream);border-radius:var(--r);padding:1.5rem}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--ink);color:var(--gold);font-weight:700;margin-bottom:.9rem}
-.steps h3{font-size:1.1rem;margin-bottom:.4rem}.steps p{color:var(--muted)}
-/* dark form */
-.formsec{background:var(--ink);color:#fff}
-.formsec h2{color:#fff}
-.fgrid{display:grid;gap:2.5rem;grid-template-columns:1fr}
-@media(min-width:56rem){.fgrid{grid-template-columns:1.2fr .8fr}}
-form{display:grid;gap:1rem}
-.two{display:grid;gap:1rem;grid-template-columns:1fr}
-@media(min-width:40rem){.two{grid-template-columns:1fr 1fr}}
-label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
-input,select{min-height:3rem;border-radius:10px;border:1px solid rgba(255,255,255,.28);background:#16181d;color:#fff;padding:.6rem .9rem;font:inherit}
-input::placeholder{color:#8d8a84}
-.chk{display:flex;gap:.7rem;align-items:flex-start;font-weight:400}.chk input{min-height:0;width:1.2rem;height:1.2rem;margin-top:.3rem;accent-color:var(--gold)}
-.hp{position:absolute;inset-inline-start:-9999px;opacity:0;height:0;overflow:hidden}
-.msg{min-height:1.5rem;font-weight:600}.msg.err{color:#ffb4a8}
-.after ol{padding-inline-start:1.2rem;display:grid;gap:.7rem;color:#d9d6d0}
-.after h3{color:#fff;margin-bottom:1rem}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;counter-reset:s}
+.steps li{position:relative;padding-top:2.6rem;counter-increment:s}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;top:0;inset-inline-start:0;font-family:var(--fd);font-weight:600;font-size:.85rem;color:var(--gold);background:#fff;padding-inline-end:.8rem;z-index:1}
+.steps li::after{content:"";position:absolute;top:.62rem;inset-inline:0;height:1px;background:var(--g2)}
+.steps h3{font-size:1.35rem;margin-bottom:.5rem}
+.steps p{color:var(--g7)}
+/* packages */
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;align-items:stretch}
+.pack{background:var(--graph);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:2.2rem 2rem;display:flex;flex-direction:column;position:relative}
+.pack.hot{background:linear-gradient(180deg,#2a251c 0%,var(--graph) 60%);border-color:var(--gold);box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.badge{position:absolute;top:-.85rem;inset-inline-start:2rem;background:var(--gold);color:var(--ink);font-size:.78rem;font-weight:700;padding:.3rem .9rem;border-radius:999px}
+.pack h3{font-size:1.7rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.35rem}
+html[lang=ar] .pack h3{font-weight:700}
+.pack .for{color:rgba(255,255,255,.6);margin-bottom:1.6rem;min-height:3.3em}
+.pack ul{list-style:none;display:grid;gap:.75rem;margin-bottom:2rem;flex:1}
+.pack li{display:flex;gap:.7rem;align-items:flex-start;color:rgba(255,255,255,.88)}
+.pack li .ic{width:1.15rem;height:1.15rem;color:var(--gold);margin-top:.3rem}
+.pack li:first-child.inh{color:var(--gold)}
+.pack .btn{width:100%}
+.pack:not(.hot) .btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.pack:not(.hot) .btn:hover{border-color:var(--gold);color:var(--gold)}
+.knote{margin-top:2rem;color:rgba(255,255,255,.55);font-size:.95rem;max-width:52rem}
+/* why */
+.whys{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3rem}
+.why{border-top:1px solid var(--ink);padding-top:1.5rem}
+.why h3{font-size:1.3rem;margin-bottom:.6rem}.why p{color:var(--g7)}
+.fors{margin-top:3.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
+.fors b{font-weight:600;margin-inline-end:.6rem;color:var(--g7)}
+.fors span{padding:.55rem 1.1rem;border-radius:999px;background:var(--fog);font-size:.95rem}
+/* form */
+.fgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:clamp(1.5rem,3.5vw,2.5rem);margin-top:2rem;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:block;font-size:.92rem;font-weight:600;margin-bottom:1rem;color:var(--graph2)}
+label i{font-style:normal;color:var(--gold)}
+input,select,textarea{display:block;width:100%;margin-top:.4rem;font:inherit;font-weight:400;font-size:1rem;color:var(--ink);background:#fafafa;border:1px solid var(--g2);border-radius:12px;padding:.8rem 1rem;min-height:3.1rem;transition:border-color .2s,background .2s}
+textarea{min-height:5.5rem;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);background:#fff}
+.hp{position:absolute;inset-inline-start:-9999px;width:1px;height:1px;overflow:hidden}
+.chk{display:flex;gap:.7rem;align-items:flex-start;font-weight:400;color:var(--g7)}
+.chk input{width:1.15rem;height:1.15rem;min-height:0;margin-top:.3rem;accent-color:var(--gold);flex:none}
+form .btn{width:100%;margin-top:.4rem}
+.alt{text-align:center;margin-top:1rem;font-size:.95rem}.alt a{color:var(--g7)}
+.msg{min-height:1.4em;margin-top:.8rem;font-size:.92rem}.msg.err{color:#b3261e}
+.after{background:var(--graph);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:2rem;margin-top:2rem}
+.after h3{margin-bottom:1.3rem}
+.after ol{list-style:none;display:grid;gap:1.2rem;counter-reset:a}
+.after li{display:flex;gap:1rem;color:rgba(255,255,255,.8);counter-increment:a}
+.after li::before{content:counter(a);flex:none;width:2rem;height:2rem;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--fd);font-size:.85rem;font-weight:600}
 /* faq */
-.faq details{border-bottom:1px solid var(--line);padding:1.1rem 0;max-width:46rem}
-.faq summary{cursor:pointer;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:1rem}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--gold-d);font-size:1.4rem;line-height:1}
-.faq details[open] summary::after{content:"−"}
-.faq p{margin-top:.7rem;color:var(--muted)}
-/* final + footer */
-.final{background:var(--cream);text-align:center}
-.final h2{margin-inline:auto}.final p{color:var(--muted);margin:-.75rem auto 1.5rem;max-width:40ch}
-.final .btn-line{color:var(--ink);border-color:var(--ink)}
-footer{background:var(--ink);color:#bdb9b1;padding-block:2rem 6rem;font-size:.95rem}
-footer p+p{margin-top:.3rem}
-.wafloat{position:fixed;inset-inline-end:1rem;bottom:5rem;z-index:40;width:3.4rem;height:3.4rem;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3)}
-.wafloat svg{width:1.8rem;height:1.8rem;fill:#fff}
-.bar{position:fixed;inset-inline:0;bottom:0;z-index:39;display:flex;gap:.5rem;padding:.6rem var(--gut);background:rgba(12,13,16,.96);border-top:1px solid rgba(255,255,255,.12)}
-.bar .btn{flex:1;min-height:2.9rem}
-@media(min-width:48rem){.bar{display:none}.wafloat{bottom:1.5rem}footer{padding-bottom:2rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.faqg{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+details{border-bottom:1px solid var(--g2)}
+summary{list-style:none;cursor:pointer;padding:1.4rem 0;font-weight:600;font-size:1.08rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--fd);font-weight:300;font-size:1.6rem;color:var(--gold);line-height:1;transition:transform .3s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding-bottom:1.4rem;color:var(--g7);max-width:44rem}
+/* final */
+.final{text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;width:60rem;height:60rem;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(184,149,90,.18),rgba(184,149,90,0) 60%);pointer-events:none}
+.final .wrap{position:relative}
+.final h2{margin-inline:auto;max-width:20ch}
+.final .lead{margin:0 auto 2.2rem}
+.final .ctas{justify-content:center}
+footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:.9rem;padding-block:2rem 6rem;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.wafloat{position:fixed;inset-inline-end:1.25rem;bottom:5.5rem;z-index:40;width:3.6rem;height:3.6rem;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.wafloat .ic{width:1.9rem;height:1.9rem}
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:39;display:grid;grid-template-columns:1.4fr 1fr;gap:.6rem;padding:.7rem var(--gut) calc(.7rem + env(safe-area-inset-bottom));background:rgba(10,10,11,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);transition:transform .35s}
+.bar.on{transform:none}
+.bar .btn{min-height:3rem;padding:0 1rem;font-size:.95rem}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media(max-width:62rem){
+ .hero .wrap,.fgrid,.faqg{grid-template-columns:1fr}
+ .hero{min-height:0}
+ .probs,.dels,.packs,.whys{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr;row-gap:2.5rem}
+ .films{grid-template-columns:1fr}
+ .pack .for{min-height:0}
+ .packs{gap:2rem}
+}
+@media(max-width:40rem){
+ .hdr .btn{display:none}
+ .two{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr}
+ .stat{padding-inline-start:0;border:0}
+ .ctas .btn{width:100%}
+ .hero{padding-top:7rem}
+ .logos{gap:.9rem 1.4rem}.logos img{height:32px}
+}
+@media(min-width:62.01rem){.bar{display:none}.wafloat{bottom:1.5rem}footer{padding-bottom:2rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}*{transition:none!important}}
 
-.hero.dev{background:radial-gradient(60rem 30rem at 85% 30%,rgba(184,150,80,.22),transparent 60%),var(--ink)}
-.hero.dev .hero-grid{display:grid;gap:2.5rem;align-items:center;grid-template-columns:1fr}
-@media(min-width:60rem){.hero.dev .hero-grid{grid-template-columns:1fr 1.15fr}}
-.hero.dev h1{font-size:clamp(1.9rem,3.8vw,3rem);max-width:22ch}
-.stack{position:relative;padding-bottom:2.5rem}
-.fr{border-radius:12px;overflow:hidden;background:#1b1d22;border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 60px rgba(0,0,0,.45)}
-.fr::before{content:"";display:block;height:22px;background:radial-gradient(circle at 12px 11px,#ff5f57 4px,transparent 5px),radial-gradient(circle at 28px 11px,#febc2e 4px,transparent 5px),radial-gradient(circle at 44px 11px,#28c840 4px,transparent 5px),#262930}
-.fr img{width:100%;height:auto}
-.stack .fr+.fr{position:absolute;width:52%;inset-inline-end:-1rem;bottom:0}
-.gal.sites{columns:1}
-@media(min-width:40rem){.gal.sites{columns:2}}
-.gal.sites button{background:#1b1d22;border:1px solid var(--line);box-shadow:0 10px 30px rgba(12,13,16,.12)}
-.gal.sites button::before{content:"";display:block;height:22px;background:radial-gradient(circle at 12px 11px,#ff5f57 4px,transparent 5px),radial-gradient(circle at 28px 11px,#febc2e 4px,transparent 5px),radial-gradient(circle at 44px 11px,#28c840 4px,transparent 5px),#262930}
-.gal.sites img{border:0;border-radius:0}
-.get ul.two{max-width:60rem}@media(min-width:48rem){.get ul.two{grid-template-columns:1fr 1fr}}
-.cols3 b{display:block;font-size:.85rem;color:var(--gold-d);margin-top:.5rem}
-input:user-invalid,select:user-invalid{border-color:#ffb4a8}
+.io{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:1.5rem;align-items:stretch;margin-top:3rem}
+.io-box{border:1px solid var(--g2);border-radius:24px;padding:2rem}
+.io-box.out{background:var(--ink);color:#fff;border-color:var(--ink)}
+.io-box h3{font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--g7);margin-bottom:1.4rem}
+html[lang=ar] .io-box h3{letter-spacing:0;font-size:1rem}
+.io-box.out h3{color:var(--gold)}
+.io-box ul{list-style:none;display:grid;gap:.85rem}
+.io-box li{display:flex;gap:.75rem;align-items:flex-start}
+.io-box li .ic{width:1.15rem;height:1.15rem;color:var(--gold);margin-top:.32rem}
+.io-src li::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:var(--g5);flex:none;margin-top:.62rem}
+.io-box .tip{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--g2);font-size:.95rem;color:var(--g7)}
+.io-arrow{display:grid;place-items:center}
+.io-arrow span{width:3.6rem;height:3.6rem;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center}
+html[dir=rtl] .io-arrow .ic{transform:scaleX(-1)}
+.angles{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;counter-reset:ang}
+.ang{background:#fff;border-radius:var(--r);padding:1.8rem 1.6rem;counter-increment:ang;position:relative;transition:transform .3s,box-shadow .3s}
+.ang:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(10,10,11,.08)}
+.ang::before{content:counter(ang,decimal-leading-zero);display:block;font-family:var(--fd);font-size:2.4rem;font-weight:300;letter-spacing:-.04em;color:var(--gold);line-height:1;margin-bottom:1.4rem}
+.ang h3{margin-bottom:.45rem}.ang p{color:var(--g7);font-size:.97rem}
+.honest{margin-top:2.5rem;display:flex;gap:1.4rem;align-items:flex-start;background:var(--ink);color:#fff;border-radius:24px;padding:2rem 2.2rem}
+.honest .ic{width:2.6rem;height:2.6rem;color:var(--gold)}
+.honest h3{margin-bottom:.4rem}.honest p{color:rgba(255,255,255,.7);max-width:52rem}
+.fog .steps li::before{background:var(--fog)}
+@media(max-width:62rem){.io{grid-template-columns:1fr}.io-arrow .ic{transform:rotate(90deg)!important}.angles{grid-template-columns:1fr 1fr}}
+@media(max-width:40rem){.angles{grid-template-columns:1fr}.honest{flex-direction:column;padding:1.6rem}}
 </style>
 <script src="/assets/js/site-config.js"></script>
 <script>(function(){var id=(window.BM_SITE||{}).ga4MeasurementId;if(!id)return;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+id;document.head.appendChild(s);gtag("js",new Date());gtag("config",id);})();</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="hero">
- <img class="hero-bg" src="/assets/img/lp/wahat-render.webp" width="1600" height="900" alt="" fetchpriority="high" decoding="async">
- <div class="wrap">
-  <div class="top">
-   <a href="/" aria-label="Bees Motion"><img src="/assets/img/brands/bees-motion-logo-on-dark.png" alt="Bees Motion logo" width="94" height="44"></a>
-   <nav class="lang" aria-label="Language"><span aria-current="true">EN</span><a href="property-content-engine.html" data-keepqs hreflang="ar" lang="ar">AR</a></nav>
-  </div>
-  <div class="hero-grid">
-   <div>
-    <h1>One property, many stories, ready for posts and campaigns</h1>
-    <p class="sub">We turn the photos, renders and plans you already have into Reels, landing pages and campaign content. AI-assisted production, human-directed.</p>
-    <div class="ctas"><a class="btn btn-gold" href="/book/" data-book>Book a session</a><a class="btn btn-line" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a></div>
-    <p class="reply">We reply within one business day</p>
-   </div>
-   
-  </div>
- </div>
-</header>
+<header class="hdr"><div class="wrap">
+ <a class="logo" href="/"><img src="/assets/img/brands/bees-motion-logo-on-dark.png" alt="Bees Motion logo" width="85" height="40"></a>
+ <div class="hdr-r"><nav class="lang" aria-label="Language"><span aria-current="true">EN</span><a href="property-content-engine.html" data-keepqs hreflang="ar" lang="ar">AR</a></nav>
+ <a class="btn btn-gold" href="#request" data-cta="header">Request a package</a></div>
+</div></header>
 <main id="main">
-<div class="proof"><div class="wrap row">
- <div><p class="proof-h">Brands featured on our site</p><div class="logos"><img src="/assets/img/clients/al-owla.png" alt="Al Owla" loading="lazy"><img src="/assets/img/clients/aqarat.png" alt="Aqarat" loading="lazy"><img src="/assets/img/clients/imc-150x150.png" alt="International Medical Center" loading="lazy"><img src="/assets/img/clients/makyon.png" alt="Makyon" loading="lazy"><img src="/assets/img/clients/mwl-logo-vertical.png" alt="MWL" loading="lazy"><img src="/assets/img/clients/rafal.png" alt="Rafal" loading="lazy"><img src="/assets/img/clients/toyota.png" alt="Toyota" loading="lazy"></div></div>
- <div class="nums"><div><b dir="auto">8</b><span dir="auto">story angles from one property</span></div><div><b dir="auto">9:16</b><span dir="auto">vertical Reels made for the platforms</span></div><div><b dir="auto">15+</b><span dir="auto">years of production in Saudi Arabia and the Gulf</span></div></div>
+<section class="hero">
+ <img class="hero-bg" src="/assets/img/lp/wahat-render.webp" alt="" fetchpriority="high" decoding="async">
+ <div class="wrap">
+  <div>
+   <p class="k">Property Content Engine</p>
+   <h1>One property, <em>eight stories that sell it</em></h1>
+   <p class="sub">We turn your property photos, renders and plans into reels built on eight selling angles, short cuts ready for ads, and a landing page depending on your package. AI-assisted production, directed and checked by a human team.</p>
+   <div class="ctas"><a class="btn btn-gold" href="#request" data-cta="hero">Request your package</a><a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.7 21.3l4.6-1.2A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.6 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.6.8c-.1.2-.2.3 0 .6.5.9 1.3 1.8 2.4 2.4.3.2.4.1.6 0l.8-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.3.4.5 0 .7-.4 1.6-1.1 1.9-.9.4-2 .3-3.6-.4a9.4 9.4 0 0 1-4.3-4.2c-.6-1.2-.6-2.4-.1-3.6z"/></svg>Talk to us on WhatsApp</a></div>
+   <p class="micro">No new shoot needed · We reply within one working day</p>
+  </div>
+  <aside class="offer"><h2>From one project file you get</h2><ul><li><span class="tick"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Vertical reels on eight selling angles</span></li><li><span class="tick"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Short cuts ready for paid ads</span></li><li><span class="tick"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ad and post copy for every angle</span></li><li><span class="tick"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Sizes ready for every platform</span></li><li><span class="tick"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>A content library you reuse every campaign</span></li></ul>
+   <div class="plats" dir="ltr"><span>Instagram</span><span>TikTok</span><span>Snapchat</span><span>YouTube</span><span>Meta Ads</span></div></aside>
+ </div>
+</section>
+<div class="proof"><div class="wrap">
+ <div><p class="proof-l">Organisations we have worked with</p><div class="logos"><img src="/assets/img/clients/al-owla.png" alt="Al Owla" loading="lazy" decoding="async"><img src="/assets/img/clients/aqarat.png" alt="Aqarat" loading="lazy" decoding="async"><img src="/assets/img/clients/imc-150x150.png" alt="International Medical Center" loading="lazy" decoding="async"><img src="/assets/img/clients/makyon.png" alt="Makyon" loading="lazy" decoding="async"><img src="/assets/img/clients/mwl-logo-vertical.png" alt="Muslim World League" loading="lazy" decoding="async"><img src="/assets/img/clients/rafal.png" alt="Rafal" loading="lazy" decoding="async"><img src="/assets/img/clients/toyota.png" alt="Toyota" loading="lazy" decoding="async"></div></div>
+ <div class="stat"><b dir="ltr">15+</b><span>years producing in Saudi Arabia and the Gulf</span></div>
 </div></div>
-<section><div class="wrap"><h2>What holds you back, and how we fix it</h2><div class="cols3"><div><h3>Your assets sit idle</h3><p><b>Our fix: </b>We turn photos, renders and plans into content that keeps working.</p></div><div><h3>One video cannot speak to every buyer</h3><p><b>Our fix: </b>We build several angles from one property: tour, lifestyle, location, investment.</p></div><div><h3>Production starts from zero with every ad</h3><p><b>Our fix: </b>We build several campaign-ready formats from the same material.</p></div></div></div></section>
-<section class="get"><div class="wrap"><h2>What you receive</h2><ul class="two"><li>Property tour angle</li><li>Lifestyle angle</li><li>Design and features angle</li><li>Location angle</li><li>Investment angle</li><li>Offer angle</li><li>Problem and solution angle</li><li>Direct call-to-action angle</li><li>[Number of Reels and formats in the pack]</li><li>[Delivery time]</li><li>[Number of revision rounds]</li></ul></div></section>
-<section class="works"><div class="wrap"><h2>Real estate and content we produced</h2><p class="note">Tap any piece to enlarge</p><div class="gal"><button type="button" data-full="/assets/img/thumbs/WoYMS7Xs7cY.jpg" aria-label="Bees Motion work"><img src="/assets/img/thumbs/WoYMS7Xs7cY.jpg" width="1080" height="1920" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/lp/wahat-render.webp" aria-label="Bees Motion work"><img src="/assets/img/lp/wahat-render.webp" width="1600" height="900" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/thumbs/e4ZuwoSHs_8.jpg" aria-label="Bees Motion work"><img src="/assets/img/thumbs/e4ZuwoSHs_8.jpg" width="1080" height="1920" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/mwl/makkah-charter-09.jpeg" aria-label="Bees Motion work"><img src="/assets/img/mwl/makkah-charter-09.jpeg" width="1600" height="1200" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/thumbs/x4Ya98nRnog.jpg" aria-label="Bees Motion work"><img src="/assets/img/thumbs/x4Ya98nRnog.jpg" width="1080" height="1920" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/lp/slide-2.webp" aria-label="Bees Motion work"><img src="/assets/img/lp/slide-2.webp" width="1672" height="941" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/mwl/makkah-charter-10.jpeg" aria-label="Bees Motion work"><img src="/assets/img/mwl/makkah-charter-10.jpeg" width="1600" height="1200" alt="Bees Motion work" loading="lazy" decoding="async"></button><button type="button" data-full="/assets/img/pages/cs-re-hero.jpg" aria-label="Bees Motion work"><img src="/assets/img/pages/cs-re-hero.jpg" width="1400" height="787" alt="Bees Motion work" loading="lazy" decoding="async"></button></div></div></section>
-<section><div class="wrap"><h2>Why Bees Motion</h2><div class="cols3"><div><h3>AI-assisted, human-directed</h3><p>We speed up production, and a creative team reviews angles, messages and quality.</p></div><div><h3>Built for marketing and selling property</h3><p>We work on how a property is shown and sold, not on generic content.</p></div><div><h3>We show the property as it is</h3><p>We do not invent rooms, views or features missing from your information, and conceptual visuals are labeled as such.</p></div></div></div></section>
-<section style="padding-top:0"><div class="wrap"><h2>How we work</h2><ol class="steps"><li><h3>Send what you have</h3><p>Photos, renders, plans, project information, existing video and brand guidelines.</p></li><li><h3>We turn it into content</h3><p>AI-assisted production with human creative direction, several angles from one property.</p></li><li><h3>Put it to work</h3><p>Publish, advertise and drive visits and enquiries, with your team or with us.</p></li></ol></div></section>
-<section class="formsec" id="request"><div class="wrap fgrid">
- <div>
-  <h2>Request your pack</h2><p style="color:#d9d6d0;margin:-1rem 0 1.5rem">Fill in the form and we will get in touch.</p>
+<section class="dark"><div class="wrap">
+ <p class="k">The problem</p><h2>You paid for the renders and photos, then shelved them</h2>
+ <div class="probs"><div class="prob rv"><span class="n">01</span><h3>The material exists but sits idle</h3><p>The budget went on renders and photography, then they appeared in one brochure and two posts and stopped.</p></div><div class="prob rv"><span class="n">02</span><h3>One message cannot convince every buyer</h3><p>Residents want a lifestyle, investors want returns, families want the location. One video loses the rest.</p></div><div class="prob rv"><span class="n">03</span><h3>Every campaign starts from zero</h3><p>Each new ad waits for new production, and you miss the market's timing and the buying season.</p></div></div>
+ <p class="ans rv">We build a full content library from your project file: <b>eight stories for eight reasons to buy</b>, ready whenever you need a new ad.</p>
+</div></section>
+<section><div class="wrap">
+ <p class="k">From your file to content</p><h2>You send what you have. We return it as content that works</h2>
+ <div class="io">
+  <div class="io-box io-src rv"><h3>What you send</h3><ul><li>Property photos</li><li>3D renders</li><li>Unit floor plans</li><li>Project details and offers</li><li>Existing video, if any</li><li>Project brand identity</li></ul><p class="tip">No renders yet? Our group produces 3D architectural visualisation from your plans.</p></div>
+  <div class="io-arrow" aria-hidden="true"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+  <div class="io-box out rv"><h3>What you receive</h3><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>9:16 reels for every selling angle</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Short cuts for ad campaigns</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Ad and post copy</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sizes and covers for every platform</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>A project landing page in the Project package</span></li></ul></div>
+ </div>
+</div></section>
+<section class="fog"><div class="wrap">
+ <p class="k">The eight angles</p><h2>Every buyer says yes for a different reason, so we speak to each reason</h2>
+ <div class="angles"><div class="ang rv"><h3>Property tour</h3><p>The buyer sees the spaces in order, as if walking through them.</p></div><div class="ang rv"><h3>Lifestyle</h3><p>They picture their day there: mornings, family, neighbours.</p></div><div class="ang rv"><h3>Design and features</h3><p>The finishes and details that set the property apart.</p></div><div class="ang rv"><h3>Location</h3><p>What surrounds it, and how close it is to the roads and services that matter.</p></div><div class="ang rv"><h3>Investment</h3><p>Why it is a sound financial decision, using the figures you give us.</p></div><div class="ang rv"><h3>The offer</h3><p>The payment plan, early booking or current offer, stated clearly.</p></div><div class="ang rv"><h3>Problem and solution</h3><p>It opens on a problem the buyer knows and ends with the property as the answer.</p></div><div class="ang rv"><h3>Direct call to action</h3><p>A short reel with one message: book your visit now.</p></div></div>
+ <div class="honest rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><h3>We show the property as it is</h3><p>We never invent rooms, views or features that are not in your file. Every fact in the content comes from your information, and conceptual scenes are labelled as conceptual.</p></div></div>
+</div></section>
+<section><div class="wrap">
+ <div class="whead"><div><p class="k">Real work</p><h2>Projects we have helped present</h2></div><p class="note">Tap any image to enlarge it</p></div>
+ <div class="gal"><button type="button" class="rv" data-full="/assets/img/lp/wahat-render.webp" aria-label="Residential project, architectural visualisation"><img src="/assets/img/lp/wahat-render.webp" width="1600" height="900" alt="Residential project, architectural visualisation" loading="lazy" decoding="async"></button><button type="button" class="rv" data-full="/assets/img/mwl/makkah-charter-11.jpeg" aria-label="Project model, Makkah Charter exhibition"><img src="/assets/img/mwl/makkah-charter-11.jpeg" width="1600" height="1200" alt="Project model, Makkah Charter exhibition" loading="lazy" decoding="async"></button><button type="button" class="rv" data-full="/assets/img/mwl/makkah-charter-09.jpeg" aria-label="Makkah Charter exhibition, Muslim World League"><img src="/assets/img/mwl/makkah-charter-09.jpeg" width="1600" height="1200" alt="Makkah Charter exhibition, Muslim World League" loading="lazy" decoding="async"></button><button type="button" class="rv" data-full="/assets/img/mwl/makkah-charter-12.jpeg" aria-label="Project model, Makkah Charter exhibition"><img src="/assets/img/mwl/makkah-charter-12.jpeg" width="1600" height="1200" alt="Project model, Makkah Charter exhibition" loading="lazy" decoding="async"></button><button type="button" class="rv" data-full="/assets/img/mwl/makkah-charter-10.jpeg" aria-label="Makkah Charter exhibition, Muslim World League"><img src="/assets/img/mwl/makkah-charter-10.jpeg" width="1600" height="1200" alt="Makkah Charter exhibition, Muslim World League" loading="lazy" decoding="async"></button><button type="button" class="rv" data-full="/assets/img/mwl/makkah-charter-03.jpeg" aria-label="Makkah Charter exhibition, Muslim World League"><img src="/assets/img/mwl/makkah-charter-03.jpeg" width="1600" height="900" alt="Makkah Charter exhibition, Muslim World League" loading="lazy" decoding="async"></button></div>
+</div></section>
+<section class="fog"><div class="wrap">
+ <p class="k">How we work</p><h2>From file to launch in four steps</h2>
+ <ol class="steps"><li class="rv"><h3>Send your file</h3><p>Photos, renders, plans and project details, in whatever format you have.</p></li><li class="rv"><h3>We set the angles</h3><p>We choose the selling angles and messages that fit your project and audience, and send them for approval.</p></li><li class="rv"><h3>We produce and check</h3><p>AI-assisted production, then our team checks every scene and every fact before delivery.</p></li><li class="rv"><h3>You launch</h3><p>Files ready to post and advertise, with your team or with us.</p></li></ol>
+</div></section>
+<section class="dark" id="packages"><div class="wrap">
+ <p class="k">Packages</p><h2>Three packages, based on what you are selling</h2><p class="lead">Packages differ in content volume, whether a landing page is included, and campaign management. We confirm the details with you before we start.</p>
+ <div class="packs"><article class="pack rv"><h3>Single Property</h3><p class="for">For offices and brokers marketing one unit or property</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Reels on the angles that fit the property</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Short cuts for ads</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Ad and post copy for every reel</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sizes for every platform</span></li></ul><a class="btn btn-gold" href="#request" data-pack="Single Property" data-cta="pack">Request this package</a></article><article class="pack rv hot"><span class="badge">Most requested</span><h3>Project Content</h3><p class="for">For developers launching a project or a new phase</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>All eight angles</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Reels for each unit type</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>A project landing page</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Campaign ad copy</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>A content library for the project</span></li></ul><a class="btn btn-gold" href="#request" data-pack="Project Content" data-cta="pack">Request this package</a></article><article class="pack rv"><h3>Content + Activation</h3><p class="for">For those who want the content and the campaign launch together</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Everything in Project Content</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Ad campaign setup and launch</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Enquiries connected to a form with tracking</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Regular performance report</span></li></ul><a class="btn btn-gold" href="#request" data-pack="Content + Activation" data-cta="pack">Request this package</a></article></div>
+ <p class="knote">Reel count, delivery time and revision rounds are written into your package proposal before you start. We set the price after a short call about your project.</p>
+</div></section>
+<section><div class="wrap">
+ <p class="k">Why Bees Motion</p><h2>We understand selling property, not only video</h2>
+ <div class="whys"><div class="why rv"><h3>Built to sell property</h3><p>We work on how a property is presented and sold, not on generic content that fits any product.</p></div><div class="why rv"><h3>AI-assisted, human-directed</h3><p>AI speeds up production, and a creative team checks every angle and message before delivery.</p></div><div class="why rv"><h3>A group that does 3D visualisation</h3><p>If you have no renders, our group produces them from your plans, so you can start marketing before you build.</p></div></div>
+ <div class="fors rv"><b>Built for</b><span>Real estate developers</span><span>Real estate offices and brokers</span><span>Marketing teams at property companies</span><span>Agencies that need property production</span></div>
+</div></section>
+<section class="dark" id="request"><div class="wrap">
+ <p class="k">Start now</p><h2>Send us your project</h2><p class="lead">Tell us about the property and the material you have, and we will contact you within one working day.</p>
+ <div class="fgrid">
   <form id="lead" novalidate>
-   <div class="two"><label>Name<input name="name" autocomplete="name" required></label><label>Company<input name="company" autocomplete="organization"></label></div>
-   <div class="two"><label>Email<input name="email" type="email" autocomplete="email" dir="ltr"></label><label>Phone or WhatsApp<input name="phone" type="tel" autocomplete="tel" required dir="ltr"></label></div>
-   <div class="two"><label>Pack you want<select name="pack" required><option value="">Select</option><option>Property Content System</option><option>Project Content</option><option>Content + Activation</option><option>Not sure, I need help choosing</option></select></label><label>When do you want to start<select name="when" required><option value="">Select</option><option>Within two weeks</option><option>Within a month</option><option>In over a month</option><option>Just exploring</option></select></label></div>
+   <div class="two"><label>Name <i>*</i><input name="name" autocomplete="name" required></label><label>Company<input name="company" autocomplete="organization"></label></div>
+   <div class="two"><label>Mobile or WhatsApp number <i>*</i><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required dir="ltr"></label><label>Package <i>*</i><select name="pack" required><option value="">Choose</option><option>Single Property</option><option>Project Content</option><option>Content + Activation</option><option>Not sure, help me choose</option></select></label></div>
+   <label>About the project (optional)<textarea name="notes" maxlength="600" placeholder="Example: villa project in Riyadh, we have renders and plans, launch in two months"></textarea></label>
    <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
    <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Bees Motion may contact me about my request.</span></label>
    <button class="btn btn-gold" type="submit">Send request</button>
    <p id="msg" class="msg" role="status" aria-live="polite"></p>
+   <p class="alt"><a href="#" data-wa target="_blank" rel="noopener">or talk to us on WhatsApp</a></p>
   </form>
+  <aside class="after"><h3>What happens next</h3><ol><li>We contact you within one working day.</li><li>We review your material and suggest the right selling angles.</li><li>We send a written package proposal: content, timing, revisions and price.</li></ol></aside>
  </div>
- <div class="after"><h3>What happens after you send</h3><ol><li>We receive your request and reply within one business day.</li><li>We confirm the pack and scope with you.</li><li>We book a short session and set the start date.</li></ol></div>
 </div></section>
-<section class="faq"><div class="wrap"><h2>Frequently asked questions</h2><details><summary>Who is this for?</summary><p>Developers, brokers, marketing teams and agencies.</p></details><details><summary>What do I send you?</summary><p>Photos, renders, plans, project information, any existing video and brand guidelines.</p></details><details><summary>Do you add rooms or features that do not exist?</summary><p>No. We show only what is in your information, and conceptual visuals are labeled as conceptual.</p></details><details><summary>How long does delivery take?</summary><p>[Delivery time]</p></details><details><summary>How many revision rounds do I get?</summary><p>[Number of revision rounds]</p></details><details><summary>Which platforms is the output made for?</summary><p>[Platforms and sizes]</p></details></div></section>
-<section class="final"><div class="wrap"><h2>Have a property that needs more content?</h2><p>Send what you have and we will show you what it can become. We reply within one business day.</p><div class="ctas" style="justify-content:center"><a class="btn btn-gold" href="/book/" data-book>Book a session</a><a class="btn btn-line" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a></div></div></section>
+<section><div class="wrap faqg">
+ <div><p class="k">FAQ</p><h2>Before you decide</h2></div>
+ <div><details><summary>Who is this for?</summary><p>Real estate developers, offices and brokers, marketing teams at property companies, and agencies.</p></details><details><summary>What do I send you?</summary><p>Property photos, renders, floor plans, project details, any existing video, and the project's brand identity if you have one.</p></details><details><summary>We have no renders. Can we still start?</summary><p>Yes. We start from the photos you have, or our group produces renders from your project plans under a separate proposal.</p></details><details><summary>Do you add rooms or features that do not exist?</summary><p>No. We show only what is in your file, and we label conceptual scenes as conceptual.</p></details><details><summary>How many reels do I get, and when?</summary><p>It depends on the package and the size of the project. The count, delivery date and revision rounds are written into your proposal before you commit to anything.</p></details><details><summary>Do you run the ads as well?</summary><p>Yes, in the Content + Activation package. In the other two, we deliver ready content to your team or your agency.</p></details><details><summary>Do you guarantee enquiries or sales?</summary><p>No. We guarantee the quality and accuracy of the content and delivery on the agreed date. Results depend on the market, the price, the offer and the ad budget.</p></details></div>
+</div></section>
+<section class="dark final"><div class="wrap">
+ <h2>Have a project whose material is sitting idle?</h2><p class="lead">Send us what you have and we will suggest the right selling angles within one working day.</p>
+ <div class="ctas"><a class="btn btn-gold" href="#request" data-cta="final">Request your package</a><a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.7 21.3l4.6-1.2A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.6 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.6.8c-.1.2-.2.3 0 .6.5.9 1.3 1.8 2.4 2.4.3.2.4.1.6 0l.8-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.3.4.5 0 .7-.4 1.6-1.1 1.9-.9.4-2 .3-3.6-.4a9.4 9.4 0 0 1-4.3-4.2c-.6-1.2-.6-2.4-.1-3.6z"/></svg>Talk to us on WhatsApp</a></div>
+</div></section>
 </main>
-<footer><div class="wrap"><p>Bees Motion, marketing and content production within Tasami Group.</p><p>WhatsApp: <bdi dir="ltr">+966 50 278 6513</bdi></p></div></footer>
-<a class="wafloat" href="#" data-wa target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 2.4a10.6 10.6 0 1 1-5.4 19.7l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 0 1 16 5.4zm-4 5.3c-.3 0-.7.1-1 .5-.4.4-1.3 1.2-1.3 3s1.3 3.5 1.5 3.7c.2.3 2.6 4.1 6.4 5.6 3.2 1.2 3.8 1 4.5.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5s-2.200-1.100-2.600-1.200c-.3-.1-.6-.2-.8.200-.2.400-1 1.200-1.200 1.500-.2.200-.4.200-.8.100-.4-.2-1.600-.6-3-1.900-1.100-1-1.900-2.200-2.100-2.600-.2-.4 0-.6.200-.8l.6-.7c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1.200-2.900c-.3-.7-.6-.7-.8-.7z"/></svg></a>
-<div class="bar"><a class="btn btn-gold" href="/book/" data-book>Book a session</a><a class="btn btn-line" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a></div>
+<footer><div class="wrap"><p>Bees Motion, marketing and content production, part of Tasami Group.</p><p>WhatsApp: <bdi dir="ltr">+966 50 278 6513</bdi></p></div></footer>
+<a class="wafloat" href="#" data-wa target="_blank" rel="noopener" aria-label="Contact us on WhatsApp"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.7 21.3l4.6-1.2A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.6 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.6.8c-.1.2-.2.3 0 .6.5.9 1.3 1.8 2.4 2.4.3.2.4.1.6 0l.8-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.3.4.5 0 .7-.4 1.6-1.1 1.9-.9.4-2 .3-3.6-.4a9.4 9.4 0 0 1-4.3-4.2c-.6-1.2-.6-2.4-.1-3.6z"/></svg></a>
+<div class="bar"><a class="btn btn-gold" href="#request" data-cta="bar">Request your package</a><a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.7 21.3l4.6-1.2A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.6 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.6.8c-.1.2-.2.3 0 .6.5.9 1.3 1.8 2.4 2.4.3.2.4.1.6 0l.8-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.3.4.5 0 .7-.4 1.6-1.1 1.9-.9.4-2 .3-3.6-.4a9.4 9.4 0 0 1-4.3-4.2c-.6-1.2-.6-2.4-.1-3.6z"/></svg>WhatsApp</a></div>
 <dialog id="zoom"><button class="x" type="button">Close</button><img alt=""></dialog>
 <script>
 (function(){
-var P={"wa": "966502786513", "waText": "Hello Bees Motion, I would like to ask about the Property Content Engine.", "slug": "property-content-engine", "lang": "en", "errCheck": "Complete the required fields and agree to be contacted.", "errSend": "We could not send it. We will open WhatsApp to finish your request.", "sending": "Sending…"};
+var P={"wa": "966502786513", "slug": "property-content-engine", "lang": "en", "waText": "Hello Bees Motion, I would like to ask about the Property Content Engine.", "errCheck": "Please complete the required fields and agree to be contacted.", "errSend": "We could not send your request. We will open WhatsApp so you can finish it.", "sending": "Sending…"};
 function track(ev,props){try{window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:ev},props||{}));if(typeof window.gtag==="function")window.gtag("event",ev,props||{});}catch(e){}}
-var q=new URLSearchParams(location.search);
-var utm={};["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function(k){if(q.get(k))utm[k]=q.get(k)});
+var q=new URLSearchParams(location.search),utm={};
+["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function(k){if(q.get(k))utm[k]=q.get(k)});
 try{if(Object.keys(utm).length)sessionStorage.setItem("bm-lp-utm",JSON.stringify(utm));else utm=JSON.parse(sessionStorage.getItem("bm-lp-utm")||"{}")}catch(e){}
 var qs=Object.keys(utm).length?"?"+new URLSearchParams(utm).toString():"";
 document.querySelectorAll("[data-keepqs]").forEach(function(a){a.href=a.getAttribute("href").split("?")[0]+qs});
 var wa="https://wa.me/"+P.wa+"?text="+encodeURIComponent(P.waText);
 document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa;a.addEventListener("click",function(){track("click_whatsapp",{source:"lp_"+P.slug,lang:P.lang})})});
-document.querySelectorAll("[data-book]").forEach(function(a){a.addEventListener("click",function(){track("cta_book_click",{source:"lp_"+P.slug,lang:P.lang})})});
-document.querySelectorAll("[data-yt]").forEach(function(b){b.addEventListener("click",function(){var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1&rel=0";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;f.title=b.getAttribute("aria-label");b.replaceWith(f);track("click_play_video",{source:"lp_"+P.slug,video:b.dataset.yt})})});
+document.querySelectorAll("[data-cta]").forEach(function(a){a.addEventListener("click",function(){track("cta_book_click",{source:"lp_"+P.slug,lang:P.lang,position:a.dataset.cta})})});
+var f=document.getElementById("lead");
+document.querySelectorAll("[data-pack]").forEach(function(b){b.addEventListener("click",function(){f.pack.value=b.dataset.pack;track("select_package",{source:"lp_"+P.slug,package:b.dataset.pack,lang:P.lang})})});
+document.querySelectorAll("[data-yt]").forEach(function(b){b.addEventListener("click",function(){var i=document.createElement("iframe");i.src="https://www.youtube-nocookie.com/embed/"+b.dataset.yt+"?autoplay=1&rel=0";i.allow="autoplay; encrypted-media; picture-in-picture";i.allowFullscreen=true;i.title=b.getAttribute("aria-label");b.replaceWith(i);track("click_play_video",{source:"lp_"+P.slug,video:b.dataset.yt})})});
 var dlg=document.getElementById("zoom"),zimg=dlg.querySelector("img");
-document.querySelectorAll(".gal button").forEach(function(b){b.addEventListener("click",function(){zimg.src=b.dataset.full;dlg.showModal()})});
+document.querySelectorAll(".gal button").forEach(function(b){b.addEventListener("click",function(){zimg.src=b.dataset.full;zimg.alt=b.getAttribute("aria-label");if(dlg.showModal)dlg.showModal();else window.open(b.dataset.full,"_blank")})});
 dlg.querySelector(".x").addEventListener("click",function(){dlg.close()});
 dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
-var f=document.getElementById("lead"),msg=document.getElementById("msg"),btn=f.querySelector("button[type=submit]");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".rv").forEach(function(el){io.observe(el)})}else{document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")})}
+var bar=document.querySelector(".bar"),hero=document.querySelector(".hero"),req=document.getElementById("request");
+function onScroll(){var y=window.scrollY,h=hero.offsetHeight,r=req.getBoundingClientRect();bar.classList.toggle("on",y>h*.6&&!(r.top<window.innerHeight&&r.bottom>0))}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+var msg=document.getElementById("msg"),btn=f.querySelector("button[type=submit]");
 function say(t,c){msg.textContent=t;msg.className="msg"+(c?" "+c:"")}
-function viaWa(d){var t=P.waText+"\n"+[d.name,d.company,d.phone,d.pack,d.when].filter(Boolean).join(" | ");track("generate_lead",{method:"whatsapp_fallback",source:"lp_"+P.slug,lang:P.lang});window.open("https://wa.me/"+P.wa+"?text="+encodeURIComponent(t),"_blank","noopener")}
+function viaWa(d){var t=P.waText+"\n"+[d.name,d.company,d.phone,d.pack,d.notes].filter(Boolean).join(" | ");track("generate_lead",{method:"whatsapp_fallback",source:"lp_"+P.slug,lang:P.lang});window.open("https://wa.me/"+P.wa+"?text="+encodeURIComponent(t),"_blank","noopener")}
 f.addEventListener("submit",function(e){
  e.preventDefault();
- var d={name:f.name.value.trim(),company:f.company.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),pack:f.pack.value,when:f.when.value};
- if(!d.name||!d.phone||!d.pack||!d.when||!f.consent.checked){say(P.errCheck,"err");return}
- var payload={name:d.name,company:d.company,email:d.email,phone:d.phone,
-  notes:["Page: "+P.slug+" ("+P.lang+")","Package: "+d.pack,"Start: "+d.when,Object.keys(utm).length?"UTM: "+JSON.stringify(utm):""].filter(Boolean).join("\n"),
+ var d={name:f.name.value.trim(),company:f.company.value.trim(),phone:f.phone.value.trim(),pack:f.pack.value,notes:f.notes.value.trim()};
+ if(!d.name||d.phone.replace(/\D/g,"").length<7||!d.pack||!f.consent.checked){say(P.errCheck,"err");return}
+ var payload={name:d.name,company:d.company,email:"",phone:d.phone,
+  notes:["Page: "+P.slug+" ("+P.lang+")","Package: "+d.pack,d.notes?"Notes: "+d.notes:"",Object.keys(utm).length?"UTM: "+JSON.stringify(utm):""].filter(Boolean).join("\n"),
   website:f.website.value,consent:true,lang:P.lang,source:"home-lp-"+P.slug};
  btn.disabled=true;say(P.sending,"");
  var ctrl="AbortController" in window?new AbortController():null,timer=ctrl?setTimeout(function(){ctrl.abort()},9000):null;
