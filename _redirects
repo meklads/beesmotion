@@ -81,3 +81,7 @@
 /engage/ /#system 301
 /brands /#sectors 301
 /brands/ /#sectors 301
+
+# Client hub (served by functions/client-hub.js)
+/client-hub.html /client-hub 301
+/client-hub/ /client-hub 301
