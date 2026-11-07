@@ -8,7 +8,7 @@ alwaysApply: true
 After completing requested website changes in this repo (`meklads/beesmotion`):
 
 1. **Commit** with a clear message (HEREDOC) when there are relevant changes.
-2. **Push to GitHub** on `main` with `git push origin main` immediately — never ask “هل أرفع؟” / “should I push?”.
-3. **Deploy** with `npm run deploy` from `website/` so production stays in sync.
+2. **Push to GitHub** on `main` with `git push origin main` immediately. Never ask "should I push?".
+3. **Deployment is automatic.** `.github/workflows/deploy.yml` publishes every push to `main` to Cloudflare Pages (project `beesmotion`). Do not run `npm run deploy` locally unless the workflow is broken.
 
-Do not leave finished work only local. Only pause if blocked (auth, hooks, secrets). If push/deploy fails, fix and retry or tell the user why.
+Do not leave finished work only local. If push or the deploy workflow fails, fix and retry or tell the user why.

@@ -37,6 +37,10 @@ Events already wired when GA4 is set:
 
 Custom domain CNAMEs for `@`, `www`, and `ai` point at `beesmotion.pages.dev` (proxied). See [docs/DNS-AR.md](docs/DNS-AR.md).
 
+**Automatic deploy:** every push to `main` runs `.github/workflows/deploy.yml`, which publishes to Cloudflare Pages. Manual redeploy: GitHub → Actions → *Deploy to Cloudflare Pages* → *Run workflow*. Requires repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+
+Local fallback:
+
 ```bash
 npm install
 npm run deploy
