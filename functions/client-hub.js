@@ -16,8 +16,6 @@ const LANDING_PAGES = [
     url: "https://beesmotion.com/lp/property-content-engine", alt: "https://beesmotion.com/lp/property-content-engine-en" },
   { ar: "باقات صفحات الهبوط", en: "Landing page packages", brand: "Bees Motion",
     url: "https://beesmotion.com/lp/landing-page-packages", alt: "https://beesmotion.com/lp/landing-page-packages-en" },
-  { ar: "الإظهار المعماري", en: "Architectural rendering", brand: "Graphics House",
-    url: "https://3dgraphicshouse.com/lp/rendering.html" },
 ];
 
 async function sha256Hex(text) {
